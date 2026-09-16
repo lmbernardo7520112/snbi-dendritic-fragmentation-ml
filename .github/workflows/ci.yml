@@ -8,7 +8,7 @@ permissions:
   contents: read
 
 jobs:
-  ti0-contracts:
+  deterministic-contracts:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -20,8 +20,9 @@ jobs:
         run: python -m compileall -q src tests scripts
       - name: Validate canonical manifest
         run: PYTHONPATH=src python -m snbi_fragmentation.custody validate configs/sources/source_manifest.json
-      - name: Enforce TI-0 scope
-        run: PYTHONPATH=src python scripts/check_ti0_scope.py
+      - name: Validate physical-time rule
+        run: PYTHONPATH=src python -c "from pathlib import Path; from snbi_fragmentation.timebase import load_time_rule; load_time_rule(Path('configs/time_rule.json'))"
+      - name: Enforce TI-1 scope
+        run: PYTHONPATH=src python scripts/check_ti1_scope.py
       - name: Run deterministic tests
         run: PYTHONPATH=src python -m unittest discover -s tests -v
-

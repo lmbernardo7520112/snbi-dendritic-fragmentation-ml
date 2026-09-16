@@ -1,0 +1,14 @@
+{
+  "rule_version": "1.0.0",
+  "delta_t_seconds": "1.18",
+  "frame_index_origin": 0,
+  "time_origin_seconds": "0.00",
+  "reported_fps_is_physical_time": false,
+  "equation": "t_physical_seconds(i) = i * 1.18",
+  "applicability": ["ESM1", "ESM2", "ESM3", "ESM4", "ESM5", "ESM6"],
+  "provenance": {
+    "basis": "approved_scientific_protocol_and_prior_forensic_audit",
+    "primary_source_independently_located_in_ti1": false,
+    "limitation": "The 1.18 s interval is frozen as an approved protocol assertion; TI-1 did not independently locate the original acquisition statement in the supplied documents."
+  }
+}

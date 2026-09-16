@@ -1,5 +1,4 @@
-"""Governed bootstrap for Sn-Bi dendritic-fragmentation research."""
+"""Governed deterministic audit for Sn-Bi dendritic-fragmentation research."""
 
 __all__ = ["__version__"]
-__version__ = "0.1.0"
-
+__version__ = "0.2.0"

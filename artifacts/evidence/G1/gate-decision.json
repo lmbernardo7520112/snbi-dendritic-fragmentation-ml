@@ -1,0 +1,9 @@
+{
+  "gate_id": "G1",
+  "decision": "PASS",
+  "decision_kind": "final_author_approved",
+  "decision_owner": "Leonardo Maximino Bernardo",
+  "approved_at": "2026-09-16",
+  "basis": ["modalities-report.json", "../../G0/source-verification.json"],
+  "scope": "semantic identity and grouping of ESM1-ESM6"
+}
