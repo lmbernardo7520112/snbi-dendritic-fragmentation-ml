@@ -1,0 +1,114 @@
+{
+  "container_count": 1,
+  "container_results": [
+    {
+      "error": null,
+      "expected_sha256": "9512a2e6d0ce397f9de8ae71cbf3cb759651df8e8793542a7c99cfe9d102d8f1",
+      "expected_size_bytes": 116199497,
+      "hash_scope": "raw_container_bytes",
+      "observed_sha256": "9512a2e6d0ce397f9de8ae71cbf3cb759651df8e8793542a7c99cfe9d102d8f1",
+      "observed_size_bytes": 116199497,
+      "source_id": "VIDEO_ARCHIVE_01",
+      "status": "PASS"
+    }
+  ],
+  "evidence_schema_version": "1.0.0",
+  "fail_count": 0,
+  "gate_id": "G0",
+  "operation": "read_only_sha256_verification",
+  "pass_count": 10,
+  "results": [
+    {
+      "error": null,
+      "expected_sha256": "4d07ee422e97661b1ee0ae681b7617fd7971476015603f3039c20ddf8b0c5c6d",
+      "expected_size_bytes": 3233526,
+      "hash_scope": "uncompressed_zip_member_bytes",
+      "observed_sha256": "4d07ee422e97661b1ee0ae681b7617fd7971476015603f3039c20ddf8b0c5c6d",
+      "observed_size_bytes": 3233526,
+      "source_id": "ESM1",
+      "status": "PASS"
+    },
+    {
+      "error": null,
+      "expected_sha256": "4eb1762dc4ee65c3e8b1411d80812a75257b1324d539db4c3dcf6c97c1ed9a0a",
+      "expected_size_bytes": 41487560,
+      "hash_scope": "uncompressed_zip_member_bytes",
+      "observed_sha256": "4eb1762dc4ee65c3e8b1411d80812a75257b1324d539db4c3dcf6c97c1ed9a0a",
+      "observed_size_bytes": 41487560,
+      "source_id": "ESM2",
+      "status": "PASS"
+    },
+    {
+      "error": null,
+      "expected_sha256": "d76a6466e50480a2116bc545a0ee2b8095cc14c54f861ecebee87de5b64e35be",
+      "expected_size_bytes": 3356196,
+      "hash_scope": "uncompressed_zip_member_bytes",
+      "observed_sha256": "d76a6466e50480a2116bc545a0ee2b8095cc14c54f861ecebee87de5b64e35be",
+      "observed_size_bytes": 3356196,
+      "source_id": "ESM3",
+      "status": "PASS"
+    },
+    {
+      "error": null,
+      "expected_sha256": "9e6be3e78699d3bdd16fa71d56917479d7e16f7418b857ab3925e1115df91ebe",
+      "expected_size_bytes": 4509283,
+      "hash_scope": "uncompressed_zip_member_bytes",
+      "observed_sha256": "9e6be3e78699d3bdd16fa71d56917479d7e16f7418b857ab3925e1115df91ebe",
+      "observed_size_bytes": 4509283,
+      "source_id": "ESM4",
+      "status": "PASS"
+    },
+    {
+      "error": null,
+      "expected_sha256": "c9054d18f330e018e82cc6bd4db2ccfbda7ac76e01326a831857a835d1feade6",
+      "expected_size_bytes": 59235679,
+      "hash_scope": "uncompressed_zip_member_bytes",
+      "observed_sha256": "c9054d18f330e018e82cc6bd4db2ccfbda7ac76e01326a831857a835d1feade6",
+      "observed_size_bytes": 59235679,
+      "source_id": "ESM5",
+      "status": "PASS"
+    },
+    {
+      "error": null,
+      "expected_sha256": "5b8747758afde34fb626f3c4ffbd0b49ba6ca6f6b49bfa81b8cf9ee8459280ea",
+      "expected_size_bytes": 4353042,
+      "hash_scope": "uncompressed_zip_member_bytes",
+      "observed_sha256": "5b8747758afde34fb626f3c4ffbd0b49ba6ca6f6b49bfa81b8cf9ee8459280ea",
+      "observed_size_bytes": 4353042,
+      "source_id": "ESM6",
+      "status": "PASS"
+    },
+    {
+      "error": null,
+      "expected_sha256": "5abfcb88212555120d3be8c5bbeb2320a7861e209a5c3cceca1d7ec7c557dc2d",
+      "expected_size_bytes": 933759,
+      "hash_scope": "raw_file_bytes",
+      "observed_sha256": "5abfcb88212555120d3be8c5bbeb2320a7861e209a5c3cceca1d7ec7c557dc2d",
+      "observed_size_bytes": 933759,
+      "source_id": "COBEM_DIFFUSIVE",
+      "status": "PASS"
+    },
+    {
+      "error": null,
+      "expected_sha256": "4f40af67442f3558139bb5a8f74aa311b8def7e88cb4f3418ff80a4d31596b50",
+      "expected_size_bytes": 1527251,
+      "hash_scope": "raw_file_bytes",
+      "observed_sha256": "4f40af67442f3558139bb5a8f74aa311b8def7e88cb4f3418ff80a4d31596b50",
+      "observed_size_bytes": 1527251,
+      "source_id": "COBEM_CONVECTIVE",
+      "status": "PASS"
+    },
+    {
+      "error": null,
+      "expected_sha256": "0de8bc5713f8b226049f504ebc1b5d90059de8644733d4870b61fa5756e157de",
+      "expected_size_bytes": 651213,
+      "hash_scope": "raw_file_bytes",
+      "observed_sha256": "0de8bc5713f8b226049f504ebc1b5d90059de8644733d4870b61fa5756e157de",
+      "observed_size_bytes": 651213,
+      "source_id": "PHD_ACADEMIC_RECORD",
+      "status": "PASS"
+    }
+  ],
+  "source_count": 9,
+  "status": "PASS"
+}

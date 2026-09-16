@@ -1,0 +1,3 @@
+# TI-0 intentionally has no third-party Python runtime dependencies.
+# Python 3.12 standard library is sufficient for manifest and hash verification.
+

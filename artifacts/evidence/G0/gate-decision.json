@@ -1,0 +1,33 @@
+{
+  "decision_schema_version": "1.0.0",
+  "gate_id": "G0",
+  "phase": "TI-0",
+  "decision": "PASS",
+  "decided_at": "2026-09-16",
+  "criteria": {
+    "canonical_identifiers_complete": "PASS",
+    "source_hashes_and_sizes_complete": "PASS",
+    "archive_hash_scope_explicit": "PASS",
+    "read_only_verification": "PASS",
+    "manifest_contract_tests": "PASS",
+    "scope_boundary_enforced": "PASS",
+    "reproducible_evidence_bundle": "PASS"
+  },
+  "observed_counts": {
+    "containers": 1,
+    "sources": 9,
+    "verified_objects": 10,
+    "failed_objects": 0,
+    "tests": 13,
+    "failed_tests": 0
+  },
+  "limitations": [
+    "No video metadata was read.",
+    "No physical-time rule was implemented.",
+    "No modality synchronization was attempted.",
+    "No frame was extracted.",
+    "No annotation, split, dataset, baseline, model, or evaluation was produced.",
+    "TI-1 through TI-8 remain blocked pending separate authorization."
+  ]
+}
+

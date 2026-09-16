@@ -1,0 +1,37 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+dist/
+build/
+*.egg-info/
+.DS_Store
+.idea/
+.vscode/
+
+# Experimental sources and derived data are never committed.
+data/raw/
+data/interim/
+data/processed/
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.zip
+*.7z
+*.tar
+*.gz
+
+# Generated evidence is allow-listed deliberately.
+artifacts/**
+!artifacts/evidence/
+!artifacts/evidence/**
+
