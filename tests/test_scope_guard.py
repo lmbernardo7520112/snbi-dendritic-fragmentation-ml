@@ -9,10 +9,10 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class ScopeGuardTests(unittest.TestCase):
-    def test_ti1_plus_modules_are_absent(self) -> None:
+    def test_ti2_plus_modules_are_absent(self) -> None:
         blocked = [
-            "acquisition", "time_map", "registration", "annotation",
-            "dataset", "models", "evaluation",
+            "registration", "annotation", "dataset", "splits", "baseline",
+            "models", "training", "evaluation",
         ]
         for module in blocked:
             self.assertFalse((ROOT / f"src/snbi_fragmentation/{module}.py").exists())
@@ -24,7 +24,7 @@ class ScopeGuardTests(unittest.TestCase):
 
     def test_scope_auditor_passes(self) -> None:
         spec = importlib.util.spec_from_file_location(
-            "scope_audit", ROOT / "scripts/check_ti0_scope.py"
+            "scope_audit", ROOT / "scripts/check_ti1_scope.py"
         )
         self.assertIsNotNone(spec)
         module = importlib.util.module_from_spec(spec)
@@ -35,4 +35,3 @@ class ScopeGuardTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-

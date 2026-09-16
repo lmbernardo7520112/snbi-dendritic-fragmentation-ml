@@ -1,0 +1,38 @@
+{
+  "claim_limit": "Relative-solute videos are not interpreted as absolute Bi concentration; annotation circles are not fragment masks.",
+  "evidence_schema_version": "1.0.0",
+  "gate_id": "G1",
+  "mapping": [
+    {
+      "condition": "bottom_up_anti_parallel",
+      "modality": "xray_radiography",
+      "source_id": "ESM1"
+    },
+    {
+      "condition": "bottom_up_anti_parallel",
+      "modality": "relative_solute_field",
+      "source_id": "ESM2"
+    },
+    {
+      "condition": "bottom_up_anti_parallel",
+      "modality": "cumulative_fragmentation_annotation",
+      "source_id": "ESM3"
+    },
+    {
+      "condition": "top_down_parallel",
+      "modality": "xray_radiography",
+      "source_id": "ESM4"
+    },
+    {
+      "condition": "top_down_parallel",
+      "modality": "relative_solute_field",
+      "source_id": "ESM5"
+    },
+    {
+      "condition": "top_down_parallel",
+      "modality": "cumulative_fragmentation_annotation",
+      "source_id": "ESM6"
+    }
+  ],
+  "status": "PASS"
+}

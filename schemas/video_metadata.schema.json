@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/snbi/video-metadata.schema.json",
+  "title": "TI-1 read-only video metadata evidence",
+  "type": "object",
+  "required": ["evidence_schema_version", "operation", "probe", "records"],
+  "properties": {
+    "evidence_schema_version": {"const": "1.0.0"},
+    "operation": {"const": "read_only_streamed_video_metadata_probe"},
+    "probe": {"type": "object"},
+    "records": {"type": "array", "minItems": 6, "maxItems": 6}
+  },
+  "additionalProperties": true
+}

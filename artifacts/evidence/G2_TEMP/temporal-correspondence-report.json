@@ -1,0 +1,128 @@
+{
+  "evidence_schema_version": "1.0.0",
+  "gate_id": "G2-TEMP",
+  "groups": [
+    {
+      "condition": "bottom_up_anti_parallel",
+      "frame_counts": [
+        294
+      ],
+      "frame_index_relation": "one_to_one_zero_based",
+      "modalities": [
+        "cumulative_fragmentation_annotation",
+        "relative_solute_field",
+        "xray_radiography"
+      ],
+      "playback_durations_seconds": [
+        "58.800000"
+      ],
+      "reported_frame_rates": [
+        "5/1"
+      ],
+      "source_ids": [
+        "ESM1",
+        "ESM2",
+        "ESM3"
+      ],
+      "status": "PASS"
+    },
+    {
+      "condition": "top_down_parallel",
+      "frame_counts": [
+        395
+      ],
+      "frame_index_relation": "one_to_one_zero_based",
+      "modalities": [
+        "cumulative_fragmentation_annotation",
+        "relative_solute_field",
+        "xray_radiography"
+      ],
+      "playback_durations_seconds": [
+        "79.000000"
+      ],
+      "reported_frame_rates": [
+        "5/1"
+      ],
+      "source_ids": [
+        "ESM4",
+        "ESM5",
+        "ESM6"
+      ],
+      "status": "PASS"
+    }
+  ],
+  "operation": "metadata_level_inter_modality_correspondence",
+  "per_source_physical_time": [
+    {
+      "first_frame_physical_time_seconds": "0.00",
+      "frame_count": 294,
+      "last_frame_physical_time_seconds": "345.74",
+      "playback_acceleration_factor": "5.90",
+      "reported_fps": "5/1",
+      "source_id": "ESM1"
+    },
+    {
+      "first_frame_physical_time_seconds": "0.00",
+      "frame_count": 294,
+      "last_frame_physical_time_seconds": "345.74",
+      "playback_acceleration_factor": "5.90",
+      "reported_fps": "5/1",
+      "source_id": "ESM2"
+    },
+    {
+      "first_frame_physical_time_seconds": "0.00",
+      "frame_count": 294,
+      "last_frame_physical_time_seconds": "345.74",
+      "playback_acceleration_factor": "5.90",
+      "reported_fps": "5/1",
+      "source_id": "ESM3"
+    },
+    {
+      "first_frame_physical_time_seconds": "0.00",
+      "frame_count": 395,
+      "last_frame_physical_time_seconds": "464.92",
+      "playback_acceleration_factor": "5.90",
+      "reported_fps": "5/1",
+      "source_id": "ESM4"
+    },
+    {
+      "first_frame_physical_time_seconds": "0.00",
+      "frame_count": 395,
+      "last_frame_physical_time_seconds": "464.92",
+      "playback_acceleration_factor": "5.90",
+      "reported_fps": "5/1",
+      "source_id": "ESM5"
+    },
+    {
+      "first_frame_physical_time_seconds": "0.00",
+      "frame_count": 395,
+      "last_frame_physical_time_seconds": "464.92",
+      "playback_acceleration_factor": "5.90",
+      "reported_fps": "5/1",
+      "source_id": "ESM6"
+    }
+  ],
+  "scope_limit": "Establishes index-level temporal correspondence only; it does not establish pixel registration, content equivalence, or annotation geometry.",
+  "status": "PASS",
+  "time_rule": {
+    "applicability": [
+      "ESM1",
+      "ESM2",
+      "ESM3",
+      "ESM4",
+      "ESM5",
+      "ESM6"
+    ],
+    "delta_t_seconds": "1.18",
+    "equation": "t_physical_seconds(i) = i * 1.18",
+    "frame_index_origin": 0,
+    "provenance": {
+      "basis": "approved_scientific_protocol_and_prior_forensic_audit",
+      "limitation": "The 1.18 s interval is frozen as an approved protocol assertion; TI-1 did not independently locate the original acquisition statement in the supplied documents.",
+      "primary_source_independently_located_in_ti1": false
+    },
+    "reported_fps_is_physical_time": false,
+    "rule_version": "1.0.0",
+    "time_origin_seconds": "0.00"
+  }
+}

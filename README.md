@@ -8,13 +8,13 @@ research and presented at COBEM.
 
 ## Current authorization
 
-Only **TI-0 — Governed Technical Bootstrap** is implemented. TI-1 through TI-8
-remain blocked. In particular, this repository currently performs no video
-metadata audit, physical-time calculation, modality synchronization, frame
-extraction, annotation, split generation, baseline execution, or model
-training.
+**TI-0 — Governed Technical Bootstrap** is formally complete. Only
+**TI-1 — Deterministic Audit** is authorized and implemented on its feature
+branch. TI-2 through TI-8 remain blocked. This repository does not extract
+frames, create annotations or datasets, define splits, execute baselines, or
+train models.
 
-## TI-0 outcomes
+## Implemented outcomes
 
 - canonical vocabulary and source identifiers;
 - immutable source manifest and SHA-256 verification;
@@ -23,6 +23,10 @@ training.
 - minimal continuous integration;
 - decision and gate records;
 - evidence bundle for Gate G0.
+- read-only streamed metadata audit for ESM1–ESM6;
+- explicit physical-time rule independent of MP4 playback FPS;
+- metadata-level correspondence checks for both three-modality groups;
+- evidence bundles for the proposed G1 and G2-TEMP decisions.
 
 ## Local verification
 
@@ -31,6 +35,7 @@ Python 3.12 is required. The test suite has no third-party runtime dependency.
 ```bash
 make test
 make validate-manifest
+PYTHONPATH=src python scripts/check_ti1_scope.py
 ```
 
 To verify locally held source files without copying or extracting them:
@@ -44,10 +49,19 @@ PYTHONPATH=src python -m snbi_fragmentation.custody \
 The raw videos and documents are deliberately absent from Git. See
 [`data/README.md`](data/README.md) for the custody policy.
 
+An authorized local TI-1 audit can be executed with:
+
+```bash
+PYTHONPATH=src python scripts/run_ti1_audit.py \
+  --data-root /path/to/authorized/source/directory
+```
+
+This command reads the MP4 members directly from the ZIP and writes metadata
+and gate evidence only; it does not extract frames.
+
 ## Governance
 
 The approved scientific protocol controls the technical implementation. Any
 change to the task, label semantics, physical-time rule, split policy,
 endpoints, or scientific claims requires formal change control. See
-[`docs/protocols/TI0_SCOPE.md`](docs/protocols/TI0_SCOPE.md).
-
+[`docs/protocols/TI1_EXECUTION_SPEC.md`](docs/protocols/TI1_EXECUTION_SPEC.md).

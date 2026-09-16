@@ -1,0 +1,7 @@
+{
+  "gate_id": "G2-TEMP",
+  "decision": "PASS",
+  "decision_kind": "technical_proposal_pending_author_approval",
+  "basis": ["temporal-correspondence-report.json", "../../../metadata/acquisition_metadata.json", "../../../../configs/time_rule.json"],
+  "limitation": "No pixel registration was tested, and the primary documentary source for delta_t=1.18 s was not independently located in TI-1."
+}

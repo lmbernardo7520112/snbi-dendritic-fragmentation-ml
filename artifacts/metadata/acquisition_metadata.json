@@ -1,0 +1,133 @@
+{
+  "evidence_schema_version": "1.0.0",
+  "execution_date": "2026-09-16",
+  "operation": "read_only_streamed_video_metadata_probe",
+  "probe": {
+    "tool": "ffprobe",
+    "version": "ffprobe version 6.1.1-3ubuntu5 Copyright (c) 2007-2023 the FFmpeg developers",
+    "warnings": {
+      "ESM1": [
+        "[mov,mp4,m4a,3gp,3g2,mj2 @ <runtime-address>] stream 0, offset 0x30: partial file",
+        "[mov,mp4,m4a,3gp,3g2,mj2 @ <runtime-address>] Could not find codec parameters for stream 0 (Video: h264 (avc1 / 0x31637661), none, 1278x1018, 439 kb/s): unspecified pixel format",
+        "Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options"
+      ],
+      "ESM2": [
+        "[mov,mp4,m4a,3gp,3g2,mj2 @ <runtime-address>] stream 0, offset 0x30: partial file",
+        "[mov,mp4,m4a,3gp,3g2,mj2 @ <runtime-address>] Could not find codec parameters for stream 0 (Video: h264 (avc1 / 0x31637661), none, 1278x1018, 5643 kb/s): unspecified pixel format",
+        "Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options"
+      ],
+      "ESM3": [
+        "[mov,mp4,m4a,3gp,3g2,mj2 @ <runtime-address>] stream 0, offset 0x30: partial file",
+        "[mov,mp4,m4a,3gp,3g2,mj2 @ <runtime-address>] Could not find codec parameters for stream 0 (Video: h264 (avc1 / 0x31637661), none, 1280x1024, 456 kb/s): unspecified pixel format",
+        "Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options"
+      ],
+      "ESM4": [
+        "[mov,mp4,m4a,3gp,3g2,mj2 @ <runtime-address>] stream 0, offset 0x30: partial file",
+        "[mov,mp4,m4a,3gp,3g2,mj2 @ <runtime-address>] Could not find codec parameters for stream 0 (Video: h264 (avc1 / 0x31637661), none, 1278x1012, 456 kb/s): unspecified pixel format",
+        "Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options"
+      ],
+      "ESM5": [
+        "[mov,mp4,m4a,3gp,3g2,mj2 @ <runtime-address>] stream 0, offset 0x30: partial file",
+        "[mov,mp4,m4a,3gp,3g2,mj2 @ <runtime-address>] Could not find codec parameters for stream 0 (Video: h264 (avc1 / 0x31637661), none, 1278x1012, 5997 kb/s): unspecified pixel format",
+        "Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options"
+      ],
+      "ESM6": [
+        "[mov,mp4,m4a,3gp,3g2,mj2 @ <runtime-address>] stream 0, offset 0x30: partial file",
+        "[mov,mp4,m4a,3gp,3g2,mj2 @ <runtime-address>] Could not find codec parameters for stream 0 (Video: h264 (avc1 / 0x31637661), none, 1280x1012, 440 kb/s): unspecified pixel format",
+        "Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options"
+      ]
+    }
+  },
+  "records": [
+    {
+      "codec_name": "h264",
+      "condition": "bottom_up_anti_parallel",
+      "frame_count": 294,
+      "height": 1018,
+      "modality": "xray_radiography",
+      "playback_duration_seconds": "58.800000",
+      "probe_input_mode": "zip_member_stream_read_only",
+      "reported_frame_rate": "5/1",
+      "reported_frame_rate_decimal": "5",
+      "source_id": "ESM1",
+      "start_time_seconds": "0.400000",
+      "time_base": "1/90000",
+      "width": 1278
+    },
+    {
+      "codec_name": "h264",
+      "condition": "bottom_up_anti_parallel",
+      "frame_count": 294,
+      "height": 1018,
+      "modality": "relative_solute_field",
+      "playback_duration_seconds": "58.800000",
+      "probe_input_mode": "zip_member_stream_read_only",
+      "reported_frame_rate": "5/1",
+      "reported_frame_rate_decimal": "5",
+      "source_id": "ESM2",
+      "start_time_seconds": "0.400000",
+      "time_base": "1/90000",
+      "width": 1278
+    },
+    {
+      "codec_name": "h264",
+      "condition": "bottom_up_anti_parallel",
+      "frame_count": 294,
+      "height": 1024,
+      "modality": "cumulative_fragmentation_annotation",
+      "playback_duration_seconds": "58.800000",
+      "probe_input_mode": "zip_member_stream_read_only",
+      "reported_frame_rate": "5/1",
+      "reported_frame_rate_decimal": "5",
+      "source_id": "ESM3",
+      "start_time_seconds": "0.400000",
+      "time_base": "1/90000",
+      "width": 1280
+    },
+    {
+      "codec_name": "h264",
+      "condition": "top_down_parallel",
+      "frame_count": 395,
+      "height": 1012,
+      "modality": "xray_radiography",
+      "playback_duration_seconds": "79.000000",
+      "probe_input_mode": "zip_member_stream_read_only",
+      "reported_frame_rate": "5/1",
+      "reported_frame_rate_decimal": "5",
+      "source_id": "ESM4",
+      "start_time_seconds": "0.400000",
+      "time_base": "1/90000",
+      "width": 1278
+    },
+    {
+      "codec_name": "h264",
+      "condition": "top_down_parallel",
+      "frame_count": 395,
+      "height": 1012,
+      "modality": "relative_solute_field",
+      "playback_duration_seconds": "79.000000",
+      "probe_input_mode": "zip_member_stream_read_only",
+      "reported_frame_rate": "5/1",
+      "reported_frame_rate_decimal": "5",
+      "source_id": "ESM5",
+      "start_time_seconds": "0.400000",
+      "time_base": "1/90000",
+      "width": 1278
+    },
+    {
+      "codec_name": "h264",
+      "condition": "top_down_parallel",
+      "frame_count": 395,
+      "height": 1012,
+      "modality": "cumulative_fragmentation_annotation",
+      "playback_duration_seconds": "79.000000",
+      "probe_input_mode": "zip_member_stream_read_only",
+      "reported_frame_rate": "5/1",
+      "reported_frame_rate_decimal": "5",
+      "source_id": "ESM6",
+      "start_time_seconds": "0.400000",
+      "time_base": "1/90000",
+      "width": 1280
+    }
+  ]
+}
