@@ -1,6 +1,8 @@
 # Gate G2-TEMP — Correspondência temporal determinística
 
-**Decisão técnica proposta:** PASS, com limitação documental explícita
+**Decisão final aprovada:** PASS, com limitação documental explícita  
+**Responsável pela decisão:** Leonardo Maximino Bernardo  
+**Data:** 16 de setembro de 2026
 
 | Grupo | Fontes | Frames por fonte | Duração MP4 | FPS declarado | Correspondência |
 |---|---|---:|---:|---:|---|
