@@ -1,0 +1,10 @@
+[project]
+name = "snbi-dendritic-fragmentation"
+version = "0.1.0"
+description = "Governed custody bootstrap for Sn-Bi dendritic fragmentation research"
+requires-python = ">=3.12,<3.13"
+dependencies = []
+
+[tool.snbi]
+authorized_phase = "TI-0"
+blocked_phases = ["TI-1", "TI-2", "TI-3", "TI-4", "TI-5", "TI-6", "TI-7", "TI-8"]

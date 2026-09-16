@@ -1,0 +1,15 @@
+{
+  "authorized_phase": "TI-0",
+  "blocked_phases": [
+    "TI-1",
+    "TI-2",
+    "TI-3",
+    "TI-4",
+    "TI-5",
+    "TI-6",
+    "TI-7",
+    "TI-8"
+  ],
+  "status": "PASS",
+  "violations": []
+}

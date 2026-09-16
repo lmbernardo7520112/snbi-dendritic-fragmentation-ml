@@ -1,0 +1,18 @@
+test_container_change_fails_closed (test_hash_verifier.HashVerifierTests.test_container_change_fails_closed) ... ok
+test_known_bytes_pass (test_hash_verifier.HashVerifierTests.test_known_bytes_pass) ... ok
+test_missing_source_fails_closed (test_hash_verifier.HashVerifierTests.test_missing_source_fails_closed) ... ok
+test_one_byte_change_fails_closed (test_hash_verifier.HashVerifierTests.test_one_byte_change_fails_closed) ... ok
+test_verification_does_not_change_source_bytes (test_hash_verifier.HashVerifierTests.test_verification_does_not_change_source_bytes) ... ok
+test_canonical_manifest_is_valid (test_manifest_contract.ManifestContractTests.test_canonical_manifest_is_valid) ... ok
+test_duplicate_source_id_is_rejected (test_manifest_contract.ManifestContractTests.test_duplicate_source_id_is_rejected) ... ok
+test_missing_esm_is_rejected (test_manifest_contract.ManifestContractTests.test_missing_esm_is_rejected) ... ok
+test_path_traversal_is_rejected (test_manifest_contract.ManifestContractTests.test_path_traversal_is_rejected) ... ok
+test_unknown_modality_is_rejected (test_manifest_contract.ManifestContractTests.test_unknown_modality_is_rejected) ... ok
+test_ml_frameworks_are_not_declared (test_scope_guard.ScopeGuardTests.test_ml_frameworks_are_not_declared) ... ok
+test_scope_auditor_passes (test_scope_guard.ScopeGuardTests.test_scope_auditor_passes) ... ok
+test_ti1_plus_modules_are_absent (test_scope_guard.ScopeGuardTests.test_ti1_plus_modules_are_absent) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.007s
+
+OK

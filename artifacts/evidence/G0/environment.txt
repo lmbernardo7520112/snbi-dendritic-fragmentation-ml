@@ -1,0 +1,6 @@
+python=3.12.14
+implementation=CPython
+platform=Linux-x86_64
+byteorder=little
+third_party_runtime_dependencies=0
+authorized_phase=TI-0
