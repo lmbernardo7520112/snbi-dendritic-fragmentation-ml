@@ -10,11 +10,11 @@
     "TI-8"
   ],
   "blocking_reasons": [
-    "All four modality registrations have no admissible fitted matrix; no canonical multimodal shared support can be certified.",
+    "Method v1 provided insufficient correspondence evidence; physical transformation existence remains UNDETERMINED and no shared multimodal support is certified.",
     "ROI coordinates, extents, temporal stability and native-return transforms remain unresolved.",
     "Gravity, thermal-gradient and growth directions in pixel coordinates are not verified.",
-    "Full scale metrology uncertainty and vertical physical sampling are unresolved; only a horizontal printed-bar candidate was measured.",
-    "Author visual review is pending."
+    "Nominal X/Y sampling of 1.40 micrometres per pixel is DOCUMENTED; complete metrological uncertainty remains UNRESOLVED.",
+    "Scientific visual review and any methodological revision require a separate author decision; closeout authorizes documentary work only."
   ],
   "conditions": [
     {
@@ -22,7 +22,12 @@
       "condition": "bottom-up",
       "configuration": "configs/calibration/bottom-up.json",
       "coordinate_unit": "pixel",
+      "metrological_uncertainty_status": "UNRESOLVED",
+      "nominal_pixel_size_x_um": "1.40",
+      "nominal_pixel_size_y_um": "1.40",
+      "nominal_spatial_scale_status": "DOCUMENTED",
       "printed_bar_candidate_status": "BAR_GEOMETRY_MEASURED",
+      "qualified_status": "BLOCKED_DEPENDENCY_G2",
       "roi_status": "BLOCKED",
       "scale_status": "UNRESOLVED",
       "status": "BLOCKED"
@@ -32,7 +37,12 @@
       "condition": "top-down",
       "configuration": "configs/calibration/top-down.json",
       "coordinate_unit": "pixel",
+      "metrological_uncertainty_status": "UNRESOLVED",
+      "nominal_pixel_size_x_um": "1.40",
+      "nominal_pixel_size_y_um": "1.40",
+      "nominal_spatial_scale_status": "DOCUMENTED",
       "printed_bar_candidate_status": "BAR_GEOMETRY_MEASURED",
+      "qualified_status": "BLOCKED_DEPENDENCY_G2",
       "roi_status": "BLOCKED",
       "scale_status": "UNRESOLVED",
       "status": "BLOCKED"
@@ -51,7 +61,7 @@
     },
     {
       "contract_id": "CAL-201",
-      "reason": "Printed-bar provenance supports a candidate horizontal ratio; full physical calibration remains unresolved and is not used for coordinate conversion.",
+      "reason": "Nominal X/Y sampling of 1.40 micrometres per pixel is documented by the author-supplied source citation; the preserved horizontal raster ratio is compatible, while complete metrological calibration and coordinate conversion remain uncertified.",
       "status": "PARTIAL"
     },
     {
@@ -72,10 +82,32 @@
   ],
   "coordinate_unit": "pixel",
   "decision": "BLOCKED",
-  "decision_kind": "technical_result_pending_author_review",
+  "decision_kind": "author-approved terminal blocked dependency result; documentary closeout only",
+  "documentary_authority": "docs/decisions/AUTHORIZATION-TI2-CLOSEOUT-1-2026-09-17.md",
   "gate_id": "G3",
+  "method_v1": "INSUFFICIENT_EVIDENCE",
   "new_images_created": 0,
   "new_pixel_reads_for_this_report": 0,
+  "nominal_spatial_scale": {
+    "documentary_provenance": {
+      "authority": "docs/decisions/AUTHORIZATION-TI2-CLOSEOUT-1-2026-09-17.md",
+      "basis": "author-supplied primary-source citation and explicit documentary reconciliation",
+      "citation": "Gibbs et al., JOM 68, 170–177 (2016)",
+      "doi": "10.1007/s11837-015-1646-7",
+      "independent_primary_text_retrieved": false,
+      "scope": "Documentary authorization only; no source retrieval or new image/pixel observation in TI2-CLOSEOUT-1.",
+      "url": "https://link.springer.com/article/10.1007/s11837-015-1646-7"
+    },
+    "eligible_for_coordinate_conversion": false,
+    "full_metrological_uncertainty_certificate_available": false,
+    "metrological_uncertainty_status": "UNRESOLVED",
+    "pixel_size_x_um": "1.40",
+    "pixel_size_y_um": "1.40",
+    "propagation_to_unregistered_modalities_permitted": false,
+    "raster_crosscheck_relation": "Compatible with the documented nominal 1.40 micrometres per pixel; the raster interval is not a statistical confidence interval.",
+    "raster_crosscheck_um_per_px": "1.40056022409",
+    "status": "DOCUMENTED"
+  },
   "normative_basis": [
     "docs/protocols/TI2_EXECUTION_PLAN.md",
     "docs/protocols/TI2_CONTRACT_MATRIX.md",
@@ -85,16 +117,19 @@
   "printed_bar_evidence": {
     "path": "artifacts/evidence/TI2/scale-estimation-audit-v2.json",
     "sampling": "Three estimation frames per canonical source; no validation-quarter pixels accessed for scale measurement.",
-    "scope": "500 micrometre nominal inscription over 357 raster pixels, separately measured for ESM1 and ESM4; candidate only.",
+    "scope": "Existing 500 micrometre inscription over 357 raster pixels separately measured for ESM1 and ESM4; preserved raster crosscheck is compatible with documented nominal X/Y sampling of 1.40 micrometres per pixel, not a complete metrological certificate.",
     "sha256": "ff6e74f8ad53d2db3b5de94c14e00f64cb7a03c2bb1acdc4c78910e87a68dc08"
   },
+  "qualified_decision": "BLOCKED_DEPENDENCY_G2",
   "schema_version": "1.0.0",
   "scope": "E5/E6 technical evidence synthesized from existing text records only; no new pixel/source access, labels, ledger, ML dataset, splits, baseline, CNN, training or evaluation.",
   "stages": {
     "TI2-E5": "BLOCKED",
-    "TI2-E6": "PARTIAL_BAR_GEOMETRY_ONLY; FULL_CALIBRATION_UNRESOLVED"
+    "TI2-E6": "DOCUMENTED_NOMINAL_SCALE; METROLOGICAL_UNCERTAINTY_UNRESOLVED"
   },
   "status": "BLOCKED",
-  "ti2_closure_authorized": false,
-  "why_not_partial": "G3 PARTIAL for absent scale requires valid registration and ROI. Neither prerequisite is certified, and physical orientation is unverified."
+  "ti2_closure_authorization_scope": "TI2-CLOSEOUT-1 documentary reconciliation and approved publication only; no scientific gate PASS, TI-2R or TI-3+ execution.",
+  "ti2_closure_authorized": true,
+  "transform_existence": "UNDETERMINED",
+  "why_not_partial": "G3 remains BLOCKED_DEPENDENCY_G2: documented nominal sampling does not certify registration, ROI or complete metrological uncertainty. No coordinates are converted or propagated to unregistered modalities."
 }

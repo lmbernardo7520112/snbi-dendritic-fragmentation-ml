@@ -2,12 +2,16 @@
 
 ## Status and authority
 
-LB0 is PASS and SDR-2-A is RESOLVED. The author authorized TI-2 E0–E7 and
-repository-only writes in the default sandbox on
-`feat/ti2-registration-calibration`. The governing records are the
-[execution decision](../decisions/AUTHORIZATION-LB0-SDR2A-CLOSURE-PR5-MERGE-TI2-EXECUTION-2026-09-17.md)
-and [targeted Git approval decision](../decisions/AUTHORIZATION-TI2-TARGETED-GIT-APPROVALS-2026-09-17.md).
-TI-3 through TI-8 remain blocked. The resumption snapshot records
+LB0 is PASS and SDR-2-A is RESOLVED. The current
+[TI2-CLOSEOUT-1 decision](../decisions/AUTHORIZATION-TI2-CLOSEOUT-1-2026-09-17.md)
+permits only documentary reconciliation, deterministic tests, an approved
+checkpoint, push, a Draft PR and remote CI verification. Ordinary writes remain
+inside the repository and default sandbox on `feat/ti2-registration-calibration`.
+The scientific state is `TERMINAL_BLOCKED_PENDING_CLOSEOUT`: method v1 has
+`INSUFFICIENT_EVIDENCE`, G2-SPATIAL is `BLOCKED_METHOD_V1`, transformation
+existence is `UNDETERMINED`, G3 is `BLOCKED_DEPENDENCY_G2`, and E7 is
+`PASS_DOCUMENTARY`. TI-2R and TI-3 through TI-8 are not authorized.
+The historical resumption snapshot records
 `TI2_EXECUTION_STATUS=RESUMED_AFTER_OPERATIONAL_BLOCK`; G2-SPATIAL and G3 were
 `NOT_EVALUATED` at resumption, independently of operational readiness.
 
@@ -32,11 +36,13 @@ TI-3 through TI-8 remain blocked. The resumption snapshot records
 
 ## Sanitized workspace rule
 
-Raw experimental sources remain external and immutable; only the exact
-operator-declared source may be read. The authorized TI-2 exception permits
-the 30 frozen lossless pilot images and their diagnostic derivatives in ignored
-local derived storage. It does not permit raw videos in the workspace, additional
-pilot frames, datasets or binaries in Git. The standalone `.git` directory must
+Experimental source files remain external and immutable. Closeout permits no
+pixel access, source-member reads or decoding. Exact existing files may be
+hashed as opaque bytes only when needed for integrity. The historical 30 pilot
+frames were decoded from MP4 without additional losses, preserving video
+resolution and pixel format; existing derivatives remain ignored. `.raw` files
+are headerless decoded pixel buffers, not raw detector data. No further frames,
+datasets or experimental binaries may enter Git. The standalone `.git` directory must
 remain inside the repository root; linked worktrees are prohibited.
 `.gitignore` is not a confidentiality or write barrier. The original sanitization
 claim is the author's attestation; the Git-index guard is not a scan of ignored
@@ -45,8 +51,9 @@ attestation.
 
 ## Authorized local workflow
 
-1. Verify repository, branch, HEAD and status. At an authorized resumption,
-   reconcile preserved partial changes with the recorded task before editing.
+1. Confirm the exact repository/branch, a clean initial worktree, no index lock,
+   all three required commits and zero tracked experimental binaries. Record
+   `TI2_EXECUTION_RESULT_COMMIT=f3c6da78b04299475c7bb85e986eb7435b08bd22`.
 2. Read the current authorization and `AGENTS.md`.
 3. Run `/usr/bin/python3 -B scripts/check_repository_data.py`.
 4. Run `/usr/bin/python3 -B scripts/check_local_bootstrap.py`.
@@ -55,13 +62,16 @@ attestation.
    diagnostic, optional bwrap probe or repeated sandbox acceptance is required.
 7. Run local tests in the default sandbox, with fresh synthetic temporary
    subtrees only inside `.bootstrap-test-tmp/` when needed. Core contracts and CI
-   use the standard library; optional experimental runtime tools must already
-   exist and their versions must be recorded, without installation.
+   use the standard library. Existing optional synthetic tests may use already
+   installed packages; no scientific execution or installation is authorized.
 8. Run the complete regression suite in a clean CI checkout. The explicit
    resumption authority also permits the full synthetic suite locally with
    `TMPDIR` inside `.bootstrap-test-tmp/`; no experimental bytes or media
    decoding may enter the legacy tests.
-9. Review the scoped diff and final status before each exact Git approval.
+9. Report exact discovered/run, passed, skipped, failure and error counts;
+   retain historical logs. Review the full scoped diff and status before each
+   Git approval. A required source/scientific change stops the task with
+   `SOURCE_OR_SCIENTIFIC_CHANGE_REQUIRED`.
 
 ## Targeted Git approvals
 
@@ -73,14 +83,18 @@ sandbox configuration to resolve it.
 - Review the exact files, then request approval for the individual
   `git add -- <explicit paths>` operation; no wildcard or all-files staging.
 - Request a separate approval for the concrete `git commit` operation.
-- Request push approval only after final G2-SPATIAL/G3 decisions and passing
-  required tests. Request Draft PR creation separately.
+- Closeout explicitly permits publication of the blocked scientific result.
+  Require documentary reconciliation, zero test failures/errors, passing guards
+  and checksums, and zero tracked experimental binaries. Approve a read-only
+  remote-reference check, establish a fast-forward push and approve that exact
+  push separately. Request Draft PR creation separately, then verify remote CI
+  to completion; never claim a run passed while it is pending.
 - Never infer authority for a force operation, credential inspection, broad
   network access, another branch or merging the TI-2 PR.
 
 These per-action approvals are the sole exception to the default-sandbox Git
-metadata write restriction. Ordinary development and scientific execution stay
-inside the default sandbox. A real bwrap/namespace/seccomp startup failure still
+metadata write restriction. Ordinary documentary development stays inside the
+default sandbox; no new scientific execution is authorized. A real bwrap/namespace/seccomp startup failure still
 requires an immediate stop without fallback.
 
 ## VS Code tasks
@@ -108,7 +122,8 @@ A bootstrap report may record:
 Do not publish usernames, home directories, hostnames, environment variables,
 credentials or external source paths. Bootstrap evidence contains no
 experimental metadata. TI-2 evidence may contain the expressly authorized
-source IDs, hashes, dimensions, frozen indices, physical times and lineage,
+source IDs, hashes, dimensions, frozen indices, explicitly distinguished elapsed
+and experimental times, documented nominal scale, uncertainty and lineage,
 using logical source identifiers instead of personal filesystem paths.
 
 ## Completion criteria
@@ -118,7 +133,11 @@ using logical source identifiers instead of personal filesystem paths.
 - the data guard passes in CI;
 - synthetic tests cover traversal, symlinks, case-insensitive suffixes, and prohibited paths;
 - historical local diagnostics remain read-only and Git optional locks are disabled;
-- all previous deterministic tests remain green;
+- deterministic tests have zero failures/errors, with pass/skip counts and skip
+  reasons reported separately;
 - Codex write readiness is `AUTHORIZED_DEFAULT_SANDBOX_REPOSITORY_ONLY` on the
   basis of the successful smoke test and separate execution decision;
-- targeted Git approvals do not change scientific gates or authorize TI-3+.
+- the closeout PASS additionally requires its commit, completed push, open Draft
+  PR, completed green remote CI, clean worktree and zero tracked experimental
+  binaries; targeted approvals do not change the scientific gates or authorize
+  TI-2R/TI-3+.

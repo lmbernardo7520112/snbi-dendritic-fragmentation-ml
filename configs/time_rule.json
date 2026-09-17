@@ -1,14 +1,76 @@
 {
-  "rule_version": "1.0.0",
+  "applicability": [
+    "ESM1",
+    "ESM2",
+    "ESM3",
+    "ESM4",
+    "ESM5",
+    "ESM6"
+  ],
+  "arithmetic": "Decimal arithmetic from exact decimal strings; JSON numeric outputs validated through Decimal(str(value)); no binary-float equality assumption.",
+  "delta_t_s": "1.18",
   "delta_t_seconds": "1.18",
-  "frame_index_origin": 0,
-  "time_origin_seconds": "0.00",
-  "reported_fps_is_physical_time": false,
+  "documentary_provenance": {
+    "authority": "docs/decisions/AUTHORIZATION-TI2-CLOSEOUT-1-2026-09-17.md",
+    "basis": "author-supplied primary-source citation and explicit documentary reconciliation",
+    "citation": "Gibbs et al., JOM 68, 170–177 (2016)",
+    "doi": "10.1007/s11837-015-1646-7",
+    "independent_primary_text_retrieved": false,
+    "scope": "Documentary authorization only; no source retrieval or new image/pixel observation in TI2-CLOSEOUT-1.",
+    "url": "https://link.springer.com/article/10.1007/s11837-015-1646-7"
+  },
+  "documentary_revision": "TI2-CLOSEOUT-1",
+  "elapsed_equation": "elapsed_from_first_frame_s = 1.18 * frame_index",
   "equation": "t_physical_seconds(i) = i * 1.18",
-  "applicability": ["ESM1", "ESM2", "ESM3", "ESM4", "ESM5", "ESM6"],
+  "experimental_time_models": {
+    "bottom-up": {
+      "equation": "experimental_time_s = -25.96 + 1.18 * frame_index",
+      "offset_s": "-25.96",
+      "source_ids": [
+        "ESM1",
+        "ESM2",
+        "ESM3"
+      ]
+    },
+    "top-down": {
+      "equation": "experimental_time_s = -34.22 + 1.18 * frame_index",
+      "offset_s": "-34.22",
+      "source_ids": [
+        "ESM4",
+        "ESM5",
+        "ESM6"
+      ]
+    }
+  },
+  "frame_index_origin": 0,
+  "legacy_field_semantics": {
+    "equation": {
+      "meaning": "The legacy t_physical_seconds name denotes elapsed_from_first_frame_s only; the original equation is retained for existing readers.",
+      "status": "DEPRECATED_LEGACY_NAME"
+    },
+    "physical_time_s": {
+      "alias_of": "elapsed_from_first_frame_s",
+      "meaning": "Historical zero-offset elapsed time from the first video frame, not experimental time relative to front entry.",
+      "status": "DEPRECATED_ALIAS",
+      "values_preserved": true
+    },
+    "provenance": {
+      "meaning": "Preserved TI-1 provenance; current author-supplied reconciliation is in documentary_provenance.",
+      "status": "HISTORICAL_TI1_RECORD"
+    },
+    "time_origin_seconds": {
+      "meaning": "Zero of elapsed video-frame time; experimental origins are condition-specific offsets.",
+      "status": "LEGACY_ELAPSED_ORIGIN"
+    }
+  },
   "provenance": {
     "basis": "approved_scientific_protocol_and_prior_forensic_audit",
-    "primary_source_independently_located_in_ti1": false,
-    "limitation": "The 1.18 s interval is frozen as an approved protocol assertion; TI-1 did not independently locate the original acquisition statement in the supplied documents."
-  }
+    "limitation": "The 1.18 s interval is frozen as an approved protocol assertion; TI-1 did not independently locate the original acquisition statement in the supplied documents.",
+    "primary_source_independently_located_in_ti1": false
+  },
+  "reported_fps_is_physical_time": false,
+  "rule_version": "1.0.0",
+  "time_model_status": "DOCUMENTED_AND_RECONCILED",
+  "time_origin_seconds": "0.00",
+  "time_zero_reference": "solidification_front_entry_into_field_of_view"
 }

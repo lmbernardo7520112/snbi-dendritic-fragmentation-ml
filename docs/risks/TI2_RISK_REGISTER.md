@@ -1,13 +1,13 @@
 # TI-2 — Registro de riscos
 
-**Status:** execução TI-2 E0–E7 autorizada; controles de risco preservados.
+**Status:** TI2-CLOSEOUT-1 exclusivamente; método v1 com evidência insuficiente.
 
-Autoridade: [decisão de execução](../decisions/AUTHORIZATION-LB0-SDR2A-CLOSURE-PR5-MERGE-TI2-EXECUTION-2026-09-17.md)
-e [retomada com aprovações Git pontuais](../decisions/AUTHORIZATION-TI2-TARGETED-GIT-APPROVALS-2026-09-17.md).
+Autoridade atual: [decisão de closeout](../decisions/AUTHORIZATION-TI2-CLOSEOUT-1-2026-09-17.md).
 A declaração final de riscos aceitos para planejamento é histórica; a
-autorização posterior permite somente o piloto congelado e não aceita
-automaticamente risco residual nem concede PASS. Na retomada, G2-SPATIAL e G3
-estavam `NOT_EVALUATED`.
+autorização posterior de execução permitiu somente o piloto congelado e não
+aceitou automaticamente risco residual. Agora `G2_SPATIAL=BLOCKED_METHOD_V1`,
+`TRANSFORM_EXISTENCE=UNDETERMINED`, `G3=BLOCKED_DEPENDENCY_G2` e
+`E7=PASS_DOCUMENTARY`. Nenhuma nova análise científica está autorizada.
 
 | ID | Risco | Consequência | Controle preventivo | Resposta de gate |
 |---|---|---|---|---|
@@ -32,7 +32,8 @@ Nenhum risco experimental foi aceito nesta fase, pois nenhuma operação sobre p
 
 ## Evidência da execução autorizada de 17/09/2026
 
-As decisões técnicas propostas são G2-SPATIAL e G3 **BLOCKED**, conforme
+Os resultados científicos G2-SPATIAL/G3 permanecem bloqueados, agora com a
+classificação terminal aprovada pelo autor no closeout, conforme
 `artifacts/evidence/TI2/terminal-state.json`. O texto de planejamento acima é
 histórico; os seguintes riscos não foram aceitos nem corrigidos retroativamente:
 
@@ -45,12 +46,19 @@ histórico; os seguintes riscos não foram aceitos nem corrigidos retroativament
 - Sem transformação aceita, não há ROI comum certificada nem validação
   independente. Os quartis foram decodificados e verificados por hash, mas
   permanecem sem análise de pixels.
-- A barra horizontal de 500 µm possui evidência de comprimento raster, mas
-  incerteza de aquisição e escala vertical continuam sem comprovação; não
-  houve conversão de coordenadas físicas.
-- Textos de tempo observados nos frames centrais diferem numericamente de
-  `i × 1,18 s`. Sua semântica exige conciliação com fonte primária pelo autor;
-  a regra aprovada foi preservada, sem reindexar ou selecionar novos frames.
+- A barra horizontal de 500 µm/357 px fornece verificação raster compatível com
+  a escala nominal X/Y de 1,40 µm/pixel documentada pelo autor. A incerteza
+  metrológica completa continua `UNRESOLVED`; o intervalo raster não é
+  intervalo de confiança. Nenhuma coordenada é convertida nem escala propagada
+  a modalidade sem registro certificado.
+- A diferença entre os textos temporais e `i × 1,18 s` foi reconciliada
+  documentalmente pelo autor: a primeira grandeza é tempo experimental relativo
+  à entrada da frente no campo de visão, com offsets −25,96 s para ESM1–3 e
+  −34,22 s para ESM4–6; a segunda é tempo decorrido desde o primeiro frame.
+  `time_model_status=DOCUMENTED_AND_RECONCILED`, sem nova inspeção de pixels,
+  reindexação ou seleção de frames. A fonte indicada é Gibbs et al., *JOM* 68,
+  170–177 (2016), DOI 10.1007/s11837-015-1646-7; foi fornecida pelo autor e não
+  consultada novamente pelo agente.
 
 A preservação da fonte, os 30 itens e os limites TI-3+ permanecem controlados.
 Os riscos detalhados e suas evidências estão no relatório de execução.

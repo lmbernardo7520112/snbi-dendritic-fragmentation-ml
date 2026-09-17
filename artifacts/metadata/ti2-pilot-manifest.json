@@ -1,5 +1,12 @@
 {
   "decoder_internal_reference_frames_allowed": true,
+  "documentary_revision": "TI2-CLOSEOUT-1",
+  "frame_terminology": {
+    "description": "30 pilot frames decoded from MP4 without additional loss, preserving the native video resolution and pixel format.",
+    "legacy_fields": "images, materialized_image_count, native_pixel_format_preserved and native_planar_rawvideo retain schema compatibility and refer to decoded video frames/buffers.",
+    "lossless_scope": "No additional loss after decoding the supplied MP4; no assertion that the original MP4 encoding was lossless.",
+    "raw_files": "Headerless pixel buffers decoded from MP4; these are not raw detector data."
+  },
   "images": [
     {
       "bit_depth": 8,
@@ -37,7 +44,9 @@
         "pipe:1"
       ],
       "decoder_method": "ffmpeg-native-select-sealed-anonymous-mp4-v1",
+      "elapsed_from_first_frame_s": 0.0,
       "experiment_id": "bottom_up_anti_parallel",
+      "experimental_time_s": -25.96,
       "format": "native_planar_rawvideo",
       "frame_bytes": 1951506,
       "frame_index": 0,
@@ -117,7 +126,9 @@
         "pipe:1"
       ],
       "decoder_method": "ffmpeg-native-select-sealed-anonymous-mp4-v1",
+      "elapsed_from_first_frame_s": 86.14,
       "experiment_id": "bottom_up_anti_parallel",
+      "experimental_time_s": 60.18,
       "format": "native_planar_rawvideo",
       "frame_bytes": 1951506,
       "frame_index": 73,
@@ -197,7 +208,9 @@
         "pipe:1"
       ],
       "decoder_method": "ffmpeg-native-select-sealed-anonymous-mp4-v1",
+      "elapsed_from_first_frame_s": 172.28,
       "experiment_id": "bottom_up_anti_parallel",
+      "experimental_time_s": 146.32,
       "format": "native_planar_rawvideo",
       "frame_bytes": 1951506,
       "frame_index": 146,
@@ -277,7 +290,9 @@
         "pipe:1"
       ],
       "decoder_method": "ffmpeg-native-select-sealed-anonymous-mp4-v1",
+      "elapsed_from_first_frame_s": 258.42,
       "experiment_id": "bottom_up_anti_parallel",
+      "experimental_time_s": 232.46,
       "format": "native_planar_rawvideo",
       "frame_bytes": 1951506,
       "frame_index": 219,
@@ -357,7 +372,9 @@
         "pipe:1"
       ],
       "decoder_method": "ffmpeg-native-select-sealed-anonymous-mp4-v1",
+      "elapsed_from_first_frame_s": 345.74,
       "experiment_id": "bottom_up_anti_parallel",
+      "experimental_time_s": 319.78,
       "format": "native_planar_rawvideo",
       "frame_bytes": 1951506,
       "frame_index": 293,
@@ -437,7 +454,9 @@
         "pipe:1"
       ],
       "decoder_method": "ffmpeg-native-select-sealed-anonymous-mp4-v1",
+      "elapsed_from_first_frame_s": 0.0,
       "experiment_id": "bottom_up_anti_parallel",
+      "experimental_time_s": -25.96,
       "format": "native_planar_rawvideo",
       "frame_bytes": 1951506,
       "frame_index": 0,
@@ -517,7 +536,9 @@
         "pipe:1"
       ],
       "decoder_method": "ffmpeg-native-select-sealed-anonymous-mp4-v1",
+      "elapsed_from_first_frame_s": 86.14,
       "experiment_id": "bottom_up_anti_parallel",
+      "experimental_time_s": 60.18,
       "format": "native_planar_rawvideo",
       "frame_bytes": 1951506,
       "frame_index": 73,
@@ -597,7 +618,9 @@
         "pipe:1"
       ],
       "decoder_method": "ffmpeg-native-select-sealed-anonymous-mp4-v1",
+      "elapsed_from_first_frame_s": 172.28,
       "experiment_id": "bottom_up_anti_parallel",
+      "experimental_time_s": 146.32,
       "format": "native_planar_rawvideo",
       "frame_bytes": 1951506,
       "frame_index": 146,
@@ -677,7 +700,9 @@
         "pipe:1"
       ],
       "decoder_method": "ffmpeg-native-select-sealed-anonymous-mp4-v1",
+      "elapsed_from_first_frame_s": 258.42,
       "experiment_id": "bottom_up_anti_parallel",
+      "experimental_time_s": 232.46,
       "format": "native_planar_rawvideo",
       "frame_bytes": 1951506,
       "frame_index": 219,
@@ -757,7 +782,9 @@
         "pipe:1"
       ],
       "decoder_method": "ffmpeg-native-select-sealed-anonymous-mp4-v1",
+      "elapsed_from_first_frame_s": 345.74,
       "experiment_id": "bottom_up_anti_parallel",
+      "experimental_time_s": 319.78,
       "format": "native_planar_rawvideo",
       "frame_bytes": 1951506,
       "frame_index": 293,
@@ -837,7 +864,9 @@
         "pipe:1"
       ],
       "decoder_method": "ffmpeg-native-select-sealed-anonymous-mp4-v1",
+      "elapsed_from_first_frame_s": 0.0,
       "experiment_id": "bottom_up_anti_parallel",
+      "experimental_time_s": -25.96,
       "format": "native_planar_rawvideo",
       "frame_bytes": 1966080,
       "frame_index": 0,
@@ -917,7 +946,9 @@
         "pipe:1"
       ],
       "decoder_method": "ffmpeg-native-select-sealed-anonymous-mp4-v1",
+      "elapsed_from_first_frame_s": 86.14,
       "experiment_id": "bottom_up_anti_parallel",
+      "experimental_time_s": 60.18,
       "format": "native_planar_rawvideo",
       "frame_bytes": 1966080,
       "frame_index": 73,
@@ -997,7 +1028,9 @@
         "pipe:1"
       ],
       "decoder_method": "ffmpeg-native-select-sealed-anonymous-mp4-v1",
+      "elapsed_from_first_frame_s": 172.28,
       "experiment_id": "bottom_up_anti_parallel",
+      "experimental_time_s": 146.32,
       "format": "native_planar_rawvideo",
       "frame_bytes": 1966080,
       "frame_index": 146,
@@ -1077,7 +1110,9 @@
         "pipe:1"
       ],
       "decoder_method": "ffmpeg-native-select-sealed-anonymous-mp4-v1",
+      "elapsed_from_first_frame_s": 258.42,
       "experiment_id": "bottom_up_anti_parallel",
+      "experimental_time_s": 232.46,
       "format": "native_planar_rawvideo",
       "frame_bytes": 1966080,
       "frame_index": 219,
@@ -1157,7 +1192,9 @@
         "pipe:1"
       ],
       "decoder_method": "ffmpeg-native-select-sealed-anonymous-mp4-v1",
+      "elapsed_from_first_frame_s": 345.74,
       "experiment_id": "bottom_up_anti_parallel",
+      "experimental_time_s": 319.78,
       "format": "native_planar_rawvideo",
       "frame_bytes": 1966080,
       "frame_index": 293,
@@ -1237,7 +1274,9 @@
         "pipe:1"
       ],
       "decoder_method": "ffmpeg-native-select-sealed-anonymous-mp4-v1",
+      "elapsed_from_first_frame_s": 0.0,
       "experiment_id": "top_down_parallel",
+      "experimental_time_s": -34.22,
       "format": "native_planar_rawvideo",
       "frame_bytes": 1940004,
       "frame_index": 0,
@@ -1317,7 +1356,9 @@
         "pipe:1"
       ],
       "decoder_method": "ffmpeg-native-select-sealed-anonymous-mp4-v1",
+      "elapsed_from_first_frame_s": 115.64,
       "experiment_id": "top_down_parallel",
+      "experimental_time_s": 81.42,
       "format": "native_planar_rawvideo",
       "frame_bytes": 1940004,
       "frame_index": 98,
@@ -1397,7 +1438,9 @@
         "pipe:1"
       ],
       "decoder_method": "ffmpeg-native-select-sealed-anonymous-mp4-v1",
+      "elapsed_from_first_frame_s": 232.46,
       "experiment_id": "top_down_parallel",
+      "experimental_time_s": 198.24,
       "format": "native_planar_rawvideo",
       "frame_bytes": 1940004,
       "frame_index": 197,
@@ -1477,7 +1520,9 @@
         "pipe:1"
       ],
       "decoder_method": "ffmpeg-native-select-sealed-anonymous-mp4-v1",
+      "elapsed_from_first_frame_s": 348.1,
       "experiment_id": "top_down_parallel",
+      "experimental_time_s": 313.88,
       "format": "native_planar_rawvideo",
       "frame_bytes": 1940004,
       "frame_index": 295,
@@ -1557,7 +1602,9 @@
         "pipe:1"
       ],
       "decoder_method": "ffmpeg-native-select-sealed-anonymous-mp4-v1",
+      "elapsed_from_first_frame_s": 464.92,
       "experiment_id": "top_down_parallel",
+      "experimental_time_s": 430.7,
       "format": "native_planar_rawvideo",
       "frame_bytes": 1940004,
       "frame_index": 394,
@@ -1637,7 +1684,9 @@
         "pipe:1"
       ],
       "decoder_method": "ffmpeg-native-select-sealed-anonymous-mp4-v1",
+      "elapsed_from_first_frame_s": 0.0,
       "experiment_id": "top_down_parallel",
+      "experimental_time_s": -34.22,
       "format": "native_planar_rawvideo",
       "frame_bytes": 1940004,
       "frame_index": 0,
@@ -1717,7 +1766,9 @@
         "pipe:1"
       ],
       "decoder_method": "ffmpeg-native-select-sealed-anonymous-mp4-v1",
+      "elapsed_from_first_frame_s": 115.64,
       "experiment_id": "top_down_parallel",
+      "experimental_time_s": 81.42,
       "format": "native_planar_rawvideo",
       "frame_bytes": 1940004,
       "frame_index": 98,
@@ -1797,7 +1848,9 @@
         "pipe:1"
       ],
       "decoder_method": "ffmpeg-native-select-sealed-anonymous-mp4-v1",
+      "elapsed_from_first_frame_s": 232.46,
       "experiment_id": "top_down_parallel",
+      "experimental_time_s": 198.24,
       "format": "native_planar_rawvideo",
       "frame_bytes": 1940004,
       "frame_index": 197,
@@ -1877,7 +1930,9 @@
         "pipe:1"
       ],
       "decoder_method": "ffmpeg-native-select-sealed-anonymous-mp4-v1",
+      "elapsed_from_first_frame_s": 348.1,
       "experiment_id": "top_down_parallel",
+      "experimental_time_s": 313.88,
       "format": "native_planar_rawvideo",
       "frame_bytes": 1940004,
       "frame_index": 295,
@@ -1957,7 +2012,9 @@
         "pipe:1"
       ],
       "decoder_method": "ffmpeg-native-select-sealed-anonymous-mp4-v1",
+      "elapsed_from_first_frame_s": 464.92,
       "experiment_id": "top_down_parallel",
+      "experimental_time_s": 430.7,
       "format": "native_planar_rawvideo",
       "frame_bytes": 1940004,
       "frame_index": 394,
@@ -2037,7 +2094,9 @@
         "pipe:1"
       ],
       "decoder_method": "ffmpeg-native-select-sealed-anonymous-mp4-v1",
+      "elapsed_from_first_frame_s": 0.0,
       "experiment_id": "top_down_parallel",
+      "experimental_time_s": -34.22,
       "format": "native_planar_rawvideo",
       "frame_bytes": 1943040,
       "frame_index": 0,
@@ -2117,7 +2176,9 @@
         "pipe:1"
       ],
       "decoder_method": "ffmpeg-native-select-sealed-anonymous-mp4-v1",
+      "elapsed_from_first_frame_s": 115.64,
       "experiment_id": "top_down_parallel",
+      "experimental_time_s": 81.42,
       "format": "native_planar_rawvideo",
       "frame_bytes": 1943040,
       "frame_index": 98,
@@ -2197,7 +2258,9 @@
         "pipe:1"
       ],
       "decoder_method": "ffmpeg-native-select-sealed-anonymous-mp4-v1",
+      "elapsed_from_first_frame_s": 232.46,
       "experiment_id": "top_down_parallel",
+      "experimental_time_s": 198.24,
       "format": "native_planar_rawvideo",
       "frame_bytes": 1943040,
       "frame_index": 197,
@@ -2277,7 +2340,9 @@
         "pipe:1"
       ],
       "decoder_method": "ffmpeg-native-select-sealed-anonymous-mp4-v1",
+      "elapsed_from_first_frame_s": 348.1,
       "experiment_id": "top_down_parallel",
+      "experimental_time_s": 313.88,
       "format": "native_planar_rawvideo",
       "frame_bytes": 1943040,
       "frame_index": 295,
@@ -2357,7 +2422,9 @@
         "pipe:1"
       ],
       "decoder_method": "ffmpeg-native-select-sealed-anonymous-mp4-v1",
+      "elapsed_from_first_frame_s": 464.92,
       "experiment_id": "top_down_parallel",
+      "experimental_time_s": 430.7,
       "format": "native_planar_rawvideo",
       "frame_bytes": 1943040,
       "frame_index": 394,
@@ -2628,5 +2695,47 @@
     "source_locator_sha256": "412b123e5dfa9b70f6d81560dbb9b2f4adda2662794050e25344bc7d783d9b44",
     "source_mode": "O_RDONLY|O_NOFOLLOW",
     "status": "PASS"
+  },
+  "time_semantics": {
+    "arithmetic": "Decimal arithmetic from exact decimal strings; JSON numeric outputs validated through Decimal(str(value)); no binary-float equality assumption.",
+    "configuration": "configs/time_rule.json",
+    "delta_t_s": "1.18",
+    "documentary_provenance": {
+      "authority": "docs/decisions/AUTHORIZATION-TI2-CLOSEOUT-1-2026-09-17.md",
+      "basis": "author-supplied primary-source citation and explicit documentary reconciliation",
+      "citation": "Gibbs et al., JOM 68, 170–177 (2016)",
+      "doi": "10.1007/s11837-015-1646-7",
+      "independent_primary_text_retrieved": false,
+      "scope": "Documentary authorization only; no source retrieval or new image/pixel observation in TI2-CLOSEOUT-1.",
+      "url": "https://link.springer.com/article/10.1007/s11837-015-1646-7"
+    },
+    "elapsed_from_first_frame_s": "1.18 * frame_index; zero at first video frame",
+    "experimental_time_models": {
+      "bottom-up": {
+        "equation": "experimental_time_s = -25.96 + 1.18 * frame_index",
+        "offset_s": "-25.96",
+        "source_ids": [
+          "ESM1",
+          "ESM2",
+          "ESM3"
+        ]
+      },
+      "top-down": {
+        "equation": "experimental_time_s = -34.22 + 1.18 * frame_index",
+        "offset_s": "-34.22",
+        "source_ids": [
+          "ESM4",
+          "ESM5",
+          "ESM6"
+        ]
+      }
+    },
+    "physical_time_s": {
+      "alias_of": "elapsed_from_first_frame_s",
+      "status": "DEPRECATED_ALIAS",
+      "values_preserved": true
+    },
+    "time_model_status": "DOCUMENTED_AND_RECONCILED",
+    "time_zero_reference": "solidification_front_entry_into_field_of_view"
   }
 }

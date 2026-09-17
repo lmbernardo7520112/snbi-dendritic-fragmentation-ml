@@ -1,55 +1,76 @@
-# TI-2 — Execução governada e resultado terminal de 17/09/2026
+# TI-2 — Resultado científico e reconciliação documental de closeout
 
-**G2-SPATIAL = BLOCKED. G3 = BLOCKED.** E0 e E1 passaram; o método
+**G2_SPATIAL = BLOCKED_METHOD_V1. G3 = BLOCKED_DEPENDENCY_G2.** E0 e E1 passaram; o método
 congelado não reuniu correspondências suficientes nos três instantes de cada
 par. A seleção de classes não foi alcançada. Nenhuma matriz, inversa ou ROI
 experimental foi certificada. Isso não demonstra impossibilidade física de
-registro. Encerramento formal permanece pendente do autor.
+registro. O autor aprovou a classificação terminal e autorizou exclusivamente
+o closeout documental/publicação; nenhuma nova análise científica foi executada
+para esta reconciliação.
+
+```text
+TI2_EXECUTION = TERMINAL_BLOCKED_PENDING_CLOSEOUT
+METHOD_V1 = INSUFFICIENT_EVIDENCE
+G2_SPATIAL = BLOCKED_METHOD_V1
+TRANSFORM_EXISTENCE = UNDETERMINED
+G3 = BLOCKED_DEPENDENCY_G2
+E7 = PASS_DOCUMENTARY
+TI3_PLUS_AUTHORIZED = false
+```
 
 ## Estado e autoridade
 
 Branch: `feat/ti2-registration-calibration`, repositório standalone autorizado.
 Base preservada: `f7818c17c18ba9e4306696ea61b427864cf7deb6`.
-Checkpoints concluídos antes deste relatório:
+Checkpoints da execução científica preservados:
 
 - `7e2223dd84346beebbccefe51afcead66a02d339` — recuperação E0-R e contratos;
 - `5e1c4dc2406e1b6fbcf71bd8d86d6d842f3af3ad` — runtime, journal, registro,
   metrologia e controles sintéticos.
+- `f3c6da78b04299475c7bb85e986eb7435b08bd22` — resultado científico/evidências;
+  este é `TI2_EXECUTION_RESULT_COMMIT`.
 
-Este relatório integra um checkpoint documental posterior, cujo SHA deve ser
-consultado no histórico Git. Nenhum histórico foi reescrito. O estado inicial
+O SHA do novo commit de closeout será informado somente depois de sua criação,
+no retorno terminal e no Draft PR; não é inserido no próprio commit. Nenhum
+histórico foi reescrito. O estado inicial
 parcial foi preservado; o snapshot `execution-state.json` é histórico e não é
 substituído pelo resultado científico em `terminal-state.json`.
 
-LB0 permanece PASS; SDR-2-A permanece RESOLVED. Foram aplicadas as decisões de
+LB0 permanece PASS; SDR-2-A permanece RESOLVED. Na execução preservada, foram aplicadas as decisões de
 execução de 17/09/2026 e de aprovações Git individuais. Cada staging e commit
 teve sua própria aprovação interativa. Escrita científica ocorreu apenas no
 repositório, no sandbox padrão. Não houve instalação, acesso a credenciais,
 rede, mudança do sistema operacional, Full Access, bypass, push ou merge.
 
-**Draft PR: não aberto. CI remota: NOT_VERIFIED.** A instrução mais recente
-condicionou publicação à conclusão de E0–E7; E4/E5 estão bloqueadas por
-pré-requisitos. Não foi solicitada ampliação da autorização de publicação.
+No commit do resultado científico, Draft PR não havia sido aberto e CI remota
+era `NOT_VERIFIED`; a condição de publicação então vigente exigia conclusão
+científica de E0–E7. A nova
+[autorização de TI2-CLOSEOUT-1](../../../docs/decisions/AUTHORIZATION-TI2-CLOSEOUT-1-2026-09-17.md)
+supre explicitamente essa restrição para publicar o resultado bloqueado.
+Ela permite reconciliação textual, testes determinísticos, checkpoint, push,
+Draft PR e verificação da CI remota, com aprovações Git pontuais. Não permite
+TI-2R, pixels, nova análise científica ou merge. Estados de publicação/CI serão
+registrados somente após as respectivas operações, sem antecipar sucesso.
 
 ## E0–E7
 
 | Etapa | Resultado real |
 |---|---|
 | E0 | PASS: fonte autenticada, ferramentas disponíveis, RED histórico preservado, guardrails e preflight antes dos pixels |
-| E1 | PASS: exatamente 30 imagens nativas, lineage e fonte imutável |
+| E1 | PASS histórico: exatamente 30 frames-piloto dos MP4 sem perdas adicionais, preservando resolução/formato de pixels dos vídeos, lineage e fonte imutável |
 | E2 | PARTIAL: canvas, overlays e metadados auditados; orientação física e interpretação das diferenças de borda não comprovadas |
-| E3 | BLOCKED: insuficiência de correspondências antes da seleção de transformações |
+| E3 | INSUFFICIENT_EVIDENCE do método v1; insuficiência de correspondências antes da seleção de transformações |
 | E4 | BLOCKED_DEPENDENCY: sem matriz aprovada; quartis permanecem sem análise de pixels |
 | E5 | BLOCKED_DEPENDENCY: suporte comum e ROI não certificáveis sem registro |
-| E6 | PARTIAL: barra horizontal medida; calibração física completa UNRESOLVED |
-| E7 | evidências, contratos, limitações e decisões técnicas registradas |
+| E6 | escala nominal X/Y DOCUMENTED; verificação raster compatível; incerteza metrológica completa UNRESOLVED; nenhuma conversão |
+| E7 | PASS_DOCUMENTARY: evidências, contratos, limitações e classificação terminal reconciliados |
 
 Não se alega conclusão científica integral de E0–E7. Nenhum novo frame será
 selecionado, redecodificado ou analisado implicitamente após este bloqueio.
 
 ## Fonte, manifesto e integridade
 
-Foi utilizado somente o ZIP expressamente indicado pelo operador, aberto com
+Na execução científica histórica, foi utilizado somente o ZIP expressamente indicado pelo operador, aberto com
 `O_RDONLY|O_NOFOLLOW`. Caminho privado omitido; sua impressão SHA-256 é
 `412b123e5dfa9b70f6d81560dbb9b2f4adda2662794050e25344bc7d783d9b44`.
 O ZIP de 116199497 bytes e os seis membros MP4 correspondem a G0 antes,
@@ -58,23 +79,27 @@ depois e na verificação final. Hash do ZIP:
 Documentos/PDFs e locais vizinhos não foram acessados.
 
 O manifesto `artifacts/metadata/ti2-pilot-manifest.json` registra source_id,
-experiment_id, condição, modalidade, índice, tempo normativo, codec, dimensões,
+experiment_id, condição, modalidade, índice, tempos explicitamente distinguidos, codec, dimensões,
 planos, profundidade, hashes, comando e lineage de cada item.
 
-- ESM1–3: 0, 73, 146, 219, 293; 15 imagens.
-- ESM4–6: 0, 98, 197, 295, 394; 15 imagens.
-- Nativos: 8 bits, YUV420p, dimensões originais e todas as três componentes.
-- Tempo registrado: `t(i)=i×1,18 s`, sem derivação dos 5 fps de reprodução.
-- Imagens lossless raw em `data/derived/ti2-pilot/`, ignoradas pelo Git;
+- ESM1–3: 0, 73, 146, 219, 293; 15 frames-piloto.
+- ESM4–6: 0, 98, 197, 295, 394; 15 frames-piloto.
+- Formato nativo dos vídeos preservado: 8 bits, YUV420p, resolução original e três componentes.
+- O campo histórico `physical_time_s` registrava tempo decorrido `i×1,18 s`,
+  sem derivação dos 5 fps; o modelo reconciliado abaixo explicita os offsets.
+- Buffers `.raw` de pixels sem cabeçalho, decodificados dos MP4 sem perdas
+  adicionais, em `data/derived/ti2-pilot/`, ignorados pelo Git;
   nenhum ZIP, MP4, raw, PNG ou outro binário experimental foi staged.
 - A prancha local `data/derived/ti2-diagnostics/central-estimation.png` é
   visualização de luminância dos seis frames centrais já autorizados, sem
   extração de qualquer frame adicional; não substitui revisão do autor.
 
 O decoder atravessou referências internas do codec, mas exportou somente os
-30 pares permitidos. Nenhum vídeo foi copiado para disco. Os hashes dos 30
-nativos e da prancha estão em `integrity-report.json`. O destino do piloto
-contém exatamente os 30 raws, `attempt.json` e `lineage.json`.
+30 frames/itens permitidos. Nenhum vídeo foi copiado para disco. Os hashes dos
+30 buffers decodificados e da prancha estão em `integrity-report.json`. Esses
+buffers **não são dados brutos do detector**. O inventário histórico do destino
+registra os 30 arquivos `.raw`, `attempt.json` e `lineage.json`; nenhuma nova
+inspeção de pixels foi usada no closeout.
 
 ## Registro e métricas
 
@@ -140,10 +165,13 @@ como UNRESOLVED. A v2 corrigiu janela e comprimento admissível após inspeção
 somente da estimação, preservando limiares e regra de incerteza; ambas as
 versões estão documentadas. Isso não alterou critérios de registro/validação.
 
-Incerteza metrológica da inscrição/aquisição, escala vertical e orientação
-física continuam NOT_VERIFIED/UNRESOLVED. A razão da barra não foi propagada
-para outras modalidades. **A escala validada é UNRESOLVED; coordenadas ficam
-em pixels e nenhuma conversão física foi realizada.**
+No closeout, o autor documentou a escala nominal de **1,40 µm/pixel em X e Y**.
+Essa declaração e a verificação raster de 1,40056022409 µm/pixel são registros
+distintos. `SPATIAL_SCALE_NOMINAL_STATUS=DOCUMENTED` não constitui certificado
+de incerteza metrológica completa; essa incerteza permanece `UNRESOLVED`.
+A razão da barra não foi propagada para outras modalidades. Coordenadas ficam
+em pixels, nenhuma conversão física foi realizada e G3 permanece bloqueado
+por dependência de G2-SPATIAL, ROI e incerteza.
 
 Os cinco componentes estão declarados. Registro, variação temporal, escala e
 ROI permanecem sem incerteza total quantificada. A discretização por eixo tem
@@ -154,19 +182,80 @@ Gravidade, gradiente térmico e crescimento não têm vetores comprovados nos
 eixos nativos. Preservar x/y, os planos nativos e ausência de autorrotação não
 supre essa evidência. A revisão visual do autor permanece PENDING.
 
-Os textos dos frames centrais observados indicam 146,32 s em ESM1:146 e
-198,24 s em ESM4:197, enquanto a regra aprovada fornece 172,28 e 232,46 s.
-A semântica dessa diferença não foi inferida. Requer conciliação primária pelo
-autor; não se alterou G2-TEMP, a regra temporal, índices ou fontes.
+## Modelo temporal reconciliado no closeout
+
+A diferença observada historicamente foi reconciliada documentalmente pelo
+autor, sem reabrir imagens ou MP4. A referência experimental zero é a entrada
+da frente de solidificação no campo de visão:
+
+```text
+delta_t_s = 1.18
+elapsed_from_first_frame_s = 1.18 * frame_index
+ESM1–3: experimental_time_s = -25.96 + 1.18 * frame_index
+ESM4–6: experimental_time_s = -34.22 + 1.18 * frame_index
+time_zero_reference = solidification_front_entry_into_field_of_view
+time_model_status = DOCUMENTED_AND_RECONCILED
+```
+
+| Grupo | Índice | Tempo decorrido (s) | Tempo experimental (s) |
+|---|---:|---:|---:|
+| ESM1–3 | 0 | 0,00 | −25,96 |
+| ESM1–3 | 73 | 86,14 | 60,18 |
+| ESM1–3 | 146 | 172,28 | 146,32 |
+| ESM1–3 | 219 | 258,42 | 232,46 |
+| ESM1–3 | 293 | 345,74 | 319,78 |
+| ESM4–6 | 0 | 0,00 | −34,22 |
+| ESM4–6 | 98 | 115,64 | 81,42 |
+| ESM4–6 | 197 | 232,46 | 198,24 |
+| ESM4–6 | 295 | 348,10 | 313,88 |
+| ESM4–6 | 394 | 464,92 | 430,70 |
+
+As verificações determinísticas usam cálculo decimal, sem igualdade binária
+ingênua. O nome histórico `physical_time_s` é depreciado por ambiguidade: seu
+valor significava tempo decorrido desde o primeiro frame, e não tempo
+experimental relativo à entrada da frente. O significado anterior é preservado
+explicitamente na migração textual; não houve reindexação ou mudança de bytes.
+
+O autor forneceu e aprovou o modelo temporal e a escala nominal X/Y, citando
+Gibbs et al., *JOM* 68, 170–177 (2016),
+[DOI 10.1007/s11837-015-1646-7](https://doi.org/10.1007/s11837-015-1646-7).
+A atribuição é documental, baseada na declaração do autor neste closeout;
+o artigo não foi consultado novamente pelo agente e nenhum pixel foi lido.
 
 ## Testes, guardrails e proveniência
 
-Os três RED históricos foram preservados. `green-recovery.txt` registra 75
-resultados GREEN na retomada. `green-final.txt` registra 97 testes após o
-resultado científico. `green-final-control.txt` registra **102 testes GREEN**
-após o controle final. Execução sem site-packages: 102 testes, cinco skips
-explícitos das rotinas opcionais NumPy/SciPy, nenhum erro. CI remota não foi
-executada nesta retomada.
+Os três RED históricos e as saídas originais foram preservados. As execuções
+com e sem site-packages são distintas e não devem ter suas contagens mescladas:
+
+| Execução histórica | Descobertos/executados | Aprovados | Ignorados | Falhas | Erros |
+|---|---:|---:|---:|---:|---:|
+| `green-recovery.txt` | 75 | 75 | 0 | 0 | 0 |
+| `green-final.txt` | 97 | 97 | 0 | 0 | 0 |
+| `green-final-control.txt`, execução normal | 102 | 102 | 0 | 0 | 0 |
+| Perfil histórico isolado com `-S`, relatado separadamente | 102 | 97 | 5 | 0 | 0 |
+| Nova verificação da suíte histórica no closeout, com `-S` | 102 | 97 | 5 | 0 | 0 |
+| Suíte final do closeout, incluindo 11 testes documentais novos, com `-S` | 113 | 108 | 5 | 0 | 0 |
+
+Os cinco skips da execução `-S` correspondem às rotinas sintéticas opcionais
+que dependem de NumPy/SciPy, indisponíveis quando site-packages é desabilitado.
+O log normal preservado não contém esses skips. O stdout da execução histórica
+com `-S` não havia sido salvo em arquivo separado: a nova execução de
+verificação no closeout não é uma reconstrução daquele stdout.
+[tests-history.json](../TI2_CLOSEOUT_1/tests-history.json) registra explicitamente
+essa proveniência. A saída final está em
+[tests-final.json](../TI2_CLOSEOUT_1/tests-final.json) e
+[tests-final.txt](../TI2_CLOSEOUT_1/tests-final.txt): 113 executados, 108 aprovados,
+5 ignorados, zero falhas e zero erros.
+
+Os cinco métodos ignorados da classe `SyntheticImageMatchingTests` são:
+`test_masks_exclude_overlay_and_input_arrays_are_unchanged`,
+`test_mismatched_dimensions_preserve_native_coordinates`,
+`test_native_coordinates_recover_translation_and_inverted_contrast`,
+`test_subpixel_correspondences_are_not_integer_rounded` e
+`test_uniform_and_periodic_content_are_ambiguous`. Todos registram o motivo
+`optional NumPy/SciPy runtime is absent from dependency-free CI`.
+Nenhum log histórico foi sobrescrito. Nenhuma contagem de testes ou resultado
+de CI aprova os gates científicos.
 
 Guard de dados, autoridade local, escopo TI-2 e AST passaram. A revisão staged
 confere identidade dos bytes, UTF-8 e padrões de caminhos privados/chaves/tokens;
@@ -180,31 +269,36 @@ Ambiente preexistente: Python3.12.3, NumPy1.26.4, SciPy1.11.4, Pillow10.2.0,
 FFmpeg/FFprobe6.1.1. Nenhuma instalação. Os contratos de CI permanecem stdlib.
 `commands.json` contém inventário sanitizado dos comandos, distinção entre
 sandbox e aprovações Git pontuais, códigos de saída e limites do registro.
-Os comandos Git do próprio checkpoint documental posterior constam no histórico
-e no retorno ao operador; este arquivo não inventa execução futura.
+Os comandos Git dos checkpoints posteriores constam no histórico e no retorno
+ao operador; este arquivo não inventa execução futura. O inventário histórico
+não substitui o registro separado de comandos, testes e publicação do closeout.
 
 ## Decisões, riscos e retomada
 
-G2-SPATIAL BLOCKED: correspondências insuficientes, nenhuma validação espacial
-certificada e orientação física não comprovada. G3 BLOCKED: registro e ROI não
-certificados, orientação e calibração completas não resolvidas. A exceção PARTIAL
+G2-SPATIAL `BLOCKED_METHOD_V1`: evidência insuficiente no método v1, nenhuma
+validação espacial certificada e orientação física não comprovada. Existência
+da transformação: `UNDETERMINED`. G3 `BLOCKED_DEPENDENCY_G2`: registro e ROI não
+certificados, orientação e incerteza completas não resolvidas. A exceção PARTIAL
 por ausência de escala não se aplica sem registro/ROI válidos.
 
-A matriz de 20 contratos está em `contract-results.json`. Os relatórios dos
-gates são propostas técnicas; não encerram formalmente TI-2 nem autorizam TI-3.
+A matriz de 20 contratos está em `contract-results.json`. O autor aprovou a
+classificação terminal bloqueada e `E7=PASS_DOCUMENTARY`; isso não concede
+PASS científico a G2-SPATIAL/G3 nem autoriza TI-2R ou TI-3.
 
-Retomada exige decisão autoral sobre revisão do método, documentação primária
-da orientação/tempo e revisão visual. Qualquer nova análise deve declarar como
-preservará a independência dos quartis, os limites já observados e as 30 imagens.
+Retomada científica exige nova decisão autoral sobre revisão do método,
+documentação da orientação/incerteza e revisão visual. O modelo temporal foi
+reconciliado neste closeout. Qualquer futura análise deve declarar como
+preservará a independência dos quartis, os limites observados e os 30 frames-piloto.
 Não há autorização implícita para novos frames, nova decodificação, novos
 limiares, labels, ledger, dataset, splits, baseline, CNN, treinamento, avaliação
 de modelos ou TI-3–TI-8. Nenhuma dessas atividades foi executada.
 
-Ao preparar o checkpoint documental, restavam somente arquivos textuais
-explicados abaixo; o estado final após o commit deve ser confirmado por
-`git status --short`. Os binários locais ignorados permanecem preservados.
+O closeout corrente permite apenas alterações textuais e testes semânticos
+determinísticos. Seu SHA, allowlist efetiva, testes finais, guards, checksums,
+push, Draft PR, CI e estado final serão registrados após as operações. Não há
+autorreferência ao SHA do novo commit. Os binários ignorados são preservados.
 
-## Inventário dos arquivos alterados nesta retomada
+## Inventário histórico dos arquivos da execução até TI2_EXECUTION_RESULT_COMMIT
 
 - `.github/workflows/ci.yml`
 - `AGENTS.md`
@@ -265,4 +359,9 @@ explicados abaixo; o estado final após o commit deve ser confirmado por
 - `tests/test_ti2_pilot.py`
 - `tests/test_ti2_registration.py`
 
-SHA-256 do manifesto-piloto: `278c38ba507d8afe6d21936872e1e17831670e53c23955c392686a9e9e5a5fa3`.
+SHA-256 histórico do manifesto-piloto no commit de resultado científico:
+`278c38ba507d8afe6d21936872e1e17831670e53c23955c392686a9e9e5a5fa3`.
+A reconciliação textual do manifesto altera seu hash atual; os checksums do
+closeout registram essa atualização sem alterar os buffers experimentais.
+SHA-256 do manifesto textual reconciliado neste closeout:
+`4f84a50e65e7541729d9a6c58e2649a872d6a92e55b305a66a0ce4e9f63a09a9`.

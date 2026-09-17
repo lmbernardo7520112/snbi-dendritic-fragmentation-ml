@@ -30,7 +30,11 @@ current authority and must not be repeated.
 - real Codex sandbox: `PASS_SMOKE`;
 - SDR-2-A: `RESOLVED`;
 - Codex local write readiness: `AUTHORIZED_DEFAULT_SANDBOX_REPOSITORY_ONLY`;
-- TI-2 execution: `AUTHORIZED_E0_E7_FROZEN_30_IMAGE_PILOT`;
+- current activity: `TI2_CLOSEOUT_1` only;
+- TI-2 execution: `TERMINAL_BLOCKED_PENDING_CLOSEOUT`;
+- method v1: `INSUFFICIENT_EVIDENCE`; G2-SPATIAL: `BLOCKED_METHOD_V1`;
+- transformation existence: `UNDETERMINED`; G3: `BLOCKED_DEPENDENCY_G2`;
+- E7: `PASS_DOCUMENTARY`; TI-2R and TI-3+: not authorized;
 - unsandboxed fallback: prohibited;
 - operating-system remediation: not authorized.
 
@@ -94,13 +98,20 @@ Read-only `.git` protection is expected under the standard sandbox. The observed
 `.git/index.lock: Read-only file system` error stopped Git staging; it did not
 establish a bwrap/namespace/seccomp startup failure or reopen SDR-2-A.
 
-The [targeted Git approval decision](../decisions/AUTHORIZATION-TI2-TARGETED-GIT-APPROVALS-2026-09-17.md)
-permits separate approvals for exact-path staging and commits. Push is subject
-to final gate decisions and passing tests; Draft PR creation is approved as a
-separate action. These exceptions cover only the individually approved
+The [closeout decision](../decisions/AUTHORIZATION-TI2-CLOSEOUT-1-2026-09-17.md)
+retains separate approvals for exact-path staging and commits. It now permits
+publishing the blocked result after documentary reconciliation, passing tests,
+guards and checksums, with zero tracked experimental binaries. A read-only
+remote-reference check and confirmed fast-forward push need targeted approval;
+Draft PR creation is a separate action, followed by remote CI verification.
+These exceptions cover only the individually approved
 Git/GitHub actions. They do not authorize scientific work outside the sandbox,
 full access, broad escalation, credential inspection, permission changes or OS
-remediation. TI-2 PR merge still requires a new author decision.
+remediation. The Draft PR must remain open and unmerged. Closeout authorizes no
+pixel reads, FFmpeg, redecoding, source-member access or scientific retuning;
+only necessary integrity hashing of exact existing files as opaque bytes is
+allowed. Any required scientific/source change returns
+`SOURCE_OR_SCIENTIFIC_CHANGE_REQUIRED`.
 
 If sandbox startup itself fails again with bwrap, namespace or seccomp errors,
 stop immediately; no unsandboxed fallback is authorized.

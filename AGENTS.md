@@ -6,17 +6,35 @@ These instructions apply to the entire repository. They remain in force until a 
 
 - Decision owner: **Leonardo Maximino Bernardo**.
 - TI-0 and TI-1 are complete.
-- The TI-2 execution plan is approved.
-- **TI-2 execution E0–E7 is authorized**, exclusively under the approved
-  executive plan and the 17 September 2026 closure/execution decision.
+- The TI-2 method-v1 scientific attempt is terminally blocked. Its evidence is
+  preserved at `f3c6da78b04299475c7bb85e986eb7435b08bd22`.
+- **Only TI2-CLOSEOUT-1 is authorized now**: documentary reconciliation,
+  deterministic checks, an approved Git checkpoint, push, a Draft PR and remote
+  CI verification. No TI-2R or new scientific analysis is authorized.
 - LB0 is PASS and SDR-2-A is RESOLVED; repository writes in the default sandbox
   are authorized on `feat/ti2-registration-calibration`.
-- The author resumed TI-2 after the operational Git-index write block, with
-  individual approvals for exact Git operations; this does not reopen SDR-2-A.
+- Individual approvals remain required for the exact Git operations; the
+  closeout authority permits publication of the scientifically blocked result.
 - TI-3 through TI-8 remain blocked.
 - If instructions conflict or scope is ambiguous, apply the most restrictive rule and stop with `BLOCKED`.
 
-Machine-readable sentinel:
+Current authoritative state:
+
+```text
+CURRENT_AUTHORIZED_ACTIVITY=TI2_CLOSEOUT_1
+TI2_EXECUTION=TERMINAL_BLOCKED_PENDING_CLOSEOUT
+METHOD_V1=INSUFFICIENT_EVIDENCE
+G2_SPATIAL=BLOCKED_METHOD_V1
+TRANSFORM_EXISTENCE=UNDETERMINED
+G3=BLOCKED_DEPENDENCY_G2
+E7=PASS_DOCUMENTARY
+TI3_PLUS_AUTHORIZED=false
+```
+
+Historical compatibility sentinels retained for the unchanged bootstrap
+validator follow. They record the prior execution authority; they **do not
+authorize scientific execution now**. A static validator PASS does not override
+the current closeout-only decision.
 
 ```text
 TI2_EXECUTION_AUTHORIZED=true
@@ -28,24 +46,23 @@ AUTHORIZED_ACTIVITY=TI2_REGISTRATION_CALIBRATION
 Before acting, read:
 
 1. `README.md`;
-2. `docs/decisions/AUTHORIZATION-LB0-SDR2A-CLOSURE-PR5-MERGE-TI2-EXECUTION-2026-09-17.md`;
+2. `docs/decisions/AUTHORIZATION-TI2-CLOSEOUT-1-2026-09-17.md`;
 3. `docs/protocols/LOCAL_DEVELOPMENT.md`;
 4. `docs/security/LOCAL_SANDBOX.md`;
 5. `docs/protocols/TI2_EXECUTION_PLAN.md`;
 6. `docs/decisions/AUTHORIZATION-TI2-TARGETED-GIT-APPROVALS-2026-09-17.md`.
 
-The execution decision supersedes the historical planning/bootstrap-only
-restriction. Reading a plan or obtaining a gate result does not authorize any
-additional phase.
+The closeout decision supersedes prior execution permissions for this session.
+The approved plan is retained as the specification of the historical attempt;
+reading it, a test PASS or green CI does not authorize another scientific run.
 
 ## Repository boundary
 
 - Write only below the resolved standalone repository root, in the default
   sandbox and on `feat/ti2-registration-calibration`.
-- Read experimental sources only at the exact location explicitly supplied by
-  the operator, and only the manifest-declared files/members needed by TI-2.
-  This is a narrow read-only exception; do not search for source locations,
-  enumerate neighboring paths, or copy raw sources into the repository.
+- Do not reopen experimental sources, MP4 members, frames or images. Only
+  cryptographic integrity hashing of exact existing files as opaque bytes is
+  allowed when needed; no decoding, metadata probing or pixel interpretation.
 - Do not search, list, glob, hash, `stat`, or traverse `/`, `/home`, `$HOME`, parent directories, or sibling repositories.
 - Do not follow symlinks. A versioned symlink is a blocking violation.
 - Do not create nested `AGENTS.md` or `AGENTS.override.md` files.
@@ -64,8 +81,7 @@ tests may use only fresh synthetic temporary subtrees inside the repository
 
 ## Experimental boundary
 
-Except for the exact operator-authorized source and the frozen TI-2 pilot,
-treat these paths and any external scientific-source location as opaque:
+Treat these paths and any external scientific-source location as opaque:
 
 - `data/raw/`;
 - `data/interim/`;
@@ -73,33 +89,33 @@ treat these paths and any external scientific-source location as opaque:
 - `data/derived/`;
 - video, image, array, dataset, checkpoint, or model files.
 
-Do not enumerate, open, decode, hash, inspect metadata, or otherwise access
-unapproved experimental content. TI2-E0 may revalidate the approved source
-hashes read-only. TI2-E1 may decode only these 30 source/index pairs:
+No pixel access, visualization, FFmpeg invocation, MP4-member access or further
+decoding is permitted. The only byte-read exception is the bounded integrity
+hash operation above. The historical pilot contained exactly 30 frames/items:
 
 - ESM1, ESM2, ESM3: indices 0, 73, 146, 219, 293;
 - ESM4, ESM5, ESM6: indices 0, 98, 197, 295, 394.
 
-Keep lossless native pilot images and diagnostic binaries in ignored local
-derived storage only. No experimental binary may enter the Git index. Preserve
-native channels, depth, orientation and source bytes; no extra frame is allowed.
+Those frames were decoded from MP4 without additional losses, preserving native
+video resolution and pixel format. Existing `.raw` files are headerless decoded
+pixel buffers, **not raw detector data**. Keep all experimental binaries ignored
+and outside the Git index. Do not change, regenerate or add any experimental item.
 
-## Authorized TI-2 work
+## Authorized closeout work
 
-The following classes of change are authorized within TI2-E0–E7:
+The exact file allowlist must be declared before changes, limited to:
 
 - root agent instructions;
 - local-development and sandbox documentation;
-- versioned VS Code settings and explicit tasks;
-- repository data-name guardrails;
-- tests using text, JSON, mocks, or temporary synthetic paths;
-- CI, Makefile, contribution guidance, and PR-template changes required to enforce the bootstrap.
-- TI-2 pilot controls, numerical registration/calibration code and tests;
-- configuration, contracts, reports, lineage, checksums and gate evidence;
-- professional commits and one Draft TI-2 pull request.
+- textual decisions, manifests, metadata and documentary configurations;
+- deterministic tests of the approved temporal and nominal-scale semantics;
+- reports, checksums and gate-state reconciliation;
+- separately approved exact-path staging, commit, fast-forward push and Draft
+  PR creation, followed by remote CI verification.
 
-Synthetic registration, calibration and image-geometry contract tests are
-authorized. Labels, datasets, splits, baselines and models remain prohibited.
+Existing synthetic suites may run, but do not modify `src/`, matching,
+extraction/decoding, correspondences, matrices, ROI or scientific parameters.
+If such a change is necessary, stop with `SOURCE_OR_SCIENTIFIC_CHANGE_REQUIRED`.
 
 The local VS Code task may run only the three bootstrap policy-test modules.
 The full synthetic regression suite runs in a clean CI checkout. The explicit
@@ -114,13 +130,16 @@ the versioned VS Code task allowlist.
 - no `sudo`, `su`, `doas`, package installation, system service changes, kernel changes, AppArmor changes, mounts, `chmod`, `chown`, or ACL changes;
 - no fallback outside the sandbox after a sandbox failure;
 - no network access except an exact Git/GitHub action explicitly authorized in the current user instruction;
-- no media decoding or pixel access outside the frozen TI-2 pilot;
+- no media decoding or pixel access, including the frozen pilot and quartiles;
 - no mass extraction, additional frames, native image modification, label
   creation or cumulative-circle differencing;
 - no projective/non-rigid registration or retrospective relaxation of limits;
 - no labels, event ledger, dataset, temporal split, baseline, CNN, training, evaluation, or sealed-test access;
 - no commit, push, merge, force operation, branch switch, reset, clean, or worktree mutation unless the current user instruction explicitly authorizes that exact Git operation.
 - no merge of the TI-2 Draft PR without a new author decision.
+- no `pull`, `merge`, `rebase`, `reset`, `clean`, `restore`, `stash`, `checkout`
+  or `switch`; no `git add .`, `git add -A`, `git commit -a`, `--no-verify`,
+  `--force` or `--force-with-lease`.
 
 ## Sandbox and approvals
 
@@ -132,8 +151,13 @@ the versioned VS Code task allowlist.
 - For an authorized Git metadata write, request approval for each exact
   `git add -- <explicit reviewed paths>` operation and a separate approval for
   `git commit`. No blanket Git approval, wildcard staging or `git add -A`.
-- Request a targeted push approval only after final G2-SPATIAL/G3 decisions
-  and passing required tests. Request Draft PR creation separately. These
+- The closeout decision authorizes publication despite G2-SPATIAL/G3 being
+  blocked. First require reconciled text, passing tests with exact pass/skip
+  counts, passing guards/checksums and zero tracked experimental binaries.
+  Obtain separate approval for a read-only remote-reference check and establish
+  that push is fast-forward, then request the exact branch push approval.
+  Request Draft PR creation separately and verify its remote CI to completion.
+  These
   exact approved Git/GitHub actions are the sole exception to the default
   sandbox write restriction; they do not authorize other elevated commands,
   credential inspection, full access, scientific execution outside the
@@ -165,13 +189,16 @@ Return `BLOCKED` without attempting a workaround when:
 - sandbox isolation fails;
 - a write path is outside the repository, or a read path is outside the
   declared allowlist including the exact operator-authorized source;
-- raw/derived experimental data outside the frozen TI-2 scope might be accessed;
+- experimental bytes would be interpreted, or a read exceeds the explicitly
+  bounded opaque-byte integrity-hashing exception;
 - installation, unapproved network access, or an OS change appears necessary;
 - a tracked symlink or forbidden binary/data path is found;
 - the worktree contains unexplained changes;
-- the requested action could execute TI-3 or any later phase, decode an extra
-  frame, or require a projective/non-rigid transformation.
+- the requested action could execute TI-2R, any new scientific analysis, TI-3
+  or a later phase, or requires changes to scientific source/parameters.
 
-Execution returns with G2-SPATIAL and G3 each PASS, PARTIAL or BLOCKED, or on a
-real blocker requiring scope expansion. Gate PASS and TI-2 closure do not
-authorize TI-3; formal closure remains the author's decision.
+Return `TI2_CLOSEOUT_1 = PASS | PARTIAL | BLOCKED`. PASS requires documentary
+reconciliation, passing tests/guards/checksums, commit, push, an open Draft PR,
+completed green remote CI, a clean worktree and zero tracked experimental
+binaries. No merge is permitted. Documentary PASS does not approve either
+scientific gate, establish transformation existence or authorize TI-3.

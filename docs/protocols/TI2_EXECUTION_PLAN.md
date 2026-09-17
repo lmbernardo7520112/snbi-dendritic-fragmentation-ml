@@ -1,15 +1,17 @@
 # TI-2 — Plano executivo de registro e calibração
 
-**Status:** plano executivo aprovado; execução E0–E7 autorizada pela decisão de 17/09/2026
+**Status:** método v1 terminalmente bloqueado; somente TI2-CLOSEOUT-1 autorizada
 **Dependências:** G1 PASS, G2-TEMP PASS e TI-1 encerrada  
 **Gates-alvo:** G2-SPATIAL e G3  
 **Versão:** 1.0.0
 
-A [decisão de execução](../decisions/AUTHORIZATION-LB0-SDR2A-CLOSURE-PR5-MERGE-TI2-EXECUTION-2026-09-17.md)
-e a [retomada com aprovações Git pontuais](../decisions/AUTHORIZATION-TI2-TARGETED-GIT-APPROVALS-2026-09-17.md)
-suprem a autorização antes pendente. A redação prospectiva abaixo preserva o
-plano aprovado, seus 30 pares fonte/índice, contratos e limites quantitativos;
-não amplia o escopo. Na retomada, G2-SPATIAL e G3 estavam `NOT_EVALUATED`.
+A [decisão de closeout](../decisions/AUTHORIZATION-TI2-CLOSEOUT-1-2026-09-17.md)
+registra `METHOD_V1=INSUFFICIENT_EVIDENCE`,
+`G2_SPATIAL=BLOCKED_METHOD_V1`, `TRANSFORM_EXISTENCE=UNDETERMINED`,
+`G3=BLOCKED_DEPENDENCY_G2` e `E7=PASS_DOCUMENTARY`.
+A redação prospectiva abaixo preserva a especificação histórica aprovada,
+seus 30 frames-piloto identificados por fonte/índice, contratos e limites
+quantitativos. Não autoriza TI-2R, novo acesso a pixels ou execução científica.
 
 ## 1. Finalidade
 
@@ -36,7 +38,24 @@ O resultado esperado não é um dataset de aprendizado de máquina. É uma camad
 | top-down / paralela | ESM5 | soluto relativo | 1278×1012 | 395 |
 | top-down / paralela | ESM6 | anotação cumulativa | 1280×1012 | 395 |
 
-Os hashes de G0, a semântica de G1 e a correspondência temporal de G2-TEMP permanecem normativos. O tempo físico continua definido por `t(i)=i×1,18 s` e não pelos 5 fps de reprodução.
+Os hashes de G0, a semântica de G1 e a correspondência por índice de G2-TEMP
+permanecem normativos. No closeout, o autor reconciliou duas grandezas:
+`elapsed_from_first_frame_s = 1,18 × i`; e
+`experimental_time_s = offset + 1,18 × i`, com offset de −25,96 s para ESM1–3
+e −34,22 s para ESM4–6. O zero experimental é a entrada da frente de
+solidificação no campo de visão (`time_model_status=DOCUMENTED_AND_RECONCILED`).
+Os 5 fps continuam sendo apenas cadência de reprodução. O campo histórico
+`physical_time_s` representava o tempo decorrido e está depreciado por
+ambiguidade; a reconciliação não muda índices ou bytes experimentais.
+
+O autor forneceu também a escala nominal documentada X/Y de 1,40 µm/pixel,
+citando Gibbs et al., *JOM* 68, 170–177 (2016),
+[DOI 10.1007/s11837-015-1646-7](https://doi.org/10.1007/s11837-015-1646-7).
+A fonte não foi consultada novamente neste closeout. A verificação raster
+500/357 = 1,40056022409 µm/pixel é compatível com o nominal; seu intervalo
+[1,38888888889; 1,41242937853] não é intervalo estatístico de confiança.
+A incerteza metrológica completa permanece `UNRESOLVED`, sem conversão de
+coordenadas ou transferência de escala a modalidades sem registro certificado.
 
 ## 4. Convenções espaciais
 
@@ -64,7 +83,11 @@ S(N)=\left\{0,\left\lfloor\frac{N-1}{4}\right\rfloor,
 | ESM1–3 | 0, 73, 146, 219, 293 | 3 modalidades | 15 |
 | ESM4–6 | 0, 98, 197, 295, 394 | 3 modalidades | 15 |
 
-O teto será de 30 imagens lossless. Elas ficarão em área derivada ignorada pelo Git, acompanhadas de hashes e *lineage*. Não haverá busca manual por frames “favoráveis”.
+O teto histórico foi de 30 frames-piloto decodificados dos MP4 sem perdas
+adicionais, preservando resolução e formato de pixels nativos dos vídeos.
+Os buffers `.raw` sem cabeçalho não são dados brutos do detector. Os derivados
+ficam ignorados pelo Git, acompanhados de hashes e *lineage*. Não há busca
+manual por frames “favoráveis” nem nova decodificação autorizada no closeout.
 
 Para estimar transformações serão usados os índices inicial, central e final. Os dois quartis serão reservados para validação espacial, sem reajuste.
 
@@ -80,8 +103,9 @@ Para estimar transformações serão usados os índices inicial, central e final
 
 ### TI2-E1 — Decodificação-piloto controlada
 
-- decodificar somente os 30 pares fonte/índice previstos;
-- usar formato lossless e preservar profundidade/canais nativos;
+- decodificar somente os 30 frames/itens previstos, identificados por fonte e índice;
+- preservar resolução, profundidade/canais e formato de pixels nativos dos MP4,
+  armazenando os frames decodificados sem perdas adicionais;
 - registrar fonte, índice, tempo físico, codec, dimensões, hash e comando;
 - proibir correção de contraste, CLAHE, *resize* ou recorte nesta etapa.
 
@@ -137,7 +161,12 @@ A escala espacial seguirá a hierarquia de evidência:
 3. barra de escala cuja geometria e unidade possam ser auditadas;
 4. dimensão experimental primária documentada.
 
-Nenhuma escala será inferida a partir da aparência das dendritas. Se nenhuma fonte suficiente for encontrada, as coordenadas permanecerão em pixels, `scale_status` será `UNRESOLVED` e G3 não poderá receber PASS integral.
+Nenhuma escala será inferida a partir da aparência das dendritas. Sem fonte
+suficiente, as coordenadas permanecerão em pixels, `scale_status` será
+`UNRESOLVED` e G3 não poderá receber PASS integral. No closeout, distinguir
+`SPATIAL_SCALE_NOMINAL_STATUS=DOCUMENTED` de
+`METROLOGICAL_UNCERTAINTY_STATUS=UNRESOLVED`: a declaração nominal não certifica
+registro, ROI ou incerteza e não libera conversões.
 
 A incerteza deverá incluir, quando aplicável:
 

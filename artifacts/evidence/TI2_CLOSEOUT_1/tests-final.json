@@ -1,0 +1,39 @@
+{
+  "command": "PYTHONPATH=src TMPDIR=.bootstrap-test-tmp /usr/bin/python3 -S -B - <structured unittest count recorder>",
+  "errors": 0,
+  "exit_code": 0,
+  "expected_failures": 0,
+  "experimental_pixel_reads": 0,
+  "failures": 0,
+  "historical_suite_count": 102,
+  "new_documentary_tests": 11,
+  "output_evidence": "artifacts/evidence/TI2_CLOSEOUT_1/tests-final.txt",
+  "profile": "dependency-free full authorized synthetic suite",
+  "scientific_reexecution": false,
+  "skip_details": [
+    {
+      "reason": "optional NumPy/SciPy runtime is absent from dependency-free CI",
+      "test": "test_ti2_registration.SyntheticImageMatchingTests.test_masks_exclude_overlay_and_input_arrays_are_unchanged"
+    },
+    {
+      "reason": "optional NumPy/SciPy runtime is absent from dependency-free CI",
+      "test": "test_ti2_registration.SyntheticImageMatchingTests.test_mismatched_dimensions_preserve_native_coordinates"
+    },
+    {
+      "reason": "optional NumPy/SciPy runtime is absent from dependency-free CI",
+      "test": "test_ti2_registration.SyntheticImageMatchingTests.test_native_coordinates_recover_translation_and_inverted_contrast"
+    },
+    {
+      "reason": "optional NumPy/SciPy runtime is absent from dependency-free CI",
+      "test": "test_ti2_registration.SyntheticImageMatchingTests.test_subpixel_correspondences_are_not_integer_rounded"
+    },
+    {
+      "reason": "optional NumPy/SciPy runtime is absent from dependency-free CI",
+      "test": "test_ti2_registration.SyntheticImageMatchingTests.test_uniform_and_periodic_content_are_ambiguous"
+    }
+  ],
+  "tests_discovered_or_run": 113,
+  "tests_passed": 108,
+  "tests_skipped": 5,
+  "unexpected_successes": 0
+}

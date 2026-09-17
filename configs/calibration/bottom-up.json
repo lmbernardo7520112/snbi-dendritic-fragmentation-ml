@@ -2,11 +2,13 @@
   "author_review": "PENDING",
   "canonical_source_id": "ESM1",
   "canonical_source_sha256": "4d07ee422e97661b1ee0ae681b7617fd7971476015603f3039c20ddf8b0c5c6d",
-  "claim_limit": "A traceable horizontal printed-bar ratio is not full calibration, a valid multimodal ROI, physical orientation, ground truth, or permission for downstream phases.",
+  "claim_limit": "Documented nominal X/Y sampling of 1.40 micrometres per pixel and a compatible horizontal raster crosscheck do not establish complete metrological uncertainty, a valid multimodal ROI, physical orientation, ground truth or downstream authorization.",
   "combined_uncertainty": null,
   "condition": "bottom-up",
   "coordinate_convention": "top-left pixel center=(0,0); x right; y down",
   "coordinate_unit": "pixel",
+  "documentary_authority": "docs/decisions/AUTHORIZATION-TI2-CLOSEOUT-1-2026-09-17.md",
+  "documentary_revision": "TI2-CLOSEOUT-1",
   "gate_id": "G3",
   "modalities": [
     "ESM1",
@@ -16,6 +18,28 @@
   "native_reference_dimensions": {
     "height": 1018,
     "width": 1278
+  },
+  "nominal_spatial_scale": {
+    "applicability": "Documented nominal acquisition pixel sizes recorded for this canonical source; no coordinate conversion or propagation to unregistered modalities.",
+    "canonical_source_id": "ESM1",
+    "documentary_provenance": {
+      "authority": "docs/decisions/AUTHORIZATION-TI2-CLOSEOUT-1-2026-09-17.md",
+      "basis": "author-supplied primary-source citation and explicit documentary reconciliation",
+      "citation": "Gibbs et al., JOM 68, 170–177 (2016)",
+      "doi": "10.1007/s11837-015-1646-7",
+      "independent_primary_text_retrieved": false,
+      "scope": "Documentary authorization only; no source retrieval or new image/pixel observation in TI2-CLOSEOUT-1.",
+      "url": "https://link.springer.com/article/10.1007/s11837-015-1646-7"
+    },
+    "eligible_for_coordinate_conversion": false,
+    "full_metrological_uncertainty_certificate_available": false,
+    "metrological_uncertainty_status": "UNRESOLVED",
+    "pixel_size_x_um": "1.40",
+    "pixel_size_y_um": "1.40",
+    "propagation_to_unregistered_modalities_permitted": false,
+    "raster_crosscheck_relation": "Compatible with the documented nominal 1.40 micrometres per pixel; the raster interval is not a statistical confidence interval.",
+    "raster_crosscheck_um_per_px": "1.40056022409",
+    "status": "DOCUMENTED"
   },
   "physical_coordinate_conversions_performed": 0,
   "physical_orientation": {
@@ -60,13 +84,15 @@
     ],
     "nominal_label_metrology_uncertainty": "UNRESOLVED; no independent acquisition calibration supplied",
     "nominal_printed_bar_micrometres": 500.0,
+    "nominal_scale_relationship": "Existing raster measurement crosschecks the separately documented 1.40 micrometres-per-pixel nominal scale; no new bar measurement was performed in closeout.",
     "orientation_status": "NOT_VERIFIED",
     "scale_status": "BAR_GEOMETRY_MEASURED",
     "source_level_author_review": "PENDING",
     "source_sha256": "4d07ee422e97661b1ee0ae681b7617fd7971476015603f3039c20ddf8b0c5c6d",
     "uncertainty_kind": "conservative endpoint/threshold/row/time bound; not a statistical confidence interval",
-    "vertical_scale_status": "NOT_VERIFIED; horizontal printed bar does not independently prove isotropic physical sampling"
+    "vertical_scale_status": "DOCUMENTED_NOMINAL_1.40_UM_PER_PX; full metrological uncertainty remains UNRESOLVED; the horizontal bar is not independent vertical verification"
   },
+  "qualified_decision": "BLOCKED_DEPENDENCY_G2",
   "registration_dependencies": [
     {
       "path": "configs/registration/ESM2-to-ESM1.json",
@@ -85,6 +111,7 @@
       "status": "BLOCKED"
     }
   ],
+  "registration_interpretation": "Method v1 produced insufficient evidence before transformation-class selection. Historical ROI/registration dependency wording means no certified fit was obtained, not that an admissible physical transformation cannot exist.",
   "roi": {
     "excluded_pixel_count": null,
     "height": null,
@@ -101,7 +128,7 @@
     "coordinate_unit": "pixel",
     "method": null,
     "micrometres_per_pixel": null,
-    "reason": "The visible nominal 500 micrometre horizontal bar yields a candidate raster ratio only. Nominal-label/acquisition metrology uncertainty and vertical physical sampling are unverified; no full physical calibration or coordinate conversion is certified.",
+    "reason": "Nominal X/Y pixel sizes are documented at 1.40 micrometres per pixel by the author-supplied source citation. Complete metrological uncertainty and registration/ROI prerequisites remain unresolved; physical coordinate conversion is not authorized.",
     "scale_status": "UNRESOLVED",
     "source": null,
     "uncertainty_micrometres_per_pixel": null
@@ -109,6 +136,7 @@
   "schema_version": "1.0.0",
   "status": "BLOCKED",
   "ti3_authorized": false,
+  "transform_existence": "UNDETERMINED",
   "uncertainty_budget": {
     "discretization": {
       "applies_to": "one native coordinate axis; not a propagated two-point or physical-distance uncertainty",
@@ -130,7 +158,7 @@
       "status": "UNRESOLVED"
     },
     "scale": {
-      "reason": "Only a horizontal printed-bar raster sensitivity bound is available. The nominal-label/acquisition uncertainty and vertical isotropy are not established.",
+      "reason": "Nominal X/Y sampling of 1.40 micrometres per pixel is documented. The preserved raster sensitivity interval is not a statistical confidence interval or a complete metrological uncertainty certificate.",
       "status": "UNRESOLVED"
     },
     "temporal": {

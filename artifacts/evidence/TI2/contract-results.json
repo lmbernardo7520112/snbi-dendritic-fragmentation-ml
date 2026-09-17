@@ -1,12 +1,12 @@
 {
   "contracts": [
     {
-      "evidence_interpretation": "Exact source/index/hash and prescribed time in pilot manifest; printed time semantics separately unresolved.",
+      "evidence_interpretation": "Original source/index/hash retained; elapsed_from_first_frame_s and offset experimental_time_s are documented and reconciled with Decimal arithmetic; historical physical_time_s is a preserved deprecated elapsed alias.",
       "id": "SRC-201",
       "status": "PASS"
     },
     {
-      "evidence_interpretation": "Exactly30 allowed pairs; no additional source frame exported.",
+      "evidence_interpretation": "Exactly 30 permitted pilot frames/items decoded from MP4 without additional loss; no additional source frame exported.",
       "id": "PILOT-201",
       "status": "PASS"
     },
@@ -71,7 +71,7 @@
       "status": "PASS"
     },
     {
-      "evidence_interpretation": "Horizontal bar provenance exists, but complete physical calibration is unresolved; no coordinate conversion performed.",
+      "evidence_interpretation": "Nominal X/Y sampling of 1.40 micrometres per pixel is documented; the existing 500/357 horizontal raster ratio is compatible. Complete metrological uncertainty remains unresolved; no coordinate conversion or propagation to unregistered modalities.",
       "id": "CAL-201",
       "status": "PARTIAL"
     },
@@ -86,7 +86,7 @@
       "status": "PARTIAL"
     },
     {
-      "evidence_interpretation": "Native8-bit YUV420 preserved losslessly; no E1 image transforms.",
+      "evidence_interpretation": "30 pilot frames decoded from MP4 without additional loss, preserving native video resolution and 8-bit YUV420 pixel format. The headerless pixel buffers are not raw detector data; no E1 image transforms.",
       "id": "IMG-201",
       "status": "PASS"
     },
@@ -101,10 +101,17 @@
       "status": "PASS"
     }
   ],
+  "documentary_authority": "docs/decisions/AUTHORIZATION-TI2-CLOSEOUT-1-2026-09-17.md",
+  "method_v1": "INSUFFICIENT_EVIDENCE",
+  "qualified_scientific_gates": {
+    "G2-SPATIAL": "BLOCKED_METHOD_V1",
+    "G3": "BLOCKED_DEPENDENCY_G2"
+  },
   "schema_version": "1.0.0",
   "scientific_gates": {
     "G2-SPATIAL": "BLOCKED",
     "G3": "BLOCKED"
   },
-  "software_test_success_does_not_satisfy_experimental_contracts": true
+  "software_test_success_does_not_satisfy_experimental_contracts": true,
+  "transform_existence": "UNDETERMINED"
 }

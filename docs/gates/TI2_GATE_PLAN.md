@@ -1,5 +1,24 @@
 # TI-2 — Plano dos gates G2-SPATIAL e G3
 
+## Classificação terminal e closeout
+
+A [decisão autoral de TI2-CLOSEOUT-1](../decisions/AUTHORIZATION-TI2-CLOSEOUT-1-2026-09-17.md)
+aprovou `TI2_EXECUTION=TERMINAL_BLOCKED_PENDING_CLOSEOUT`,
+`METHOD_V1=INSUFFICIENT_EVIDENCE`, `G2_SPATIAL=BLOCKED_METHOD_V1`,
+`TRANSFORM_EXISTENCE=UNDETERMINED`, `G3=BLOCKED_DEPENDENCY_G2` e
+`E7=PASS_DOCUMENTARY`. A insuficiência é do método v1; não demonstra a
+inexistência de transformação física. Registro/ROI não foram certificados.
+
+A escala nominal X/Y de 1,40 µm/pixel está documentada por declaração do autor,
+com verificação raster compatível de 500 µm/357 px. A incerteza metrológica
+completa permanece `UNRESOLVED`; nenhuma coordenada é convertida. G3 continua
+bloqueado por dependência de G2-SPATIAL, ROI e incerteza. A reconciliação
+temporal é documental e não fornece correspondências espaciais.
+
+Os critérios científicos abaixo são preservados. Publicação em Draft PR e CI
+verde estão autorizadas como closeout documental, sem aprovar os gates e sem
+autorizar TI-2R/TI-3+. O Draft PR deve permanecer aberto e sem merge.
+
 ## G2-SPATIAL — Registro entre modalidades
 
 ### Pergunta decisória

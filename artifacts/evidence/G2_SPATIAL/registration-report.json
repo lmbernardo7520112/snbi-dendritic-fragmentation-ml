@@ -1,44 +1,74 @@
 {
   "additional_observation": {
-    "interpretation": "NOT_VERIFIED; no reindexing, alternative frame selection or temporal-rule change performed",
-    "kind": "printed timestamps require primary-source reconciliation; normative rule remains unchanged",
+    "configuration": "configs/time_rule.json",
+    "documentary_provenance": {
+      "authority": "docs/decisions/AUTHORIZATION-TI2-CLOSEOUT-1-2026-09-17.md",
+      "basis": "author-supplied primary-source citation and explicit documentary reconciliation",
+      "citation": "Gibbs et al., JOM 68, 170–177 (2016)",
+      "doi": "10.1007/s11837-015-1646-7",
+      "independent_primary_text_retrieved": false,
+      "scope": "Documentary authorization only; no source retrieval or new image/pixel observation in TI2-CLOSEOUT-1.",
+      "url": "https://link.springer.com/article/10.1007/s11837-015-1646-7"
+    },
+    "interpretation": "DOCUMENTED_AND_RECONCILED using author-supplied offsets; historical printed values and elapsed values preserved; no reindexing, new observations or scientific method changes.",
+    "kind": "Documentary reconciliation of elapsed video-frame time and experimental time relative to front entry",
+    "legacy_field_semantics": {
+      "normative_physical_time_s": {
+        "alias_of": "elapsed_from_first_frame_s",
+        "status": "DEPRECATED_ALIAS",
+        "values_preserved": true
+      }
+    },
     "observed_on_central_estimation_diagnostic": [
       {
+        "elapsed_from_first_frame_s": 172.28,
+        "experimental_time_s": 146.32,
         "frame_index": 146,
         "normative_physical_time_s": 172.28,
         "printed_seconds": 146.32,
         "source_id": "ESM1"
       },
       {
+        "elapsed_from_first_frame_s": 232.46,
+        "experimental_time_s": 198.24,
         "frame_index": 197,
         "normative_physical_time_s": 232.46,
         "printed_seconds": 198.24,
         "source_id": "ESM4"
       }
-    ]
+    ],
+    "time_model_status": "DOCUMENTED_AND_RECONCILED",
+    "time_zero_reference": "solidification_front_entry_into_field_of_view"
   },
-  "calibration_claim": "No physical coordinate conversion and no ground truth established.",
+  "calibration_claim": "Nominal X/Y scale is documented separately from complete metrological uncertainty; no physical coordinate conversion or ground truth is established.",
   "decision": "BLOCKED",
-  "decision_kind": "technical proposal; formal closure remains with author",
+  "decision_kind": "author-approved terminal method-v1 blocked result; documentary closeout only",
+  "decoded_frame_description": "30 pilot frames decoded from MP4 without additional loss, preserving the native video resolution and pixel format.",
+  "documentary_authority": "docs/decisions/AUTHORIZATION-TI2-CLOSEOUT-1-2026-09-17.md",
   "evidence": [
     "artifacts/metadata/ti2-pilot-manifest.json",
     "artifacts/evidence/TI2/estimation-audit.json",
     "artifacts/evidence/TI2/validation-audit.json",
     "artifacts/evidence/TI2/integrity-report.json"
   ],
-  "execution_state": "SCIENTIFIC_EVIDENCE_INSUFFICIENT",
+  "execution_state": "TERMINAL_BLOCKED_PENDING_CLOSEOUT",
   "experimental_image_count": 30,
   "gate": "G2-SPATIAL",
   "held_out_pixel_analysis_performed": false,
+  "legacy_field_semantics": {
+    "experimental_image_count": "Number of frozen pilot frames/items decoded from the supplied videos.",
+    "native_images_immutable": "Preserved decoded MP4 pixel buffers; not raw detector data."
+  },
   "limits_relaxed": false,
   "method_limitation": "20/35 fixed grid centers systematically excluded by the 64px rim; at most15 candidates remain and at least12 must pass. This limits measurement yield and does not establish geometric impossibility.",
   "method_retuned_after_estimation": false,
+  "method_v1": "INSUFFICIENT_EVIDENCE",
   "native_images_immutable": true,
   "next_requirements": [
     "documented gravity/thermal-gradient/growth directions in native axes",
     "author-approved method revision addressing fixed-grid support and cross-modality contrast before any new scientific analysis",
-    "author review of printed timestamps versus prescribed physical-time rule",
-    "author visual review; no extra images or redecoding implicitly authorized"
+    "author visual review; no extra images or redecoding implicitly authorized",
+    "Complete metrological uncertainty and certified registration/ROI remain required before any physical-coordinate use; TI-2R is not authorized by closeout."
   ],
   "orientation": {
     "author_visual_review": "PENDING",
@@ -86,11 +116,13 @@
       "identity_diagnostic_use": "descriptive distances on confidence-selected surviving correspondences only; not an accepted transform, fit or independent validation",
       "inverse": null,
       "matrix": null,
+      "qualified_status": "BLOCKED_METHOD_V1",
       "reason": "Insufficient strong unique spatially distributed correspondences in at least one required estimation frame; model hierarchy not reached.",
       "roi_use_authorized": false,
       "selection_history": [],
       "status": "BLOCKED",
       "transform_class": null,
+      "transform_existence": "UNDETERMINED",
       "validation_metrics": null,
       "validation_status": "BLOCKED_DEPENDENCY"
     },
@@ -142,11 +174,13 @@
       "identity_diagnostic_use": "descriptive distances on confidence-selected surviving correspondences only; not an accepted transform, fit or independent validation",
       "inverse": null,
       "matrix": null,
+      "qualified_status": "BLOCKED_METHOD_V1",
       "reason": "Insufficient strong unique spatially distributed correspondences in at least one required estimation frame; model hierarchy not reached.",
       "roi_use_authorized": false,
       "selection_history": [],
       "status": "BLOCKED",
       "transform_class": null,
+      "transform_existence": "UNDETERMINED",
       "validation_metrics": null,
       "validation_status": "BLOCKED_DEPENDENCY"
     },
@@ -188,11 +222,13 @@
       "identity_diagnostic_use": "descriptive distances on confidence-selected surviving correspondences only; not an accepted transform, fit or independent validation",
       "inverse": null,
       "matrix": null,
+      "qualified_status": "BLOCKED_METHOD_V1",
       "reason": "Insufficient strong unique spatially distributed correspondences in at least one required estimation frame; model hierarchy not reached.",
       "roi_use_authorized": false,
       "selection_history": [],
       "status": "BLOCKED",
       "transform_class": null,
+      "transform_existence": "UNDETERMINED",
       "validation_metrics": null,
       "validation_status": "BLOCKED_DEPENDENCY"
     },
@@ -239,21 +275,26 @@
       "identity_diagnostic_use": "descriptive distances on confidence-selected surviving correspondences only; not an accepted transform, fit or independent validation",
       "inverse": null,
       "matrix": null,
+      "qualified_status": "BLOCKED_METHOD_V1",
       "reason": "Insufficient strong unique spatially distributed correspondences in at least one required estimation frame; model hierarchy not reached.",
       "roi_use_authorized": false,
       "selection_history": [],
       "status": "BLOCKED",
       "transform_class": null,
+      "transform_existence": "UNDETERMINED",
       "validation_metrics": null,
       "validation_status": "BLOCKED_DEPENDENCY"
     }
   },
+  "qualified_decision": "BLOCKED_METHOD_V1",
   "quantitative_limits_px": {
     "maximum": 3.0,
     "median": 1.0,
     "p95": 2.0,
     "roundtrip": 0.25
   },
+  "raw_buffer_description": "Headerless pixel buffers decoded from MP4; these are not raw detector data.",
   "schema_version": "1.0.0",
-  "ti3_to_ti8_executed": false
+  "ti3_to_ti8_executed": false,
+  "transform_existence": "UNDETERMINED"
 }
