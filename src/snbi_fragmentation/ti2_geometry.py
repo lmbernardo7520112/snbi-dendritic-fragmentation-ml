@@ -352,10 +352,19 @@ def validate_uncertainty_budget(budget: Mapping[str, Mapping[str, Any]]) -> None
         if not isinstance(item, Mapping):
             raise GeometryContractError(f"UNC-201: invalid {name} uncertainty entry")
         status = item.get("status")
-        if status == "MEASURED":
+        if status in ("MEASURED", "MODELLED"):
             _finite(item.get("value"), f"UNC-201: {name} uncertainty", nonnegative=True)
             _text(item.get("unit"), f"UNC-201: {name} unit")
             _text(item.get("method"), f"UNC-201: {name} method")
+            if status == "MODELLED":
+                if item.get("evidence_kind") != "ANALYTICAL_ASSUMPTION":
+                    raise GeometryContractError("UNC-201: modelled contribution needs an analytical assumption")
+                _text(item.get("provenance"), f"UNC-201: {name} provenance")
+                _text(item.get("analytical_assumption"), f"UNC-201: {name} analytical assumption")
+            elif (item.get("evidence_kind") == "ANALYTICAL_ASSUMPTION"
+                  or item.get("provenance") == "analytical_model"
+                  or "analytical_assumption" in item):
+                raise GeometryContractError("UNC-201: an analytical assumption is MODELLED, not MEASURED")
         elif status in ("UNRESOLVED", "NOT_APPLICABLE"):
             _text(item.get("reason"), f"UNC-201: {name} {status} justification")
         else:

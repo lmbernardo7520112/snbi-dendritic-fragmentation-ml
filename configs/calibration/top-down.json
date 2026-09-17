@@ -145,9 +145,11 @@
       "half_width_px": 0.5,
       "method": "Analytical per-axis standard uncertainty for an explicitly assumed uniform quantization error on [-0.5,+0.5] pixel: u=1/sqrt(12). This is a discretization model, not an experimental residual or total uncertainty.",
       "provenance": "analytical_model",
-      "status": "MEASURED",
+      "status": "MODELLED",
       "unit": "pixel",
-      "value": 0.2886751345948129
+      "value": 0.2886751345948129,
+      "evidence_kind": "ANALYTICAL_ASSUMPTION",
+      "analytical_assumption": "Independent per-axis quantization error is assumed uniformly distributed over [-0.5,+0.5] pixel. This analytical assumption is not an empirical uncertainty measurement."
     },
     "registration": {
       "reason": "Both native-to-canonical modality registrations lack an admissible fit; no validated registration residual can be propagated.",

@@ -1,6 +1,11 @@
 # TI-2 — Plano executivo de registro e calibração
 
-**Status:** método v1 terminalmente bloqueado; somente TI2-CLOSEOUT-1 autorizada
+**Status:** `TERMINAL_BLOCKED_CLOSED`; `TI2_CLOSEOUT_1=PASS`; nenhuma atividade científica autorizada
+
+Estado ativo canônico: `pyproject.toml [tool.snbi]`,
+`CURRENT_AUTHORIZED_ACTIVITY=NONE_AWAITING_AUTHOR_DECISION`. A
+[remediação PR6](../decisions/AUTHORIZATION-TI2-PR6-REMEDIATION-1-2026-09-17.md)
+autoriza somente seu checkpoint e publicação delimitados. O plano abaixo é histórico.
 **Dependências:** G1 PASS, G2-TEMP PASS e TI-1 encerrada  
 **Gates-alvo:** G2-SPATIAL e G3  
 **Versão:** 1.0.0

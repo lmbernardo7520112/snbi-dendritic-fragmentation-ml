@@ -2,6 +2,11 @@
 
 ## Classificação terminal e closeout
 
+A [decisão de remediação PR6](../decisions/AUTHORIZATION-TI2-PR6-REMEDIATION-1-2026-09-17.md)
+encerra `TI2_EXECUTION=TERMINAL_BLOCKED_CLOSED`, aceita `TI2_CLOSEOUT_1=PASS`
+e mantém `NONE_AWAITING_AUTHOR_DECISION` como estado ativo canônico de
+`pyproject.toml [tool.snbi]`. Todas as permissões científicas são falsas.
+
 A [decisão autoral de TI2-CLOSEOUT-1](../decisions/AUTHORIZATION-TI2-CLOSEOUT-1-2026-09-17.md)
 aprovou `TI2_EXECUTION=TERMINAL_BLOCKED_PENDING_CLOSEOUT`,
 `METHOD_V1=INSUFFICIENT_EVIDENCE`, `G2_SPATIAL=BLOCKED_METHOD_V1`,
@@ -15,9 +20,10 @@ completa permanece `UNRESOLVED`; nenhuma coordenada é convertida. G3 continua
 bloqueado por dependência de G2-SPATIAL, ROI e incerteza. A reconciliação
 temporal é documental e não fornece correspondências espaciais.
 
-Os critérios científicos abaixo são preservados. Publicação em Draft PR e CI
-verde estão autorizadas como closeout documental, sem aprovar os gates e sem
-autorizar TI-2R/TI-3+. O Draft PR deve permanecer aberto e sem merge.
+Os critérios científicos abaixo são preservados. O closeout foi publicado em
+Draft PR; a remediação exige dois jobs verdes no novo SHA sem aprovar gates
+ou autorizar TI-2R/TI-3+. O PR permanece aberto, draft e sem merge.
+Aprovação autoral do resultado terminal não comprova orientação física.
 
 ## G2-SPATIAL — Registro entre modalidades
 

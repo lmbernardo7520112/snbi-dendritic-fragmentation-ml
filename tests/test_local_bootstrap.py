@@ -10,6 +10,7 @@ from subprocess import CalledProcessError
 from unittest.mock import patch
 
 from scripts import check_local_bootstrap as bootstrap
+from scripts import ti2_authority
 from scripts.check_local_bootstrap import validate, validate_vscode
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -19,28 +20,26 @@ class LocalBootstrapTests(unittest.TestCase):
     def test_static_bootstrap_contracts_pass_with_safe_index(self):
         report = validate(entries=[("100644", "README.md")])
         self.assertEqual(report["status"], "PASS", report["violations"])
-        self.assertTrue(report["ti2_execution_authorized"])
+        self.assertFalse(report["ti2_execution_authorized"])
+        self.assertEqual(report["current_authorized_activity"], "NONE_AWAITING_AUTHOR_DECISION")
+        self.assertEqual(report["scientific_readiness"], "BLOCKED")
         self.assertEqual(
             report["codex_write_readiness"],
-            "AUTHORIZED_DEFAULT_SANDBOX_REPOSITORY_ONLY",
+            "BLOCKED_AWAITING_AUTHOR_DECISION",
         )
 
-    def test_missing_execution_authority_fails_closed(self):
-        with patch.object(bootstrap, "read_authorization", return_value=""):
+    def test_missing_canonical_authority_fails_closed(self):
+        with patch.object(ti2_authority, "load_governance", side_effect=OSError):
             report = validate(entries=[("100644", "README.md")])
         self.assertEqual(report["status"], "BLOCKED")
         self.assertFalse(report["ti2_execution_authorized"])
         self.assertEqual(report["codex_write_readiness"], "BLOCKED")
 
     def test_later_phase_or_unbounded_pilot_fails_closed(self):
-        import tomllib
-
-        original = tomllib.loads((ROOT / "pyproject.toml").read_text(encoding="utf-8"))
         for key, value in (("blocked_phases", []), ("pilot_image_limit", 31)):
             with self.subTest(key=key):
-                modified = copy.deepcopy(original)
-                modified["tool"]["snbi"][key] = value
-                with patch.object(bootstrap.tomllib, "loads", return_value=modified):
+                modified = {**ti2_authority.CLOSED_STATE, **ti2_authority.BOUNDARY_STATE, key: value}
+                with patch.object(ti2_authority.tomllib, "load", return_value={"tool": {"snbi": modified}}):
                     report = validate(entries=[("100644", "README.md")])
                 self.assertEqual(report["status"], "BLOCKED")
                 self.assertFalse(report["ti2_execution_authorized"])

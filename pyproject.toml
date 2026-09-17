@@ -6,9 +6,12 @@ requires-python = ">=3.12,<3.13"
 dependencies = []
 
 [tool.snbi]
-lifecycle_state = "TI-2-execution-authorized"
-authorized_activity = "ti2-registration-calibration"
-ti2_execution_authorized = true
+ti2_execution = "TERMINAL_BLOCKED_CLOSED"
+ti2_closeout_1 = "PASS"
+current_authorized_activity = "NONE_AWAITING_AUTHOR_DECISION"
+ti2_execution_authorized = false
+ti2r_authorized = false
+ti3_plus_authorized = false
 authorized_branch = "feat/ti2-registration-calibration"
 write_boundary = "repository-only-default-sandbox"
 pilot_image_limit = 30

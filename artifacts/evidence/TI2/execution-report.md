@@ -18,7 +18,18 @@ E7 = PASS_DOCUMENTARY
 TI3_PLUS_AUTHORIZED = false
 ```
 
-## Estado e autoridade
+## Estado atual após aprovação do closeout
+
+O autor aceitou `TI2_CLOSEOUT_1=PASS` e encerrou
+`TI2_EXECUTION=TERMINAL_BLOCKED_CLOSED`. A fonte canônica ativa é
+`pyproject.toml [tool.snbi]`: `NONE_AWAITING_AUTHOR_DECISION`, com
+`TI2_EXECUTION_AUTHORIZED=false`, `TI2R_AUTHORIZED=false` e `TI3_PLUS_AUTHORIZED=false`.
+O bloco e a narrativa de closeout abaixo são históricos, preservados como
+evidência do checkpoint anterior. A remediação não reexecuta ciência.
+A publicação já concluída e os limites de reprodutibilidade estão em
+`artifacts/evidence/TI2_PR6_REMEDIATION_1/`.
+
+## Estado e autoridade históricos
 
 Branch: `feat/ti2-registration-calibration`, repositório standalone autorizado.
 Base preservada: `f7818c17c18ba9e4306696ea61b427864cf7deb6`.
@@ -175,7 +186,8 @@ por dependência de G2-SPATIAL, ROI e incerteza.
 
 Os cinco componentes estão declarados. Registro, variação temporal, escala e
 ROI permanecem sem incerteza total quantificada. A discretização por eixo tem
-valor analítico 1/√12 = 0,288675 px, sob hipótese explícita de quantização
+valor analítico 1/√12 = 0,2886751345948129 px, classificado como
+`MODELLED` e `evidence_kind=ANALYTICAL_ASSUMPTION`, sob hipótese explícita de quantização
 uniforme em ±0,5 px; não é uma medida experimental nem incerteza combinada.
 
 Gravidade, gradiente térmico e crescimento não têm vetores comprovados nos

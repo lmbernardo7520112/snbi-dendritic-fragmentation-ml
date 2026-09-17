@@ -1,6 +1,9 @@
 """Synthetic, dependency-free checks of the frozen TI-2 geometry contracts."""
 
 import math
+import copy
+import json
+from pathlib import Path
 import unittest
 
 from snbi_fragmentation import ti2_geometry as geometry
@@ -188,6 +191,72 @@ class CalibrationContractTests(unittest.TestCase):
         budget.pop("roi")
         with self.assertRaises(geometry.GeometryContractError):
             geometry.validate_uncertainty_budget(budget)
+
+    def modelled_budget(self):
+        budget = {name: {"status": "UNRESOLVED", "reason": "no empirical evidence"}
+                  for name in geometry.UNCERTAINTY_COMPONENTS}
+        budget["discretization"] = {
+            "status": "MODELLED", "evidence_kind": "ANALYTICAL_ASSUMPTION",
+            "value": 1 / math.sqrt(12), "unit": "pixel",
+            "method": "standard deviation of a uniform quantization distribution",
+            "provenance": "analytical_model",
+            "analytical_assumption": "uniform per-axis quantization error in [-0.5,+0.5] pixel",
+        }
+        return budget
+
+    def test_analytical_discretization_is_valid_as_modelled(self):
+        geometry.validate_uncertainty_budget(self.modelled_budget())
+
+    def test_modelled_requires_each_evidence_field(self):
+        for key in ("value", "unit", "method", "provenance", "analytical_assumption", "evidence_kind"):
+            with self.subTest(missing=key):
+                budget = self.modelled_budget()
+                del budget["discretization"][key]
+                with self.assertRaises(geometry.GeometryContractError):
+                    geometry.validate_uncertainty_budget(budget)
+
+    def test_modelled_rejects_nonfinite_negative_boolean_and_empty_evidence(self):
+        for value in (math.nan, math.inf, -1, True, "0.288675"):
+            budget = self.modelled_budget()
+            budget["discretization"]["value"] = value
+            with self.subTest(value=value), self.assertRaises(geometry.GeometryContractError):
+                geometry.validate_uncertainty_budget(budget)
+        for key in ("unit", "method", "provenance", "analytical_assumption", "evidence_kind"):
+            budget = self.modelled_budget()
+            budget["discretization"][key] = ""
+            with self.subTest(key=key), self.assertRaises(geometry.GeometryContractError):
+                geometry.validate_uncertainty_budget(budget)
+
+    def test_analytical_model_cannot_be_relabelled_measured(self):
+        budget = self.modelled_budget()
+        budget["discretization"]["status"] = "MEASURED"
+        with self.assertRaises(geometry.GeometryContractError):
+            geometry.validate_uncertainty_budget(budget)
+
+    def test_empirical_measurement_remains_a_distinct_supported_status(self):
+        budget = self.modelled_budget()
+        budget["registration"] = {
+            "status": "MEASURED", "value": 0.5, "unit": "pixel",
+            "method": "independent empirical residual measurement",
+            "evidence_kind": "EMPIRICAL_MEASUREMENT", "provenance": "synthetic test fixture",
+        }
+        geometry.validate_uncertainty_budget(budget)
+
+    def test_current_text_records_keep_unresolved_metrology_and_zero_conversions(self):
+        root = Path(__file__).resolve().parents[1]
+        for condition in ("bottom-up", "top-down"):
+            record = json.loads((root / f"configs/calibration/{condition}.json").read_text())
+            before = copy.deepcopy(record)
+            geometry.validate_uncertainty_budget(record["uncertainty_budget"])
+            component = record["uncertainty_budget"]["discretization"]
+            self.assertEqual(component["status"], "MODELLED")
+            self.assertEqual(component["evidence_kind"], "ANALYTICAL_ASSUMPTION")
+            self.assertEqual(component["value"], 0.2886751345948129)
+            self.assertEqual(record["nominal_spatial_scale"]["metrological_uncertainty_status"], "UNRESOLVED")
+            self.assertEqual(record["scale"]["scale_status"], "UNRESOLVED")
+            self.assertEqual(record["coordinate_unit"], "pixel")
+            self.assertEqual(record["physical_coordinate_conversions_performed"], 0)
+            self.assertEqual(record, before)
 
 
 if __name__ == "__main__":

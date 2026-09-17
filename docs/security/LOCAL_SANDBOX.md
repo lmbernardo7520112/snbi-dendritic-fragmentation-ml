@@ -29,9 +29,11 @@ current authority and must not be repeated.
 - LB0 local acceptance: `PASS`;
 - real Codex sandbox: `PASS_SMOKE`;
 - SDR-2-A: `RESOLVED`;
-- Codex local write readiness: `AUTHORIZED_DEFAULT_SANDBOX_REPOSITORY_ONLY`;
-- current activity: `TI2_CLOSEOUT_1` only;
-- TI-2 execution: `TERMINAL_BLOCKED_PENDING_CLOSEOUT`;
+- Codex local write readiness: `BLOCKED_AWAITING_AUTHOR_DECISION`;
+- canonical authority: `pyproject.toml [tool.snbi]`;
+- current activity: `NONE_AWAITING_AUTHOR_DECISION`;
+- TI-2 execution: `TERMINAL_BLOCKED_CLOSED`; TI2-CLOSEOUT-1: `PASS`;
+- scientific execution permissions TI2/TI2R/TI3+: `false`;
 - method v1: `INSUFFICIENT_EVIDENCE`; G2-SPATIAL: `BLOCKED_METHOD_V1`;
 - transformation existence: `UNDETERMINED`; G3: `BLOCKED_DEPENDENCY_G2`;
 - E7: `PASS_DOCUMENTARY`; TI-2R and TI-3+: not authorized;
@@ -98,20 +100,19 @@ Read-only `.git` protection is expected under the standard sandbox. The observed
 `.git/index.lock: Read-only file system` error stopped Git staging; it did not
 establish a bwrap/namespace/seccomp startup failure or reopen SDR-2-A.
 
-The [closeout decision](../decisions/AUTHORIZATION-TI2-CLOSEOUT-1-2026-09-17.md)
-retains separate approvals for exact-path staging and commits. It now permits
-publishing the blocked result after documentary reconciliation, passing tests,
-guards and checksums, with zero tracked experimental binaries. A read-only
-remote-reference check and confirmed fast-forward push need targeted approval;
-Draft PR creation is a separate action, followed by remote CI verification.
-These exceptions cover only the individually approved
-Git/GitHub actions. They do not authorize scientific work outside the sandbox,
-full access, broad escalation, credential inspection, permission changes or OS
-remediation. The Draft PR must remain open and unmerged. Closeout authorizes no
-pixel reads, FFmpeg, redecoding, source-member access or scientific retuning;
-only necessary integrity hashing of exact existing files as opaque bytes is
-allowed. Any required scientific/source change returns
-`SOURCE_OR_SCIENTIFIC_CHANGE_REQUIRED`.
+The [remediation decision](../decisions/AUTHORIZATION-TI2-PR6-REMEDIATION-1-2026-09-17.md)
+authorizes one bounded implementation/checkpoint/publication transaction only.
+All code and document edits remain in the default sandbox; exact-path staging,
+the single commit, fast-forward push and PR body update require separate
+approvals. New-SHA CI must pass both jobs and the checksum step before updating
+the body. No ready transition, merge, automatic rerun or second corrective
+commit is authorized. Active state remains NONE_AWAITING_AUTHOR_DECISION.
+
+Historical permissions never override canonical false state. No experimental
+source, ZIP, MP4, raw buffer or image may be opened or hashed. No pixels,
+FFmpeg/FFprobe, scientific retuning, local installation or OS changes. The only
+checksum inputs are safe tracked textual files. These exact Git/GitHub
+approvals grant no broad elevation, credential inspection or sandbox bypass.
 
 If sandbox startup itself fails again with bwrap, namespace or seccomp errors,
 stop immediately; no unsandboxed fallback is authorized.

@@ -1,8 +1,10 @@
 # TI-2 — Registro de riscos
 
-**Status:** TI2-CLOSEOUT-1 exclusivamente; método v1 com evidência insuficiente.
+**Status:** `TERMINAL_BLOCKED_CLOSED`; closeout PASS; método v1 com evidência insuficiente.
 
-Autoridade atual: [decisão de closeout](../decisions/AUTHORIZATION-TI2-CLOSEOUT-1-2026-09-17.md).
+Estado canônico em `pyproject.toml [tool.snbi]`: `NONE_AWAITING_AUTHOR_DECISION`.
+[Remediação PR6](../decisions/AUTHORIZATION-TI2-PR6-REMEDIATION-1-2026-09-17.md) restrita a manutenção/publicação.
+A decisão de closeout permanece registro histórico.
 A declaração final de riscos aceitos para planejamento é histórica; a
 autorização posterior de execução permitiu somente o piloto congelado e não
 aceitou automaticamente risco residual. Agora `G2_SPATIAL=BLOCKED_METHOD_V1`,

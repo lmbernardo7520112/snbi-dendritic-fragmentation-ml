@@ -6,6 +6,7 @@ from pathlib import Path
 from unittest.mock import patch
 
 from scripts import check_ti2_scope as scope
+from scripts import ti2_authority
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -55,8 +56,20 @@ class ScopeGuardTests(unittest.TestCase):
     def test_scope_auditor_passes_and_later_phases_remain_blocked(self):
         report = scope.audit(entries=[("100644", "README.md")])
         self.assertEqual(report["status"], "PASS", json.dumps(report))
-        self.assertEqual(report["authorized_phase"], "TI-2")
+        self.assertIsNone(report["authorized_phase"])
+        self.assertEqual(report["authorized_scientific_phases"], [])
+        self.assertFalse(report["ti2_execution_authorized"])
+        self.assertEqual(report["current_authorized_activity"], "NONE_AWAITING_AUTHOR_DECISION")
+        self.assertEqual(report["scientific_readiness"], "BLOCKED")
         self.assertEqual(report["blocked_phases"], [f"TI-{n}" for n in range(3, 9)])
+
+    def test_invalid_canonical_authority_stops_before_source_inspection(self):
+        with patch.object(ti2_authority, "load_governance", side_effect=ValueError), \
+                patch.object(scope, "read_source") as reader:
+            report = scope.audit(entries=[("100644", "scripts/run_ti2.py")])
+        self.assertEqual(report["status"], "BLOCKED")
+        self.assertIsNone(report["authorized_phase"])
+        reader.assert_not_called()
 
 
 if __name__ == "__main__":

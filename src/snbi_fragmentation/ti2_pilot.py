@@ -11,12 +11,14 @@ import fcntl
 import hashlib
 import json
 import os
+from decimal import Decimal, DecimalException
 from pathlib import Path
 import re
 import subprocess
 import zipfile
 
 from .custody import load_manifest
+from .timebase import load_time_rule
 
 
 class PilotContractError(ValueError):
@@ -31,21 +33,46 @@ DIMENSIONS = {'ESM1': (1278, 1018), 'ESM2': (1278, 1018), 'ESM3': (1280, 1024),
 
 
 def frozen_plan():
+    """Build metadata only; ``physical_time_s`` is a deprecated elapsed alias."""
+    _, time_rule = load_time_rule(Path(__file__).resolve().parents[2]/'configs/time_rule.json')
     result = []
     for number in range(1, 7):
         condition = 'bottom_up_anti_parallel' if number <= 3 else 'top_down_parallel'
         for position, index in enumerate(INDICES[condition]):
+            source_id = f'ESM{number}'
+            elapsed = time_rule.elapsed_time(index)
+            experimental = time_rule.experimental_time(source_id, index)
             result.append({'source_id': f'ESM{number}', 'frame_index': index,
                            'condition': condition, 'experiment_id': condition,
                            'modality': MODALITIES[(number-1) % 3],
-                           'physical_time_s': round(index * 1.18, 2),
+                           'elapsed_from_first_frame_s': float(elapsed),
+                           'experimental_time_s': float(experimental),
+                           'physical_time_s': float(elapsed),
                            'role': 'estimation' if position in (0, 2, 4) else 'validation'})
     return result
 
 
 def validate_plan(plan):
-    if plan != frozen_plan():
+    expected = frozen_plan()
+    if not isinstance(plan, list) or len(plan) != len(expected):
         raise PilotContractError('exact ordered 30 source/index/time/role entries required')
+    time_fields = ('elapsed_from_first_frame_s', 'experimental_time_s', 'physical_time_s')
+    for actual, approved in zip(plan, expected, strict=True):
+        if not isinstance(actual, dict) or set(actual) != set(approved):
+            raise PilotContractError('all frozen pilot fields, including all three times, are required')
+        if type(actual['frame_index']) is not int or actual['frame_index'] < 0:
+            raise PilotContractError('frame_index must be a nonnegative integer, never boolean')
+        for key, value in approved.items():
+            if key not in time_fields:
+                if actual[key] != value:
+                    raise PilotContractError('source, index, condition, modality or role differs from frozen plan')
+                continue
+            try:
+                observed = Decimal(str(actual[key]))
+            except (DecimalException, TypeError, ValueError) as exc:
+                raise PilotContractError('pilot times must be finite exact decimals') from exc
+            if not observed.is_finite() or observed != Decimal(str(value)):
+                raise PilotContractError('pilot elapsed, experimental or legacy alias time differs from exact rule')
 
 
 def hash_stream(stream):
@@ -118,13 +145,18 @@ def split_native_frames(data, frame_bytes, count=5):
 
 
 def validate_pilot_manifest(manifest, source_manifest=None):
+    """Validate text, including exact times for all 30 items; never open frames."""
+    if not isinstance(manifest, dict) or not isinstance(manifest.get('images'), list):
+        raise PilotContractError('pilot manifest requires an images list')
     if source_manifest is None:
         source_manifest = load_manifest(Path(__file__).resolve().parents[2]/'configs/sources/source_manifest.json')
     sources = {s['source_id']: s for s in source_manifest['sources'] if s['source_id'] in DIMENSIONS}
     container_hash = source_manifest['containers'][0]['sha256']
     images = manifest.get('images', [])
     keys = tuple(frozen_plan()[0])
-    validate_plan([{k: image.get(k) for k in keys} for image in images])
+    if any(not isinstance(image, dict) for image in images):
+        raise PilotContractError('each pilot item must be an object')
+    validate_plan([{k: image[k] for k in keys if k in image} for image in images])
     if manifest.get('schema_version') != '1.0.0' or manifest.get('materialized_image_count') != 30:
         raise PilotContractError('pilot schema/count invalid')
     paths = set()

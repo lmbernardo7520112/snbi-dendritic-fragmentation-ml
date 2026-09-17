@@ -1,8 +1,11 @@
 # TI-2 — Matriz de contratos
 
-**Status:** somente closeout documental autorizado; contratos científicos preservados
+**Status:** `TERMINAL_BLOCKED_CLOSED`; closeout PASS; contratos científicos preservados.
 
-Autoridade atual: [TI2-CLOSEOUT-1](../decisions/AUTHORIZATION-TI2-CLOSEOUT-1-2026-09-17.md).
+Estado ativo exclusivamente em `pyproject.toml [tool.snbi]`:
+`NONE_AWAITING_AUTHOR_DECISION`, permissões científicas falsas.
+[Decisão de remediação PR6](../decisions/AUTHORIZATION-TI2-PR6-REMEDIATION-1-2026-09-17.md).
+A [decisão de closeout](../decisions/AUTHORIZATION-TI2-CLOSEOUT-1-2026-09-17.md) é histórica.
 A coluna de testes RED conserva a especificação aprovada. A classificação
 autoral é `METHOD_V1=INSUFFICIENT_EVIDENCE`,
 `G2_SPATIAL=BLOCKED_METHOD_V1`, `TRANSFORM_EXISTENCE=UNDETERMINED`,

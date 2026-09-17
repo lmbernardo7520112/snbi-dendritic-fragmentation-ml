@@ -11,9 +11,11 @@ research and presented at COBEM.
 **TI-0 — Governed Technical Bootstrap** and **TI-1 — Deterministic Audit** are
 formally complete. G1 and G2-TEMP were approved by the author. LB0 is **PASS**
 and SDR-2-A is **RESOLVED** after the successful real Codex sandbox smoke test.
-The current [closeout decision](docs/decisions/AUTHORIZATION-TI2-CLOSEOUT-1-2026-09-17.md)
-authorizes **only TI2-CLOSEOUT-1**: documentary reconciliation, deterministic
-checks, an approved Git checkpoint, push, a Draft PR and remote CI verification.
+The author accepted TI2-CLOSEOUT-1 as **PASS**. The sole canonical active state
+is `pyproject.toml [tool.snbi]`: **NONE_AWAITING_AUTHOR_DECISION**, with scientific
+execution permissions false. The [PR6 remediation decision](docs/decisions/AUTHORIZATION-TI2-PR6-REMEDIATION-1-2026-09-17.md)
+authorizes its bounded code/test/documentary correction, one approved commit,
+push, new-SHA CI verification and Draft PR body update only.
 Ordinary writes remain inside the repository and default sandbox on
 `feat/ti2-registration-calibration`. TI-2R, further pixel access and new
 scientific analysis are prohibited, as are TI-3 through TI-8, labels, ledger,
@@ -22,7 +24,11 @@ ML datasets, splits, baselines and training.
 The author approved the terminal classification:
 
 ```text
-TI2_EXECUTION = TERMINAL_BLOCKED_PENDING_CLOSEOUT
+TI2_EXECUTION = TERMINAL_BLOCKED_CLOSED
+TI2_CLOSEOUT_1 = PASS
+CURRENT_AUTHORIZED_ACTIVITY = NONE_AWAITING_AUTHOR_DECISION
+TI2_EXECUTION_AUTHORIZED = false
+TI2R_AUTHORIZED = false
 METHOD_V1 = INSUFFICIENT_EVIDENCE
 G2_SPATIAL = BLOCKED_METHOD_V1
 TRANSFORM_EXISTENCE = UNDETERMINED
@@ -46,7 +52,9 @@ Insufficient method-v1 evidence does not demonstrate that registration is imposs
 See the [execution report](artifacts/evidence/TI2/execution-report.md),
 [registration decision](artifacts/evidence/G2_SPATIAL/registration-report.json)
 and [calibration decision](artifacts/evidence/G3/calibration-report.json).
-Closeout publication is authorized despite the blocked scientific result.
+The closeout was published as Draft PR #6 with green historical CI.
+The remediation preserves that publication and closes all execution permissions.
+Ready for review and merge both require a new author decision.
 Any revised scientific method or TI-3 requires a new author decision.
 
 ## Reconciled time and nominal scale
@@ -93,15 +101,23 @@ authorization also permits the full synthetic suite locally with `TMPDIR`
 inside the ignored repository subtree `.bootstrap-test-tmp/`; tests must never
 read experimental bytes. Core contracts and CI
 use the Python standard library. The completed scientific attempt used
-already-installed optional tools documented in its evidence; no installation
-or further experimental operation is authorized by the closeout.
+pre-existing optional tools documented in its evidence. No local installation
+or experimental operation is authorized. A separate CI job installs NumPy
+1.26.4 and SciPy 1.11.4 only on its runner, logs their imported versions and
+requires exactly five synthetic matching tests to pass with zero skips.
+The stdlib checksum step rejects unsafe, experimental or untracked paths.
 
 ```bash
-make test
-make validate-manifest
-PYTHONPATH=src python -B scripts/check_ti2_scope.py
+/usr/bin/python3 -B scripts/check_repository_data.py
+TMPDIR=.bootstrap-test-tmp PYTHONPATH=src /usr/bin/python3 -S -B -m unittest discover -s tests -v
+PYTHONPATH=src /usr/bin/python3 -S -B -m snbi_fragmentation.custody validate configs/sources/source_manifest.json
+PYTHONPATH=src /usr/bin/python3 -S -B scripts/check_ti2_scope.py
 ```
 
+The local temporary root must be the real, ignored `.bootstrap-test-tmp/`
+directory inside this repository; each test creates its own controlled subtree.
+`-S` keeps the five optional matching tests out of the local dependency-free
+profile. Their mandatory execution belongs only to the separate pinned CI job.
 These full-suite commands are not part of the local agent bootstrap task.
 
 The following source-verification command documents the now-closed TI-1
@@ -130,7 +146,7 @@ PYTHONPATH=src python scripts/run_ti1_audit.py \
 This command reads the MP4 members directly from the ZIP and writes metadata
 and gate evidence only; it does not extract frames.
 
-## Governed local closeout
+## Governed local maintenance
 
 Local agent work is governed by [`AGENTS.md`](AGENTS.md). Before any local
 task, run:
@@ -144,15 +160,14 @@ task, run:
 No further sandbox/AppArmor diagnostic is authorized or needed. A sandbox
 startup failure must never be retried outside the sandbox. Read-only Git
 metadata protection is a separate operational constraint: exact-path staging
-and commits require separate targeted approvals. The current closeout decision
-explicitly permits publishing this blocked result after reconciliation and
-passing tests, guards and checksums, with zero tracked experimental binaries.
-It supersedes the earlier publication condition that required full E0–E7
-scientific completion. Check the remote reference read-only with targeted
-approval, confirm a fast-forward push and approve the exact push separately.
-Draft PR creation requires its own approval, followed by completed remote CI
-verification. The PR must remain open, in draft and without merge. Green CI
-does not approve G2-SPATIAL/G3 or permit another scientific run.
+and commits require separate targeted approvals. The remediation decision
+permits only its single checkpoint and fast-forward push with individual
+approvals, new-SHA CI verification and separately approved update of PR #6
+body. No second corrective commit or automatic CI rerun is authorized. Both
+CI jobs and the checksum step must succeed; the PR stays open, draft and
+unmerged. Guard PASS reports coherent policy while scientific readiness is
+BLOCKED. Missing, unknown, conflicting or truthy noncanonical TOML authority
+fails closed before source-path access; historical text grants no permission.
 
 ## Governance
 

@@ -8,7 +8,6 @@ sys.dont_write_bytecode = True
 
 import json
 import subprocess
-import tomllib
 from pathlib import Path
 
 try:
@@ -16,11 +15,19 @@ try:
 except ModuleNotFoundError:  # imported as scripts.check_local_bootstrap in tests
     from scripts.check_repository_data import audit_entries, tracked_entries
 
+try:
+    from ti2_authority import audit_authority
+except ModuleNotFoundError:
+    from scripts.ti2_authority import audit_authority
+
 ROOT = Path(__file__).resolve().parents[1]
-AUTHORIZATION = ROOT / "docs/decisions/AUTHORIZATION-LB0-SDR2A-CLOSURE-PR5-MERGE-TI2-EXECUTION-2026-09-17.md"
 REQUIRED_AGENT_MARKERS = (
-    "TI2_EXECUTION_AUTHORIZED=true",
-    "AUTHORIZED_ACTIVITY=TI2_REGISTRATION_CALIBRATION",
+    "TI2_EXECUTION=TERMINAL_BLOCKED_CLOSED",
+    "TI2_CLOSEOUT_1=PASS",
+    "CURRENT_AUTHORIZED_ACTIVITY=NONE_AWAITING_AUTHOR_DECISION",
+    "TI2_EXECUTION_AUTHORIZED=false",
+    "TI2R_AUTHORIZED=false",
+    "TI3_PLUS_AUTHORIZED=false",
     "Do not follow symlinks",
     "no fallback outside the sandbox",
 )
@@ -139,44 +146,13 @@ def validate_vscode(settings: dict, tasks: dict) -> list[str]:
     return violations
 
 
-def read_authorization() -> str:
-    return AUTHORIZATION.read_text(encoding="utf-8")
-
-
 def validate(entries: list[tuple[str, str]] | None = None) -> dict:
-    violations: list[str] = []
+    authority = audit_authority(ROOT)
+    violations: list[str] = list(authority["violations"])
     agents = (ROOT / "AGENTS.md").read_text(encoding="utf-8")
     for marker in REQUIRED_AGENT_MARKERS:
         if marker not in agents:
             violations.append(f"AGENTS.md missing marker: {marker}")
-
-    authorization = read_authorization()
-    for marker in (
-        "Decision status: APPROVED",
-        "LB0_LOCAL_ACCEPTANCE: PASS",
-        "SDR2A_STATUS: RESOLVED",
-        "REAL_CODEX_SANDBOX: PASS_SMOKE",
-        "authorized complete execution of TI2-E0 through TI2-E7",
-        "only the 30 frozen lossless pilot images",
-        "TI-3 through TI-8",
-    ):
-        if marker not in authorization:
-            violations.append(f"authorization record missing marker: {marker}")
-
-    project = tomllib.loads((ROOT / "pyproject.toml").read_text(encoding="utf-8"))
-    governance = project.get("tool", {}).get("snbi", {})
-    if governance.get("authorized_activity") != "ti2-registration-calibration":
-        violations.append("pyproject authorized activity mismatch")
-    if governance.get("ti2_execution_authorized") is not True:
-        violations.append("pyproject must record the approved TI-2 execution authority")
-    if governance.get("blocked_phases") != [f"TI-{phase}" for phase in range(3, 9)]:
-        violations.append("TI-3 through TI-8 must remain blocked")
-    if governance.get("pilot_image_limit") != 30:
-        violations.append("pilot image limit must remain exactly 30")
-    if governance.get("authorized_branch") != "feat/ti2-registration-calibration":
-        violations.append("dedicated TI-2 branch authorization mismatch")
-    if governance.get("write_boundary") != "repository-only-default-sandbox":
-        violations.append("repository-only default-sandbox write boundary mismatch")
 
     settings = json.loads((ROOT / ".vscode/settings.json").read_text(encoding="utf-8"))
     tasks = json.loads((ROOT / ".vscode/tasks.json").read_text(encoding="utf-8"))
@@ -191,11 +167,13 @@ def validate(entries: list[tuple[str, str]] | None = None) -> dict:
         "audit": "governed_local_bootstrap",
         "status": "PASS" if not violations else "BLOCKED",
         "violations": violations,
-        "ti2_execution_authorized": not violations,
-        "codex_write_readiness": (
-            "AUTHORIZED_DEFAULT_SANDBOX_REPOSITORY_ONLY" if not violations else "BLOCKED"
-        ),
-        "readiness_basis": "author decision and static safeguards; not a runtime sandbox probe",
+        "ti2_execution_authorized": False,
+        "ti2r_authorized": False,
+        "ti3_plus_authorized": False,
+        "current_authorized_activity": authority["current_authorized_activity"],
+        "scientific_readiness": "BLOCKED",
+        "codex_write_readiness": "BLOCKED_AWAITING_AUTHOR_DECISION" if not violations else "BLOCKED",
+        "readiness_basis": "canonical closed authority and static safeguards; audit PASS is not execution permission",
     }
 
 
@@ -213,6 +191,10 @@ def main() -> int:
             "audit": "governed_local_bootstrap", "status": "BLOCKED",
             "violations": [f"validation failure: {type(exc).__name__}"],
             "ti2_execution_authorized": False,
+            "ti2r_authorized": False,
+            "ti3_plus_authorized": False,
+            "current_authorized_activity": "BLOCKED_INVALID_AUTHORITY",
+            "scientific_readiness": "BLOCKED",
             "codex_write_readiness": "BLOCKED",
         }
     print(json.dumps(report, indent=2, sort_keys=True))

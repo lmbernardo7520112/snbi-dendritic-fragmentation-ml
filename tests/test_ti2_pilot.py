@@ -3,6 +3,7 @@ import copy
 import hashlib
 import io
 import json
+from decimal import Decimal
 from pathlib import Path
 import tempfile
 import unittest
@@ -168,6 +169,85 @@ class PilotContracts(unittest.TestCase):
             bad['images'][0][field]=value
             with self.assertRaises(pilot.PilotContractError):
                 pilot.validate_pilot_manifest(bad,sources)
+
+
+class PilotTemporalContracts(unittest.TestCase):
+    """Only versioned textual metadata and in-memory mutations are inspected."""
+
+    def setUp(self):
+        root = Path(__file__).resolve().parents[1]
+        self.manifest = json.loads((root/'artifacts/metadata/ti2-pilot-manifest.json').read_text(encoding='utf-8'))
+        self.sources = json.loads((root/'configs/sources/source_manifest.json').read_text(encoding='utf-8'))
+
+    def test_existing_textual_manifest_validates_without_experimental_access(self):
+        original = copy.deepcopy(self.manifest)
+        with patch.object(pilot, 'open_readonly', side_effect=AssertionError('source access prohibited')), \
+             patch.object(pilot, '_sealed_member', side_effect=AssertionError('member access prohibited')), \
+             patch.object(pilot.zipfile, 'ZipFile', side_effect=AssertionError('archive access prohibited')), \
+             patch.object(pilot.subprocess, 'run', side_effect=AssertionError('media process prohibited')):
+            pilot.validate_pilot_manifest(self.manifest, self.sources)
+        self.assertEqual(self.manifest, original)
+
+    def test_frozen_plan_generates_all_three_exact_time_fields(self):
+        for item in pilot.frozen_plan():
+            elapsed = Decimal('1.18') * item['frame_index']
+            offset = Decimal('-25.96') if item['source_id'] in ('ESM1', 'ESM2', 'ESM3') else Decimal('-34.22')
+            with self.subTest(source=item['source_id'], index=item['frame_index']):
+                self.assertEqual(Decimal(str(item['elapsed_from_first_frame_s'])), elapsed)
+                self.assertEqual(Decimal(str(item['experimental_time_s'])), offset + elapsed)
+                self.assertEqual(Decimal(str(item['physical_time_s'])), elapsed)
+                self.assertEqual(item['physical_time_s'], item['elapsed_from_first_frame_s'])
+
+    def test_all_thirty_items_require_every_time_field(self):
+        for index in range(30):
+            for field in ('elapsed_from_first_frame_s', 'experimental_time_s', 'physical_time_s'):
+                bad = copy.deepcopy(self.manifest)
+                del bad['images'][index][field]
+                with self.subTest(index=index, field=field), self.assertRaises(pilot.PilotContractError):
+                    pilot.validate_pilot_manifest(bad, self.sources)
+
+    def test_all_thirty_items_reject_any_decimal_deviation_without_float_tolerance(self):
+        for index in range(30):
+            for field in ('elapsed_from_first_frame_s', 'experimental_time_s', 'physical_time_s'):
+                bad = copy.deepcopy(self.manifest)
+                exact = Decimal(str(bad['images'][index][field]))
+                bad['images'][index][field] = str(exact + Decimal('0.000000000000000001'))
+                with self.subTest(index=index, field=field), self.assertRaises(pilot.PilotContractError):
+                    pilot.validate_pilot_manifest(bad, self.sources)
+
+    def test_rejects_wrong_offset_condition_and_legacy_alias(self):
+        changes = (('experimental_time_s', -34.22), ('condition', 'top_down_parallel'),
+                   ('experiment_id', 'top_down_parallel'), ('physical_time_s', -25.96),
+                   ('source_id', 'ESM7'), ('source_id', None))
+        for field, value in changes:
+            bad = copy.deepcopy(self.manifest)
+            bad['images'][0][field] = value
+            with self.subTest(field=field, value=value), self.assertRaises(pilot.PilotContractError):
+                pilot.validate_pilot_manifest(bad, self.sources)
+
+    def test_rejects_boolean_noninteger_negative_index_and_nonfinite_times(self):
+        for value in (False, True, -1, 0.0, '0', None):
+            bad = copy.deepcopy(self.manifest)
+            bad['images'][0]['frame_index'] = value
+            with self.subTest(index=value), self.assertRaises(pilot.PilotContractError):
+                pilot.validate_pilot_manifest(bad, self.sources)
+        for field in ('elapsed_from_first_frame_s', 'experimental_time_s', 'physical_time_s'):
+            for value in (False, True, 'NaN', 'Infinity', None):
+                bad = copy.deepcopy(self.manifest)
+                bad['images'][0][field] = value
+                with self.subTest(field=field, value=value), self.assertRaises(pilot.PilotContractError):
+                    pilot.validate_pilot_manifest(bad, self.sources)
+
+    def test_textual_decimal_values_are_exact_and_fps_fields_do_not_define_time(self):
+        altered = copy.deepcopy(self.manifest)
+        for item in altered['images']:
+            item['reported_fps'] = 999
+            for field in ('elapsed_from_first_frame_s', 'experimental_time_s', 'physical_time_s'):
+                item[field] = str(item[field])
+        pilot.validate_pilot_manifest(altered, self.sources)
+        altered['images'][1]['elapsed_from_first_frame_s'] = str(Decimal(73) / Decimal(999))
+        with self.assertRaises(pilot.PilotContractError):
+            pilot.validate_pilot_manifest(altered, self.sources)
 
 
 if __name__ == '__main__':

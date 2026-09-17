@@ -1,143 +1,78 @@
 # Governed local development protocol
 
-## Status and authority
+## Active state and authority
 
-LB0 is PASS and SDR-2-A is RESOLVED. The current
-[TI2-CLOSEOUT-1 decision](../decisions/AUTHORIZATION-TI2-CLOSEOUT-1-2026-09-17.md)
-permits only documentary reconciliation, deterministic tests, an approved
-checkpoint, push, a Draft PR and remote CI verification. Ordinary writes remain
-inside the repository and default sandbox on `feat/ti2-registration-calibration`.
-The scientific state is `TERMINAL_BLOCKED_PENDING_CLOSEOUT`: method v1 has
-`INSUFFICIENT_EVIDENCE`, G2-SPATIAL is `BLOCKED_METHOD_V1`, transformation
-existence is `UNDETERMINED`, G3 is `BLOCKED_DEPENDENCY_G2`, and E7 is
-`PASS_DOCUMENTARY`. TI-2R and TI-3 through TI-8 are not authorized.
-The historical resumption snapshot records
-`TI2_EXECUTION_STATUS=RESUMED_AFTER_OPERATIONAL_BLOCK`; G2-SPATIAL and G3 were
-`NOT_EVALUATED` at resumption, independently of operational readiness.
+The author accepted TI2-CLOSEOUT-1 as PASS. The sole canonical active state is
+`pyproject.toml [tool.snbi]`: TI2 execution TERMINAL_BLOCKED_CLOSED, activity
+NONE_AWAITING_AUTHOR_DECISION, and TI2/TI2R/TI3+ execution permissions false.
+The [remediation decision](../decisions/AUTHORIZATION-TI2-PR6-REMEDIATION-1-2026-09-17.md)
+permits only its single bounded maintenance/publication transaction.
+After its commit, that closed state remains active while the expressly
+authorized push, CI verification and Draft PR body update complete.
 
-## Architecture
+METHOD_V1=INSUFFICIENT_EVIDENCE; G2_SPATIAL=BLOCKED_METHOD_V1;
+TRANSFORM_EXISTENCE=UNDETERMINED; G3=BLOCKED_DEPENDENCY_G2;
+E7=PASS_DOCUMENTARY. LB0 remains PASS and SDR-2-A RESOLVED.
+Bootstrap PASS now means coherent safeguards with scientific readiness BLOCKED
+and codex_write_readiness=BLOCKED_AWAITING_AUTHOR_DECISION, not scientific
+execution authority. Old authorizations remain historical, never parsed as
+current permission.
 
-- GitHub is the canonical repository and review boundary.
-- VS Code is the local editor and test surface.
-- Codex may operate only under root `AGENTS.md` instructions.
-- Experimental sources remain external, immutable, and absent from an agent-writeable workspace.
-- Pull requests and explicit author decisions control every phase transition.
+## Local boundaries
 
-## Required local posture
+Use only the standalone repository on feat/ti2-registration-calibration and
+the default sandbox. Do not inspect credentials, parent/sibling locations,
+experimental data or ignored derivatives. No source/ZIP/MP4/raw/image opening,
+hashing, pixel inspection, FFmpeg/FFprobe, E0–E7 execution or scientific retuning.
+No local dependencies, operating-system changes or sandbox diagnostics.
 
-1. Use the stable official Codex extension.
-2. Open only the repository root as the workspace.
-3. Keep approvals user-controlled.
-4. Keep network disabled except for an exact approved Git/GitHub operation.
-5. Do not reopen sandbox/AppArmor diagnostics or remediation.
-6. Keep ordinary writes inside the standalone repository and default sandbox;
-   use individual Git approvals only as specified below.
-7. Never retry a failed sandbox command outside the sandbox.
+Workspace sanitization is the historical author attestation, not a new scan of
+ignored files. The Git data guard examines only index paths and reports
+content_bytes_read=0. Existing derivatives remain opaque and ignored.
 
-## Sanitized workspace rule
+## Verification under this decision
 
-Experimental source files remain external and immutable. Closeout permits no
-pixel access, source-member reads or decoding. Exact existing files may be
-hashed as opaque bytes only when needed for integrity. The historical 30 pilot
-frames were decoded from MP4 without additional losses, preserving video
-resolution and pixel format; existing derivatives remain ignored. `.raw` files
-are headerless decoded pixel buffers, not raw detector data. No further frames,
-datasets or experimental binaries may enter Git. The standalone `.git` directory must
-remain inside the repository root; linked worktrees are prohibited.
-`.gitignore` is not a confidentiality or write barrier. The original sanitization
-claim is the author's attestation; the Git-index guard is not a scan of ignored
-content, and the later authorized pilot does not invalidate that historical
-attestation.
+1. Confirm exact branch/starting SHA, standalone .git, clean index/worktree,
+   origin, equal remote SHA and open Draft PR #6; verify historical CI.
+2. Run the repository data guard before tests.
+3. Run bootstrap and scope guards; both must report no scientific authorization.
+4. Compile authorized Python source in memory and run the dependency-free suite
+   with fresh synthetic temporary subtrees inside ignored .bootstrap-test-tmp/.
+5. Validate the existing textual pilot manifest, all three exact Decimal times,
+   nominal scale and MODELLED analytical uncertainty; never open its raw paths.
+6. Run the stdlib checksum verifier. Only safe tracked text is admissible; new
+   untracked files cannot be exempted. Verify the final staged inventory before
+   the sole commit and exclude the checksum manifest itself.
+7. Report exact run/pass/skip/failure/error counts and review the full diff.
 
-## Authorized local workflow
+No scientific command is an authorized local verification. Denial tests mock
+boundaries or inspect control flow. Legacy tests use only controlled synthetic
+fixtures. No experimental coordinate conversion or uncertainty propagation.
+The editor task allowlist remains unchanged. The separate CI scientific job
+runs only five synthetic in-memory tests with exactly pinned NumPy/SciPy; the
+deterministic job remains dependency-free and reports its five optional skips.
 
-1. Confirm the exact repository/branch, a clean initial worktree, no index lock,
-   all three required commits and zero tracked experimental binaries. Record
-   `TI2_EXECUTION_RESULT_COMMIT=f3c6da78b04299475c7bb85e986eb7435b08bd22`.
-2. Read the current authorization and `AGENTS.md`.
-3. Run `/usr/bin/python3 -B scripts/check_repository_data.py`.
-4. Run `/usr/bin/python3 -B scripts/check_local_bootstrap.py`.
-5. Run `/usr/bin/python3 -B scripts/check_ti2_scope.py`.
-6. Use only explicit tasks and tests for the approved increment; no environment
-   diagnostic, optional bwrap probe or repeated sandbox acceptance is required.
-7. Run local tests in the default sandbox, with fresh synthetic temporary
-   subtrees only inside `.bootstrap-test-tmp/` when needed. Core contracts and CI
-   use the standard library. Existing optional synthetic tests may use already
-   installed packages; no scientific execution or installation is authorized.
-8. Run the complete regression suite in a clean CI checkout. The explicit
-   resumption authority also permits the full synthetic suite locally with
-   `TMPDIR` inside `.bootstrap-test-tmp/`; no experimental bytes or media
-   decoding may enter the legacy tests.
-9. Report exact discovered/run, passed, skipped, failure and error counts;
-   retain historical logs. Review the full scoped diff and status before each
-   Git approval. A required source/scientific change stops the task with
-   `SOURCE_OR_SCIENTIFIC_CHANGE_REQUIRED`.
+## Git and remote protocol
 
-## Targeted Git approvals
+Request separate approvals for exact-path staging, the single commit and
+fast-forward push. Review status, ordered paths, diff and guards first; inspect
+staged bytes/checksums. No all-files staging, force, amend, second corrective
+commit, fetch, branch/history repair or permission changes.
 
-The standard sandbox may expose `.git` read-only. A write denial for
-`.git/index.lock` alone is an operational Git restriction, not a new SDR-2-A
-failure. Do not alter filesystem permissions, hooks, operating-system policy or
-sandbox configuration to resolve it.
+Require both new-SHA CI jobs successful and the checksum step PASS; require
+five scientific tests passed with zero skips. No automatic CI rerun. Only then
+prepare an ignored sanitized PR body and separately approve its update.
+Keep PR #6 OPEN/DRAFT/unmerged. Ready and merge require new author authorization.
+Unavailable tooling must not trigger installation or credential inspection.
 
-- Review the exact files, then request approval for the individual
-  `git add -- <explicit paths>` operation; no wildcard or all-files staging.
-- Request a separate approval for the concrete `git commit` operation.
-- Closeout explicitly permits publication of the blocked scientific result.
-  Require documentary reconciliation, zero test failures/errors, passing guards
-  and checksums, and zero tracked experimental binaries. Approve a read-only
-  remote-reference check, establish a fast-forward push and approve that exact
-  push separately. Request Draft PR creation separately, then verify remote CI
-  to completion; never claim a run passed while it is pending.
-- Never infer authority for a force operation, credential inspection, broad
-  network access, another branch or merging the TI-2 PR.
+## Evidence and completion
 
-These per-action approvals are the sole exception to the default-sandbox Git
-metadata write restriction. Ordinary documentary development stays inside the
-default sandbox; no new scientific execution is authorized. A real bwrap/namespace/seccomp startup failure still
-requires an immediate stop without fallback.
+Preserve historical logs and decisions. The versioned publication record
+contains only the older completed closeout; new commit SHA/CI URL appear only
+afterward in the effective PR body and terminal report, avoiding self-reference.
+Report commands/exit codes without private paths, hostnames, environment dumps
+or credentials. A scoped grouped inventory must state its limits explicitly.
 
-## VS Code tasks
-
-The versioned tasks are explicit `process` tasks. None runs on folder open, installs software, invokes media tools, accesses the network, or performs a mutating Git action.
-
-## Data policy
-
-The repository guard examines only names already present in the Git index. It
-does not traverse ignored data directories or open experimental files. Its ban
-on tracked experimental data and binaries remains unchanged. The approved
-pilot exception applies only to ignored local derived storage.
-
-## Evidence policy
-
-A bootstrap report may record:
-
-- repository identifier;
-- branch and commit;
-- clean/dirty status;
-- commands and exit codes;
-- guard/test outcomes;
-- sanitized sandbox diagnostics.
-
-Do not publish usernames, home directories, hostnames, environment variables,
-credentials or external source paths. Bootstrap evidence contains no
-experimental metadata. TI-2 evidence may contain the expressly authorized
-source IDs, hashes, dimensions, frozen indices, explicitly distinguished elapsed
-and experimental times, documented nominal scale, uncertainty and lineage,
-using logical source identifiers instead of personal filesystem paths.
-
-## Completion criteria
-
-- root agent instructions exist and validate;
-- VS Code JSON is valid and contains no automatic task;
-- the data guard passes in CI;
-- synthetic tests cover traversal, symlinks, case-insensitive suffixes, and prohibited paths;
-- historical local diagnostics remain read-only and Git optional locks are disabled;
-- deterministic tests have zero failures/errors, with pass/skip counts and skip
-  reasons reported separately;
-- Codex write readiness is `AUTHORIZED_DEFAULT_SANDBOX_REPOSITORY_ONLY` on the
-  basis of the successful smoke test and separate execution decision;
-- the closeout PASS additionally requires its commit, completed push, open Draft
-  PR, completed green remote CI, clean worktree and zero tracked experimental
-  binaries; targeted approvals do not change the scientific gates or authorize
-  TI-2R/TI-3+.
+Success means PASS_READY_FOR_AUTHOR_REVIEW, equal local/remote SHA, clean
+worktree and open Draft PR with required CI complete. Active authority remains
+NONE_AWAITING_AUTHOR_DECISION; green CI does not approve the scientific gates.

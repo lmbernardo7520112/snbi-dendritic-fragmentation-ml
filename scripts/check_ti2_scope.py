@@ -19,6 +19,11 @@ try:
 except ModuleNotFoundError:
     from scripts.check_repository_data import audit_entries, classify_path, tracked_entries
 
+try:
+    from ti2_authority import audit_authority
+except ModuleNotFoundError:
+    from scripts.ti2_authority import audit_authority
+
 ROOT = Path(__file__).resolve().parents[1]
 BLOCKED_COMPONENTS = frozenset({
     "annotation", "annotations", "label", "labels", "ledger", "dataset", "datasets",
@@ -77,7 +82,8 @@ def read_source(relative: str) -> str:
 
 
 def audit(entries: list[tuple[str, str]] | None = None) -> dict:
-    violations: list[str] = []
+    authority = audit_authority(ROOT)
+    violations: list[str] = list(authority["violations"])
     try:
         inventory = tracked_entries() if entries is None else entries
         data_report = audit_entries(inventory)
@@ -100,7 +106,13 @@ def audit(entries: list[tuple[str, str]] | None = None) -> dict:
     except (OSError, subprocess.SubprocessError, UnicodeError, ValueError) as exc:
         violations.append(f"scope audit unavailable: {type(exc).__name__}")
     return {
-        "authorized_phase": "TI-2",
+        "authorized_phase": None,
+        "authorized_scientific_phases": [],
+        "current_authorized_activity": authority["current_authorized_activity"],
+        "ti2_execution_authorized": False,
+        "ti2r_authorized": False,
+        "ti3_plus_authorized": False,
+        "scientific_readiness": "BLOCKED",
         "blocked_phases": [f"TI-{phase}" for phase in range(3, 9)],
         "status": "PASS" if not violations else "BLOCKED",
         "violations": violations,

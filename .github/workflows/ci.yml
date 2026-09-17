@@ -12,6 +12,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
       - name: Enforce tracked-data guard
         run: python3 scripts/check_repository_data.py
       - uses: actions/setup-python@v5
@@ -28,5 +30,26 @@ jobs:
         run: PYTHONPATH=src python -c "from pathlib import Path; from snbi_fragmentation.timebase import load_time_rule; load_time_rule(Path('configs/time_rule.json'))"
       - name: Enforce TI-2 scope without experimental data
         run: PYTHONPATH=src python -B scripts/check_ti2_scope.py
+      - name: Verify tracked textual TI-2 checksums
+        run: python -B scripts/check_ti2_checksums.py
       - name: Run deterministic tests
-        run: PYTHONPATH=src python -m unittest discover -s tests -v
+        run: PYTHONPATH=src python -S -B -m unittest discover -s tests -v
+
+  scientific-synthetic-contracts:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Enforce tracked-data guard
+        run: python3 scripts/check_repository_data.py
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: ""
+      - name: Install exact synthetic-only dependencies on CI
+        run: python -m pip install --disable-pip-version-check --no-deps numpy==1.26.4 scipy==1.11.4
+      - name: Require five passing scientific synthetic tests and zero skips
+        run: PYTHONPATH=src python -B scripts/run_scientific_synthetic_contracts.py

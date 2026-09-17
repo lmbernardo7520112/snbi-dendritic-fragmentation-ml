@@ -14,11 +14,14 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'src'))
 
-from snbi_fragmentation.custody import load_manifest
-from snbi_fragmentation.ti2_pilot import extract_pilot, frozen_plan, verify_archive
+try:
+    from ti2_authority import require_scientific_authority
+except ModuleNotFoundError:
+    from scripts.ti2_authority import require_scientific_authority
 
 
 def write_new(path, value):
+    stage_guard()
     target = ROOT / path
     if target.is_symlink() or target.exists():
         raise RuntimeError('immutable evidence already exists: ' + path)
@@ -28,11 +31,13 @@ def write_new(path, value):
 
 
 def command(args):
+    require_scientific_authority(ROOT)
     result = subprocess.run(args, cwd=ROOT, capture_output=True, text=True, check=True)
     return result.stdout.strip()
 
 
 def stage_guard():
+    require_scientific_authority(ROOT)
     if Path.cwd() != ROOT or (ROOT/'.git').is_symlink() or not (ROOT/'.git').is_dir():
         raise RuntimeError('run only at standalone repository root')
     if command(['git', 'branch', '--show-current']) != 'feat/ti2-registration-calibration':
@@ -41,6 +46,8 @@ def stage_guard():
 
 def preflight(source):
     stage_guard()
+    from snbi_fragmentation.custody import load_manifest
+    from snbi_fragmentation.ti2_pilot import frozen_plan, verify_archive
     if (ROOT / 'data/derived/ti2-pilot').exists() or (ROOT / 'data/derived/ti2-pilot').is_symlink():
         raise RuntimeError('existing pilot: no overwrite or repeat decoding permitted')
     guards = {}
@@ -70,6 +77,7 @@ def preflight(source):
 
 def pilot(source):
     stage_guard()
+    from snbi_fragmentation.ti2_pilot import extract_pilot
     pre = json.loads((ROOT/'artifacts/evidence/TI2/preflight.json').read_text())
     if pre['status'] != 'PASS' or hashlib.sha256(source.encode()).hexdigest() != pre['source_verification']['source_locator_sha256']:
         raise RuntimeError('preflight/source authorization mismatch')
@@ -83,8 +91,9 @@ def pilot(source):
 
 def load_native(record):
     """Read only a manifest-listed, hash-authenticated native pilot image."""
+    stage_guard()
     import numpy as np
-    from snbi_fragmentation.ti2_pilot import open_readonly
+    from snbi_fragmentation.ti2_pilot import frozen_plan, open_readonly
     expected = f"data/derived/ti2-pilot/{record['source_id']}-{record['frame_index']:04d}.raw"
     if record['path'] != expected or not any(
         p['source_id'] == record['source_id'] and p['frame_index'] == record['frame_index']
@@ -104,6 +113,7 @@ def load_native(record):
 
 def registration_mask(record, planes):
     """Ephemeral measurement exclusion, never an annotation/event export."""
+    stage_guard()
     import numpy as np
     from scipy import ndimage
     height, width = planes['Y'].shape
@@ -138,6 +148,7 @@ PAIRS = (('ESM2', 'ESM1', 'bottom-up'), ('ESM3', 'ESM1', 'bottom-up'),
 
 
 def measure_pairs(role, *, allowed_pair_keys=None):
+    stage_guard()
     from snbi_fragmentation.ti2_registration import pair_measurements
     from snbi_fragmentation.ti2_pilot import validate_pilot_manifest
     if role not in ('estimation', 'validation'):
@@ -290,6 +301,7 @@ def validate():
 
 
 if __name__ == '__main__':
+    stage_guard()
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('stage', choices=('preflight', 'pilot', 'estimate', 'validate'))
     parser.add_argument('--source', help='exact operator-authorized external ZIP')
