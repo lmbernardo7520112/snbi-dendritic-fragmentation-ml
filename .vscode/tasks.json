@@ -1,0 +1,40 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "SNBI: repository data guard",
+      "type": "process",
+      "command": "/usr/bin/python3",
+      "args": ["-B", "scripts/check_repository_data.py"],
+      "options": {"cwd": "${workspaceFolder}"},
+      "problemMatcher": []
+    },
+    {
+      "label": "SNBI: local environment diagnostics (read-only)",
+      "type": "process",
+      "command": "/usr/bin/python3",
+      "args": ["-B", "scripts/check_local_environment.py"],
+      "options": {"cwd": "${workspaceFolder}"},
+      "problemMatcher": []
+    },
+    {
+      "label": "SNBI: bootstrap policy tests",
+      "type": "process",
+      "command": "/usr/bin/python3",
+      "args": [
+        "-B",
+        "-m",
+        "unittest",
+        "-v",
+        "tests/test_repository_data_guard.py",
+        "tests/test_local_bootstrap.py",
+        "tests/test_local_environment.py"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}",
+        "env": {"PYTHONPATH": "${workspaceFolder}/src"}
+      },
+      "problemMatcher": []
+    }
+  ]
+}

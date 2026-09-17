@@ -23,7 +23,11 @@ Sources are referenced by canonical identifier, size, and SHA-256 digest.
 
 ## Scope control
 
-TI-1 through TI-8 are blocked until separately authorized. A pull request that
-introduces acquisition, temporal mapping, synchronization, annotation,
-dataset, model, or evaluation behavior during TI-0 must be rejected.
+TI-0 and TI-1 are complete. The TI-2 execution plan is approved, but TI-2
+execution and TI-3 through TI-8 remain blocked. The governed local VS Code
+bootstrap is authorized independently. A pull request that introduces frame
+decoding, pixel access, registration, calibration, annotation, dataset,
+baseline, model, or evaluation behavior must be rejected.
 
+The root `AGENTS.md` is mandatory operational policy. A sandbox failure is a
+stop condition, never permission to retry unsandboxed.
