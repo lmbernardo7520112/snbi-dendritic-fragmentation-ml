@@ -1,0 +1,110 @@
+{
+  "contracts": [
+    {
+      "evidence_interpretation": "Exact source/index/hash and prescribed time in pilot manifest; printed time semantics separately unresolved.",
+      "id": "SRC-201",
+      "status": "PASS"
+    },
+    {
+      "evidence_interpretation": "Exactly30 allowed pairs; no additional source frame exported.",
+      "id": "PILOT-201",
+      "status": "PASS"
+    },
+    {
+      "evidence_interpretation": "G0 ZIP and six member hashes unchanged before/after/final.",
+      "id": "RAW-201",
+      "status": "PASS"
+    },
+    {
+      "evidence_interpretation": "Native x/y conventions declared; synthetic geometry tests pass.",
+      "id": "GEO-201",
+      "status": "PASS"
+    },
+    {
+      "evidence_interpretation": "No accepted transform; matrix and inverse are null.",
+      "id": "GEO-202",
+      "status": "BLOCKED"
+    },
+    {
+      "evidence_interpretation": "Input measurement sufficiency failed before model selection; hierarchy implemented but not exercised on accepted experimental fit.",
+      "id": "GEO-203",
+      "status": "BLOCKED"
+    },
+    {
+      "evidence_interpretation": "No projective/nonrigid or unjustified affine operation.",
+      "id": "GEO-204",
+      "status": "PASS"
+    },
+    {
+      "evidence_interpretation": "Native parity preserved; physical orientation NOT_VERIFIED.",
+      "id": "GEO-205",
+      "status": "BLOCKED"
+    },
+    {
+      "evidence_interpretation": "Only prescribed estimation indices analyzed; decisions frozen; no matrix or held-out refit.",
+      "id": "REG-201",
+      "status": "PARTIAL"
+    },
+    {
+      "evidence_interpretation": "No sufficient all-instant correspondences; no certified independent residuals.",
+      "id": "REG-202",
+      "status": "BLOCKED"
+    },
+    {
+      "evidence_interpretation": "No accepted experimental matrix for roundtrip; synthetic contract GREEN.",
+      "id": "REG-203",
+      "status": "BLOCKED"
+    },
+    {
+      "evidence_interpretation": "Temporary chroma exclusion for metrics; no circle objects, labels or differencing.",
+      "id": "ANN-201",
+      "status": "PASS"
+    },
+    {
+      "evidence_interpretation": "No accepted cross-modality registration; common support not certified.",
+      "id": "ROI-201",
+      "status": "BLOCKED"
+    },
+    {
+      "evidence_interpretation": "Separate condition records; both ROI unresolved.",
+      "id": "ROI-202",
+      "status": "PASS"
+    },
+    {
+      "evidence_interpretation": "Horizontal bar provenance exists, but complete physical calibration is unresolved; no coordinate conversion performed.",
+      "id": "CAL-201",
+      "status": "PARTIAL"
+    },
+    {
+      "evidence_interpretation": "Validated scale UNRESOLVED; coordinates remain pixels.",
+      "id": "CAL-202",
+      "status": "PASS"
+    },
+    {
+      "evidence_interpretation": "All five components satisfy the explicit-state schema, but unresolved contributions prevent complete scientific uncertainty assessment.",
+      "id": "UNC-201",
+      "status": "PARTIAL"
+    },
+    {
+      "evidence_interpretation": "Native8-bit YUV420 preserved losslessly; no E1 image transforms.",
+      "id": "IMG-201",
+      "status": "PASS"
+    },
+    {
+      "evidence_interpretation": "No TI3+ outputs; binaries excluded from Git.",
+      "id": "SCOPE-201",
+      "status": "PASS"
+    },
+    {
+      "evidence_interpretation": "No ground-truth, absolute Bi, causal or physical-coordinate claims.",
+      "id": "CLAIM-201",
+      "status": "PASS"
+    }
+  ],
+  "schema_version": "1.0.0",
+  "scientific_gates": {
+    "G2-SPATIAL": "BLOCKED",
+    "G3": "BLOCKED"
+  },
+  "software_test_success_does_not_satisfy_experimental_contracts": true
+}

@@ -29,3 +29,28 @@ estavam `NOT_EVALUATED`.
 ## Riscos residuais aceitos para planejamento
 
 Nenhum risco experimental foi aceito nesta fase, pois nenhuma operação sobre pixels foi autorizada. O presente documento apenas predefine controles para uma futura execução.
+
+## Evidência da execução autorizada de 17/09/2026
+
+As decisões técnicas propostas são G2-SPATIAL e G3 **BLOCKED**, conforme
+`artifacts/evidence/TI2/terminal-state.json`. O texto de planejamento acima é
+histórico; os seguintes riscos não foram aceitos nem corrigidos retroativamente:
+
+- A máscara de borda excluiu 20/35 centros da grade congelada, deixando até 15
+  candidatos para o mínimo de 12 correspondências. O método não comprovou
+  registro estático nos três instantes; isso não demonstra impossibilidade
+  geométrica. Uma revisão metodológica exige decisão autoral antes de execução.
+- Gravidade, gradiente térmico e crescimento permanecem `NOT_VERIFIED` no
+  referencial dos pixels. Preservar paridade nativa não preenche essa lacuna.
+- Sem transformação aceita, não há ROI comum certificada nem validação
+  independente. Os quartis foram decodificados e verificados por hash, mas
+  permanecem sem análise de pixels.
+- A barra horizontal de 500 µm possui evidência de comprimento raster, mas
+  incerteza de aquisição e escala vertical continuam sem comprovação; não
+  houve conversão de coordenadas físicas.
+- Textos de tempo observados nos frames centrais diferem numericamente de
+  `i × 1,18 s`. Sua semântica exige conciliação com fonte primária pelo autor;
+  a regra aprovada foi preservada, sem reindexar ou selecionar novos frames.
+
+A preservação da fonte, os 30 itens e os limites TI-3+ permanecem controlados.
+Os riscos detalhados e suas evidências estão no relatório de execução.

@@ -24,6 +24,18 @@ resumes work after the operational index-write block; it does not expand the
 scientific scope. G2-SPATIAL and G3 were `NOT_EVALUATED` at that resumption, as
 recorded in the [execution-state snapshot](artifacts/evidence/TI2/execution-state.json).
 
+The authorized pilot has now reached a scientific terminal result:
+**G2-SPATIAL = BLOCKED; G3 = BLOCKED**. Exactly 30 native images were decoded
+and kept outside Git. The frozen correspondence method did not provide enough
+matches at every required estimation instant; no experimental transformation
+or common ROI was certified. Reserved quartiles remain unanalysed. A horizontal
+500 µm bar was measured, but complete physical calibration and orientation
+remain unresolved. This does not demonstrate that registration is impossible.
+See the [execution report](artifacts/evidence/TI2/execution-report.md),
+[registration decision](artifacts/evidence/G2_SPATIAL/registration-report.json)
+and [calibration decision](artifacts/evidence/G3/calibration-report.json).
+Formal closure, any revised method and TI-3 require a new author decision.
+
 ## Implemented outcomes
 
 - canonical vocabulary and source identifiers;
@@ -58,8 +70,10 @@ PYTHONPATH=src python -B scripts/check_ti2_scope.py
 These full-suite commands are not part of the local agent bootstrap task.
 
 The following source-verification command documents the now-closed TI-1
-workflow. TI2-E0 may revalidate the approved hashes only against the exact
-operator-authorized source; the placeholder below grants no path access:
+workflow and must not be run under this TI-2 session. It covers the entire
+manifest, including documents outside the current ZIP-only authorization.
+TI2-E0 instead used the bounded `scripts/run_ti2.py preflight` stage against
+the exact operator-supplied ZIP; the placeholder below grants no path access:
 
 ```bash
 PYTHONPATH=src python -m snbi_fragmentation.custody \
@@ -95,9 +109,13 @@ task, run:
 No further sandbox/AppArmor diagnostic is authorized or needed. A sandbox
 startup failure must never be retried outside the sandbox. Read-only Git
 metadata protection is a separate operational constraint: exact-path staging
-and commits require separate targeted approvals. Push approval is requested
-only after final gate decisions and passing required tests; Draft PR creation
-requires its own approval. Merging the TI-2 PR remains prohibited.
+and commits require separate targeted approvals. The latest operator prompt
+adds completion of E0–E7 to the earlier requirements of final gate decisions,
+passing tests, integrity evidence and reconciled documentation before push.
+E4/E5 are currently blocked, so publication approval has not been requested.
+Draft PR creation requires its own approval. Merging the TI-2 PR remains
+prohibited. The earlier targeted-Git decision is read together with these
+later cumulative publication conditions.
 
 ## Governance
 

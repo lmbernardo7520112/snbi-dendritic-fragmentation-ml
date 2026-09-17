@@ -1,0 +1,143 @@
+{
+  "author_review": "PENDING",
+  "canonical_source_id": "ESM4",
+  "canonical_source_sha256": "9e6be3e78699d3bdd16fa71d56917479d7e16f7418b857ab3925e1115df91ebe",
+  "claim_limit": "A traceable horizontal printed-bar ratio is not full calibration, a valid multimodal ROI, physical orientation, ground truth, or permission for downstream phases.",
+  "combined_uncertainty": null,
+  "condition": "top-down",
+  "coordinate_convention": "top-left pixel center=(0,0); x right; y down",
+  "coordinate_unit": "pixel",
+  "gate_id": "G3",
+  "modalities": [
+    "ESM4",
+    "ESM5",
+    "ESM6"
+  ],
+  "native_reference_dimensions": {
+    "height": 1012,
+    "width": 1278
+  },
+  "physical_coordinate_conversions_performed": 0,
+  "physical_orientation": {
+    "gravity_direction": null,
+    "growth_direction": null,
+    "reason": "Existing G1 metadata identify condition names only; no traceable physical vectors in native pixel coordinates were established.",
+    "status": "NOT_VERIFIED",
+    "thermal_gradient_direction": null
+  },
+  "printed_bar_candidate": {
+    "applicability": "native horizontal pixel distances of this canonical source only; no transfer to unregistered modalities",
+    "bar_length_px": 357,
+    "bar_length_uncertainty_bound_px": 3.0,
+    "eligible_for_coordinate_conversion": false,
+    "endpoint_center_x": [
+      859,
+      1215
+    ],
+    "endpoint_edge_x": [
+      858.5,
+      1215.5
+    ],
+    "estimated_only_from_canonical_source": "ESM4",
+    "estimation_frame_indices": [
+      0,
+      197,
+      394
+    ],
+    "estimation_frame_lengths_px": [
+      357,
+      357,
+      357
+    ],
+    "evidence": "artifacts/evidence/TI2/scale-estimation-audit-v2.json",
+    "evidence_sha256": "ff6e74f8ad53d2db3b5de94c14e00f64cb7a03c2bb1acdc4c78910e87a68dc08",
+    "full_physical_calibration_status": "UNRESOLVED",
+    "horizontal_micrometres_per_pixel": 1.4005602240896358,
+    "horizontal_raster_uncertainty_bound_micrometres_per_pixel": 0.011869154441437768,
+    "horizontal_scale_interval_micrometres_per_pixel": [
+      1.3888888888888888,
+      1.4124293785310735
+    ],
+    "nominal_label_metrology_uncertainty": "UNRESOLVED; no independent acquisition calibration supplied",
+    "nominal_printed_bar_micrometres": 500.0,
+    "orientation_status": "NOT_VERIFIED",
+    "scale_status": "BAR_GEOMETRY_MEASURED",
+    "source_level_author_review": "PENDING",
+    "source_sha256": "9e6be3e78699d3bdd16fa71d56917479d7e16f7418b857ab3925e1115df91ebe",
+    "uncertainty_kind": "conservative endpoint/threshold/row/time bound; not a statistical confidence interval",
+    "vertical_scale_status": "NOT_VERIFIED; horizontal printed bar does not independently prove isotropic physical sampling"
+  },
+  "registration_dependencies": [
+    {
+      "path": "configs/registration/ESM5-to-ESM4.json",
+      "reason": "independent correspondence measurement is BLOCKED",
+      "reference_id": "ESM4",
+      "sha256": "37ad3c01fb22d30d218ec3a7abdc96b3382e11d0e970bd12ed5cfb771d1b53a5",
+      "source_id": "ESM5",
+      "status": "BLOCKED"
+    },
+    {
+      "path": "configs/registration/ESM6-to-ESM4.json",
+      "reason": "independent correspondence measurement is BLOCKED",
+      "reference_id": "ESM4",
+      "sha256": "0d29f5a05064572dc4359a7464b85f18cd914e6102939f399ad9bd1332bf3c6c",
+      "source_id": "ESM6",
+      "status": "BLOCKED"
+    }
+  ],
+  "roi": {
+    "excluded_pixel_count": null,
+    "height": null,
+    "native_return_transforms": null,
+    "reason": "No admissible modality-to-canonical transforms; an all-modalities, all-five-instants common support rectangle cannot be certified. No fallback to full-frame or dimensions-only ROI.",
+    "status": "BLOCKED",
+    "support_fraction": null,
+    "temporal_stability": "NOT_VERIFIED",
+    "width": null,
+    "x": null,
+    "y": null
+  },
+  "scale": {
+    "coordinate_unit": "pixel",
+    "method": null,
+    "micrometres_per_pixel": null,
+    "reason": "The visible nominal 500 micrometre horizontal bar yields a candidate raster ratio only. Nominal-label/acquisition metrology uncertainty and vertical physical sampling are unverified; no full physical calibration or coordinate conversion is certified.",
+    "scale_status": "UNRESOLVED",
+    "source": null,
+    "uncertainty_micrometres_per_pixel": null
+  },
+  "schema_version": "1.0.0",
+  "status": "BLOCKED",
+  "ti3_authorized": false,
+  "uncertainty_budget": {
+    "discretization": {
+      "applies_to": "one native coordinate axis; not a propagated two-point or physical-distance uncertainty",
+      "coverage_factor": 1,
+      "distribution": "rectangular",
+      "half_width_px": 0.5,
+      "method": "Analytical per-axis standard uncertainty for an explicitly assumed uniform quantization error on [-0.5,+0.5] pixel: u=1/sqrt(12). This is a discretization model, not an experimental residual or total uncertainty.",
+      "provenance": "analytical_model",
+      "status": "MEASURED",
+      "unit": "pixel",
+      "value": 0.2886751345948129
+    },
+    "registration": {
+      "reason": "Both native-to-canonical modality registrations lack an admissible fit; no validated registration residual can be propagated.",
+      "status": "UNRESOLVED"
+    },
+    "roi": {
+      "reason": "A canonical ROI has not been certified because transforms, full shared support and physical orientation are unresolved; boundary sensitivity cannot be evaluated.",
+      "status": "UNRESOLVED"
+    },
+    "scale": {
+      "reason": "Only a horizontal printed-bar raster sensitivity bound is available. The nominal-label/acquisition uncertainty and vertical isotropy are not established.",
+      "status": "UNRESOLVED"
+    },
+    "temporal": {
+      "reason": "No admissible registration parameters exist for assessing temporal variation across the five frozen instants. Constant bar lengths in three estimation frames do not establish registration stability.",
+      "status": "UNRESOLVED"
+    }
+  },
+  "uncertainty_budget_schema_status": "PASS",
+  "uncertainty_budget_scientific_status": "BLOCKED"
+}

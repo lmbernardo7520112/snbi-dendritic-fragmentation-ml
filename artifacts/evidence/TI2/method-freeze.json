@@ -1,0 +1,69 @@
+{
+  "affine_projective_nonrigid_fallback": false,
+  "correspondence_config": {
+    "grid_cols": 7,
+    "grid_rows": 5,
+    "max_coarse_translation_px": 48,
+    "max_reverse_error_px": 0.75,
+    "min_coverage_fraction": 0.35,
+    "min_matches": 12,
+    "min_ncc": 0.6,
+    "min_uniqueness": 0.08,
+    "patch_radius": 15,
+    "search_radius": 7
+  },
+  "estimation": {
+    "bottom-up": [
+      0,
+      146,
+      293
+    ],
+    "top-down": [
+      0,
+      197,
+      394
+    ]
+  },
+  "frozen_before_any_pilot_pixel_analysis": true,
+  "hierarchy": [
+    "identity",
+    "border_crop_if_explicitly_audited",
+    "integer_translation",
+    "subpixel_translation",
+    "rigid",
+    "similarity",
+    "affine_only_with_independent_geometric_evidence"
+  ],
+  "insufficient_correspondences": "BLOCKED measurement; never substitute zero residual",
+  "measurement": {
+    "channel": "native Y; no mutation of native planes",
+    "coarse": "FFT phase correlation with Hanning",
+    "complementary": "mutual information 32bins; descriptive, not gate threshold",
+    "features": "Sobel gradient magnitude; mask eroded1px",
+    "local": "masked NCC, quadratic subpixel peak; bidirectional agreement",
+    "mask": "64px measurement rim; ESM3/6 chroma abs(U-128)>12 or abs(V-128)>12, dilated3px; transient metric exclusion, no object detection",
+    "uniqueness": "competitor outside radius2"
+  },
+  "metric_thresholds_px": {
+    "maximum": 3.0,
+    "median": 1.0,
+    "p95": 2.0,
+    "roundtrip": 0.25
+  },
+  "orientation": "native pixel parity distinct from unverified gravity, thermal gradient and growth directions; no inference from condition names",
+  "roi": "largest all-valid axis-aligned rectangle per condition, all15 native supports transformed; report any unverified padding/overlay exclusions separately",
+  "scale": "UNRESOLVED and pixels without sufficient primary evidence",
+  "selection": "first model passing pooled estimation and every estimation frame; frozen matrices before reading validation pixels; no refit after validation",
+  "validation": {
+    "bottom-up": [
+      73,
+      219
+    ],
+    "top-down": [
+      98,
+      295
+    ]
+  },
+  "validation_reuse_for_tuning": false,
+  "version": "ti2-gradient-correspondence-v1"
+}

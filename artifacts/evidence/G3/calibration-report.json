@@ -1,0 +1,100 @@
+{
+  "TI3_EXECUTION_AUTHORIZED": false,
+  "author_review": "PENDING",
+  "blocked_phases": [
+    "TI-3",
+    "TI-4",
+    "TI-5",
+    "TI-6",
+    "TI-7",
+    "TI-8"
+  ],
+  "blocking_reasons": [
+    "All four modality registrations have no admissible fitted matrix; no canonical multimodal shared support can be certified.",
+    "ROI coordinates, extents, temporal stability and native-return transforms remain unresolved.",
+    "Gravity, thermal-gradient and growth directions in pixel coordinates are not verified.",
+    "Full scale metrology uncertainty and vertical physical sampling are unresolved; only a horizontal printed-bar candidate was measured.",
+    "Author visual review is pending."
+  ],
+  "conditions": [
+    {
+      "canonical_source_id": "ESM1",
+      "condition": "bottom-up",
+      "configuration": "configs/calibration/bottom-up.json",
+      "coordinate_unit": "pixel",
+      "printed_bar_candidate_status": "BAR_GEOMETRY_MEASURED",
+      "roi_status": "BLOCKED",
+      "scale_status": "UNRESOLVED",
+      "status": "BLOCKED"
+    },
+    {
+      "canonical_source_id": "ESM4",
+      "condition": "top-down",
+      "configuration": "configs/calibration/top-down.json",
+      "coordinate_unit": "pixel",
+      "printed_bar_candidate_status": "BAR_GEOMETRY_MEASURED",
+      "roi_status": "BLOCKED",
+      "scale_status": "UNRESOLVED",
+      "status": "BLOCKED"
+    }
+  ],
+  "contract_evaluation": [
+    {
+      "contract_id": "ROI-201",
+      "reason": "Cannot establish 100 percent support in all modalities and five instants without admissible transforms.",
+      "status": "BLOCKED"
+    },
+    {
+      "contract_id": "ROI-202",
+      "reason": "Separate condition records exist; no common ROI is imposed. Their ROI validity remains BLOCKED.",
+      "status": "PASS"
+    },
+    {
+      "contract_id": "CAL-201",
+      "reason": "Printed-bar provenance supports a candidate horizontal ratio; full physical calibration remains unresolved and is not used for coordinate conversion.",
+      "status": "PARTIAL"
+    },
+    {
+      "contract_id": "CAL-202",
+      "reason": "Both configurations retain pixel coordinates and null validated micrometres-per-pixel.",
+      "status": "PASS"
+    },
+    {
+      "contract_id": "UNC-201",
+      "reason": "All five uncertainty components have values or explicit reasons; unresolved contributions prevent a scientifically adequate combined uncertainty.",
+      "status": "PARTIAL"
+    },
+    {
+      "contract_id": "CLAIM-201",
+      "reason": "No ground-truth, full-calibration, valid-ROI or downstream-phase claim is made.",
+      "status": "PASS"
+    }
+  ],
+  "coordinate_unit": "pixel",
+  "decision": "BLOCKED",
+  "decision_kind": "technical_result_pending_author_review",
+  "gate_id": "G3",
+  "new_images_created": 0,
+  "new_pixel_reads_for_this_report": 0,
+  "normative_basis": [
+    "docs/protocols/TI2_EXECUTION_PLAN.md",
+    "docs/protocols/TI2_CONTRACT_MATRIX.md",
+    "docs/gates/TI2_GATE_PLAN.md"
+  ],
+  "physical_coordinate_conversions_performed": 0,
+  "printed_bar_evidence": {
+    "path": "artifacts/evidence/TI2/scale-estimation-audit-v2.json",
+    "sampling": "Three estimation frames per canonical source; no validation-quarter pixels accessed for scale measurement.",
+    "scope": "500 micrometre nominal inscription over 357 raster pixels, separately measured for ESM1 and ESM4; candidate only.",
+    "sha256": "ff6e74f8ad53d2db3b5de94c14e00f64cb7a03c2bb1acdc4c78910e87a68dc08"
+  },
+  "schema_version": "1.0.0",
+  "scope": "E5/E6 technical evidence synthesized from existing text records only; no new pixel/source access, labels, ledger, ML dataset, splits, baseline, CNN, training or evaluation.",
+  "stages": {
+    "TI2-E5": "BLOCKED",
+    "TI2-E6": "PARTIAL_BAR_GEOMETRY_ONLY; FULL_CALIBRATION_UNRESOLVED"
+  },
+  "status": "BLOCKED",
+  "ti2_closure_authorized": false,
+  "why_not_partial": "G3 PARTIAL for absent scale requires valid registration and ROI. Neither prerequisite is certified, and physical orientation is unverified."
+}

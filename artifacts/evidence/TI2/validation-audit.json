@@ -1,0 +1,60 @@
+{
+  "frozen_registration_sha256": {
+    "configs/registration/ESM2-to-ESM1.json": "7d33c8cfd949c210f9e7ca33cf61903f9050f4537b2aec5193f15cd5e3f867a9",
+    "configs/registration/ESM3-to-ESM1.json": "cc5303d9810178b957d76699cac9ad2a0a37db228639a82cf6885f0392068ad6",
+    "configs/registration/ESM5-to-ESM4.json": "37ad3c01fb22d30d218ec3a7abdc96b3382e11d0e970bd12ed5cfb771d1b53a5",
+    "configs/registration/ESM6-to-ESM4.json": "0d29f5a05064572dc4359a7464b85f18cd914e6102939f399ad9bd1332bf3c6c"
+  },
+  "method_changed_after_estimation": false,
+  "reason": "REG-201/REG-202 prerequisite unmet; reserved quartile pixels remain unanalysed after lossless decoding.",
+  "refit_performed": false,
+  "results": {
+    "ESM2-to-ESM1": {
+      "reason": "No admissible matrix from all three estimation frames; independent validation cannot be evaluated.",
+      "refit_performed": false,
+      "residual_metrics": null,
+      "status": "BLOCKED",
+      "validation_indices": [
+        73,
+        219
+      ],
+      "validation_pixel_analysis_performed": false
+    },
+    "ESM3-to-ESM1": {
+      "reason": "No admissible matrix from all three estimation frames; independent validation cannot be evaluated.",
+      "refit_performed": false,
+      "residual_metrics": null,
+      "status": "BLOCKED",
+      "validation_indices": [
+        73,
+        219
+      ],
+      "validation_pixel_analysis_performed": false
+    },
+    "ESM5-to-ESM4": {
+      "reason": "No admissible matrix from all three estimation frames; independent validation cannot be evaluated.",
+      "refit_performed": false,
+      "residual_metrics": null,
+      "status": "BLOCKED",
+      "validation_indices": [
+        98,
+        295
+      ],
+      "validation_pixel_analysis_performed": false
+    },
+    "ESM6-to-ESM4": {
+      "reason": "No admissible matrix from all three estimation frames; independent validation cannot be evaluated.",
+      "refit_performed": false,
+      "residual_metrics": null,
+      "status": "BLOCKED",
+      "validation_indices": [
+        98,
+        295
+      ],
+      "validation_pixel_analysis_performed": false
+    }
+  },
+  "stage": "TI2-E4",
+  "status": "BLOCKED",
+  "validation_pixels_accessed_for_analysis": false
+}

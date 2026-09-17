@@ -1,0 +1,22 @@
+{
+  "G2_SPATIAL_EVALUATION_STATE": "BLOCKED",
+  "G3_EVALUATION_STATE": "BLOCKED",
+  "REAL_CODEX_SANDBOX": "PASS",
+  "SDR2A_STATUS": "RESOLVED",
+  "TI2_EXECUTION_STATUS": "BLOCKED_SCIENTIFIC_EVIDENCE",
+  "TI2_FORMAL_CLOSURE": "PENDING_AUTHOR",
+  "TI3_TO_TI8_AUTHORIZED": false,
+  "new_method_or_scope_requires_author_decision": true,
+  "no_operating_system_change": true,
+  "scientific_execution_stopped": true,
+  "stages": {
+    "E0": "PASS",
+    "E1": "PASS",
+    "E2": "PARTIAL; orientation and border interpretation unresolved",
+    "E3": "BLOCKED; correspondence sufficiency failed before class selection",
+    "E4": "BLOCKED_DEPENDENCY; reserved quartiles unanalysed",
+    "E5": "BLOCKED_DEPENDENCY; ROI uncertified",
+    "E6": "PARTIAL; horizontal bar measured, full calibration unresolved",
+    "E7": "COMPLETE; proposed terminal decisions and evidence recorded"
+  }
+}

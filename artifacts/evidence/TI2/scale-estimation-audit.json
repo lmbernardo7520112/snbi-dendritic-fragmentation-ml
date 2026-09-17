@@ -1,0 +1,465 @@
+{
+  "accessed_pairs": [
+    [
+      "ESM1",
+      0
+    ],
+    [
+      "ESM1",
+      146
+    ],
+    [
+      "ESM1",
+      293
+    ],
+    [
+      "ESM4",
+      0
+    ],
+    [
+      "ESM4",
+      197
+    ],
+    [
+      "ESM4",
+      394
+    ]
+  ],
+  "condition_scales": {
+    "ESM1": {
+      "coordinate_unit": "pixel",
+      "reason": "three stable estimation-frame bar measurements required",
+      "scale_status": "UNRESOLVED"
+    },
+    "ESM4": {
+      "coordinate_unit": "pixel",
+      "reason": "three stable estimation-frame bar measurements required",
+      "scale_status": "UNRESOLVED"
+    }
+  },
+  "implementation_sha256": "909552cc6ea8f2d6c36d1b9af54c99bcda1841ad20fa9cd8429a9381472881d2",
+  "limitations": [
+    "No gravity, thermal-gradient or growth vector inferred.",
+    "No physical scale propagated to ESM2/3/5/6.",
+    "Raster sensitivity bound excludes unknown nominal-label and acquisition metrology uncertainty.",
+    "This evidence alone grants neither registration nor G3 PASS."
+  ],
+  "measurements": [
+    {
+      "frame_index": 0,
+      "hash_authentication": "PASS",
+      "image_sha256": "8cf316b044c9da94f79715e5a81d23a771a7a236e0e16fb93a227639cdb36338",
+      "native_dimensions": [
+        1278,
+        1018
+      ],
+      "native_plane": "Y",
+      "reason": "insufficient stable threshold evidence",
+      "rectangle_xyxy_exclusive": [
+        878,
+        878,
+        1270,
+        1010
+      ],
+      "role": "estimation",
+      "source_id": "ESM1",
+      "source_sha256": "4d07ee422e97661b1ee0ae681b7617fd7971476015603f3039c20ddf8b0c5c6d",
+      "status": "UNRESOLVED",
+      "threshold_trials": [
+        {
+          "candidate_groups": 0,
+          "reason": "no unique consecutive multi-row bar",
+          "status": "UNRESOLVED",
+          "threshold": 16
+        },
+        {
+          "reason": "no eligible horizontal run",
+          "status": "UNRESOLVED",
+          "threshold": 20
+        },
+        {
+          "reason": "no eligible horizontal run",
+          "status": "UNRESOLVED",
+          "threshold": 24
+        },
+        {
+          "reason": "no eligible horizontal run",
+          "status": "UNRESOLVED",
+          "threshold": 28
+        },
+        {
+          "reason": "no eligible horizontal run",
+          "status": "UNRESOLVED",
+          "threshold": 32
+        },
+        {
+          "reason": "no eligible horizontal run",
+          "status": "UNRESOLVED",
+          "threshold": 36
+        },
+        {
+          "reason": "no eligible horizontal run",
+          "status": "UNRESOLVED",
+          "threshold": 40
+        }
+      ]
+    },
+    {
+      "frame_index": 146,
+      "hash_authentication": "PASS",
+      "image_sha256": "eccb91c1d66f500d892dfe1c204c494cfc0d1d3542174d5ae1efd921bff034e0",
+      "native_dimensions": [
+        1278,
+        1018
+      ],
+      "native_plane": "Y",
+      "reason": "insufficient stable threshold evidence",
+      "rectangle_xyxy_exclusive": [
+        878,
+        878,
+        1270,
+        1010
+      ],
+      "role": "estimation",
+      "source_id": "ESM1",
+      "source_sha256": "4d07ee422e97661b1ee0ae681b7617fd7971476015603f3039c20ddf8b0c5c6d",
+      "status": "UNRESOLVED",
+      "threshold_trials": [
+        {
+          "candidate_groups": 0,
+          "reason": "no unique consecutive multi-row bar",
+          "status": "UNRESOLVED",
+          "threshold": 16
+        },
+        {
+          "candidate_groups": 0,
+          "reason": "no unique consecutive multi-row bar",
+          "status": "UNRESOLVED",
+          "threshold": 20
+        },
+        {
+          "candidate_groups": 0,
+          "reason": "no unique consecutive multi-row bar",
+          "status": "UNRESOLVED",
+          "threshold": 24
+        },
+        {
+          "reason": "no eligible horizontal run",
+          "status": "UNRESOLVED",
+          "threshold": 28
+        },
+        {
+          "reason": "no eligible horizontal run",
+          "status": "UNRESOLVED",
+          "threshold": 32
+        },
+        {
+          "reason": "no eligible horizontal run",
+          "status": "UNRESOLVED",
+          "threshold": 36
+        },
+        {
+          "reason": "no eligible horizontal run",
+          "status": "UNRESOLVED",
+          "threshold": 40
+        }
+      ]
+    },
+    {
+      "frame_index": 293,
+      "hash_authentication": "PASS",
+      "image_sha256": "384a0297024fda34b6b2a5a87945297315e27efffdde47c9a3a67a6483fc1e13",
+      "native_dimensions": [
+        1278,
+        1018
+      ],
+      "native_plane": "Y",
+      "reason": "insufficient stable threshold evidence",
+      "rectangle_xyxy_exclusive": [
+        878,
+        878,
+        1270,
+        1010
+      ],
+      "role": "estimation",
+      "source_id": "ESM1",
+      "source_sha256": "4d07ee422e97661b1ee0ae681b7617fd7971476015603f3039c20ddf8b0c5c6d",
+      "status": "UNRESOLVED",
+      "threshold_trials": [
+        {
+          "candidate_groups": 0,
+          "reason": "no unique consecutive multi-row bar",
+          "status": "UNRESOLVED",
+          "threshold": 16
+        },
+        {
+          "candidate_groups": 0,
+          "reason": "no unique consecutive multi-row bar",
+          "status": "UNRESOLVED",
+          "threshold": 20
+        },
+        {
+          "reason": "no eligible horizontal run",
+          "status": "UNRESOLVED",
+          "threshold": 24
+        },
+        {
+          "reason": "no eligible horizontal run",
+          "status": "UNRESOLVED",
+          "threshold": 28
+        },
+        {
+          "reason": "no eligible horizontal run",
+          "status": "UNRESOLVED",
+          "threshold": 32
+        },
+        {
+          "reason": "no eligible horizontal run",
+          "status": "UNRESOLVED",
+          "threshold": 36
+        },
+        {
+          "reason": "no eligible horizontal run",
+          "status": "UNRESOLVED",
+          "threshold": 40
+        }
+      ]
+    },
+    {
+      "frame_index": 0,
+      "hash_authentication": "PASS",
+      "image_sha256": "f9c9f9fb58289409f732aadb777adad48e1a626e055b17f2cde925ab54c1e5ca",
+      "native_dimensions": [
+        1278,
+        1012
+      ],
+      "native_plane": "Y",
+      "reason": "insufficient stable threshold evidence",
+      "rectangle_xyxy_exclusive": [
+        878,
+        872,
+        1270,
+        1004
+      ],
+      "role": "estimation",
+      "source_id": "ESM4",
+      "source_sha256": "9e6be3e78699d3bdd16fa71d56917479d7e16f7418b857ab3925e1115df91ebe",
+      "status": "UNRESOLVED",
+      "threshold_trials": [
+        {
+          "endpoints_center_x": [
+            891,
+            1215
+          ],
+          "length_px": 325,
+          "row_lengths_px": [
+            325,
+            325
+          ],
+          "rows": [
+            916,
+            917
+          ],
+          "status": "MEASURED",
+          "threshold": 16
+        },
+        {
+          "candidate_groups": 0,
+          "reason": "no unique consecutive multi-row bar",
+          "status": "UNRESOLVED",
+          "threshold": 20
+        },
+        {
+          "reason": "no eligible horizontal run",
+          "status": "UNRESOLVED",
+          "threshold": 24
+        },
+        {
+          "reason": "no eligible horizontal run",
+          "status": "UNRESOLVED",
+          "threshold": 28
+        },
+        {
+          "reason": "no eligible horizontal run",
+          "status": "UNRESOLVED",
+          "threshold": 32
+        },
+        {
+          "reason": "no eligible horizontal run",
+          "status": "UNRESOLVED",
+          "threshold": 36
+        },
+        {
+          "reason": "no eligible horizontal run",
+          "status": "UNRESOLVED",
+          "threshold": 40
+        }
+      ]
+    },
+    {
+      "frame_index": 197,
+      "hash_authentication": "PASS",
+      "image_sha256": "0446ff48d035f3f548d93253fbd9eac14536de0aeb477485b87b17dd647e8a57",
+      "native_dimensions": [
+        1278,
+        1012
+      ],
+      "native_plane": "Y",
+      "reason": "insufficient stable threshold evidence",
+      "rectangle_xyxy_exclusive": [
+        878,
+        872,
+        1270,
+        1004
+      ],
+      "role": "estimation",
+      "source_id": "ESM4",
+      "source_sha256": "9e6be3e78699d3bdd16fa71d56917479d7e16f7418b857ab3925e1115df91ebe",
+      "status": "UNRESOLVED",
+      "threshold_trials": [
+        {
+          "candidate_groups": 0,
+          "reason": "no unique consecutive multi-row bar",
+          "status": "UNRESOLVED",
+          "threshold": 16
+        },
+        {
+          "candidate_groups": 0,
+          "reason": "no unique consecutive multi-row bar",
+          "status": "UNRESOLVED",
+          "threshold": 20
+        },
+        {
+          "reason": "no eligible horizontal run",
+          "status": "UNRESOLVED",
+          "threshold": 24
+        },
+        {
+          "reason": "no eligible horizontal run",
+          "status": "UNRESOLVED",
+          "threshold": 28
+        },
+        {
+          "reason": "no eligible horizontal run",
+          "status": "UNRESOLVED",
+          "threshold": 32
+        },
+        {
+          "reason": "no eligible horizontal run",
+          "status": "UNRESOLVED",
+          "threshold": 36
+        },
+        {
+          "reason": "no eligible horizontal run",
+          "status": "UNRESOLVED",
+          "threshold": 40
+        }
+      ]
+    },
+    {
+      "frame_index": 394,
+      "hash_authentication": "PASS",
+      "image_sha256": "fab7bacbb1198df4d2440362c6135452a7b3b87497455c6c6234261fad3c1422",
+      "native_dimensions": [
+        1278,
+        1012
+      ],
+      "native_plane": "Y",
+      "reason": "insufficient stable threshold evidence",
+      "rectangle_xyxy_exclusive": [
+        878,
+        872,
+        1270,
+        1004
+      ],
+      "role": "estimation",
+      "source_id": "ESM4",
+      "source_sha256": "9e6be3e78699d3bdd16fa71d56917479d7e16f7418b857ab3925e1115df91ebe",
+      "status": "UNRESOLVED",
+      "threshold_trials": [
+        {
+          "candidate_groups": 0,
+          "reason": "no unique consecutive multi-row bar",
+          "status": "UNRESOLVED",
+          "threshold": 16
+        },
+        {
+          "candidate_groups": 0,
+          "reason": "no unique consecutive multi-row bar",
+          "status": "UNRESOLVED",
+          "threshold": 20
+        },
+        {
+          "candidate_groups": 0,
+          "reason": "no unique consecutive multi-row bar",
+          "status": "UNRESOLVED",
+          "threshold": 24
+        },
+        {
+          "reason": "no eligible horizontal run",
+          "status": "UNRESOLVED",
+          "threshold": 28
+        },
+        {
+          "reason": "no eligible horizontal run",
+          "status": "UNRESOLVED",
+          "threshold": 32
+        },
+        {
+          "reason": "no eligible horizontal run",
+          "status": "UNRESOLVED",
+          "threshold": 36
+        },
+        {
+          "reason": "no eligible horizontal run",
+          "status": "UNRESOLVED",
+          "threshold": 40
+        }
+      ]
+    }
+  ],
+  "method_config_frozen_before_first_pixel_read": {
+    "corner_rectangle": "x=[width-400,width-8), y=[height-140,height-8)",
+    "endpoint_raster_bound_px": 1.0,
+    "length_convention": "outer edges at first_center-0.5 and last_center+0.5; inclusive raster width",
+    "maximum_run_px": 350,
+    "method_version": "native-luma-horizontal-scale-bar-v1",
+    "minimum_consecutive_rows": 2,
+    "minimum_run_px": 80,
+    "minimum_successful_thresholds": 3,
+    "nominal_printed_bar_micrometres": 500.0,
+    "row_length_tolerance_px": 2,
+    "thresholds_inclusive": [
+      16,
+      20,
+      24,
+      28,
+      32,
+      36,
+      40
+    ]
+  },
+  "method_config_sha256": "6d3cf7182a5d287922ec6ea2af5b7f9446472d6acc5e31f904d820e81d051318",
+  "new_images_created": 0,
+  "pilot_manifest_sha256": "278c38ba507d8afe6d21936872e1e17831670e53c23955c392686a9e9e5a5fa3",
+  "printed_label_observation": {
+    "author_visual_review": "NOT_VERIFIED",
+    "images": [
+      "ESM1:146",
+      "ESM4:197"
+    ],
+    "observed_by": "supervising Codex agent visual inspection of canonical central pilot images",
+    "scope": "nominal printed horizontal scale bar; no microstructure inference",
+    "text": "500 micrometres"
+  },
+  "schema_version": "1.0.0",
+  "stage": "TI2-E6 estimation-only printed-bar audit",
+  "tests": {
+    "GREEN_exit_code": 0,
+    "GREEN_tests": 5,
+    "RED_basis": "test module import failed before ti2_calibration implementation existed",
+    "RED_exit_code": 1,
+    "command": "PYTHONPATH=src /usr/bin/python3 -B -m unittest -v tests/test_ti2_calibration.py"
+  },
+  "validation_quartiles_accessed": false
+}
