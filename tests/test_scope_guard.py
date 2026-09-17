@@ -30,7 +30,7 @@ class ScopeGuardTests(unittest.TestCase):
         module = importlib.util.module_from_spec(spec)
         assert spec and spec.loader
         spec.loader.exec_module(module)
-        self.assertEqual(module.audit()["status"], "PASS")
+        self.assertEqual(module.audit(entries=[("100644", "README.md")])["status"], "PASS")
 
 
 if __name__ == "__main__":

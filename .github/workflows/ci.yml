@@ -12,12 +12,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Enforce tracked-data guard
+        run: python3 scripts/check_repository_data.py
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
           cache: ""
       - name: Compile source
         run: python -m compileall -q src tests scripts
+      - name: Validate governed local bootstrap
+        run: python scripts/check_local_bootstrap.py
       - name: Validate canonical manifest
         run: PYTHONPATH=src python -m snbi_fragmentation.custody validate configs/sources/source_manifest.json
       - name: Validate physical-time rule

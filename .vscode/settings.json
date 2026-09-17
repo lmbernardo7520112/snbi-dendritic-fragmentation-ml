@@ -1,0 +1,35 @@
+{
+  "python.defaultInterpreterPath": "/usr/bin/python3",
+  "python.terminal.activateEnvironment": false,
+  "terminal.integrated.cwd": "${workspaceFolder}",
+  "git.autofetch": false,
+  "git.confirmSync": true,
+  "git.enableSmartCommit": false,
+  "git.allowForcePush": false,
+  "files.watcherExclude": {
+    "**/data/raw/**": true,
+    "**/data/interim/**": true,
+    "**/data/processed/**": true,
+    "**/data/derived/**": true,
+    "**/datasets/**": true,
+    "**/labels/**": true,
+    "**/splits/**": true,
+    "**/models/**": true,
+    "**/checkpoints/**": true,
+    "**/frames/**": true,
+    "**/runs/**": true
+  },
+  "search.exclude": {
+    "**/data/raw/**": true,
+    "**/data/interim/**": true,
+    "**/data/processed/**": true,
+    "**/data/derived/**": true,
+    "**/datasets/**": true,
+    "**/labels/**": true,
+    "**/splits/**": true,
+    "**/models/**": true,
+    "**/checkpoints/**": true,
+    "**/frames/**": true,
+    "**/runs/**": true
+  }
+}

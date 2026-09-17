@@ -30,9 +30,11 @@ models.
 - metadata-level correspondence checks for both three-modality groups;
 - evidence bundles for the proposed G1 and G2-TEMP decisions.
 
-## Local verification
+## Clean-checkout verification
 
-Python 3.12 is required. The test suite has no third-party runtime dependency.
+Python 3.12 is required. CI runs the complete legacy regression suite only in
+a clean checkout known not to contain experimental data. The suite has no
+third-party runtime dependency.
 
 ```bash
 make test
@@ -40,7 +42,11 @@ make validate-manifest
 PYTHONPATH=src python scripts/check_ti1_scope.py
 ```
 
-To verify locally held source files without copying or extracting them:
+These full-suite commands are not part of the local agent bootstrap task.
+
+The following source-verification command documents the now-closed TI-1
+workflow. **It is not authorized in the current bootstrap and must not be run
+without a new explicit authorization:**
 
 ```bash
 PYTHONPATH=src python -m snbi_fragmentation.custody \
@@ -51,7 +57,8 @@ PYTHONPATH=src python -m snbi_fragmentation.custody \
 The raw videos and documents are deliberately absent from Git. See
 [`data/README.md`](data/README.md) for the custody policy.
 
-An authorized local TI-1 audit can be executed with:
+The following audit command is likewise retained only as historical TI-1
+documentation and is not currently authorized:
 
 ```bash
 PYTHONPATH=src python scripts/run_ti1_audit.py \
@@ -61,9 +68,31 @@ PYTHONPATH=src python scripts/run_ti1_audit.py \
 This command reads the MP4 members directly from the ZIP and writes metadata
 and gate evidence only; it does not extract frames.
 
+## Governed local VS Code bootstrap
+
+Local agent work is governed by [`AGENTS.md`](AGENTS.md). Before any local
+task, run:
+
+```bash
+/usr/bin/python3 -B scripts/check_repository_data.py
+/usr/bin/python3 -B scripts/check_local_bootstrap.py
+/usr/bin/python3 -B scripts/check_local_environment.py
+```
+
+The environment diagnostic is read-only and does not run the optional
+`bwrap` capability probe unless `--probe-bwrap` is supplied explicitly. That
+probe does not test the complete Codex/seccomp sandbox and cannot authorize
+writes. Codex write readiness remains blocked until a real sandboxed Codex
+command succeeds and the author separately authorizes workspace writes. A
+sandbox failure must never be retried outside the sandbox.
+
 ## Governance
 
 The approved scientific protocol controls the technical implementation. Any
 change to the task, label semantics, physical-time rule, split policy,
 endpoints, or scientific claims requires formal change control. See
 [`docs/protocols/TI1_EXECUTION_SPEC.md`](docs/protocols/TI1_EXECUTION_SPEC.md).
+The approved but not executable TI-2 plan is documented in
+[`docs/protocols/TI2_EXECUTION_PLAN.md`](docs/protocols/TI2_EXECUTION_PLAN.md).
+The bootstrap decision is separated into static conformance and local sandbox
+readiness in [`docs/gates/LOCAL_BOOTSTRAP.md`](docs/gates/LOCAL_BOOTSTRAP.md).

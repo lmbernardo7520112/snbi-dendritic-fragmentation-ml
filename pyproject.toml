@@ -6,5 +6,7 @@ requires-python = ">=3.12,<3.13"
 dependencies = []
 
 [tool.snbi]
-authorized_phase = "TI-1"
-blocked_phases = ["TI-2", "TI-3", "TI-4", "TI-5", "TI-6", "TI-7", "TI-8"]
+lifecycle_state = "TI-1-closed"
+authorized_activity = "local-vscode-bootstrap"
+ti2_execution_authorized = false
+blocked_phases = ["TI-2-execution", "TI-3", "TI-4", "TI-5", "TI-6", "TI-7", "TI-8"]
