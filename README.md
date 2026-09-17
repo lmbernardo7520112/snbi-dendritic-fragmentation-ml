@@ -13,9 +13,12 @@ formally complete. G1 and G2-TEMP were approved by the author. LB0 is **PASS**
 and SDR-2-A is **RESOLVED** after the successful real Codex sandbox smoke test.
 The author accepted TI2-CLOSEOUT-1 as **PASS**. The sole canonical active state
 is `pyproject.toml [tool.snbi]`: **NONE_AWAITING_AUTHOR_DECISION**, with scientific
-execution permissions false. The [PR6 remediation decision](docs/decisions/AUTHORIZATION-TI2-PR6-REMEDIATION-1-2026-09-17.md)
+execution permissions false. The [PR6 remediation decision](docs/decisions/AUTHORIZATION-TI2-PR6-REMEDIATION-2-2026-09-17.md)
 authorizes its bounded code/test/documentary correction, one approved commit,
 push, new-SHA CI verification and Draft PR body update only.
+The author partially accepted REMEDIATION-1; REMEDIATION-2 closes the three
+remaining audited gaps in the LB0 document, empirical uncertainty validation
+and direct experimental I/O guards. Its operational authority is single-use.
 Ordinary writes remain inside the repository and default sandbox on
 `feat/ti2-registration-calibration`. TI-2R, further pixel access and new
 scientific analysis are prohibited, as are TI-3 through TI-8, labels, ledger,
@@ -35,6 +38,8 @@ TRANSFORM_EXISTENCE = UNDETERMINED
 G3 = BLOCKED_DEPENDENCY_G2
 E7 = PASS_DOCUMENTARY
 TI3_PLUS_AUTHORIZED = false
+CODEX_LOCAL_WRITE_READINESS = BLOCKED_AWAITING_AUTHOR_DECISION
+MERGE_AUTHORIZED = false
 ```
 
 The original execution result is preserved at
@@ -117,7 +122,9 @@ PYTHONPATH=src /usr/bin/python3 -S -B scripts/check_ti2_scope.py
 The local temporary root must be the real, ignored `.bootstrap-test-tmp/`
 directory inside this repository; each test creates its own controlled subtree.
 `-S` keeps the five optional matching tests out of the local dependency-free
-profile. Their mandatory execution belongs only to the separate pinned CI job.
+profile. Their mandatory execution is verified in the separate pinned CI job;
+REMEDIATION-2 also permits their local synthetic execution with dependencies
+already available, without installation.
 These full-suite commands are not part of the local agent bootstrap task.
 
 The following source-verification command documents the now-closed TI-1
@@ -168,6 +175,12 @@ CI jobs and the checksum step must succeed; the PR stays open, draft and
 unmerged. Guard PASS reports coherent policy while scientific readiness is
 BLOCKED. Missing, unknown, conflicting or truthy noncanonical TOML authority
 fails closed before source-path access; historical text grants no permission.
+Public experimental I/O APIs share the same package authority and deny before
+converting or opening a supplied path. Current LOCAL_BOOTSTRAP and TI2_GATE_PLAN
+documents each contain one parsed normative block matching the canonical TOML;
+explicit historical blocks cannot supply permission. TI-2/TI-2R/TI-3–TI-8 are
+all explicitly blocked. The old branch/pilot aliases exist only as renamed
+historical metadata under `tool.snbi_history.ti2_e0_e7`.
 
 ## Governance
 

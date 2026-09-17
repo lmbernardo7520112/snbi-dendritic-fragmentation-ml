@@ -6,7 +6,7 @@ from pathlib import Path
 import unittest
 from unittest.mock import patch
 
-from scripts import ti2_authority
+from snbi_fragmentation import ti2_authority
 
 
 ROOT = Path(__file__).resolve().parents[1]

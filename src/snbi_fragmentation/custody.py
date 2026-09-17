@@ -13,6 +13,7 @@ from pathlib import Path, PurePosixPath
 from typing import BinaryIO, Iterable
 
 from .domain import Condition, EXPECTED_ESM_IDS, Modality, SourceKind, StorageKind
+from .ti2_authority import require_scientific_authority
 
 SHA256_RE = re.compile(r"^[0-9a-f]{64}$")
 
@@ -206,6 +207,7 @@ def _verify_container(container: dict, data_root: Path) -> VerificationResult:
 
 
 def verify_sources(manifest: dict, data_root: Path) -> dict:
+    require_scientific_authority()
     validate_manifest(manifest)
     containers = {x["container_id"]: x for x in manifest["containers"]}
     container_results = [
@@ -248,7 +250,7 @@ def build_parser() -> argparse.ArgumentParser:
     return parser
 
 
-def main(argv: Iterable[str] | None = None) -> int:
+def _main(argv: Iterable[str] | None = None) -> int:
     args = build_parser().parse_args(argv)
     try:
         manifest = load_manifest(args.manifest)
@@ -261,6 +263,20 @@ def main(argv: Iterable[str] | None = None) -> int:
     except ManifestError as exc:
         sys.stderr.write(f"manifest error: {exc}\n")
         return 2
+
+
+def verify_main(argv: Iterable[str] | None = None) -> int:
+    """Deny scientific verification before parsing a supplied path."""
+    require_scientific_authority()
+    return _main(argv)
+
+
+def main(argv: Iterable[str] | None = None) -> int:
+    """Route textual validation separately; never parse verification paths here."""
+    arguments = list(sys.argv[1:] if argv is None else argv)
+    if arguments and type(arguments[0]) is str and arguments[0] == "validate":
+        return _main(arguments)
+    return verify_main(arguments)
 
 
 if __name__ == "__main__":

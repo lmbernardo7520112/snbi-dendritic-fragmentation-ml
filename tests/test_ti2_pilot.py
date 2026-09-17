@@ -88,15 +88,19 @@ class PilotContracts(unittest.TestCase):
     def test_hashing_does_not_change_stream_bytes(self):
         stream = io.BytesIO(b'synthetic custody fixture')
         original = stream.getvalue()
-        digest, size = pilot.hash_stream(stream)
+        with patch.object(pilot, 'require_scientific_authority') as guard:
+            digest, size = pilot.hash_stream(stream)
+        guard.assert_called_once_with()
         self.assertEqual(stream.getvalue(), original)
         self.assertEqual(size, len(original))
         self.assertEqual(len(digest), 64)
 
     def test_readonly_flags_reject_source_symlink(self):
-        with patch.object(pilot.os, 'open', side_effect=OSError('refused')) as opened:
+        with patch.object(pilot, 'require_scientific_authority') as guard, \
+             patch.object(pilot.os, 'open', side_effect=OSError('refused')) as opened:
             with self.assertRaises(OSError):
                 pilot.open_readonly('synthetic.zip')
+        guard.assert_called_once_with()
         flags = opened.call_args.args[1]
         self.assertEqual(flags & pilot.os.O_ACCMODE, pilot.os.O_RDONLY)
         self.assertTrue(flags & pilot.os.O_NOFOLLOW)

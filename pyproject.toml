@@ -12,7 +12,12 @@ current_authorized_activity = "NONE_AWAITING_AUTHOR_DECISION"
 ti2_execution_authorized = false
 ti2r_authorized = false
 ti3_plus_authorized = false
-authorized_branch = "feat/ti2-registration-calibration"
+codex_local_write_readiness = "BLOCKED_AWAITING_AUTHOR_DECISION"
+merge_authorized = false
 write_boundary = "repository-only-default-sandbox"
-pilot_image_limit = 30
-blocked_phases = ["TI-3", "TI-4", "TI-5", "TI-6", "TI-7", "TI-8"]
+blocked_phases = ["TI-2", "TI-2R", "TI-3", "TI-4", "TI-5", "TI-6", "TI-7", "TI-8"]
+
+[tool.snbi_history.ti2_e0_e7]
+status = "HISTORICAL_CONSUMED_NON_AUTHORIZING"
+execution_branch = "feat/ti2-registration-calibration"
+frozen_pilot_image_count = 30

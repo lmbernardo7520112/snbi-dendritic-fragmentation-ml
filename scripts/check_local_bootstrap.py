@@ -20,6 +20,8 @@ try:
 except ModuleNotFoundError:
     from scripts.ti2_authority import audit_authority
 
+from snbi_fragmentation.gate_authority import audit_current_gates
+
 ROOT = Path(__file__).resolve().parents[1]
 REQUIRED_AGENT_MARKERS = (
     "TI2_EXECUTION=TERMINAL_BLOCKED_CLOSED",
@@ -149,6 +151,8 @@ def validate_vscode(settings: dict, tasks: dict) -> list[str]:
 def validate(entries: list[tuple[str, str]] | None = None) -> dict:
     authority = audit_authority(ROOT)
     violations: list[str] = list(authority["violations"])
+    gate_report = audit_current_gates(ROOT)
+    violations.extend(gate_report["violations"])
     agents = (ROOT / "AGENTS.md").read_text(encoding="utf-8")
     for marker in REQUIRED_AGENT_MARKERS:
         if marker not in agents:
@@ -173,6 +177,9 @@ def validate(entries: list[tuple[str, str]] | None = None) -> dict:
         "current_authorized_activity": authority["current_authorized_activity"],
         "scientific_readiness": "BLOCKED",
         "codex_write_readiness": "BLOCKED_AWAITING_AUTHOR_DECISION" if not violations else "BLOCKED",
+        "codex_local_write_readiness": authority["codex_local_write_readiness"],
+        "merge_authorized": False,
+        "current_gate_documents": gate_report,
         "readiness_basis": "canonical closed authority and static safeguards; audit PASS is not execution permission",
     }
 
@@ -196,6 +203,8 @@ def main() -> int:
             "current_authorized_activity": "BLOCKED_INVALID_AUTHORITY",
             "scientific_readiness": "BLOCKED",
             "codex_write_readiness": "BLOCKED",
+            "codex_local_write_readiness": "BLOCKED_AWAITING_AUTHOR_DECISION",
+            "merge_authorized": False,
         }
     print(json.dumps(report, indent=2, sort_keys=True))
     return 0 if report["status"] == "PASS" else 1

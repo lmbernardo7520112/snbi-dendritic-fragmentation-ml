@@ -13,9 +13,11 @@ from snbi_fragmentation.correspondence import audit_correspondence
 from snbi_fragmentation.custody import load_manifest, verify_sources
 from snbi_fragmentation.metadata import ffprobe_version, metadata_as_dict, probe_zip_member
 from snbi_fragmentation.timebase import load_time_rule
+from snbi_fragmentation.ti2_authority import require_scientific_authority
 
 
 def write_json(path: Path, payload: dict) -> None:
+    require_scientific_authority()
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
 
@@ -31,6 +33,7 @@ def build_parser() -> argparse.ArgumentParser:
 
 
 def main() -> int:
+    require_scientific_authority()
     args = build_parser().parse_args()
     manifest = load_manifest(args.manifest)
     custody = verify_sources(manifest, args.data_root)

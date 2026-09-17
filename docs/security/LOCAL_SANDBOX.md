@@ -92,7 +92,9 @@ elevation or change system state.
 | any step requires privilege, installation or host change | `BLOCKED` |
 
 No diagnostic outcome authorizes remediation. The successful real Codex smoke
-test and the separate author decision now establish bounded write readiness.
+test established historical startup capability. Current canonical write
+readiness remains BLOCKED_AWAITING_AUTHOR_DECISION; the new single-use author
+instruction permits only its bounded REMEDIATION-2 transaction.
 
 ## Git metadata protection and resumption
 
@@ -100,7 +102,7 @@ Read-only `.git` protection is expected under the standard sandbox. The observed
 `.git/index.lock: Read-only file system` error stopped Git staging; it did not
 establish a bwrap/namespace/seccomp startup failure or reopen SDR-2-A.
 
-The [remediation decision](../decisions/AUTHORIZATION-TI2-PR6-REMEDIATION-1-2026-09-17.md)
+The [remediation decision](../decisions/AUTHORIZATION-TI2-PR6-REMEDIATION-2-2026-09-17.md)
 authorizes one bounded implementation/checkpoint/publication transaction only.
 All code and document edits remain in the default sandbox; exact-path staging,
 the single commit, fast-forward push and PR body update require separate

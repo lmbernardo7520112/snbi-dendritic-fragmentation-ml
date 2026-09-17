@@ -361,10 +361,13 @@ def validate_uncertainty_budget(budget: Mapping[str, Mapping[str, Any]]) -> None
                     raise GeometryContractError("UNC-201: modelled contribution needs an analytical assumption")
                 _text(item.get("provenance"), f"UNC-201: {name} provenance")
                 _text(item.get("analytical_assumption"), f"UNC-201: {name} analytical assumption")
-            elif (item.get("evidence_kind") == "ANALYTICAL_ASSUMPTION"
-                  or item.get("provenance") == "analytical_model"
-                  or "analytical_assumption" in item):
-                raise GeometryContractError("UNC-201: an analytical assumption is MODELLED, not MEASURED")
+            else:
+                if item.get("evidence_kind") != "EMPIRICAL_MEASUREMENT":
+                    raise GeometryContractError("UNC-201: measured contribution needs empirical measurement evidence")
+                provenance = _text(item.get("provenance"), f"UNC-201: {name} empirical provenance")
+                if (provenance.strip().casefold() in ("analytical_model", "analytical_assumption")
+                        or "analytical_assumption" in item):
+                    raise GeometryContractError("UNC-201: an analytical assumption is MODELLED, not MEASURED")
         elif status in ("UNRESOLVED", "NOT_APPLICABLE"):
             _text(item.get("reason"), f"UNC-201: {name} {status} justification")
         else:

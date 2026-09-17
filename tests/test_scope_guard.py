@@ -6,7 +6,7 @@ from pathlib import Path
 from unittest.mock import patch
 
 from scripts import check_ti2_scope as scope
-from scripts import ti2_authority
+from snbi_fragmentation import ti2_authority
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -61,7 +61,7 @@ class ScopeGuardTests(unittest.TestCase):
         self.assertFalse(report["ti2_execution_authorized"])
         self.assertEqual(report["current_authorized_activity"], "NONE_AWAITING_AUTHOR_DECISION")
         self.assertEqual(report["scientific_readiness"], "BLOCKED")
-        self.assertEqual(report["blocked_phases"], [f"TI-{n}" for n in range(3, 9)])
+        self.assertEqual(report["blocked_phases"], ["TI-2", "TI-2R", *[f"TI-{n}" for n in range(3, 9)]])
 
     def test_invalid_canonical_authority_stops_before_source_inspection(self):
         with patch.object(ti2_authority, "load_governance", side_effect=ValueError), \
@@ -69,6 +69,16 @@ class ScopeGuardTests(unittest.TestCase):
             report = scope.audit(entries=[("100644", "scripts/run_ti2.py")])
         self.assertEqual(report["status"], "BLOCKED")
         self.assertIsNone(report["authorized_phase"])
+        reader.assert_not_called()
+
+    def test_gate_contradiction_blocks_before_source_inspection(self):
+        with patch.object(scope, "audit_current_gates", return_value={
+            "status": "BLOCKED", "violations": ["synthetic gate contradiction"],
+            "document_count": 2,
+        }), patch.object(scope, "read_source") as reader:
+            report = scope.audit(entries=[("100644", "scripts/run_ti2.py")])
+        self.assertEqual(report["status"], "BLOCKED")
+        self.assertFalse(report["ti2_execution_authorized"])
         reader.assert_not_called()
 
 

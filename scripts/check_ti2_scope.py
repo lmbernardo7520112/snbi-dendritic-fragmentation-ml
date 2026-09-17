@@ -24,6 +24,8 @@ try:
 except ModuleNotFoundError:
     from scripts.ti2_authority import audit_authority
 
+from snbi_fragmentation.gate_authority import audit_current_gates
+
 ROOT = Path(__file__).resolve().parents[1]
 BLOCKED_COMPONENTS = frozenset({
     "annotation", "annotations", "label", "labels", "ledger", "dataset", "datasets",
@@ -84,6 +86,8 @@ def read_source(relative: str) -> str:
 def audit(entries: list[tuple[str, str]] | None = None) -> dict:
     authority = audit_authority(ROOT)
     violations: list[str] = list(authority["violations"])
+    gate_report = audit_current_gates(ROOT)
+    violations.extend(gate_report["violations"])
     try:
         inventory = tracked_entries() if entries is None else entries
         data_report = audit_entries(inventory)
@@ -113,7 +117,10 @@ def audit(entries: list[tuple[str, str]] | None = None) -> dict:
         "ti2r_authorized": False,
         "ti3_plus_authorized": False,
         "scientific_readiness": "BLOCKED",
-        "blocked_phases": [f"TI-{phase}" for phase in range(3, 9)],
+        "blocked_phases": authority["blocked_phases"],
+        "codex_local_write_readiness": authority["codex_local_write_readiness"],
+        "merge_authorized": False,
+        "current_gate_documents": gate_report,
         "status": "PASS" if not violations else "BLOCKED",
         "violations": violations,
         "experimental_content_bytes_read": 0,

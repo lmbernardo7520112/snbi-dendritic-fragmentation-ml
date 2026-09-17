@@ -8,7 +8,7 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-from scripts import ti2_authority as authority
+from snbi_fragmentation import ti2_authority as authority
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -28,14 +28,14 @@ class ClosedAuthorityTests(unittest.TestCase):
         with self.assertRaisesRegex(authority.ScientificExecutionBlocked, "terminally closed"):
             authority.require_scientific_authority(ROOT)
 
-    def test_each_of_six_required_states_missing_fails_closed(self):
+    def test_each_required_state_missing_fails_closed(self):
         for key in authority.CLOSED_STATE:
             with self.subTest(key=key):
                 state = self.governance()
                 del state[key]
                 self.assertTrue(authority.validate_governance(state))
 
-    def test_each_of_six_states_rejects_unknown_and_noncanonical_truthiness(self):
+    def test_each_state_rejects_unknown_and_noncanonical_truthiness(self):
         for key, expected in authority.CLOSED_STATE.items():
             for value in (None, True, False, 0, 1, "true", "false", "yes", "UNKNOWN", "", [], {}):
                 if type(value) is type(expected) and value == expected:
@@ -57,6 +57,8 @@ class ClosedAuthorityTests(unittest.TestCase):
             ("lifecycle_state", "TI-2-execution-authorized"),
             ("TI2_EXECUTION_AUTHORIZED", True),
             ("future_unknown_authority", True),
+            ("authorized_branch", "feat/ti2-registration-calibration"),
+            ("pilot_image_limit", 30),
         ):
             with self.subTest(key=key):
                 state = self.governance()
@@ -67,6 +69,41 @@ class ClosedAuthorityTests(unittest.TestCase):
         for document in ({}, {"tool": {}}, {"tool": "unknown"}, {"tool": {"snbi": []}}):
             with self.subTest(document=document), patch.object(authority.tomllib, "load", return_value=document):
                 self.assertEqual(authority.audit_authority(ROOT)["status"], "BLOCKED")
+
+    def test_legacy_facade_uses_identical_package_implementation(self):
+        from scripts import ti2_authority as facade
+        for name in ("load_governance", "validate_governance", "audit_authority",
+                     "require_scientific_authority", "ScientificExecutionBlocked"):
+            self.assertIs(getattr(facade, name), getattr(authority, name))
+
+    def test_all_scientific_phases_must_remain_explicitly_blocked(self):
+        state = self.governance()
+        expected = ["TI-2", "TI-2R", "TI-3", "TI-4", "TI-5", "TI-6", "TI-7", "TI-8"]
+        self.assertEqual(state["blocked_phases"], expected)
+        for removed in expected:
+            candidate = copy.deepcopy(state)
+            candidate["blocked_phases"].remove(removed)
+            with self.subTest(removed=removed):
+                self.assertTrue(authority.validate_governance(candidate))
+
+    def test_historical_metadata_cannot_supply_active_aliases_or_permissions(self):
+        historical = {
+            "status": "HISTORICAL_CONSUMED_NON_AUTHORIZING",
+            "execution_branch": "synthetic-historical-branch",
+            "frozen_pilot_image_count": 999,
+            "ti2_execution_authorized": True,
+        }
+        project = {"tool": {"snbi": self.governance(),
+                            "snbi_history": {"ti2_e0_e7": historical}}}
+        with patch.object(authority.tomllib, "load", return_value=project):
+            report = authority.audit_authority(ROOT)
+            self.assertEqual(report["status"], "PASS")
+            self.assertFalse(report["ti2_execution_authorized"])
+            with self.assertRaises(authority.ScientificExecutionBlocked):
+                authority.require_scientific_authority()
+        del project["tool"]["snbi"]
+        with patch.object(authority.tomllib, "load", return_value=project):
+            self.assertEqual(authority.audit_authority(ROOT)["status"], "BLOCKED")
 
     def test_duplicate_toml_state_or_unreadable_canonical_file_fails_closed(self):
         with patch.object(authority.os, "fdopen", return_value=io.BytesIO(

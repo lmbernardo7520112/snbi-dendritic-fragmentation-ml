@@ -10,7 +10,7 @@ from subprocess import CalledProcessError
 from unittest.mock import patch
 
 from scripts import check_local_bootstrap as bootstrap
-from scripts import ti2_authority
+from snbi_fragmentation import ti2_authority
 from scripts.check_local_bootstrap import validate, validate_vscode
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -35,7 +35,7 @@ class LocalBootstrapTests(unittest.TestCase):
         self.assertFalse(report["ti2_execution_authorized"])
         self.assertEqual(report["codex_write_readiness"], "BLOCKED")
 
-    def test_later_phase_or_unbounded_pilot_fails_closed(self):
+    def test_missing_phase_blocks_or_obsolete_pilot_alias_fail_closed(self):
         for key, value in (("blocked_phases", []), ("pilot_image_limit", 31)):
             with self.subTest(key=key):
                 modified = {**ti2_authority.CLOSED_STATE, **ti2_authority.BOUNDARY_STATE, key: value}
@@ -43,6 +43,16 @@ class LocalBootstrapTests(unittest.TestCase):
                     report = validate(entries=[("100644", "README.md")])
                 self.assertEqual(report["status"], "BLOCKED")
                 self.assertFalse(report["ti2_execution_authorized"])
+
+    def test_gate_document_violation_blocks_bootstrap(self):
+        with patch.object(bootstrap, "audit_current_gates", return_value={
+            "status": "BLOCKED", "violations": ["synthetic contradictory gate"],
+            "document_count": 2,
+        }):
+            report = validate(entries=[("100644", "README.md")])
+        self.assertEqual(report["status"], "BLOCKED")
+        self.assertIn("synthetic contradictory gate", report["violations"])
+        self.assertFalse(report["ti2_execution_authorized"])
 
     def test_vscode_json_is_valid_and_tasks_are_not_automatic(self):
         settings = json.loads((ROOT / ".vscode/settings.json").read_text(encoding="utf-8"))

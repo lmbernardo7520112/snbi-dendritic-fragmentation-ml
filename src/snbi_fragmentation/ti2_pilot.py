@@ -19,6 +19,7 @@ import zipfile
 
 from .custody import load_manifest
 from .timebase import load_time_rule
+from .ti2_authority import require_scientific_authority
 
 
 class PilotContractError(ValueError):
@@ -76,6 +77,7 @@ def validate_plan(plan):
 
 
 def hash_stream(stream):
+    require_scientific_authority()
     digest, size = hashlib.sha256(), 0
     for block in iter(lambda: stream.read(1024*1024), b''):
         digest.update(block)
@@ -85,6 +87,7 @@ def hash_stream(stream):
 
 def open_readonly(path):
     """Walk only the supplied path, rejecting symlinks at every component."""
+    require_scientific_authority()
     path = Path(path)
     if '..' in path.parts:
         raise PilotContractError('parent traversal prohibited')
@@ -189,6 +192,7 @@ def validate_pilot_manifest(manifest, source_manifest=None):
 
 
 def verify_archive(source, source_manifest):
+    require_scientific_authority()
     source = Path(source)
     if not source.is_absolute() or '..' in source.parts or source.is_relative_to(Path.cwd()):
         raise PilotContractError('source must be explicit, external and without symlinks')
@@ -276,6 +280,7 @@ def _atomic_json(path, payload):
 
 
 def extract_pilot(source, root):
+    require_scientific_authority()
     root = Path(root).resolve()
     if root != Path.cwd() or not (root/'.git').is_dir() or (root/'.git').is_symlink():
         raise PilotContractError('standalone repository root required')

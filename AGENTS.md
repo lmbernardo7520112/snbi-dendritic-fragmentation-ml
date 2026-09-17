@@ -26,14 +26,23 @@ TRANSFORM_EXISTENCE=UNDETERMINED
 G3=BLOCKED_DEPENDENCY_G2
 E7=PASS_DOCUMENTARY
 MERGE_AUTHORIZED=false
+CODEX_LOCAL_WRITE_READINESS=BLOCKED_AWAITING_AUTHOR_DECISION
 ```
 
-The [remediation decision](docs/decisions/AUTHORIZATION-TI2-PR6-REMEDIATION-1-2026-09-17.md)
+The [remediation decision](docs/decisions/AUTHORIZATION-TI2-PR6-REMEDIATION-2-2026-09-17.md)
 authorizes only bounded implementation, tests, one individually approved
 commit, fast-forward push, new-SHA CI verification and a separately approved
 PR body update. After the commit, active state remains NONE_AWAITING_AUTHOR_DECISION
 while the expressly approved publication checks complete. No new scientific
 execution, second corrective commit, ready transition or merge is authorized.
+
+The authority is single-use for TI2-PR6-REMEDIATION-2. REMEDIATION-1 was partially
+accepted: the independent audit identified the remaining gate, empirical
+uncertainty and direct I/O guard gaps. The corrective scope is limited to these
+gaps and their documentation/tests. No optional hardening or new microstep is
+authorized. TI-2 and TI-2R are explicitly blocked alongside TI-3 through TI-8.
+Historical execution branch and frozen pilot count belong only to
+`tool.snbi_history.ti2_e0_e7`; they grant no authority.
 
 Historical decisions are immutable records. Validators must never infer
 permission from historical true text, documentation or green tests/CI.
@@ -69,9 +78,10 @@ The newest explicit author decision governs its exact scope.
 
 ## Bounded maintenance and synthetic verification
 
-This remediation may change authority guards, safe text checksums, temporal
-APIs/metadata validation, analytical-uncertainty classification, associated
-tests, CI and documents. Do not change method-v1 matcher, grid, mask, margin,
+This remediation may change the shared authority, current gate block parser,
+public experimental I/O guards, empirical uncertainty validator, associated
+tests, directly affected current documentation and safe textual checksums.
+CI workflows and dependencies remain unchanged. Do not change method-v1 matcher, grid, mask, margin,
 thresholds, minimum matches, transform fitting, matrices or ROI. No experimental
 physical-coordinate conversion or uncertainty propagation.
 
@@ -82,9 +92,11 @@ fresh and controlled inside ignored .bootstrap-test-tmp/, never experimental
 bytes or pre-existing external temporary content. Run the data guard first.
 
 No local installation. Dependency-free tests report optional skips explicitly.
-Only the separate pinned CI job runs exactly the five in-memory
+The separate pinned CI job runs exactly the five in-memory
 SyntheticImageMatchingTests, requiring 5 passes and zero skips/failures/errors/
-expected failures/unexpected successes. Synthetic tests grant no experimental
+expected failures/unexpected successes. This single-use decision also permits
+the same synthetic suite locally with already available dependencies; no local
+installation or FFmpeg/FFprobe invocation is allowed. Synthetic tests grant no experimental
 authority. Editor task allowlists remain unchanged. Historical regression
 tests may use their own fresh temporary subtree in clean CI; locally the
 temporary root stays inside the repository.
@@ -125,7 +137,7 @@ changes or sandbox failure without workaround. Refused Git approval means
 BLOCKED_GIT_APPROVAL; unavailable remote tooling means BLOCKED_REMOTE_TOOL;
 failed/cancelled/required-skipped CI means BLOCKED_CI; pending means BLOCKED_CI_PENDING.
 
-Success requires TI2_PR6_REMEDIATION_1=PASS_READY_FOR_AUTHOR_REVIEW, a clean
+Success requires TI2_PR6_REMEDIATION_2=PASS_READY_FOR_FINAL_MERGE_DECISION, a clean
 worktree, equal local/remote SHA, an open Draft PR and both jobs successful.
-PR6_MERGE_READINESS=READY_FOR_AUTHOR_REVIEW is readiness for the author's
+PR6_MERGE_READINESS=READY_FOR_FINAL_AUTHOR_DECISION is readiness for the author's
 decision only; MERGE_AUTHORIZED=false.

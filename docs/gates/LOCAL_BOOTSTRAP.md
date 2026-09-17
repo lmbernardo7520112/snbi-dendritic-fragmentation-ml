@@ -1,12 +1,43 @@
 # Gate LB0 — Governed local VS Code bootstrap
 
+## Current normative authority
+
+The sole current authority is `pyproject.toml [tool.snbi]`. This deterministic
+block is its documentary mirror. LB0 remains PASS and SDR-2-A RESOLVED, but
+their historical acceptance grants no current scientific or write permission.
+The prior E0–E7 authorization is historical, consumed, closed and superseded.
+The single bounded maintenance transaction follows the
+[REMEDIATION-2 decision](../decisions/AUTHORIZATION-TI2-PR6-REMEDIATION-2-2026-09-17.md).
+It does not reopen scientific execution or create continuing write authority.
+
+<!-- SNBI_CURRENT_AUTHORITY_BEGIN -->
+```json
+{
+  "authority_source": "pyproject.toml [tool.snbi]",
+  "current_authorized_activity": "NONE_AWAITING_AUTHOR_DECISION",
+  "ti2_execution_authorized": false,
+  "ti2r_authorized": false,
+  "ti3_plus_authorized": false,
+  "codex_local_write_readiness": "BLOCKED_AWAITING_AUTHOR_DECISION"
+}
+```
+<!-- SNBI_CURRENT_AUTHORITY_END -->
+
+## Historical record — consumed and non-authorizing
+
+The following records the decisions and observations valid at the historical
+bootstrap and execution dates. None of its permissions is active. Current
+authority is supplied only by the canonical source mirrored above.
+
+<!-- SNBI_HISTORICAL_NON_AUTHORIZING_BEGIN -->
+
 ## Scope
 
 LB0 evaluates only the local development surface: repository instructions,
 versioned editor configuration, data-name guardrails, sanitized diagnostics,
 synthetic policy tests and the ability of the real Codex sandbox to initialize.
-LB0 alone does not authorize local writes or TI-2. The author subsequently
-granted both, within the boundaries of the separate execution decision.
+LB0 alone did not authorize local writes or TI-2. The author subsequently
+granted both under the separate execution decision, since consumed and closed.
 
 ## Formal decision
 
@@ -19,7 +50,7 @@ The single terminal R6 smoke test returned exactly `CODEX_SANDBOX_OK`.
 Consequently, the former PARTIAL state is superseded and LB0 local acceptance
 is now PASS.
 
-| Dimension | Formal status | Basis |
+| Dimension | Historical formal status | Basis |
 |---|---|---|
 | Static/documental conformance | `PASS` | PR #4, deterministic CI, guards, synthetic tests and author approval |
 | Workspace sanitization | `CONFIRMED_BY_AUTHOR` | Human inspection confirmed the standalone clone contains no scientific data |
@@ -72,14 +103,14 @@ starting the real Codex sandbox. It is not permission for the local Codex to
 write files, execute arbitrary commands, access credentials or inspect
 scientific data. The separate
 [execution decision](../decisions/AUTHORIZATION-LB0-SDR2A-CLOSURE-PR5-MERGE-TI2-EXECUTION-2026-09-17.md)
-supplies the current bounded authorization; it does not arise from LB0 PASS
-alone.
+supplied the bounded authority at that historical date. That permission is now
+consumed, closed and superseded; it did not arise from LB0 PASS alone.
 
 The Git-index guard remains a name-based tracked-path control. Workspace
 sanitization remains a human attestation rather than a byte-level scan of
 ignored paths.
 
-## Closed and open authorities
+## Historical closed gates and execution authority
 
 Closed:
 
@@ -91,7 +122,7 @@ LB0_LOCAL_ACCEPTANCE: PASS
 SDR2A_STATUS: RESOLVED
 ~~~
 
-Separately authorized:
+Separately authorized at the historical date; now consumed and non-authorizing:
 
 ~~~text
 CODEX_LOCAL_WRITE_READINESS: AUTHORIZED_DEFAULT_SANDBOX_REPOSITORY_ONLY
@@ -117,3 +148,5 @@ At resumption, G2-SPATIAL and G3 were `NOT_EVALUATED`; see the
 [execution-state snapshot](../../artifacts/evidence/TI2/execution-state.json).
 Scientific gates require their own evidence, and TI-3 through TI-8 and merging
 the TI-2 Draft PR remain prohibited without new author authority.
+
+<!-- SNBI_HISTORICAL_NON_AUTHORIZING_END -->

@@ -233,14 +233,86 @@ class CalibrationContractTests(unittest.TestCase):
         with self.assertRaises(geometry.GeometryContractError):
             geometry.validate_uncertainty_budget(budget)
 
-    def test_empirical_measurement_remains_a_distinct_supported_status(self):
+    def empirical_budget(self):
         budget = self.modelled_budget()
         budget["registration"] = {
             "status": "MEASURED", "value": 0.5, "unit": "pixel",
             "method": "independent empirical residual measurement",
             "evidence_kind": "EMPIRICAL_MEASUREMENT", "provenance": "synthetic test fixture",
         }
-        geometry.validate_uncertainty_budget(budget)
+        return budget
+
+    def test_empirical_measurement_remains_a_distinct_supported_status(self):
+        geometry.validate_uncertainty_budget(self.empirical_budget())
+
+    def test_measured_requires_evidence_kind(self):
+        budget = self.empirical_budget()
+        del budget["registration"]["evidence_kind"]
+        with self.assertRaises(geometry.GeometryContractError):
+            geometry.validate_uncertainty_budget(budget)
+
+    def test_measured_rejects_empty_or_incorrect_evidence_kind(self):
+        for value in ("", " ", None, True, "EMPIRICAL", "empirical_measurement", "ANALYTICAL_ASSUMPTION"):
+            with self.subTest(value=value):
+                budget = self.empirical_budget()
+                budget["registration"]["evidence_kind"] = value
+                with self.assertRaises(geometry.GeometryContractError):
+                    geometry.validate_uncertainty_budget(budget)
+
+    def test_measured_requires_provenance(self):
+        budget = self.empirical_budget()
+        del budget["registration"]["provenance"]
+        with self.assertRaises(geometry.GeometryContractError):
+            geometry.validate_uncertainty_budget(budget)
+
+    def test_measured_provenance_requires_nonempty_text(self):
+        for value in ("", " \t\n", None, False, 1):
+            with self.subTest(value=value):
+                budget = self.empirical_budget()
+                budget["registration"]["provenance"] = value
+                with self.assertRaises(geometry.GeometryContractError):
+                    geometry.validate_uncertainty_budget(budget)
+
+    def test_measured_rejects_analytical_provenance_despite_empirical_kind(self):
+        for value in ("analytical_model", " ANALYTICAL_MODEL ", "analytical_assumption"):
+            with self.subTest(value=value):
+                budget = self.empirical_budget()
+                budget["registration"]["provenance"] = value
+                with self.assertRaises(geometry.GeometryContractError):
+                    geometry.validate_uncertainty_budget(budget)
+
+    def test_measured_rejects_analytical_assumption_field(self):
+        for value in ("uniform quantization", "", None):
+            with self.subTest(value=value):
+                budget = self.empirical_budget()
+                budget["registration"]["analytical_assumption"] = value
+                with self.assertRaises(geometry.GeometryContractError):
+                    geometry.validate_uncertainty_budget(budget)
+
+    def test_measured_requires_finite_nonnegative_nonboolean_value(self):
+        budget = self.empirical_budget()
+        del budget["registration"]["value"]
+        with self.assertRaises(geometry.GeometryContractError):
+            geometry.validate_uncertainty_budget(budget)
+        for value in (None, True, False, -1, math.inf, -math.inf, math.nan, "0.5"):
+            with self.subTest(value=value):
+                budget = self.empirical_budget()
+                budget["registration"]["value"] = value
+                with self.assertRaises(geometry.GeometryContractError):
+                    geometry.validate_uncertainty_budget(budget)
+
+    def test_measured_requires_nonempty_unit_and_method(self):
+        for key in ("unit", "method"):
+            budget = self.empirical_budget()
+            del budget["registration"][key]
+            with self.subTest(missing=key), self.assertRaises(geometry.GeometryContractError):
+                geometry.validate_uncertainty_budget(budget)
+            for value in ("", " \t\n", None, False, 1):
+                with self.subTest(key=key, value=value):
+                    budget = self.empirical_budget()
+                    budget["registration"][key] = value
+                    with self.assertRaises(geometry.GeometryContractError):
+                        geometry.validate_uncertainty_budget(budget)
 
     def test_current_text_records_keep_unresolved_metrology_and_zero_conversions(self):
         root = Path(__file__).resolve().parents[1]
