@@ -95,12 +95,13 @@ class RepositoryDataGuardTests(unittest.TestCase):
             ],
             cwd=ROOT, input=names, capture_output=True, text=True, check=False,
             env={
-                "PATH": "/usr/local/bin:/usr/bin:/bin:/snap/bin",
+                "PATH": "/usr/bin:/bin:/snap/bin",
                 "LANG": "C", "LC_ALL": "C", "GIT_OPTIONAL_LOCKS": "0",
                 "GIT_CONFIG_NOSYSTEM": "1", "GIT_CONFIG_GLOBAL": "/dev/null",
+                "GIT_CONFIG_SYSTEM": "/dev/null", "GIT_TERMINAL_PROMPT": "0",
             },
         )
-        self.assertEqual(completed.returncode, 0, completed.stderr)
+        self.assertEqual(completed.returncode, 0, "git check-ignore failed")
         self.assertEqual(set(completed.stdout.splitlines()), set(names.splitlines()))
 
 

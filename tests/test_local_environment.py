@@ -35,11 +35,11 @@ class LocalEnvironmentTests(unittest.TestCase):
     def test_command_environment_is_minimal_and_output_is_redacted(self, run):
         run.return_value = CompletedProcess(
             args=["git", "--version"], returncode=1,
-            stdout="", stderr="failure at /home/example/private-token",
+            stdout="", stderr="PRIVATE_MARKER_SHOULD_NOT_LEAK",
         )
         result = environment.run_sanitized(["git", "--version"], output_policy="version")
         self.assertEqual(result["summary"], "command-failed-redacted")
-        self.assertNotIn("/home", str(result))
+        self.assertNotIn("PRIVATE_MARKER", str(result))
         self.assertEqual(run.call_args.kwargs["env"], environment.SAFE_ENV)
         self.assertNotIn("HOME", run.call_args.kwargs["env"])
 
