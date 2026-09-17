@@ -1,9 +1,9 @@
 # TI-2 — Plano executivo de registro e calibração
 
-**Status:** planejamento para revisão; execução não autorizada  
+**Status:** plano executivo aprovado; execução não autorizada  
 **Dependências:** G1 PASS, G2-TEMP PASS e TI-1 encerrada  
 **Gates-alvo:** G2-SPATIAL e G3  
-**Versão:** 1.0.0-rc1
+**Versão:** 1.0.0
 
 ## 1. Finalidade
 

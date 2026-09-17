@@ -9,9 +9,10 @@ research and presented at COBEM.
 ## Current authorization
 
 **TI-0 — Governed Technical Bootstrap** and **TI-1 — Deterministic Audit** are
-formally complete. G1 and G2-TEMP were approved by the author. Planning of
-**TI-2 — Registration and Calibration** is authorized, but its execution and
-TI-3 through TI-8 remain blocked. This repository does not extract frames,
+formally complete. G1 and G2-TEMP were approved by the author. The executive
+plan for **TI-2 — Registration and Calibration** is approved, but its execution
+and TI-3 through TI-8 remain blocked. A governed local VS Code bootstrap is
+authorized independently of TI-2 execution. This repository does not extract frames,
 create annotations or datasets, define splits, execute baselines, or train
 models.
 
