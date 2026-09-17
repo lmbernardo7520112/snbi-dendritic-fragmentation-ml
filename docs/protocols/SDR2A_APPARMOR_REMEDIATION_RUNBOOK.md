@@ -46,6 +46,19 @@ LOCAL_CODEX_FAILURE: bwrap: loopback: Failed RTM_NEWADDR: Operation not permitte
 CAUSE_ATTRIBUTION: SUPPORTED_HYPOTHESIS_HIGH_NOT_CONFIRMED
 ~~~
 
+## Parser safety basis
+
+Ubuntu's Noble apparmor_parser manual documents that add mode fails when a
+policy with the same name already exists, while replace mode replaces it. It
+also documents policy-name listing with -N, skip-kernel-load with -Q and
+no-cache operation with -K:
+
+https://manpages.ubuntu.com/manpages/noble/man8/apparmor_parser.8.html
+
+Because this runbook requires the relevant policies to be absent at preflight,
+it deliberately uses add mode with no cache. This is a stricter fail-closed
+load than replace mode: a policy-name collision stops the procedure.
+
 ## Global stop rules
 
 Stop immediately and report the observed output if:
@@ -151,6 +164,24 @@ test -r /usr/share/apparmor/extra-profiles/bwrap-userns-restrict   && echo 'pack
 The target must be ABSENT_EXPECTED. If it is present, stop: this runbook is not
 authorized to overwrite it.
 
+### R1.5 Running-process and loaded-policy state
+
+~~~bash
+pgrep -a -x bwrap || true
+
+sudo /usr/bin/grep -E '^(bwrap|unpriv_bwrap)(//| )' /sys/kernel/security/apparmor/profiles \
+  || echo 'loaded_bwrap_policy=NO_MATCH'
+~~~
+
+Expected:
+
+- no bwrap process output;
+- loaded_bwrap_policy=NO_MATCH.
+
+A running bwrap process, matching loaded policy, or inability to inspect the
+targeted securityfs file stops the runbook. Do not kill a process and do not
+replace a loaded policy.
+
 R1 produces no system change.
 
 ---
@@ -173,7 +204,7 @@ or third-party, stop.
 ### R2.2 Exact transaction simulation
 
 ~~~bash
-apt-get --simulate --no-install-recommends install   apparmor-profiles apparmor-utils
+apt-get --simulate --no-remove --no-upgrade --no-install-recommends install apparmor-profiles apparmor-utils
 ~~~
 
 Do not execute the installation yet.
@@ -230,7 +261,7 @@ transaction shown at the confirmation prompt exactly matches the approved
 simulation.
 
 ~~~bash
-sudo apt-get --no-install-recommends install   apparmor-profiles apparmor-utils
+sudo apt-get --no-remove --no-upgrade --no-install-recommends install apparmor-profiles apparmor-utils
 ~~~
 
 Do not add -y. Review the displayed transaction before confirming.
@@ -274,6 +305,17 @@ Expected:
 
 Any divergence stops the runbook.
 
+### R5.1a Local-override exclusion
+
+~~~bash
+for path in /etc/apparmor.d/local/bwrap-userns-restrict /etc/apparmor.d/local/unpriv_bwrap; do
+  test -e "$path" && printf '%s=PRESENT_STOP\n' "$path" || printf '%s=ABSENT_EXPECTED\n' "$path"
+done
+~~~
+
+Both paths must be ABSENT_EXPECTED. A local include can change the compiled
+policy and is outside this runbook.
+
 ### R5.2 Install the exact packaged profile
 
 ~~~bash
@@ -299,12 +341,34 @@ profile_copy=MATCH
 
 A mismatch stops the runbook before profile loading.
 
-### R5.4 Load the profile without a global reload
+### R5.4 Record policy names and validate without loading
 
 ~~~bash
-sudo /usr/sbin/apparmor_parser -r   /etc/apparmor.d/bwrap-userns-restrict
+/usr/sbin/apparmor_parser -N -K /etc/apparmor.d/bwrap-userns-restrict
+/usr/sbin/apparmor_parser -Q -K /etc/apparmor.d/bwrap-userns-restrict
 ~~~
 
+Record every policy name printed by the first command. The second command
+compiles the profile without loading it into the kernel and without reading or
+writing cache. Any error stops the runbook.
+
+### R5.5 Recheck for races immediately before loading
+
+~~~bash
+pgrep -a -x bwrap || true
+sudo /usr/bin/grep -E '^(bwrap|unpriv_bwrap)(//| )' /sys/kernel/security/apparmor/profiles \
+  || echo 'loaded_bwrap_policy=NO_MATCH'
+~~~
+
+No bwrap process and NO_MATCH are required.
+
+### R5.6 Add the profile fail-closed
+
+~~~bash
+sudo /usr/sbin/apparmor_parser -a -K /etc/apparmor.d/bwrap-userns-restrict
+~~~
+
+Add mode must fail on a policy-name collision. Do not substitute replace mode.
 Do not use sysctl -w and do not disable or reload all AppArmor policy.
 
 ---
@@ -312,18 +376,19 @@ Do not use sysctl -w and do not disable or reload all AppArmor policy.
 ## R6 — Post-change read-only verification
 
 ~~~bash
-systemctl is-active apparmor.service 2>/dev/null   || echo 'apparmor_service=UNKNOWN_OR_INACTIVE'
-
-sysctl -n kernel.apparmor_restrict_unprivileged_userns 2>/dev/null   || echo 'apparmor_userns_restriction=NOT_AVAILABLE'
-
-sudo /usr/sbin/aa-status 2>/dev/null   | /usr/bin/grep -Ei 'bwrap|userns'   || echo 'loaded_bwrap_profile=BLOCKED_NO_MATCH'
+systemctl is-active apparmor.service 2>/dev/null || echo 'apparmor_service=UNKNOWN_OR_INACTIVE'
+sysctl -n kernel.apparmor_restrict_unprivileged_userns 2>/dev/null || echo 'apparmor_userns_restriction=NOT_AVAILABLE'
+sudo /usr/bin/grep -E '^(bwrap|unpriv_bwrap)(//| )' /sys/kernel/security/apparmor/profiles || echo 'loaded_bwrap_policy=BLOCKED_NO_MATCH'
 ~~~
 
 Required:
 
 - AppArmor remains active;
 - restriction remains 1;
-- the bwrap/userns profile produces matching loaded-profile evidence.
+- every policy name recorded by R5.4 appears in the targeted securityfs output.
+
+A file may declare more than one AppArmor policy. Filename equality is not
+accepted as loaded-policy evidence.
 
 If any requirement fails, do not test Codex. Evaluate the rollback gate.
 
@@ -332,6 +397,12 @@ If any requirement fails, do not test Codex. Evaluate the rollback gate.
 ## R7 — Single Codex sandbox smoke test
 
 Close no security control and change no Codex permission mode.
+
+Record the local test time first:
+
+~~~bash
+date --iso-8601=seconds
+~~~
 
 Open the existing Codex extension and paste this exact message as plain text,
 not as an attachment:
@@ -402,7 +473,7 @@ Do not continue unless the output is rollback_target=VALIDATED.
 ### RB2 — Unload the exact profile
 
 ~~~bash
-sudo /usr/sbin/apparmor_parser -R   /etc/apparmor.d/bwrap-userns-restrict
+sudo /usr/sbin/apparmor_parser -R -K /etc/apparmor.d/bwrap-userns-restrict
 ~~~
 
 If unloading reports an error, stop and do not remove the file.
