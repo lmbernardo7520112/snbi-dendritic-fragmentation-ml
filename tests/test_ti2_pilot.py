@@ -2,10 +2,53 @@
 import copy
 import hashlib
 import io
+import json
+from pathlib import Path
+import tempfile
 import unittest
 from unittest.mock import patch
 
 from snbi_fragmentation import ti2_pilot as pilot
+
+
+class PilotJournalTests(unittest.TestCase):
+    def setUp(self):
+        temporary_root = Path(__file__).resolve().parents[1]/'.bootstrap-test-tmp'
+        if temporary_root.is_symlink():
+            self.fail('synthetic temporary root must not be a symlink')
+        temporary_root.mkdir(exist_ok=True)
+        self.directory = tempfile.TemporaryDirectory(dir=temporary_root)
+        self.addCleanup(self.directory.cleanup)
+        self.root = Path(self.directory.name)
+
+    def test_atomic_journal_failure_preserves_previous_complete_record(self):
+        destination = self.root/'attempt.json'
+        previous = {'status': 'DECODED_AND_VERIFIED', 'materialized_image_count': 0}
+        pilot._atomic_json(destination, previous)
+        original = destination.read_bytes()
+        with patch.object(pilot.os, 'replace', side_effect=OSError('synthetic publication failure')):
+            with self.assertRaises(OSError):
+                pilot._atomic_json(destination, {'status': 'COMPLETE', 'materialized_image_count': 30})
+        self.assertEqual(destination.read_bytes(), original)
+        self.assertEqual(json.loads(destination.read_text()), previous)
+        self.assertEqual(json.loads((self.root/'.attempt.json.tmp').read_text())['materialized_image_count'], 30)
+
+    def test_successful_journal_updates_leave_no_pending_file(self):
+        destination = self.root/'attempt.json'
+        pilot._atomic_json(destination, {'materialized_image_count': 0})
+        pilot._atomic_json(destination, {'materialized_image_count': 1})
+        self.assertEqual(json.loads(destination.read_text()), {'materialized_image_count': 1})
+        self.assertFalse((self.root/'.attempt.json.tmp').exists())
+
+    def test_lineage_is_created_once_and_cannot_be_overwritten(self):
+        destination = self.root/'lineage.json'
+        lineage = {'record_kind': 'verified_prepublication_lineage', 'images': ['synthetic identity']}
+        pilot._exclusive_json(destination, lineage)
+        original = destination.read_bytes()
+        with self.assertRaises(FileExistsError):
+            pilot._exclusive_json(destination, {'images': ['replacement']})
+        self.assertEqual(destination.read_bytes(), original)
+        self.assertEqual(json.loads(destination.read_text()), lineage)
 
 
 class PilotContracts(unittest.TestCase):

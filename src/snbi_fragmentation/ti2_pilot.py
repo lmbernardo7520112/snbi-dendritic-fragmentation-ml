@@ -210,6 +210,39 @@ def _sealed_member(archive, entry):
         raise
 
 
+def _sync_directory(directory):
+    fd = os.open(directory, os.O_RDONLY | os.O_DIRECTORY | os.O_NOFOLLOW)
+    try:
+        os.fsync(fd)
+    finally:
+        os.close(fd)
+
+
+def _exclusive_json(path, payload):
+    """Persist a new text record once; an existing path is never replaced."""
+    rendered = json.dumps(payload, indent=2, sort_keys=True, allow_nan=False) + '\n'
+    with path.open('x', encoding='utf-8') as output:
+        output.write(rendered)
+        output.flush()
+        os.fsync(output.fileno())
+    _sync_directory(path.parent)
+
+
+def _atomic_json(path, payload):
+    """Replace progress only after a complete same-directory record is durable.
+
+    A failed replacement preserves the old journal and leaves its pending file
+    for inspection. A leftover pending file blocks another update; it is never
+    silently removed or overwritten.
+    """
+    if path.is_symlink():
+        raise PilotContractError('journal symlink prohibited')
+    pending = path.with_name(f'.{path.name}.tmp')
+    _exclusive_json(pending, payload)
+    os.replace(pending, path)
+    _sync_directory(path.parent)
+
+
 def extract_pilot(source, root):
     root = Path(root).resolve()
     if root != Path.cwd() or not (root/'.git').is_dir() or (root/'.git').is_symlink():
@@ -230,7 +263,7 @@ def extract_pilot(source, root):
     journal = {'status': 'STARTED', 'source_verification': verification,
                'materialized_image_count': 0, 'images': [],
                'restart_policy': 'STOP; never overwrite or automatically decode again'}
-    journal_path.write_text(json.dumps(journal, indent=2, sort_keys=True)+'\n', encoding='utf-8')
+    _atomic_json(journal_path, journal)
     images, source_probes, prepared = [], {}, []
     with open_readonly(source) as source_stream, zipfile.ZipFile(source_stream, 'r') as archive:
         source_stream.seek(0)
@@ -280,14 +313,21 @@ def extract_pilot(source, root):
               'source_verification_after': post, 'source_probes': source_probes,
               'images': images, 'decoder_internal_reference_frames_allowed': True}
     validate_pilot_manifest(result)
-    # Persist complete lineage before any native image file is published.
-    journal.update({'status': 'DECODED_AND_VERIFIED', 'images': images})
-    journal_path.write_text(json.dumps(journal, indent=2, sort_keys=True)+'\n', encoding='utf-8')
+    # This immutable snapshot survives any later progress-journal interruption.
+    # Its count is zero at publication; attempt.json records actual progress.
+    lineage = {**result, 'record_kind': 'verified_prepublication_lineage',
+               'materialized_image_count': 0, 'planned_image_count': len(images)}
+    _exclusive_json(destination/'lineage.json', lineage)
+    journal.update({'status': 'DECODED_AND_VERIFIED', 'images': images,
+                    'lineage_manifest': 'lineage.json'})
+    _atomic_json(journal_path, journal)
     for relative, frame in prepared:
         with (root/relative).open('xb') as output:
             output.write(frame)
+            output.flush()
+            os.fsync(output.fileno())
         journal['materialized_image_count'] += 1
-        journal_path.write_text(json.dumps(journal, indent=2, sort_keys=True)+'\n', encoding='utf-8')
+        _atomic_json(journal_path, journal)
     journal['status'] = 'COMPLETE'
-    journal_path.write_text(json.dumps(journal, indent=2, sort_keys=True)+'\n', encoding='utf-8')
+    _atomic_json(journal_path, journal)
     return result
