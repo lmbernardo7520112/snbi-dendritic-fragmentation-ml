@@ -9,12 +9,13 @@ research and presented at COBEM.
 ## Current authorization
 
 **TI-0 — Governed Technical Bootstrap** and **TI-1 — Deterministic Audit** are
-formally complete. G1 and G2-TEMP were approved by the author. The executive
-plan for **TI-2 — Registration and Calibration** is approved, but its execution
-and TI-3 through TI-8 remain blocked. A governed local VS Code bootstrap is
-authorized independently of TI-2 execution. This repository does not extract frames,
-create annotations or datasets, define splits, execute baselines, or train
-models.
+formally complete. G1 and G2-TEMP were approved by the author. The real local
+Codex sandbox passed its single read-only smoke test, closing LB0 local
+acceptance; local Codex writes still require a separate author decision. The
+executive plan for **TI-2 — Registration and Calibration** is approved, but its
+execution and TI-3 through TI-8 remain blocked. This repository does not
+extract frames, create annotations or datasets, define splits, execute
+baselines, or train models.
 
 ## Implemented outcomes
 
@@ -82,9 +83,10 @@ task, run:
 The environment diagnostic is read-only and does not run the optional
 `bwrap` capability probe unless `--probe-bwrap` is supplied explicitly. That
 probe does not test the complete Codex/seccomp sandbox and cannot authorize
-writes. Codex write readiness remains blocked until a real sandboxed Codex
-command succeeds and the author separately authorizes workspace writes. A
-sandbox failure must never be retried outside the sandbox.
+writes. A real sandboxed Codex command subsequently passed under the governed
+SDR-2-A remediation, but workspace writes remain blocked until the author
+separately authorizes a bounded work scope. A sandbox failure must never be
+retried outside the sandbox.
 
 ## Governance
 

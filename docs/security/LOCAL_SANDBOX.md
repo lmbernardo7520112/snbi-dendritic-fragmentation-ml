@@ -2,54 +2,86 @@
 
 ## Observed state
 
-During the first read-only Codex IDE audit on 17 September 2026, seven sandbox starts failed with a `bwrap ... Operation not permitted` error. The user approved a read-only fallback outside the sandbox; no repository changes occurred.
+Earlier read-only Codex IDE audits produced generic `bwrap ... Operation not
+permitted` startup failures. On 17 September 2026, the author performed the
+governed real-sandbox acceptance test against the approved bootstrap branch.
+The sandbox failed before the requested Python diagnostic started:
 
-This is sufficient to validate repository comprehension, but it is not sufficient to authorize agent writes.
+```text
+bwrap: loopback: Failed RTM_NEWADDR: Operation not permitted
+```
+
+The command was stopped without fallback, elevation, network access or host
+modification. This proves that the real sandbox is not currently operational;
+it does not identify the root cause by itself.
+
+One earlier audit used an author-approved read-only fallback outside the
+sandbox and produced no repository change. That historical exception is not
+current authority and must not be repeated.
 
 ## Current decision
 
-- documentation/static bootstrap: allowed;
-- read-only diagnostic collection: allowed with user approval;
-- Codex local write readiness: **BLOCKED**;
+- LB0 static/documental conformance: `PASS`;
+- workspace sanitization: `CONFIRMED_BY_AUTHOR`;
+- LB0 local acceptance: `PARTIAL`;
+- real Codex sandbox: `BLOCKED`;
+- Codex local write readiness: `BLOCKED`;
+- TI-2 execution: `NOT_AUTHORIZED`;
 - unsandboxed fallback: prohibited;
-- OS remediation: not authorized.
+- operating-system remediation: not authorized.
+
+## Established read-only facts
+
+The approved manual preflight established, without changing the host:
+
+- Linux kernel identifier `6.17.0-1032-oem`;
+- Python `3.12.3`, supported by the repository bootstrap;
+- `bwrap` present at version `0.9.0`;
+- `git` and `unshare` present;
+- the `code` launcher not found on the terminal `PATH`;
+- unprivileged user namespaces enabled and the configured namespace maximum
+  greater than zero;
+- `kernel.apparmor_restrict_unprivileged_userns=1`;
+- no inert `bwrap` probe executed.
+
+These facts are diagnostic inputs. In particular, AppArmor restriction is a
+relevant observation but is not accepted as the cause without direct evidence.
+The missing `code` launcher does not prove that no compatible editor exists.
 
 ## Diagnostic boundary
 
-The repository diagnostic may inspect only:
+The next collection is governed by
+`docs/protocols/LOCAL_SANDBOX_DIAGNOSTIC_PROTOCOL.md` and must be performed
+manually by the author. It does not expand the command allowance for the local
+Codex agent. The agent remains prohibited from executing commands while its
+sandbox is blocked.
 
-- tool presence and version for `git`, `bwrap`, `unshare`, and `code`;
-- Python and operating-system version identifiers;
-- exact read-only proc/sys keys relevant to user namespaces;
-- one inert bubblewrap capability probe only when the user explicitly supplies
-  `--probe-bwrap`.
+The manual protocol may inspect only:
 
-Repository identity, branch, commit, and status are verified separately by
-explicit human-reviewed Git commands; the diagnostic does not inherit or emit
-Git repository state.
+- editor product and official extension identity through the GUI;
+- categorical presence and non-secret versions of exact editor/package names;
+- operating-system release identifiers;
+- the exact AppArmor/profile-presence and namespace indicators listed by the
+  protocol;
+- filtered, sanitized kernel-denial lines relevant to `bwrap`, AppArmor,
+  user namespaces or `RTM_NEWADDR`.
 
-The capability probe does not exercise the complete Codex sandbox or its
-seccomp policy. It therefore cannot change Codex write readiness by itself.
-
-It must not enumerate the home directory, list environment variables, inspect credentials, traverse experimental data, or change system state.
-
-## Read-only keys
-
-- `/proc/sys/kernel/unprivileged_userns_clone`;
-- `/proc/sys/user/max_user_namespaces`;
-- `/proc/sys/kernel/apparmor_restrict_unprivileged_userns`, when present.
+It must not enumerate the home directory, list environment variables, inspect
+credentials, traverse experimental data, access the network, use privilege
+elevation or change system state.
 
 ## Decision rule
 
 | Observation | Result |
 |---|---|
-| inert `bwrap` capability probe returns zero | `PASS` for bubblewrap capability only; Codex writes remain `BLOCKED` |
-| `bwrap` absent | `BLOCKED` |
-| namespace/AppArmor denial | `BLOCKED` |
-| probe requires privilege or OS change | `BLOCKED` |
-| diagnostic attempts unsandboxed fallback | `BLOCKED` |
+| manual evidence collected within the exact allowlist | `COLLECTED` for diagnosis only |
+| editor host or packaging cannot be identified read-only | `PARTIAL` |
+| relevant log access is denied | record `BLOCKED_NO_PRIVILEGE`; do not elevate |
+| direct sanitized denial identifies `bwrap` and a policy rule | `CONFIRMED`, pending review |
+| configuration and error correlation only | `SUPPORTED_HYPOTHESIS` |
+| evidence remains ambiguous | `UNRESOLVED` |
+| any step requires privilege, installation or host change | `BLOCKED` |
 
-No repository result changes kernel, AppArmor, namespace, package, or extension
-configuration. Write readiness requires both a successful real Codex sandbox
-command and a separate author decision. Remediation requires separate
-authorization after review of sanitized diagnostics.
+No diagnostic outcome authorizes remediation. Write readiness requires a
+successful real Codex sandbox command and a separate author decision after
+review of the evidence.
