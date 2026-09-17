@@ -1,0 +1,24 @@
+Command: PYTHONPATH=src /usr/bin/python3 -B -m unittest discover -s tests -p test_ti2_geometry.py -v
+test_ti2_geometry (unittest.loader._FailedTest.test_ti2_geometry) ... ERROR
+
+======================================================================
+ERROR: test_ti2_geometry (unittest.loader._FailedTest.test_ti2_geometry)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_ti2_geometry
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/unittest/loader.py", line 394, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/loader.py", line 337, in _get_module_from_name
+    __import__(name)
+  File "<REPOSITORY>/tests/test_ti2_geometry.py", line 6, in <module>
+    from snbi_fragmentation import ti2_geometry as geometry
+ImportError: cannot import name 'ti2_geometry' from 'snbi_fragmentation' (<REPOSITORY>/src/snbi_fragmentation/__init__.py)
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)
+
+Exit code: 1

@@ -1,9 +1,15 @@
 # TI-2 — Plano executivo de registro e calibração
 
-**Status:** plano executivo aprovado; execução não autorizada  
+**Status:** plano executivo aprovado; execução E0–E7 autorizada pela decisão de 17/09/2026
 **Dependências:** G1 PASS, G2-TEMP PASS e TI-1 encerrada  
 **Gates-alvo:** G2-SPATIAL e G3  
 **Versão:** 1.0.0
+
+A [decisão de execução](../decisions/AUTHORIZATION-LB0-SDR2A-CLOSURE-PR5-MERGE-TI2-EXECUTION-2026-09-17.md)
+e a [retomada com aprovações Git pontuais](../decisions/AUTHORIZATION-TI2-TARGETED-GIT-APPROVALS-2026-09-17.md)
+suprem a autorização antes pendente. A redação prospectiva abaixo preserva o
+plano aprovado, seus 30 pares fonte/índice, contratos e limites quantitativos;
+não amplia o escopo. Na retomada, G2-SPATIAL e G3 estavam `NOT_EVALUATED`.
 
 ## 1. Finalidade
 

@@ -1,0 +1,457 @@
+{
+  "G2_SPATIAL_EVALUATION_STATE": "NOT_EVALUATED",
+  "G3_EVALUATION_STATE": "NOT_EVALUATED",
+  "TI2_EXECUTION_STATUS": "RESUMED_AFTER_OPERATIONAL_BLOCK",
+  "authorized_branch": "feat/ti2-registration-calibration",
+  "base_head": "f7818c17c18ba9e4306696ea61b427864cf7deb6",
+  "blocked_paths": [
+    "data/raw/",
+    "data/derived/",
+    "data/interim/",
+    "data/processed/",
+    "datasets/",
+    "labels/",
+    "splits/",
+    "models/",
+    "checkpoints/",
+    ".env",
+    ".git/"
+  ],
+  "checkpoint_id": "E0R-01",
+  "historical_red_preserved": [
+    "artifacts/evidence/TI2/red-pilot.txt",
+    "artifacts/evidence/TI2/red-geometry.txt",
+    "artifacts/evidence/TI2/red-governance.txt"
+  ],
+  "hooks": {
+    "active_hooks": [],
+    "core.hooksPath": "UNSET",
+    "index_lock_present": false,
+    "samples_only": true
+  },
+  "inventory": [
+    {
+      "checkpoint_disposition": "INCLUDE",
+      "contracts": [
+        "SCOPE-201",
+        "CLAIM-201"
+      ],
+      "experimental_binary": false,
+      "path": ".github/workflows/ci.yml",
+      "personal_absolute_path_detected": false,
+      "purpose": "Reconcile execution authority and enforce TI-2 scope with targeted Git approvals",
+      "secret_or_credential_detected": false,
+      "sha256": "b46f9370dd0b867ba722cf3585b25d965863a782dfddb844dbac617078a3432d",
+      "state": "GREEN"
+    },
+    {
+      "checkpoint_disposition": "INCLUDE",
+      "contracts": [
+        "SCOPE-201",
+        "CLAIM-201"
+      ],
+      "experimental_binary": false,
+      "path": "AGENTS.md",
+      "personal_absolute_path_detected": false,
+      "purpose": "Reconcile execution authority and enforce TI-2 scope with targeted Git approvals",
+      "secret_or_credential_detected": false,
+      "sha256": "76ed28808c1fcb77ad1b9862c288e948769e015142529d3e02516b0d3d05d577",
+      "state": "GREEN"
+    },
+    {
+      "checkpoint_disposition": "INCLUDE",
+      "contracts": [
+        "SCOPE-201",
+        "CLAIM-201"
+      ],
+      "experimental_binary": false,
+      "path": "Makefile",
+      "personal_absolute_path_detected": false,
+      "purpose": "Reconcile execution authority and enforce TI-2 scope with targeted Git approvals",
+      "secret_or_credential_detected": false,
+      "sha256": "b0e0602069f7cb0a5dc54a3d200c60804f303f5be085c1e452a3c1b02003a2fe",
+      "state": "GREEN"
+    },
+    {
+      "checkpoint_disposition": "INCLUDE",
+      "contracts": [
+        "SCOPE-201",
+        "CLAIM-201"
+      ],
+      "experimental_binary": false,
+      "path": "README.md",
+      "personal_absolute_path_detected": false,
+      "purpose": "Reconcile execution authority and enforce TI-2 scope with targeted Git approvals",
+      "secret_or_credential_detected": false,
+      "sha256": "aade21ef880f9a3f116f57414d4cb04edfe54a4d544f6c87e41909891b729aae",
+      "state": "GREEN"
+    },
+    {
+      "checkpoint_disposition": "INCLUDE",
+      "contracts": [
+        "SCOPE-201"
+      ],
+      "experimental_binary": false,
+      "path": "artifacts/evidence/TI2/execution-state.json",
+      "personal_absolute_path_detected": false,
+      "purpose": "Historical RED or explicitly identified recovery evidence",
+      "secret_or_credential_detected": false,
+      "sha256": "4ae567795ce794bfa550983aff66b9d2af71516773aaeb0869fa0553727326f9",
+      "state": "EVIDENCE"
+    },
+    {
+      "checkpoint_disposition": "INCLUDE",
+      "contracts": [
+        "SCOPE-201"
+      ],
+      "experimental_binary": false,
+      "path": "artifacts/evidence/TI2/green-geometry.txt",
+      "personal_absolute_path_detected": false,
+      "purpose": "Historical RED or explicitly identified recovery evidence",
+      "secret_or_credential_detected": false,
+      "sha256": "8d52760504ec667fd61d97a26e23e5129f216dc31f4a940c9d409cf71179105e",
+      "state": "EVIDENCE"
+    },
+    {
+      "checkpoint_disposition": "INCLUDE",
+      "contracts": [
+        "SCOPE-201"
+      ],
+      "experimental_binary": false,
+      "path": "artifacts/evidence/TI2/green-governance.txt",
+      "personal_absolute_path_detected": false,
+      "purpose": "Historical RED or explicitly identified recovery evidence",
+      "secret_or_credential_detected": false,
+      "sha256": "6be47c46936853d99d57ac549bf29e041277decf06d06717bcc866ff548074e6",
+      "state": "EVIDENCE"
+    },
+    {
+      "checkpoint_disposition": "INCLUDE",
+      "contracts": [
+        "SCOPE-201"
+      ],
+      "experimental_binary": false,
+      "path": "artifacts/evidence/TI2/green-recovery.txt",
+      "personal_absolute_path_detected": false,
+      "purpose": "Historical RED or explicitly identified recovery evidence",
+      "secret_or_credential_detected": false,
+      "sha256": "dbbfa951ac661c3a015061cf90e984dd2d975b7e7907500376be5a29825cc71b",
+      "state": "EVIDENCE"
+    },
+    {
+      "checkpoint_disposition": "INCLUDE",
+      "contracts": [
+        "SCOPE-201"
+      ],
+      "experimental_binary": false,
+      "path": "artifacts/evidence/TI2/red-geometry.txt",
+      "personal_absolute_path_detected": false,
+      "purpose": "Historical RED or explicitly identified recovery evidence",
+      "secret_or_credential_detected": false,
+      "sha256": "c10b1906e00f99108283fb049aff346409b03b72035109a80ba118f96cbbd02d",
+      "state": "EVIDENCE"
+    },
+    {
+      "checkpoint_disposition": "INCLUDE",
+      "contracts": [
+        "SCOPE-201"
+      ],
+      "experimental_binary": false,
+      "path": "artifacts/evidence/TI2/red-governance.txt",
+      "personal_absolute_path_detected": false,
+      "purpose": "Historical RED or explicitly identified recovery evidence",
+      "secret_or_credential_detected": false,
+      "sha256": "ca3be0a2503f3205bea303f459ad952994751a5855de4d0f8cf17d6703fcfc41",
+      "state": "EVIDENCE"
+    },
+    {
+      "checkpoint_disposition": "INCLUDE",
+      "contracts": [
+        "SCOPE-201"
+      ],
+      "experimental_binary": false,
+      "path": "artifacts/evidence/TI2/red-pilot.txt",
+      "personal_absolute_path_detected": false,
+      "purpose": "Historical RED or explicitly identified recovery evidence",
+      "secret_or_credential_detected": false,
+      "sha256": "3f7275af4d1e87a71ccef559a94a2864e91ee8357c29292566c23deefa3eccae",
+      "state": "EVIDENCE"
+    },
+    {
+      "checkpoint_disposition": "INCLUDE",
+      "contracts": [
+        "SCOPE-201",
+        "CLAIM-201"
+      ],
+      "experimental_binary": false,
+      "path": "docs/decisions/AUTHORIZATION-TI2-TARGETED-GIT-APPROVALS-2026-09-17.md",
+      "personal_absolute_path_detected": false,
+      "purpose": "Reconcile execution authority and enforce TI-2 scope with targeted Git approvals",
+      "secret_or_credential_detected": false,
+      "sha256": "75197afaff4aa74c8f20929a3cec8f424783b2a3407dddd821c4ca96f7d4fb87",
+      "state": "GREEN"
+    },
+    {
+      "checkpoint_disposition": "INCLUDE",
+      "contracts": [
+        "SCOPE-201",
+        "CLAIM-201"
+      ],
+      "experimental_binary": false,
+      "path": "docs/gates/LOCAL_BOOTSTRAP.md",
+      "personal_absolute_path_detected": false,
+      "purpose": "Reconcile execution authority and enforce TI-2 scope with targeted Git approvals",
+      "secret_or_credential_detected": false,
+      "sha256": "e8d997a5418c993af8d13b1bba55dc5ba15c8236244d137641585595692c0fba",
+      "state": "GREEN"
+    },
+    {
+      "checkpoint_disposition": "INCLUDE",
+      "contracts": [
+        "SCOPE-201",
+        "CLAIM-201"
+      ],
+      "experimental_binary": false,
+      "path": "docs/protocols/LOCAL_DEVELOPMENT.md",
+      "personal_absolute_path_detected": false,
+      "purpose": "Reconcile execution authority and enforce TI-2 scope with targeted Git approvals",
+      "secret_or_credential_detected": false,
+      "sha256": "29fe21d8a862923027ff1a282286eb30c4dfa53416ef729dc96228abbc2bd029",
+      "state": "GREEN"
+    },
+    {
+      "checkpoint_disposition": "INCLUDE",
+      "contracts": [
+        "SCOPE-201",
+        "CLAIM-201"
+      ],
+      "experimental_binary": false,
+      "path": "docs/protocols/TI2_CONTRACT_MATRIX.md",
+      "personal_absolute_path_detected": false,
+      "purpose": "Reconcile execution authority and enforce TI-2 scope with targeted Git approvals",
+      "secret_or_credential_detected": false,
+      "sha256": "4bce9e943825f7a664ab11b0e2174b87583cc548c446b0859d3ef271d3aa7c7f",
+      "state": "GREEN"
+    },
+    {
+      "checkpoint_disposition": "INCLUDE",
+      "contracts": [
+        "SCOPE-201",
+        "CLAIM-201"
+      ],
+      "experimental_binary": false,
+      "path": "docs/protocols/TI2_EXECUTION_PLAN.md",
+      "personal_absolute_path_detected": false,
+      "purpose": "Reconcile execution authority and enforce TI-2 scope with targeted Git approvals",
+      "secret_or_credential_detected": false,
+      "sha256": "46c11a40640b7083f61f6b37e47c270dd808a14fd0c5e05804bbb6d7d2307d59",
+      "state": "GREEN"
+    },
+    {
+      "checkpoint_disposition": "INCLUDE",
+      "contracts": [
+        "SCOPE-201",
+        "CLAIM-201"
+      ],
+      "experimental_binary": false,
+      "path": "docs/risks/TI2_RISK_REGISTER.md",
+      "personal_absolute_path_detected": false,
+      "purpose": "Reconcile execution authority and enforce TI-2 scope with targeted Git approvals",
+      "secret_or_credential_detected": false,
+      "sha256": "900bb146663db9cf58188fe7974ed2d129a570f53ce273f61d6348e318b1a65d",
+      "state": "GREEN"
+    },
+    {
+      "checkpoint_disposition": "INCLUDE",
+      "contracts": [
+        "SCOPE-201",
+        "CLAIM-201"
+      ],
+      "experimental_binary": false,
+      "path": "docs/security/LOCAL_SANDBOX.md",
+      "personal_absolute_path_detected": false,
+      "purpose": "Reconcile execution authority and enforce TI-2 scope with targeted Git approvals",
+      "secret_or_credential_detected": false,
+      "sha256": "9389399481d4c4fe401f150929b66ed0028c7e303f6f6cdf67377e0ecd7ee3e6",
+      "state": "GREEN"
+    },
+    {
+      "checkpoint_disposition": "INCLUDE",
+      "contracts": [
+        "SCOPE-201",
+        "CLAIM-201"
+      ],
+      "experimental_binary": false,
+      "path": "pyproject.toml",
+      "personal_absolute_path_detected": false,
+      "purpose": "Reconcile execution authority and enforce TI-2 scope with targeted Git approvals",
+      "secret_or_credential_detected": false,
+      "sha256": "c8eeceafae658d4152a8359d51f62b8e95bf867a0975b3dfcf3474af8023aedf",
+      "state": "GREEN"
+    },
+    {
+      "checkpoint_disposition": "INCLUDE",
+      "contracts": [
+        "SCOPE-201",
+        "CLAIM-201"
+      ],
+      "experimental_binary": false,
+      "path": "scripts/check_local_bootstrap.py",
+      "personal_absolute_path_detected": false,
+      "purpose": "Reconcile execution authority and enforce TI-2 scope with targeted Git approvals",
+      "secret_or_credential_detected": false,
+      "sha256": "e0cd3db5661136000df56a9ad61321279bf79fb6e9624d2389682658d9533fbc",
+      "state": "GREEN"
+    },
+    {
+      "checkpoint_disposition": "INCLUDE",
+      "contracts": [
+        "SCOPE-201",
+        "CLAIM-201"
+      ],
+      "experimental_binary": false,
+      "path": "scripts/check_ti2_scope.py",
+      "personal_absolute_path_detected": false,
+      "purpose": "Reconcile execution authority and enforce TI-2 scope with targeted Git approvals",
+      "secret_or_credential_detected": false,
+      "sha256": "1fb0f1d77e79433c00f2a34f5dc222766803e0b9bb16fccf72660d26b6ad98f1",
+      "state": "GREEN"
+    },
+    {
+      "checkpoint_disposition": "INCLUDE",
+      "contracts": [
+        "GEO-201",
+        "GEO-202",
+        "GEO-203",
+        "GEO-204",
+        "GEO-205",
+        "REG-201",
+        "REG-202",
+        "REG-203",
+        "ROI-201",
+        "ROI-202",
+        "CAL-201",
+        "CAL-202",
+        "UNC-201"
+      ],
+      "experimental_binary": false,
+      "path": "src/snbi_fragmentation/ti2_geometry.py",
+      "personal_absolute_path_detected": false,
+      "purpose": "Synthetic geometry, ROI, scale and uncertainty contracts",
+      "secret_or_credential_detected": false,
+      "sha256": "70a33c41e94af432a241568134b40fe9f3e797f477ec07d71c729d640de0f038",
+      "state": "GREEN"
+    },
+    {
+      "checkpoint_disposition": "INCLUDE",
+      "contracts": [
+        "SRC-201",
+        "PILOT-201",
+        "RAW-201",
+        "IMG-201"
+      ],
+      "experimental_binary": false,
+      "path": "src/snbi_fragmentation/ti2_pilot.py",
+      "personal_absolute_path_detected": false,
+      "purpose": "Exact pilot allowlist, source custody, native image preservation and synthetic checks",
+      "secret_or_credential_detected": false,
+      "sha256": "653928faa600e683d521488cf8847f82351cc4155364843c031fc89df7fc330f",
+      "state": "GREEN"
+    },
+    {
+      "checkpoint_disposition": "INCLUDE",
+      "contracts": [
+        "SCOPE-201",
+        "CLAIM-201"
+      ],
+      "experimental_binary": false,
+      "path": "tests/test_local_bootstrap.py",
+      "personal_absolute_path_detected": false,
+      "purpose": "Reconcile execution authority and enforce TI-2 scope with targeted Git approvals",
+      "secret_or_credential_detected": false,
+      "sha256": "57c96fe625a3dc9719f65ddb3d5cadf89504a31d3be73753725cb719eb3d6a2e",
+      "state": "GREEN"
+    },
+    {
+      "checkpoint_disposition": "INCLUDE",
+      "contracts": [
+        "SCOPE-201",
+        "CLAIM-201"
+      ],
+      "experimental_binary": false,
+      "path": "tests/test_scope_guard.py",
+      "personal_absolute_path_detected": false,
+      "purpose": "Reconcile execution authority and enforce TI-2 scope with targeted Git approvals",
+      "secret_or_credential_detected": false,
+      "sha256": "ccd50cadded20ab8d7d4110e00bd7af26f88083117b0db6ccf74fe5ade0d0c2a",
+      "state": "GREEN"
+    },
+    {
+      "checkpoint_disposition": "INCLUDE",
+      "contracts": [
+        "GEO-201",
+        "GEO-202",
+        "GEO-203",
+        "GEO-204",
+        "GEO-205",
+        "REG-201",
+        "REG-202",
+        "REG-203",
+        "ROI-201",
+        "ROI-202",
+        "CAL-201",
+        "CAL-202",
+        "UNC-201"
+      ],
+      "experimental_binary": false,
+      "path": "tests/test_ti2_geometry.py",
+      "personal_absolute_path_detected": false,
+      "purpose": "Synthetic geometry, ROI, scale and uncertainty contracts",
+      "secret_or_credential_detected": false,
+      "sha256": "488cc007278423e210e28daa963f1ce3719b261d051a6d41a7c06a3869a322db",
+      "state": "GREEN"
+    },
+    {
+      "checkpoint_disposition": "INCLUDE",
+      "contracts": [
+        "SRC-201",
+        "PILOT-201",
+        "RAW-201",
+        "IMG-201"
+      ],
+      "experimental_binary": false,
+      "path": "tests/test_ti2_pilot.py",
+      "personal_absolute_path_detected": false,
+      "purpose": "Exact pilot allowlist, source custody, native image preservation and synthetic checks",
+      "secret_or_credential_detected": false,
+      "sha256": "537121c4ab95ff7a149f726bc648c4fe14bce6d568d0d0964e3e6aa887e8a294",
+      "state": "GREEN"
+    },
+    {
+      "checkpoint_disposition": "INCLUDE",
+      "contracts": [
+        "SCOPE-201",
+        "CLAIM-201"
+      ],
+      "experimental_binary": false,
+      "hash_note": "Self hash excluded to avoid recursive checksum; captured by later evidence bundle",
+      "path": "artifacts/evidence/TI2/e0r-recovery.json",
+      "personal_absolute_path_detected": false,
+      "purpose": "Per-file E0-R recovery review and checkpoint inventory",
+      "secret_or_credential_detected": false,
+      "sha256": null,
+      "state": "EVIDENCE"
+    }
+  ],
+  "pilot_images_decoded": 0,
+  "record_kind": "recovery_inventory_not_historical_reconstruction",
+  "scan_limit": "UTF-8 review, private-path/private-key/token pattern checks and name-based data guard; not a proof of absence of every possible secret",
+  "source_access_during_recovery": false,
+  "tests": {
+    "command": "PYTHONPATH=src TMPDIR=<REPOSITORY>/.bootstrap-test-tmp /usr/bin/python3 -B -m unittest discover -s tests -v",
+    "evidence": "artifacts/evidence/TI2/green-recovery.txt",
+    "exit_code": 0,
+    "passed": 75
+  },
+  "worktree_preserved": true
+}

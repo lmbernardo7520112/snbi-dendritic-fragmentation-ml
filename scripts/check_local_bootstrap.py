@@ -1,4 +1,4 @@
-"""Validate static local-bootstrap contracts without accessing scientific data."""
+"""Validate static local safeguards and current TI-2 authority without data access."""
 
 from __future__ import annotations
 
@@ -17,10 +17,10 @@ except ModuleNotFoundError:  # imported as scripts.check_local_bootstrap in test
     from scripts.check_repository_data import audit_entries, tracked_entries
 
 ROOT = Path(__file__).resolve().parents[1]
-AUTHORIZATION = ROOT / "docs/decisions/AUTHORIZATION-TI2-PLAN-APPROVAL-LOCAL-BOOTSTRAP-2026-09-17.md"
+AUTHORIZATION = ROOT / "docs/decisions/AUTHORIZATION-LB0-SDR2A-CLOSURE-PR5-MERGE-TI2-EXECUTION-2026-09-17.md"
 REQUIRED_AGENT_MARKERS = (
-    "TI2_EXECUTION_AUTHORIZED=false",
-    "AUTHORIZED_ACTIVITY=LOCAL_VSCODE_BOOTSTRAP",
+    "TI2_EXECUTION_AUTHORIZED=true",
+    "AUTHORIZED_ACTIVITY=TI2_REGISTRATION_CALIBRATION",
     "Do not follow symlinks",
     "no fallback outside the sandbox",
 )
@@ -139,6 +139,10 @@ def validate_vscode(settings: dict, tasks: dict) -> list[str]:
     return violations
 
 
+def read_authorization() -> str:
+    return AUTHORIZATION.read_text(encoding="utf-8")
+
+
 def validate(entries: list[tuple[str, str]] | None = None) -> dict:
     violations: list[str] = []
     agents = (ROOT / "AGENTS.md").read_text(encoding="utf-8")
@@ -146,20 +150,33 @@ def validate(entries: list[tuple[str, str]] | None = None) -> dict:
         if marker not in agents:
             violations.append(f"AGENTS.md missing marker: {marker}")
 
-    authorization = AUTHORIZATION.read_text(encoding="utf-8")
+    authorization = read_authorization()
     for marker in (
-        "não autorizou a execução da TI-2",
-        "bootstrap governado do ambiente local VS Code",
+        "Decision status: APPROVED",
+        "LB0_LOCAL_ACCEPTANCE: PASS",
+        "SDR2A_STATUS: RESOLVED",
+        "REAL_CODEX_SANDBOX: PASS_SMOKE",
+        "authorized complete execution of TI2-E0 through TI2-E7",
+        "only the 30 frozen lossless pilot images",
+        "TI-3 through TI-8",
     ):
         if marker not in authorization:
             violations.append(f"authorization record missing marker: {marker}")
 
     project = tomllib.loads((ROOT / "pyproject.toml").read_text(encoding="utf-8"))
     governance = project.get("tool", {}).get("snbi", {})
-    if governance.get("authorized_activity") != "local-vscode-bootstrap":
+    if governance.get("authorized_activity") != "ti2-registration-calibration":
         violations.append("pyproject authorized activity mismatch")
-    if governance.get("ti2_execution_authorized") is not False:
-        violations.append("pyproject must keep TI-2 execution unauthorized")
+    if governance.get("ti2_execution_authorized") is not True:
+        violations.append("pyproject must record the approved TI-2 execution authority")
+    if governance.get("blocked_phases") != [f"TI-{phase}" for phase in range(3, 9)]:
+        violations.append("TI-3 through TI-8 must remain blocked")
+    if governance.get("pilot_image_limit") != 30:
+        violations.append("pilot image limit must remain exactly 30")
+    if governance.get("authorized_branch") != "feat/ti2-registration-calibration":
+        violations.append("dedicated TI-2 branch authorization mismatch")
+    if governance.get("write_boundary") != "repository-only-default-sandbox":
+        violations.append("repository-only default-sandbox write boundary mismatch")
 
     settings = json.loads((ROOT / ".vscode/settings.json").read_text(encoding="utf-8"))
     tasks = json.loads((ROOT / ".vscode/tasks.json").read_text(encoding="utf-8"))
@@ -174,8 +191,11 @@ def validate(entries: list[tuple[str, str]] | None = None) -> dict:
         "audit": "governed_local_bootstrap",
         "status": "PASS" if not violations else "BLOCKED",
         "violations": violations,
-        "ti2_execution_authorized": False,
-        "codex_write_readiness": "BLOCKED_REQUIRES_REAL_CODEX_SANDBOX_CHECK_AND_AUTHOR_DECISION",
+        "ti2_execution_authorized": not violations,
+        "codex_write_readiness": (
+            "AUTHORIZED_DEFAULT_SANDBOX_REPOSITORY_ONLY" if not violations else "BLOCKED"
+        ),
+        "readiness_basis": "author decision and static safeguards; not a runtime sandbox probe",
     }
 
 
@@ -193,6 +213,7 @@ def main() -> int:
             "audit": "governed_local_bootstrap", "status": "BLOCKED",
             "violations": [f"validation failure: {type(exc).__name__}"],
             "ti2_execution_authorized": False,
+            "codex_write_readiness": "BLOCKED",
         }
     print(json.dumps(report, indent=2, sort_keys=True))
     return 0 if report["status"] == "PASS" else 1

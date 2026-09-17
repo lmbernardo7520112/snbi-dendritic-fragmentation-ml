@@ -1,5 +1,14 @@
 # TI-2 — Registro de riscos
 
+**Status:** execução TI-2 E0–E7 autorizada; controles de risco preservados.
+
+Autoridade: [decisão de execução](../decisions/AUTHORIZATION-LB0-SDR2A-CLOSURE-PR5-MERGE-TI2-EXECUTION-2026-09-17.md)
+e [retomada com aprovações Git pontuais](../decisions/AUTHORIZATION-TI2-TARGETED-GIT-APPROVALS-2026-09-17.md).
+A declaração final de riscos aceitos para planejamento é histórica; a
+autorização posterior permite somente o piloto congelado e não aceita
+automaticamente risco residual nem concede PASS. Na retomada, G2-SPATIAL e G3
+estavam `NOT_EVALUATED`.
+
 | ID | Risco | Consequência | Controle preventivo | Resposta de gate |
 |---|---|---|---|---|
 | R2-01 | diferença de canvas confundida com escala | coordenadas deslocadas | testar crop/padding antes de modelos mais complexos | bloquear transformação inadequada |

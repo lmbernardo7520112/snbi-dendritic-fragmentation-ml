@@ -1,0 +1,72 @@
+Command: /usr/bin/python3 -B -m unittest -v tests/test_local_bootstrap.py tests/test_scope_guard.py
+Exit code: 1
+test_later_phase_or_unbounded_pilot_fails_closed (tests.test_local_bootstrap.LocalBootstrapTests.test_later_phase_or_unbounded_pilot_fails_closed) ... 
+  test_later_phase_or_unbounded_pilot_fails_closed (tests.test_local_bootstrap.LocalBootstrapTests.test_later_phase_or_unbounded_pilot_fails_closed) (key='blocked_phases') ... FAIL
+  test_later_phase_or_unbounded_pilot_fails_closed (tests.test_local_bootstrap.LocalBootstrapTests.test_later_phase_or_unbounded_pilot_fails_closed) (key='pilot_image_limit') ... FAIL
+test_missing_execution_authority_fails_closed (tests.test_local_bootstrap.LocalBootstrapTests.test_missing_execution_authority_fails_closed) ... ERROR
+test_missing_git_index_fails_closed_without_traceback (tests.test_local_bootstrap.LocalBootstrapTests.test_missing_git_index_fails_closed_without_traceback) ... ok
+test_static_bootstrap_contracts_pass_with_safe_index (tests.test_local_bootstrap.LocalBootstrapTests.test_static_bootstrap_contracts_pass_with_safe_index) ... FAIL
+test_task_allowlist_rejects_command_substitution (tests.test_local_bootstrap.LocalBootstrapTests.test_task_allowlist_rejects_command_substitution) ... ok
+test_vscode_json_is_valid_and_tasks_are_not_automatic (tests.test_local_bootstrap.LocalBootstrapTests.test_vscode_json_is_valid_and_tasks_are_not_automatic) ... ok
+test_scope_guard (unittest.loader._FailedTest.test_scope_guard) ... ERROR
+
+======================================================================
+ERROR: test_missing_execution_authority_fails_closed (tests.test_local_bootstrap.LocalBootstrapTests.test_missing_execution_authority_fails_closed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "./tests/test_local_bootstrap.py", line 29, in test_missing_execution_authority_fails_closed
+    with patch.object(bootstrap, "read_authorization", return_value=""):
+  File "/usr/lib/python3.12/unittest/mock.py", line 1458, in __enter__
+    original, local = self.get_original()
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/mock.py", line 1431, in get_original
+    raise AttributeError(
+AttributeError: <module 'scripts.check_local_bootstrap' from './scripts/check_local_bootstrap.py'> does not have the attribute 'read_authorization'
+
+======================================================================
+ERROR: test_scope_guard (unittest.loader._FailedTest.test_scope_guard)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_scope_guard
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/unittest/loader.py", line 137, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "./tests/test_scope_guard.py", line 8, in <module>
+    from scripts import check_ti2_scope as scope
+ImportError: cannot import name 'check_ti2_scope' from 'scripts' (unknown location)
+
+
+======================================================================
+FAIL: test_later_phase_or_unbounded_pilot_fails_closed (tests.test_local_bootstrap.LocalBootstrapTests.test_later_phase_or_unbounded_pilot_fails_closed) (key='blocked_phases')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "./tests/test_local_bootstrap.py", line 45, in test_later_phase_or_unbounded_pilot_fails_closed
+    self.assertEqual(report["status"], "BLOCKED")
+AssertionError: 'PASS' != 'BLOCKED'
+- PASS
++ BLOCKED
+
+
+======================================================================
+FAIL: test_later_phase_or_unbounded_pilot_fails_closed (tests.test_local_bootstrap.LocalBootstrapTests.test_later_phase_or_unbounded_pilot_fails_closed) (key='pilot_image_limit')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "./tests/test_local_bootstrap.py", line 45, in test_later_phase_or_unbounded_pilot_fails_closed
+    self.assertEqual(report["status"], "BLOCKED")
+AssertionError: 'PASS' != 'BLOCKED'
+- PASS
++ BLOCKED
+
+
+======================================================================
+FAIL: test_static_bootstrap_contracts_pass_with_safe_index (tests.test_local_bootstrap.LocalBootstrapTests.test_static_bootstrap_contracts_pass_with_safe_index)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "./tests/test_local_bootstrap.py", line 22, in test_static_bootstrap_contracts_pass_with_safe_index
+    self.assertTrue(report["ti2_execution_authorized"])
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.003s
+
+FAILED (failures=3, errors=2)

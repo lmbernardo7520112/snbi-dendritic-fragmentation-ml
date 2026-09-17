@@ -19,11 +19,31 @@ class LocalBootstrapTests(unittest.TestCase):
     def test_static_bootstrap_contracts_pass_with_safe_index(self):
         report = validate(entries=[("100644", "README.md")])
         self.assertEqual(report["status"], "PASS", report["violations"])
-        self.assertFalse(report["ti2_execution_authorized"])
+        self.assertTrue(report["ti2_execution_authorized"])
         self.assertEqual(
             report["codex_write_readiness"],
-            "BLOCKED_REQUIRES_REAL_CODEX_SANDBOX_CHECK_AND_AUTHOR_DECISION",
+            "AUTHORIZED_DEFAULT_SANDBOX_REPOSITORY_ONLY",
         )
+
+    def test_missing_execution_authority_fails_closed(self):
+        with patch.object(bootstrap, "read_authorization", return_value=""):
+            report = validate(entries=[("100644", "README.md")])
+        self.assertEqual(report["status"], "BLOCKED")
+        self.assertFalse(report["ti2_execution_authorized"])
+        self.assertEqual(report["codex_write_readiness"], "BLOCKED")
+
+    def test_later_phase_or_unbounded_pilot_fails_closed(self):
+        import tomllib
+
+        original = tomllib.loads((ROOT / "pyproject.toml").read_text(encoding="utf-8"))
+        for key, value in (("blocked_phases", []), ("pilot_image_limit", 31)):
+            with self.subTest(key=key):
+                modified = copy.deepcopy(original)
+                modified["tool"]["snbi"][key] = value
+                with patch.object(bootstrap.tomllib, "loads", return_value=modified):
+                    report = validate(entries=[("100644", "README.md")])
+                self.assertEqual(report["status"], "BLOCKED")
+                self.assertFalse(report["ti2_execution_authorized"])
 
     def test_vscode_json_is_valid_and_tasks_are_not_automatic(self):
         settings = json.loads((ROOT / ".vscode/settings.json").read_text(encoding="utf-8"))

@@ -6,7 +6,10 @@ requires-python = ">=3.12,<3.13"
 dependencies = []
 
 [tool.snbi]
-lifecycle_state = "TI-1-closed"
-authorized_activity = "local-vscode-bootstrap"
-ti2_execution_authorized = false
-blocked_phases = ["TI-2-execution", "TI-3", "TI-4", "TI-5", "TI-6", "TI-7", "TI-8"]
+lifecycle_state = "TI-2-execution-authorized"
+authorized_activity = "ti2-registration-calibration"
+ti2_execution_authorized = true
+authorized_branch = "feat/ti2-registration-calibration"
+write_boundary = "repository-only-default-sandbox"
+pilot_image_limit = 30
+blocked_phases = ["TI-3", "TI-4", "TI-5", "TI-6", "TI-7", "TI-8"]

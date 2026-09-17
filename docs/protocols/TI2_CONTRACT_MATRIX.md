@@ -1,6 +1,12 @@
 # TI-2 — Matriz de contratos
 
-**Status:** planejamento; testes e implementação não autorizados
+**Status:** testes e implementação TI-2 autorizados; contratos científicos preservados
+
+Autoridade: [execução E0–E7](../decisions/AUTHORIZATION-LB0-SDR2A-CLOSURE-PR5-MERGE-TI2-EXECUTION-2026-09-17.md)
+e [retomada com aprovações Git pontuais](../decisions/AUTHORIZATION-TI2-TARGETED-GIT-APPROVALS-2026-09-17.md).
+A coluna de testes RED conserva a especificação aprovada. Autorização de
+execução não equivale à satisfação dos contratos; G2-SPATIAL/G3 estavam
+`NOT_EVALUATED` na retomada.
 
 | ID | Contrato bloqueante | Teste RED futuro | Evidência esperada | Gate |
 |---|---|---|---|---|

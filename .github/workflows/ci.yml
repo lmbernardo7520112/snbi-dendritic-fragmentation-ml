@@ -26,7 +26,7 @@ jobs:
         run: PYTHONPATH=src python -m snbi_fragmentation.custody validate configs/sources/source_manifest.json
       - name: Validate physical-time rule
         run: PYTHONPATH=src python -c "from pathlib import Path; from snbi_fragmentation.timebase import load_time_rule; load_time_rule(Path('configs/time_rule.json'))"
-      - name: Enforce TI-1 scope
-        run: PYTHONPATH=src python scripts/check_ti1_scope.py
+      - name: Enforce TI-2 scope without experimental data
+        run: PYTHONPATH=src python -B scripts/check_ti2_scope.py
       - name: Run deterministic tests
         run: PYTHONPATH=src python -m unittest discover -s tests -v

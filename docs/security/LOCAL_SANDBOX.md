@@ -1,6 +1,6 @@
 # Local Codex sandbox posture
 
-## Observed state
+## Historical startup failure
 
 Earlier read-only Codex IDE audits produced generic `bwrap ... Operation not
 permitted` startup failures. On 17 September 2026, the author performed the
@@ -12,8 +12,11 @@ bwrap: loopback: Failed RTM_NEWADDR: Operation not permitted
 ```
 
 The command was stopped without fallback, elevation, network access or host
-modification. This proves that the real sandbox is not currently operational;
-it does not identify the root cause by itself.
+modification. This established a historical startup failure; it did not
+identify the root cause by itself. SDR-2-A subsequently closed after the real
+Codex smoke test returned exactly `CODEX_SANDBOX_OK`. The author formally
+approved LB0 PASS and SDR-2-A RESOLVED in the
+[closure/execution decision](../decisions/AUTHORIZATION-LB0-SDR2A-CLOSURE-PR5-MERGE-TI2-EXECUTION-2026-09-17.md).
 
 One earlier audit used an author-approved read-only fallback outside the
 sandbox and produced no repository change. That historical exception is not
@@ -23,14 +26,15 @@ current authority and must not be repeated.
 
 - LB0 static/documental conformance: `PASS`;
 - workspace sanitization: `CONFIRMED_BY_AUTHOR`;
-- LB0 local acceptance: `PARTIAL`;
-- real Codex sandbox: `BLOCKED`;
-- Codex local write readiness: `BLOCKED`;
-- TI-2 execution: `NOT_AUTHORIZED`;
+- LB0 local acceptance: `PASS`;
+- real Codex sandbox: `PASS_SMOKE`;
+- SDR-2-A: `RESOLVED`;
+- Codex local write readiness: `AUTHORIZED_DEFAULT_SANDBOX_REPOSITORY_ONLY`;
+- TI-2 execution: `AUTHORIZED_E0_E7_FROZEN_30_IMAGE_PILOT`;
 - unsandboxed fallback: prohibited;
 - operating-system remediation: not authorized.
 
-## Established read-only facts
+## Historical read-only facts
 
 The approved manual preflight established, without changing the host:
 
@@ -48,15 +52,14 @@ These facts are diagnostic inputs. In particular, AppArmor restriction is a
 relevant observation but is not accepted as the cause without direct evidence.
 The missing `code` launcher does not prove that no compatible editor exists.
 
-## Diagnostic boundary
+## Closed diagnostic boundary
 
-The next collection is governed by
-`docs/protocols/LOCAL_SANDBOX_DIAGNOSTIC_PROTOCOL.md` and must be performed
-manually by the author. It does not expand the command allowance for the local
-Codex agent. The agent remains prohibited from executing commands while its
-sandbox is blocked.
+`docs/protocols/LOCAL_SANDBOX_DIAGNOSTIC_PROTOCOL.md` is retained as historical
+evidence. No further sandbox, namespace or AppArmor diagnosis/remediation is
+authorized or required for TI-2. Neither the historical protocol nor the
+presence of diagnostic scripts or editor tasks authorizes another run.
 
-The manual protocol may inspect only:
+The historical manual protocol allowed only:
 
 - editor product and official extension identity through the GUI;
 - categorical presence and non-secret versions of exact editor/package names;
@@ -70,7 +73,7 @@ It must not enumerate the home directory, list environment variables, inspect
 credentials, traverse experimental data, access the network, use privilege
 elevation or change system state.
 
-## Decision rule
+## Historical diagnostic decision rule
 
 | Observation | Result |
 |---|---|
@@ -82,6 +85,22 @@ elevation or change system state.
 | evidence remains ambiguous | `UNRESOLVED` |
 | any step requires privilege, installation or host change | `BLOCKED` |
 
-No diagnostic outcome authorizes remediation. Write readiness requires a
-successful real Codex sandbox command and a separate author decision after
-review of the evidence.
+No diagnostic outcome authorizes remediation. The successful real Codex smoke
+test and the separate author decision now establish bounded write readiness.
+
+## Git metadata protection and resumption
+
+Read-only `.git` protection is expected under the standard sandbox. The observed
+`.git/index.lock: Read-only file system` error stopped Git staging; it did not
+establish a bwrap/namespace/seccomp startup failure or reopen SDR-2-A.
+
+The [targeted Git approval decision](../decisions/AUTHORIZATION-TI2-TARGETED-GIT-APPROVALS-2026-09-17.md)
+permits separate approvals for exact-path staging and commits. Push is subject
+to final gate decisions and passing tests; Draft PR creation is approved as a
+separate action. These exceptions cover only the individually approved
+Git/GitHub actions. They do not authorize scientific work outside the sandbox,
+full access, broad escalation, credential inspection, permission changes or OS
+remediation. TI-2 PR merge still requires a new author decision.
+
+If sandbox startup itself fails again with bwrap, namespace or seccomp errors,
+stop immediately; no unsandboxed fallback is authorized.
