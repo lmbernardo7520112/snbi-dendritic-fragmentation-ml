@@ -8,6 +8,17 @@ research and presented at COBEM.
 
 ## Current authorization
 
+The latest [DIRECT decision](docs/decisions/AUTHORIZATION-TI2R-FRAG-DIRECT-2026-09-18.md)
+accepts the PR #7 result as a valid blocked scientific attempt. PR #7 was
+merged at `b7bbb6a1f0d3eaa43866027762eb2ed061c3d7c6` with green CI.
+One separate phase, TI2R-FRAG-DIRECT, tests only identity/integer crop offsets
+derived from the documented raster dimensions. Its dedicated canonical
+authority is `configs/authority/ti2r-frag-direct.json`; all prior authorities
+remain closed. See the [frozen DIRECT protocol](docs/protocols/TI2R_FRAG_DIRECT_PROTOCOL.md).
+This phase has at most three commits and one invocation, followed by consumed
+authority and a Draft PR. No new data, continuous registration or TI-3+ work.
+The preceding FRAG/TI-2 records below retain their historical meaning.
+
 The 2026-09-18 [TI2R-FRAG decision](docs/decisions/AUTHORIZATION-TI2R-FRAG-2026-09-18.md)
 authorizes one integrated recovery attempt for ESM3→ESM1 and ESM6→ESM4.
 Its canonical state is `configs/authority/ti2r-frag.json`; the legacy

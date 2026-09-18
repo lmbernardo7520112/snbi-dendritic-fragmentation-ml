@@ -1,0 +1,22 @@
+{
+  "phase": "TI2R_FRAG_DIRECT",
+  "state": "CLOSED_CONSUMED",
+  "authorization_id": "TI2R-FRAG-DIRECT-2026-09-18",
+  "base_sha": "b7bbb6a1f0d3eaa43866027762eb2ed061c3d7c6",
+  "authorized_branch": "feat/ti2r-frag-direct-mapping",
+  "allowed_pairs": ["ESM3-to-ESM1", "ESM6-to-ESM4"],
+  "allowed_frame_indices": {
+    "ESM1": {"development": [0, 146, 293], "holdout": [73, 219]},
+    "ESM3": {"development": [0, 146, 293], "holdout": [73, 219]},
+    "ESM4": {"development": [0, 197, 394], "holdout": [98, 295]},
+    "ESM6": {"development": [0, 197, 394], "holdout": [98, 295]}
+  },
+  "documented_dimensions": {"ESM1": [1278, 1018], "ESM3": [1280, 1024], "ESM4": [1278, 1012], "ESM6": [1280, 1012]},
+  "allowed_offsets": {"ESM3-to-ESM1": {"x": [0, 1, 2], "y": [0, 1, 2, 3, 4, 5, 6]}, "ESM6-to-ESM4": {"x": [0, 1, 2], "y": [0]}},
+  "holdout_policy": "OPEN_ONCE_AFTER_DEVELOPMENT_AND_FREEZE",
+  "max_invocations": 1,
+  "current_authorized_activity": "NONE_AWAITING_AUTHOR_DECISION",
+  "ti2r_execution_authorized": false,
+  "ti3_plus_authorized": false,
+  "merge_authorized": false
+}

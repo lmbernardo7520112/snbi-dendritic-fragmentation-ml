@@ -6,6 +6,19 @@ SDR-2-A is RESOLVED. No further sandbox diagnostic or OS remediation is authoriz
 
 ## Current authority
 
+The newer [TI2R-FRAG-DIRECT decision](docs/decisions/AUTHORIZATION-TI2R-FRAG-DIRECT-2026-09-18.md)
+authorizes the governed PR #7 merge (completed at
+`b7bbb6a1f0d3eaa43866027762eb2ed061c3d7c6`) and one separate direct-raster
+attempt on `feat/ti2r-frag-direct-mapping`. Its canonical state lives only in
+`configs/authority/ti2r-frag-direct.json`. Prior TI-2/FRAG authorities remain
+closed; their code, frozen protocols and results are immutable historical evidence.
+Only the 21/3 dimension-derived integer crop candidates and 20 explicitly
+listed buffers are permitted. C1 freezes before pixels; C2 activates once;
+C3 consumes before publication. Holdout opens only after its pair passes and
+freezes its offset. Partial/blocked pairs cannot trigger another automatic
+registrar attempt. Consult the [DIRECT protocol](docs/protocols/TI2R_FRAG_DIRECT_PROTOCOL.md).
+The new Draft PR must remain open/draft, with merge and TI-3+ unauthorized.
+
 The explicit 2026-09-18 [TI2R-FRAG decision](docs/decisions/AUTHORIZATION-TI2R-FRAG-2026-09-18.md)
 supersedes the older branch/write restrictions only for its three-commit,
 one-invocation scope on `feat/ti2r-frag-registration`. Its separate canonical

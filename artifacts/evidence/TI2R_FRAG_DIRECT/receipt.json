@@ -1,0 +1,567 @@
+{
+  "allowed_assets": {
+    "ESM1:0": {
+      "asset_id": "ESM1:0",
+      "bit_depth": 8,
+      "frame_bytes": 1951506,
+      "frame_index": 0,
+      "height": 1018,
+      "image_sha256": "8cf316b044c9da94f79715e5a81d23a771a7a236e0e16fb93a227639cdb36338",
+      "path": "data/derived/ti2-pilot/ESM1-0000.raw",
+      "pixel_format": "yuv420p",
+      "role": "development",
+      "source_id": "ESM1",
+      "width": 1278
+    },
+    "ESM1:146": {
+      "asset_id": "ESM1:146",
+      "bit_depth": 8,
+      "frame_bytes": 1951506,
+      "frame_index": 146,
+      "height": 1018,
+      "image_sha256": "eccb91c1d66f500d892dfe1c204c494cfc0d1d3542174d5ae1efd921bff034e0",
+      "path": "data/derived/ti2-pilot/ESM1-0146.raw",
+      "pixel_format": "yuv420p",
+      "role": "development",
+      "source_id": "ESM1",
+      "width": 1278
+    },
+    "ESM1:219": {
+      "asset_id": "ESM1:219",
+      "bit_depth": 8,
+      "frame_bytes": 1951506,
+      "frame_index": 219,
+      "height": 1018,
+      "image_sha256": "eb22ec185b465b11abbd6ecbf38d558a9dd5ef8d19f256e42429d70b566f10bd",
+      "path": "data/derived/ti2-pilot/ESM1-0219.raw",
+      "pixel_format": "yuv420p",
+      "role": "holdout",
+      "source_id": "ESM1",
+      "width": 1278
+    },
+    "ESM1:293": {
+      "asset_id": "ESM1:293",
+      "bit_depth": 8,
+      "frame_bytes": 1951506,
+      "frame_index": 293,
+      "height": 1018,
+      "image_sha256": "384a0297024fda34b6b2a5a87945297315e27efffdde47c9a3a67a6483fc1e13",
+      "path": "data/derived/ti2-pilot/ESM1-0293.raw",
+      "pixel_format": "yuv420p",
+      "role": "development",
+      "source_id": "ESM1",
+      "width": 1278
+    },
+    "ESM1:73": {
+      "asset_id": "ESM1:73",
+      "bit_depth": 8,
+      "frame_bytes": 1951506,
+      "frame_index": 73,
+      "height": 1018,
+      "image_sha256": "0209aef0e36c73b017063cbea4661f76ac0d24bd51631e11e1f41b9dae0cc2a5",
+      "path": "data/derived/ti2-pilot/ESM1-0073.raw",
+      "pixel_format": "yuv420p",
+      "role": "holdout",
+      "source_id": "ESM1",
+      "width": 1278
+    },
+    "ESM3:0": {
+      "asset_id": "ESM3:0",
+      "bit_depth": 8,
+      "frame_bytes": 1966080,
+      "frame_index": 0,
+      "height": 1024,
+      "image_sha256": "484389654c28d85969dc60830ea6be434b677d5fd9897434086f9f8ce9bb6ca8",
+      "path": "data/derived/ti2-pilot/ESM3-0000.raw",
+      "pixel_format": "yuv420p",
+      "role": "development",
+      "source_id": "ESM3",
+      "width": 1280
+    },
+    "ESM3:146": {
+      "asset_id": "ESM3:146",
+      "bit_depth": 8,
+      "frame_bytes": 1966080,
+      "frame_index": 146,
+      "height": 1024,
+      "image_sha256": "3d38b23a594b8d23c98fdc95351d3d435c92d6df6eb09ea3d8ac97f63baf50ee",
+      "path": "data/derived/ti2-pilot/ESM3-0146.raw",
+      "pixel_format": "yuv420p",
+      "role": "development",
+      "source_id": "ESM3",
+      "width": 1280
+    },
+    "ESM3:219": {
+      "asset_id": "ESM3:219",
+      "bit_depth": 8,
+      "frame_bytes": 1966080,
+      "frame_index": 219,
+      "height": 1024,
+      "image_sha256": "1d4e1e68456b3e21c06384655461ed8094b4259a853580ea0b1fa93741069c15",
+      "path": "data/derived/ti2-pilot/ESM3-0219.raw",
+      "pixel_format": "yuv420p",
+      "role": "holdout",
+      "source_id": "ESM3",
+      "width": 1280
+    },
+    "ESM3:293": {
+      "asset_id": "ESM3:293",
+      "bit_depth": 8,
+      "frame_bytes": 1966080,
+      "frame_index": 293,
+      "height": 1024,
+      "image_sha256": "79e8666e527787c1baf1957152dbe21532bd36c26bf15475aa1bac7d9987df15",
+      "path": "data/derived/ti2-pilot/ESM3-0293.raw",
+      "pixel_format": "yuv420p",
+      "role": "development",
+      "source_id": "ESM3",
+      "width": 1280
+    },
+    "ESM3:73": {
+      "asset_id": "ESM3:73",
+      "bit_depth": 8,
+      "frame_bytes": 1966080,
+      "frame_index": 73,
+      "height": 1024,
+      "image_sha256": "61e793620b24d5375237da7c19c4e96af5fa0605fa789c23bfba9c1466426365",
+      "path": "data/derived/ti2-pilot/ESM3-0073.raw",
+      "pixel_format": "yuv420p",
+      "role": "holdout",
+      "source_id": "ESM3",
+      "width": 1280
+    },
+    "ESM4:0": {
+      "asset_id": "ESM4:0",
+      "bit_depth": 8,
+      "frame_bytes": 1940004,
+      "frame_index": 0,
+      "height": 1012,
+      "image_sha256": "f9c9f9fb58289409f732aadb777adad48e1a626e055b17f2cde925ab54c1e5ca",
+      "path": "data/derived/ti2-pilot/ESM4-0000.raw",
+      "pixel_format": "yuv420p",
+      "role": "development",
+      "source_id": "ESM4",
+      "width": 1278
+    },
+    "ESM4:197": {
+      "asset_id": "ESM4:197",
+      "bit_depth": 8,
+      "frame_bytes": 1940004,
+      "frame_index": 197,
+      "height": 1012,
+      "image_sha256": "0446ff48d035f3f548d93253fbd9eac14536de0aeb477485b87b17dd647e8a57",
+      "path": "data/derived/ti2-pilot/ESM4-0197.raw",
+      "pixel_format": "yuv420p",
+      "role": "development",
+      "source_id": "ESM4",
+      "width": 1278
+    },
+    "ESM4:295": {
+      "asset_id": "ESM4:295",
+      "bit_depth": 8,
+      "frame_bytes": 1940004,
+      "frame_index": 295,
+      "height": 1012,
+      "image_sha256": "ac3b9df34450e8c0f801eb90d2c329c90737f4abda4202d81638395fb5519f2a",
+      "path": "data/derived/ti2-pilot/ESM4-0295.raw",
+      "pixel_format": "yuv420p",
+      "role": "holdout",
+      "source_id": "ESM4",
+      "width": 1278
+    },
+    "ESM4:394": {
+      "asset_id": "ESM4:394",
+      "bit_depth": 8,
+      "frame_bytes": 1940004,
+      "frame_index": 394,
+      "height": 1012,
+      "image_sha256": "fab7bacbb1198df4d2440362c6135452a7b3b87497455c6c6234261fad3c1422",
+      "path": "data/derived/ti2-pilot/ESM4-0394.raw",
+      "pixel_format": "yuv420p",
+      "role": "development",
+      "source_id": "ESM4",
+      "width": 1278
+    },
+    "ESM4:98": {
+      "asset_id": "ESM4:98",
+      "bit_depth": 8,
+      "frame_bytes": 1940004,
+      "frame_index": 98,
+      "height": 1012,
+      "image_sha256": "8e9ab504657f44d5f7252ff8a681a4c0007a4f0643f11cc26b171e989be75cc9",
+      "path": "data/derived/ti2-pilot/ESM4-0098.raw",
+      "pixel_format": "yuv420p",
+      "role": "holdout",
+      "source_id": "ESM4",
+      "width": 1278
+    },
+    "ESM6:0": {
+      "asset_id": "ESM6:0",
+      "bit_depth": 8,
+      "frame_bytes": 1943040,
+      "frame_index": 0,
+      "height": 1012,
+      "image_sha256": "df7448b2d94b6e86e19daeb2349705e4bb204c3464294ecf2fcc17c607ec8813",
+      "path": "data/derived/ti2-pilot/ESM6-0000.raw",
+      "pixel_format": "yuv420p",
+      "role": "development",
+      "source_id": "ESM6",
+      "width": 1280
+    },
+    "ESM6:197": {
+      "asset_id": "ESM6:197",
+      "bit_depth": 8,
+      "frame_bytes": 1943040,
+      "frame_index": 197,
+      "height": 1012,
+      "image_sha256": "eaaf9baa016cb829e3f4bf88101a32cd4d2a79fba78450294a2c904e2f45d2e3",
+      "path": "data/derived/ti2-pilot/ESM6-0197.raw",
+      "pixel_format": "yuv420p",
+      "role": "development",
+      "source_id": "ESM6",
+      "width": 1280
+    },
+    "ESM6:295": {
+      "asset_id": "ESM6:295",
+      "bit_depth": 8,
+      "frame_bytes": 1943040,
+      "frame_index": 295,
+      "height": 1012,
+      "image_sha256": "fefdd388948f55ee511f012589427ae9a191b54dbe6695eaf0d08fd763acd24b",
+      "path": "data/derived/ti2-pilot/ESM6-0295.raw",
+      "pixel_format": "yuv420p",
+      "role": "holdout",
+      "source_id": "ESM6",
+      "width": 1280
+    },
+    "ESM6:394": {
+      "asset_id": "ESM6:394",
+      "bit_depth": 8,
+      "frame_bytes": 1943040,
+      "frame_index": 394,
+      "height": 1012,
+      "image_sha256": "15ed13353647307ddeaba428e1bc5974ed7c02572a47ccae0b3d50a78dc140ad",
+      "path": "data/derived/ti2-pilot/ESM6-0394.raw",
+      "pixel_format": "yuv420p",
+      "role": "development",
+      "source_id": "ESM6",
+      "width": 1280
+    },
+    "ESM6:98": {
+      "asset_id": "ESM6:98",
+      "bit_depth": 8,
+      "frame_bytes": 1943040,
+      "frame_index": 98,
+      "height": 1012,
+      "image_sha256": "76dea6e55b0f0434ee48d2a114be5b6d41acebedcb8d1bb3d5ee0bfc4fa4a311",
+      "path": "data/derived/ti2-pilot/ESM6-0098.raw",
+      "pixel_format": "yuv420p",
+      "role": "holdout",
+      "source_id": "ESM6",
+      "width": 1280
+    }
+  },
+  "authorization_id": "TI2R-FRAG-DIRECT-2026-09-18",
+  "c2_sha": "a91b7093ce7dff530ab9020d5f69c30d365c10f5",
+  "experimental_bytes_before_receipt": 0,
+  "exposure_state": {
+    "ESM1:0": {
+      "evidence": [
+        "artifacts/evidence/TI2/validation-audit.json#validation-audit",
+        "artifacts/evidence/TI2/integrity-report.json#integrity-report",
+        "artifacts/evidence/TI2/estimation-audit.json#estimation-audit",
+        "artifacts/evidence/TI2/execution-report.md#execution-report",
+        "artifacts/evidence/TI2_CLOSEOUT_1/closeout-report.md#closeout-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_1/remediation-report.md#remediation-1-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_2/remediation-report.md#remediation-2-continuity",
+        "artifacts/evidence/TI2R_FRAG/execution-report.md#Acesso efetivo e valida\u00e7\u00e3o",
+        "artifacts/evidence/TI2R_FRAG/result.json#opened_assets"
+      ],
+      "holdout_sealed": false
+    },
+    "ESM1:146": {
+      "evidence": [
+        "artifacts/evidence/TI2/validation-audit.json#validation-audit",
+        "artifacts/evidence/TI2/integrity-report.json#integrity-report",
+        "artifacts/evidence/TI2/estimation-audit.json#estimation-audit",
+        "artifacts/evidence/TI2/execution-report.md#execution-report",
+        "artifacts/evidence/TI2_CLOSEOUT_1/closeout-report.md#closeout-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_1/remediation-report.md#remediation-1-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_2/remediation-report.md#remediation-2-continuity",
+        "artifacts/evidence/TI2R_FRAG/execution-report.md#Acesso efetivo e valida\u00e7\u00e3o",
+        "artifacts/evidence/TI2R_FRAG/result.json#opened_assets"
+      ],
+      "holdout_sealed": false
+    },
+    "ESM1:219": {
+      "evidence": [
+        "artifacts/evidence/TI2/validation-audit.json#validation-audit",
+        "artifacts/evidence/TI2/integrity-report.json#integrity-report",
+        "artifacts/evidence/TI2/estimation-audit.json#estimation-audit",
+        "artifacts/evidence/TI2/execution-report.md#execution-report",
+        "artifacts/evidence/TI2_CLOSEOUT_1/closeout-report.md#closeout-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_1/remediation-report.md#remediation-1-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_2/remediation-report.md#remediation-2-continuity",
+        "artifacts/evidence/TI2R_FRAG/execution-report.md#Acesso efetivo e valida\u00e7\u00e3o",
+        "artifacts/evidence/TI2R_FRAG/result.json#opened_assets"
+      ],
+      "holdout_sealed": true
+    },
+    "ESM1:293": {
+      "evidence": [
+        "artifacts/evidence/TI2/validation-audit.json#validation-audit",
+        "artifacts/evidence/TI2/integrity-report.json#integrity-report",
+        "artifacts/evidence/TI2/estimation-audit.json#estimation-audit",
+        "artifacts/evidence/TI2/execution-report.md#execution-report",
+        "artifacts/evidence/TI2_CLOSEOUT_1/closeout-report.md#closeout-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_1/remediation-report.md#remediation-1-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_2/remediation-report.md#remediation-2-continuity",
+        "artifacts/evidence/TI2R_FRAG/execution-report.md#Acesso efetivo e valida\u00e7\u00e3o",
+        "artifacts/evidence/TI2R_FRAG/result.json#opened_assets"
+      ],
+      "holdout_sealed": false
+    },
+    "ESM1:73": {
+      "evidence": [
+        "artifacts/evidence/TI2/validation-audit.json#validation-audit",
+        "artifacts/evidence/TI2/integrity-report.json#integrity-report",
+        "artifacts/evidence/TI2/estimation-audit.json#estimation-audit",
+        "artifacts/evidence/TI2/execution-report.md#execution-report",
+        "artifacts/evidence/TI2_CLOSEOUT_1/closeout-report.md#closeout-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_1/remediation-report.md#remediation-1-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_2/remediation-report.md#remediation-2-continuity",
+        "artifacts/evidence/TI2R_FRAG/execution-report.md#Acesso efetivo e valida\u00e7\u00e3o",
+        "artifacts/evidence/TI2R_FRAG/result.json#opened_assets"
+      ],
+      "holdout_sealed": true
+    },
+    "ESM3:0": {
+      "evidence": [
+        "artifacts/evidence/TI2/validation-audit.json#validation-audit",
+        "artifacts/evidence/TI2/integrity-report.json#integrity-report",
+        "artifacts/evidence/TI2/estimation-audit.json#estimation-audit",
+        "artifacts/evidence/TI2/execution-report.md#execution-report",
+        "artifacts/evidence/TI2_CLOSEOUT_1/closeout-report.md#closeout-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_1/remediation-report.md#remediation-1-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_2/remediation-report.md#remediation-2-continuity",
+        "artifacts/evidence/TI2R_FRAG/execution-report.md#Acesso efetivo e valida\u00e7\u00e3o",
+        "artifacts/evidence/TI2R_FRAG/result.json#opened_assets"
+      ],
+      "holdout_sealed": false
+    },
+    "ESM3:146": {
+      "evidence": [
+        "artifacts/evidence/TI2/validation-audit.json#validation-audit",
+        "artifacts/evidence/TI2/integrity-report.json#integrity-report",
+        "artifacts/evidence/TI2/estimation-audit.json#estimation-audit",
+        "artifacts/evidence/TI2/execution-report.md#execution-report",
+        "artifacts/evidence/TI2_CLOSEOUT_1/closeout-report.md#closeout-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_1/remediation-report.md#remediation-1-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_2/remediation-report.md#remediation-2-continuity",
+        "artifacts/evidence/TI2R_FRAG/execution-report.md#Acesso efetivo e valida\u00e7\u00e3o",
+        "artifacts/evidence/TI2R_FRAG/result.json#opened_assets"
+      ],
+      "holdout_sealed": false
+    },
+    "ESM3:219": {
+      "evidence": [
+        "artifacts/evidence/TI2/validation-audit.json#validation-audit",
+        "artifacts/evidence/TI2/integrity-report.json#integrity-report",
+        "artifacts/evidence/TI2/estimation-audit.json#estimation-audit",
+        "artifacts/evidence/TI2/execution-report.md#execution-report",
+        "artifacts/evidence/TI2_CLOSEOUT_1/closeout-report.md#closeout-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_1/remediation-report.md#remediation-1-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_2/remediation-report.md#remediation-2-continuity",
+        "artifacts/evidence/TI2R_FRAG/execution-report.md#Acesso efetivo e valida\u00e7\u00e3o",
+        "artifacts/evidence/TI2R_FRAG/result.json#opened_assets"
+      ],
+      "holdout_sealed": true
+    },
+    "ESM3:293": {
+      "evidence": [
+        "artifacts/evidence/TI2/validation-audit.json#validation-audit",
+        "artifacts/evidence/TI2/integrity-report.json#integrity-report",
+        "artifacts/evidence/TI2/estimation-audit.json#estimation-audit",
+        "artifacts/evidence/TI2/execution-report.md#execution-report",
+        "artifacts/evidence/TI2_CLOSEOUT_1/closeout-report.md#closeout-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_1/remediation-report.md#remediation-1-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_2/remediation-report.md#remediation-2-continuity",
+        "artifacts/evidence/TI2R_FRAG/execution-report.md#Acesso efetivo e valida\u00e7\u00e3o",
+        "artifacts/evidence/TI2R_FRAG/result.json#opened_assets"
+      ],
+      "holdout_sealed": false
+    },
+    "ESM3:73": {
+      "evidence": [
+        "artifacts/evidence/TI2/validation-audit.json#validation-audit",
+        "artifacts/evidence/TI2/integrity-report.json#integrity-report",
+        "artifacts/evidence/TI2/estimation-audit.json#estimation-audit",
+        "artifacts/evidence/TI2/execution-report.md#execution-report",
+        "artifacts/evidence/TI2_CLOSEOUT_1/closeout-report.md#closeout-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_1/remediation-report.md#remediation-1-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_2/remediation-report.md#remediation-2-continuity",
+        "artifacts/evidence/TI2R_FRAG/execution-report.md#Acesso efetivo e valida\u00e7\u00e3o",
+        "artifacts/evidence/TI2R_FRAG/result.json#opened_assets"
+      ],
+      "holdout_sealed": true
+    },
+    "ESM4:0": {
+      "evidence": [
+        "artifacts/evidence/TI2/validation-audit.json#validation-audit",
+        "artifacts/evidence/TI2/integrity-report.json#integrity-report",
+        "artifacts/evidence/TI2/estimation-audit.json#estimation-audit",
+        "artifacts/evidence/TI2/execution-report.md#execution-report",
+        "artifacts/evidence/TI2_CLOSEOUT_1/closeout-report.md#closeout-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_1/remediation-report.md#remediation-1-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_2/remediation-report.md#remediation-2-continuity",
+        "artifacts/evidence/TI2R_FRAG/execution-report.md#Acesso efetivo e valida\u00e7\u00e3o",
+        "artifacts/evidence/TI2R_FRAG/result.json#opened_assets"
+      ],
+      "holdout_sealed": false
+    },
+    "ESM4:197": {
+      "evidence": [
+        "artifacts/evidence/TI2/validation-audit.json#validation-audit",
+        "artifacts/evidence/TI2/integrity-report.json#integrity-report",
+        "artifacts/evidence/TI2/estimation-audit.json#estimation-audit",
+        "artifacts/evidence/TI2/execution-report.md#execution-report",
+        "artifacts/evidence/TI2_CLOSEOUT_1/closeout-report.md#closeout-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_1/remediation-report.md#remediation-1-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_2/remediation-report.md#remediation-2-continuity",
+        "artifacts/evidence/TI2R_FRAG/execution-report.md#Acesso efetivo e valida\u00e7\u00e3o",
+        "artifacts/evidence/TI2R_FRAG/result.json#opened_assets"
+      ],
+      "holdout_sealed": false
+    },
+    "ESM4:295": {
+      "evidence": [
+        "artifacts/evidence/TI2/validation-audit.json#validation-audit",
+        "artifacts/evidence/TI2/integrity-report.json#integrity-report",
+        "artifacts/evidence/TI2/estimation-audit.json#estimation-audit",
+        "artifacts/evidence/TI2/execution-report.md#execution-report",
+        "artifacts/evidence/TI2_CLOSEOUT_1/closeout-report.md#closeout-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_1/remediation-report.md#remediation-1-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_2/remediation-report.md#remediation-2-continuity",
+        "artifacts/evidence/TI2R_FRAG/execution-report.md#Acesso efetivo e valida\u00e7\u00e3o",
+        "artifacts/evidence/TI2R_FRAG/result.json#opened_assets"
+      ],
+      "holdout_sealed": true
+    },
+    "ESM4:394": {
+      "evidence": [
+        "artifacts/evidence/TI2/validation-audit.json#validation-audit",
+        "artifacts/evidence/TI2/integrity-report.json#integrity-report",
+        "artifacts/evidence/TI2/estimation-audit.json#estimation-audit",
+        "artifacts/evidence/TI2/execution-report.md#execution-report",
+        "artifacts/evidence/TI2_CLOSEOUT_1/closeout-report.md#closeout-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_1/remediation-report.md#remediation-1-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_2/remediation-report.md#remediation-2-continuity",
+        "artifacts/evidence/TI2R_FRAG/execution-report.md#Acesso efetivo e valida\u00e7\u00e3o",
+        "artifacts/evidence/TI2R_FRAG/result.json#opened_assets"
+      ],
+      "holdout_sealed": false
+    },
+    "ESM4:98": {
+      "evidence": [
+        "artifacts/evidence/TI2/validation-audit.json#validation-audit",
+        "artifacts/evidence/TI2/integrity-report.json#integrity-report",
+        "artifacts/evidence/TI2/estimation-audit.json#estimation-audit",
+        "artifacts/evidence/TI2/execution-report.md#execution-report",
+        "artifacts/evidence/TI2_CLOSEOUT_1/closeout-report.md#closeout-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_1/remediation-report.md#remediation-1-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_2/remediation-report.md#remediation-2-continuity",
+        "artifacts/evidence/TI2R_FRAG/execution-report.md#Acesso efetivo e valida\u00e7\u00e3o",
+        "artifacts/evidence/TI2R_FRAG/result.json#opened_assets"
+      ],
+      "holdout_sealed": true
+    },
+    "ESM6:0": {
+      "evidence": [
+        "artifacts/evidence/TI2/validation-audit.json#validation-audit",
+        "artifacts/evidence/TI2/integrity-report.json#integrity-report",
+        "artifacts/evidence/TI2/estimation-audit.json#estimation-audit",
+        "artifacts/evidence/TI2/execution-report.md#execution-report",
+        "artifacts/evidence/TI2_CLOSEOUT_1/closeout-report.md#closeout-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_1/remediation-report.md#remediation-1-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_2/remediation-report.md#remediation-2-continuity",
+        "artifacts/evidence/TI2R_FRAG/execution-report.md#Acesso efetivo e valida\u00e7\u00e3o",
+        "artifacts/evidence/TI2R_FRAG/result.json#opened_assets"
+      ],
+      "holdout_sealed": false
+    },
+    "ESM6:197": {
+      "evidence": [
+        "artifacts/evidence/TI2/validation-audit.json#validation-audit",
+        "artifacts/evidence/TI2/integrity-report.json#integrity-report",
+        "artifacts/evidence/TI2/estimation-audit.json#estimation-audit",
+        "artifacts/evidence/TI2/execution-report.md#execution-report",
+        "artifacts/evidence/TI2_CLOSEOUT_1/closeout-report.md#closeout-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_1/remediation-report.md#remediation-1-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_2/remediation-report.md#remediation-2-continuity",
+        "artifacts/evidence/TI2R_FRAG/execution-report.md#Acesso efetivo e valida\u00e7\u00e3o",
+        "artifacts/evidence/TI2R_FRAG/result.json#opened_assets"
+      ],
+      "holdout_sealed": false
+    },
+    "ESM6:295": {
+      "evidence": [
+        "artifacts/evidence/TI2/validation-audit.json#validation-audit",
+        "artifacts/evidence/TI2/integrity-report.json#integrity-report",
+        "artifacts/evidence/TI2/estimation-audit.json#estimation-audit",
+        "artifacts/evidence/TI2/execution-report.md#execution-report",
+        "artifacts/evidence/TI2_CLOSEOUT_1/closeout-report.md#closeout-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_1/remediation-report.md#remediation-1-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_2/remediation-report.md#remediation-2-continuity",
+        "artifacts/evidence/TI2R_FRAG/execution-report.md#Acesso efetivo e valida\u00e7\u00e3o",
+        "artifacts/evidence/TI2R_FRAG/result.json#opened_assets"
+      ],
+      "holdout_sealed": true
+    },
+    "ESM6:394": {
+      "evidence": [
+        "artifacts/evidence/TI2/validation-audit.json#validation-audit",
+        "artifacts/evidence/TI2/integrity-report.json#integrity-report",
+        "artifacts/evidence/TI2/estimation-audit.json#estimation-audit",
+        "artifacts/evidence/TI2/execution-report.md#execution-report",
+        "artifacts/evidence/TI2_CLOSEOUT_1/closeout-report.md#closeout-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_1/remediation-report.md#remediation-1-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_2/remediation-report.md#remediation-2-continuity",
+        "artifacts/evidence/TI2R_FRAG/execution-report.md#Acesso efetivo e valida\u00e7\u00e3o",
+        "artifacts/evidence/TI2R_FRAG/result.json#opened_assets"
+      ],
+      "holdout_sealed": false
+    },
+    "ESM6:98": {
+      "evidence": [
+        "artifacts/evidence/TI2/validation-audit.json#validation-audit",
+        "artifacts/evidence/TI2/integrity-report.json#integrity-report",
+        "artifacts/evidence/TI2/estimation-audit.json#estimation-audit",
+        "artifacts/evidence/TI2/execution-report.md#execution-report",
+        "artifacts/evidence/TI2_CLOSEOUT_1/closeout-report.md#closeout-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_1/remediation-report.md#remediation-1-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_2/remediation-report.md#remediation-2-continuity",
+        "artifacts/evidence/TI2R_FRAG/execution-report.md#Acesso efetivo e valida\u00e7\u00e3o",
+        "artifacts/evidence/TI2R_FRAG/result.json#opened_assets"
+      ],
+      "holdout_sealed": true
+    }
+  },
+  "frozen_hashes": {
+    "artifacts/evidence/TI2R_FRAG/result.json": "7a5af81f6932e8ac56c30b28b179844b6c3a1d30d4eebfe2bcb12fe5540362b9",
+    "artifacts/evidence/TI2R_FRAG_DIRECT/exposure.json": "15ffdd8add26e068e120d8296d9b7bacdd9367ec0c6ce96c77fe4ebe651ecc42",
+    "artifacts/metadata/ti2-pilot-manifest.json": "4f84a50e65e7541729d9a6c58e2649a872d6a92e55b305a66a0ce4e9f63a09a9",
+    "configs/authority/ti2r-frag.json": "d62571e33696af63e1425e3add370efcf5a642ced99dd52cfa3897ec3be93816",
+    "configs/registration/ti2r-frag-direct-method.json": "5a0aff2b39098d9663d58df1875bf92c8f129afa1df32108bfc153461195abfd",
+    "docs/protocols/TI2R_FRAG_DIRECT_PROTOCOL.md": "d7cca69b07762316bc0dc66c2d6e0be3c5c86b3bc508ddd2e11d4ca7da71b64f",
+    "pyproject.toml": "3d4195d69c33c9d18dd0c0c64ffb937f9e7cd3549c3d4c76dbebb05b9242fcc1",
+    "scripts/run_ti2r_frag_direct.py": "611c773d0cf240992b1e4a5af84809acca25dc4508964a2ab77d2fa49bf8ad5b",
+    "src/snbi_fragmentation/ti2_authority.py": "bcc9a586555b78c1c55341a43b66a40ac6ad4953714fa2273dd99ac0a78471f3",
+    "src/snbi_fragmentation/ti2r_frag_authority.py": "f030046d6b4a6bc392e9e14c4e871d6581c99cdcbf927f31535e322c49c45a42",
+    "src/snbi_fragmentation/ti2r_frag_direct_authority.py": "ec62a88a42ca4f84530103848e39927fc320fed7117039d8c57615abdb3bf6fb",
+    "src/snbi_fragmentation/ti2r_frag_direct_registration.py": "6b34ccd4d6fe113c3cd96dc7f6e871c5d2d5dd9711b01b7f6d8c089d952025b3"
+  },
+  "invocation_counter": 1,
+  "max_invocations": 1,
+  "no_prior_receipt_confirmed_by": "ATOMIC_O_EXCL_CREATION",
+  "phase": "TI2R_FRAG_DIRECT"
+}
