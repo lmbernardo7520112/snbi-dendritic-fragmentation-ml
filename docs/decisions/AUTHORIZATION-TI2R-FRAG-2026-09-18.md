@@ -4,13 +4,16 @@ Autor: Leonardo Maximino Bernardo. Data: 2026-09-18.
 
 ## Registro de transição
 
-Estado: `ACTIVE_ONE_SHOT`. C1 foi commitado integralmente antes de pixels.
-C2 ativa exatamente uma invocação; publicação permanece proibida até C3.
-O receipt atômico deve preceder todo byte experimental; interrupção não permite retry.
+Estado: `CLOSED_CONSUMED`. A única invocação terminou em
+`TI2R_FRAG=BLOCKED_REFERENCE_INSUFFICIENT`; G2_FRAG permanece BLOCKED.
+C1 precedeu os pixels; C2 ativou a invocação e o receipt precedeu os bytes.
+Foram abertos 12 ativos de desenvolvimento e nenhum dos oito quartis.
+C3 consome definitivamente esta autorização, sem retry ou alteração científica.
+Atividade atual: NONE_AWAITING_AUTHOR_DECISION; TI2R, TI3+ e merge: false.
 A autoridade específica canônica é `configs/authority/ti2r-frag.json`;
 `pyproject.toml [tool.snbi]` conserva a TI-2 histórica fechada.
-C2 alterará somente este registro e a autoridade específica.
-C3 consumirá a autorização mesmo se a tentativa ficar bloqueada.
+C2 alterou somente este registro e a autoridade específica.
+C3 registra o resultado bloqueado e o consumo; publicação somente após C3.
 
 ## Instrução autoral integral e preservada
 

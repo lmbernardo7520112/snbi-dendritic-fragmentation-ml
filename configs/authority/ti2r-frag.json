@@ -1,6 +1,6 @@
 {
   "phase": "TI2R_FRAG",
-  "state": "ACTIVE_ONE_SHOT",
+  "state": "CLOSED_CONSUMED",
   "authorization_id": "TI2R-FRAG-2026-09-18",
   "authorized_branch": "feat/ti2r-frag-registration",
   "base_sha": "0245faf74aa15424d95d43f92e87b32a06ac987b",
@@ -13,8 +13,8 @@
   },
   "max_invocations": 1,
   "validation_policy": "OPEN_ONCE_AFTER_FREEZE",
-  "current_authorized_activity": "TI2R_FRAG_ONE_SHOT",
-  "ti2r_execution_authorized": true,
+  "current_authorized_activity": "NONE_AWAITING_AUTHOR_DECISION",
+  "ti2r_execution_authorized": false,
   "ti3_plus_authorized": false,
   "merge_authorized": false
 }

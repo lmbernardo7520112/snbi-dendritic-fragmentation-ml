@@ -39,6 +39,23 @@
       "tests_run": 261
     }
   },
+  "C3_before_commit": {
+    "authorized_assets": 20,
+    "esm2_esm5_access": false,
+    "experimental_bytes_read": 23401890,
+    "frozen_files_identical_to_C1": true,
+    "frozen_text_hashes_verified": 8,
+    "opened_development_assets": 12,
+    "opened_validation_assets": 0,
+    "post_C3_tests_and_remote_CI": "To be observed after commit and reported in terminal/PR, not invented in this record.",
+    "postactivation_code_changes": false,
+    "remote_publication": "NOT_YET_PERFORMED",
+    "runner_exit_code": 2,
+    "runner_invocations": 1,
+    "scientific_status": "BLOCKED_REFERENCE_INSUFFICIENT",
+    "state": "CLOSED_CONSUMED",
+    "validation_reopened": false
+  },
   "implementation_development_note": "Initial synthetic rigid/affine fixtures exposed local optimization minima; fixed finite initial grids and independent-reference information checks were finalized before C1. No experimental access or parameter refinement after activation is permitted.",
   "phase": "TI2R_FRAG"
 }

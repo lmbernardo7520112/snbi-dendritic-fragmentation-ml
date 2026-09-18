@@ -1,0 +1,423 @@
+{
+  "allowed_assets": {
+    "ESM1:0": {
+      "frame_bytes": 1951506,
+      "frame_index": 0,
+      "image_sha256": "8cf316b044c9da94f79715e5a81d23a771a7a236e0e16fb93a227639cdb36338",
+      "path": "data/derived/ti2-pilot/ESM1-0000.raw",
+      "role": "development",
+      "source_id": "ESM1"
+    },
+    "ESM1:146": {
+      "frame_bytes": 1951506,
+      "frame_index": 146,
+      "image_sha256": "eccb91c1d66f500d892dfe1c204c494cfc0d1d3542174d5ae1efd921bff034e0",
+      "path": "data/derived/ti2-pilot/ESM1-0146.raw",
+      "role": "development",
+      "source_id": "ESM1"
+    },
+    "ESM1:219": {
+      "frame_bytes": 1951506,
+      "frame_index": 219,
+      "image_sha256": "eb22ec185b465b11abbd6ecbf38d558a9dd5ef8d19f256e42429d70b566f10bd",
+      "path": "data/derived/ti2-pilot/ESM1-0219.raw",
+      "role": "validation",
+      "source_id": "ESM1"
+    },
+    "ESM1:293": {
+      "frame_bytes": 1951506,
+      "frame_index": 293,
+      "image_sha256": "384a0297024fda34b6b2a5a87945297315e27efffdde47c9a3a67a6483fc1e13",
+      "path": "data/derived/ti2-pilot/ESM1-0293.raw",
+      "role": "development",
+      "source_id": "ESM1"
+    },
+    "ESM1:73": {
+      "frame_bytes": 1951506,
+      "frame_index": 73,
+      "image_sha256": "0209aef0e36c73b017063cbea4661f76ac0d24bd51631e11e1f41b9dae0cc2a5",
+      "path": "data/derived/ti2-pilot/ESM1-0073.raw",
+      "role": "validation",
+      "source_id": "ESM1"
+    },
+    "ESM3:0": {
+      "frame_bytes": 1966080,
+      "frame_index": 0,
+      "image_sha256": "484389654c28d85969dc60830ea6be434b677d5fd9897434086f9f8ce9bb6ca8",
+      "path": "data/derived/ti2-pilot/ESM3-0000.raw",
+      "role": "development",
+      "source_id": "ESM3"
+    },
+    "ESM3:146": {
+      "frame_bytes": 1966080,
+      "frame_index": 146,
+      "image_sha256": "3d38b23a594b8d23c98fdc95351d3d435c92d6df6eb09ea3d8ac97f63baf50ee",
+      "path": "data/derived/ti2-pilot/ESM3-0146.raw",
+      "role": "development",
+      "source_id": "ESM3"
+    },
+    "ESM3:219": {
+      "frame_bytes": 1966080,
+      "frame_index": 219,
+      "image_sha256": "1d4e1e68456b3e21c06384655461ed8094b4259a853580ea0b1fa93741069c15",
+      "path": "data/derived/ti2-pilot/ESM3-0219.raw",
+      "role": "validation",
+      "source_id": "ESM3"
+    },
+    "ESM3:293": {
+      "frame_bytes": 1966080,
+      "frame_index": 293,
+      "image_sha256": "79e8666e527787c1baf1957152dbe21532bd36c26bf15475aa1bac7d9987df15",
+      "path": "data/derived/ti2-pilot/ESM3-0293.raw",
+      "role": "development",
+      "source_id": "ESM3"
+    },
+    "ESM3:73": {
+      "frame_bytes": 1966080,
+      "frame_index": 73,
+      "image_sha256": "61e793620b24d5375237da7c19c4e96af5fa0605fa789c23bfba9c1466426365",
+      "path": "data/derived/ti2-pilot/ESM3-0073.raw",
+      "role": "validation",
+      "source_id": "ESM3"
+    },
+    "ESM4:0": {
+      "frame_bytes": 1940004,
+      "frame_index": 0,
+      "image_sha256": "f9c9f9fb58289409f732aadb777adad48e1a626e055b17f2cde925ab54c1e5ca",
+      "path": "data/derived/ti2-pilot/ESM4-0000.raw",
+      "role": "development",
+      "source_id": "ESM4"
+    },
+    "ESM4:197": {
+      "frame_bytes": 1940004,
+      "frame_index": 197,
+      "image_sha256": "0446ff48d035f3f548d93253fbd9eac14536de0aeb477485b87b17dd647e8a57",
+      "path": "data/derived/ti2-pilot/ESM4-0197.raw",
+      "role": "development",
+      "source_id": "ESM4"
+    },
+    "ESM4:295": {
+      "frame_bytes": 1940004,
+      "frame_index": 295,
+      "image_sha256": "ac3b9df34450e8c0f801eb90d2c329c90737f4abda4202d81638395fb5519f2a",
+      "path": "data/derived/ti2-pilot/ESM4-0295.raw",
+      "role": "validation",
+      "source_id": "ESM4"
+    },
+    "ESM4:394": {
+      "frame_bytes": 1940004,
+      "frame_index": 394,
+      "image_sha256": "fab7bacbb1198df4d2440362c6135452a7b3b87497455c6c6234261fad3c1422",
+      "path": "data/derived/ti2-pilot/ESM4-0394.raw",
+      "role": "development",
+      "source_id": "ESM4"
+    },
+    "ESM4:98": {
+      "frame_bytes": 1940004,
+      "frame_index": 98,
+      "image_sha256": "8e9ab504657f44d5f7252ff8a681a4c0007a4f0643f11cc26b171e989be75cc9",
+      "path": "data/derived/ti2-pilot/ESM4-0098.raw",
+      "role": "validation",
+      "source_id": "ESM4"
+    },
+    "ESM6:0": {
+      "frame_bytes": 1943040,
+      "frame_index": 0,
+      "image_sha256": "df7448b2d94b6e86e19daeb2349705e4bb204c3464294ecf2fcc17c607ec8813",
+      "path": "data/derived/ti2-pilot/ESM6-0000.raw",
+      "role": "development",
+      "source_id": "ESM6"
+    },
+    "ESM6:197": {
+      "frame_bytes": 1943040,
+      "frame_index": 197,
+      "image_sha256": "eaaf9baa016cb829e3f4bf88101a32cd4d2a79fba78450294a2c904e2f45d2e3",
+      "path": "data/derived/ti2-pilot/ESM6-0197.raw",
+      "role": "development",
+      "source_id": "ESM6"
+    },
+    "ESM6:295": {
+      "frame_bytes": 1943040,
+      "frame_index": 295,
+      "image_sha256": "fefdd388948f55ee511f012589427ae9a191b54dbe6695eaf0d08fd763acd24b",
+      "path": "data/derived/ti2-pilot/ESM6-0295.raw",
+      "role": "validation",
+      "source_id": "ESM6"
+    },
+    "ESM6:394": {
+      "frame_bytes": 1943040,
+      "frame_index": 394,
+      "image_sha256": "15ed13353647307ddeaba428e1bc5974ed7c02572a47ccae0b3d50a78dc140ad",
+      "path": "data/derived/ti2-pilot/ESM6-0394.raw",
+      "role": "development",
+      "source_id": "ESM6"
+    },
+    "ESM6:98": {
+      "frame_bytes": 1943040,
+      "frame_index": 98,
+      "image_sha256": "76dea6e55b0f0434ee48d2a114be5b6d41acebedcb8d1bb3d5ee0bfc4fa4a311",
+      "path": "data/derived/ti2-pilot/ESM6-0098.raw",
+      "role": "validation",
+      "source_id": "ESM6"
+    }
+  },
+  "authorization_id": "TI2R-FRAG-2026-09-18",
+  "c2_sha": "40874c92e65fbd13a05be7b8d98aa17fadd1f79c",
+  "experimental_bytes_before_receipt": 0,
+  "exposure_state": {
+    "ESM1:0": {
+      "evidence": [
+        "artifacts/evidence/TI2/validation-audit.json#validation-audit",
+        "artifacts/evidence/TI2/integrity-report.json#integrity-report",
+        "artifacts/evidence/TI2/estimation-audit.json#estimation-audit",
+        "artifacts/evidence/TI2/execution-report.md#execution-report",
+        "artifacts/evidence/TI2_CLOSEOUT_1/closeout-report.md#closeout-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_1/remediation-report.md#remediation-1-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_2/remediation-report.md#remediation-2-continuity"
+      ],
+      "validation_sealed": false
+    },
+    "ESM1:146": {
+      "evidence": [
+        "artifacts/evidence/TI2/validation-audit.json#validation-audit",
+        "artifacts/evidence/TI2/integrity-report.json#integrity-report",
+        "artifacts/evidence/TI2/estimation-audit.json#estimation-audit",
+        "artifacts/evidence/TI2/execution-report.md#execution-report",
+        "artifacts/evidence/TI2_CLOSEOUT_1/closeout-report.md#closeout-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_1/remediation-report.md#remediation-1-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_2/remediation-report.md#remediation-2-continuity"
+      ],
+      "validation_sealed": false
+    },
+    "ESM1:219": {
+      "evidence": [
+        "artifacts/evidence/TI2/validation-audit.json#validation-audit",
+        "artifacts/evidence/TI2/integrity-report.json#integrity-report",
+        "artifacts/evidence/TI2/estimation-audit.json#estimation-audit",
+        "artifacts/evidence/TI2/execution-report.md#execution-report",
+        "artifacts/evidence/TI2_CLOSEOUT_1/closeout-report.md#closeout-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_1/remediation-report.md#remediation-1-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_2/remediation-report.md#remediation-2-continuity"
+      ],
+      "validation_sealed": true
+    },
+    "ESM1:293": {
+      "evidence": [
+        "artifacts/evidence/TI2/validation-audit.json#validation-audit",
+        "artifacts/evidence/TI2/integrity-report.json#integrity-report",
+        "artifacts/evidence/TI2/estimation-audit.json#estimation-audit",
+        "artifacts/evidence/TI2/execution-report.md#execution-report",
+        "artifacts/evidence/TI2_CLOSEOUT_1/closeout-report.md#closeout-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_1/remediation-report.md#remediation-1-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_2/remediation-report.md#remediation-2-continuity"
+      ],
+      "validation_sealed": false
+    },
+    "ESM1:73": {
+      "evidence": [
+        "artifacts/evidence/TI2/validation-audit.json#validation-audit",
+        "artifacts/evidence/TI2/integrity-report.json#integrity-report",
+        "artifacts/evidence/TI2/estimation-audit.json#estimation-audit",
+        "artifacts/evidence/TI2/execution-report.md#execution-report",
+        "artifacts/evidence/TI2_CLOSEOUT_1/closeout-report.md#closeout-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_1/remediation-report.md#remediation-1-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_2/remediation-report.md#remediation-2-continuity"
+      ],
+      "validation_sealed": true
+    },
+    "ESM3:0": {
+      "evidence": [
+        "artifacts/evidence/TI2/validation-audit.json#validation-audit",
+        "artifacts/evidence/TI2/integrity-report.json#integrity-report",
+        "artifacts/evidence/TI2/estimation-audit.json#estimation-audit",
+        "artifacts/evidence/TI2/execution-report.md#execution-report",
+        "artifacts/evidence/TI2_CLOSEOUT_1/closeout-report.md#closeout-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_1/remediation-report.md#remediation-1-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_2/remediation-report.md#remediation-2-continuity"
+      ],
+      "validation_sealed": false
+    },
+    "ESM3:146": {
+      "evidence": [
+        "artifacts/evidence/TI2/validation-audit.json#validation-audit",
+        "artifacts/evidence/TI2/integrity-report.json#integrity-report",
+        "artifacts/evidence/TI2/estimation-audit.json#estimation-audit",
+        "artifacts/evidence/TI2/execution-report.md#execution-report",
+        "artifacts/evidence/TI2_CLOSEOUT_1/closeout-report.md#closeout-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_1/remediation-report.md#remediation-1-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_2/remediation-report.md#remediation-2-continuity"
+      ],
+      "validation_sealed": false
+    },
+    "ESM3:219": {
+      "evidence": [
+        "artifacts/evidence/TI2/validation-audit.json#validation-audit",
+        "artifacts/evidence/TI2/integrity-report.json#integrity-report",
+        "artifacts/evidence/TI2/estimation-audit.json#estimation-audit",
+        "artifacts/evidence/TI2/execution-report.md#execution-report",
+        "artifacts/evidence/TI2_CLOSEOUT_1/closeout-report.md#closeout-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_1/remediation-report.md#remediation-1-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_2/remediation-report.md#remediation-2-continuity"
+      ],
+      "validation_sealed": true
+    },
+    "ESM3:293": {
+      "evidence": [
+        "artifacts/evidence/TI2/validation-audit.json#validation-audit",
+        "artifacts/evidence/TI2/integrity-report.json#integrity-report",
+        "artifacts/evidence/TI2/estimation-audit.json#estimation-audit",
+        "artifacts/evidence/TI2/execution-report.md#execution-report",
+        "artifacts/evidence/TI2_CLOSEOUT_1/closeout-report.md#closeout-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_1/remediation-report.md#remediation-1-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_2/remediation-report.md#remediation-2-continuity"
+      ],
+      "validation_sealed": false
+    },
+    "ESM3:73": {
+      "evidence": [
+        "artifacts/evidence/TI2/validation-audit.json#validation-audit",
+        "artifacts/evidence/TI2/integrity-report.json#integrity-report",
+        "artifacts/evidence/TI2/estimation-audit.json#estimation-audit",
+        "artifacts/evidence/TI2/execution-report.md#execution-report",
+        "artifacts/evidence/TI2_CLOSEOUT_1/closeout-report.md#closeout-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_1/remediation-report.md#remediation-1-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_2/remediation-report.md#remediation-2-continuity"
+      ],
+      "validation_sealed": true
+    },
+    "ESM4:0": {
+      "evidence": [
+        "artifacts/evidence/TI2/validation-audit.json#validation-audit",
+        "artifacts/evidence/TI2/integrity-report.json#integrity-report",
+        "artifacts/evidence/TI2/estimation-audit.json#estimation-audit",
+        "artifacts/evidence/TI2/execution-report.md#execution-report",
+        "artifacts/evidence/TI2_CLOSEOUT_1/closeout-report.md#closeout-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_1/remediation-report.md#remediation-1-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_2/remediation-report.md#remediation-2-continuity"
+      ],
+      "validation_sealed": false
+    },
+    "ESM4:197": {
+      "evidence": [
+        "artifacts/evidence/TI2/validation-audit.json#validation-audit",
+        "artifacts/evidence/TI2/integrity-report.json#integrity-report",
+        "artifacts/evidence/TI2/estimation-audit.json#estimation-audit",
+        "artifacts/evidence/TI2/execution-report.md#execution-report",
+        "artifacts/evidence/TI2_CLOSEOUT_1/closeout-report.md#closeout-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_1/remediation-report.md#remediation-1-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_2/remediation-report.md#remediation-2-continuity"
+      ],
+      "validation_sealed": false
+    },
+    "ESM4:295": {
+      "evidence": [
+        "artifacts/evidence/TI2/validation-audit.json#validation-audit",
+        "artifacts/evidence/TI2/integrity-report.json#integrity-report",
+        "artifacts/evidence/TI2/estimation-audit.json#estimation-audit",
+        "artifacts/evidence/TI2/execution-report.md#execution-report",
+        "artifacts/evidence/TI2_CLOSEOUT_1/closeout-report.md#closeout-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_1/remediation-report.md#remediation-1-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_2/remediation-report.md#remediation-2-continuity"
+      ],
+      "validation_sealed": true
+    },
+    "ESM4:394": {
+      "evidence": [
+        "artifacts/evidence/TI2/validation-audit.json#validation-audit",
+        "artifacts/evidence/TI2/integrity-report.json#integrity-report",
+        "artifacts/evidence/TI2/estimation-audit.json#estimation-audit",
+        "artifacts/evidence/TI2/execution-report.md#execution-report",
+        "artifacts/evidence/TI2_CLOSEOUT_1/closeout-report.md#closeout-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_1/remediation-report.md#remediation-1-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_2/remediation-report.md#remediation-2-continuity"
+      ],
+      "validation_sealed": false
+    },
+    "ESM4:98": {
+      "evidence": [
+        "artifacts/evidence/TI2/validation-audit.json#validation-audit",
+        "artifacts/evidence/TI2/integrity-report.json#integrity-report",
+        "artifacts/evidence/TI2/estimation-audit.json#estimation-audit",
+        "artifacts/evidence/TI2/execution-report.md#execution-report",
+        "artifacts/evidence/TI2_CLOSEOUT_1/closeout-report.md#closeout-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_1/remediation-report.md#remediation-1-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_2/remediation-report.md#remediation-2-continuity"
+      ],
+      "validation_sealed": true
+    },
+    "ESM6:0": {
+      "evidence": [
+        "artifacts/evidence/TI2/validation-audit.json#validation-audit",
+        "artifacts/evidence/TI2/integrity-report.json#integrity-report",
+        "artifacts/evidence/TI2/estimation-audit.json#estimation-audit",
+        "artifacts/evidence/TI2/execution-report.md#execution-report",
+        "artifacts/evidence/TI2_CLOSEOUT_1/closeout-report.md#closeout-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_1/remediation-report.md#remediation-1-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_2/remediation-report.md#remediation-2-continuity"
+      ],
+      "validation_sealed": false
+    },
+    "ESM6:197": {
+      "evidence": [
+        "artifacts/evidence/TI2/validation-audit.json#validation-audit",
+        "artifacts/evidence/TI2/integrity-report.json#integrity-report",
+        "artifacts/evidence/TI2/estimation-audit.json#estimation-audit",
+        "artifacts/evidence/TI2/execution-report.md#execution-report",
+        "artifacts/evidence/TI2_CLOSEOUT_1/closeout-report.md#closeout-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_1/remediation-report.md#remediation-1-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_2/remediation-report.md#remediation-2-continuity"
+      ],
+      "validation_sealed": false
+    },
+    "ESM6:295": {
+      "evidence": [
+        "artifacts/evidence/TI2/validation-audit.json#validation-audit",
+        "artifacts/evidence/TI2/integrity-report.json#integrity-report",
+        "artifacts/evidence/TI2/estimation-audit.json#estimation-audit",
+        "artifacts/evidence/TI2/execution-report.md#execution-report",
+        "artifacts/evidence/TI2_CLOSEOUT_1/closeout-report.md#closeout-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_1/remediation-report.md#remediation-1-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_2/remediation-report.md#remediation-2-continuity"
+      ],
+      "validation_sealed": true
+    },
+    "ESM6:394": {
+      "evidence": [
+        "artifacts/evidence/TI2/validation-audit.json#validation-audit",
+        "artifacts/evidence/TI2/integrity-report.json#integrity-report",
+        "artifacts/evidence/TI2/estimation-audit.json#estimation-audit",
+        "artifacts/evidence/TI2/execution-report.md#execution-report",
+        "artifacts/evidence/TI2_CLOSEOUT_1/closeout-report.md#closeout-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_1/remediation-report.md#remediation-1-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_2/remediation-report.md#remediation-2-continuity"
+      ],
+      "validation_sealed": false
+    },
+    "ESM6:98": {
+      "evidence": [
+        "artifacts/evidence/TI2/validation-audit.json#validation-audit",
+        "artifacts/evidence/TI2/integrity-report.json#integrity-report",
+        "artifacts/evidence/TI2/estimation-audit.json#estimation-audit",
+        "artifacts/evidence/TI2/execution-report.md#execution-report",
+        "artifacts/evidence/TI2_CLOSEOUT_1/closeout-report.md#closeout-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_1/remediation-report.md#remediation-1-continuity",
+        "artifacts/evidence/TI2_PR6_REMEDIATION_2/remediation-report.md#remediation-2-continuity"
+      ],
+      "validation_sealed": true
+    }
+  },
+  "frozen_hashes": {
+    "artifacts/evidence/TI2R_FRAG/exposure.json": "02d07ec3631dfc2dfdf3d07ef56371f555d6ef94d71209493c7d0ba146a70610",
+    "artifacts/metadata/ti2-pilot-manifest.json": "4f84a50e65e7541729d9a6c58e2649a872d6a92e55b305a66a0ce4e9f63a09a9",
+    "configs/registration/ti2r-frag-method.json": "97a630ab5d58e133027d94932b9abe0189dbcc4d578817b396b9a1293cf48201",
+    "docs/protocols/TI2R_FRAG_PROTOCOL.md": "10e7374e13fd306ec3a2110427746e7ba2e4585311d50598679f2f98665a2e7f",
+    "pyproject.toml": "3d4195d69c33c9d18dd0c0c64ffb937f9e7cd3549c3d4c76dbebb05b9242fcc1",
+    "scripts/run_ti2r_frag.py": "d24f6cd04f2945e6230dea25749db8cd49d2509c2d06c3a2c4f3b8c268ce4cda",
+    "src/snbi_fragmentation/ti2r_frag_authority.py": "f030046d6b4a6bc392e9e14c4e871d6581c99cdcbf927f31535e322c49c45a42",
+    "src/snbi_fragmentation/ti2r_frag_registration.py": "58314d4583a99ef65b6d8629646945d44a4ae1932cb3edd059656ef822753871"
+  },
+  "invocation_counter": 1,
+  "max_invocations": 1,
+  "no_prior_receipt_confirmed_by": "ATOMIC_O_EXCL_CREATION",
+  "phase": "TI2R_FRAG"
+}
