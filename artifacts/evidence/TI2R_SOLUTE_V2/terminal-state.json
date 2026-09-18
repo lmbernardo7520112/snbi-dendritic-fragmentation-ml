@@ -1,0 +1,142 @@
+{
+  "CURRENT_AUTHORIZED_ACTIVITY": "NONE_AWAITING_AUTHOR_DECISION",
+  "G2_FRAG": "PASS_DIRECT_RASTER_MAPPING",
+  "G2_SOLUTE": "BLOCKED_PENDING_LOCKED_HOLDOUT",
+  "HOLDOUT_SOLUTE": "SEALED",
+  "MERGE_AUTHORIZED": false,
+  "NO_AUTOMATIC_V3": true,
+  "TI2R_EXECUTION_AUTHORIZED": false,
+  "TI2R_SOLUTE_HOLDOUT_AUTHORIZED": false,
+  "TI2R_SOLUTE_V2_DEV": "PASS_PROTOCOL_FROZEN_READY_FOR_HOLDOUT_DECISION",
+  "TI3_PLUS_AUTHORIZED": false,
+  "V2_RULE": "FROZEN",
+  "c1_sha": "e1a98917a20431ecc1c758f210b5e974b3533734",
+  "content_bytes_read": 23349060,
+  "holdout_assets": {
+    "ESM1:219": {
+      "content_bytes_read": 0,
+      "open_count": 0
+    },
+    "ESM1:73": {
+      "content_bytes_read": 0,
+      "open_count": 0
+    },
+    "ESM2:219": {
+      "content_bytes_read": 0,
+      "open_count": 0
+    },
+    "ESM2:73": {
+      "content_bytes_read": 0,
+      "open_count": 0
+    },
+    "ESM4:295": {
+      "content_bytes_read": 0,
+      "open_count": 0
+    },
+    "ESM4:98": {
+      "content_bytes_read": 0,
+      "open_count": 0
+    },
+    "ESM5:295": {
+      "content_bytes_read": 0,
+      "open_count": 0
+    },
+    "ESM5:98": {
+      "content_bytes_read": 0,
+      "open_count": 0
+    }
+  },
+  "holdout_content_bytes_read": 0,
+  "holdout_open_count": 0,
+  "invocation_counter": 1,
+  "open_count": 12,
+  "opened_assets": [
+    {
+      "asset_id": "ESM1:0",
+      "bytes_read": 1951506,
+      "file_opened": true,
+      "role": "development",
+      "status": "PASS"
+    },
+    {
+      "asset_id": "ESM2:0",
+      "bytes_read": 1951506,
+      "file_opened": true,
+      "role": "development",
+      "status": "PASS"
+    },
+    {
+      "asset_id": "ESM1:146",
+      "bytes_read": 1951506,
+      "file_opened": true,
+      "role": "development",
+      "status": "PASS"
+    },
+    {
+      "asset_id": "ESM2:146",
+      "bytes_read": 1951506,
+      "file_opened": true,
+      "role": "development",
+      "status": "PASS"
+    },
+    {
+      "asset_id": "ESM1:293",
+      "bytes_read": 1951506,
+      "file_opened": true,
+      "role": "development",
+      "status": "PASS"
+    },
+    {
+      "asset_id": "ESM2:293",
+      "bytes_read": 1951506,
+      "file_opened": true,
+      "role": "development",
+      "status": "PASS"
+    },
+    {
+      "asset_id": "ESM4:0",
+      "bytes_read": 1940004,
+      "file_opened": true,
+      "role": "development",
+      "status": "PASS"
+    },
+    {
+      "asset_id": "ESM5:0",
+      "bytes_read": 1940004,
+      "file_opened": true,
+      "role": "development",
+      "status": "PASS"
+    },
+    {
+      "asset_id": "ESM4:197",
+      "bytes_read": 1940004,
+      "file_opened": true,
+      "role": "development",
+      "status": "PASS"
+    },
+    {
+      "asset_id": "ESM5:197",
+      "bytes_read": 1940004,
+      "file_opened": true,
+      "role": "development",
+      "status": "PASS"
+    },
+    {
+      "asset_id": "ESM4:394",
+      "bytes_read": 1940004,
+      "file_opened": true,
+      "role": "development",
+      "status": "PASS"
+    },
+    {
+      "asset_id": "ESM5:394",
+      "bytes_read": 1940004,
+      "file_opened": true,
+      "role": "development",
+      "status": "PASS"
+    }
+  ],
+  "phase": "TI2R_SOLUTE_V2_DEV",
+  "receipt_sha256": "59ba6c1d57d5bb2cef7c1a80cb31a77697d4f344a98c5f7d3f73897640afb79c",
+  "state": "CLOSED_CONSUMED"
+}

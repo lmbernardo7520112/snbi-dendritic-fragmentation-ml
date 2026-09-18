@@ -1,6 +1,6 @@
 {
   "phase": "TI2R_SOLUTE_V2_D",
-  "coverage": "Recorded root command invocations through local preregistration checks; publication/closing commands will be appended in C2 or reported in the PR. Private attachment path omitted. Long here-doc bodies and jq projections are summarized where marked; tool edits are listed separately.",
+  "coverage": "Sanitized inventory of reported command invocations across preflight/merge, preregistration and closure. Earlier continuation segment reconstructed from tool results; entries are grouped, not an OS audit log. Private attachment paths, here-doc publication bodies and indicated jq projections are summarized. C2 commit/push/final CI commands occur after this file and are reported in the effective PR and terminal response.",
   "root": [
     [
       "/usr/bin/python3 -B - <<'PY'\nimport hashlib,json,os\nfrom pathlib import Path\nroot=Path.cwd()\nfolder=root/'artifacts/evidence/TI2R_SOLUTE_V2'\nfolder.mkdir(exist_ok=True)\nattachment='<operator-supplied-authorization-attachment>'\nfd=os.open(attachment,os.O_RDONLY|os.O_NOFOLLOW)\nwith os.fdopen(fd,'r') as stream: decision=stream.read()\n(root/'docs/decisions/AUTHORIZATION-TI2R-SOLUTE-V2-D-2026-09-18.md').write_text('# Decisão autoral — TI2R-SOLUTE-V2-D\\n\\nTexto integral recebido do autor nesta sessão. A aceitação do PR #9 e a fase V2-D têm escopos distintos; nenhuma autoridade histórica é reativada.\\n\\n'+decision)\nold=json.loads((root/'artifacts/evidence/TI2R_SOLUTE_DIRECT/exposure.json').read_text())\nassets=[a for a in old['assets'] if a['role']=='development']\nassert len(assets)==12\nexposure={'phase':'TI2R_SOLUTE_V2_D','authorization_id':'TI2R-SOLUTE-V2-D-2026-09-18','base_sha':'fcfc5e1445467248566e881c61929d4d3da7b1d8','original_manifest_path':old['original_manifest_path'],'original_manifest_sha256':old['original_manifest_sha256'],'assets':assets,'development_eligibility':{},'holdout_custody':{},'experimental_content_bytes_read_at_preregistration':0,'limitations':['Native detector data and complete original provenance unavailable; no external audit requested.','All 12 DEV were already exposed in SOLUTE V1.','Reference holdouts were historically exposed in FRAG-DIRECT; solute moving holdouts were never analysed. SEALED denotes this phase, not global virginity.','No holdout buffer may be opened, probed or hashed during V2-D.']}\nfor asset in old['assets']:\n    ident=asset['asset_id']; prior=old['holdout_eligibility'][ident]\n    evidence=list(prior['evidence'])+['artifacts/evidence/TI2R_SOLUTE_DIRECT/result.json']\n    history=list(prior['previous_exposure'])\n    if asset['role']=='development':\n        history+=['TI2R-SOLUTE-DIRECT V1: opened once for development; already exposed.']\n        exposure['development_eligibility'][ident]={'development_eligible_this_phase':True,'evidence':evidence,'previous_exposure':history}\n    else:\n        history+=['TI2R-SOLUTE-DIRECT V1: NOT_OPENED; no development pair passed.']\n        exposure['holdout_custody'][ident]={'authorized_this_phase':False,'open_count':0,'content_bytes_read':0,'state':'SEALED','evidence':evidence,'previous_exposure':history}\n(folder/'exposure.json').write_text(json.dumps(exposure,indent=2,ensure_ascii=False)+'\\n')\npreflight={'PR9_MERGE':'PASS','audited_head_sha':'fef9aa5437c6b39fa29f085498551a208982f9de','audited_base_sha':'db03183e1456f67b5b663a4cb71361cad1404dcb','merge_sha':'fcfc5e1445467248566e881c61929d4d3da7b1d8','merge_parents':['db03183e1456f67b5b663a4cb71361cad1404dcb','fef9aa5437c6b39fa29f085498551a208982f9de'],'integrated_tree_equals_audited_head':True,'postmerge_ci':{'run_id':35377213285,'head_sha':'fcfc5e1445467248566e881c61929d4d3da7b1d8','status':'completed','conclusion':'success','jobs':{'deterministic-contracts':'success','scientific-synthetic-contracts':'success'},'all_steps_successful':True,'url':'https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35377213285'},'prior_ci_runs':[35364371535,35365201447],'governance_comment':'https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/pull/9#issuecomment-5734023590','ready_triggered_new_ci':False,'main_synced':'fast-forward-only','branch_created':'feat/ti2r-solute-v2-calibration','branch_deleted':False,'initial_worktree_index':'CLEAN','data_guard':{'status':'PASS','tracked_entries':229,'content_bytes_read':0},'scientific_access_before_C1':False,'no_new_sources':True}\n(folder/'preflight.json').write_text(json.dumps(preflight,indent=2)+'\\n')\nprint('Created authorization, metadata-only exposure and preflight; experimental bytes read=0')\nPY",
@@ -100,6 +100,106 @@
     [
       "cat src/snbi_fragmentation/ti2r_solute_direct_registration.py",
       0
+    ],
+    [
+      "PYTHONPATH=src /usr/bin/python3 -B - <<'PY'\nimport hashlib,json\nfrom pathlib import Path\nfrom snbi_fragmentation import ti2r_solute_v2_authority as a\nroot=Path.cwd(); folder=root/'artifacts/evidence/TI2R_SOLUTE_V2'\np=folder/'verification-preregister.json'; value=json.loads(p.read_text()); value['independent_textual_review']={'status':'NO_REMAINING_BLOCKERS_IDENTIFIED','scientific_gate_approval':False,'reviewer_experimental_access':False,'reviewed':['V1 preservation','perturbation/search/support convention','individual positive gates','CI and receipt before bytes','unconditional holdout denial','terminal before result','integration fixes'],'limitations':'Textual review, not experimental or metrological validation'}; p.write_text(json.dumps(value,indent=2)+'\\n')\npaths=set(a.FROZEN_TEXT_PATHS)|{'AGENTS.md','README.md','artifacts/evidence/TI2/checksums.sha256','artifacts/evidence/TI2R_SOLUTE_V2/preflight.json','artifacts/evidence/TI2R_SOLUTE_V2/verification-preregister.json','artifacts/evidence/TI2R_SOLUTE_V2/commands.json'}\nlines=[]\nfor name in sorted(paths):\n    data=(root/name).read_bytes(); data.decode('utf-8'); lines.append(hashlib.sha256(data).hexdigest()+'  '+name)\n(folder/'checksums.sha256').write_text('\\n'.join(lines)+'\\n')\nprint(json.dumps({'frozen_scientific_text_count':len(a.FROZEN_TEXT_PATHS),'preregister_text_checksums':len(lines),'experimental_bytes_read':0}))\nPY",
+      0
+    ],
+    [
+      "git diff --check",
+      0
+    ],
+    [
+      "git add -- .github/workflows/ci.yml AGENTS.md README.md artifacts/evidence/TI2/checksums.sha256 docs/decisions/AUTHORIZATION-TI2R-SOLUTE-V2-D-2026-09-18.md docs/protocols/TI2R_SOLUTE_V2_PROTOCOL.md configs/authority/ti2r-solute-v2.json configs/registration/ti2r-solute-v2-method.json src/snbi_fragmentation/ti2r_solute_v2_authority.py src/snbi_fragmentation/ti2r_solute_v2_calibration.py scripts/run_ti2r_solute_v2.py scripts/run_ti2r_solute_v2_synthetic.py tests/test_ti2r_solute_v2_authority.py tests/test_ti2r_solute_v2_calibration.py tests/test_ti2r_solute_v2_execution.py artifacts/evidence/TI2R_SOLUTE_V2/exposure.json artifacts/evidence/TI2R_SOLUTE_V2/preflight.json artifacts/evidence/TI2R_SOLUTE_V2/verification-preregister.json artifacts/evidence/TI2R_SOLUTE_V2/commands.json artifacts/evidence/TI2R_SOLUTE_V2/checksums.sha256",
+      0
+    ],
+    [
+      "git diff --cached --stat",
+      0
+    ],
+    [
+      "git diff --cached --check",
+      0
+    ],
+    [
+      "/usr/bin/python3 -B scripts/check_repository_data.py",
+      0
+    ],
+    [
+      "/usr/bin/python3 -B scripts/check_ti2_checksums.py",
+      0
+    ],
+    [
+      "/usr/bin/python3 -B - <<'PY'\nimport hashlib,json,re,subprocess\nfrom pathlib import Path\nroot=Path.cwd(); names=subprocess.check_output(['git','diff','--cached','--name-only'],text=True).splitlines()\nallowed=json.loads((root/'artifacts/evidence/TI2R_SOLUTE_V2/preflight.json').read_text())['announced_write_allowlist']\nassert len(names)==20 and set(names)<=set(allowed)\nfor name in names:\n    data=subprocess.check_output(['git','show',':'+name]); assert data==(root/name).read_bytes()\n    text=data.decode('utf-8'); assert not re.search(r'/home/|-----BEGIN [A-Z ]*PRIVATE KEY-----|gh[pousr]_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}',text),name\nmanifest=root/'artifacts/evidence/TI2R_SOLUTE_V2/checksums.sha256'\nfor line in manifest.read_text().splitlines():\n    digest,name=line.split('  ',1); assert hashlib.sha256((root/name).read_bytes()).hexdigest()==digest,name\nassert not subprocess.check_output(['git','diff','--name-only'],text=True).strip()\nprint('PASS: 20 staged textual paths; identical worktree/index bytes; 31 preregister checksums; bounded private-path/token pattern scan clear')\nPY",
+      0
+    ],
+    [
+      "git commit -m 'feat(ti2r): preregister development-only solute V2 calibration'",
+      0
+    ],
+    [
+      "git status --porcelain=v1",
+      0
+    ],
+    [
+      "git rev-parse HEAD HEAD^",
+      0
+    ],
+    [
+      "git ls-remote origin refs/heads/main refs/heads/feat/ti2r-solute-v2-calibration",
+      0
+    ],
+    [
+      "git push -u origin feat/ti2r-solute-v2-calibration",
+      0
+    ],
+    [
+      "gh pr create --repo lmbernardo7520112/snbi-dendritic-fragmentation-ml --base main --head feat/ti2r-solute-v2-calibration --draft --title 'TI2R-SOLUTE-V2-D: preregister development-only discrimination calibration' --body-file - <<'V2_PREREGISTER'\nSOLUTE V1 remains a valid blocked result: its absolute SS8/NGF floors were not externally calibrated. This separate, author-approved V2-D phase freezes relative discrimination and recovery of exactly 16 integer perturbations while preserving V1 code, masks, parameters and evidence. All eight solute holdout buffers are prohibited throughout this phase.\n\nC1 preregistration: `e1a98917a20431ecc1c758f210b5e974b3533734`.\nBase: `fcfc5e1445467248566e881c61929d4d3da7b1d8` (governed PR #9 merge; [post-merge CI SUCCESS](https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35377213285)).\n\nLocal verification: 423 stdlib tests (337 passes, 86 optional skips); separate pinned scientific suites 5/16/26/27/18 tests, all passed with zero skips. Independent textual review found no remaining blocker. Guardrails, 95 legacy textual checksums and 31 preregistration checksums passed. No experimental buffer has been read during V2-D.\n\nThis Draft PR is published before pixels. The only authorized invocation requires successful push and pull-request CI at the exact C1 SHA, then an exclusive receipt before opening the 12 previously exposed DEV buffers. Four informative pair-instants must each satisfy both metrics and all 16 recoveries. G2_FRAG remains PASS_DIRECT_RASTER_MAPPING; development PASS cannot approve G2_SOLUTE or authorize holdout.\n\nC2 is restricted to terminal results, evidence, receipt/counter, report and checksums. No code/configuration/criteria changes after C1, no retry, no automatic V3, no Ready, no merge and no TI-3+. The branch and all historical evidence are preserved.\n\nC1 CI: pending verification. Scientific invocation: NOT_EXECUTED. Final state and C2 CI will be recorded here only after they exist.\nV2_PREREGISTER",
+      0
+    ],
+    [
+      "gh run list --repo lmbernardo7520112/snbi-dendritic-fragmentation-ml --branch feat/ti2r-solute-v2-calibration --limit 5 --json databaseId,headSha,status,conclusion,event,url",
+      0
+    ],
+    [
+      "gh run view 35397978695 --repo lmbernardo7520112/snbi-dendritic-fragmentation-ml --json databaseId,event,headSha,status,conclusion,jobs,url",
+      0
+    ],
+    [
+      "gh run view 35398305900 --repo lmbernardo7520112/snbi-dendritic-fragmentation-ml --json databaseId,event,headSha,status,conclusion,jobs,url",
+      0
+    ],
+    [
+      "gh api repos/lmbernardo7520112/snbi-dendritic-fragmentation-ml/pulls/10 --jq '{number:.number,state:.state,draft:.draft,merged:.merged,repository:.base.repo.full_name,base:.base.ref,base_sha:.base.sha,head:.head.ref,head_sha:.head.sha}'",
+      0
+    ],
+    [
+      "git status --porcelain=v1",
+      0
+    ],
+    [
+      "git rev-parse HEAD refs/remotes/origin/feat/ti2r-solute-v2-calibration",
+      0
+    ],
+    [
+      "PYTHONPATH=src /usr/bin/python3 -B scripts/run_ti2r_solute_v2.py <<'C1_VERIFIED_CI' (sanitized exact CI JSON retained in receipt.json)",
+      0
+    ],
+    [
+      "/usr/bin/python3 -B - <<'PY'\nimport hashlib,json\nfrom pathlib import Path\nfolder=Path('artifacts/evidence/TI2R_SOLUTE_V2')\nr=json.loads((folder/'result.json').read_text()); t=json.loads((folder/'terminal-state.json').read_text()); receipt=json.loads((folder/'receipt.json').read_text())\nprint('terminal',r['TI2R_SOLUTE_V2_DEV'],'bytes',t['content_bytes_read'],'opens',t['open_count'])\nfor path,digest in receipt['frozen_hashes'].items(): assert hashlib.sha256(Path(path).read_bytes()).hexdigest()==digest,path\nprint('frozen texts unchanged',len(receipt['frozen_hashes']))\nfor pair,p in r['pairs'].items():\n    print(pair,p['status'])\n    for f in p['per_frame']:\n        print(' frame',f['source_index'],f['classification'],f['status'])\n        if f['calibration']:\n            for metric,x in f['calibration'].items():\n                original=f['original'][metric]['raw_v1']\n                print(metric,'original',original['identity_score'],'spatial_margin',original['spatial_margin'],'temporal_min',min(c['margin'] for c in original['temporal_controls']),'blocks',x['available_blocks'],'quadrants',x['quadrants'],'correct',x['correct_recoveries'],'margin_range',[min(c['margin'] for c in x['perturbations']),max(c['margin'] for c in x['perturbations'])],'maxerror',max(c['recovery_error_px'] for c in x['perturbations']))\n            a=f['original']['NGF']['raw_v1']; print(' residual',a['count'],a['median_px'],a['p95_px'],a['maximum_px'])\nprint('result text bytes',len((folder/'result.json').read_bytes()))\nPY",
+      0
+    ],
+    [
+      "PYTHONPATH=src /usr/bin/python3 -B - <<'PY'\nimport hashlib,json,subprocess\nfrom pathlib import Path\nfrom snbi_fragmentation import ti2r_solute_v2_authority as a\nroot=Path.cwd(); folder=root/'artifacts/evidence/TI2R_SOLUTE_V2'\nreceipt=json.loads((folder/'receipt.json').read_text()); terminal=json.loads((folder/'terminal-state.json').read_text()); result=json.loads((folder/'result.json').read_text())\nassert receipt['invocation_counter']==terminal['invocation_counter']==result['invocations']==1\nassert terminal['open_count']==12 and terminal['content_bytes_read']==23349060\nassert {x['asset_id'] for x in terminal['opened_assets']}==set(a.ASSET_ROLES)\nassert all(x['status']=='PASS' and x['file_opened'] for x in terminal['opened_assets'])\nassert terminal['holdout_open_count']==terminal['holdout_content_bytes_read']==0\nassert set(terminal['holdout_assets'])==set(a.HOLDOUT_ASSETS)\nassert all(x=={'open_count':0,'content_bytes_read':0} for x in terminal['holdout_assets'].values())\nfor name,digest in receipt['frozen_hashes'].items():\n    text=(root/name).read_bytes(); assert hashlib.sha256(text).hexdigest()==digest\n    assert text==subprocess.check_output(['git','show',receipt['c1_sha']+':'+name])\ntry: a.require_preregistered(root)\nexcept a.V2IOBlocked: print('PASS: terminal tombstone denies before experimental path access')\nelse: raise AssertionError('authority not consumed')\nprint(json.dumps({'receipt_counter':1,'opened_dev':12,'dev_bytes':23349060,'holdout_opens':0,'holdout_bytes':0,'unchanged_frozen_texts':len(receipt['frozen_hashes']),'scientific_result':result['TI2R_SOLUTE_V2_DEV']}))\nPY",
+      0
+    ],
+    [
+      "TMPDIR=.bootstrap-test-tmp PYTHONPATH=src /usr/bin/python3 -S -B -m unittest discover -s tests -q",
+      0
+    ],
+    [
+      "/usr/bin/python3 -B - <<'PY'\nimport hashlib,json\nfrom pathlib import Path\nfolder=Path('artifacts/evidence/TI2R_SOLUTE_V2')\nr=json.loads((folder/'result.json').read_text()); receipt=json.loads((folder/'receipt.json').read_text()); terminal=json.loads((folder/'terminal-state.json').read_text())\npre=json.loads((folder/'preflight.json').read_text())\nlines=['# TI2R-SOLUTE-V2-D — execução única e encerramento de desenvolvimento','', '**TI2R_SOLUTE_V2_DEV=PASS_PROTOCOL_FROZEN_READY_FOR_HOLDOUT_DECISION.**','**G2_SOLUTE=BLOCKED_PENDING_LOCKED_HOLDOUT; HOLDOUT_SOLUTE=SEALED.**','', 'Os quatro positivos passaram individualmente. A autoridade específica está CLOSED_CONSUMED. Este PASS de desenvolvimento não certifica G2_SOLUTE nem autoriza holdout, metrologia, concentração absoluta ou TI-3+.','', '## Custódia Git e CI','', 'PR #9: merge governado PASS, SHA `'+pre['merge_sha']+'`, preservando ambos os pais e a branch. A árvore integrada é igual ao head auditado `'+pre['audited_head_sha']+'`. CI pós-merge [35377213285]('+pre['postmerge_ci']['url']+') SUCCESS em ambos os jobs e todos os passos. A main foi sincronizada exclusivamente por fast-forward.','', 'Branch: `feat/ti2r-solute-v2-calibration`; [Draft PR #10](https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/pull/10).','C1: `'+receipt['c1_sha']+'`. O commit e sua publicação antecederam os pixels.']\nfor run in receipt['ci_evidence']['runs']:\n    lines.append('- CI C1 '+run['event']+': ['+str(run['databaseId'])+']('+run['url']+'), SUCCESS; deterministic-contracts e scientific-synthetic-contracts e todos os seus passos aprovados.')\nlines += ['', 'C2 contém somente este encerramento e evidências. Seu SHA e a CI final são observações posteriores, registradas no corpo efetivo do Draft PR e no retorno ao autor; não se inventa autorreferência. O PR deve permanecer OPEN/DRAFT, sem Ready ou merge.','', '## Invocação e fronteira experimental','', 'Comando executado exatamente uma vez, no sandbox padrão, exit 0:','', '```bash','PYTHONPATH=src /usr/bin/python3 -B scripts/run_ti2r_solute_v2.py','```','', 'A evidência sanitizada das duas CIs foi fornecida via stdin e está integralmente no receipt. Receipt O_EXCL com fsync e contador 1 antecedeu qualquer byte; contém C1, 25 hashes de textos, allowlist e exposição. Não houve retry. terminal-state.json foi gravado antes de result.json; seu tombstone impede nova execução.','', 'Foram abertos uma vez cada os seguintes 12 buffers existentes, totalizando **23.349.060 bytes**:','']\nassets={a['asset_id']:a for a in json.loads((folder/'exposure.json').read_text())['assets']}\nfor a in r['opened_assets']:\n    lines.append('- `'+assets[a['asset_id']]['path']+'`: '+str(a['bytes_read'])+' bytes; hash nativo validado, PASS, uma abertura.')\nlines += ['', 'Oito holdouts: ESM1/ESM2:73/219 e ESM4/ESM5:98/295. **open_count=0; content_bytes_read=0 para cada um e para o conjunto.** Nenhum quartil foi aberto, revalidado por hash ou inspecionado nesta fase. As referências tiveram exposição histórica em FRAG-DIRECT; as modalidades móveis soluto não foram analisadas em holdout. SEALED qualifica esta fase, sem alegar virgindade global das referências.','', 'Não houve MP4/ZIP, FFmpeg/FFprobe, novo frame, redecodificação, visualização, instalação, credenciais ou alteração do sistema. Nenhum dado binário foi versionado.','', '## Critérios e alcance','', 'V1 permanece byte a byte preservado: código, configuração, resultado e receipt. Seus pisos SS8>=0,90/NGF>=0,80 são históricos e continuam não atingidos. V2 não baixou nem substituiu esses pisos: usa discriminação relativa e recuperação discreta, com margens mínimas de 0,005. SS8/NGF, eta, máscaras, identificabilidade, grade, controles e resíduos V1 permanecem inalterados.','', 'As 16 translações autorizadas e a grade fixa de 81 correções foram congeladas em C1. O suporte comum exclui deslocamento líquido até oito pixels mais footprint do descritor. Translações inteiras são avaliadas por pullback exato dos descritores, sem interpolação, wrap ou pixels de padding. O teste sintético confronta isso com luminância efetivamente traduzida e kernels V1 recalculados.','', 'A correção verdadeira é o inverso -p da perturbação p; correção não significa transformação experimental certificada. Erro discreto zero mede a recuperação do deslocamento conhecido neste benchmark. Não é incerteza metrológica, validação independente da referência ou generalização. A unidade experimental permanece a aquisição, aproximadamente uma corrida por condição; nenhum p-valor ou pseudorreplicação.','', '## Resultados originais por positivo','', '| Par / índice | SS8 | Margem espacial SS8 | NGF | Margem espacial NGF | Mediana / P95 / máximo px | Estado |','|---|---:|---:|---:|---:|---|---|']\nfor pair,p in r['pairs'].items():\n    for f in p['per_frame'][1:]:\n        s=f['original']['SS8']['raw_v1']; n=f['original']['NGF']['raw_v1']\n        lines.append(f\"| {pair}:{f['source_index']} | {s['identity_score']:.9f} | {s['spatial_margin']:.9f} | {n['identity_score']:.9f} | {n['spatial_margin']:.9f} | {n['median_px']:.9f} / {n['p95_px']:.9f} / {n['maximum_px']:.9f} | {f['status']} |\")\nlines += ['', 'Em cada positivo, cada métrica contou com 18 blocos e quatro quadrantes; os 18 resíduos NGF originais foram mantidos, sem censura, ambiguidade ou rejeição por erro. Identidade foi máximo único, rank 1, em ambos os descritores. Os limites geométricos 1/2/3 px foram atendidos em cada instante, não apenas no agregado.','', 'Os dois instantes iniciais são NON_IDENTIFIABLE, preservados como controles de observabilidade. Não receberam calibração positiva nem PASS/FAIL. Informação individual completa está em result.json.','', '## Controles temporais preservados','', '| Par | Referência | Móvel | SS8 | Margem SS8 | NGF | Margem NGF | Estado |','|---|---:|---:|---:|---:|---:|---:|---|']\ndef number(value): return 'null' if value is None else f'{value:.9f}'\nfor pair,p in r['pairs'].items():\n    indices=p['development_indices']\n    for c in p['temporal_controls']:\n        lines.append(f\"| {pair} | {indices[c['reference_time']]} | {indices[c['moving_time']]} | {number(c['mind_score'])} | {number(c['mind_margin'])} | {number(c['ngf_score'])} | {number(c['ngf_margin'])} | {c['status']} |\")\nlines += ['', 'Todas as oito comparações mensuráveis tiveram margens >0,005 nas duas métricas. Quatro controles com referência inicial não identificável permanecem não mensuráveis, sem conversão em evidência favorável. Todos os controles originais e seus scores por bloco são preservados.','', '## Matriz das perturbações','', 'Cada linha reporta as duas métricas separadamente. Δ é score verdadeiro menos o melhor concorrente; como todos os inversos verdadeiros venceram de forma única, equivale à margem para o segundo colocado. O segundo score, a margem do vencedor, todos os 81 candidatos e a matriz 17x81 de cada bloco constam em result.json. Valores abaixo arredondados apenas para apresentação; decisões usaram precisão integral.']\nrecords=0\nfor pair,p in r['pairs'].items():\n    for f in p['per_frame'][1:]:\n        lines += ['', '### '+pair+':'+str(f['source_index'])+' — '+f['status'], '', 'SS8: 16/16; NGF: 16/16. Ambos concordam em todos os inversos. Cobertura por métrica: 18 blocos, quatro quadrantes.','', '| p=(dx,dy) | Inverso | SS8 | Δ SS8 | Rank SS8 | Erro SS8 px | NGF | Δ NGF | Rank NGF | Erro NGF px |','|---|---|---:|---:|---:|---:|---:|---:|---:|---:|']\n        for s,n in zip(f['calibration']['SS8']['perturbations'],f['calibration']['NGF']['perturbations']):\n            assert s['status']==n['status']=='PASS'\n            assert s['correct_rank']==n['correct_rank']==1\n            assert s['recovery_error_px']==n['recovery_error_px']==0\n            lines.append(f\"| {tuple(s['perturbation_dxdy'])} | {tuple(s['true_correction_dxdy'])} | {s['true_score']:.9f} | {s['margin']:.9f} | {s['correct_rank']} | {s['recovery_error_px']:.1f} | {n['true_score']:.9f} | {n['margin']:.9f} | {n['correct_rank']} | {n['recovery_error_px']:.1f} |\")\n            records+=1\n        for metric in ('SS8','NGF'):\n            x=f['calibration'][metric]; z=x['identity_control']\n            lines.append(f\"\\nControle positivo identidade {metric}: score {z['true_score']:.9f}, margem {z['margin']:.9f}, rank {z['correct_rank']}, erro {z['recovery_error_px']:.1f} px, {z['status']}; suporte comum {x['common_valid_pixels']} pixels nos blocos desse papel.\")\nassert records==64\nlines += ['', 'São 64 perturbações por descritor, 128 avaliações com SS8/NGF separados. Não são 128 réplicas experimentais. Cada um dos quatro positivos passou 16/16 em cada métrica; não houve arredondamento de 15/16 nem resgate por média.','', '## Verificação e preservação','', 'Pré-registro: 423 testes stdlib, 337 passes e 86 skips opcionais; suites científicas separadas 5/16/26/27/18, todas PASS sem skips/falhas/erros. Após o encerramento, o mesmo perfil stdlib passou 423 testes, 337 passes e 86 skips. As versões NumPy1.26.4/SciPy1.11.4 permaneceram fixas.','', 'Os 25 textos congelados correspondem simultaneamente aos hashes do receipt e aos bytes de C1. O guard de tombstone foi verificado após o fechamento e negou antes de qualquer caminho experimental. Não houve segunda invocação do runner. Nenhum código, parâmetro, critério ou máscara foi alterado depois de C1.','', 'Os 95 checksums textuais legados permanecem válidos. O checksum próprio desta fase cobre textos autorizados, nunca dados experimentais. A revisão staged verifica UTF-8, identidade dos bytes e padrões delimitados de caminhos privados/tokens; não constitui prova universal de ausência de segredos.','', 'A implementação teve quatro erros transitórios de integração antes de C1 (API ausente), posteriormente corrigidos e cobertos pelo GREEN completo; não foram execuções experimentais. A revisão independente textual não identificou bloqueios restantes antes do congelamento.','', '## Arquivos e comandos','', 'Lista completa de caminhos alterados na fase, incluindo os sete caminhos exclusivamente documentais de C2:','']\nfor name in pre['announced_write_allowlist']: lines.append('- `'+name+'`')\nlines += ['', 'O inventário sanitizado está em commands.json: comandos locais, testes sintéticos, leituras de revisão e operações Git/GitHub individualmente aprovadas. Corpos textuais longos e o caminho privado do anexo são identificados como sanitizados; o inventário não é um audit log do sistema operacional. Os comandos do commit/push C2 e a CI final, posteriores a este texto, pertencem ao PR efetivo e retorno terminal.','', 'A árvore/index estavam limpos em C1 antes da execução. A limpeza final e igualdade local/remoto após C2 serão verificadas e reportadas no retorno; este relatório não presume sucesso futuro. Nenhuma branch será excluída.','', '## Estado terminal','', '```text']\nfor key in ('TI2R_SOLUTE_V2_DEV','V2_RULE','G2_FRAG','G2_SOLUTE','HOLDOUT_SOLUTE','CURRENT_AUTHORIZED_ACTIVITY','TI2R_SOLUTE_HOLDOUT_AUTHORIZED','TI3_PLUS_AUTHORIZED','MERGE_AUTHORIZED'):\n    value=r[key]; lines.append(key+'='+str(value).lower() if isinstance(value,bool) else key+'='+value)\nlines += ['STATE=CLOSED_CONSUMED','NO_AUTOMATIC_V3=true','```','', 'Qualquer avaliação confirmatória lacrada depende de nova decisão explícita do autor.']\n(folder/'execution-report.md').write_text('\\n'.join(lines)+'\\n')\nverification={'phase':'C2_TERMINAL_DOCUMENTARY','status':'PASS_LOCAL_PENDING_C2_PUBLICATION_CI','c1_sha':receipt['c1_sha'],'c1_ci':receipt['ci_evidence'],'experimental_invocations':1,'exit_code':0,'open_count':terminal['open_count'],'content_bytes_read':terminal['content_bytes_read'],'holdout_open_count':0,'holdout_content_bytes_read':0,'tombstone_guard':'DENIED_BEFORE_EXPERIMENTAL_PATH','frozen_text_count':25,'all_frozen_bytes_equal_C1_and_receipt':True,'postclose_stdlib':{'testsRun':423,'passed':337,'skipped':86,'failures':0,'errors':0},'four_positive_frames':'PASS_INDIVIDUALLY','perturbations_per_positive_per_metric':16,'descriptor_evaluations':128,'all_correct_rank':1,'all_recovery_errors_px':0.0,'no_retry':True,'no_post_C1_scientific_changes':True,'c2_scope':['result.json','receipt.json','terminal-state.json','execution-report.md','verification.json','commands.json','checksums.sha256'],'checksums':{name:hashlib.sha256((folder/name).read_bytes()).hexdigest() for name in ('result.json','receipt.json','terminal-state.json')},'remote_C2_CI':'PENDING_FUTURE_OBSERVATION_REPORTED_IN_PR'}\n(folder/'verification.json').write_text(json.dumps(verification,indent=2)+'\\n')\nprint('Wrote complete textual report:64 perturbation rows,12 temporal controls,25 paths; closure verification; no pixels read')\nPY",
+      0
     ]
   ],
   "auxiliary": {
@@ -148,7 +248,43 @@
         "command": "cat tests/test_ti2r_solute_v2_authority.py",
         "exit_code": 1
       },
-      "other_exit_codes": 0
+      "other_exit_codes": 0,
+      "commands": [
+        "cat <operator-supplied-authorization-attachment>",
+        "rg --files src/snbi_fragmentation scripts tests configs docs/protocols artifacts/evidence/TI2R_SOLUTE_V2 | rg 'solute_v2|solute-v2|SOLUTE_V2'",
+        "cat docs/protocols/TI2R_SOLUTE_V2_PROTOCOL.md configs/authority/ti2r-solute-v2.json scripts/run_ti2r_solute_v2.py",
+        "cat src/snbi_fragmentation/ti2r_solute_v2_calibration.py",
+        "cat src/snbi_fragmentation/ti2r_solute_v2_authority.py tests/test_ti2r_solute_v2_execution.py",
+        "cat src/snbi_fragmentation/ti2r_solute_v2_calibration.py",
+        "cat src/snbi_fragmentation/ti2r_solute_direct_registration.py",
+        "sed -n '1,210p' src/snbi_fragmentation/ti2r_solute_v2_authority.py",
+        "sed -n '1,155p' artifacts/evidence/TI2R_SOLUTE_V2/exposure.json",
+        "rg -n 'def _read_regular|def _write_exclusive|def _parent_fd|def load_authority|def _git_identity|limit|cap' src/snbi_fragmentation/ti2r_solute_direct_authority.py src/snbi_fragmentation/ti2r_frag_direct_authority.py src/snbi_fragmentation/ti2r_frag_authority.py",
+        "rg --files tests scripts configs/registration | rg 'solute_v2|solute-v2'",
+        "cat tests/test_ti2r_solute_v2_calibration.py scripts/run_ti2r_solute_v2_synthetic.py configs/registration/ti2r-solute-v2-method.json",
+        "cat tests/test_ti2r_solute_v2_authority.py (exit 1 while not yet created)",
+        "cat docs/decisions/AUTHORIZATION-TI2R-SOLUTE-V2-D-2026-09-18.md .github/workflows/ci.yml",
+        "sed -n '1,80p' scripts/run_ti2r_solute_v2.py",
+        "cat tests/test_ti2r_solute_v2_authority.py",
+        "cat src/snbi_fragmentation/ti2r_solute_v2_calibration.py",
+        "cat tests/test_ti2r_solute_v2_calibration.py scripts/run_ti2r_solute_v2_synthetic.py",
+        "cat scripts/run_ti2r_solute_v2.py tests/test_ti2r_solute_v2_execution.py",
+        "rg -n -A 5 -B 4 'def require_preregistered|def finish|def read_asset' src/snbi_fragmentation/ti2r_solute_v2_authority.py",
+        "git diff --exit-code -- src/snbi_fragmentation/ti2r_solute_direct_registration.py src/snbi_fragmentation/ti2r_solute_direct_authority.py configs/registration/ti2r-solute-direct-method.json configs/authority/ti2r-solute-direct.json scripts/run_ti2r_solute_direct.py docs/protocols/TI2R_SOLUTE_DIRECT_PROTOCOL.md artifacts/evidence/TI2R_SOLUTE_DIRECT",
+        "cat artifacts/evidence/TI2R_SOLUTE_V2/terminal-state.json",
+        "cat artifacts/evidence/TI2R_SOLUTE_V2/receipt.json",
+        "/usr/bin/python3 -B - (audit existing textual JSON results, 128 descriptor cases, 198288 block values; 25 git show C1:<frozen path> calls and git diff --exit-code C1 -- <25 frozen paths>; no scientific module import)"
+      ]
+    },
+    "design_continuation": {
+      "scope": "Read-only design reviews of exact authorization and V1 science/authority; no edits or experimental access. An auxiliary usage-limit failure caused no repository mutation; subsequent implementation was delegated afresh.",
+      "reported_read_targets": [
+        "operator-supplied authorization",
+        "src/snbi_fragmentation/ti2r_solute_direct_registration.py",
+        "src/snbi_fragmentation/ti2r_solute_direct_authority.py",
+        "configs/registration/ti2r-solute-direct-method.json"
+      ],
+      "shell_command_details": "not separately retained across the auxiliary usage-limit interruption"
     }
   },
   "tool_edits": {
@@ -159,10 +295,141 @@
   "boundaries": {
     "ordinary_commands": "default sandbox",
     "git_metadata_and_remote": "individually approved exact Git/GitHub commands",
-    "experimental_invocations": 0,
-    "experimental_bytes_read": 0,
+    "experimental_invocations": 1,
+    "experimental_bytes_read": 23349060,
     "no_installs": true,
     "no_os_changes": true,
-    "no_credentials_inspected": true
-  }
+    "no_credentials_inspected": true,
+    "holdout_bytes_read": 0,
+    "holdout_opens": 0,
+    "execution_closed": true
+  },
+  "preflight_and_merge_commands": [
+    [
+      "cat <operator-supplied-authorization-attachment>",
+      0,
+      "two root reads, including continuation"
+    ],
+    [
+      "git status --short --branch",
+      0
+    ],
+    [
+      "git rev-parse HEAD refs/heads/main refs/remotes/origin/main refs/remotes/origin/feat/ti2r-solute-direct-mapping",
+      0
+    ],
+    [
+      "git remote -v",
+      0
+    ],
+    [
+      "cat AGENTS.md README.md pyproject.toml",
+      0
+    ],
+    [
+      "gh api repos/lmbernardo7520112/snbi-dendritic-fragmentation-ml/pulls/9 --jq <preflight state/base/head/mergeability projection>",
+      0
+    ],
+    [
+      "gh run view 35364371535 --repo lmbernardo7520112/snbi-dendritic-fragmentation-ml --json headSha,status,conclusion,jobs,url",
+      0
+    ],
+    [
+      "gh run view 35365201447 --repo lmbernardo7520112/snbi-dendritic-fragmentation-ml --json headSha,status,conclusion,jobs,url",
+      0
+    ],
+    [
+      "git ls-remote origin refs/heads/main refs/heads/feat/ti2r-solute-direct-mapping",
+      0
+    ],
+    [
+      "gh pr comment 9 --repo lmbernardo7520112/snbi-dendritic-fragmentation-ml --body-file -",
+      0,
+      "governance body supplied by quoted heredoc; comment issuecomment-5734023590"
+    ],
+    [
+      "gh pr ready 9 --repo lmbernardo7520112/snbi-dendritic-fragmentation-ml",
+      0
+    ],
+    [
+      "gh run list --repo lmbernardo7520112/snbi-dendritic-fragmentation-ml --branch feat/ti2r-solute-direct-mapping --limit 8 --json databaseId,headSha,status,conclusion,event,url",
+      0
+    ],
+    [
+      "gh api repos/lmbernardo7520112/snbi-dendritic-fragmentation-ml/pulls/9 --jq <ready/premerge projection>",
+      0
+    ],
+    [
+      "git status --porcelain=v1",
+      0
+    ],
+    [
+      "gh pr merge 9 --repo lmbernardo7520112/snbi-dendritic-fragmentation-ml --merge --match-head-commit fef9aa5437c6b39fa29f085498551a208982f9de",
+      0
+    ],
+    [
+      "gh api repos/lmbernardo7520112/snbi-dendritic-fragmentation-ml/pulls/9 --jq <merged state and merge SHA projection>",
+      0
+    ],
+    [
+      "gh run list --repo lmbernardo7520112/snbi-dendritic-fragmentation-ml --branch main --limit 3 --json databaseId,headSha,status,conclusion,event,url",
+      0
+    ],
+    [
+      "gh run view 35377213285 --repo lmbernardo7520112/snbi-dendritic-fragmentation-ml --json headSha,status,conclusion,jobs,url",
+      0
+    ],
+    [
+      "git status --porcelain=v1",
+      0
+    ],
+    [
+      "git switch main",
+      0
+    ],
+    [
+      "git pull --ff-only origin main",
+      0
+    ],
+    [
+      "git log -1 --format='%H%n%P%n%T'",
+      0
+    ],
+    [
+      "git rev-parse HEAD origin/main fef9aa5437c6b39fa29f085498551a208982f9de^{tree}",
+      0
+    ],
+    [
+      "git status --porcelain=v1",
+      0
+    ],
+    [
+      "git branch --list main feat/ti2r-solute-direct-mapping feat/ti2r-solute-v2-calibration",
+      0
+    ],
+    [
+      "git switch -c feat/ti2r-solute-v2-calibration",
+      0
+    ],
+    [
+      "/usr/bin/python3 -B scripts/check_repository_data.py",
+      0
+    ],
+    [
+      "cat scripts/run_ti2r_solute_direct.py configs/authority/ti2r-solute-direct.json configs/registration/ti2r-solute-direct-method.json tests/test_ti2r_solute_direct_execution.py .github/workflows/ci.yml",
+      0
+    ],
+    [
+      "cat src/snbi_fragmentation/ti2r_solute_direct_registration.py src/snbi_fragmentation/ti2r_solute_direct_authority.py",
+      0
+    ],
+    [
+      "cat .github/workflows/ci.yml scripts/check_ti2_checksums.py scripts/run_ti2r_solute_direct_synthetic.py",
+      0
+    ],
+    [
+      "/usr/bin/python3 -B - (text-only inspection of exposure.json asset schema and receipt keys)",
+      0
+    ]
+  ]
 }
