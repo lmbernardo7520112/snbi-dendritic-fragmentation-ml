@@ -1,0 +1,29 @@
+{
+  "base_branch": "main",
+  "base_sha": "0245faf74aa15424d95d43f92e87b32a06ac987b",
+  "branch_creation": "Exact git switch -c approved; no other Git mutation at preflight.",
+  "data_guard": {
+    "content_bytes_read": 0,
+    "examined_entry_count": 172,
+    "status": "PASS"
+  },
+  "date": "2026-09-18",
+  "existing_environment": {
+    "numpy": "1.26.4",
+    "python": "3.12.3",
+    "scipy": "1.11.4"
+  },
+  "experimental_access_performed": false,
+  "git_operation_in_progress": false,
+  "initial_index_clean": true,
+  "initial_worktree_clean": true,
+  "installation_performed": false,
+  "local_main_equals_origin_main_equals_remote_main": true,
+  "network_boundary": "Default-sandbox Git read failed DNS; exact read-only ls-remote succeeded with targeted operator approval. No fetch or pull.",
+  "new_branch": "feat/ti2r-frag-registration",
+  "new_branch_absent_locally_and_remotely_before_creation": true,
+  "repository": "lmbernardo7520112/snbi-dendritic-fragmentation-ml",
+  "standalone": true,
+  "status": "PASS",
+  "tracked_symlinks": 0
+}

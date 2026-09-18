@@ -1,0 +1,44 @@
+{
+  "C1_before_experimental_access": {
+    "authority": "PREPARED_INACTIVE",
+    "checksums": {
+      "listed": 95,
+      "status": "PASS",
+      "unique": 95,
+      "verified": 95
+    },
+    "diff_check": "PASS",
+    "experimental_assets_opened": 0,
+    "frag_scientific_synthetic": {
+      "errors": 0,
+      "failures": 0,
+      "passed": 16,
+      "skipped": 0,
+      "tests_run": 16
+    },
+    "guardrails": {
+      "bootstrap": "PASS",
+      "content_bytes_read": 0,
+      "data": "PASS",
+      "legacy_scope": "PASS",
+      "new_authority_and_io_contracts": "PASS"
+    },
+    "independent_textual_review": "No remaining concrete blocker after custody, authority and independent-reference corrections.",
+    "legacy_scientific_synthetic": {
+      "errors": 0,
+      "failures": 0,
+      "passed": 5,
+      "skipped": 0,
+      "tests_run": 5
+    },
+    "stdlib": {
+      "errors": 0,
+      "failures": 0,
+      "passed": 240,
+      "skipped": 21,
+      "tests_run": 261
+    }
+  },
+  "implementation_development_note": "Initial synthetic rigid/affine fixtures exposed local optimization minima; fixed finite initial grids and independent-reference information checks were finalized before C1. No experimental access or parameter refinement after activation is permitted.",
+  "phase": "TI2R_FRAG"
+}
