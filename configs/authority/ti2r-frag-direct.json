@@ -1,6 +1,6 @@
 {
   "phase": "TI2R_FRAG_DIRECT",
-  "state": "PREPARED_INACTIVE",
+  "state": "ACTIVE_ONE_SHOT",
   "authorization_id": "TI2R-FRAG-DIRECT-2026-09-18",
   "base_sha": "b7bbb6a1f0d3eaa43866027762eb2ed061c3d7c6",
   "authorized_branch": "feat/ti2r-frag-direct-mapping",
@@ -15,8 +15,8 @@
   "allowed_offsets": {"ESM3-to-ESM1": {"x": [0, 1, 2], "y": [0, 1, 2, 3, 4, 5, 6]}, "ESM6-to-ESM4": {"x": [0, 1, 2], "y": [0]}},
   "holdout_policy": "OPEN_ONCE_AFTER_DEVELOPMENT_AND_FREEZE",
   "max_invocations": 1,
-  "current_authorized_activity": "NONE_AWAITING_AUTHOR_DECISION",
-  "ti2r_execution_authorized": false,
+  "current_authorized_activity": "TI2R_FRAG_DIRECT_ONE_SHOT",
+  "ti2r_execution_authorized": true,
   "ti3_plus_authorized": false,
   "merge_authorized": false
 }
