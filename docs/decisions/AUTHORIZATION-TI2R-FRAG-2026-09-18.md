@@ -4,7 +4,9 @@ Autor: Leonardo Maximino Bernardo. Data: 2026-09-18.
 
 ## Registro de transição
 
-Estado: `PREPARED_INACTIVE`. C1 congela a implementação sem permissão de pixels.
+Estado: `ACTIVE_ONE_SHOT`. C1 foi commitado integralmente antes de pixels.
+C2 ativa exatamente uma invocação; publicação permanece proibida até C3.
+O receipt atômico deve preceder todo byte experimental; interrupção não permite retry.
 A autoridade específica canônica é `configs/authority/ti2r-frag.json`;
 `pyproject.toml [tool.snbi]` conserva a TI-2 histórica fechada.
 C2 alterará somente este registro e a autoridade específica.
