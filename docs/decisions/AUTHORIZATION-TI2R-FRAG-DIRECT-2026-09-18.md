@@ -4,9 +4,11 @@ Autor: Leonardo Maximino Bernardo. Data: 2026-09-18.
 
 ## Estado desta autorização
 
-Estado: `ACTIVE_ONE_SHOT`. C1 congelou o método inativo antes dos pixels.
-C2 ativa exclusivamente uma invocação do runner DIRECT; nenhum ativo desta
-fase foi aberto durante a preparação. Código e critérios não podem mudar.
+Estado: `CLOSED_CONSUMED`. A única invocação retornou código 0 e
+`TI2R_FRAG_DIRECT=PASS`, com ambos os pares aprovados em desenvolvimento e
+holdout temporal interno. Os 20 ativos autorizados foram abertos uma vez cada.
+A autoridade foi fechada antes de publicação; nenhum código ou critério mudou
+após C2. G2_SOLUTE permanece NOT_EXECUTED e TI-3+ não está autorizada.
 Base pós-merge PR #7: `b7bbb6a1f0d3eaa43866027762eb2ed061c3d7c6`.
 A autoridade canônica específica é `configs/authority/ti2r-frag-direct.json`.
 As autoridades TI-2 e TI2R-FRAG anteriores permanecem fechadas e consumidas.

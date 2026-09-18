@@ -4,22 +4,105 @@
     "experimental_assets_opened": 0,
     "scientific_runner_invocations": 0,
     "authority": "PREPARED_INACTIVE",
-    "stdlib": {"testsRun": 313, "passed": 266, "skipped": 47, "failures": 0, "errors": 0, "exit_code": 0},
-    "scientific_synthetic_legacy": {"testsRun": 5, "passed": 5, "skipped": 0, "failures": 0, "errors": 0, "exit_code": 0},
-    "scientific_synthetic_FRAG": {"testsRun": 16, "passed": 16, "skipped": 0, "failures": 0, "errors": 0, "exit_code": 0},
-    "scientific_synthetic_DIRECT": {"testsRun": 26, "passed": 26, "skipped": 0, "failures": 0, "errors": 0, "exit_code": 0},
-    "dependencies_existing_only": {"numpy": "1.26.4", "scipy": "1.11.4"},
+    "stdlib": {
+      "testsRun": 313,
+      "passed": 266,
+      "skipped": 47,
+      "failures": 0,
+      "errors": 0,
+      "exit_code": 0
+    },
+    "scientific_synthetic_legacy": {
+      "testsRun": 5,
+      "passed": 5,
+      "skipped": 0,
+      "failures": 0,
+      "errors": 0,
+      "exit_code": 0
+    },
+    "scientific_synthetic_FRAG": {
+      "testsRun": 16,
+      "passed": 16,
+      "skipped": 0,
+      "failures": 0,
+      "errors": 0,
+      "exit_code": 0
+    },
+    "scientific_synthetic_DIRECT": {
+      "testsRun": 26,
+      "passed": 26,
+      "skipped": 0,
+      "failures": 0,
+      "errors": 0,
+      "exit_code": 0
+    },
+    "dependencies_existing_only": {
+      "numpy": "1.26.4",
+      "scipy": "1.11.4"
+    },
     "red_contracts": "Actual import failures before implementation, recorded separately; not experimental failures or fabricated behavioral RED",
-    "tracked_data_guard": {"status": "PASS", "tracked_entries_before_staging": 189, "content_bytes_read": 0, "exit_code": 0},
-    "scope_guard": {"status": "PASS", "experimental_content_bytes_read": 0, "exit_code": 0},
-    "bootstrap_guard": {"status": "PASS", "exit_code": 0},
-    "text_checksums": {"verified": 95, "listed": 95, "status": "PASS", "exit_code": 0},
-    "new_python_compile_in_memory": {"files": 7, "bytecode_written": false, "status": "PASS", "exit_code": 0},
-    "diff_check": {"status": "PASS", "exit_code": 0},
+    "tracked_data_guard": {
+      "status": "PASS",
+      "tracked_entries_before_staging": 189,
+      "content_bytes_read": 0,
+      "exit_code": 0
+    },
+    "scope_guard": {
+      "status": "PASS",
+      "experimental_content_bytes_read": 0,
+      "exit_code": 0
+    },
+    "bootstrap_guard": {
+      "status": "PASS",
+      "exit_code": 0
+    },
+    "text_checksums": {
+      "verified": 95,
+      "listed": 95,
+      "status": "PASS",
+      "exit_code": 0
+    },
+    "new_python_compile_in_memory": {
+      "files": 7,
+      "bytecode_written": false,
+      "status": "PASS",
+      "exit_code": 0
+    },
+    "diff_check": {
+      "status": "PASS",
+      "exit_code": 0
+    },
     "independent_textual_review": "PASS_NO_REMAINING_CRITICAL_FINDING",
     "test_temporary_root": ".bootstrap-test-tmp",
     "limitations": "Synthetic controls and textual review are not experimental certification. The 47 optional stdlib skips are covered separately by the 5, 16 and 26 mandatory scientific tests. Bounded textual checks do not prove universal absence of secrets."
   },
-  "post_execution": "NOT_EXECUTED",
+  "post_execution": {
+    "independent_result_text_audit": "PASS; 144 preserved residuals and per-frame/phase aggregate statistics checked against recorded numeric results; no pixel access",
+    "runner_invocations": 1,
+    "runner_exit_code": 0,
+    "sandbox": "default",
+    "result": "PASS",
+    "authority": "CLOSED_CONSUMED",
+    "opened_development_assets": 12,
+    "opened_holdout_assets": 8,
+    "unique_assets": 20,
+    "total_bytes_read": 39003150,
+    "frozen_text_hashes_equal_C1": 12,
+    "method_changed_after_C2": false,
+    "retry": false,
+    "new_data": false,
+    "holdout_offset_changed": false,
+    "textual_custody_check": {
+      "status": "PASS",
+      "exit_code": 0
+    },
+    "textual_sha256": {
+      "receipt.json": "f2526ce249a961283f09807400f8da6de7def5f8254c4be89301568fed750b67",
+      "result.json": "facc5f3b02d6ed68c97b32946c6e2239992197c7cf424f1e160686f9b92d051c",
+      "ESM3-to-ESM1-freeze.json": "4a5fb4919b47fbe71d979aa25492c3a18dc4a5145f0ee52e71eb39f4a579e167",
+      "ESM6-to-ESM4-freeze.json": "c6ca3a601355631280c74fda69f86e5754efda2f17211d166444247cf77b7922"
+    },
+    "after_C3_checks": "Pending at this versioned checkpoint; actual result belongs to effective Draft PR and terminal report"
+  },
   "publication": "NOT_EXECUTED; effective C3 SHA and remote CI belong in the Draft PR and terminal report"
 }
