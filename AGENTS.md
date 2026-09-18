@@ -6,6 +6,22 @@ SDR-2-A is RESOLVED. No further sandbox diagnostic or OS remediation is authoriz
 
 ## Current authority
 
+The newest [SOLUTE-DIRECT decision](docs/decisions/AUTHORIZATION-TI2R-SOLUTE-DIRECT-2026-09-18.md)
+accepts and closes the fragment DIRECT result, merged as PR #8 at
+`db03183e1456f67b5b663a4cb71361cad1404dcb` with green post-merge CI.
+Its independent one-shot authority is `configs/authority/ti2r-solute-direct.json`,
+on `feat/ti2r-solute-direct-mapping`. All previous authorities remain consumed.
+Only ESM1/2 and ESM4/5 at the 20 explicitly listed existing pilot buffers are
+eligible. Identity is the sole admissible mapping; 48 shifts and wrong temporal
+pairs are negative controls, never alternative transformations. The new
+[multimodal protocol](docs/protocols/TI2R_SOLUTE_DIRECT_PROTOCOL.md) freezes
+local self-similarity and sign-invariant NGF before pixels. C1 is inactive,
+C2 activates once and C3 consumes; no scientific edits after C2 or retry.
+Prior reference exposure is explicit, not global holdout virginity. Fragment
+PASS cannot be downgraded by solute failure. The new PR stays OPEN/DRAFT;
+TI-3+, Ready and merge require a new decision. Older restrictions below remain
+historical where this newest explicit scope supersedes them.
+
 The newer [TI2R-FRAG-DIRECT decision](docs/decisions/AUTHORIZATION-TI2R-FRAG-DIRECT-2026-09-18.md)
 authorizes the governed PR #7 merge (completed at
 `b7bbb6a1f0d3eaa43866027762eb2ed061c3d7c6`) and one separate direct-raster

@@ -1,0 +1,9 @@
+{
+  "schema": "TI2R-SOLUTE-DIRECT-RED-1",
+  "stage": "TESTS_BEFORE_IMPLEMENTATION",
+  "command": "PYTHONPATH=src /usr/bin/python3 -B -m unittest tests.test_ti2r_solute_direct_registration -v",
+  "returncode": 1,
+  "expected_missing_implementation": true,
+  "experimental_io": false,
+  "output": "test_ti2r_solute_direct_registration (unittest.loader._FailedTest.test_ti2r_solute_direct_registration) ... ERROR\n\n======================================================================\nERROR: test_ti2r_solute_direct_registration (unittest.loader._FailedTest.test_ti2r_solute_direct_registration)\n----------------------------------------------------------------------\nImportError: Failed to import test module: test_ti2r_solute_direct_registration\nTraceback (most recent call last):\n  File \"/usr/lib/python3.12/unittest/loader.py\", line 137, in loadTestsFromName\n    module = __import__(module_name)\n             ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<repository>/tests/test_ti2r_solute_direct_registration.py\", line 9, in <module>\n    from snbi_fragmentation import ti2r_solute_direct_registration as solute\nImportError: cannot import name 'ti2r_solute_direct_registration' from 'snbi_fragmentation' (<repository>/src/snbi_fragmentation/__init__.py)\n\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nFAILED (errors=1)\n"
+}

@@ -1,0 +1,1973 @@
+{
+  "phase": "TI2R_SOLUTE_DIRECT",
+  "authorization_id": "TI2R-SOLUTE-DIRECT-2026-09-18",
+  "base_sha": "db03183e1456f67b5b663a4cb71361cad1404dcb",
+  "original_manifest_path": "artifacts/metadata/ti2-pilot-manifest.json",
+  "original_manifest_sha256": "4f84a50e65e7541729d9a6c58e2649a872d6a92e55b305a66a0ce4e9f63a09a9",
+  "assets": [
+    {
+      "bit_depth": 8,
+      "channels": 3,
+      "codec": "h264",
+      "colorspace_conversion": false,
+      "condition": "bottom_up_anti_parallel",
+      "decoder_command": [
+        "ffmpeg",
+        "-nostdin",
+        "-v",
+        "error",
+        "-threads",
+        "1",
+        "-noautorotate",
+        "-i",
+        "<sealed-memfd>",
+        "-map",
+        "0:v:0",
+        "-an",
+        "-sn",
+        "-dn",
+        "-vf",
+        "select=eq(n\\,0)+eq(n\\,73)+eq(n\\,146)+eq(n\\,219)+eq(n\\,293)",
+        "-fps_mode",
+        "passthrough",
+        "-frames:v",
+        "5",
+        "-pix_fmt",
+        "yuv420p",
+        "-threads",
+        "1",
+        "-f",
+        "rawvideo",
+        "pipe:1"
+      ],
+      "decoder_method": "ffmpeg-native-select-sealed-anonymous-mp4-v1",
+      "elapsed_from_first_frame_s": 0.0,
+      "experiment_id": "bottom_up_anti_parallel",
+      "experimental_time_s": -25.96,
+      "format": "native_planar_rawvideo",
+      "frame_bytes": 1951506,
+      "frame_index": 0,
+      "height": 1018,
+      "image_sha256": "8cf316b044c9da94f79715e5a81d23a771a7a236e0e16fb93a227639cdb36338",
+      "lineage": {
+        "container_sha256": "9512a2e6d0ce397f9de8ae71cbf3cb759651df8e8793542a7c99cfe9d102d8f1",
+        "member_path": "videos_trabalho_Final_IfGoiano/11837_2015_1646_MOESM1_ESM.mp4",
+        "native_planes_unchanged": true
+      },
+      "lossless": true,
+      "modality": "xray_radiography",
+      "path": "data/derived/ti2-pilot/ESM1-0000.raw",
+      "physical_time_s": 0.0,
+      "pixel_format": "yuv420p",
+      "planes": [
+        {
+          "bytes": 1301004,
+          "height": 1018,
+          "name": "Y",
+          "offset": 0,
+          "width": 1278
+        },
+        {
+          "bytes": 325251,
+          "height": 509,
+          "name": "U",
+          "offset": 1301004,
+          "width": 639
+        },
+        {
+          "bytes": 325251,
+          "height": 509,
+          "name": "V",
+          "offset": 1626255,
+          "width": 639
+        }
+      ],
+      "role": "development",
+      "source_id": "ESM1",
+      "source_sha256": "4d07ee422e97661b1ee0ae681b7617fd7971476015603f3039c20ddf8b0c5c6d",
+      "width": 1278,
+      "original_role": "estimation",
+      "asset_id": "ESM1:0"
+    },
+    {
+      "bit_depth": 8,
+      "channels": 3,
+      "codec": "h264",
+      "colorspace_conversion": false,
+      "condition": "bottom_up_anti_parallel",
+      "decoder_command": [
+        "ffmpeg",
+        "-nostdin",
+        "-v",
+        "error",
+        "-threads",
+        "1",
+        "-noautorotate",
+        "-i",
+        "<sealed-memfd>",
+        "-map",
+        "0:v:0",
+        "-an",
+        "-sn",
+        "-dn",
+        "-vf",
+        "select=eq(n\\,0)+eq(n\\,73)+eq(n\\,146)+eq(n\\,219)+eq(n\\,293)",
+        "-fps_mode",
+        "passthrough",
+        "-frames:v",
+        "5",
+        "-pix_fmt",
+        "yuv420p",
+        "-threads",
+        "1",
+        "-f",
+        "rawvideo",
+        "pipe:1"
+      ],
+      "decoder_method": "ffmpeg-native-select-sealed-anonymous-mp4-v1",
+      "elapsed_from_first_frame_s": 86.14,
+      "experiment_id": "bottom_up_anti_parallel",
+      "experimental_time_s": 60.18,
+      "format": "native_planar_rawvideo",
+      "frame_bytes": 1951506,
+      "frame_index": 73,
+      "height": 1018,
+      "image_sha256": "0209aef0e36c73b017063cbea4661f76ac0d24bd51631e11e1f41b9dae0cc2a5",
+      "lineage": {
+        "container_sha256": "9512a2e6d0ce397f9de8ae71cbf3cb759651df8e8793542a7c99cfe9d102d8f1",
+        "member_path": "videos_trabalho_Final_IfGoiano/11837_2015_1646_MOESM1_ESM.mp4",
+        "native_planes_unchanged": true
+      },
+      "lossless": true,
+      "modality": "xray_radiography",
+      "path": "data/derived/ti2-pilot/ESM1-0073.raw",
+      "physical_time_s": 86.14,
+      "pixel_format": "yuv420p",
+      "planes": [
+        {
+          "bytes": 1301004,
+          "height": 1018,
+          "name": "Y",
+          "offset": 0,
+          "width": 1278
+        },
+        {
+          "bytes": 325251,
+          "height": 509,
+          "name": "U",
+          "offset": 1301004,
+          "width": 639
+        },
+        {
+          "bytes": 325251,
+          "height": 509,
+          "name": "V",
+          "offset": 1626255,
+          "width": 639
+        }
+      ],
+      "role": "holdout",
+      "source_id": "ESM1",
+      "source_sha256": "4d07ee422e97661b1ee0ae681b7617fd7971476015603f3039c20ddf8b0c5c6d",
+      "width": 1278,
+      "original_role": "validation",
+      "asset_id": "ESM1:73"
+    },
+    {
+      "bit_depth": 8,
+      "channels": 3,
+      "codec": "h264",
+      "colorspace_conversion": false,
+      "condition": "bottom_up_anti_parallel",
+      "decoder_command": [
+        "ffmpeg",
+        "-nostdin",
+        "-v",
+        "error",
+        "-threads",
+        "1",
+        "-noautorotate",
+        "-i",
+        "<sealed-memfd>",
+        "-map",
+        "0:v:0",
+        "-an",
+        "-sn",
+        "-dn",
+        "-vf",
+        "select=eq(n\\,0)+eq(n\\,73)+eq(n\\,146)+eq(n\\,219)+eq(n\\,293)",
+        "-fps_mode",
+        "passthrough",
+        "-frames:v",
+        "5",
+        "-pix_fmt",
+        "yuv420p",
+        "-threads",
+        "1",
+        "-f",
+        "rawvideo",
+        "pipe:1"
+      ],
+      "decoder_method": "ffmpeg-native-select-sealed-anonymous-mp4-v1",
+      "elapsed_from_first_frame_s": 172.28,
+      "experiment_id": "bottom_up_anti_parallel",
+      "experimental_time_s": 146.32,
+      "format": "native_planar_rawvideo",
+      "frame_bytes": 1951506,
+      "frame_index": 146,
+      "height": 1018,
+      "image_sha256": "eccb91c1d66f500d892dfe1c204c494cfc0d1d3542174d5ae1efd921bff034e0",
+      "lineage": {
+        "container_sha256": "9512a2e6d0ce397f9de8ae71cbf3cb759651df8e8793542a7c99cfe9d102d8f1",
+        "member_path": "videos_trabalho_Final_IfGoiano/11837_2015_1646_MOESM1_ESM.mp4",
+        "native_planes_unchanged": true
+      },
+      "lossless": true,
+      "modality": "xray_radiography",
+      "path": "data/derived/ti2-pilot/ESM1-0146.raw",
+      "physical_time_s": 172.28,
+      "pixel_format": "yuv420p",
+      "planes": [
+        {
+          "bytes": 1301004,
+          "height": 1018,
+          "name": "Y",
+          "offset": 0,
+          "width": 1278
+        },
+        {
+          "bytes": 325251,
+          "height": 509,
+          "name": "U",
+          "offset": 1301004,
+          "width": 639
+        },
+        {
+          "bytes": 325251,
+          "height": 509,
+          "name": "V",
+          "offset": 1626255,
+          "width": 639
+        }
+      ],
+      "role": "development",
+      "source_id": "ESM1",
+      "source_sha256": "4d07ee422e97661b1ee0ae681b7617fd7971476015603f3039c20ddf8b0c5c6d",
+      "width": 1278,
+      "original_role": "estimation",
+      "asset_id": "ESM1:146"
+    },
+    {
+      "bit_depth": 8,
+      "channels": 3,
+      "codec": "h264",
+      "colorspace_conversion": false,
+      "condition": "bottom_up_anti_parallel",
+      "decoder_command": [
+        "ffmpeg",
+        "-nostdin",
+        "-v",
+        "error",
+        "-threads",
+        "1",
+        "-noautorotate",
+        "-i",
+        "<sealed-memfd>",
+        "-map",
+        "0:v:0",
+        "-an",
+        "-sn",
+        "-dn",
+        "-vf",
+        "select=eq(n\\,0)+eq(n\\,73)+eq(n\\,146)+eq(n\\,219)+eq(n\\,293)",
+        "-fps_mode",
+        "passthrough",
+        "-frames:v",
+        "5",
+        "-pix_fmt",
+        "yuv420p",
+        "-threads",
+        "1",
+        "-f",
+        "rawvideo",
+        "pipe:1"
+      ],
+      "decoder_method": "ffmpeg-native-select-sealed-anonymous-mp4-v1",
+      "elapsed_from_first_frame_s": 258.42,
+      "experiment_id": "bottom_up_anti_parallel",
+      "experimental_time_s": 232.46,
+      "format": "native_planar_rawvideo",
+      "frame_bytes": 1951506,
+      "frame_index": 219,
+      "height": 1018,
+      "image_sha256": "eb22ec185b465b11abbd6ecbf38d558a9dd5ef8d19f256e42429d70b566f10bd",
+      "lineage": {
+        "container_sha256": "9512a2e6d0ce397f9de8ae71cbf3cb759651df8e8793542a7c99cfe9d102d8f1",
+        "member_path": "videos_trabalho_Final_IfGoiano/11837_2015_1646_MOESM1_ESM.mp4",
+        "native_planes_unchanged": true
+      },
+      "lossless": true,
+      "modality": "xray_radiography",
+      "path": "data/derived/ti2-pilot/ESM1-0219.raw",
+      "physical_time_s": 258.42,
+      "pixel_format": "yuv420p",
+      "planes": [
+        {
+          "bytes": 1301004,
+          "height": 1018,
+          "name": "Y",
+          "offset": 0,
+          "width": 1278
+        },
+        {
+          "bytes": 325251,
+          "height": 509,
+          "name": "U",
+          "offset": 1301004,
+          "width": 639
+        },
+        {
+          "bytes": 325251,
+          "height": 509,
+          "name": "V",
+          "offset": 1626255,
+          "width": 639
+        }
+      ],
+      "role": "holdout",
+      "source_id": "ESM1",
+      "source_sha256": "4d07ee422e97661b1ee0ae681b7617fd7971476015603f3039c20ddf8b0c5c6d",
+      "width": 1278,
+      "original_role": "validation",
+      "asset_id": "ESM1:219"
+    },
+    {
+      "bit_depth": 8,
+      "channels": 3,
+      "codec": "h264",
+      "colorspace_conversion": false,
+      "condition": "bottom_up_anti_parallel",
+      "decoder_command": [
+        "ffmpeg",
+        "-nostdin",
+        "-v",
+        "error",
+        "-threads",
+        "1",
+        "-noautorotate",
+        "-i",
+        "<sealed-memfd>",
+        "-map",
+        "0:v:0",
+        "-an",
+        "-sn",
+        "-dn",
+        "-vf",
+        "select=eq(n\\,0)+eq(n\\,73)+eq(n\\,146)+eq(n\\,219)+eq(n\\,293)",
+        "-fps_mode",
+        "passthrough",
+        "-frames:v",
+        "5",
+        "-pix_fmt",
+        "yuv420p",
+        "-threads",
+        "1",
+        "-f",
+        "rawvideo",
+        "pipe:1"
+      ],
+      "decoder_method": "ffmpeg-native-select-sealed-anonymous-mp4-v1",
+      "elapsed_from_first_frame_s": 345.74,
+      "experiment_id": "bottom_up_anti_parallel",
+      "experimental_time_s": 319.78,
+      "format": "native_planar_rawvideo",
+      "frame_bytes": 1951506,
+      "frame_index": 293,
+      "height": 1018,
+      "image_sha256": "384a0297024fda34b6b2a5a87945297315e27efffdde47c9a3a67a6483fc1e13",
+      "lineage": {
+        "container_sha256": "9512a2e6d0ce397f9de8ae71cbf3cb759651df8e8793542a7c99cfe9d102d8f1",
+        "member_path": "videos_trabalho_Final_IfGoiano/11837_2015_1646_MOESM1_ESM.mp4",
+        "native_planes_unchanged": true
+      },
+      "lossless": true,
+      "modality": "xray_radiography",
+      "path": "data/derived/ti2-pilot/ESM1-0293.raw",
+      "physical_time_s": 345.74,
+      "pixel_format": "yuv420p",
+      "planes": [
+        {
+          "bytes": 1301004,
+          "height": 1018,
+          "name": "Y",
+          "offset": 0,
+          "width": 1278
+        },
+        {
+          "bytes": 325251,
+          "height": 509,
+          "name": "U",
+          "offset": 1301004,
+          "width": 639
+        },
+        {
+          "bytes": 325251,
+          "height": 509,
+          "name": "V",
+          "offset": 1626255,
+          "width": 639
+        }
+      ],
+      "role": "development",
+      "source_id": "ESM1",
+      "source_sha256": "4d07ee422e97661b1ee0ae681b7617fd7971476015603f3039c20ddf8b0c5c6d",
+      "width": 1278,
+      "original_role": "estimation",
+      "asset_id": "ESM1:293"
+    },
+    {
+      "bit_depth": 8,
+      "channels": 3,
+      "codec": "h264",
+      "colorspace_conversion": false,
+      "condition": "bottom_up_anti_parallel",
+      "decoder_command": [
+        "ffmpeg",
+        "-nostdin",
+        "-v",
+        "error",
+        "-threads",
+        "1",
+        "-noautorotate",
+        "-i",
+        "<sealed-memfd>",
+        "-map",
+        "0:v:0",
+        "-an",
+        "-sn",
+        "-dn",
+        "-vf",
+        "select=eq(n\\,0)+eq(n\\,73)+eq(n\\,146)+eq(n\\,219)+eq(n\\,293)",
+        "-fps_mode",
+        "passthrough",
+        "-frames:v",
+        "5",
+        "-pix_fmt",
+        "yuv420p",
+        "-threads",
+        "1",
+        "-f",
+        "rawvideo",
+        "pipe:1"
+      ],
+      "decoder_method": "ffmpeg-native-select-sealed-anonymous-mp4-v1",
+      "elapsed_from_first_frame_s": 0.0,
+      "experiment_id": "bottom_up_anti_parallel",
+      "experimental_time_s": -25.96,
+      "format": "native_planar_rawvideo",
+      "frame_bytes": 1951506,
+      "frame_index": 0,
+      "height": 1018,
+      "image_sha256": "87baca688ac43c54673a46b5c2ee7a70e51c8a76827b04b3292e817b964f4a4c",
+      "lineage": {
+        "container_sha256": "9512a2e6d0ce397f9de8ae71cbf3cb759651df8e8793542a7c99cfe9d102d8f1",
+        "member_path": "videos_trabalho_Final_IfGoiano/11837_2015_1646_MOESM2_ESM.mp4",
+        "native_planes_unchanged": true
+      },
+      "lossless": true,
+      "modality": "relative_solute_field",
+      "path": "data/derived/ti2-pilot/ESM2-0000.raw",
+      "physical_time_s": 0.0,
+      "pixel_format": "yuv420p",
+      "planes": [
+        {
+          "bytes": 1301004,
+          "height": 1018,
+          "name": "Y",
+          "offset": 0,
+          "width": 1278
+        },
+        {
+          "bytes": 325251,
+          "height": 509,
+          "name": "U",
+          "offset": 1301004,
+          "width": 639
+        },
+        {
+          "bytes": 325251,
+          "height": 509,
+          "name": "V",
+          "offset": 1626255,
+          "width": 639
+        }
+      ],
+      "role": "development",
+      "source_id": "ESM2",
+      "source_sha256": "4eb1762dc4ee65c3e8b1411d80812a75257b1324d539db4c3dcf6c97c1ed9a0a",
+      "width": 1278,
+      "original_role": "estimation",
+      "asset_id": "ESM2:0"
+    },
+    {
+      "bit_depth": 8,
+      "channels": 3,
+      "codec": "h264",
+      "colorspace_conversion": false,
+      "condition": "bottom_up_anti_parallel",
+      "decoder_command": [
+        "ffmpeg",
+        "-nostdin",
+        "-v",
+        "error",
+        "-threads",
+        "1",
+        "-noautorotate",
+        "-i",
+        "<sealed-memfd>",
+        "-map",
+        "0:v:0",
+        "-an",
+        "-sn",
+        "-dn",
+        "-vf",
+        "select=eq(n\\,0)+eq(n\\,73)+eq(n\\,146)+eq(n\\,219)+eq(n\\,293)",
+        "-fps_mode",
+        "passthrough",
+        "-frames:v",
+        "5",
+        "-pix_fmt",
+        "yuv420p",
+        "-threads",
+        "1",
+        "-f",
+        "rawvideo",
+        "pipe:1"
+      ],
+      "decoder_method": "ffmpeg-native-select-sealed-anonymous-mp4-v1",
+      "elapsed_from_first_frame_s": 86.14,
+      "experiment_id": "bottom_up_anti_parallel",
+      "experimental_time_s": 60.18,
+      "format": "native_planar_rawvideo",
+      "frame_bytes": 1951506,
+      "frame_index": 73,
+      "height": 1018,
+      "image_sha256": "c5518bf031ae0e18541ce2c72206a8d1e5a53e060ee990dccaeb0cbb5024874f",
+      "lineage": {
+        "container_sha256": "9512a2e6d0ce397f9de8ae71cbf3cb759651df8e8793542a7c99cfe9d102d8f1",
+        "member_path": "videos_trabalho_Final_IfGoiano/11837_2015_1646_MOESM2_ESM.mp4",
+        "native_planes_unchanged": true
+      },
+      "lossless": true,
+      "modality": "relative_solute_field",
+      "path": "data/derived/ti2-pilot/ESM2-0073.raw",
+      "physical_time_s": 86.14,
+      "pixel_format": "yuv420p",
+      "planes": [
+        {
+          "bytes": 1301004,
+          "height": 1018,
+          "name": "Y",
+          "offset": 0,
+          "width": 1278
+        },
+        {
+          "bytes": 325251,
+          "height": 509,
+          "name": "U",
+          "offset": 1301004,
+          "width": 639
+        },
+        {
+          "bytes": 325251,
+          "height": 509,
+          "name": "V",
+          "offset": 1626255,
+          "width": 639
+        }
+      ],
+      "role": "holdout",
+      "source_id": "ESM2",
+      "source_sha256": "4eb1762dc4ee65c3e8b1411d80812a75257b1324d539db4c3dcf6c97c1ed9a0a",
+      "width": 1278,
+      "original_role": "validation",
+      "asset_id": "ESM2:73"
+    },
+    {
+      "bit_depth": 8,
+      "channels": 3,
+      "codec": "h264",
+      "colorspace_conversion": false,
+      "condition": "bottom_up_anti_parallel",
+      "decoder_command": [
+        "ffmpeg",
+        "-nostdin",
+        "-v",
+        "error",
+        "-threads",
+        "1",
+        "-noautorotate",
+        "-i",
+        "<sealed-memfd>",
+        "-map",
+        "0:v:0",
+        "-an",
+        "-sn",
+        "-dn",
+        "-vf",
+        "select=eq(n\\,0)+eq(n\\,73)+eq(n\\,146)+eq(n\\,219)+eq(n\\,293)",
+        "-fps_mode",
+        "passthrough",
+        "-frames:v",
+        "5",
+        "-pix_fmt",
+        "yuv420p",
+        "-threads",
+        "1",
+        "-f",
+        "rawvideo",
+        "pipe:1"
+      ],
+      "decoder_method": "ffmpeg-native-select-sealed-anonymous-mp4-v1",
+      "elapsed_from_first_frame_s": 172.28,
+      "experiment_id": "bottom_up_anti_parallel",
+      "experimental_time_s": 146.32,
+      "format": "native_planar_rawvideo",
+      "frame_bytes": 1951506,
+      "frame_index": 146,
+      "height": 1018,
+      "image_sha256": "e581aee31e1084567151d42539cb1995d2ec789db30efd44af9200374f020908",
+      "lineage": {
+        "container_sha256": "9512a2e6d0ce397f9de8ae71cbf3cb759651df8e8793542a7c99cfe9d102d8f1",
+        "member_path": "videos_trabalho_Final_IfGoiano/11837_2015_1646_MOESM2_ESM.mp4",
+        "native_planes_unchanged": true
+      },
+      "lossless": true,
+      "modality": "relative_solute_field",
+      "path": "data/derived/ti2-pilot/ESM2-0146.raw",
+      "physical_time_s": 172.28,
+      "pixel_format": "yuv420p",
+      "planes": [
+        {
+          "bytes": 1301004,
+          "height": 1018,
+          "name": "Y",
+          "offset": 0,
+          "width": 1278
+        },
+        {
+          "bytes": 325251,
+          "height": 509,
+          "name": "U",
+          "offset": 1301004,
+          "width": 639
+        },
+        {
+          "bytes": 325251,
+          "height": 509,
+          "name": "V",
+          "offset": 1626255,
+          "width": 639
+        }
+      ],
+      "role": "development",
+      "source_id": "ESM2",
+      "source_sha256": "4eb1762dc4ee65c3e8b1411d80812a75257b1324d539db4c3dcf6c97c1ed9a0a",
+      "width": 1278,
+      "original_role": "estimation",
+      "asset_id": "ESM2:146"
+    },
+    {
+      "bit_depth": 8,
+      "channels": 3,
+      "codec": "h264",
+      "colorspace_conversion": false,
+      "condition": "bottom_up_anti_parallel",
+      "decoder_command": [
+        "ffmpeg",
+        "-nostdin",
+        "-v",
+        "error",
+        "-threads",
+        "1",
+        "-noautorotate",
+        "-i",
+        "<sealed-memfd>",
+        "-map",
+        "0:v:0",
+        "-an",
+        "-sn",
+        "-dn",
+        "-vf",
+        "select=eq(n\\,0)+eq(n\\,73)+eq(n\\,146)+eq(n\\,219)+eq(n\\,293)",
+        "-fps_mode",
+        "passthrough",
+        "-frames:v",
+        "5",
+        "-pix_fmt",
+        "yuv420p",
+        "-threads",
+        "1",
+        "-f",
+        "rawvideo",
+        "pipe:1"
+      ],
+      "decoder_method": "ffmpeg-native-select-sealed-anonymous-mp4-v1",
+      "elapsed_from_first_frame_s": 258.42,
+      "experiment_id": "bottom_up_anti_parallel",
+      "experimental_time_s": 232.46,
+      "format": "native_planar_rawvideo",
+      "frame_bytes": 1951506,
+      "frame_index": 219,
+      "height": 1018,
+      "image_sha256": "b50f56a6332e33bfb3e32a8c94694a39e6cce936370f4b5232d257d8e7d0d228",
+      "lineage": {
+        "container_sha256": "9512a2e6d0ce397f9de8ae71cbf3cb759651df8e8793542a7c99cfe9d102d8f1",
+        "member_path": "videos_trabalho_Final_IfGoiano/11837_2015_1646_MOESM2_ESM.mp4",
+        "native_planes_unchanged": true
+      },
+      "lossless": true,
+      "modality": "relative_solute_field",
+      "path": "data/derived/ti2-pilot/ESM2-0219.raw",
+      "physical_time_s": 258.42,
+      "pixel_format": "yuv420p",
+      "planes": [
+        {
+          "bytes": 1301004,
+          "height": 1018,
+          "name": "Y",
+          "offset": 0,
+          "width": 1278
+        },
+        {
+          "bytes": 325251,
+          "height": 509,
+          "name": "U",
+          "offset": 1301004,
+          "width": 639
+        },
+        {
+          "bytes": 325251,
+          "height": 509,
+          "name": "V",
+          "offset": 1626255,
+          "width": 639
+        }
+      ],
+      "role": "holdout",
+      "source_id": "ESM2",
+      "source_sha256": "4eb1762dc4ee65c3e8b1411d80812a75257b1324d539db4c3dcf6c97c1ed9a0a",
+      "width": 1278,
+      "original_role": "validation",
+      "asset_id": "ESM2:219"
+    },
+    {
+      "bit_depth": 8,
+      "channels": 3,
+      "codec": "h264",
+      "colorspace_conversion": false,
+      "condition": "bottom_up_anti_parallel",
+      "decoder_command": [
+        "ffmpeg",
+        "-nostdin",
+        "-v",
+        "error",
+        "-threads",
+        "1",
+        "-noautorotate",
+        "-i",
+        "<sealed-memfd>",
+        "-map",
+        "0:v:0",
+        "-an",
+        "-sn",
+        "-dn",
+        "-vf",
+        "select=eq(n\\,0)+eq(n\\,73)+eq(n\\,146)+eq(n\\,219)+eq(n\\,293)",
+        "-fps_mode",
+        "passthrough",
+        "-frames:v",
+        "5",
+        "-pix_fmt",
+        "yuv420p",
+        "-threads",
+        "1",
+        "-f",
+        "rawvideo",
+        "pipe:1"
+      ],
+      "decoder_method": "ffmpeg-native-select-sealed-anonymous-mp4-v1",
+      "elapsed_from_first_frame_s": 345.74,
+      "experiment_id": "bottom_up_anti_parallel",
+      "experimental_time_s": 319.78,
+      "format": "native_planar_rawvideo",
+      "frame_bytes": 1951506,
+      "frame_index": 293,
+      "height": 1018,
+      "image_sha256": "3e5812419532f01c54ed10327b8a21547dc64415ca829a2e999f9e65efee0771",
+      "lineage": {
+        "container_sha256": "9512a2e6d0ce397f9de8ae71cbf3cb759651df8e8793542a7c99cfe9d102d8f1",
+        "member_path": "videos_trabalho_Final_IfGoiano/11837_2015_1646_MOESM2_ESM.mp4",
+        "native_planes_unchanged": true
+      },
+      "lossless": true,
+      "modality": "relative_solute_field",
+      "path": "data/derived/ti2-pilot/ESM2-0293.raw",
+      "physical_time_s": 345.74,
+      "pixel_format": "yuv420p",
+      "planes": [
+        {
+          "bytes": 1301004,
+          "height": 1018,
+          "name": "Y",
+          "offset": 0,
+          "width": 1278
+        },
+        {
+          "bytes": 325251,
+          "height": 509,
+          "name": "U",
+          "offset": 1301004,
+          "width": 639
+        },
+        {
+          "bytes": 325251,
+          "height": 509,
+          "name": "V",
+          "offset": 1626255,
+          "width": 639
+        }
+      ],
+      "role": "development",
+      "source_id": "ESM2",
+      "source_sha256": "4eb1762dc4ee65c3e8b1411d80812a75257b1324d539db4c3dcf6c97c1ed9a0a",
+      "width": 1278,
+      "original_role": "estimation",
+      "asset_id": "ESM2:293"
+    },
+    {
+      "bit_depth": 8,
+      "channels": 3,
+      "codec": "h264",
+      "colorspace_conversion": false,
+      "condition": "top_down_parallel",
+      "decoder_command": [
+        "ffmpeg",
+        "-nostdin",
+        "-v",
+        "error",
+        "-threads",
+        "1",
+        "-noautorotate",
+        "-i",
+        "<sealed-memfd>",
+        "-map",
+        "0:v:0",
+        "-an",
+        "-sn",
+        "-dn",
+        "-vf",
+        "select=eq(n\\,0)+eq(n\\,98)+eq(n\\,197)+eq(n\\,295)+eq(n\\,394)",
+        "-fps_mode",
+        "passthrough",
+        "-frames:v",
+        "5",
+        "-pix_fmt",
+        "yuv420p",
+        "-threads",
+        "1",
+        "-f",
+        "rawvideo",
+        "pipe:1"
+      ],
+      "decoder_method": "ffmpeg-native-select-sealed-anonymous-mp4-v1",
+      "elapsed_from_first_frame_s": 0.0,
+      "experiment_id": "top_down_parallel",
+      "experimental_time_s": -34.22,
+      "format": "native_planar_rawvideo",
+      "frame_bytes": 1940004,
+      "frame_index": 0,
+      "height": 1012,
+      "image_sha256": "f9c9f9fb58289409f732aadb777adad48e1a626e055b17f2cde925ab54c1e5ca",
+      "lineage": {
+        "container_sha256": "9512a2e6d0ce397f9de8ae71cbf3cb759651df8e8793542a7c99cfe9d102d8f1",
+        "member_path": "videos_trabalho_Final_IfGoiano/11837_2015_1646_MOESM4_ESM.mp4",
+        "native_planes_unchanged": true
+      },
+      "lossless": true,
+      "modality": "xray_radiography",
+      "path": "data/derived/ti2-pilot/ESM4-0000.raw",
+      "physical_time_s": 0.0,
+      "pixel_format": "yuv420p",
+      "planes": [
+        {
+          "bytes": 1293336,
+          "height": 1012,
+          "name": "Y",
+          "offset": 0,
+          "width": 1278
+        },
+        {
+          "bytes": 323334,
+          "height": 506,
+          "name": "U",
+          "offset": 1293336,
+          "width": 639
+        },
+        {
+          "bytes": 323334,
+          "height": 506,
+          "name": "V",
+          "offset": 1616670,
+          "width": 639
+        }
+      ],
+      "role": "development",
+      "source_id": "ESM4",
+      "source_sha256": "9e6be3e78699d3bdd16fa71d56917479d7e16f7418b857ab3925e1115df91ebe",
+      "width": 1278,
+      "original_role": "estimation",
+      "asset_id": "ESM4:0"
+    },
+    {
+      "bit_depth": 8,
+      "channels": 3,
+      "codec": "h264",
+      "colorspace_conversion": false,
+      "condition": "top_down_parallel",
+      "decoder_command": [
+        "ffmpeg",
+        "-nostdin",
+        "-v",
+        "error",
+        "-threads",
+        "1",
+        "-noautorotate",
+        "-i",
+        "<sealed-memfd>",
+        "-map",
+        "0:v:0",
+        "-an",
+        "-sn",
+        "-dn",
+        "-vf",
+        "select=eq(n\\,0)+eq(n\\,98)+eq(n\\,197)+eq(n\\,295)+eq(n\\,394)",
+        "-fps_mode",
+        "passthrough",
+        "-frames:v",
+        "5",
+        "-pix_fmt",
+        "yuv420p",
+        "-threads",
+        "1",
+        "-f",
+        "rawvideo",
+        "pipe:1"
+      ],
+      "decoder_method": "ffmpeg-native-select-sealed-anonymous-mp4-v1",
+      "elapsed_from_first_frame_s": 115.64,
+      "experiment_id": "top_down_parallel",
+      "experimental_time_s": 81.42,
+      "format": "native_planar_rawvideo",
+      "frame_bytes": 1940004,
+      "frame_index": 98,
+      "height": 1012,
+      "image_sha256": "8e9ab504657f44d5f7252ff8a681a4c0007a4f0643f11cc26b171e989be75cc9",
+      "lineage": {
+        "container_sha256": "9512a2e6d0ce397f9de8ae71cbf3cb759651df8e8793542a7c99cfe9d102d8f1",
+        "member_path": "videos_trabalho_Final_IfGoiano/11837_2015_1646_MOESM4_ESM.mp4",
+        "native_planes_unchanged": true
+      },
+      "lossless": true,
+      "modality": "xray_radiography",
+      "path": "data/derived/ti2-pilot/ESM4-0098.raw",
+      "physical_time_s": 115.64,
+      "pixel_format": "yuv420p",
+      "planes": [
+        {
+          "bytes": 1293336,
+          "height": 1012,
+          "name": "Y",
+          "offset": 0,
+          "width": 1278
+        },
+        {
+          "bytes": 323334,
+          "height": 506,
+          "name": "U",
+          "offset": 1293336,
+          "width": 639
+        },
+        {
+          "bytes": 323334,
+          "height": 506,
+          "name": "V",
+          "offset": 1616670,
+          "width": 639
+        }
+      ],
+      "role": "holdout",
+      "source_id": "ESM4",
+      "source_sha256": "9e6be3e78699d3bdd16fa71d56917479d7e16f7418b857ab3925e1115df91ebe",
+      "width": 1278,
+      "original_role": "validation",
+      "asset_id": "ESM4:98"
+    },
+    {
+      "bit_depth": 8,
+      "channels": 3,
+      "codec": "h264",
+      "colorspace_conversion": false,
+      "condition": "top_down_parallel",
+      "decoder_command": [
+        "ffmpeg",
+        "-nostdin",
+        "-v",
+        "error",
+        "-threads",
+        "1",
+        "-noautorotate",
+        "-i",
+        "<sealed-memfd>",
+        "-map",
+        "0:v:0",
+        "-an",
+        "-sn",
+        "-dn",
+        "-vf",
+        "select=eq(n\\,0)+eq(n\\,98)+eq(n\\,197)+eq(n\\,295)+eq(n\\,394)",
+        "-fps_mode",
+        "passthrough",
+        "-frames:v",
+        "5",
+        "-pix_fmt",
+        "yuv420p",
+        "-threads",
+        "1",
+        "-f",
+        "rawvideo",
+        "pipe:1"
+      ],
+      "decoder_method": "ffmpeg-native-select-sealed-anonymous-mp4-v1",
+      "elapsed_from_first_frame_s": 232.46,
+      "experiment_id": "top_down_parallel",
+      "experimental_time_s": 198.24,
+      "format": "native_planar_rawvideo",
+      "frame_bytes": 1940004,
+      "frame_index": 197,
+      "height": 1012,
+      "image_sha256": "0446ff48d035f3f548d93253fbd9eac14536de0aeb477485b87b17dd647e8a57",
+      "lineage": {
+        "container_sha256": "9512a2e6d0ce397f9de8ae71cbf3cb759651df8e8793542a7c99cfe9d102d8f1",
+        "member_path": "videos_trabalho_Final_IfGoiano/11837_2015_1646_MOESM4_ESM.mp4",
+        "native_planes_unchanged": true
+      },
+      "lossless": true,
+      "modality": "xray_radiography",
+      "path": "data/derived/ti2-pilot/ESM4-0197.raw",
+      "physical_time_s": 232.46,
+      "pixel_format": "yuv420p",
+      "planes": [
+        {
+          "bytes": 1293336,
+          "height": 1012,
+          "name": "Y",
+          "offset": 0,
+          "width": 1278
+        },
+        {
+          "bytes": 323334,
+          "height": 506,
+          "name": "U",
+          "offset": 1293336,
+          "width": 639
+        },
+        {
+          "bytes": 323334,
+          "height": 506,
+          "name": "V",
+          "offset": 1616670,
+          "width": 639
+        }
+      ],
+      "role": "development",
+      "source_id": "ESM4",
+      "source_sha256": "9e6be3e78699d3bdd16fa71d56917479d7e16f7418b857ab3925e1115df91ebe",
+      "width": 1278,
+      "original_role": "estimation",
+      "asset_id": "ESM4:197"
+    },
+    {
+      "bit_depth": 8,
+      "channels": 3,
+      "codec": "h264",
+      "colorspace_conversion": false,
+      "condition": "top_down_parallel",
+      "decoder_command": [
+        "ffmpeg",
+        "-nostdin",
+        "-v",
+        "error",
+        "-threads",
+        "1",
+        "-noautorotate",
+        "-i",
+        "<sealed-memfd>",
+        "-map",
+        "0:v:0",
+        "-an",
+        "-sn",
+        "-dn",
+        "-vf",
+        "select=eq(n\\,0)+eq(n\\,98)+eq(n\\,197)+eq(n\\,295)+eq(n\\,394)",
+        "-fps_mode",
+        "passthrough",
+        "-frames:v",
+        "5",
+        "-pix_fmt",
+        "yuv420p",
+        "-threads",
+        "1",
+        "-f",
+        "rawvideo",
+        "pipe:1"
+      ],
+      "decoder_method": "ffmpeg-native-select-sealed-anonymous-mp4-v1",
+      "elapsed_from_first_frame_s": 348.1,
+      "experiment_id": "top_down_parallel",
+      "experimental_time_s": 313.88,
+      "format": "native_planar_rawvideo",
+      "frame_bytes": 1940004,
+      "frame_index": 295,
+      "height": 1012,
+      "image_sha256": "ac3b9df34450e8c0f801eb90d2c329c90737f4abda4202d81638395fb5519f2a",
+      "lineage": {
+        "container_sha256": "9512a2e6d0ce397f9de8ae71cbf3cb759651df8e8793542a7c99cfe9d102d8f1",
+        "member_path": "videos_trabalho_Final_IfGoiano/11837_2015_1646_MOESM4_ESM.mp4",
+        "native_planes_unchanged": true
+      },
+      "lossless": true,
+      "modality": "xray_radiography",
+      "path": "data/derived/ti2-pilot/ESM4-0295.raw",
+      "physical_time_s": 348.1,
+      "pixel_format": "yuv420p",
+      "planes": [
+        {
+          "bytes": 1293336,
+          "height": 1012,
+          "name": "Y",
+          "offset": 0,
+          "width": 1278
+        },
+        {
+          "bytes": 323334,
+          "height": 506,
+          "name": "U",
+          "offset": 1293336,
+          "width": 639
+        },
+        {
+          "bytes": 323334,
+          "height": 506,
+          "name": "V",
+          "offset": 1616670,
+          "width": 639
+        }
+      ],
+      "role": "holdout",
+      "source_id": "ESM4",
+      "source_sha256": "9e6be3e78699d3bdd16fa71d56917479d7e16f7418b857ab3925e1115df91ebe",
+      "width": 1278,
+      "original_role": "validation",
+      "asset_id": "ESM4:295"
+    },
+    {
+      "bit_depth": 8,
+      "channels": 3,
+      "codec": "h264",
+      "colorspace_conversion": false,
+      "condition": "top_down_parallel",
+      "decoder_command": [
+        "ffmpeg",
+        "-nostdin",
+        "-v",
+        "error",
+        "-threads",
+        "1",
+        "-noautorotate",
+        "-i",
+        "<sealed-memfd>",
+        "-map",
+        "0:v:0",
+        "-an",
+        "-sn",
+        "-dn",
+        "-vf",
+        "select=eq(n\\,0)+eq(n\\,98)+eq(n\\,197)+eq(n\\,295)+eq(n\\,394)",
+        "-fps_mode",
+        "passthrough",
+        "-frames:v",
+        "5",
+        "-pix_fmt",
+        "yuv420p",
+        "-threads",
+        "1",
+        "-f",
+        "rawvideo",
+        "pipe:1"
+      ],
+      "decoder_method": "ffmpeg-native-select-sealed-anonymous-mp4-v1",
+      "elapsed_from_first_frame_s": 464.92,
+      "experiment_id": "top_down_parallel",
+      "experimental_time_s": 430.7,
+      "format": "native_planar_rawvideo",
+      "frame_bytes": 1940004,
+      "frame_index": 394,
+      "height": 1012,
+      "image_sha256": "fab7bacbb1198df4d2440362c6135452a7b3b87497455c6c6234261fad3c1422",
+      "lineage": {
+        "container_sha256": "9512a2e6d0ce397f9de8ae71cbf3cb759651df8e8793542a7c99cfe9d102d8f1",
+        "member_path": "videos_trabalho_Final_IfGoiano/11837_2015_1646_MOESM4_ESM.mp4",
+        "native_planes_unchanged": true
+      },
+      "lossless": true,
+      "modality": "xray_radiography",
+      "path": "data/derived/ti2-pilot/ESM4-0394.raw",
+      "physical_time_s": 464.92,
+      "pixel_format": "yuv420p",
+      "planes": [
+        {
+          "bytes": 1293336,
+          "height": 1012,
+          "name": "Y",
+          "offset": 0,
+          "width": 1278
+        },
+        {
+          "bytes": 323334,
+          "height": 506,
+          "name": "U",
+          "offset": 1293336,
+          "width": 639
+        },
+        {
+          "bytes": 323334,
+          "height": 506,
+          "name": "V",
+          "offset": 1616670,
+          "width": 639
+        }
+      ],
+      "role": "development",
+      "source_id": "ESM4",
+      "source_sha256": "9e6be3e78699d3bdd16fa71d56917479d7e16f7418b857ab3925e1115df91ebe",
+      "width": 1278,
+      "original_role": "estimation",
+      "asset_id": "ESM4:394"
+    },
+    {
+      "bit_depth": 8,
+      "channels": 3,
+      "codec": "h264",
+      "colorspace_conversion": false,
+      "condition": "top_down_parallel",
+      "decoder_command": [
+        "ffmpeg",
+        "-nostdin",
+        "-v",
+        "error",
+        "-threads",
+        "1",
+        "-noautorotate",
+        "-i",
+        "<sealed-memfd>",
+        "-map",
+        "0:v:0",
+        "-an",
+        "-sn",
+        "-dn",
+        "-vf",
+        "select=eq(n\\,0)+eq(n\\,98)+eq(n\\,197)+eq(n\\,295)+eq(n\\,394)",
+        "-fps_mode",
+        "passthrough",
+        "-frames:v",
+        "5",
+        "-pix_fmt",
+        "yuv420p",
+        "-threads",
+        "1",
+        "-f",
+        "rawvideo",
+        "pipe:1"
+      ],
+      "decoder_method": "ffmpeg-native-select-sealed-anonymous-mp4-v1",
+      "elapsed_from_first_frame_s": 0.0,
+      "experiment_id": "top_down_parallel",
+      "experimental_time_s": -34.22,
+      "format": "native_planar_rawvideo",
+      "frame_bytes": 1940004,
+      "frame_index": 0,
+      "height": 1012,
+      "image_sha256": "643fd7a015d452920cc5f7eaaf6c5e7d647eb0c0dea01d0c3fb13fc5f969bd8f",
+      "lineage": {
+        "container_sha256": "9512a2e6d0ce397f9de8ae71cbf3cb759651df8e8793542a7c99cfe9d102d8f1",
+        "member_path": "videos_trabalho_Final_IfGoiano/11837_2015_1646_MOESM5_ESM.mp4",
+        "native_planes_unchanged": true
+      },
+      "lossless": true,
+      "modality": "relative_solute_field",
+      "path": "data/derived/ti2-pilot/ESM5-0000.raw",
+      "physical_time_s": 0.0,
+      "pixel_format": "yuv420p",
+      "planes": [
+        {
+          "bytes": 1293336,
+          "height": 1012,
+          "name": "Y",
+          "offset": 0,
+          "width": 1278
+        },
+        {
+          "bytes": 323334,
+          "height": 506,
+          "name": "U",
+          "offset": 1293336,
+          "width": 639
+        },
+        {
+          "bytes": 323334,
+          "height": 506,
+          "name": "V",
+          "offset": 1616670,
+          "width": 639
+        }
+      ],
+      "role": "development",
+      "source_id": "ESM5",
+      "source_sha256": "c9054d18f330e018e82cc6bd4db2ccfbda7ac76e01326a831857a835d1feade6",
+      "width": 1278,
+      "original_role": "estimation",
+      "asset_id": "ESM5:0"
+    },
+    {
+      "bit_depth": 8,
+      "channels": 3,
+      "codec": "h264",
+      "colorspace_conversion": false,
+      "condition": "top_down_parallel",
+      "decoder_command": [
+        "ffmpeg",
+        "-nostdin",
+        "-v",
+        "error",
+        "-threads",
+        "1",
+        "-noautorotate",
+        "-i",
+        "<sealed-memfd>",
+        "-map",
+        "0:v:0",
+        "-an",
+        "-sn",
+        "-dn",
+        "-vf",
+        "select=eq(n\\,0)+eq(n\\,98)+eq(n\\,197)+eq(n\\,295)+eq(n\\,394)",
+        "-fps_mode",
+        "passthrough",
+        "-frames:v",
+        "5",
+        "-pix_fmt",
+        "yuv420p",
+        "-threads",
+        "1",
+        "-f",
+        "rawvideo",
+        "pipe:1"
+      ],
+      "decoder_method": "ffmpeg-native-select-sealed-anonymous-mp4-v1",
+      "elapsed_from_first_frame_s": 115.64,
+      "experiment_id": "top_down_parallel",
+      "experimental_time_s": 81.42,
+      "format": "native_planar_rawvideo",
+      "frame_bytes": 1940004,
+      "frame_index": 98,
+      "height": 1012,
+      "image_sha256": "e4d51cf146c418faa9c5c97867a8cde76237e6a5086525b3db56ed0c68fa3c07",
+      "lineage": {
+        "container_sha256": "9512a2e6d0ce397f9de8ae71cbf3cb759651df8e8793542a7c99cfe9d102d8f1",
+        "member_path": "videos_trabalho_Final_IfGoiano/11837_2015_1646_MOESM5_ESM.mp4",
+        "native_planes_unchanged": true
+      },
+      "lossless": true,
+      "modality": "relative_solute_field",
+      "path": "data/derived/ti2-pilot/ESM5-0098.raw",
+      "physical_time_s": 115.64,
+      "pixel_format": "yuv420p",
+      "planes": [
+        {
+          "bytes": 1293336,
+          "height": 1012,
+          "name": "Y",
+          "offset": 0,
+          "width": 1278
+        },
+        {
+          "bytes": 323334,
+          "height": 506,
+          "name": "U",
+          "offset": 1293336,
+          "width": 639
+        },
+        {
+          "bytes": 323334,
+          "height": 506,
+          "name": "V",
+          "offset": 1616670,
+          "width": 639
+        }
+      ],
+      "role": "holdout",
+      "source_id": "ESM5",
+      "source_sha256": "c9054d18f330e018e82cc6bd4db2ccfbda7ac76e01326a831857a835d1feade6",
+      "width": 1278,
+      "original_role": "validation",
+      "asset_id": "ESM5:98"
+    },
+    {
+      "bit_depth": 8,
+      "channels": 3,
+      "codec": "h264",
+      "colorspace_conversion": false,
+      "condition": "top_down_parallel",
+      "decoder_command": [
+        "ffmpeg",
+        "-nostdin",
+        "-v",
+        "error",
+        "-threads",
+        "1",
+        "-noautorotate",
+        "-i",
+        "<sealed-memfd>",
+        "-map",
+        "0:v:0",
+        "-an",
+        "-sn",
+        "-dn",
+        "-vf",
+        "select=eq(n\\,0)+eq(n\\,98)+eq(n\\,197)+eq(n\\,295)+eq(n\\,394)",
+        "-fps_mode",
+        "passthrough",
+        "-frames:v",
+        "5",
+        "-pix_fmt",
+        "yuv420p",
+        "-threads",
+        "1",
+        "-f",
+        "rawvideo",
+        "pipe:1"
+      ],
+      "decoder_method": "ffmpeg-native-select-sealed-anonymous-mp4-v1",
+      "elapsed_from_first_frame_s": 232.46,
+      "experiment_id": "top_down_parallel",
+      "experimental_time_s": 198.24,
+      "format": "native_planar_rawvideo",
+      "frame_bytes": 1940004,
+      "frame_index": 197,
+      "height": 1012,
+      "image_sha256": "d1a57d8f41dbe5b7de62ec7b8a4356cab1c0a67087aad9cbcfeded8a1c8b643f",
+      "lineage": {
+        "container_sha256": "9512a2e6d0ce397f9de8ae71cbf3cb759651df8e8793542a7c99cfe9d102d8f1",
+        "member_path": "videos_trabalho_Final_IfGoiano/11837_2015_1646_MOESM5_ESM.mp4",
+        "native_planes_unchanged": true
+      },
+      "lossless": true,
+      "modality": "relative_solute_field",
+      "path": "data/derived/ti2-pilot/ESM5-0197.raw",
+      "physical_time_s": 232.46,
+      "pixel_format": "yuv420p",
+      "planes": [
+        {
+          "bytes": 1293336,
+          "height": 1012,
+          "name": "Y",
+          "offset": 0,
+          "width": 1278
+        },
+        {
+          "bytes": 323334,
+          "height": 506,
+          "name": "U",
+          "offset": 1293336,
+          "width": 639
+        },
+        {
+          "bytes": 323334,
+          "height": 506,
+          "name": "V",
+          "offset": 1616670,
+          "width": 639
+        }
+      ],
+      "role": "development",
+      "source_id": "ESM5",
+      "source_sha256": "c9054d18f330e018e82cc6bd4db2ccfbda7ac76e01326a831857a835d1feade6",
+      "width": 1278,
+      "original_role": "estimation",
+      "asset_id": "ESM5:197"
+    },
+    {
+      "bit_depth": 8,
+      "channels": 3,
+      "codec": "h264",
+      "colorspace_conversion": false,
+      "condition": "top_down_parallel",
+      "decoder_command": [
+        "ffmpeg",
+        "-nostdin",
+        "-v",
+        "error",
+        "-threads",
+        "1",
+        "-noautorotate",
+        "-i",
+        "<sealed-memfd>",
+        "-map",
+        "0:v:0",
+        "-an",
+        "-sn",
+        "-dn",
+        "-vf",
+        "select=eq(n\\,0)+eq(n\\,98)+eq(n\\,197)+eq(n\\,295)+eq(n\\,394)",
+        "-fps_mode",
+        "passthrough",
+        "-frames:v",
+        "5",
+        "-pix_fmt",
+        "yuv420p",
+        "-threads",
+        "1",
+        "-f",
+        "rawvideo",
+        "pipe:1"
+      ],
+      "decoder_method": "ffmpeg-native-select-sealed-anonymous-mp4-v1",
+      "elapsed_from_first_frame_s": 348.1,
+      "experiment_id": "top_down_parallel",
+      "experimental_time_s": 313.88,
+      "format": "native_planar_rawvideo",
+      "frame_bytes": 1940004,
+      "frame_index": 295,
+      "height": 1012,
+      "image_sha256": "689719f8ecf7a0b18112d6f6042c11a1edeeb141f545be7fb983ef92b7dfecc6",
+      "lineage": {
+        "container_sha256": "9512a2e6d0ce397f9de8ae71cbf3cb759651df8e8793542a7c99cfe9d102d8f1",
+        "member_path": "videos_trabalho_Final_IfGoiano/11837_2015_1646_MOESM5_ESM.mp4",
+        "native_planes_unchanged": true
+      },
+      "lossless": true,
+      "modality": "relative_solute_field",
+      "path": "data/derived/ti2-pilot/ESM5-0295.raw",
+      "physical_time_s": 348.1,
+      "pixel_format": "yuv420p",
+      "planes": [
+        {
+          "bytes": 1293336,
+          "height": 1012,
+          "name": "Y",
+          "offset": 0,
+          "width": 1278
+        },
+        {
+          "bytes": 323334,
+          "height": 506,
+          "name": "U",
+          "offset": 1293336,
+          "width": 639
+        },
+        {
+          "bytes": 323334,
+          "height": 506,
+          "name": "V",
+          "offset": 1616670,
+          "width": 639
+        }
+      ],
+      "role": "holdout",
+      "source_id": "ESM5",
+      "source_sha256": "c9054d18f330e018e82cc6bd4db2ccfbda7ac76e01326a831857a835d1feade6",
+      "width": 1278,
+      "original_role": "validation",
+      "asset_id": "ESM5:295"
+    },
+    {
+      "bit_depth": 8,
+      "channels": 3,
+      "codec": "h264",
+      "colorspace_conversion": false,
+      "condition": "top_down_parallel",
+      "decoder_command": [
+        "ffmpeg",
+        "-nostdin",
+        "-v",
+        "error",
+        "-threads",
+        "1",
+        "-noautorotate",
+        "-i",
+        "<sealed-memfd>",
+        "-map",
+        "0:v:0",
+        "-an",
+        "-sn",
+        "-dn",
+        "-vf",
+        "select=eq(n\\,0)+eq(n\\,98)+eq(n\\,197)+eq(n\\,295)+eq(n\\,394)",
+        "-fps_mode",
+        "passthrough",
+        "-frames:v",
+        "5",
+        "-pix_fmt",
+        "yuv420p",
+        "-threads",
+        "1",
+        "-f",
+        "rawvideo",
+        "pipe:1"
+      ],
+      "decoder_method": "ffmpeg-native-select-sealed-anonymous-mp4-v1",
+      "elapsed_from_first_frame_s": 464.92,
+      "experiment_id": "top_down_parallel",
+      "experimental_time_s": 430.7,
+      "format": "native_planar_rawvideo",
+      "frame_bytes": 1940004,
+      "frame_index": 394,
+      "height": 1012,
+      "image_sha256": "c8f61d0c9eae0edb56d600e6aaf8188c26cb53081d15158871b8df7f1c1e06a9",
+      "lineage": {
+        "container_sha256": "9512a2e6d0ce397f9de8ae71cbf3cb759651df8e8793542a7c99cfe9d102d8f1",
+        "member_path": "videos_trabalho_Final_IfGoiano/11837_2015_1646_MOESM5_ESM.mp4",
+        "native_planes_unchanged": true
+      },
+      "lossless": true,
+      "modality": "relative_solute_field",
+      "path": "data/derived/ti2-pilot/ESM5-0394.raw",
+      "physical_time_s": 464.92,
+      "pixel_format": "yuv420p",
+      "planes": [
+        {
+          "bytes": 1293336,
+          "height": 1012,
+          "name": "Y",
+          "offset": 0,
+          "width": 1278
+        },
+        {
+          "bytes": 323334,
+          "height": 506,
+          "name": "U",
+          "offset": 1293336,
+          "width": 639
+        },
+        {
+          "bytes": 323334,
+          "height": 506,
+          "name": "V",
+          "offset": 1616670,
+          "width": 639
+        }
+      ],
+      "role": "development",
+      "source_id": "ESM5",
+      "source_sha256": "c9054d18f330e018e82cc6bd4db2ccfbda7ac76e01326a831857a835d1feade6",
+      "width": 1278,
+      "original_role": "estimation",
+      "asset_id": "ESM5:394"
+    }
+  ],
+  "holdout_eligibility": {
+    "ESM1:0": {
+      "holdout_eligible_this_phase": false,
+      "previous_exposure": [
+        "TI2: existing lossless MP4-decoded buffer and mechanical custody hashes",
+        "TI2: estimation pixels analysed",
+        "TI2R-FRAG-DIRECT: pixels opened and used as development"
+      ],
+      "evidence": [
+        "artifacts/metadata/ti2-pilot-manifest.json",
+        "artifacts/evidence/TI2/validation-audit.json",
+        "artifacts/evidence/TI2R_FRAG_DIRECT/result.json",
+        "docs/decisions/AUTHORIZATION-TI2R-SOLUTE-DIRECT-2026-09-18.md"
+      ]
+    },
+    "ESM1:73": {
+      "holdout_eligible_this_phase": true,
+      "previous_exposure": [
+        "TI2: existing lossless MP4-decoded buffer and mechanical custody hashes",
+        "TI2: quartile pixels not analysed according to validation-audit.json",
+        "TI2R-FRAG-DIRECT: pixels opened and used as holdout"
+      ],
+      "evidence": [
+        "artifacts/metadata/ti2-pilot-manifest.json",
+        "artifacts/evidence/TI2/validation-audit.json",
+        "artifacts/evidence/TI2R_FRAG_DIRECT/result.json",
+        "docs/decisions/AUTHORIZATION-TI2R-SOLUTE-DIRECT-2026-09-18.md"
+      ]
+    },
+    "ESM1:146": {
+      "holdout_eligible_this_phase": false,
+      "previous_exposure": [
+        "TI2: existing lossless MP4-decoded buffer and mechanical custody hashes",
+        "TI2: estimation pixels analysed",
+        "TI2R-FRAG-DIRECT: pixels opened and used as development"
+      ],
+      "evidence": [
+        "artifacts/metadata/ti2-pilot-manifest.json",
+        "artifacts/evidence/TI2/validation-audit.json",
+        "artifacts/evidence/TI2R_FRAG_DIRECT/result.json",
+        "docs/decisions/AUTHORIZATION-TI2R-SOLUTE-DIRECT-2026-09-18.md"
+      ]
+    },
+    "ESM1:219": {
+      "holdout_eligible_this_phase": true,
+      "previous_exposure": [
+        "TI2: existing lossless MP4-decoded buffer and mechanical custody hashes",
+        "TI2: quartile pixels not analysed according to validation-audit.json",
+        "TI2R-FRAG-DIRECT: pixels opened and used as holdout"
+      ],
+      "evidence": [
+        "artifacts/metadata/ti2-pilot-manifest.json",
+        "artifacts/evidence/TI2/validation-audit.json",
+        "artifacts/evidence/TI2R_FRAG_DIRECT/result.json",
+        "docs/decisions/AUTHORIZATION-TI2R-SOLUTE-DIRECT-2026-09-18.md"
+      ]
+    },
+    "ESM1:293": {
+      "holdout_eligible_this_phase": false,
+      "previous_exposure": [
+        "TI2: existing lossless MP4-decoded buffer and mechanical custody hashes",
+        "TI2: estimation pixels analysed",
+        "TI2R-FRAG-DIRECT: pixels opened and used as development"
+      ],
+      "evidence": [
+        "artifacts/metadata/ti2-pilot-manifest.json",
+        "artifacts/evidence/TI2/validation-audit.json",
+        "artifacts/evidence/TI2R_FRAG_DIRECT/result.json",
+        "docs/decisions/AUTHORIZATION-TI2R-SOLUTE-DIRECT-2026-09-18.md"
+      ]
+    },
+    "ESM2:0": {
+      "holdout_eligible_this_phase": false,
+      "previous_exposure": [
+        "TI2: existing lossless MP4-decoded buffer and mechanical custody hashes",
+        "TI2: estimation pixels analysed",
+        "TI2R-FRAG and TI2R-FRAG-DIRECT: source outside both execution allowlists"
+      ],
+      "evidence": [
+        "artifacts/metadata/ti2-pilot-manifest.json",
+        "artifacts/evidence/TI2/validation-audit.json",
+        "artifacts/evidence/TI2R_FRAG_DIRECT/result.json",
+        "docs/decisions/AUTHORIZATION-TI2R-SOLUTE-DIRECT-2026-09-18.md"
+      ]
+    },
+    "ESM2:73": {
+      "holdout_eligible_this_phase": true,
+      "previous_exposure": [
+        "TI2: existing lossless MP4-decoded buffer and mechanical custody hashes",
+        "TI2: quartile pixels not analysed according to validation-audit.json",
+        "TI2R-FRAG and TI2R-FRAG-DIRECT: source outside both execution allowlists"
+      ],
+      "evidence": [
+        "artifacts/metadata/ti2-pilot-manifest.json",
+        "artifacts/evidence/TI2/validation-audit.json",
+        "artifacts/evidence/TI2R_FRAG_DIRECT/result.json",
+        "docs/decisions/AUTHORIZATION-TI2R-SOLUTE-DIRECT-2026-09-18.md"
+      ]
+    },
+    "ESM2:146": {
+      "holdout_eligible_this_phase": false,
+      "previous_exposure": [
+        "TI2: existing lossless MP4-decoded buffer and mechanical custody hashes",
+        "TI2: estimation pixels analysed",
+        "TI2R-FRAG and TI2R-FRAG-DIRECT: source outside both execution allowlists"
+      ],
+      "evidence": [
+        "artifacts/metadata/ti2-pilot-manifest.json",
+        "artifacts/evidence/TI2/validation-audit.json",
+        "artifacts/evidence/TI2R_FRAG_DIRECT/result.json",
+        "docs/decisions/AUTHORIZATION-TI2R-SOLUTE-DIRECT-2026-09-18.md"
+      ]
+    },
+    "ESM2:219": {
+      "holdout_eligible_this_phase": true,
+      "previous_exposure": [
+        "TI2: existing lossless MP4-decoded buffer and mechanical custody hashes",
+        "TI2: quartile pixels not analysed according to validation-audit.json",
+        "TI2R-FRAG and TI2R-FRAG-DIRECT: source outside both execution allowlists"
+      ],
+      "evidence": [
+        "artifacts/metadata/ti2-pilot-manifest.json",
+        "artifacts/evidence/TI2/validation-audit.json",
+        "artifacts/evidence/TI2R_FRAG_DIRECT/result.json",
+        "docs/decisions/AUTHORIZATION-TI2R-SOLUTE-DIRECT-2026-09-18.md"
+      ]
+    },
+    "ESM2:293": {
+      "holdout_eligible_this_phase": false,
+      "previous_exposure": [
+        "TI2: existing lossless MP4-decoded buffer and mechanical custody hashes",
+        "TI2: estimation pixels analysed",
+        "TI2R-FRAG and TI2R-FRAG-DIRECT: source outside both execution allowlists"
+      ],
+      "evidence": [
+        "artifacts/metadata/ti2-pilot-manifest.json",
+        "artifacts/evidence/TI2/validation-audit.json",
+        "artifacts/evidence/TI2R_FRAG_DIRECT/result.json",
+        "docs/decisions/AUTHORIZATION-TI2R-SOLUTE-DIRECT-2026-09-18.md"
+      ]
+    },
+    "ESM4:0": {
+      "holdout_eligible_this_phase": false,
+      "previous_exposure": [
+        "TI2: existing lossless MP4-decoded buffer and mechanical custody hashes",
+        "TI2: estimation pixels analysed",
+        "TI2R-FRAG-DIRECT: pixels opened and used as development"
+      ],
+      "evidence": [
+        "artifacts/metadata/ti2-pilot-manifest.json",
+        "artifacts/evidence/TI2/validation-audit.json",
+        "artifacts/evidence/TI2R_FRAG_DIRECT/result.json",
+        "docs/decisions/AUTHORIZATION-TI2R-SOLUTE-DIRECT-2026-09-18.md"
+      ]
+    },
+    "ESM4:98": {
+      "holdout_eligible_this_phase": true,
+      "previous_exposure": [
+        "TI2: existing lossless MP4-decoded buffer and mechanical custody hashes",
+        "TI2: quartile pixels not analysed according to validation-audit.json",
+        "TI2R-FRAG-DIRECT: pixels opened and used as holdout"
+      ],
+      "evidence": [
+        "artifacts/metadata/ti2-pilot-manifest.json",
+        "artifacts/evidence/TI2/validation-audit.json",
+        "artifacts/evidence/TI2R_FRAG_DIRECT/result.json",
+        "docs/decisions/AUTHORIZATION-TI2R-SOLUTE-DIRECT-2026-09-18.md"
+      ]
+    },
+    "ESM4:197": {
+      "holdout_eligible_this_phase": false,
+      "previous_exposure": [
+        "TI2: existing lossless MP4-decoded buffer and mechanical custody hashes",
+        "TI2: estimation pixels analysed",
+        "TI2R-FRAG-DIRECT: pixels opened and used as development"
+      ],
+      "evidence": [
+        "artifacts/metadata/ti2-pilot-manifest.json",
+        "artifacts/evidence/TI2/validation-audit.json",
+        "artifacts/evidence/TI2R_FRAG_DIRECT/result.json",
+        "docs/decisions/AUTHORIZATION-TI2R-SOLUTE-DIRECT-2026-09-18.md"
+      ]
+    },
+    "ESM4:295": {
+      "holdout_eligible_this_phase": true,
+      "previous_exposure": [
+        "TI2: existing lossless MP4-decoded buffer and mechanical custody hashes",
+        "TI2: quartile pixels not analysed according to validation-audit.json",
+        "TI2R-FRAG-DIRECT: pixels opened and used as holdout"
+      ],
+      "evidence": [
+        "artifacts/metadata/ti2-pilot-manifest.json",
+        "artifacts/evidence/TI2/validation-audit.json",
+        "artifacts/evidence/TI2R_FRAG_DIRECT/result.json",
+        "docs/decisions/AUTHORIZATION-TI2R-SOLUTE-DIRECT-2026-09-18.md"
+      ]
+    },
+    "ESM4:394": {
+      "holdout_eligible_this_phase": false,
+      "previous_exposure": [
+        "TI2: existing lossless MP4-decoded buffer and mechanical custody hashes",
+        "TI2: estimation pixels analysed",
+        "TI2R-FRAG-DIRECT: pixels opened and used as development"
+      ],
+      "evidence": [
+        "artifacts/metadata/ti2-pilot-manifest.json",
+        "artifacts/evidence/TI2/validation-audit.json",
+        "artifacts/evidence/TI2R_FRAG_DIRECT/result.json",
+        "docs/decisions/AUTHORIZATION-TI2R-SOLUTE-DIRECT-2026-09-18.md"
+      ]
+    },
+    "ESM5:0": {
+      "holdout_eligible_this_phase": false,
+      "previous_exposure": [
+        "TI2: existing lossless MP4-decoded buffer and mechanical custody hashes",
+        "TI2: estimation pixels analysed",
+        "TI2R-FRAG and TI2R-FRAG-DIRECT: source outside both execution allowlists"
+      ],
+      "evidence": [
+        "artifacts/metadata/ti2-pilot-manifest.json",
+        "artifacts/evidence/TI2/validation-audit.json",
+        "artifacts/evidence/TI2R_FRAG_DIRECT/result.json",
+        "docs/decisions/AUTHORIZATION-TI2R-SOLUTE-DIRECT-2026-09-18.md"
+      ]
+    },
+    "ESM5:98": {
+      "holdout_eligible_this_phase": true,
+      "previous_exposure": [
+        "TI2: existing lossless MP4-decoded buffer and mechanical custody hashes",
+        "TI2: quartile pixels not analysed according to validation-audit.json",
+        "TI2R-FRAG and TI2R-FRAG-DIRECT: source outside both execution allowlists"
+      ],
+      "evidence": [
+        "artifacts/metadata/ti2-pilot-manifest.json",
+        "artifacts/evidence/TI2/validation-audit.json",
+        "artifacts/evidence/TI2R_FRAG_DIRECT/result.json",
+        "docs/decisions/AUTHORIZATION-TI2R-SOLUTE-DIRECT-2026-09-18.md"
+      ]
+    },
+    "ESM5:197": {
+      "holdout_eligible_this_phase": false,
+      "previous_exposure": [
+        "TI2: existing lossless MP4-decoded buffer and mechanical custody hashes",
+        "TI2: estimation pixels analysed",
+        "TI2R-FRAG and TI2R-FRAG-DIRECT: source outside both execution allowlists"
+      ],
+      "evidence": [
+        "artifacts/metadata/ti2-pilot-manifest.json",
+        "artifacts/evidence/TI2/validation-audit.json",
+        "artifacts/evidence/TI2R_FRAG_DIRECT/result.json",
+        "docs/decisions/AUTHORIZATION-TI2R-SOLUTE-DIRECT-2026-09-18.md"
+      ]
+    },
+    "ESM5:295": {
+      "holdout_eligible_this_phase": true,
+      "previous_exposure": [
+        "TI2: existing lossless MP4-decoded buffer and mechanical custody hashes",
+        "TI2: quartile pixels not analysed according to validation-audit.json",
+        "TI2R-FRAG and TI2R-FRAG-DIRECT: source outside both execution allowlists"
+      ],
+      "evidence": [
+        "artifacts/metadata/ti2-pilot-manifest.json",
+        "artifacts/evidence/TI2/validation-audit.json",
+        "artifacts/evidence/TI2R_FRAG_DIRECT/result.json",
+        "docs/decisions/AUTHORIZATION-TI2R-SOLUTE-DIRECT-2026-09-18.md"
+      ]
+    },
+    "ESM5:394": {
+      "holdout_eligible_this_phase": false,
+      "previous_exposure": [
+        "TI2: existing lossless MP4-decoded buffer and mechanical custody hashes",
+        "TI2: estimation pixels analysed",
+        "TI2R-FRAG and TI2R-FRAG-DIRECT: source outside both execution allowlists"
+      ],
+      "evidence": [
+        "artifacts/metadata/ti2-pilot-manifest.json",
+        "artifacts/evidence/TI2/validation-audit.json",
+        "artifacts/evidence/TI2R_FRAG_DIRECT/result.json",
+        "docs/decisions/AUTHORIZATION-TI2R-SOLUTE-DIRECT-2026-09-18.md"
+      ]
+    }
+  },
+  "experimental_access_this_phase_at_freeze": 0,
+  "limitations": "References ESM1/ESM4 were already exposed in prior fragment phases, including the temporal holdouts in DIRECT. No globally virgin data or statistical independence is claimed. Moving ESM2/ESM5 holdout analysis was not performed in TI2, and neither fragment recovery accessed those sources. This is an internal temporal holdout for the new solute method only; prior author-approved outcomes informed the hypothesis. Historical decoding/hash access is explicit."
+}

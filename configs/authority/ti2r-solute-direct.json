@@ -1,0 +1,99 @@
+{
+  "phase": "TI2R_SOLUTE_DIRECT",
+  "state": "CLOSED_CONSUMED",
+  "authorization_id": "TI2R-SOLUTE-DIRECT-2026-09-18",
+  "base_sha": "db03183e1456f67b5b663a4cb71361cad1404dcb",
+  "authorized_branch": "feat/ti2r-solute-direct-mapping",
+  "allowed_pairs": [
+    "ESM2-to-ESM1",
+    "ESM5-to-ESM4"
+  ],
+  "allowed_frame_indices": {
+    "ESM1": {
+      "development": [
+        0,
+        146,
+        293
+      ],
+      "holdout": [
+        73,
+        219
+      ]
+    },
+    "ESM2": {
+      "development": [
+        0,
+        146,
+        293
+      ],
+      "holdout": [
+        73,
+        219
+      ]
+    },
+    "ESM4": {
+      "development": [
+        0,
+        197,
+        394
+      ],
+      "holdout": [
+        98,
+        295
+      ]
+    },
+    "ESM5": {
+      "development": [
+        0,
+        197,
+        394
+      ],
+      "holdout": [
+        98,
+        295
+      ]
+    }
+  },
+  "documented_dimensions": {
+    "ESM1": [
+      1278,
+      1018
+    ],
+    "ESM2": [
+      1278,
+      1018
+    ],
+    "ESM4": [
+      1278,
+      1012
+    ],
+    "ESM5": [
+      1278,
+      1012
+    ]
+  },
+  "allowed_offsets": {
+    "ESM2-to-ESM1": {
+      "x": [
+        0
+      ],
+      "y": [
+        0
+      ]
+    },
+    "ESM5-to-ESM4": {
+      "x": [
+        0
+      ],
+      "y": [
+        0
+      ]
+    }
+  },
+  "holdout_policy": "OPEN_ONCE_AFTER_DEVELOPMENT_AND_FREEZE",
+  "max_invocations": 1,
+  "current_authorized_activity": "NONE_AWAITING_AUTHOR_DECISION",
+  "ti2r_execution_authorized": false,
+  "ti3_plus_authorized": false,
+  "merge_authorized": false
+}

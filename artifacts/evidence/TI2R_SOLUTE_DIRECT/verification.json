@@ -1,0 +1,129 @@
+{
+  "phase": "TI2R_SOLUTE_DIRECT",
+  "pre_C1": {
+    "authority": "PREPARED_INACTIVE",
+    "experimental_assets_opened_this_phase": 0,
+    "scientific_runner_invocations": 0,
+    "stdlib": {
+      "testsRun": 372,
+      "passed": 298,
+      "skipped": 74,
+      "failures": 0,
+      "errors": 0,
+      "exit_code": 0
+    },
+    "scientific_synthetic_legacy": {
+      "testsRun": 5,
+      "passed": 5,
+      "skipped": 0,
+      "failures": 0,
+      "errors": 0,
+      "exit_code": 0
+    },
+    "scientific_synthetic_FRAG": {
+      "testsRun": 16,
+      "passed": 16,
+      "skipped": 0,
+      "failures": 0,
+      "errors": 0,
+      "exit_code": 0
+    },
+    "scientific_synthetic_FRAG_DIRECT": {
+      "testsRun": 26,
+      "passed": 26,
+      "skipped": 0,
+      "failures": 0,
+      "errors": 0,
+      "exit_code": 0
+    },
+    "scientific_synthetic_SOLUTE_DIRECT": {
+      "testsRun": 27,
+      "passed": 27,
+      "skipped": 0,
+      "failures": 0,
+      "errors": 0,
+      "exit_code": 0
+    },
+    "new_authority_focused": {
+      "testsRun": 21,
+      "passed": 21,
+      "exit_code": 0
+    },
+    "new_orchestration_focused": {
+      "testsRun": 11,
+      "passed": 11,
+      "exit_code": 0
+    },
+    "dependencies_existing_only": {
+      "numpy": "1.26.4",
+      "scipy": "1.11.4"
+    },
+    "red_contracts": "Actual missing-module import errors before implementation, not experimental failures or fabricated behavioral RED. One malformed synthetic percentile example was corrected before C1 without changing the method.",
+    "tracked_data_guard": {
+      "status": "PASS",
+      "tracked_entries_before_staging": 210,
+      "content_bytes_read": 0,
+      "exit_code": 0
+    },
+    "scope_guard": {
+      "status": "PASS",
+      "experimental_content_bytes_read": 0,
+      "exit_code": 0
+    },
+    "bootstrap_guard": {
+      "status": "PASS",
+      "exit_code": 0
+    },
+    "text_checksums": {
+      "verified": 95,
+      "listed": 95,
+      "status": "PASS",
+      "exit_code": 0
+    },
+    "new_python_compile_in_memory": {
+      "files": 7,
+      "bytecode_written": false,
+      "status": "PASS",
+      "exit_code": 0
+    },
+    "diff_check": {
+      "status": "PASS",
+      "exit_code": 0
+    },
+    "independent_scientific_text_review": "PASS_NO_REMAINING_CRITICAL_FINDING",
+    "independent_authority_runner_text_review": "PASS_NO_REMAINING_CRITICAL_FINDING",
+    "method_calibration": "All thresholds fixed and validated on the 27 synthetic controls only before C1; no experimental calibration or inspection in this phase",
+    "descriptor": "LOCAL_SELF_SIMILARITY_8_NOT_EXACT_MIND_SSC",
+    "test_temporary_root": ".bootstrap-test-tmp",
+    "limitations": "The 74 optional stdlib skips are exercised separately by the 5/16/26/27 mandatory scientific suites. Synthetic checks do not certify experimental geometry. References were exposed in prior fragment phases; no global holdout virginity is claimed."
+  },
+  "post_execution": {
+    "runner_invocations": 1,
+    "runner_exit_code": 2,
+    "sandbox": "default",
+    "result": "BLOCKED_IDENTITY_NOT_DISCRIMINATIVE",
+    "authority": "CLOSED_CONSUMED",
+    "opened_development_assets": 12,
+    "opened_holdout_assets": 0,
+    "unique_assets": 12,
+    "total_bytes_read": 23349060,
+    "frozen_text_hashes_equal_C1": 14,
+    "method_changed_after_C2": false,
+    "retry": false,
+    "new_data": false,
+    "frozen_identity_files_created": 0,
+    "independent_result_text_audit": "PASS: 72 residual statistics, 384 metric-level spatial comparisons, 8 measured/4 inconclusive temporal records and custody verified from text; no pixel access",
+    "blocking_cause": "Every measured block misses absolute floors SS8>=0.90 and NGF>=0.80; all spatial and measured temporal margins pass; no shifted control beats identity",
+    "fragmentation_pass_preserved": true,
+    "textual_custody_check": {
+      "status": "PASS",
+      "exit_code": 0
+    },
+    "textual_sha256": {
+      "receipt.json": "8a0f5341e25942a2931c61e76a5f89b33c513e40700d789a5af8c9bbd148a47a",
+      "result.json": "485c5a8da36a421927fc50165dbfadf4b87981223f47de6518c16e4c03d28c95"
+    },
+    "after_C3_checks": "Pending at this versioned checkpoint; actual result belongs to effective Draft PR and terminal report"
+  },
+  "publication": "NOT_EXECUTED; effective C3 SHA and remote CI belong in the Draft PR and terminal report"
+}

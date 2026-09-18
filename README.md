@@ -8,6 +8,19 @@ research and presented at COBEM.
 
 ## Current authorization
 
+The latest [SOLUTE-DIRECT decision](docs/decisions/AUTHORIZATION-TI2R-SOLUTE-DIRECT-2026-09-18.md)
+accepts the fragment identity certification and authorizes one separate
+multimodal solute attempt. PR #8 was merged at
+`db03183e1456f67b5b663a4cb71361cad1404dcb`, with successful post-merge CI.
+Its dedicated authority is `configs/authority/ti2r-solute-direct.json`;
+all previous authorities remain closed. The [SOLUTE protocol](docs/protocols/TI2R_SOLUTE_DIRECT_PROTOCOL.md)
+tests only identity for ESM2→ESM1 and ESM5→ESM4 using local self-similarity,
+independent NGF, spatial and temporal negative controls. Three commits and
+one invocation are permitted, followed by consumed authority and a Draft PR.
+Solute fields are relative/normalized, never absolute concentration. Prior
+fragment PASS remains preserved; no physical calibration or TI-3+ is authorized.
+The preceding narratives retain their historical scope.
+
 The latest [DIRECT decision](docs/decisions/AUTHORIZATION-TI2R-FRAG-DIRECT-2026-09-18.md)
 accepts the PR #7 result as a valid blocked scientific attempt. PR #7 was
 merged at `b7bbb6a1f0d3eaa43866027762eb2ed061c3d7c6` with green CI.
