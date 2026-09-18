@@ -1,0 +1,36 @@
+{
+  "PR7_MERGE": "PASS",
+  "approved_base": "0245faf74aa15424d95d43f92e87b32a06ac987b",
+  "approved_head": "238be21569c36d62a3d82a27cf1ec3157cdf005c",
+  "experimental_access_this_phase": false,
+  "guardrail": {
+    "content_bytes_read": 0,
+    "status": "PASS",
+    "tracked_entries": 189
+  },
+  "historical_ci": "SUCCESS_BOTH_JOBS",
+  "historical_runs": [
+    35339501913,
+    35339645238
+  ],
+  "initial_worktree_index_clean": true,
+  "installation": false,
+  "local_main_synced_ff_only": true,
+  "main_equals_origin_main": true,
+  "merge_parents": [
+    "0245faf74aa15424d95d43f92e87b32a06ac987b",
+    "238be21569c36d62a3d82a27cf1ec3157cdf005c"
+  ],
+  "merge_sha": "b7bbb6a1f0d3eaa43866027762eb2ed061c3d7c6",
+  "new_branch": "feat/ti2r-frag-direct-mapping",
+  "new_branch_absent_before_creation": true,
+  "old_branch_preserved": true,
+  "postmerge_ci": {
+    "run": 35342342511,
+    "sha": "b7bbb6a1f0d3eaa43866027762eb2ed061c3d7c6",
+    "status": "SUCCESS_BOTH_JOBS",
+    "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35342342511"
+  },
+  "ready_transition": "COMPLETED_NO_NEW_RUN_OBSERVED",
+  "tree_matches_audited_head": true
+}

@@ -1,0 +1,107 @@
+{
+  "command": "PYTHONPATH=src /usr/bin/python3 -B -m unittest tests.test_ti2r_frag_direct_authority -v",
+  "errors": 18,
+  "execution": "Equivalent unittest loader/TextTestRunner invocation; output sanitized to test identifiers and final exception messages.",
+  "exit_code": 1,
+  "expected_red_reason": "New direct authority implementation does not yet exist.",
+  "experimental_bytes_read": 0,
+  "failures": 0,
+  "outcomes": [
+    {
+      "message": "ModuleNotFoundError: No module named 'snbi_fragmentation.ti2r_frag_direct_authority'",
+      "outcome": "ERROR",
+      "test": "tests.test_ti2r_frag_direct_authority.DirectAuthorityTests.test_allowed_read_is_native_and_only_once"
+    },
+    {
+      "message": "ModuleNotFoundError: No module named 'snbi_fragmentation.ti2r_frag_direct_authority'",
+      "outcome": "ERROR",
+      "test": "tests.test_ti2r_frag_direct_authority.DirectAuthorityTests.test_consumed_state_denies_before_path_coercion"
+    },
+    {
+      "message": "ModuleNotFoundError: No module named 'snbi_fragmentation.ti2r_frag_direct_authority'",
+      "outcome": "ERROR",
+      "test": "tests.test_ti2r_frag_direct_authority.DirectAuthorityTests.test_dimension_divergence_blocks_before_any_experimental_path"
+    },
+    {
+      "message": "ModuleNotFoundError: No module named 'snbi_fragmentation.ti2r_frag_direct_authority'",
+      "outcome": "ERROR",
+      "test": "tests.test_ti2r_frag_direct_authority.DirectAuthorityTests.test_exact_authority_and_finite_candidate_schema"
+    },
+    {
+      "message": "ModuleNotFoundError: No module named 'snbi_fragmentation.ti2r_frag_direct_authority'",
+      "outcome": "ERROR",
+      "test": "tests.test_ti2r_frag_direct_authority.DirectAuthorityTests.test_exact_twenty_asset_allowlist_forbids_esm2_esm5_role_and_path_aliases"
+    },
+    {
+      "message": "ModuleNotFoundError: No module named 'snbi_fragmentation.ti2r_frag_direct_authority'",
+      "outcome": "ERROR",
+      "test": "tests.test_ti2r_frag_direct_authority.DirectAuthorityTests.test_forbidden_asset_and_holdout_role_never_reach_pixel_path"
+    },
+    {
+      "message": "ModuleNotFoundError: No module named 'snbi_fragmentation.ti2r_frag_direct_authority'",
+      "outcome": "ERROR",
+      "test": "tests.test_ti2r_frag_direct_authority.DirectAuthorityTests.test_frozen_text_hash_and_complete_input_set_required"
+    },
+    {
+      "message": "ModuleNotFoundError: No module named 'snbi_fragmentation.ti2r_frag_direct_authority'",
+      "outcome": "ERROR",
+      "test": "tests.test_ti2r_frag_direct_authority.DirectAuthorityTests.test_holdout_needs_positive_exposure_and_frozen_offset"
+    },
+    {
+      "message": "ModuleNotFoundError: No module named 'snbi_fragmentation.ti2r_frag_direct_authority'",
+      "outcome": "ERROR",
+      "test": "tests.test_ti2r_frag_direct_authority.DirectAuthorityTests.test_holdout_opens_only_after_six_development_assets_and_finite_freeze"
+    },
+    {
+      "message": "ModuleNotFoundError: No module named 'snbi_fragmentation.ti2r_frag_direct_authority'",
+      "outcome": "ERROR",
+      "test": "tests.test_ti2r_frag_direct_authority.DirectAuthorityTests.test_old_frag_must_be_consumed_and_legacy_cannot_be_reactivated"
+    },
+    {
+      "message": "ModuleNotFoundError: No module named 'snbi_fragmentation.ti2r_frag_direct_authority'",
+      "outcome": "ERROR",
+      "test": "tests.test_ti2r_frag_direct_authority.DirectAuthorityTests.test_prepared_and_consumed_deny_before_asset_path_or_receipt"
+    },
+    {
+      "message": "ModuleNotFoundError: No module named 'snbi_fragmentation.ti2r_frag_direct_authority'",
+      "outcome": "ERROR",
+      "test": "tests.test_ti2r_frag_direct_authority.DirectAuthorityTests.test_receipt_exposure_and_candidate_cannot_drift"
+    },
+    {
+      "message": "ModuleNotFoundError: No module named 'snbi_fragmentation.ti2r_frag_direct_authority'",
+      "outcome": "ERROR",
+      "test": "tests.test_ti2r_frag_direct_authority.DirectAuthorityTests.test_receipt_precedes_pixels_and_is_single_use"
+    },
+    {
+      "message": "ModuleNotFoundError: No module named 'snbi_fragmentation.ti2r_frag_direct_authority'",
+      "outcome": "ERROR",
+      "test": "tests.test_ti2r_frag_direct_authority.DirectAuthorityTests.test_result_exclusive_and_text_api_never_opens_experimental_paths"
+    },
+    {
+      "message": "ModuleNotFoundError: No module named 'snbi_fragmentation.ti2r_frag_direct_authority'",
+      "outcome": "ERROR",
+      "test": "tests.test_ti2r_frag_direct_authority.DirectAuthorityTests.test_seal_requires_positive_text_and_unknown_states_fail_closed"
+    },
+    {
+      "message": "ModuleNotFoundError: No module named 'snbi_fragmentation.ti2r_frag_direct_authority'",
+      "outcome": "ERROR",
+      "test": "tests.test_ti2r_frag_direct_authority.DirectAuthorityTests.test_subpixel_bool_negative_and_outside_candidate_offsets_rejected"
+    },
+    {
+      "message": "ModuleNotFoundError: No module named 'snbi_fragmentation.ti2r_frag_direct_authority'",
+      "outcome": "ERROR",
+      "test": "tests.test_ti2r_frag_direct_authority.DirectAuthorityTests.test_symlink_missing_and_digest_divergence_fail_without_retry"
+    },
+    {
+      "message": "ModuleNotFoundError: No module named 'snbi_fragmentation.ti2r_frag_direct_authority'",
+      "outcome": "ERROR",
+      "test": "tests.test_ti2r_frag_direct_authority.DirectAuthorityTests.test_wrong_branch_or_changed_c2_prevents_asset_examination"
+    }
+  ],
+  "phase": "TI2R_FRAG_DIRECT",
+  "scientific_runner_invocations": 0,
+  "skips": 0,
+  "stage": "RED_BEFORE_IMPLEMENTATION",
+  "test_source_sha256": "a7bdb222e996ea8c6f9e2936d7045cb5265ab612c77a28b94935cd5389066416",
+  "tests_run": 18
+}
