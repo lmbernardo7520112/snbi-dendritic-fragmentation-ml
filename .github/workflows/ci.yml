@@ -59,3 +59,5 @@ jobs:
         run: PYTHONPATH=src python -B scripts/run_ti2r_frag_direct_synthetic.py
       - name: Require SOLUTE DIRECT multimodal synthetic contracts and zero skips
         run: PYTHONPATH=src python -B scripts/run_ti2r_solute_direct_synthetic.py
+      - name: Require SOLUTE V2 development calibration synthetic contracts and zero skips
+        run: PYTHONPATH=src python -B scripts/run_ti2r_solute_v2_synthetic.py

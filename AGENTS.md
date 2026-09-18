@@ -6,6 +6,22 @@ SDR-2-A is RESOLVED. No further sandbox diagnostic or OS remediation is authoriz
 
 ## Current authority
 
+The explicit [V2-D decision](docs/decisions/AUTHORIZATION-TI2R-SOLUTE-V2-D-2026-09-18.md)
+governs this bounded phase on `feat/ti2r-solute-v2-calibration`. PR #9 was
+merged at `fcfc5e1445467248566e881c61929d4d3da7b1d8` with green CI.
+Only the 12 previously exposed DEV buffers ESM1/2:0,146,293 and
+ESM4/5:0,197,394 may be read once, after C1 is published as a Draft PR and
+both CI jobs pass at C1. All eight solute holdouts are prohibited, including
+reference buffers. The [V2 protocol](docs/protocols/TI2R_SOLUTE_V2_PROTOCOL.md)
+preserves V1 kernels, masks and results; only relative decision criteria and
+the 16 specified integer perturbations form this calibration. No new floors.
+Canonical V2 scope is `configs/authority/ti2r-solute-v2.json`; presence of
+`artifacts/evidence/TI2R_SOLUTE_V2/terminal-state.json` permanently closes it.
+C1 preregisters, the receipt consumes one invocation, and C2 records only
+terminal evidence. No scientific edits after C1, retry, holdout, automatic V3,
+TI-3+, Ready or merge of the V2 PR. Older constraints below are historical
+where this explicit decision supersedes them; prior authorities stay closed.
+
 The newest [SOLUTE-DIRECT decision](docs/decisions/AUTHORIZATION-TI2R-SOLUTE-DIRECT-2026-09-18.md)
 accepts and closes the fragment DIRECT result, merged as PR #8 at
 `db03183e1456f67b5b663a4cb71361cad1404dcb` with green post-merge CI.

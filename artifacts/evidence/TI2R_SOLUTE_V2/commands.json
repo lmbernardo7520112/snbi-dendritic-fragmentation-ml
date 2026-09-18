@@ -1,0 +1,168 @@
+{
+  "phase": "TI2R_SOLUTE_V2_D",
+  "coverage": "Recorded root command invocations through local preregistration checks; publication/closing commands will be appended in C2 or reported in the PR. Private attachment path omitted. Long here-doc bodies and jq projections are summarized where marked; tool edits are listed separately.",
+  "root": [
+    [
+      "/usr/bin/python3 -B - <<'PY'\nimport hashlib,json,os\nfrom pathlib import Path\nroot=Path.cwd()\nfolder=root/'artifacts/evidence/TI2R_SOLUTE_V2'\nfolder.mkdir(exist_ok=True)\nattachment='<operator-supplied-authorization-attachment>'\nfd=os.open(attachment,os.O_RDONLY|os.O_NOFOLLOW)\nwith os.fdopen(fd,'r') as stream: decision=stream.read()\n(root/'docs/decisions/AUTHORIZATION-TI2R-SOLUTE-V2-D-2026-09-18.md').write_text('# Decisão autoral — TI2R-SOLUTE-V2-D\\n\\nTexto integral recebido do autor nesta sessão. A aceitação do PR #9 e a fase V2-D têm escopos distintos; nenhuma autoridade histórica é reativada.\\n\\n'+decision)\nold=json.loads((root/'artifacts/evidence/TI2R_SOLUTE_DIRECT/exposure.json').read_text())\nassets=[a for a in old['assets'] if a['role']=='development']\nassert len(assets)==12\nexposure={'phase':'TI2R_SOLUTE_V2_D','authorization_id':'TI2R-SOLUTE-V2-D-2026-09-18','base_sha':'fcfc5e1445467248566e881c61929d4d3da7b1d8','original_manifest_path':old['original_manifest_path'],'original_manifest_sha256':old['original_manifest_sha256'],'assets':assets,'development_eligibility':{},'holdout_custody':{},'experimental_content_bytes_read_at_preregistration':0,'limitations':['Native detector data and complete original provenance unavailable; no external audit requested.','All 12 DEV were already exposed in SOLUTE V1.','Reference holdouts were historically exposed in FRAG-DIRECT; solute moving holdouts were never analysed. SEALED denotes this phase, not global virginity.','No holdout buffer may be opened, probed or hashed during V2-D.']}\nfor asset in old['assets']:\n    ident=asset['asset_id']; prior=old['holdout_eligibility'][ident]\n    evidence=list(prior['evidence'])+['artifacts/evidence/TI2R_SOLUTE_DIRECT/result.json']\n    history=list(prior['previous_exposure'])\n    if asset['role']=='development':\n        history+=['TI2R-SOLUTE-DIRECT V1: opened once for development; already exposed.']\n        exposure['development_eligibility'][ident]={'development_eligible_this_phase':True,'evidence':evidence,'previous_exposure':history}\n    else:\n        history+=['TI2R-SOLUTE-DIRECT V1: NOT_OPENED; no development pair passed.']\n        exposure['holdout_custody'][ident]={'authorized_this_phase':False,'open_count':0,'content_bytes_read':0,'state':'SEALED','evidence':evidence,'previous_exposure':history}\n(folder/'exposure.json').write_text(json.dumps(exposure,indent=2,ensure_ascii=False)+'\\n')\npreflight={'PR9_MERGE':'PASS','audited_head_sha':'fef9aa5437c6b39fa29f085498551a208982f9de','audited_base_sha':'db03183e1456f67b5b663a4cb71361cad1404dcb','merge_sha':'fcfc5e1445467248566e881c61929d4d3da7b1d8','merge_parents':['db03183e1456f67b5b663a4cb71361cad1404dcb','fef9aa5437c6b39fa29f085498551a208982f9de'],'integrated_tree_equals_audited_head':True,'postmerge_ci':{'run_id':35377213285,'head_sha':'fcfc5e1445467248566e881c61929d4d3da7b1d8','status':'completed','conclusion':'success','jobs':{'deterministic-contracts':'success','scientific-synthetic-contracts':'success'},'all_steps_successful':True,'url':'https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35377213285'},'prior_ci_runs':[35364371535,35365201447],'governance_comment':'https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/pull/9#issuecomment-5734023590','ready_triggered_new_ci':False,'main_synced':'fast-forward-only','branch_created':'feat/ti2r-solute-v2-calibration','branch_deleted':False,'initial_worktree_index':'CLEAN','data_guard':{'status':'PASS','tracked_entries':229,'content_bytes_read':0},'scientific_access_before_C1':False,'no_new_sources':True}\n(folder/'preflight.json').write_text(json.dumps(preflight,indent=2)+'\\n')\nprint('Created authorization, metadata-only exposure and preflight; experimental bytes read=0')\nPY",
+      0
+    ],
+    [
+      "cat src/snbi_fragmentation/ti2r_solute_v2_authority.py configs/authority/ti2r-solute-v2.json",
+      0
+    ],
+    [
+      "cat src/snbi_fragmentation/ti2r_solute_v2_calibration.py configs/registration/ti2r-solute-v2-method.json",
+      1
+    ],
+    [
+      "git diff --stat",
+      0
+    ],
+    [
+      "/usr/bin/python3 -B - <<'PY'\nimport hashlib,json\nfrom pathlib import Path\nfolder=Path('artifacts/evidence/TI2R_SOLUTE_V2')\np=folder/'preflight.json'; value=json.loads(p.read_text())\nvalue['announced_write_allowlist']=['.github/workflows/ci.yml','AGENTS.md','README.md','artifacts/evidence/TI2/checksums.sha256','docs/decisions/AUTHORIZATION-TI2R-SOLUTE-V2-D-2026-09-18.md','docs/protocols/TI2R_SOLUTE_V2_PROTOCOL.md','configs/authority/ti2r-solute-v2.json','configs/registration/ti2r-solute-v2-method.json','src/snbi_fragmentation/ti2r_solute_v2_authority.py','src/snbi_fragmentation/ti2r_solute_v2_calibration.py','scripts/run_ti2r_solute_v2.py','scripts/run_ti2r_solute_v2_synthetic.py','tests/test_ti2r_solute_v2_authority.py','tests/test_ti2r_solute_v2_calibration.py','tests/test_ti2r_solute_v2_execution.py']+[str(folder/name) for name in ['exposure.json','preflight.json','verification-preregister.json','commands.json','receipt.json','result.json','terminal-state.json','verification.json','execution-report.md','checksums.sha256']]\nvalue['temporary_test_subtree']='.bootstrap-test-tmp/; fresh synthetic fixtures only'\np.write_text(json.dumps(value,indent=2)+'\\n')\np=Path('artifacts/evidence/TI2/checksums.sha256')\nupdated=[]\nfor line in p.read_text().splitlines():\n    if line and not line.startswith('#'):\n        digest,path=line.split('  ',1)\n        if path in {'.github/workflows/ci.yml','AGENTS.md','README.md'}:\n            line=hashlib.sha256(Path(path).read_bytes()).hexdigest()+'  '+path\n    updated.append(line)\np.write_text('\\n'.join(updated)+'\\n')\nprint('Exact textual allowlist recorded; only 3 affected legacy checksum entries refreshed')\nPY",
+      0
+    ],
+    [
+      "/usr/bin/python3 -B scripts/check_ti2_checksums.py",
+      0
+    ],
+    [
+      "/usr/bin/python3 -B scripts/check_local_bootstrap.py",
+      0
+    ],
+    [
+      "/usr/bin/python3 -B scripts/check_ti2_scope.py",
+      0
+    ],
+    [
+      "TMPDIR=.bootstrap-test-tmp PYTHONPATH=src /usr/bin/python3 -S -B -m unittest tests.test_ti2r_solute_v2_execution -v",
+      1
+    ],
+    [
+      "git status --short",
+      0
+    ],
+    [
+      "TMPDIR=.bootstrap-test-tmp PYTHONPATH=src /usr/bin/python3 -S -B -m unittest tests.test_ti2r_solute_v2_execution -v",
+      0
+    ],
+    [
+      "TMPDIR=.bootstrap-test-tmp PYTHONPATH=src /usr/bin/python3 -B scripts/run_scientific_synthetic_contracts.py",
+      0
+    ],
+    [
+      "TMPDIR=.bootstrap-test-tmp PYTHONPATH=src /usr/bin/python3 -B scripts/run_ti2r_frag_synthetic.py",
+      0,
+      "completed; synthetic suite only"
+    ],
+    [
+      "TMPDIR=.bootstrap-test-tmp PYTHONPATH=src /usr/bin/python3 -B scripts/run_ti2r_solute_direct_synthetic.py",
+      0,
+      "completed; synthetic suite only"
+    ],
+    [
+      "TMPDIR=.bootstrap-test-tmp PYTHONPATH=src /usr/bin/python3 -B scripts/run_ti2r_frag_direct_synthetic.py",
+      0,
+      "completed; synthetic suite only"
+    ],
+    [
+      "rg -n '^    def test_|^PASS|\"best_competitor|\"winning|\"winner_' tests/test_ti2r_solute_v2_calibration.py src/snbi_fragmentation/ti2r_solute_v2_calibration.py",
+      0
+    ],
+    [
+      "/usr/bin/python3 -B - <<'PY'\nimport hashlib,subprocess\nfrom pathlib import Path\npaths=['src/snbi_fragmentation/ti2r_solute_direct_registration.py','configs/registration/ti2r-solute-direct-method.json','artifacts/evidence/TI2R_SOLUTE_DIRECT/result.json','artifacts/evidence/TI2R_SOLUTE_DIRECT/receipt.json']\nfor name in paths:\n    actual=Path(name).read_bytes(); original=subprocess.check_output(['git','show','fcfc5e1445467248566e881c61929d4d3da7b1d8:'+name]); assert actual==original\n    print(hashlib.sha256(actual).hexdigest(),name)\nPY",
+      0
+    ],
+    [
+      "cat tests/test_ti2r_solute_v2_calibration.py",
+      0
+    ],
+    [
+      "TMPDIR=.bootstrap-test-tmp PYTHONPATH=src /usr/bin/python3 -S -B -m unittest discover -s tests -q",
+      0,
+      "completed; synthetic suite only"
+    ],
+    [
+      "TMPDIR=.bootstrap-test-tmp PYTHONPATH=src /usr/bin/python3 -B scripts/run_ti2r_solute_v2_synthetic.py",
+      0,
+      "completed; synthetic suite only"
+    ],
+    [
+      "git status --short --branch",
+      0,
+      "resume after auxiliary-agent usage limit"
+    ],
+    [
+      "rg --files src/snbi_fragmentation tests scripts configs docs/protocols artifacts/evidence -g '*solute_v2*' -g '*solute-v2*' -g '*SOLUTE_V2*'",
+      1,
+      "no V2 files existed at resume"
+    ],
+    [
+      "cat src/snbi_fragmentation/ti2r_solute_direct_registration.py",
+      0
+    ]
+  ],
+  "auxiliary": {
+    "authority": {
+      "read_commands": [
+        "cat <operator-supplied-authorization-attachment>",
+        "cat src/snbi_fragmentation/ti2r_solute_direct_authority.py",
+        "cat src/snbi_fragmentation/ti2r_frag_authority.py",
+        "cat tests/test_ti2r_solute_direct_authority.py src/snbi_fragmentation/ti2r_frag_direct_authority.py",
+        "cat tests/test_ti2r_solute_direct_authority.py"
+      ],
+      "write_command": "PYTHONPATH=src /usr/bin/python3 -B - (generate exact configs/authority/ti2r-solute-v2.json from expected_authority)",
+      "verification_commands": [
+        "/usr/bin/python3 -B scripts/check_repository_data.py",
+        "TMPDIR=.bootstrap-test-tmp PYTHONPATH=src /usr/bin/python3 -S -B -m unittest discover -s tests -p test_ti2r_solute_v2_authority.py -v"
+      ],
+      "all_exit_codes": 0
+    },
+    "science": {
+      "read_commands": [
+        "cat <operator-supplied-authorization-attachment>",
+        "cat src/snbi_fragmentation/ti2r_solute_direct_registration.py",
+        "cat configs/registration/ti2r-solute-direct-method.json tests/test_ti2r_solute_direct_registration.py scripts/run_ti2r_solute_direct_synthetic.py",
+        "sed -n '325,435p' src/snbi_fragmentation/ti2r_solute_direct_registration.py",
+        "rg -n 'def |PASS =|BLOCKED =' src/snbi_fragmentation/ti2r_solute_v2_calibration.py tests/test_ti2r_solute_v2_calibration.py scripts/run_ti2r_solute_v2_synthetic.py"
+      ],
+      "verification_commands": [
+        {
+          "command": "TMPDIR=.bootstrap-test-tmp PYTHONPATH=src /usr/bin/python3 -B scripts/run_ti2r_solute_v2_synthetic.py",
+          "invocations": 2,
+          "counts": [
+            17,
+            18
+          ]
+        },
+        {
+          "command": "TMPDIR=.bootstrap-test-tmp PYTHONPATH=src /usr/bin/python3 -S -B -m unittest tests.test_ti2r_solute_v2_calibration -q",
+          "invocations": 1
+        }
+      ],
+      "all_exit_codes": 0
+    },
+    "review": {
+      "scope": "Only textual reads of authorization, V1/V2 modules/configs/tests/protocols and workflow; cat/rg/sed, no tests or writes",
+      "missing_in_progress_file": {
+        "command": "cat tests/test_ti2r_solute_v2_authority.py",
+        "exit_code": 1
+      },
+      "other_exit_codes": 0
+    }
+  },
+  "tool_edits": {
+    "tool": "apply_patch",
+    "scope": "Only announced allowlist; one auxiliary invalid patch had no mutation",
+    "experimental_access": false
+  },
+  "boundaries": {
+    "ordinary_commands": "default sandbox",
+    "git_metadata_and_remote": "individually approved exact Git/GitHub commands",
+    "experimental_invocations": 0,
+    "experimental_bytes_read": 0,
+    "no_installs": true,
+    "no_os_changes": true,
+    "no_credentials_inspected": true
+  }
+}

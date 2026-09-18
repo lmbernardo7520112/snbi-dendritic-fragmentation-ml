@@ -1,0 +1,61 @@
+{
+  "allowed_frame_indices": {
+    "ESM1": [
+      0,
+      146,
+      293
+    ],
+    "ESM2": [
+      0,
+      146,
+      293
+    ],
+    "ESM4": [
+      0,
+      197,
+      394
+    ],
+    "ESM5": [
+      0,
+      197,
+      394
+    ]
+  },
+  "allowed_pairs": [
+    "ESM2-to-ESM1",
+    "ESM5-to-ESM4"
+  ],
+  "authorization_id": "TI2R-SOLUTE-V2-D-2026-09-18",
+  "authorized_branch": "feat/ti2r-solute-v2-calibration",
+  "base_sha": "fcfc5e1445467248566e881c61929d4d3da7b1d8",
+  "current_authorized_activity": "TI2R_SOLUTE_V2_PREREGISTERED_CI_GATED",
+  "development_execution_after_c1_ci_authorized": true,
+  "documented_dimensions": {
+    "ESM1": [
+      1278,
+      1018
+    ],
+    "ESM2": [
+      1278,
+      1018
+    ],
+    "ESM4": [
+      1278,
+      1012
+    ],
+    "ESM5": [
+      1278,
+      1012
+    ]
+  },
+  "execution_policy": "ONE_INVOCATION_AFTER_PUBLISHED_C1_CI",
+  "holdout_policy": "ALWAYS_DENY_ALL_EIGHT_BEFORE_PATH_ACCESS",
+  "max_invocations": 1,
+  "merge_authorized": false,
+  "phase": "TI2R_SOLUTE_V2_DEV",
+  "state": "PREREGISTERED_CI_GATED",
+  "terminal_tombstone": "artifacts/evidence/TI2R_SOLUTE_V2/terminal-state.json",
+  "ti2r_execution_authorized": false,
+  "ti2r_solute_holdout_authorized": false,
+  "ti3_plus_authorized": false
+}

@@ -1,0 +1,68 @@
+{
+  "PR9_MERGE": "PASS",
+  "audited_head_sha": "fef9aa5437c6b39fa29f085498551a208982f9de",
+  "audited_base_sha": "db03183e1456f67b5b663a4cb71361cad1404dcb",
+  "merge_sha": "fcfc5e1445467248566e881c61929d4d3da7b1d8",
+  "merge_parents": [
+    "db03183e1456f67b5b663a4cb71361cad1404dcb",
+    "fef9aa5437c6b39fa29f085498551a208982f9de"
+  ],
+  "integrated_tree_equals_audited_head": true,
+  "postmerge_ci": {
+    "run_id": 35377213285,
+    "head_sha": "fcfc5e1445467248566e881c61929d4d3da7b1d8",
+    "status": "completed",
+    "conclusion": "success",
+    "jobs": {
+      "deterministic-contracts": "success",
+      "scientific-synthetic-contracts": "success"
+    },
+    "all_steps_successful": true,
+    "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35377213285"
+  },
+  "prior_ci_runs": [
+    35364371535,
+    35365201447
+  ],
+  "governance_comment": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/pull/9#issuecomment-5734023590",
+  "ready_triggered_new_ci": false,
+  "main_synced": "fast-forward-only",
+  "branch_created": "feat/ti2r-solute-v2-calibration",
+  "branch_deleted": false,
+  "initial_worktree_index": "CLEAN",
+  "data_guard": {
+    "status": "PASS",
+    "tracked_entries": 229,
+    "content_bytes_read": 0
+  },
+  "scientific_access_before_C1": false,
+  "no_new_sources": true,
+  "announced_write_allowlist": [
+    ".github/workflows/ci.yml",
+    "AGENTS.md",
+    "README.md",
+    "artifacts/evidence/TI2/checksums.sha256",
+    "docs/decisions/AUTHORIZATION-TI2R-SOLUTE-V2-D-2026-09-18.md",
+    "docs/protocols/TI2R_SOLUTE_V2_PROTOCOL.md",
+    "configs/authority/ti2r-solute-v2.json",
+    "configs/registration/ti2r-solute-v2-method.json",
+    "src/snbi_fragmentation/ti2r_solute_v2_authority.py",
+    "src/snbi_fragmentation/ti2r_solute_v2_calibration.py",
+    "scripts/run_ti2r_solute_v2.py",
+    "scripts/run_ti2r_solute_v2_synthetic.py",
+    "tests/test_ti2r_solute_v2_authority.py",
+    "tests/test_ti2r_solute_v2_calibration.py",
+    "tests/test_ti2r_solute_v2_execution.py",
+    "artifacts/evidence/TI2R_SOLUTE_V2/exposure.json",
+    "artifacts/evidence/TI2R_SOLUTE_V2/preflight.json",
+    "artifacts/evidence/TI2R_SOLUTE_V2/verification-preregister.json",
+    "artifacts/evidence/TI2R_SOLUTE_V2/commands.json",
+    "artifacts/evidence/TI2R_SOLUTE_V2/receipt.json",
+    "artifacts/evidence/TI2R_SOLUTE_V2/result.json",
+    "artifacts/evidence/TI2R_SOLUTE_V2/terminal-state.json",
+    "artifacts/evidence/TI2R_SOLUTE_V2/verification.json",
+    "artifacts/evidence/TI2R_SOLUTE_V2/execution-report.md",
+    "artifacts/evidence/TI2R_SOLUTE_V2/checksums.sha256"
+  ],
+  "temporary_test_subtree": ".bootstrap-test-tmp/; fresh synthetic fixtures only"
+}
