@@ -4,9 +4,11 @@ Autor: Leonardo Maximino Bernardo. Data: 2026-09-18.
 
 ## Estado desta autorização
 
-Estado: `ACTIVE_ONE_SHOT`. C1 congelou o método antes de qualquer acesso
-experimental desta fase. C2 ativa exclusivamente uma invocação do runner
-SOLUTE-DIRECT; nenhum código, máscara, descritor, parâmetro ou limiar mudará.
+Estado: `CLOSED_CONSUMED`. A única invocação retornou código 2 e
+`TI2R_SOLUTE_DIRECT=BLOCKED_IDENTITY_NOT_DISCRIMINATIVE`. Foram abertos uma
+vez os 12 ativos de desenvolvimento; nenhum holdout foi aberto nesta fase.
+Nenhum código ou critério mudou depois de C2. Não haverá retry ou outro
+registrador; G2_FRAG permanece PASS_DIRECT_RASTER_MAPPING.
 Base pós-merge PR #8: `db03183e1456f67b5b663a4cb71361cad1404dcb`.
 Autoridade independente: `configs/authority/ti2r-solute-direct.json`.
 Todas as autoridades anteriores permanecem CLOSED_CONSUMED; o PASS de

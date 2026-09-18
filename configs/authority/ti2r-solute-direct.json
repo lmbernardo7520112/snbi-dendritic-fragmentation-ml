@@ -1,6 +1,6 @@
 {
   "phase": "TI2R_SOLUTE_DIRECT",
-  "state": "ACTIVE_ONE_SHOT",
+  "state": "CLOSED_CONSUMED",
   "authorization_id": "TI2R-SOLUTE-DIRECT-2026-09-18",
   "base_sha": "db03183e1456f67b5b663a4cb71361cad1404dcb",
   "authorized_branch": "feat/ti2r-solute-direct-mapping",
@@ -92,8 +92,8 @@
   },
   "holdout_policy": "OPEN_ONCE_AFTER_DEVELOPMENT_AND_FREEZE",
   "max_invocations": 1,
-  "current_authorized_activity": "TI2R_SOLUTE_DIRECT_ONE_SHOT",
-  "ti2r_execution_authorized": true,
+  "current_authorized_activity": "NONE_AWAITING_AUTHOR_DECISION",
+  "ti2r_execution_authorized": false,
   "ti3_plus_authorized": false,
   "merge_authorized": false
 }

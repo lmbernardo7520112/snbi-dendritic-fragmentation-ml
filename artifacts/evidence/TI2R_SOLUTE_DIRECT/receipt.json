@@ -1,0 +1,569 @@
+{
+  "allowed_assets": {
+    "ESM1:0": {
+      "asset_id": "ESM1:0",
+      "bit_depth": 8,
+      "frame_bytes": 1951506,
+      "frame_index": 0,
+      "height": 1018,
+      "image_sha256": "8cf316b044c9da94f79715e5a81d23a771a7a236e0e16fb93a227639cdb36338",
+      "path": "data/derived/ti2-pilot/ESM1-0000.raw",
+      "pixel_format": "yuv420p",
+      "role": "development",
+      "source_id": "ESM1",
+      "width": 1278
+    },
+    "ESM1:146": {
+      "asset_id": "ESM1:146",
+      "bit_depth": 8,
+      "frame_bytes": 1951506,
+      "frame_index": 146,
+      "height": 1018,
+      "image_sha256": "eccb91c1d66f500d892dfe1c204c494cfc0d1d3542174d5ae1efd921bff034e0",
+      "path": "data/derived/ti2-pilot/ESM1-0146.raw",
+      "pixel_format": "yuv420p",
+      "role": "development",
+      "source_id": "ESM1",
+      "width": 1278
+    },
+    "ESM1:219": {
+      "asset_id": "ESM1:219",
+      "bit_depth": 8,
+      "frame_bytes": 1951506,
+      "frame_index": 219,
+      "height": 1018,
+      "image_sha256": "eb22ec185b465b11abbd6ecbf38d558a9dd5ef8d19f256e42429d70b566f10bd",
+      "path": "data/derived/ti2-pilot/ESM1-0219.raw",
+      "pixel_format": "yuv420p",
+      "role": "holdout",
+      "source_id": "ESM1",
+      "width": 1278
+    },
+    "ESM1:293": {
+      "asset_id": "ESM1:293",
+      "bit_depth": 8,
+      "frame_bytes": 1951506,
+      "frame_index": 293,
+      "height": 1018,
+      "image_sha256": "384a0297024fda34b6b2a5a87945297315e27efffdde47c9a3a67a6483fc1e13",
+      "path": "data/derived/ti2-pilot/ESM1-0293.raw",
+      "pixel_format": "yuv420p",
+      "role": "development",
+      "source_id": "ESM1",
+      "width": 1278
+    },
+    "ESM1:73": {
+      "asset_id": "ESM1:73",
+      "bit_depth": 8,
+      "frame_bytes": 1951506,
+      "frame_index": 73,
+      "height": 1018,
+      "image_sha256": "0209aef0e36c73b017063cbea4661f76ac0d24bd51631e11e1f41b9dae0cc2a5",
+      "path": "data/derived/ti2-pilot/ESM1-0073.raw",
+      "pixel_format": "yuv420p",
+      "role": "holdout",
+      "source_id": "ESM1",
+      "width": 1278
+    },
+    "ESM2:0": {
+      "asset_id": "ESM2:0",
+      "bit_depth": 8,
+      "frame_bytes": 1951506,
+      "frame_index": 0,
+      "height": 1018,
+      "image_sha256": "87baca688ac43c54673a46b5c2ee7a70e51c8a76827b04b3292e817b964f4a4c",
+      "path": "data/derived/ti2-pilot/ESM2-0000.raw",
+      "pixel_format": "yuv420p",
+      "role": "development",
+      "source_id": "ESM2",
+      "width": 1278
+    },
+    "ESM2:146": {
+      "asset_id": "ESM2:146",
+      "bit_depth": 8,
+      "frame_bytes": 1951506,
+      "frame_index": 146,
+      "height": 1018,
+      "image_sha256": "e581aee31e1084567151d42539cb1995d2ec789db30efd44af9200374f020908",
+      "path": "data/derived/ti2-pilot/ESM2-0146.raw",
+      "pixel_format": "yuv420p",
+      "role": "development",
+      "source_id": "ESM2",
+      "width": 1278
+    },
+    "ESM2:219": {
+      "asset_id": "ESM2:219",
+      "bit_depth": 8,
+      "frame_bytes": 1951506,
+      "frame_index": 219,
+      "height": 1018,
+      "image_sha256": "b50f56a6332e33bfb3e32a8c94694a39e6cce936370f4b5232d257d8e7d0d228",
+      "path": "data/derived/ti2-pilot/ESM2-0219.raw",
+      "pixel_format": "yuv420p",
+      "role": "holdout",
+      "source_id": "ESM2",
+      "width": 1278
+    },
+    "ESM2:293": {
+      "asset_id": "ESM2:293",
+      "bit_depth": 8,
+      "frame_bytes": 1951506,
+      "frame_index": 293,
+      "height": 1018,
+      "image_sha256": "3e5812419532f01c54ed10327b8a21547dc64415ca829a2e999f9e65efee0771",
+      "path": "data/derived/ti2-pilot/ESM2-0293.raw",
+      "pixel_format": "yuv420p",
+      "role": "development",
+      "source_id": "ESM2",
+      "width": 1278
+    },
+    "ESM2:73": {
+      "asset_id": "ESM2:73",
+      "bit_depth": 8,
+      "frame_bytes": 1951506,
+      "frame_index": 73,
+      "height": 1018,
+      "image_sha256": "c5518bf031ae0e18541ce2c72206a8d1e5a53e060ee990dccaeb0cbb5024874f",
+      "path": "data/derived/ti2-pilot/ESM2-0073.raw",
+      "pixel_format": "yuv420p",
+      "role": "holdout",
+      "source_id": "ESM2",
+      "width": 1278
+    },
+    "ESM4:0": {
+      "asset_id": "ESM4:0",
+      "bit_depth": 8,
+      "frame_bytes": 1940004,
+      "frame_index": 0,
+      "height": 1012,
+      "image_sha256": "f9c9f9fb58289409f732aadb777adad48e1a626e055b17f2cde925ab54c1e5ca",
+      "path": "data/derived/ti2-pilot/ESM4-0000.raw",
+      "pixel_format": "yuv420p",
+      "role": "development",
+      "source_id": "ESM4",
+      "width": 1278
+    },
+    "ESM4:197": {
+      "asset_id": "ESM4:197",
+      "bit_depth": 8,
+      "frame_bytes": 1940004,
+      "frame_index": 197,
+      "height": 1012,
+      "image_sha256": "0446ff48d035f3f548d93253fbd9eac14536de0aeb477485b87b17dd647e8a57",
+      "path": "data/derived/ti2-pilot/ESM4-0197.raw",
+      "pixel_format": "yuv420p",
+      "role": "development",
+      "source_id": "ESM4",
+      "width": 1278
+    },
+    "ESM4:295": {
+      "asset_id": "ESM4:295",
+      "bit_depth": 8,
+      "frame_bytes": 1940004,
+      "frame_index": 295,
+      "height": 1012,
+      "image_sha256": "ac3b9df34450e8c0f801eb90d2c329c90737f4abda4202d81638395fb5519f2a",
+      "path": "data/derived/ti2-pilot/ESM4-0295.raw",
+      "pixel_format": "yuv420p",
+      "role": "holdout",
+      "source_id": "ESM4",
+      "width": 1278
+    },
+    "ESM4:394": {
+      "asset_id": "ESM4:394",
+      "bit_depth": 8,
+      "frame_bytes": 1940004,
+      "frame_index": 394,
+      "height": 1012,
+      "image_sha256": "fab7bacbb1198df4d2440362c6135452a7b3b87497455c6c6234261fad3c1422",
+      "path": "data/derived/ti2-pilot/ESM4-0394.raw",
+      "pixel_format": "yuv420p",
+      "role": "development",
+      "source_id": "ESM4",
+      "width": 1278
+    },
+    "ESM4:98": {
+      "asset_id": "ESM4:98",
+      "bit_depth": 8,
+      "frame_bytes": 1940004,
+      "frame_index": 98,
+      "height": 1012,
+      "image_sha256": "8e9ab504657f44d5f7252ff8a681a4c0007a4f0643f11cc26b171e989be75cc9",
+      "path": "data/derived/ti2-pilot/ESM4-0098.raw",
+      "pixel_format": "yuv420p",
+      "role": "holdout",
+      "source_id": "ESM4",
+      "width": 1278
+    },
+    "ESM5:0": {
+      "asset_id": "ESM5:0",
+      "bit_depth": 8,
+      "frame_bytes": 1940004,
+      "frame_index": 0,
+      "height": 1012,
+      "image_sha256": "643fd7a015d452920cc5f7eaaf6c5e7d647eb0c0dea01d0c3fb13fc5f969bd8f",
+      "path": "data/derived/ti2-pilot/ESM5-0000.raw",
+      "pixel_format": "yuv420p",
+      "role": "development",
+      "source_id": "ESM5",
+      "width": 1278
+    },
+    "ESM5:197": {
+      "asset_id": "ESM5:197",
+      "bit_depth": 8,
+      "frame_bytes": 1940004,
+      "frame_index": 197,
+      "height": 1012,
+      "image_sha256": "d1a57d8f41dbe5b7de62ec7b8a4356cab1c0a67087aad9cbcfeded8a1c8b643f",
+      "path": "data/derived/ti2-pilot/ESM5-0197.raw",
+      "pixel_format": "yuv420p",
+      "role": "development",
+      "source_id": "ESM5",
+      "width": 1278
+    },
+    "ESM5:295": {
+      "asset_id": "ESM5:295",
+      "bit_depth": 8,
+      "frame_bytes": 1940004,
+      "frame_index": 295,
+      "height": 1012,
+      "image_sha256": "689719f8ecf7a0b18112d6f6042c11a1edeeb141f545be7fb983ef92b7dfecc6",
+      "path": "data/derived/ti2-pilot/ESM5-0295.raw",
+      "pixel_format": "yuv420p",
+      "role": "holdout",
+      "source_id": "ESM5",
+      "width": 1278
+    },
+    "ESM5:394": {
+      "asset_id": "ESM5:394",
+      "bit_depth": 8,
+      "frame_bytes": 1940004,
+      "frame_index": 394,
+      "height": 1012,
+      "image_sha256": "c8f61d0c9eae0edb56d600e6aaf8188c26cb53081d15158871b8df7f1c1e06a9",
+      "path": "data/derived/ti2-pilot/ESM5-0394.raw",
+      "pixel_format": "yuv420p",
+      "role": "development",
+      "source_id": "ESM5",
+      "width": 1278
+    },
+    "ESM5:98": {
+      "asset_id": "ESM5:98",
+      "bit_depth": 8,
+      "frame_bytes": 1940004,
+      "frame_index": 98,
+      "height": 1012,
+      "image_sha256": "e4d51cf146c418faa9c5c97867a8cde76237e6a5086525b3db56ed0c68fa3c07",
+      "path": "data/derived/ti2-pilot/ESM5-0098.raw",
+      "pixel_format": "yuv420p",
+      "role": "holdout",
+      "source_id": "ESM5",
+      "width": 1278
+    }
+  },
+  "authorization_id": "TI2R-SOLUTE-DIRECT-2026-09-18",
+  "c2_sha": "8b5d286e227d896eb639a743c26da4c4fe6ec582",
+  "experimental_bytes_before_receipt": 0,
+  "exposure_state": {
+    "ESM1:0": {
+      "evidence": [
+        "artifacts/metadata/ti2-pilot-manifest.json",
+        "artifacts/evidence/TI2/validation-audit.json",
+        "artifacts/evidence/TI2R_FRAG_DIRECT/result.json",
+        "docs/decisions/AUTHORIZATION-TI2R-SOLUTE-DIRECT-2026-09-18.md"
+      ],
+      "holdout_eligible_this_phase": false,
+      "previous_exposure": [
+        "TI2: existing lossless MP4-decoded buffer and mechanical custody hashes",
+        "TI2: estimation pixels analysed",
+        "TI2R-FRAG-DIRECT: pixels opened and used as development"
+      ]
+    },
+    "ESM1:146": {
+      "evidence": [
+        "artifacts/metadata/ti2-pilot-manifest.json",
+        "artifacts/evidence/TI2/validation-audit.json",
+        "artifacts/evidence/TI2R_FRAG_DIRECT/result.json",
+        "docs/decisions/AUTHORIZATION-TI2R-SOLUTE-DIRECT-2026-09-18.md"
+      ],
+      "holdout_eligible_this_phase": false,
+      "previous_exposure": [
+        "TI2: existing lossless MP4-decoded buffer and mechanical custody hashes",
+        "TI2: estimation pixels analysed",
+        "TI2R-FRAG-DIRECT: pixels opened and used as development"
+      ]
+    },
+    "ESM1:219": {
+      "evidence": [
+        "artifacts/metadata/ti2-pilot-manifest.json",
+        "artifacts/evidence/TI2/validation-audit.json",
+        "artifacts/evidence/TI2R_FRAG_DIRECT/result.json",
+        "docs/decisions/AUTHORIZATION-TI2R-SOLUTE-DIRECT-2026-09-18.md"
+      ],
+      "holdout_eligible_this_phase": true,
+      "previous_exposure": [
+        "TI2: existing lossless MP4-decoded buffer and mechanical custody hashes",
+        "TI2: quartile pixels not analysed according to validation-audit.json",
+        "TI2R-FRAG-DIRECT: pixels opened and used as holdout"
+      ]
+    },
+    "ESM1:293": {
+      "evidence": [
+        "artifacts/metadata/ti2-pilot-manifest.json",
+        "artifacts/evidence/TI2/validation-audit.json",
+        "artifacts/evidence/TI2R_FRAG_DIRECT/result.json",
+        "docs/decisions/AUTHORIZATION-TI2R-SOLUTE-DIRECT-2026-09-18.md"
+      ],
+      "holdout_eligible_this_phase": false,
+      "previous_exposure": [
+        "TI2: existing lossless MP4-decoded buffer and mechanical custody hashes",
+        "TI2: estimation pixels analysed",
+        "TI2R-FRAG-DIRECT: pixels opened and used as development"
+      ]
+    },
+    "ESM1:73": {
+      "evidence": [
+        "artifacts/metadata/ti2-pilot-manifest.json",
+        "artifacts/evidence/TI2/validation-audit.json",
+        "artifacts/evidence/TI2R_FRAG_DIRECT/result.json",
+        "docs/decisions/AUTHORIZATION-TI2R-SOLUTE-DIRECT-2026-09-18.md"
+      ],
+      "holdout_eligible_this_phase": true,
+      "previous_exposure": [
+        "TI2: existing lossless MP4-decoded buffer and mechanical custody hashes",
+        "TI2: quartile pixels not analysed according to validation-audit.json",
+        "TI2R-FRAG-DIRECT: pixels opened and used as holdout"
+      ]
+    },
+    "ESM2:0": {
+      "evidence": [
+        "artifacts/metadata/ti2-pilot-manifest.json",
+        "artifacts/evidence/TI2/validation-audit.json",
+        "artifacts/evidence/TI2R_FRAG_DIRECT/result.json",
+        "docs/decisions/AUTHORIZATION-TI2R-SOLUTE-DIRECT-2026-09-18.md"
+      ],
+      "holdout_eligible_this_phase": false,
+      "previous_exposure": [
+        "TI2: existing lossless MP4-decoded buffer and mechanical custody hashes",
+        "TI2: estimation pixels analysed",
+        "TI2R-FRAG and TI2R-FRAG-DIRECT: source outside both execution allowlists"
+      ]
+    },
+    "ESM2:146": {
+      "evidence": [
+        "artifacts/metadata/ti2-pilot-manifest.json",
+        "artifacts/evidence/TI2/validation-audit.json",
+        "artifacts/evidence/TI2R_FRAG_DIRECT/result.json",
+        "docs/decisions/AUTHORIZATION-TI2R-SOLUTE-DIRECT-2026-09-18.md"
+      ],
+      "holdout_eligible_this_phase": false,
+      "previous_exposure": [
+        "TI2: existing lossless MP4-decoded buffer and mechanical custody hashes",
+        "TI2: estimation pixels analysed",
+        "TI2R-FRAG and TI2R-FRAG-DIRECT: source outside both execution allowlists"
+      ]
+    },
+    "ESM2:219": {
+      "evidence": [
+        "artifacts/metadata/ti2-pilot-manifest.json",
+        "artifacts/evidence/TI2/validation-audit.json",
+        "artifacts/evidence/TI2R_FRAG_DIRECT/result.json",
+        "docs/decisions/AUTHORIZATION-TI2R-SOLUTE-DIRECT-2026-09-18.md"
+      ],
+      "holdout_eligible_this_phase": true,
+      "previous_exposure": [
+        "TI2: existing lossless MP4-decoded buffer and mechanical custody hashes",
+        "TI2: quartile pixels not analysed according to validation-audit.json",
+        "TI2R-FRAG and TI2R-FRAG-DIRECT: source outside both execution allowlists"
+      ]
+    },
+    "ESM2:293": {
+      "evidence": [
+        "artifacts/metadata/ti2-pilot-manifest.json",
+        "artifacts/evidence/TI2/validation-audit.json",
+        "artifacts/evidence/TI2R_FRAG_DIRECT/result.json",
+        "docs/decisions/AUTHORIZATION-TI2R-SOLUTE-DIRECT-2026-09-18.md"
+      ],
+      "holdout_eligible_this_phase": false,
+      "previous_exposure": [
+        "TI2: existing lossless MP4-decoded buffer and mechanical custody hashes",
+        "TI2: estimation pixels analysed",
+        "TI2R-FRAG and TI2R-FRAG-DIRECT: source outside both execution allowlists"
+      ]
+    },
+    "ESM2:73": {
+      "evidence": [
+        "artifacts/metadata/ti2-pilot-manifest.json",
+        "artifacts/evidence/TI2/validation-audit.json",
+        "artifacts/evidence/TI2R_FRAG_DIRECT/result.json",
+        "docs/decisions/AUTHORIZATION-TI2R-SOLUTE-DIRECT-2026-09-18.md"
+      ],
+      "holdout_eligible_this_phase": true,
+      "previous_exposure": [
+        "TI2: existing lossless MP4-decoded buffer and mechanical custody hashes",
+        "TI2: quartile pixels not analysed according to validation-audit.json",
+        "TI2R-FRAG and TI2R-FRAG-DIRECT: source outside both execution allowlists"
+      ]
+    },
+    "ESM4:0": {
+      "evidence": [
+        "artifacts/metadata/ti2-pilot-manifest.json",
+        "artifacts/evidence/TI2/validation-audit.json",
+        "artifacts/evidence/TI2R_FRAG_DIRECT/result.json",
+        "docs/decisions/AUTHORIZATION-TI2R-SOLUTE-DIRECT-2026-09-18.md"
+      ],
+      "holdout_eligible_this_phase": false,
+      "previous_exposure": [
+        "TI2: existing lossless MP4-decoded buffer and mechanical custody hashes",
+        "TI2: estimation pixels analysed",
+        "TI2R-FRAG-DIRECT: pixels opened and used as development"
+      ]
+    },
+    "ESM4:197": {
+      "evidence": [
+        "artifacts/metadata/ti2-pilot-manifest.json",
+        "artifacts/evidence/TI2/validation-audit.json",
+        "artifacts/evidence/TI2R_FRAG_DIRECT/result.json",
+        "docs/decisions/AUTHORIZATION-TI2R-SOLUTE-DIRECT-2026-09-18.md"
+      ],
+      "holdout_eligible_this_phase": false,
+      "previous_exposure": [
+        "TI2: existing lossless MP4-decoded buffer and mechanical custody hashes",
+        "TI2: estimation pixels analysed",
+        "TI2R-FRAG-DIRECT: pixels opened and used as development"
+      ]
+    },
+    "ESM4:295": {
+      "evidence": [
+        "artifacts/metadata/ti2-pilot-manifest.json",
+        "artifacts/evidence/TI2/validation-audit.json",
+        "artifacts/evidence/TI2R_FRAG_DIRECT/result.json",
+        "docs/decisions/AUTHORIZATION-TI2R-SOLUTE-DIRECT-2026-09-18.md"
+      ],
+      "holdout_eligible_this_phase": true,
+      "previous_exposure": [
+        "TI2: existing lossless MP4-decoded buffer and mechanical custody hashes",
+        "TI2: quartile pixels not analysed according to validation-audit.json",
+        "TI2R-FRAG-DIRECT: pixels opened and used as holdout"
+      ]
+    },
+    "ESM4:394": {
+      "evidence": [
+        "artifacts/metadata/ti2-pilot-manifest.json",
+        "artifacts/evidence/TI2/validation-audit.json",
+        "artifacts/evidence/TI2R_FRAG_DIRECT/result.json",
+        "docs/decisions/AUTHORIZATION-TI2R-SOLUTE-DIRECT-2026-09-18.md"
+      ],
+      "holdout_eligible_this_phase": false,
+      "previous_exposure": [
+        "TI2: existing lossless MP4-decoded buffer and mechanical custody hashes",
+        "TI2: estimation pixels analysed",
+        "TI2R-FRAG-DIRECT: pixels opened and used as development"
+      ]
+    },
+    "ESM4:98": {
+      "evidence": [
+        "artifacts/metadata/ti2-pilot-manifest.json",
+        "artifacts/evidence/TI2/validation-audit.json",
+        "artifacts/evidence/TI2R_FRAG_DIRECT/result.json",
+        "docs/decisions/AUTHORIZATION-TI2R-SOLUTE-DIRECT-2026-09-18.md"
+      ],
+      "holdout_eligible_this_phase": true,
+      "previous_exposure": [
+        "TI2: existing lossless MP4-decoded buffer and mechanical custody hashes",
+        "TI2: quartile pixels not analysed according to validation-audit.json",
+        "TI2R-FRAG-DIRECT: pixels opened and used as holdout"
+      ]
+    },
+    "ESM5:0": {
+      "evidence": [
+        "artifacts/metadata/ti2-pilot-manifest.json",
+        "artifacts/evidence/TI2/validation-audit.json",
+        "artifacts/evidence/TI2R_FRAG_DIRECT/result.json",
+        "docs/decisions/AUTHORIZATION-TI2R-SOLUTE-DIRECT-2026-09-18.md"
+      ],
+      "holdout_eligible_this_phase": false,
+      "previous_exposure": [
+        "TI2: existing lossless MP4-decoded buffer and mechanical custody hashes",
+        "TI2: estimation pixels analysed",
+        "TI2R-FRAG and TI2R-FRAG-DIRECT: source outside both execution allowlists"
+      ]
+    },
+    "ESM5:197": {
+      "evidence": [
+        "artifacts/metadata/ti2-pilot-manifest.json",
+        "artifacts/evidence/TI2/validation-audit.json",
+        "artifacts/evidence/TI2R_FRAG_DIRECT/result.json",
+        "docs/decisions/AUTHORIZATION-TI2R-SOLUTE-DIRECT-2026-09-18.md"
+      ],
+      "holdout_eligible_this_phase": false,
+      "previous_exposure": [
+        "TI2: existing lossless MP4-decoded buffer and mechanical custody hashes",
+        "TI2: estimation pixels analysed",
+        "TI2R-FRAG and TI2R-FRAG-DIRECT: source outside both execution allowlists"
+      ]
+    },
+    "ESM5:295": {
+      "evidence": [
+        "artifacts/metadata/ti2-pilot-manifest.json",
+        "artifacts/evidence/TI2/validation-audit.json",
+        "artifacts/evidence/TI2R_FRAG_DIRECT/result.json",
+        "docs/decisions/AUTHORIZATION-TI2R-SOLUTE-DIRECT-2026-09-18.md"
+      ],
+      "holdout_eligible_this_phase": true,
+      "previous_exposure": [
+        "TI2: existing lossless MP4-decoded buffer and mechanical custody hashes",
+        "TI2: quartile pixels not analysed according to validation-audit.json",
+        "TI2R-FRAG and TI2R-FRAG-DIRECT: source outside both execution allowlists"
+      ]
+    },
+    "ESM5:394": {
+      "evidence": [
+        "artifacts/metadata/ti2-pilot-manifest.json",
+        "artifacts/evidence/TI2/validation-audit.json",
+        "artifacts/evidence/TI2R_FRAG_DIRECT/result.json",
+        "docs/decisions/AUTHORIZATION-TI2R-SOLUTE-DIRECT-2026-09-18.md"
+      ],
+      "holdout_eligible_this_phase": false,
+      "previous_exposure": [
+        "TI2: existing lossless MP4-decoded buffer and mechanical custody hashes",
+        "TI2: estimation pixels analysed",
+        "TI2R-FRAG and TI2R-FRAG-DIRECT: source outside both execution allowlists"
+      ]
+    },
+    "ESM5:98": {
+      "evidence": [
+        "artifacts/metadata/ti2-pilot-manifest.json",
+        "artifacts/evidence/TI2/validation-audit.json",
+        "artifacts/evidence/TI2R_FRAG_DIRECT/result.json",
+        "docs/decisions/AUTHORIZATION-TI2R-SOLUTE-DIRECT-2026-09-18.md"
+      ],
+      "holdout_eligible_this_phase": true,
+      "previous_exposure": [
+        "TI2: existing lossless MP4-decoded buffer and mechanical custody hashes",
+        "TI2: quartile pixels not analysed according to validation-audit.json",
+        "TI2R-FRAG and TI2R-FRAG-DIRECT: source outside both execution allowlists"
+      ]
+    }
+  },
+  "frozen_hashes": {
+    "artifacts/evidence/TI2R_FRAG_DIRECT/result.json": "facc5f3b02d6ed68c97b32946c6e2239992197c7cf424f1e160686f9b92d051c",
+    "artifacts/evidence/TI2R_SOLUTE_DIRECT/exposure.json": "421fa73e57bd0b9fcbb8efea9f3bfe2e4b119a85f1449be8c670399d571941d9",
+    "artifacts/metadata/ti2-pilot-manifest.json": "4f84a50e65e7541729d9a6c58e2649a872d6a92e55b305a66a0ce4e9f63a09a9",
+    "configs/authority/ti2r-frag-direct.json": "4133dd7b7e4af85769ed1a0fa28f32202f4082f9e9d3e0320a7194556c6abf6c",
+    "configs/authority/ti2r-frag.json": "d62571e33696af63e1425e3add370efcf5a642ced99dd52cfa3897ec3be93816",
+    "configs/registration/ti2r-solute-direct-method.json": "cf024e61cd12c1d21377a6d64aa9529f2e90686b3879fa2221aca34c4cdd772f",
+    "docs/protocols/TI2R_SOLUTE_DIRECT_PROTOCOL.md": "9570996942640a8e9a3e261f568016e641bab3fbf85faacd7d31e707791acb38",
+    "pyproject.toml": "3d4195d69c33c9d18dd0c0c64ffb937f9e7cd3549c3d4c76dbebb05b9242fcc1",
+    "scripts/run_ti2r_solute_direct.py": "58dae9e9b21691822602f99cc4c2c8585ff27ac1f774c96c672667609ae83ca5",
+    "src/snbi_fragmentation/ti2_authority.py": "bcc9a586555b78c1c55341a43b66a40ac6ad4953714fa2273dd99ac0a78471f3",
+    "src/snbi_fragmentation/ti2r_frag_authority.py": "f030046d6b4a6bc392e9e14c4e871d6581c99cdcbf927f31535e322c49c45a42",
+    "src/snbi_fragmentation/ti2r_frag_direct_authority.py": "ec62a88a42ca4f84530103848e39927fc320fed7117039d8c57615abdb3bf6fb",
+    "src/snbi_fragmentation/ti2r_solute_direct_authority.py": "77a33c74594dc5050ddbef1720b42f29103aa02b5b51686da7c2ca4bcbe87955",
+    "src/snbi_fragmentation/ti2r_solute_direct_registration.py": "5cdd336e9f21e4f26631dbb29445d5cb92e9b2724482d7a90e085b589ca75450"
+  },
+  "invocation_counter": 1,
+  "max_invocations": 1,
+  "no_prior_receipt_confirmed_by": "ATOMIC_O_EXCL_CREATION",
+  "phase": "TI2R_SOLUTE_DIRECT"
+}
