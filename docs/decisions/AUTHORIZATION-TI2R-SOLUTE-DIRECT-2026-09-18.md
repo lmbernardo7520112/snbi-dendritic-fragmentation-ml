@@ -4,7 +4,9 @@ Autor: Leonardo Maximino Bernardo. Data: 2026-09-18.
 
 ## Estado desta autorização
 
-Estado: `PREPARED_INACTIVE`. Nenhum ativo experimental desta fase foi aberto.
+Estado: `ACTIVE_ONE_SHOT`. C1 congelou o método antes de qualquer acesso
+experimental desta fase. C2 ativa exclusivamente uma invocação do runner
+SOLUTE-DIRECT; nenhum código, máscara, descritor, parâmetro ou limiar mudará.
 Base pós-merge PR #8: `db03183e1456f67b5b663a4cb71361cad1404dcb`.
 Autoridade independente: `configs/authority/ti2r-solute-direct.json`.
 Todas as autoridades anteriores permanecem CLOSED_CONSUMED; o PASS de
