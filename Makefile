@@ -13,7 +13,7 @@ validate-manifest:
 	PYTHONPATH=src python -m snbi_fragmentation.custody validate configs/sources/source_manifest.json
 
 scope-check:
-	PYTHONPATH=src python scripts/check_ti1_scope.py
+	PYTHONPATH=src python -B scripts/check_ti2_scope.py
 
 data-guard:
 	/usr/bin/python3 -B scripts/check_repository_data.py

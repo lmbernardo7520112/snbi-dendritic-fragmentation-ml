@@ -1,0 +1,179 @@
+{
+  "inside_default_sandbox": [
+    {
+      "commands": [
+        "pwd",
+        "git status --short",
+        "git status --short --untracked-files=all",
+        "git branch --show-current",
+        "git rev-parse HEAD",
+        "git remote -v"
+      ],
+      "exit_codes": [
+        0
+      ],
+      "purpose": "repository identity and preserved worktree"
+    },
+    {
+      "commands": [
+        "git config --show-origin --get-all core.hooksPath",
+        "git config --show-origin --get-all commit.gpgsign"
+      ],
+      "exit_codes": [
+        1
+      ],
+      "interpretation": "unset configuration, not a sandbox error",
+      "purpose": "read-only hook/signing configuration audit"
+    },
+    {
+      "commands": [
+        "git diff --check",
+        "git diff --cached --check",
+        "git diff --cached --name-status",
+        "git diff --cached --stat",
+        "git diff --cached -- <reviewed individual files>",
+        "git show --format=fuller --stat HEAD",
+        "git show --format= --name-status HEAD",
+        "git show :<exact staged path>"
+      ],
+      "exception": "E0R cached whitespace check reported one trailing space in preserved historical red-governance.txt; later checkpoint checks passed",
+      "exit_codes": [
+        0,
+        2
+      ],
+      "purpose": "complete diff/index review and exact content verification"
+    },
+    {
+      "commands": [
+        "cat <exact authorized textual files>",
+        "rg --files <authorized textual directories>",
+        "rg -n <patterns> <exact authorized textual paths>"
+      ],
+      "exception": "read-only rg queries of authorized paths returned2 before the registration module or G2_SPATIAL report directory existed",
+      "exit_codes": [
+        0,
+        2
+      ],
+      "purpose": "governance, source manifest, source code, tests and evidence reading"
+    },
+    {
+      "commands": [
+        "/usr/bin/python3 -B scripts/check_repository_data.py",
+        "/usr/bin/python3 -B scripts/check_local_bootstrap.py",
+        "/usr/bin/python3 -B scripts/check_ti2_scope.py"
+      ],
+      "exit_codes": [
+        0
+      ],
+      "purpose": "data, authority and phase guards"
+    },
+    {
+      "commands": [
+        "/usr/bin/python3 -B scripts/run_ti2.py preflight --source <AUTHORIZED_SOURCE>",
+        "/usr/bin/python3 -B scripts/run_ti2.py pilot --source <AUTHORIZED_SOURCE>",
+        "/usr/bin/python3 -B scripts/run_ti2.py estimate"
+      ],
+      "exit_codes": [
+        0
+      ],
+      "purpose": "E0, exactly one E1 decode, and one frozen E3 measurement attempt",
+      "source_locator_sha256": "412b123e5dfa9b70f6d81560dbb9b2f4adda2662794050e25344bc7d783d9b44"
+    },
+    {
+      "commands": [
+        "ffmpeg -version",
+        "ffprobe -version",
+        "git check-ignore -q data/derived/ti2-pilot/ESM1-0000.raw",
+        "ffprobe -v error -select_streams v:0 -show_streams -of json <sealed-memfd>",
+        "ffmpeg <exact per-source arguments in ti2-pilot-manifest.json>"
+      ],
+      "exit_codes": [
+        0
+      ],
+      "purpose": "runner child commands; native planes preserved and exactly5 output frames per source"
+    },
+    {
+      "commands": [
+        "PYTHONPATH=src TMPDIR=<REPOSITORY>/.bootstrap-test-tmp /usr/bin/python3 -B -m unittest discover -s tests -v",
+        "PYTHONPATH=src TMPDIR=.bootstrap-test-tmp /usr/bin/python3 -B -m unittest -v tests/test_ti2_registration.py tests/test_ti2_pilot.py",
+        "PYTHONPATH=src TMPDIR=.bootstrap-test-tmp /usr/bin/python3 -S -B -m unittest discover -s tests",
+        "PYTHONPATH=src /usr/bin/python3 -B -m unittest -v <individual synthetic test modules>"
+      ],
+      "exit_codes": [
+        0,
+        1
+      ],
+      "purpose": "historical RED verification, journal, geometry, registration, calibration, controls and complete regression",
+      "results": "75 initial recovery tests; 97 after scientific attempt; 102 after final control fix; -S102 with5 optional skips. Actual module-absence RED and pooled-P95 regression RED preceded implementation."
+    },
+    {
+      "commands": [
+        "TMPDIR=.bootstrap-test-tmp /usr/bin/python3 -B -m unittest -v tests/test_ti2_registration.py tests/test_ti2_pilot.py"
+      ],
+      "exit_codes": [
+        1
+      ],
+      "interpretation": "PYTHONPATH omission; corrected command passed28 tests; not reconstructed scientific RED",
+      "purpose": "initial root test invocation"
+    },
+    {
+      "commands": [
+        "/usr/bin/python3 -B - <bounded inline program>"
+      ],
+      "exit_codes": [
+        0,
+        1
+      ],
+      "limitations": "inline programs are grouped; any interrupted development test is distinguished from the preserved original RED records. No unlisted experimental source was searched.",
+      "purpose": "exact-path lstat/hook inspection, static AST and UTF-8 review, SHA checks, JSON writing, test-output capture, scoped native-plane diagnostic rendering, fixed estimation-only printed-bar metrology, read-only integrity revalidation and terminal evidence synthesis"
+    }
+  ],
+  "outside_default_sandbox": [
+    {
+      "approval": "individual interactive approval",
+      "command": "git add -- .github/workflows/ci.yml AGENTS.md Makefile README.md docs/gates/LOCAL_BOOTSTRAP.md docs/protocols/LOCAL_DEVELOPMENT.md docs/protocols/TI2_CONTRACT_MATRIX.md docs/protocols/TI2_EXECUTION_PLAN.md docs/risks/TI2_RISK_REGISTER.md docs/security/LOCAL_SANDBOX.md pyproject.toml scripts/check_local_bootstrap.py tests/test_local_bootstrap.py tests/test_scope_guard.py artifacts/evidence/TI2/e0r-recovery.json artifacts/evidence/TI2/execution-state.json artifacts/evidence/TI2/green-geometry.txt artifacts/evidence/TI2/green-governance.txt artifacts/evidence/TI2/green-recovery.txt artifacts/evidence/TI2/red-geometry.txt artifacts/evidence/TI2/red-governance.txt artifacts/evidence/TI2/red-pilot.txt docs/decisions/AUTHORIZATION-TI2-TARGETED-GIT-APPROVALS-2026-09-17.md scripts/check_ti2_scope.py src/snbi_fragmentation/ti2_geometry.py src/snbi_fragmentation/ti2_pilot.py tests/test_ti2_geometry.py tests/test_ti2_pilot.py",
+      "exit_code": 0,
+      "purpose": "E0R-01 exact staging"
+    },
+    {
+      "approval": "individual interactive approval",
+      "command": "git commit -m \"feat(ti2): recover governed pilot and calibration contracts\"",
+      "commit": "7e2223dd84346beebbccefe51afcead66a02d339",
+      "exit_code": 0
+    },
+    {
+      "approval": "individual interactive approval",
+      "command": "git add -- scripts/run_ti2.py src/snbi_fragmentation/ti2_pilot.py src/snbi_fragmentation/ti2_registration.py src/snbi_fragmentation/ti2_calibration.py tests/test_ti2_pilot.py tests/test_ti2_registration.py tests/test_ti2_calibration.py tests/test_ti2_execution.py",
+      "exit_code": 0
+    },
+    {
+      "approval": "individual interactive approval",
+      "command": "git commit -m \"feat(ti2): add bounded registration and calibration runtime\"",
+      "commit": "5e1c4dc2406e1b6fbcf71bd8d86d6d842f3af3ad",
+      "exit_code": 0
+    }
+  ],
+  "privacy": "Private absolute source/attachment/repository paths are redacted; source identity is recorded by SHA-256. CLI parameter placeholders are not executable authorization.",
+  "prohibitions": {
+    "credentials_inspected": false,
+    "extra_source_frames": false,
+    "full_access": false,
+    "network_used": false,
+    "os_changes": false,
+    "sudo": false,
+    "ti3_to_ti8": false
+  },
+  "publication": {
+    "draft_pr": "NOT_OPENED",
+    "push": "NOT_EXECUTED",
+    "reason": "latest prompt conditions publication on E0-E7 completion; E4 and E5 are scientifically blocked by prerequisites"
+  },
+  "record_kind": "sanitized command inventory; grouped repeated read-only commands; not a verbatim shell transcript",
+  "schema_version": "1.0.0",
+  "scope": "resumed TI-2 through TI2-RUNTIME-02; final evidence staging/commit are recorded by Git history and final operator report",
+  "tool_operations": [
+    "apply_patch: exact allowlisted repository source/test/document edits",
+    "view_image: only the local six-estimation-frame diagnostic",
+    "collaboration: bounded code/text reviews and synthetic tests; no external messaging"
+  ]
+}

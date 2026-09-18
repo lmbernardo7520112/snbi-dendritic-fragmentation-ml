@@ -6,7 +6,18 @@ requires-python = ">=3.12,<3.13"
 dependencies = []
 
 [tool.snbi]
-lifecycle_state = "TI-1-closed"
-authorized_activity = "local-vscode-bootstrap"
+ti2_execution = "TERMINAL_BLOCKED_CLOSED"
+ti2_closeout_1 = "PASS"
+current_authorized_activity = "NONE_AWAITING_AUTHOR_DECISION"
 ti2_execution_authorized = false
-blocked_phases = ["TI-2-execution", "TI-3", "TI-4", "TI-5", "TI-6", "TI-7", "TI-8"]
+ti2r_authorized = false
+ti3_plus_authorized = false
+codex_local_write_readiness = "BLOCKED_AWAITING_AUTHOR_DECISION"
+merge_authorized = false
+write_boundary = "repository-only-default-sandbox"
+blocked_phases = ["TI-2", "TI-2R", "TI-3", "TI-4", "TI-5", "TI-6", "TI-7", "TI-8"]
+
+[tool.snbi_history.ti2_e0_e7]
+status = "HISTORICAL_CONSUMED_NON_AUTHORIZING"
+execution_branch = "feat/ti2-registration-calibration"
+frozen_pilot_image_count = 30

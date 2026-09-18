@@ -1,0 +1,22 @@
+command: PYTHONPATH=src /usr/bin/python3 -B -m unittest -v tests/test_ti2_pilot.py
+exit_code: 1
+test_sha256: e8841a0bdaa8ab12750569e010394635413c4d50bb144ccdb7a391647ba8d16a
+test_ti2_pilot (unittest.loader._FailedTest.test_ti2_pilot) ... ERROR
+
+======================================================================
+ERROR: test_ti2_pilot (unittest.loader._FailedTest.test_ti2_pilot)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_ti2_pilot
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/unittest/loader.py", line 137, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "<REPOSITORY>/tests/test_ti2_pilot.py", line 7, in <module>
+    from snbi_fragmentation import ti2_pilot as pilot
+ImportError: cannot import name 'ti2_pilot' from 'snbi_fragmentation' (<REPOSITORY>/src/snbi_fragmentation/__init__.py)
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

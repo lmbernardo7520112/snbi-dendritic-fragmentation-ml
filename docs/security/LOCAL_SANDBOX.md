@@ -1,6 +1,6 @@
 # Local Codex sandbox posture
 
-## Observed state
+## Historical startup failure
 
 Earlier read-only Codex IDE audits produced generic `bwrap ... Operation not
 permitted` startup failures. On 17 September 2026, the author performed the
@@ -12,8 +12,11 @@ bwrap: loopback: Failed RTM_NEWADDR: Operation not permitted
 ```
 
 The command was stopped without fallback, elevation, network access or host
-modification. This proves that the real sandbox is not currently operational;
-it does not identify the root cause by itself.
+modification. This established a historical startup failure; it did not
+identify the root cause by itself. SDR-2-A subsequently closed after the real
+Codex smoke test returned exactly `CODEX_SANDBOX_OK`. The author formally
+approved LB0 PASS and SDR-2-A RESOLVED in the
+[closure/execution decision](../decisions/AUTHORIZATION-LB0-SDR2A-CLOSURE-PR5-MERGE-TI2-EXECUTION-2026-09-17.md).
 
 One earlier audit used an author-approved read-only fallback outside the
 sandbox and produced no repository change. That historical exception is not
@@ -23,14 +26,21 @@ current authority and must not be repeated.
 
 - LB0 static/documental conformance: `PASS`;
 - workspace sanitization: `CONFIRMED_BY_AUTHOR`;
-- LB0 local acceptance: `PARTIAL`;
-- real Codex sandbox: `BLOCKED`;
-- Codex local write readiness: `BLOCKED`;
-- TI-2 execution: `NOT_AUTHORIZED`;
+- LB0 local acceptance: `PASS`;
+- real Codex sandbox: `PASS_SMOKE`;
+- SDR-2-A: `RESOLVED`;
+- Codex local write readiness: `BLOCKED_AWAITING_AUTHOR_DECISION`;
+- canonical authority: `pyproject.toml [tool.snbi]`;
+- current activity: `NONE_AWAITING_AUTHOR_DECISION`;
+- TI-2 execution: `TERMINAL_BLOCKED_CLOSED`; TI2-CLOSEOUT-1: `PASS`;
+- scientific execution permissions TI2/TI2R/TI3+: `false`;
+- method v1: `INSUFFICIENT_EVIDENCE`; G2-SPATIAL: `BLOCKED_METHOD_V1`;
+- transformation existence: `UNDETERMINED`; G3: `BLOCKED_DEPENDENCY_G2`;
+- E7: `PASS_DOCUMENTARY`; TI-2R and TI-3+: not authorized;
 - unsandboxed fallback: prohibited;
 - operating-system remediation: not authorized.
 
-## Established read-only facts
+## Historical read-only facts
 
 The approved manual preflight established, without changing the host:
 
@@ -48,15 +58,14 @@ These facts are diagnostic inputs. In particular, AppArmor restriction is a
 relevant observation but is not accepted as the cause without direct evidence.
 The missing `code` launcher does not prove that no compatible editor exists.
 
-## Diagnostic boundary
+## Closed diagnostic boundary
 
-The next collection is governed by
-`docs/protocols/LOCAL_SANDBOX_DIAGNOSTIC_PROTOCOL.md` and must be performed
-manually by the author. It does not expand the command allowance for the local
-Codex agent. The agent remains prohibited from executing commands while its
-sandbox is blocked.
+`docs/protocols/LOCAL_SANDBOX_DIAGNOSTIC_PROTOCOL.md` is retained as historical
+evidence. No further sandbox, namespace or AppArmor diagnosis/remediation is
+authorized or required for TI-2. Neither the historical protocol nor the
+presence of diagnostic scripts or editor tasks authorizes another run.
 
-The manual protocol may inspect only:
+The historical manual protocol allowed only:
 
 - editor product and official extension identity through the GUI;
 - categorical presence and non-secret versions of exact editor/package names;
@@ -70,7 +79,7 @@ It must not enumerate the home directory, list environment variables, inspect
 credentials, traverse experimental data, access the network, use privilege
 elevation or change system state.
 
-## Decision rule
+## Historical diagnostic decision rule
 
 | Observation | Result |
 |---|---|
@@ -82,6 +91,30 @@ elevation or change system state.
 | evidence remains ambiguous | `UNRESOLVED` |
 | any step requires privilege, installation or host change | `BLOCKED` |
 
-No diagnostic outcome authorizes remediation. Write readiness requires a
-successful real Codex sandbox command and a separate author decision after
-review of the evidence.
+No diagnostic outcome authorizes remediation. The successful real Codex smoke
+test established historical startup capability. Current canonical write
+readiness remains BLOCKED_AWAITING_AUTHOR_DECISION; the new single-use author
+instruction permits only its bounded REMEDIATION-2 transaction.
+
+## Git metadata protection and resumption
+
+Read-only `.git` protection is expected under the standard sandbox. The observed
+`.git/index.lock: Read-only file system` error stopped Git staging; it did not
+establish a bwrap/namespace/seccomp startup failure or reopen SDR-2-A.
+
+The [remediation decision](../decisions/AUTHORIZATION-TI2-PR6-REMEDIATION-2-2026-09-17.md)
+authorizes one bounded implementation/checkpoint/publication transaction only.
+All code and document edits remain in the default sandbox; exact-path staging,
+the single commit, fast-forward push and PR body update require separate
+approvals. New-SHA CI must pass both jobs and the checksum step before updating
+the body. No ready transition, merge, automatic rerun or second corrective
+commit is authorized. Active state remains NONE_AWAITING_AUTHOR_DECISION.
+
+Historical permissions never override canonical false state. No experimental
+source, ZIP, MP4, raw buffer or image may be opened or hashed. No pixels,
+FFmpeg/FFprobe, scientific retuning, local installation or OS changes. The only
+checksum inputs are safe tracked textual files. These exact Git/GitHub
+approvals grant no broad elevation, credential inspection or sandbox bypass.
+
+If sandbox startup itself fails again with bwrap, namespace or seccomp errors,
+stop immediately; no unsandboxed fallback is authorized.

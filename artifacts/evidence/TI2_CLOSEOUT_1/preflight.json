@@ -1,0 +1,28 @@
+{
+  "TI2_EXECUTION_RESULT_COMMIT": "f3c6da78b04299475c7bb85e986eb7435b08bd22",
+  "all_required_commits_are_ancestors": true,
+  "authority": "docs/decisions/AUTHORIZATION-TI2-CLOSEOUT-1-2026-09-17.md",
+  "data_guard": {
+    "content_bytes_read": 0,
+    "examined_entry_count": 144,
+    "status": "PASS",
+    "violations": []
+  },
+  "experimental_binaries_tracked": 0,
+  "index_lock_absent": true,
+  "initial_branch": "feat/ti2-registration-calibration",
+  "initial_remote_repository_verified": true,
+  "initial_worktree_clean": true,
+  "preflight_evidence_basis": "actual initial read-only commands before any closeout edits",
+  "required_commits": {
+    "5e1c4dc": "5e1c4dc2406e1b6fbcf71bd8d86d6d842f3af3ad",
+    "7e2223d": "7e2223dd84346beebbccefe51afcead66a02d339",
+    "f3c6da7": "f3c6da78b04299475c7bb85e986eb7435b08bd22"
+  },
+  "scientific_reexecution_authorized": false,
+  "source_edits_authorized": false,
+  "source_or_pixel_reads": 0,
+  "stage": "TI2-CLOSEOUT-1 preflight",
+  "standalone_checkout": true,
+  "status": "PASS"
+}

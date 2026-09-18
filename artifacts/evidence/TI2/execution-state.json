@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0.0",
+  "record_kind": "resumption_snapshot",
+  "date": "2026-09-17",
+  "operator_instruction": "TI2_RESUME_WITH_TARGETED_GIT_APPROVALS_V1",
+  "authorization_record": "docs/decisions/AUTHORIZATION-TI2-TARGETED-GIT-APPROVALS-2026-09-17.md",
+  "authorized_branch": "feat/ti2-registration-calibration",
+  "TI2_EXECUTION_AUTHORIZED": true,
+  "TI2_EXECUTION_STATUS": "RESUMED_AFTER_OPERATIONAL_BLOCK",
+  "G2_SPATIAL_EVALUATION_STATE": "NOT_EVALUATED",
+  "G3_EVALUATION_STATE": "NOT_EVALUATED",
+  "LB0_LOCAL_ACCEPTANCE": "PASS",
+  "SDR2A_STATUS": "RESOLVED",
+  "REAL_CODEX_SANDBOX": "PASS_SMOKE",
+  "codex_write_readiness": "AUTHORIZED_DEFAULT_SANDBOX_REPOSITORY_ONLY",
+  "git_metadata_policy": "INDIVIDUAL_TARGETED_APPROVAL_REQUIRED",
+  "pilot_image_limit": 30,
+  "blocked_phases": ["TI-3", "TI-4", "TI-5", "TI-6", "TI-7", "TI-8"],
+  "interpretation": "Operational resumption snapshot; not a scientific gate decision or evidence that an individual Git operation was approved."
+}

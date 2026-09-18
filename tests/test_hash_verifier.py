@@ -3,6 +3,7 @@ from __future__ import annotations
 import hashlib
 import tempfile
 import unittest
+from unittest.mock import patch
 import zipfile
 from pathlib import Path
 
@@ -69,6 +70,10 @@ def fixture_manifest(
 
 class HashVerifierTests(unittest.TestCase):
     def setUp(self) -> None:
+        # Only this entirely synthetic legacy fixture bypasses the closed guard.
+        guard = patch('snbi_fragmentation.custody.require_scientific_authority')
+        self.guard = guard.start()
+        self.addCleanup(guard.stop)
         self.temp = tempfile.TemporaryDirectory()
         self.root = Path(self.temp.name)
         self.file_bytes = b"documentary-source"

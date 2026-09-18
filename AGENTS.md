@@ -1,127 +1,143 @@
 # Governed agent instructions
 
-These instructions apply to the entire repository. They remain in force until a later, author-approved decision is committed to the repository.
+These instructions apply to the entire repository. Decision owner:
+**Leonardo Maximino Bernardo**. TI-0 and TI-1 are complete. LB0 is PASS and
+SDR-2-A is RESOLVED. No further sandbox diagnostic or OS remediation is authorized.
 
-## Authority
+## Current authority
 
-- Decision owner: **Leonardo Maximino Bernardo**.
-- TI-0 and TI-1 are complete.
-- The TI-2 execution plan is approved.
-- **TI-2 execution is not authorized.**
-- Only the governed local VS Code bootstrap is currently authorized.
-- TI-3 through TI-8 remain blocked.
-- If instructions conflict or scope is ambiguous, apply the most restrictive rule and stop with `BLOCKED`.
+The author approved TI2-CLOSEOUT-1 as PASS. The scientific attempt remains
+blocked, preserved at `f3c6da78b04299475c7bb85e986eb7435b08bd22`; published
+closeout is `a1d675f5dbbe3862621aebad2bcb80ab7584858d`.
 
-Machine-readable sentinel:
+**The sole canonical active-state source is `pyproject.toml [tool.snbi]`.**
+This block is a documentary mirror, not an alternative authorization source:
 
 ```text
+CURRENT_AUTHORIZED_ACTIVITY=NONE_AWAITING_AUTHOR_DECISION
+TI2_EXECUTION=TERMINAL_BLOCKED_CLOSED
+TI2_CLOSEOUT_1=PASS
 TI2_EXECUTION_AUTHORIZED=false
-AUTHORIZED_ACTIVITY=LOCAL_VSCODE_BOOTSTRAP
+TI2R_AUTHORIZED=false
+TI3_PLUS_AUTHORIZED=false
+METHOD_V1=INSUFFICIENT_EVIDENCE
+G2_SPATIAL=BLOCKED_METHOD_V1
+TRANSFORM_EXISTENCE=UNDETERMINED
+G3=BLOCKED_DEPENDENCY_G2
+E7=PASS_DOCUMENTARY
+MERGE_AUTHORIZED=false
+CODEX_LOCAL_WRITE_READINESS=BLOCKED_AWAITING_AUTHOR_DECISION
 ```
+
+The [remediation decision](docs/decisions/AUTHORIZATION-TI2-PR6-REMEDIATION-2-2026-09-17.md)
+authorizes only bounded implementation, tests, one individually approved
+commit, fast-forward push, new-SHA CI verification and a separately approved
+PR body update. After the commit, active state remains NONE_AWAITING_AUTHOR_DECISION
+while the expressly approved publication checks complete. No new scientific
+execution, second corrective commit, ready transition or merge is authorized.
+
+The authority is single-use for TI2-PR6-REMEDIATION-2. REMEDIATION-1 was partially
+accepted: the independent audit identified the remaining gate, empirical
+uncertainty and direct I/O guard gaps. The corrective scope is limited to these
+gaps and their documentation/tests. No optional hardening or new microstep is
+authorized. TI-2 and TI-2R are explicitly blocked alongside TI-3 through TI-8.
+Historical execution branch and frozen pilot count belong only to
+`tool.snbi_history.ti2_e0_e7`; they grant no authority.
+
+Historical decisions are immutable records. Validators must never infer
+permission from historical true text, documentation or green tests/CI.
+Missing, unknown, conflicting and noncanonical truthy values fail closed.
+Every E0–E7 entry must deny before examining a source path or invoking science.
 
 ## Required reading
 
-Before acting, read:
+Read README.md, pyproject.toml, the remediation decision, LOCAL_DEVELOPMENT.md,
+LOCAL_SANDBOX.md, terminal-state.json and remediation evidence. Read the
+TI2_EXECUTION_PLAN.md, TI2-CLOSEOUT-1 authorization and
+AUTHORIZATION-TI2-TARGETED-GIT-APPROVALS-2026-09-17.md as historical context.
+The newest explicit author decision governs its exact scope.
 
-1. `README.md`;
-2. `docs/decisions/AUTHORIZATION-TI2-PLAN-APPROVAL-LOCAL-BOOTSTRAP-2026-09-17.md`;
-3. `docs/protocols/LOCAL_DEVELOPMENT.md`;
-4. `docs/security/LOCAL_SANDBOX.md`;
-5. `docs/protocols/TI2_EXECUTION_PLAN.md`.
+## Repository and experimental boundaries
 
-Reading an approved plan does not authorize its execution.
+- Write only below this standalone repository in the default sandbox, on
+  `feat/ti2-registration-calibration`, within an announced exact allowlist.
+- Do not search, list, glob, hash, stat or traverse parent directories, the home
+  directory, the filesystem root or sibling repositories.
+- Do not follow symlinks. A versioned symlink is blocking.
+- Do not create nested AGENTS.md or AGENTS.override.md.
+- Never inspect .env, credentials, tokens, cookies, SSH keys, credential stores
+  or editor authentication. Approved GitHub commands use existing authentication.
+- Treat data/, sources, videos, images, arrays, models, datasets and checkpoints
+  as opaque. No opening, content hashing, metadata probing, FFmpeg/FFprobe,
+  decoding, source-member access or pixel inspection. The old opaque-byte
+  experimental hashing exception is not active.
+- Preserve the historical 30 pilot items. Existing .raw files are headerless
+  MP4-decoded pixel buffers, not raw detector data; do not open them.
+- No labels, ledger, datasets, splits, baseline, CNN, training, evaluation,
+  sealed-test access, TI-2R or TI-3–TI-8.
 
-## Repository boundary
+## Bounded maintenance and synthetic verification
 
-- Operate only below the resolved repository root.
-- Do not search, list, glob, hash, `stat`, or traverse `/`, `/home`, `$HOME`, parent directories, or sibling repositories.
-- Do not follow symlinks. A versioned symlink is a blocking violation.
-- Do not create nested `AGENTS.md` or `AGENTS.override.md` files.
-- Never read `.env`, credentials, tokens, cookies, SSH private keys, Git credential stores, or editor authentication state.
+This remediation may change the shared authority, current gate block parser,
+public experimental I/O guards, empirical uncertainty validator, associated
+tests, directly affected current documentation and safe textual checksums.
+CI workflows and dependencies remain unchanged. Do not change method-v1 matcher, grid, mask, margin,
+thresholds, minimum matches, transform fitting, matrices or ROI. No experimental
+physical-coordinate conversion or uncertainty propagation.
 
-The sole external read-only diagnostic exception is the exact allowlist in
-`scripts/check_local_environment.py`: version calls for `git`, `bwrap`,
-`unshare`, and `code`; Python/platform identifiers; the three exact proc/sys
-keys documented in `docs/security/LOCAL_SANDBOX.md`; and the inert `bwrap`
-capability probe when explicitly requested. This exception permits no search,
-enumeration, data access, credential access, write, or additional command.
+Do not invoke scripts/run_ti2.py as a scientific command. Denial tests use
+mocks or control-flow inspection, without source access. Authorized unit tests
+use tracked text and synthetic fixtures only. Local temporary subtrees are
+fresh and controlled inside ignored .bootstrap-test-tmp/, never experimental
+bytes or pre-existing external temporary content. Run the data guard first.
 
-The only temporary-directory exception applies to the pre-existing TI-0/TI-1
-regression suite in a clean CI checkout. A test may access only a fresh subtree
-created by its own `TemporaryDirectory`, must not inspect pre-existing temporary
-content or follow links, and must remove the subtree at completion.
+No local installation. Dependency-free tests report optional skips explicitly.
+The separate pinned CI job runs exactly the five in-memory
+SyntheticImageMatchingTests, requiring 5 passes and zero skips/failures/errors/
+expected failures/unexpected successes. This single-use decision also permits
+the same synthetic suite locally with already available dependencies; no local
+installation or FFmpeg/FFprobe invocation is allowed. Synthetic tests grant no experimental
+authority. Editor task allowlists remain unchanged. Historical regression
+tests may use their own fresh temporary subtree in clean CI; locally the
+temporary root stays inside the repository.
 
-## Opaque experimental areas
+## Sandbox, Git and remote approvals
 
-Treat these paths and any external scientific-source location as opaque:
+- no sudo, su, doas, local installation, OS/service/kernel/AppArmor change,
+  mount, chmod, chown or ACL change;
+- no fallback outside the sandbox after startup failure;
+- no full access, danger-full-access, --yolo or bypass;
+- no network except exact author-approved Git/GitHub operations;
+- no pull, fetch, checkout, switch, reset, clean, restore, stash, rebase, merge,
+  cherry-pick, amend or force;
+- no git add ., git add -A, glob staging, git commit -am or --no-verify;
+- no gh pr ready, gh pr merge or automatic reviewer requests.
 
-- `data/raw/`;
-- `data/interim/`;
-- `data/processed/`;
-- `data/derived/`;
-- video, image, array, dataset, checkpoint, or model files.
+Read-only .git protection is intentional. Show exact paths, diff, tests and
+guards before separately approving exact-path staging, the single commit and
+fast-forward push. Review staged content/checksums; never alter permissions.
+Git metadata denial is distinct from a sandbox startup failure and grants no bypass.
 
-Do not enumerate, open, decode, hash, inspect metadata, or otherwise access their contents during the local bootstrap.
+Remote preflight must match the starting SHA, open Draft PR #6 and successful
+historical CI. After push require both jobs and checksum step successful at
+the new SHA, with no automatic rerun or second corrective commit. Only then
+prepare and separately approve an update to the PR body. Keep it OPEN/DRAFT
+and unmerged; ready and merge require a new author decision.
 
-## Authorized bootstrap work
+## Evidence and stop conditions
 
-Only the following classes of change are authorized:
+Preserve historical logs, authorizations and observations. Versioned publication
+evidence records only the completed older closeout. The new commit SHA and CI
+URL belong only in the effective PR body and terminal author report.
 
-- root agent instructions;
-- local-development and sandbox documentation;
-- versioned VS Code settings and explicit tasks;
-- repository data-name guardrails;
-- read-only local-environment diagnostics;
-- tests using text, JSON, mocks, or temporary synthetic paths;
-- CI, Makefile, contribution guidance, and PR-template changes required to enforce the bootstrap.
+Report exact counters, checksum counts and commands/exit codes by boundary;
+omit private paths, hostnames, environment dumps and secrets. Stop on preflight
+divergence, scope expansion, experimental access, scientific retuning, unexplained
+changes or sandbox failure without workaround. Refused Git approval means
+BLOCKED_GIT_APPROVAL; unavailable remote tooling means BLOCKED_REMOTE_TOOL;
+failed/cancelled/required-skipped CI means BLOCKED_CI; pending means BLOCKED_CI_PENDING.
 
-Tests must not implement registration, calibration, image geometry, frame handling, labels, datasets, baselines, or models—even with synthetic images.
-
-The local VS Code task may run only the three bootstrap policy-test modules.
-The legacy TI-0/TI-1 regression suite is reserved for a clean CI checkout; it
-may create small, non-decodable synthetic byte fixtures, but it may not use
-experimental bytes or invoke media decoding.
-
-## Prohibited operations
-
-- no `sudo`, `su`, `doas`, package installation, system service changes, kernel changes, AppArmor changes, mounts, `chmod`, `chown`, or ACL changes;
-- no fallback outside the sandbox after a sandbox failure;
-- no network access except an exact Git/GitHub action explicitly authorized in the current user instruction;
-- no `ffmpeg`, `ffprobe`, OpenCV, Pillow, ImageMagick, video decoder, or image reader;
-- no frame extraction or decoding and no pixel access;
-- no spatial registration, ROI materialization, scale estimation, or calibration;
-- no labels, event ledger, dataset, temporal split, baseline, CNN, training, evaluation, or sealed-test access;
-- no commit, push, merge, force operation, branch switch, reset, clean, or worktree mutation unless the current user instruction explicitly authorizes that exact Git operation.
-
-## Sandbox and approvals
-
-- Diagnostic mode: `read-only`, user approval on request, network disabled.
-- Write mode is forbidden until a real Codex command starts successfully in
-  the Linux sandbox and the author separately authorizes workspace writes.
-- The repository's inert `bwrap` capability probe is diagnostic only; a PASS
-  does not establish Codex/seccomp readiness and does not authorize writes.
-- A `bwrap`, namespace, or seccomp failure is `BLOCKED`; do not retry unsandboxed.
-- Never use full-access, danger-full-access, `--yolo`, or an equivalent bypass.
-- No operating-system remediation is authorized by this repository.
-
-## Working-tree protocol
-
-1. Confirm repository, branch, HEAD, and a clean initial status.
-2. State the exact file allowlist before editing.
-3. Stop if a pre-existing change overlaps the task.
-4. Use deterministic, dependency-free tests where practical.
-5. Run the repository data guard before other tests.
-6. Show the final diff and status.
-7. Report commands, exit codes, and limitations without usernames, home paths, hostnames, environment variables, or credentials.
-
-## Mandatory stop conditions
-
-Return `BLOCKED` without attempting a workaround when:
-
-- sandbox isolation fails;
-- a requested path is outside the repository or the declared allowlist;
-- raw/derived experimental data might be accessed;
-- installation, network, or an OS change appears necessary;
-- a tracked symlink or forbidden binary/data path is found;
-- the worktree contains unexplained changes;
-- the requested action could execute TI-2 or any later phase.
+Success requires TI2_PR6_REMEDIATION_2=PASS_READY_FOR_FINAL_MERGE_DECISION, a clean
+worktree, equal local/remote SHA, an open Draft PR and both jobs successful.
+PR6_MERGE_READINESS=READY_FOR_FINAL_AUTHOR_DECISION is readiness for the author's
+decision only; MERGE_AUTHORIZED=false.

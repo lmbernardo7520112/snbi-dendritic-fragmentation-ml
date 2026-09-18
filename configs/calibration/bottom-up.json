@@ -1,0 +1,173 @@
+{
+  "author_review": "PENDING",
+  "canonical_source_id": "ESM1",
+  "canonical_source_sha256": "4d07ee422e97661b1ee0ae681b7617fd7971476015603f3039c20ddf8b0c5c6d",
+  "claim_limit": "Documented nominal X/Y sampling of 1.40 micrometres per pixel and a compatible horizontal raster crosscheck do not establish complete metrological uncertainty, a valid multimodal ROI, physical orientation, ground truth or downstream authorization.",
+  "combined_uncertainty": null,
+  "condition": "bottom-up",
+  "coordinate_convention": "top-left pixel center=(0,0); x right; y down",
+  "coordinate_unit": "pixel",
+  "documentary_authority": "docs/decisions/AUTHORIZATION-TI2-CLOSEOUT-1-2026-09-17.md",
+  "documentary_revision": "TI2-CLOSEOUT-1",
+  "gate_id": "G3",
+  "modalities": [
+    "ESM1",
+    "ESM2",
+    "ESM3"
+  ],
+  "native_reference_dimensions": {
+    "height": 1018,
+    "width": 1278
+  },
+  "nominal_spatial_scale": {
+    "applicability": "Documented nominal acquisition pixel sizes recorded for this canonical source; no coordinate conversion or propagation to unregistered modalities.",
+    "canonical_source_id": "ESM1",
+    "documentary_provenance": {
+      "authority": "docs/decisions/AUTHORIZATION-TI2-CLOSEOUT-1-2026-09-17.md",
+      "basis": "author-supplied primary-source citation and explicit documentary reconciliation",
+      "citation": "Gibbs et al., JOM 68, 170–177 (2016)",
+      "doi": "10.1007/s11837-015-1646-7",
+      "independent_primary_text_retrieved": false,
+      "scope": "Documentary authorization only; no source retrieval or new image/pixel observation in TI2-CLOSEOUT-1.",
+      "url": "https://link.springer.com/article/10.1007/s11837-015-1646-7"
+    },
+    "eligible_for_coordinate_conversion": false,
+    "full_metrological_uncertainty_certificate_available": false,
+    "metrological_uncertainty_status": "UNRESOLVED",
+    "pixel_size_x_um": "1.40",
+    "pixel_size_y_um": "1.40",
+    "propagation_to_unregistered_modalities_permitted": false,
+    "raster_crosscheck_relation": "Compatible with the documented nominal 1.40 micrometres per pixel; the raster interval is not a statistical confidence interval.",
+    "raster_crosscheck_um_per_px": "1.40056022409",
+    "status": "DOCUMENTED"
+  },
+  "physical_coordinate_conversions_performed": 0,
+  "physical_orientation": {
+    "gravity_direction": null,
+    "growth_direction": null,
+    "reason": "Existing G1 metadata identify condition names only; no traceable physical vectors in native pixel coordinates were established.",
+    "status": "NOT_VERIFIED",
+    "thermal_gradient_direction": null
+  },
+  "printed_bar_candidate": {
+    "applicability": "native horizontal pixel distances of this canonical source only; no transfer to unregistered modalities",
+    "bar_length_px": 357,
+    "bar_length_uncertainty_bound_px": 3.0,
+    "eligible_for_coordinate_conversion": false,
+    "endpoint_center_x": [
+      859,
+      1215
+    ],
+    "endpoint_edge_x": [
+      858.5,
+      1215.5
+    ],
+    "estimated_only_from_canonical_source": "ESM1",
+    "estimation_frame_indices": [
+      0,
+      146,
+      293
+    ],
+    "estimation_frame_lengths_px": [
+      357,
+      357,
+      357
+    ],
+    "evidence": "artifacts/evidence/TI2/scale-estimation-audit-v2.json",
+    "evidence_sha256": "ff6e74f8ad53d2db3b5de94c14e00f64cb7a03c2bb1acdc4c78910e87a68dc08",
+    "full_physical_calibration_status": "UNRESOLVED",
+    "horizontal_micrometres_per_pixel": 1.4005602240896358,
+    "horizontal_raster_uncertainty_bound_micrometres_per_pixel": 0.011869154441437768,
+    "horizontal_scale_interval_micrometres_per_pixel": [
+      1.3888888888888888,
+      1.4124293785310735
+    ],
+    "nominal_label_metrology_uncertainty": "UNRESOLVED; no independent acquisition calibration supplied",
+    "nominal_printed_bar_micrometres": 500.0,
+    "nominal_scale_relationship": "Existing raster measurement crosschecks the separately documented 1.40 micrometres-per-pixel nominal scale; no new bar measurement was performed in closeout.",
+    "orientation_status": "NOT_VERIFIED",
+    "scale_status": "BAR_GEOMETRY_MEASURED",
+    "source_level_author_review": "PENDING",
+    "source_sha256": "4d07ee422e97661b1ee0ae681b7617fd7971476015603f3039c20ddf8b0c5c6d",
+    "uncertainty_kind": "conservative endpoint/threshold/row/time bound; not a statistical confidence interval",
+    "vertical_scale_status": "DOCUMENTED_NOMINAL_1.40_UM_PER_PX; full metrological uncertainty remains UNRESOLVED; the horizontal bar is not independent vertical verification"
+  },
+  "qualified_decision": "BLOCKED_DEPENDENCY_G2",
+  "registration_dependencies": [
+    {
+      "path": "configs/registration/ESM2-to-ESM1.json",
+      "reason": "independent correspondence measurement is BLOCKED",
+      "reference_id": "ESM1",
+      "sha256": "7d33c8cfd949c210f9e7ca33cf61903f9050f4537b2aec5193f15cd5e3f867a9",
+      "source_id": "ESM2",
+      "status": "BLOCKED"
+    },
+    {
+      "path": "configs/registration/ESM3-to-ESM1.json",
+      "reason": "independent correspondence measurement is BLOCKED",
+      "reference_id": "ESM1",
+      "sha256": "cc5303d9810178b957d76699cac9ad2a0a37db228639a82cf6885f0392068ad6",
+      "source_id": "ESM3",
+      "status": "BLOCKED"
+    }
+  ],
+  "registration_interpretation": "Method v1 produced insufficient evidence before transformation-class selection. Historical ROI/registration dependency wording means no certified fit was obtained, not that an admissible physical transformation cannot exist.",
+  "roi": {
+    "excluded_pixel_count": null,
+    "height": null,
+    "native_return_transforms": null,
+    "reason": "No admissible modality-to-canonical transforms; an all-modalities, all-five-instants common support rectangle cannot be certified. No fallback to full-frame or dimensions-only ROI.",
+    "status": "BLOCKED",
+    "support_fraction": null,
+    "temporal_stability": "NOT_VERIFIED",
+    "width": null,
+    "x": null,
+    "y": null
+  },
+  "scale": {
+    "coordinate_unit": "pixel",
+    "method": null,
+    "micrometres_per_pixel": null,
+    "reason": "Nominal X/Y pixel sizes are documented at 1.40 micrometres per pixel by the author-supplied source citation. Complete metrological uncertainty and registration/ROI prerequisites remain unresolved; physical coordinate conversion is not authorized.",
+    "scale_status": "UNRESOLVED",
+    "source": null,
+    "uncertainty_micrometres_per_pixel": null
+  },
+  "schema_version": "1.0.0",
+  "status": "BLOCKED",
+  "ti3_authorized": false,
+  "transform_existence": "UNDETERMINED",
+  "uncertainty_budget": {
+    "discretization": {
+      "applies_to": "one native coordinate axis; not a propagated two-point or physical-distance uncertainty",
+      "coverage_factor": 1,
+      "distribution": "rectangular",
+      "half_width_px": 0.5,
+      "method": "Analytical per-axis standard uncertainty for an explicitly assumed uniform quantization error on [-0.5,+0.5] pixel: u=1/sqrt(12). This is a discretization model, not an experimental residual or total uncertainty.",
+      "provenance": "analytical_model",
+      "status": "MODELLED",
+      "unit": "pixel",
+      "value": 0.2886751345948129,
+      "evidence_kind": "ANALYTICAL_ASSUMPTION",
+      "analytical_assumption": "Independent per-axis quantization error is assumed uniformly distributed over [-0.5,+0.5] pixel. This analytical assumption is not an empirical uncertainty measurement."
+    },
+    "registration": {
+      "reason": "Both native-to-canonical modality registrations lack an admissible fit; no validated registration residual can be propagated.",
+      "status": "UNRESOLVED"
+    },
+    "roi": {
+      "reason": "A canonical ROI has not been certified because transforms, full shared support and physical orientation are unresolved; boundary sensitivity cannot be evaluated.",
+      "status": "UNRESOLVED"
+    },
+    "scale": {
+      "reason": "Nominal X/Y sampling of 1.40 micrometres per pixel is documented. The preserved raster sensitivity interval is not a statistical confidence interval or a complete metrological uncertainty certificate.",
+      "status": "UNRESOLVED"
+    },
+    "temporal": {
+      "reason": "No admissible registration parameters exist for assessing temporal variation across the five frozen instants. Constant bar lengths in three estimation frames do not establish registration stability.",
+      "status": "UNRESOLVED"
+    }
+  },
+  "uncertainty_budget_schema_status": "PASS",
+  "uncertainty_budget_scientific_status": "BLOCKED"
+}

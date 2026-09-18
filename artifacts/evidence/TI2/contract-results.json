@@ -1,0 +1,117 @@
+{
+  "contracts": [
+    {
+      "evidence_interpretation": "Original source/index/hash retained; elapsed_from_first_frame_s and offset experimental_time_s are documented and reconciled with Decimal arithmetic; historical physical_time_s is a preserved deprecated elapsed alias.",
+      "id": "SRC-201",
+      "status": "PASS"
+    },
+    {
+      "evidence_interpretation": "Exactly 30 permitted pilot frames/items decoded from MP4 without additional loss; no additional source frame exported.",
+      "id": "PILOT-201",
+      "status": "PASS"
+    },
+    {
+      "evidence_interpretation": "G0 ZIP and six member hashes unchanged before/after/final.",
+      "id": "RAW-201",
+      "status": "PASS"
+    },
+    {
+      "evidence_interpretation": "Native x/y conventions declared; synthetic geometry tests pass.",
+      "id": "GEO-201",
+      "status": "PASS"
+    },
+    {
+      "evidence_interpretation": "No accepted transform; matrix and inverse are null.",
+      "id": "GEO-202",
+      "status": "BLOCKED"
+    },
+    {
+      "evidence_interpretation": "Input measurement sufficiency failed before model selection; hierarchy implemented but not exercised on accepted experimental fit.",
+      "id": "GEO-203",
+      "status": "BLOCKED"
+    },
+    {
+      "evidence_interpretation": "No projective/nonrigid or unjustified affine operation.",
+      "id": "GEO-204",
+      "status": "PASS"
+    },
+    {
+      "evidence_interpretation": "Native parity preserved; physical orientation NOT_VERIFIED.",
+      "id": "GEO-205",
+      "status": "BLOCKED"
+    },
+    {
+      "evidence_interpretation": "Only prescribed estimation indices analyzed; decisions frozen; no matrix or held-out refit.",
+      "id": "REG-201",
+      "status": "PARTIAL"
+    },
+    {
+      "evidence_interpretation": "No sufficient all-instant correspondences; no certified independent residuals.",
+      "id": "REG-202",
+      "status": "BLOCKED"
+    },
+    {
+      "evidence_interpretation": "No accepted experimental matrix for roundtrip; synthetic contract GREEN.",
+      "id": "REG-203",
+      "status": "BLOCKED"
+    },
+    {
+      "evidence_interpretation": "Temporary chroma exclusion for metrics; no circle objects, labels or differencing.",
+      "id": "ANN-201",
+      "status": "PASS"
+    },
+    {
+      "evidence_interpretation": "No accepted cross-modality registration; common support not certified.",
+      "id": "ROI-201",
+      "status": "BLOCKED"
+    },
+    {
+      "evidence_interpretation": "Separate condition records; both ROI unresolved.",
+      "id": "ROI-202",
+      "status": "PASS"
+    },
+    {
+      "evidence_interpretation": "Nominal X/Y sampling of 1.40 micrometres per pixel is documented; the existing 500/357 horizontal raster ratio is compatible. Complete metrological uncertainty remains unresolved; no coordinate conversion or propagation to unregistered modalities.",
+      "id": "CAL-201",
+      "status": "PARTIAL"
+    },
+    {
+      "evidence_interpretation": "Validated scale UNRESOLVED; coordinates remain pixels.",
+      "id": "CAL-202",
+      "status": "PASS"
+    },
+    {
+      "evidence_interpretation": "All five components satisfy the explicit-state schema, but unresolved contributions prevent complete scientific uncertainty assessment.",
+      "id": "UNC-201",
+      "status": "PARTIAL"
+    },
+    {
+      "evidence_interpretation": "30 pilot frames decoded from MP4 without additional loss, preserving native video resolution and 8-bit YUV420 pixel format. The headerless pixel buffers are not raw detector data; no E1 image transforms.",
+      "id": "IMG-201",
+      "status": "PASS"
+    },
+    {
+      "evidence_interpretation": "No TI3+ outputs; binaries excluded from Git.",
+      "id": "SCOPE-201",
+      "status": "PASS"
+    },
+    {
+      "evidence_interpretation": "No ground-truth, absolute Bi, causal or physical-coordinate claims.",
+      "id": "CLAIM-201",
+      "status": "PASS"
+    }
+  ],
+  "documentary_authority": "docs/decisions/AUTHORIZATION-TI2-CLOSEOUT-1-2026-09-17.md",
+  "method_v1": "INSUFFICIENT_EVIDENCE",
+  "qualified_scientific_gates": {
+    "G2-SPATIAL": "BLOCKED_METHOD_V1",
+    "G3": "BLOCKED_DEPENDENCY_G2"
+  },
+  "schema_version": "1.0.0",
+  "scientific_gates": {
+    "G2-SPATIAL": "BLOCKED",
+    "G3": "BLOCKED"
+  },
+  "software_test_success_does_not_satisfy_experimental_contracts": true,
+  "transform_existence": "UNDETERMINED"
+}

@@ -1,0 +1,29 @@
+{
+  "condition": "bottom-up",
+  "convention": "top-left pixel center=(0,0); x right; y down; column vectors; native-to-reference",
+  "estimation_indices": [
+    0,
+    146,
+    293
+  ],
+  "frozen_before_validation_pixel_access": true,
+  "inverse": null,
+  "matrix": null,
+  "numerical_estimation_status": "BLOCKED",
+  "parameter_status": "NO_ADMISSIBLE_FIT",
+  "physical_orientation": {
+    "gravity_direction": "NOT_VERIFIED",
+    "growth_direction": "NOT_VERIFIED",
+    "thermal_gradient_direction": "NOT_VERIFIED"
+  },
+  "reason": "independent correspondence measurement is BLOCKED",
+  "reference_id": "ESM1",
+  "scope": "numerical registration only; does not establish physical orientation or ground truth",
+  "selection_history": [],
+  "source_id": "ESM2",
+  "transform_class": null,
+  "validation_indices": [
+    73,
+    219
+  ]
+}

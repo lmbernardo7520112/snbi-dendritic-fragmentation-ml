@@ -1,79 +1,87 @@
 # Governed local development protocol
 
-## Status and authority
+## Active state and authority
 
-The local VS Code bootstrap is authorized. TI-2 execution is not authorized. This protocol configures a safe development surface; it does not process scientific data.
+The author accepted TI2-CLOSEOUT-1 as PASS. The sole canonical active state is
+`pyproject.toml [tool.snbi]`: TI2 execution TERMINAL_BLOCKED_CLOSED, activity
+NONE_AWAITING_AUTHOR_DECISION, and TI2/TI2R/TI3+ execution permissions false.
+The [remediation decision](../decisions/AUTHORIZATION-TI2-PR6-REMEDIATION-2-2026-09-17.md)
+permits only its single bounded maintenance/publication transaction.
+After its commit, that closed state remains active while the expressly
+authorized push, CI verification and Draft PR body update complete.
+REMEDIATION-2 is a single-use corrective authority after partial acceptance of
+REMEDIATION-1. It addresses exactly the audited gate, MEASURED and direct I/O
+guard gaps. Both TI-2 and TI-2R are explicitly blocked in canonical authority.
 
-## Architecture
+METHOD_V1=INSUFFICIENT_EVIDENCE; G2_SPATIAL=BLOCKED_METHOD_V1;
+TRANSFORM_EXISTENCE=UNDETERMINED; G3=BLOCKED_DEPENDENCY_G2;
+E7=PASS_DOCUMENTARY. LB0 remains PASS and SDR-2-A RESOLVED.
+Bootstrap PASS now means coherent safeguards with scientific readiness BLOCKED
+and codex_write_readiness=BLOCKED_AWAITING_AUTHOR_DECISION, not scientific
+execution authority. Old authorizations remain historical, never parsed as
+current permission.
 
-- GitHub is the canonical repository and review boundary.
-- VS Code is the local editor and test surface.
-- Codex may operate only under root `AGENTS.md` instructions.
-- Experimental sources remain external, immutable, and absent from an agent-writeable workspace.
-- Pull requests and explicit author decisions control every phase transition.
+## Local boundaries
 
-## Required local posture
+Use only the standalone repository on feat/ti2-registration-calibration and
+the default sandbox. Do not inspect credentials, parent/sibling locations,
+experimental data or ignored derivatives. No source/ZIP/MP4/raw/image opening,
+hashing, pixel inspection, FFmpeg/FFprobe, E0–E7 execution or scientific retuning.
+No local dependencies, operating-system changes or sandbox diagnostics.
 
-1. Use the stable official Codex extension.
-2. Open only the repository root as the workspace.
-3. Keep approvals user-controlled.
-4. Keep network disabled for agent commands.
-5. Use read-only mode for diagnostics.
-6. Do not enable workspace-write until a real Codex command starts in the
-   sandbox and the author separately approves workspace writes.
-7. Never retry a failed sandbox command outside the sandbox.
+Workspace sanitization is the historical author attestation, not a new scan of
+ignored files. The Git data guard examines only index paths and reports
+content_bytes_read=0. Existing derivatives remain opaque and ignored.
 
-## Sanitized workspace rule
+## Verification under this decision
 
-An agent-writeable workspace must not contain raw videos or derived experimental
-files. When experimental sources are introduced for a later authorized phase,
-keep them outside the Codex workspace or use a standalone sanitized clone whose
-`.git` directory is contained inside the repository root. Linked worktrees are
-not permitted. `.gitignore` is not a confidentiality or write barrier.
+1. Confirm exact branch/starting SHA, standalone .git, clean index/worktree,
+   origin, equal remote SHA and open Draft PR #6; verify historical CI.
+2. Run the repository data guard before tests.
+3. Run bootstrap and scope guards; both must report no scientific authorization.
+4. Compile authorized Python source in memory and run the dependency-free suite
+   with fresh synthetic temporary subtrees inside ignored .bootstrap-test-tmp/.
+5. Validate the current gate blocks, canonical authority, MEASURED and preserved
+   MODELLED contracts, plus zero-access I/O guards with mocks and ExplodingPath.
+   Existing textual metadata regressions remain allowed; never open raw paths.
+6. Run the stdlib checksum verifier. Only safe tracked text is admissible; new
+   untracked files cannot be exempted. Verify the final staged inventory before
+   the sole commit and exclude the checksum manifest itself.
+7. Report exact run/pass/skip/failure/error counts and review the full diff.
 
-## Bootstrap workflow
+No scientific command is an authorized local verification. Denial tests mock
+boundaries or inspect control flow. Legacy tests use only controlled synthetic
+fixtures. No experimental coordinate conversion or uncertainty propagation.
+The editor task allowlist remains unchanged. The separate CI scientific job
+runs only five synthetic in-memory tests with exactly pinned NumPy/SciPy; the
+deterministic job remains dependency-free and reports its five optional skips.
+The current instruction also permits those five synthetic tests locally when
+the required dependencies are already available; no installation or external
+tool invocation. No workflow/dependency changes are needed. The shared authority
+lives in `src/snbi_fragmentation/ti2_authority.py`; the script is only a facade.
+`LOCAL_BOOTSTRAP.md` and `TI2_GATE_PLAN.md` are the explicit current-gate allowlist.
 
-1. Verify remote, branch, HEAD, and clean status.
-2. Read the current authorization and `AGENTS.md`.
-3. Run `/usr/bin/python3 -B scripts/check_repository_data.py`.
-4. Run `/usr/bin/python3 -B scripts/check_local_bootstrap.py`.
-5. Run `/usr/bin/python3 -B scripts/check_local_environment.py` in read-only mode.
-6. If explicitly requested, `--probe-bwrap` may test bubblewrap capability;
-   it does not establish Codex sandbox readiness.
-7. Start one harmless read-only command through the real Codex sandbox. If it
-   fails, stop; do not retry unsandboxed or remediate the operating system.
-8. Run `make bootstrap-tests` only within the authorized sandbox mode. The
-   complete legacy suite remains confined to a clean CI checkout.
-9. Review the diff and final Git status.
+## Git and remote protocol
 
-## VS Code tasks
+Request separate approvals for exact-path staging, the single commit and
+fast-forward push. Review status, ordered paths, diff and guards first; inspect
+staged bytes/checksums. No all-files staging, force, amend, second corrective
+commit, fetch, branch/history repair or permission changes.
 
-The versioned tasks are explicit `process` tasks. None runs on folder open, installs software, invokes media tools, accesses the network, or performs a mutating Git action.
+Require both new-SHA CI jobs successful and the checksum step PASS; require
+five scientific tests passed with zero skips. No automatic CI rerun. Only then
+prepare an ignored sanitized PR body and separately approve its update.
+Keep PR #6 OPEN/DRAFT/unmerged. Ready and merge require new author authorization.
+Unavailable tooling must not trigger installation or credential inspection.
 
-## Data policy
+## Evidence and completion
 
-The repository guard examines only names already present in the Git index. It does not traverse ignored data directories or open experimental files. Forbidden data require explicit future change control before any exception.
+Preserve historical logs and decisions. The versioned publication record
+contains only the older completed closeout; new commit SHA/CI URL appear only
+afterward in the effective PR body and terminal report, avoiding self-reference.
+Report commands/exit codes without private paths, hostnames, environment dumps
+or credentials. A scoped grouped inventory must state its limits explicitly.
 
-## Evidence policy
-
-A bootstrap report may record:
-
-- repository identifier;
-- branch and commit;
-- clean/dirty status;
-- commands and exit codes;
-- guard/test outcomes;
-- sanitized sandbox diagnostics.
-
-It must not contain username, home directory, hostname, environment variables, credentials, source paths outside the repository, or experimental file metadata.
-
-## Completion criteria
-
-- root agent instructions exist and validate;
-- VS Code JSON is valid and contains no automatic task;
-- the data guard passes in CI;
-- synthetic tests cover traversal, symlinks, case-insensitive suffixes, and prohibited paths;
-- local diagnostics execute no mutating command and Git optional locks are disabled;
-- all previous deterministic tests remain green;
-- readiness for Codex writes remains BLOCKED until the real Codex sandbox works
-  and the author makes a separate write-authorization decision.
+Success means PASS_READY_FOR_FINAL_MERGE_DECISION, equal local/remote SHA, clean
+worktree and open Draft PR with required CI complete. Active authority remains
+NONE_AWAITING_AUTHOR_DECISION; green CI does not approve the scientific gates.

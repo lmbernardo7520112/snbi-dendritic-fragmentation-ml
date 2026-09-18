@@ -1,0 +1,384 @@
+{
+  "base_commit": "7e2223dd84346beebbccefe51afcead66a02d339",
+  "boundary": "standard sandbox; repository writes; exact supplied ZIP read-only",
+  "environment": {
+    "Pillow": "10.2.0",
+    "ffmpeg": "ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers",
+    "ffprobe": "ffprobe version 6.1.1-3ubuntu5 Copyright (c) 2007-2023 the FFmpeg developers",
+    "numpy": "1.26.4",
+    "python": "3.12.3",
+    "scipy": "1.11.4"
+  },
+  "experimental_images_decoded_at_preflight": 0,
+  "forbidden_phases": [
+    "TI-3",
+    "TI-4",
+    "TI-5",
+    "TI-6",
+    "TI-7",
+    "TI-8"
+  ],
+  "guards": {
+    "check_local_bootstrap.py": {
+      "audit": "governed_local_bootstrap",
+      "codex_write_readiness": "AUTHORIZED_DEFAULT_SANDBOX_REPOSITORY_ONLY",
+      "readiness_basis": "author decision and static safeguards; not a runtime sandbox probe",
+      "status": "PASS",
+      "ti2_execution_authorized": true,
+      "violations": []
+    },
+    "check_repository_data.py": {
+      "audit": "tracked_repository_data_guard",
+      "content_bytes_read": 0,
+      "examined_entry_count": 114,
+      "status": "PASS",
+      "violations": []
+    },
+    "check_ti2_scope.py": {
+      "authorized_phase": "TI-2",
+      "blocked_phases": [
+        "TI-3",
+        "TI-4",
+        "TI-5",
+        "TI-6",
+        "TI-7",
+        "TI-8"
+      ],
+      "experimental_content_bytes_read": 0,
+      "status": "PASS",
+      "violations": []
+    }
+  },
+  "plan": [
+    {
+      "condition": "bottom_up_anti_parallel",
+      "experiment_id": "bottom_up_anti_parallel",
+      "frame_index": 0,
+      "modality": "xray_radiography",
+      "physical_time_s": 0.0,
+      "role": "estimation",
+      "source_id": "ESM1"
+    },
+    {
+      "condition": "bottom_up_anti_parallel",
+      "experiment_id": "bottom_up_anti_parallel",
+      "frame_index": 73,
+      "modality": "xray_radiography",
+      "physical_time_s": 86.14,
+      "role": "validation",
+      "source_id": "ESM1"
+    },
+    {
+      "condition": "bottom_up_anti_parallel",
+      "experiment_id": "bottom_up_anti_parallel",
+      "frame_index": 146,
+      "modality": "xray_radiography",
+      "physical_time_s": 172.28,
+      "role": "estimation",
+      "source_id": "ESM1"
+    },
+    {
+      "condition": "bottom_up_anti_parallel",
+      "experiment_id": "bottom_up_anti_parallel",
+      "frame_index": 219,
+      "modality": "xray_radiography",
+      "physical_time_s": 258.42,
+      "role": "validation",
+      "source_id": "ESM1"
+    },
+    {
+      "condition": "bottom_up_anti_parallel",
+      "experiment_id": "bottom_up_anti_parallel",
+      "frame_index": 293,
+      "modality": "xray_radiography",
+      "physical_time_s": 345.74,
+      "role": "estimation",
+      "source_id": "ESM1"
+    },
+    {
+      "condition": "bottom_up_anti_parallel",
+      "experiment_id": "bottom_up_anti_parallel",
+      "frame_index": 0,
+      "modality": "relative_solute_field",
+      "physical_time_s": 0.0,
+      "role": "estimation",
+      "source_id": "ESM2"
+    },
+    {
+      "condition": "bottom_up_anti_parallel",
+      "experiment_id": "bottom_up_anti_parallel",
+      "frame_index": 73,
+      "modality": "relative_solute_field",
+      "physical_time_s": 86.14,
+      "role": "validation",
+      "source_id": "ESM2"
+    },
+    {
+      "condition": "bottom_up_anti_parallel",
+      "experiment_id": "bottom_up_anti_parallel",
+      "frame_index": 146,
+      "modality": "relative_solute_field",
+      "physical_time_s": 172.28,
+      "role": "estimation",
+      "source_id": "ESM2"
+    },
+    {
+      "condition": "bottom_up_anti_parallel",
+      "experiment_id": "bottom_up_anti_parallel",
+      "frame_index": 219,
+      "modality": "relative_solute_field",
+      "physical_time_s": 258.42,
+      "role": "validation",
+      "source_id": "ESM2"
+    },
+    {
+      "condition": "bottom_up_anti_parallel",
+      "experiment_id": "bottom_up_anti_parallel",
+      "frame_index": 293,
+      "modality": "relative_solute_field",
+      "physical_time_s": 345.74,
+      "role": "estimation",
+      "source_id": "ESM2"
+    },
+    {
+      "condition": "bottom_up_anti_parallel",
+      "experiment_id": "bottom_up_anti_parallel",
+      "frame_index": 0,
+      "modality": "cumulative_fragmentation_annotation",
+      "physical_time_s": 0.0,
+      "role": "estimation",
+      "source_id": "ESM3"
+    },
+    {
+      "condition": "bottom_up_anti_parallel",
+      "experiment_id": "bottom_up_anti_parallel",
+      "frame_index": 73,
+      "modality": "cumulative_fragmentation_annotation",
+      "physical_time_s": 86.14,
+      "role": "validation",
+      "source_id": "ESM3"
+    },
+    {
+      "condition": "bottom_up_anti_parallel",
+      "experiment_id": "bottom_up_anti_parallel",
+      "frame_index": 146,
+      "modality": "cumulative_fragmentation_annotation",
+      "physical_time_s": 172.28,
+      "role": "estimation",
+      "source_id": "ESM3"
+    },
+    {
+      "condition": "bottom_up_anti_parallel",
+      "experiment_id": "bottom_up_anti_parallel",
+      "frame_index": 219,
+      "modality": "cumulative_fragmentation_annotation",
+      "physical_time_s": 258.42,
+      "role": "validation",
+      "source_id": "ESM3"
+    },
+    {
+      "condition": "bottom_up_anti_parallel",
+      "experiment_id": "bottom_up_anti_parallel",
+      "frame_index": 293,
+      "modality": "cumulative_fragmentation_annotation",
+      "physical_time_s": 345.74,
+      "role": "estimation",
+      "source_id": "ESM3"
+    },
+    {
+      "condition": "top_down_parallel",
+      "experiment_id": "top_down_parallel",
+      "frame_index": 0,
+      "modality": "xray_radiography",
+      "physical_time_s": 0.0,
+      "role": "estimation",
+      "source_id": "ESM4"
+    },
+    {
+      "condition": "top_down_parallel",
+      "experiment_id": "top_down_parallel",
+      "frame_index": 98,
+      "modality": "xray_radiography",
+      "physical_time_s": 115.64,
+      "role": "validation",
+      "source_id": "ESM4"
+    },
+    {
+      "condition": "top_down_parallel",
+      "experiment_id": "top_down_parallel",
+      "frame_index": 197,
+      "modality": "xray_radiography",
+      "physical_time_s": 232.46,
+      "role": "estimation",
+      "source_id": "ESM4"
+    },
+    {
+      "condition": "top_down_parallel",
+      "experiment_id": "top_down_parallel",
+      "frame_index": 295,
+      "modality": "xray_radiography",
+      "physical_time_s": 348.1,
+      "role": "validation",
+      "source_id": "ESM4"
+    },
+    {
+      "condition": "top_down_parallel",
+      "experiment_id": "top_down_parallel",
+      "frame_index": 394,
+      "modality": "xray_radiography",
+      "physical_time_s": 464.92,
+      "role": "estimation",
+      "source_id": "ESM4"
+    },
+    {
+      "condition": "top_down_parallel",
+      "experiment_id": "top_down_parallel",
+      "frame_index": 0,
+      "modality": "relative_solute_field",
+      "physical_time_s": 0.0,
+      "role": "estimation",
+      "source_id": "ESM5"
+    },
+    {
+      "condition": "top_down_parallel",
+      "experiment_id": "top_down_parallel",
+      "frame_index": 98,
+      "modality": "relative_solute_field",
+      "physical_time_s": 115.64,
+      "role": "validation",
+      "source_id": "ESM5"
+    },
+    {
+      "condition": "top_down_parallel",
+      "experiment_id": "top_down_parallel",
+      "frame_index": 197,
+      "modality": "relative_solute_field",
+      "physical_time_s": 232.46,
+      "role": "estimation",
+      "source_id": "ESM5"
+    },
+    {
+      "condition": "top_down_parallel",
+      "experiment_id": "top_down_parallel",
+      "frame_index": 295,
+      "modality": "relative_solute_field",
+      "physical_time_s": 348.1,
+      "role": "validation",
+      "source_id": "ESM5"
+    },
+    {
+      "condition": "top_down_parallel",
+      "experiment_id": "top_down_parallel",
+      "frame_index": 394,
+      "modality": "relative_solute_field",
+      "physical_time_s": 464.92,
+      "role": "estimation",
+      "source_id": "ESM5"
+    },
+    {
+      "condition": "top_down_parallel",
+      "experiment_id": "top_down_parallel",
+      "frame_index": 0,
+      "modality": "cumulative_fragmentation_annotation",
+      "physical_time_s": 0.0,
+      "role": "estimation",
+      "source_id": "ESM6"
+    },
+    {
+      "condition": "top_down_parallel",
+      "experiment_id": "top_down_parallel",
+      "frame_index": 98,
+      "modality": "cumulative_fragmentation_annotation",
+      "physical_time_s": 115.64,
+      "role": "validation",
+      "source_id": "ESM6"
+    },
+    {
+      "condition": "top_down_parallel",
+      "experiment_id": "top_down_parallel",
+      "frame_index": 197,
+      "modality": "cumulative_fragmentation_annotation",
+      "physical_time_s": 232.46,
+      "role": "estimation",
+      "source_id": "ESM6"
+    },
+    {
+      "condition": "top_down_parallel",
+      "experiment_id": "top_down_parallel",
+      "frame_index": 295,
+      "modality": "cumulative_fragmentation_annotation",
+      "physical_time_s": 348.1,
+      "role": "validation",
+      "source_id": "ESM6"
+    },
+    {
+      "condition": "top_down_parallel",
+      "experiment_id": "top_down_parallel",
+      "frame_index": 394,
+      "modality": "cumulative_fragmentation_annotation",
+      "physical_time_s": 464.92,
+      "role": "estimation",
+      "source_id": "ESM6"
+    }
+  ],
+  "prior_pilot_destination_absent": true,
+  "red_evidence": [
+    "artifacts/evidence/TI2/red-pilot.txt",
+    "artifacts/evidence/TI2/red-geometry.txt",
+    "artifacts/evidence/TI2/red-governance.txt"
+  ],
+  "runtime_packages_preexisting_no_installation": true,
+  "source_verification": {
+    "archive_mode": "r",
+    "results": [
+      {
+        "sha256": "9512a2e6d0ce397f9de8ae71cbf3cb759651df8e8793542a7c99cfe9d102d8f1",
+        "size_bytes": 116199497,
+        "source_id": "VIDEO_ARCHIVE_01",
+        "status": "PASS"
+      },
+      {
+        "sha256": "4d07ee422e97661b1ee0ae681b7617fd7971476015603f3039c20ddf8b0c5c6d",
+        "size_bytes": 3233526,
+        "source_id": "ESM1",
+        "status": "PASS"
+      },
+      {
+        "sha256": "4eb1762dc4ee65c3e8b1411d80812a75257b1324d539db4c3dcf6c97c1ed9a0a",
+        "size_bytes": 41487560,
+        "source_id": "ESM2",
+        "status": "PASS"
+      },
+      {
+        "sha256": "d76a6466e50480a2116bc545a0ee2b8095cc14c54f861ecebee87de5b64e35be",
+        "size_bytes": 3356196,
+        "source_id": "ESM3",
+        "status": "PASS"
+      },
+      {
+        "sha256": "9e6be3e78699d3bdd16fa71d56917479d7e16f7418b857ab3925e1115df91ebe",
+        "size_bytes": 4509283,
+        "source_id": "ESM4",
+        "status": "PASS"
+      },
+      {
+        "sha256": "c9054d18f330e018e82cc6bd4db2ccfbda7ac76e01326a831857a835d1feade6",
+        "size_bytes": 59235679,
+        "source_id": "ESM5",
+        "status": "PASS"
+      },
+      {
+        "sha256": "5b8747758afde34fb626f3c4ffbd0b49ba6ca6f6b49bfa81b8cf9ee8459280ea",
+        "size_bytes": 4353042,
+        "source_id": "ESM6",
+        "status": "PASS"
+      }
+    ],
+    "source_documents_not_opened": true,
+    "source_locator_sha256": "412b123e5dfa9b70f6d81560dbb9b2f4adda2662794050e25344bc7d783d9b44",
+    "source_mode": "O_RDONLY|O_NOFOLLOW",
+    "status": "PASS"
+  },
+  "stage": "TI2-E0",
+  "status": "PASS"
+}

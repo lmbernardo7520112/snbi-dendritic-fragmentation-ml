@@ -1,0 +1,386 @@
+{
+  "record_kind": "sanitized grouped precommit command inventory",
+  "limits": [
+    "Long inline Python bodies and repetitive textual reads are summarized, not presented as literal shell transcripts.",
+    "Initial attachment read and repository identity checks preceded edits; only the exact operator attachment was read outside the repository.",
+    "Later approved staging, commit, push and new-SHA remote actions are reported in the terminal response; their future success is not invented here.",
+    "Two apply_patch requests (one root, one authority subtask) were rejected before application for duplicate Delete/Add paths; corrected repository-only edits succeeded. These are editing-tool errors, not test failures.",
+    "This record ends after approved first staging and final 84-entry verification; final restaging, commit, push, new-SHA CI and PR update are later operations reported to the author."
+  ],
+  "root_recorded_commands": [
+    {
+      "cmd": "git remote -v",
+      "scope": "default sandbox",
+      "exit_code": 0
+    },
+    {
+      "cmd": "/usr/bin/python3 -B - <inline stdlib text-only validation; body summarized>",
+      "scope": "default sandbox",
+      "exit_code": 0
+    },
+    {
+      "cmd": "cat AGENTS.md README.md pyproject.toml artifacts/evidence/TI2_CLOSEOUT_1/closeout-report.md artifacts/evidence/TI2/terminal-state.json artifacts/evidence/TI2/checksums.sha256",
+      "scope": "default sandbox",
+      "exit_code": 0
+    },
+    {
+      "cmd": "cat docs/decisions/AUTHORIZATION-TI2-CLOSEOUT-1-2026-09-17.md docs/decisions/AUTHORIZATION-TI2-TARGETED-GIT-APPROVALS-2026-09-17.md",
+      "scope": "default sandbox",
+      "exit_code": 0
+    },
+    {
+      "cmd": "git ls-remote --heads origin refs/heads/feat/ti2-registration-calibration",
+      "scope": "targeted read-only remote approval",
+      "exit_code": 0
+    },
+    {
+      "cmd": "gh pr view 6 --repo lmbernardo7520112/snbi-dendritic-fragmentation-ml --json url,state,isDraft,mergedAt,baseRefName,headRefName,headRefOid",
+      "scope": "targeted read-only remote approval",
+      "exit_code": 0
+    },
+    {
+      "cmd": "gh run view 35265631917 --repo lmbernardo7520112/snbi-dendritic-fragmentation-ml --json databaseId,headSha,status,conclusion,url,jobs",
+      "scope": "targeted read-only remote approval",
+      "exit_code": 0
+    },
+    {
+      "cmd": "cat pyproject.toml scripts/check_local_bootstrap.py scripts/check_ti2_scope.py",
+      "scope": "default sandbox",
+      "exit_code": 0
+    },
+    {
+      "cmd": "cat src/snbi_fragmentation/timebase.py src/snbi_fragmentation/ti2_pilot.py",
+      "scope": "default sandbox",
+      "exit_code": 0
+    },
+    {
+      "cmd": "cat .github/workflows/ci.yml scripts/check_repository_data.py",
+      "scope": "default sandbox",
+      "exit_code": 0
+    },
+    {
+      "cmd": "rg -n 'uncertainty|MODELLED|MEASURED|^def |^class |__main__|main\\(' scripts/run_ti2.py src/snbi_fragmentation/ti2_geometry.py tests/test_ti2_execution.py tests/test_ti2_geometry.py tests/test_ti2_calibration.py",
+      "scope": "default sandbox",
+      "exit_code": 0
+    },
+    {
+      "cmd": "/usr/bin/python3 -B scripts/check_repository_data.py",
+      "scope": "default sandbox",
+      "exit_code": 0
+    },
+    {
+      "cmd": "/usr/bin/python3 -B - <inline stdlib text-only validation; body summarized>",
+      "scope": "default sandbox",
+      "exit_code": 0
+    },
+    {
+      "cmd": "cat scripts/ti2_authority.py scripts/run_scientific_synthetic_contracts.py .github/workflows/ci.yml",
+      "scope": "default sandbox",
+      "exit_code": 0
+    },
+    {
+      "cmd": "cat src/snbi_fragmentation/timebase.py",
+      "scope": "default sandbox",
+      "exit_code": 0
+    },
+    {
+      "cmd": "git diff -- src/snbi_fragmentation/ti2_pilot.py scripts/run_ti2.py",
+      "scope": "default sandbox",
+      "exit_code": 0
+    },
+    {
+      "cmd": "/usr/bin/python3 -B scripts/check_repository_data.py",
+      "scope": "default sandbox",
+      "exit_code": 0
+    },
+    {
+      "cmd": "/usr/bin/python3 -B scripts/check_local_bootstrap.py",
+      "scope": "default sandbox",
+      "exit_code": 0
+    },
+    {
+      "cmd": "/usr/bin/python3 -B scripts/check_ti2_scope.py",
+      "scope": "default sandbox",
+      "exit_code": 0
+    },
+    {
+      "cmd": "PYTHONPATH=src TMPDIR=.bootstrap-test-tmp /usr/bin/python3 -S -B -m unittest discover -s tests -v",
+      "scope": "default sandbox",
+      "exit_code": 0
+    },
+    {
+      "cmd": "git diff --check",
+      "scope": "default sandbox",
+      "exit_code": 0
+    },
+    {
+      "cmd": "git status --short --untracked-files=all",
+      "scope": "default sandbox",
+      "exit_code": 0
+    },
+    {
+      "cmd": "cat scripts/check_ti2_checksums.py",
+      "scope": "default sandbox",
+      "exit_code": 0
+    },
+    {
+      "cmd": "cat tests/test_ti2_execution.py tests/test_ti2_authority.py",
+      "scope": "default sandbox",
+      "exit_code": 0
+    },
+    {
+      "cmd": "/usr/bin/python3 -B - <inline stdlib text-only validation; body summarized>",
+      "scope": "default sandbox",
+      "exit_code": 0
+    },
+    {
+      "cmd": "/usr/bin/python3 -B - <safe tracked-text checksum preparation>",
+      "scope": "default sandbox",
+      "exit_code": 0
+    },
+    {
+      "cmd": "/usr/bin/python3 -B scripts/check_ti2_checksums.py",
+      "scope": "default sandbox",
+      "exit_code": 0
+    },
+    {
+      "cmd": "PYTHONPATH=src /usr/bin/python3 -S -B - <text-only validation/scan>",
+      "scope": "default sandbox",
+      "exit_code": 0
+    },
+    {
+      "cmd": "git diff --check",
+      "scope": "default sandbox",
+      "exit_code": 0
+    },
+    {
+      "cmd": "git diff --stat",
+      "scope": "default sandbox",
+      "exit_code": 0
+    },
+    {
+      "cmd": "git status --short --untracked-files=all",
+      "scope": "default sandbox",
+      "exit_code": 0
+    },
+    {
+      "cmd": "/usr/bin/python3 -B - <text-only validation/scan>",
+      "scope": "default sandbox",
+      "exit_code": 1
+    },
+    {
+      "cmd": "/usr/bin/python3 -B - <clarified generic documentation phrase, refresh safe-text hashes and bounded scan>",
+      "scope": "default sandbox",
+      "exit_code": 0
+    },
+    {
+      "cmd": "/usr/bin/python3 -B scripts/check_ti2_checksums.py",
+      "scope": "default sandbox",
+      "exit_code": 0
+    },
+    {
+      "cmd": "git diff --check",
+      "scope": "default sandbox",
+      "exit_code": 0
+    },
+    {
+      "cmd": "git add -- .github/workflows/ci.yml AGENTS.md README.md artifacts/evidence/TI2/checksums.sha256 artifacts/evidence/TI2/execution-report.md artifacts/evidence/TI2/terminal-state.json artifacts/evidence/TI2_PR6_REMEDIATION_1/closeout-publication-record.md artifacts/evidence/TI2_PR6_REMEDIATION_1/commands.json artifacts/evidence/TI2_PR6_REMEDIATION_1/local-verification.json artifacts/evidence/TI2_PR6_REMEDIATION_1/method-v1-limitations.md artifacts/evidence/TI2_PR6_REMEDIATION_1/remediation-report.md configs/calibration/bottom-up.json configs/calibration/top-down.json docs/decisions/AUTHORIZATION-TI2-PR6-REMEDIATION-1-2026-09-17.md docs/gates/TI2_GATE_PLAN.md docs/protocols/LOCAL_DEVELOPMENT.md docs/protocols/TI2_CONTRACT_MATRIX.md docs/protocols/TI2_EXECUTION_PLAN.md docs/risks/TI2_RISK_REGISTER.md docs/security/LOCAL_SANDBOX.md pyproject.toml scripts/check_local_bootstrap.py scripts/check_ti2_checksums.py scripts/check_ti2_scope.py scripts/run_scientific_synthetic_contracts.py scripts/run_ti2.py scripts/ti2_authority.py src/snbi_fragmentation/ti2_geometry.py src/snbi_fragmentation/ti2_pilot.py src/snbi_fragmentation/timebase.py tests/test_local_bootstrap.py tests/test_scientific_synthetic_runner.py tests/test_scope_guard.py tests/test_ti2_authority.py tests/test_ti2_checksums.py tests/test_ti2_execution.py tests/test_ti2_geometry.py tests/test_ti2_pilot.py tests/test_timebase.py",
+      "scope": "individual Git approval",
+      "exit_code": 0
+    },
+    {
+      "cmd": "git diff --cached --check",
+      "scope": "default sandbox",
+      "exit_code": 0
+    },
+    {
+      "cmd": "git diff --cached --name-status",
+      "scope": "default sandbox",
+      "exit_code": 0
+    },
+    {
+      "cmd": "git diff --cached --stat",
+      "scope": "default sandbox",
+      "exit_code": 0
+    },
+    {
+      "cmd": "/usr/bin/python3 -B scripts/check_repository_data.py",
+      "scope": "default sandbox",
+      "exit_code": 0
+    },
+    {
+      "cmd": "/usr/bin/python3 -B - <extend final tracked text checksum coverage and verify real Git index>",
+      "scope": "default sandbox",
+      "exit_code": 0
+    }
+  ],
+  "additional_root_operations": [
+    {
+      "operation": "read full required governance/source/test files and bounded text searches",
+      "exit_code": 0
+    },
+    {
+      "operation": "write declared authorization, current documentation and historical publication/limitations records; redact private repository path in author transcription",
+      "exit_code": 0
+    },
+    {
+      "operation": "update only MODELLED analytical uncertainty metadata and its validator/tests",
+      "status": "completed in default sandbox"
+    },
+    {
+      "operation": "write these precommit verification and command records",
+      "status": "repository-only text"
+    },
+    {
+      "operation": "bounded private-path scan matched a generic slash-separated directory phrase, not an actual private path; wording clarified and scan repeated",
+      "exit_codes": [
+        1,
+        0
+      ]
+    },
+    {
+      "operation": "independent final documentation review corrected README example to enforce -S -B and repository-only temporary storage",
+      "exit_code": 0
+    }
+  ],
+  "parallel_work": [
+    {
+      "scope": "canonical authority and entry guards",
+      "local_tests": {
+        "testsRun": 27,
+        "passed": 27,
+        "skipped": 0,
+        "failures": 0,
+        "errors": 0
+      },
+      "exit_code": 0,
+      "commands": [
+        "cat <explicit required documents, guards and tests>",
+        "rg <closed authority markers> AGENTS.md",
+        "/usr/bin/python3 -B scripts/check_repository_data.py",
+        "TMPDIR=.bootstrap-test-tmp PYTHONPATH=src /usr/bin/python3 -S -B -m unittest -v tests.test_ti2_authority tests.test_ti2_execution tests.test_scope_guard",
+        "TMPDIR=.bootstrap-test-tmp PYTHONPATH=src /usr/bin/python3 -S -B -m unittest -v tests.test_local_bootstrap",
+        "/usr/bin/python3 -B scripts/check_local_bootstrap.py",
+        "/usr/bin/python3 -B scripts/check_ti2_scope.py",
+        "git diff --check -- <nine exact authority files>",
+        "git diff --stat -- <tracked authority files>",
+        "git diff -- scripts/run_ti2.py pyproject.toml"
+      ]
+    },
+    {
+      "scope": "operational exact time semantics",
+      "local_tests": {
+        "testsRun": 28,
+        "passed": 28,
+        "skipped": 0,
+        "failures": 0,
+        "errors": 0
+      },
+      "exit_code": 0,
+      "commands": [
+        "cat <explicit required documents, temporal source and tests>",
+        "rg -n <time API and pilot references> src scripts tests .github/workflows/ci.yml",
+        "/usr/bin/python3 -B scripts/check_repository_data.py",
+        "PYTHONPATH=src TMPDIR=.bootstrap-test-tmp /usr/bin/python3 -S -B -m unittest -v tests.test_timebase tests.test_ti2_pilot.PilotTemporalContracts tests.test_ti2_closeout",
+        "git diff --check -- src/snbi_fragmentation/timebase.py src/snbi_fragmentation/ti2_pilot.py tests/test_timebase.py tests/test_ti2_pilot.py",
+        "git diff --stat -- <four changed files and two preserved metadata files>",
+        "git diff -- src/snbi_fragmentation/timebase.py src/snbi_fragmentation/ti2_pilot.py"
+      ]
+    },
+    {
+      "scope": "checksum/strict synthetic runner/CI",
+      "local_tests": {
+        "testsRun": 30,
+        "passed": 30,
+        "skipped": 0,
+        "failures": 0,
+        "errors": 0
+      },
+      "exit_code": 0,
+      "commands": [
+        "cat <explicit required documents, checksum guard, CI and tests>",
+        "/usr/bin/python3 -B scripts/check_repository_data.py",
+        "PYTHONPATH=src /usr/bin/python3 -S -B -m unittest -v tests.test_ti2_checksums tests.test_scientific_synthetic_runner",
+        "/usr/bin/python3 -B - <compile four new Python files in memory>"
+      ]
+    },
+    {
+      "scope": "independent cross-reviews",
+      "commands": [
+        "cat <exact implemented files>",
+        "git diff -- <exact reviewed source/guard/test paths>",
+        "sed <bounded source text>",
+        "rg -n <imports and scientific boundaries> <exact source/test/CI paths>"
+      ],
+      "exit_code": 0,
+      "findings": "No blocking defect identified; no scientific invocation or edits during reviews."
+    }
+  ],
+  "git_mutations_before_cutoff": [
+    {
+      "cmd": "git add -- .github/workflows/ci.yml AGENTS.md README.md artifacts/evidence/TI2/checksums.sha256 artifacts/evidence/TI2/execution-report.md artifacts/evidence/TI2/terminal-state.json artifacts/evidence/TI2_PR6_REMEDIATION_1/closeout-publication-record.md artifacts/evidence/TI2_PR6_REMEDIATION_1/commands.json artifacts/evidence/TI2_PR6_REMEDIATION_1/local-verification.json artifacts/evidence/TI2_PR6_REMEDIATION_1/method-v1-limitations.md artifacts/evidence/TI2_PR6_REMEDIATION_1/remediation-report.md configs/calibration/bottom-up.json configs/calibration/top-down.json docs/decisions/AUTHORIZATION-TI2-PR6-REMEDIATION-1-2026-09-17.md docs/gates/TI2_GATE_PLAN.md docs/protocols/LOCAL_DEVELOPMENT.md docs/protocols/TI2_CONTRACT_MATRIX.md docs/protocols/TI2_EXECUTION_PLAN.md docs/risks/TI2_RISK_REGISTER.md docs/security/LOCAL_SANDBOX.md pyproject.toml scripts/check_local_bootstrap.py scripts/check_ti2_checksums.py scripts/check_ti2_scope.py scripts/run_scientific_synthetic_contracts.py scripts/run_ti2.py scripts/ti2_authority.py src/snbi_fragmentation/ti2_geometry.py src/snbi_fragmentation/ti2_pilot.py src/snbi_fragmentation/timebase.py tests/test_local_bootstrap.py tests/test_scientific_synthetic_runner.py tests/test_scope_guard.py tests/test_ti2_authority.py tests/test_ti2_checksums.py tests/test_ti2_execution.py tests/test_ti2_geometry.py tests/test_ti2_pilot.py tests/test_timebase.py",
+      "scope": "individual Git approval",
+      "exit_code": 0
+    }
+  ],
+  "remote_operations_before_cutoff": [
+    {
+      "cmd": "git ls-remote --heads origin refs/heads/feat/ti2-registration-calibration",
+      "scope": "targeted read-only remote approval",
+      "exit_code": 0
+    },
+    {
+      "cmd": "gh pr view 6 --repo lmbernardo7520112/snbi-dendritic-fragmentation-ml --json url,state,isDraft,mergedAt,baseRefName,headRefName,headRefOid",
+      "scope": "targeted read-only remote approval",
+      "exit_code": 0
+    },
+    {
+      "cmd": "gh run view 35265631917 --repo lmbernardo7520112/snbi-dendritic-fragmentation-ml --json databaseId,headSha,status,conclusion,url,jobs",
+      "scope": "targeted read-only remote approval",
+      "exit_code": 0
+    }
+  ],
+  "scientific_execution": false,
+  "experimental_reads": 0,
+  "stage_allowlist": [
+    ".github/workflows/ci.yml",
+    "AGENTS.md",
+    "README.md",
+    "artifacts/evidence/TI2/checksums.sha256",
+    "artifacts/evidence/TI2/execution-report.md",
+    "artifacts/evidence/TI2/terminal-state.json",
+    "artifacts/evidence/TI2_PR6_REMEDIATION_1/closeout-publication-record.md",
+    "artifacts/evidence/TI2_PR6_REMEDIATION_1/commands.json",
+    "artifacts/evidence/TI2_PR6_REMEDIATION_1/local-verification.json",
+    "artifacts/evidence/TI2_PR6_REMEDIATION_1/method-v1-limitations.md",
+    "artifacts/evidence/TI2_PR6_REMEDIATION_1/remediation-report.md",
+    "configs/calibration/bottom-up.json",
+    "configs/calibration/top-down.json",
+    "docs/decisions/AUTHORIZATION-TI2-PR6-REMEDIATION-1-2026-09-17.md",
+    "docs/gates/TI2_GATE_PLAN.md",
+    "docs/protocols/LOCAL_DEVELOPMENT.md",
+    "docs/protocols/TI2_CONTRACT_MATRIX.md",
+    "docs/protocols/TI2_EXECUTION_PLAN.md",
+    "docs/risks/TI2_RISK_REGISTER.md",
+    "docs/security/LOCAL_SANDBOX.md",
+    "pyproject.toml",
+    "scripts/check_local_bootstrap.py",
+    "scripts/check_ti2_checksums.py",
+    "scripts/check_ti2_scope.py",
+    "scripts/run_scientific_synthetic_contracts.py",
+    "scripts/run_ti2.py",
+    "scripts/ti2_authority.py",
+    "src/snbi_fragmentation/ti2_geometry.py",
+    "src/snbi_fragmentation/ti2_pilot.py",
+    "src/snbi_fragmentation/timebase.py",
+    "tests/test_local_bootstrap.py",
+    "tests/test_scientific_synthetic_runner.py",
+    "tests/test_scope_guard.py",
+    "tests/test_ti2_authority.py",
+    "tests/test_ti2_checksums.py",
+    "tests/test_ti2_execution.py",
+    "tests/test_ti2_geometry.py",
+    "tests/test_ti2_pilot.py",
+    "tests/test_timebase.py"
+  ]
+}

@@ -10,6 +10,8 @@ from dataclasses import asdict, dataclass
 from decimal import Decimal
 from pathlib import Path
 
+from .ti2_authority import require_scientific_authority
+
 
 class MetadataError(RuntimeError):
     """Raised when a source cannot be probed deterministically."""
@@ -77,6 +79,7 @@ def parse_ffprobe(source: dict, payload: dict) -> VideoMetadata:
 
 
 def ffprobe_version(executable: str = "ffprobe") -> str:
+    require_scientific_authority()
     completed = subprocess.run(
         [executable, "-version"], check=True, capture_output=True, text=True
     )
@@ -86,6 +89,7 @@ def ffprobe_version(executable: str = "ffprobe") -> str:
 def probe_zip_member(
     archive_path: Path, member_path: str, source: dict, executable: str = "ffprobe"
 ) -> tuple[VideoMetadata, list[str]]:
+    require_scientific_authority()
     command = [
         executable, "-v", "warning", "-show_entries", FFPROBE_ENTRIES,
         "-of", "json", "pipe:0",

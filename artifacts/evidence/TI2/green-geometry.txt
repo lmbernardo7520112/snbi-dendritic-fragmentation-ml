@@ -1,0 +1,32 @@
+TI-2 resumed implementation: current GREEN run. Historical red-geometry.txt was preserved unchanged.
+Command: PYTHONPATH=src /usr/bin/python3 -B -m unittest discover -s tests -p test_ti2_geometry.py -v
+test_physical_scale_requires_source_and_uncertainty (test_ti2_geometry.CalibrationContractTests.test_physical_scale_requires_source_and_uncertainty) ... ok
+test_uncertainty_budget_requires_each_explicit_status (test_ti2_geometry.CalibrationContractTests.test_uncertainty_budget_requires_each_explicit_status) ... ok
+test_unresolved_physical_units_and_hidden_conversion_fail_closed (test_ti2_geometry.CalibrationContractTests.test_unresolved_physical_units_and_hidden_conversion_fail_closed) ... ok
+test_unresolved_scale_stays_in_pixels (test_ti2_geometry.CalibrationContractTests.test_unresolved_scale_stays_in_pixels) ... ok
+test_affine_requires_explicit_evidence (test_ti2_geometry.MatrixContractTests.test_affine_requires_explicit_evidence) ... ok
+test_class_cannot_hide_more_complex_transform (test_ti2_geometry.MatrixContractTests.test_class_cannot_hide_more_complex_transform) ... ok
+test_invalid_matrices_are_rejected (test_ti2_geometry.MatrixContractTests.test_invalid_matrices_are_rejected) ... ok
+test_inverse_and_roundtrip (test_ti2_geometry.MatrixContractTests.test_inverse_and_roundtrip) ... ok
+test_pixel_centers_use_x_column_y_row (test_ti2_geometry.MatrixContractTests.test_pixel_centers_use_x_column_y_row) ... ok
+test_prohibited_classes_and_axis_inversions_fail_closed (test_ti2_geometry.MatrixContractTests.test_prohibited_classes_and_axis_inversions_fail_closed) ... ok
+test_transform_classes_match_matrix (test_ti2_geometry.MatrixContractTests.test_transform_classes_match_matrix) ... ok
+test_wrong_inverse_is_detected (test_ti2_geometry.MatrixContractTests.test_wrong_inverse_is_detected) ... ok
+test_condition_rois_are_independent (test_ti2_geometry.ROIContractTests.test_condition_rois_are_independent) ... ok
+test_empty_support_blocks (test_ti2_geometry.ROIContractTests.test_empty_support_blocks) ... ok
+test_histogram_rectangle_matches_exhaustive_small_masks (test_ti2_geometry.ROIContractTests.test_histogram_rectangle_matches_exhaustive_small_masks) ... ok
+test_largest_rectangle_does_not_use_invalid_hole (test_ti2_geometry.ROIContractTests.test_largest_rectangle_does_not_use_invalid_hole) ... ok
+test_malformed_masks_rejected (test_ti2_geometry.ROIContractTests.test_malformed_masks_rejected) ... ok
+test_roi_must_have_complete_support_in_every_mask (test_ti2_geometry.ROIContractTests.test_roi_must_have_complete_support_in_every_mask) ... ok
+test_tie_is_deterministic (test_ti2_geometry.ROIContractTests.test_tie_is_deterministic) ... ok
+test_every_error_threshold_blocks (test_ti2_geometry.ResidualContractTests.test_every_error_threshold_blocks) ... ok
+test_frozen_estimation_validation_indices (test_ti2_geometry.ResidualContractTests.test_frozen_estimation_validation_indices) ... ok
+test_interpolated_percentile_and_threshold_boundaries (test_ti2_geometry.ResidualContractTests.test_interpolated_percentile_and_threshold_boundaries) ... ok
+test_no_measurements_and_invalid_residuals_are_not_pass (test_ti2_geometry.ResidualContractTests.test_no_measurements_and_invalid_residuals_are_not_pass) ... ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 0.010s
+
+OK
+
+Exit code: 0

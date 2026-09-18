@@ -1,6 +1,23 @@
 # TI-2 — Matriz de contratos
 
-**Status:** planejamento; testes e implementação não autorizados
+**Status:** `TERMINAL_BLOCKED_CLOSED`; closeout PASS; contratos científicos preservados.
+
+Estado ativo exclusivamente em `pyproject.toml [tool.snbi]`:
+`NONE_AWAITING_AUTHOR_DECISION`, permissões científicas falsas.
+[Decisão de remediação PR6](../decisions/AUTHORIZATION-TI2-PR6-REMEDIATION-1-2026-09-17.md).
+A [decisão de closeout](../decisions/AUTHORIZATION-TI2-CLOSEOUT-1-2026-09-17.md) é histórica.
+A coluna de testes RED conserva a especificação aprovada. A classificação
+autoral é `METHOD_V1=INSUFFICIENT_EVIDENCE`,
+`G2_SPATIAL=BLOCKED_METHOD_V1`, `TRANSFORM_EXISTENCE=UNDETERMINED`,
+`G3=BLOCKED_DEPENDENCY_G2` e `E7=PASS_DOCUMENTARY`. Testes e documentação
+aprovados não satisfazem automaticamente os contratos científicos.
+
+A reconciliação documental distingue tempo decorrido `1,18 × i` de tempo
+experimental com offsets −25,96 s (ESM1–3) e −34,22 s (ESM4–6), relativos à
+entrada da frente no campo de visão. A escala nominal documentada é
+1,40 µm/pixel em X/Y; sua incerteza metrológica completa permanece não
+resolvida. Não há conversão de coordenadas nem propagação de escala sem
+registro certificado. Essas distinções não alteram os limiares abaixo.
 
 | ID | Contrato bloqueante | Teste RED futuro | Evidência esperada | Gate |
 |---|---|---|---|---|
@@ -21,7 +38,7 @@
 | CAL-201 | Unidade física requer fonte rastreável | `µm/pixel` sem fonte deve falhar | registro de calibração | G3 |
 | CAL-202 | Escala não resolvida mantém resultados em pixels | conversão implícita deve falhar | teste de unidade | G3 |
 | UNC-201 | Escala, registro e ROI possuem incerteza ou status explícito | campo ausente deve falhar | orçamento de incerteza | G3 |
-| IMG-201 | Frames-piloto são lossless e não recebem CLAHE, resize ou correção de contraste | transform proibida deve falhar | lineage de decodificação | G2-SPATIAL |
+| IMG-201 | Frames-piloto dos MP4 são armazenados sem perdas adicionais, preservando o formato nativo dos vídeos, sem CLAHE, resize ou correção de contraste | transform proibida deve falhar | lineage de decodificação | G2-SPATIAL |
 | SCOPE-201 | Não existem labels, ledger, dataset, splits, baseline ou modelos | caminho/módulo proibido deve falhar | auditor de escopo | G2-SPATIAL/G3 |
 | CLAIM-201 | G2-SPATIAL não implica escala física e G3 não implica ground truth | alegação indevida deve falhar | gate de claims | G3 |
 

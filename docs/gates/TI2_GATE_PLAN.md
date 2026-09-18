@@ -1,5 +1,58 @@
 # TI-2 — Plano dos gates G2-SPATIAL e G3
 
+## Classificação terminal e closeout
+
+A autoridade atual única é `pyproject.toml [tool.snbi]`. A tentativa científica
+está encerrada como `TERMINAL_BLOCKED_CLOSED`; o closeout documental foi aceito
+como PASS. A [decisão REMEDIATION-2](../decisions/AUTHORIZATION-TI2-PR6-REMEDIATION-2-2026-09-17.md)
+autoriza somente sua transação delimitada de correção e publicação. O bloco
+abaixo é um espelho documental, sem autoridade independente.
+
+<!-- SNBI_CURRENT_AUTHORITY_BEGIN -->
+```json
+{
+  "authority_source": "pyproject.toml [tool.snbi]",
+  "current_authorized_activity": "NONE_AWAITING_AUTHOR_DECISION",
+  "ti2_execution_authorized": false,
+  "ti2r_authorized": false,
+  "ti3_plus_authorized": false,
+  "codex_local_write_readiness": "BLOCKED_AWAITING_AUTHOR_DECISION"
+}
+```
+<!-- SNBI_CURRENT_AUTHORITY_END -->
+
+Os estados científicos continuam `METHOD_V1=INSUFFICIENT_EVIDENCE`,
+`G2_SPATIAL=BLOCKED_METHOD_V1`, `TRANSFORM_EXISTENCE=UNDETERMINED`,
+`G3=BLOCKED_DEPENDENCY_G2` e `E7=PASS_DOCUMENTARY`.
+Nenhum teste, documento ou CI aprova os gates científicos ou libera execução.
+O PR permanece aberto, Draft e sem merge; Ready for Review e merge exigem
+nova decisão expressa do autor.
+
+## Registro histórico e especificação não autorizativa
+
+O conteúdo delimitado abaixo preserva o closeout e os critérios históricos
+do método v1. Não constitui autorização atual de E0–E7, TI-2R ou TI-3+.
+
+<!-- SNBI_HISTORICAL_NON_AUTHORIZING_BEGIN -->
+
+A [decisão autoral de TI2-CLOSEOUT-1](../decisions/AUTHORIZATION-TI2-CLOSEOUT-1-2026-09-17.md)
+aprovou `TI2_EXECUTION=TERMINAL_BLOCKED_PENDING_CLOSEOUT`,
+`METHOD_V1=INSUFFICIENT_EVIDENCE`, `G2_SPATIAL=BLOCKED_METHOD_V1`,
+`TRANSFORM_EXISTENCE=UNDETERMINED`, `G3=BLOCKED_DEPENDENCY_G2` e
+`E7=PASS_DOCUMENTARY`. A insuficiência é do método v1; não demonstra a
+inexistência de transformação física. Registro/ROI não foram certificados.
+
+A escala nominal X/Y de 1,40 µm/pixel está documentada por declaração do autor,
+com verificação raster compatível de 500 µm/357 px. A incerteza metrológica
+completa permanece `UNRESOLVED`; nenhuma coordenada é convertida. G3 continua
+bloqueado por dependência de G2-SPATIAL, ROI e incerteza. A reconciliação
+temporal é documental e não fornece correspondências espaciais.
+
+Os critérios científicos abaixo são preservados. O closeout foi publicado em
+Draft PR; a remediação exige dois jobs verdes no novo SHA sem aprovar gates
+ou autorizar TI-2R/TI-3+. O PR permanece aberto, draft e sem merge.
+Aprovação autoral do resultado terminal não comprova orientação física.
+
 ## G2-SPATIAL — Registro entre modalidades
 
 ### Pergunta decisória
@@ -55,3 +108,5 @@ Se ROI e registro forem válidos, mas a escala permanecer sem fonte suficiente, 
 ## Regra de avanço
 
 TI-3 permanece bloqueada independentemente do resultado técnico. O avanço exige decisão formal do autor após leitura das evidências de G2-SPATIAL e G3.
+
+<!-- SNBI_HISTORICAL_NON_AUTHORIZING_END -->

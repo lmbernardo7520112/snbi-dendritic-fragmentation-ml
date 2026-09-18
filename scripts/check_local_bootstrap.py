@@ -1,4 +1,4 @@
-"""Validate static local-bootstrap contracts without accessing scientific data."""
+"""Validate static local safeguards and current TI-2 authority without data access."""
 
 from __future__ import annotations
 
@@ -8,7 +8,6 @@ sys.dont_write_bytecode = True
 
 import json
 import subprocess
-import tomllib
 from pathlib import Path
 
 try:
@@ -16,11 +15,21 @@ try:
 except ModuleNotFoundError:  # imported as scripts.check_local_bootstrap in tests
     from scripts.check_repository_data import audit_entries, tracked_entries
 
+try:
+    from ti2_authority import audit_authority
+except ModuleNotFoundError:
+    from scripts.ti2_authority import audit_authority
+
+from snbi_fragmentation.gate_authority import audit_current_gates
+
 ROOT = Path(__file__).resolve().parents[1]
-AUTHORIZATION = ROOT / "docs/decisions/AUTHORIZATION-TI2-PLAN-APPROVAL-LOCAL-BOOTSTRAP-2026-09-17.md"
 REQUIRED_AGENT_MARKERS = (
+    "TI2_EXECUTION=TERMINAL_BLOCKED_CLOSED",
+    "TI2_CLOSEOUT_1=PASS",
+    "CURRENT_AUTHORIZED_ACTIVITY=NONE_AWAITING_AUTHOR_DECISION",
     "TI2_EXECUTION_AUTHORIZED=false",
-    "AUTHORIZED_ACTIVITY=LOCAL_VSCODE_BOOTSTRAP",
+    "TI2R_AUTHORIZED=false",
+    "TI3_PLUS_AUTHORIZED=false",
     "Do not follow symlinks",
     "no fallback outside the sandbox",
 )
@@ -140,26 +149,14 @@ def validate_vscode(settings: dict, tasks: dict) -> list[str]:
 
 
 def validate(entries: list[tuple[str, str]] | None = None) -> dict:
-    violations: list[str] = []
+    authority = audit_authority(ROOT)
+    violations: list[str] = list(authority["violations"])
+    gate_report = audit_current_gates(ROOT)
+    violations.extend(gate_report["violations"])
     agents = (ROOT / "AGENTS.md").read_text(encoding="utf-8")
     for marker in REQUIRED_AGENT_MARKERS:
         if marker not in agents:
             violations.append(f"AGENTS.md missing marker: {marker}")
-
-    authorization = AUTHORIZATION.read_text(encoding="utf-8")
-    for marker in (
-        "não autorizou a execução da TI-2",
-        "bootstrap governado do ambiente local VS Code",
-    ):
-        if marker not in authorization:
-            violations.append(f"authorization record missing marker: {marker}")
-
-    project = tomllib.loads((ROOT / "pyproject.toml").read_text(encoding="utf-8"))
-    governance = project.get("tool", {}).get("snbi", {})
-    if governance.get("authorized_activity") != "local-vscode-bootstrap":
-        violations.append("pyproject authorized activity mismatch")
-    if governance.get("ti2_execution_authorized") is not False:
-        violations.append("pyproject must keep TI-2 execution unauthorized")
 
     settings = json.loads((ROOT / ".vscode/settings.json").read_text(encoding="utf-8"))
     tasks = json.loads((ROOT / ".vscode/tasks.json").read_text(encoding="utf-8"))
@@ -175,7 +172,15 @@ def validate(entries: list[tuple[str, str]] | None = None) -> dict:
         "status": "PASS" if not violations else "BLOCKED",
         "violations": violations,
         "ti2_execution_authorized": False,
-        "codex_write_readiness": "BLOCKED_REQUIRES_REAL_CODEX_SANDBOX_CHECK_AND_AUTHOR_DECISION",
+        "ti2r_authorized": False,
+        "ti3_plus_authorized": False,
+        "current_authorized_activity": authority["current_authorized_activity"],
+        "scientific_readiness": "BLOCKED",
+        "codex_write_readiness": "BLOCKED_AWAITING_AUTHOR_DECISION" if not violations else "BLOCKED",
+        "codex_local_write_readiness": authority["codex_local_write_readiness"],
+        "merge_authorized": False,
+        "current_gate_documents": gate_report,
+        "readiness_basis": "canonical closed authority and static safeguards; audit PASS is not execution permission",
     }
 
 
@@ -193,6 +198,13 @@ def main() -> int:
             "audit": "governed_local_bootstrap", "status": "BLOCKED",
             "violations": [f"validation failure: {type(exc).__name__}"],
             "ti2_execution_authorized": False,
+            "ti2r_authorized": False,
+            "ti3_plus_authorized": False,
+            "current_authorized_activity": "BLOCKED_INVALID_AUTHORITY",
+            "scientific_readiness": "BLOCKED",
+            "codex_write_readiness": "BLOCKED",
+            "codex_local_write_readiness": "BLOCKED_AWAITING_AUTHOR_DECISION",
+            "merge_authorized": False,
         }
     print(json.dumps(report, indent=2, sort_keys=True))
     return 0 if report["status"] == "PASS" else 1

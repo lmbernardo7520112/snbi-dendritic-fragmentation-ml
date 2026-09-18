@@ -1,0 +1,300 @@
+{
+  "additional_observation": {
+    "configuration": "configs/time_rule.json",
+    "documentary_provenance": {
+      "authority": "docs/decisions/AUTHORIZATION-TI2-CLOSEOUT-1-2026-09-17.md",
+      "basis": "author-supplied primary-source citation and explicit documentary reconciliation",
+      "citation": "Gibbs et al., JOM 68, 170–177 (2016)",
+      "doi": "10.1007/s11837-015-1646-7",
+      "independent_primary_text_retrieved": false,
+      "scope": "Documentary authorization only; no source retrieval or new image/pixel observation in TI2-CLOSEOUT-1.",
+      "url": "https://link.springer.com/article/10.1007/s11837-015-1646-7"
+    },
+    "interpretation": "DOCUMENTED_AND_RECONCILED using author-supplied offsets; historical printed values and elapsed values preserved; no reindexing, new observations or scientific method changes.",
+    "kind": "Documentary reconciliation of elapsed video-frame time and experimental time relative to front entry",
+    "legacy_field_semantics": {
+      "normative_physical_time_s": {
+        "alias_of": "elapsed_from_first_frame_s",
+        "status": "DEPRECATED_ALIAS",
+        "values_preserved": true
+      }
+    },
+    "observed_on_central_estimation_diagnostic": [
+      {
+        "elapsed_from_first_frame_s": 172.28,
+        "experimental_time_s": 146.32,
+        "frame_index": 146,
+        "normative_physical_time_s": 172.28,
+        "printed_seconds": 146.32,
+        "source_id": "ESM1"
+      },
+      {
+        "elapsed_from_first_frame_s": 232.46,
+        "experimental_time_s": 198.24,
+        "frame_index": 197,
+        "normative_physical_time_s": 232.46,
+        "printed_seconds": 198.24,
+        "source_id": "ESM4"
+      }
+    ],
+    "time_model_status": "DOCUMENTED_AND_RECONCILED",
+    "time_zero_reference": "solidification_front_entry_into_field_of_view"
+  },
+  "calibration_claim": "Nominal X/Y scale is documented separately from complete metrological uncertainty; no physical coordinate conversion or ground truth is established.",
+  "decision": "BLOCKED",
+  "decision_kind": "author-approved terminal method-v1 blocked result; documentary closeout only",
+  "decoded_frame_description": "30 pilot frames decoded from MP4 without additional loss, preserving the native video resolution and pixel format.",
+  "documentary_authority": "docs/decisions/AUTHORIZATION-TI2-CLOSEOUT-1-2026-09-17.md",
+  "evidence": [
+    "artifacts/metadata/ti2-pilot-manifest.json",
+    "artifacts/evidence/TI2/estimation-audit.json",
+    "artifacts/evidence/TI2/validation-audit.json",
+    "artifacts/evidence/TI2/integrity-report.json"
+  ],
+  "execution_state": "TERMINAL_BLOCKED_PENDING_CLOSEOUT",
+  "experimental_image_count": 30,
+  "gate": "G2-SPATIAL",
+  "held_out_pixel_analysis_performed": false,
+  "legacy_field_semantics": {
+    "experimental_image_count": "Number of frozen pilot frames/items decoded from the supplied videos.",
+    "native_images_immutable": "Preserved decoded MP4 pixel buffers; not raw detector data."
+  },
+  "limits_relaxed": false,
+  "method_limitation": "20/35 fixed grid centers systematically excluded by the 64px rim; at most15 candidates remain and at least12 must pass. This limits measurement yield and does not establish geometric impossibility.",
+  "method_retuned_after_estimation": false,
+  "method_v1": "INSUFFICIENT_EVIDENCE",
+  "native_images_immutable": true,
+  "next_requirements": [
+    "documented gravity/thermal-gradient/growth directions in native axes",
+    "author-approved method revision addressing fixed-grid support and cross-modality contrast before any new scientific analysis",
+    "author visual review; no extra images or redecoding implicitly authorized",
+    "Complete metrological uncertainty and certified registration/ROI remain required before any physical-coordinate use; TI-2R is not authorized by closeout."
+  ],
+  "orientation": {
+    "author_visual_review": "PENDING",
+    "gravity_direction": "NOT_VERIFIED",
+    "growth_direction": "NOT_VERIFIED",
+    "native_parity_unchanged": true,
+    "thermal_gradient_direction": "NOT_VERIFIED"
+  },
+  "pairs": {
+    "ESM2-to-ESM1": {
+      "estimation": {
+        "0": {
+          "accepted_matches": 0,
+          "candidates": 35,
+          "identity_diagnostic": null,
+          "masked_candidates": 20,
+          "measurement_status": "BLOCKED"
+        },
+        "146": {
+          "accepted_matches": 2,
+          "candidates": 35,
+          "identity_diagnostic": {
+            "count": 2,
+            "maximum_px": 0.5077428864257051,
+            "median_px": 0.3671666211483938,
+            "p95_px": 0.49368525989797396
+          },
+          "masked_candidates": 20,
+          "measurement_status": "BLOCKED"
+        },
+        "293": {
+          "accepted_matches": 0,
+          "candidates": 35,
+          "identity_diagnostic": null,
+          "masked_candidates": 20,
+          "measurement_status": "BLOCKED"
+        }
+      },
+      "identity_diagnostic_aggregate": {
+        "count": 2,
+        "maximum_px": 0.5077428864257051,
+        "median_px": 0.3671666211483938,
+        "p95_px": 0.49368525989797396
+      },
+      "identity_diagnostic_use": "descriptive distances on confidence-selected surviving correspondences only; not an accepted transform, fit or independent validation",
+      "inverse": null,
+      "matrix": null,
+      "qualified_status": "BLOCKED_METHOD_V1",
+      "reason": "Insufficient strong unique spatially distributed correspondences in at least one required estimation frame; model hierarchy not reached.",
+      "roi_use_authorized": false,
+      "selection_history": [],
+      "status": "BLOCKED",
+      "transform_class": null,
+      "transform_existence": "UNDETERMINED",
+      "validation_metrics": null,
+      "validation_status": "BLOCKED_DEPENDENCY"
+    },
+    "ESM3-to-ESM1": {
+      "estimation": {
+        "0": {
+          "accepted_matches": 2,
+          "candidates": 35,
+          "identity_diagnostic": {
+            "count": 2,
+            "maximum_px": 0.30811921059008773,
+            "median_px": 0.16570640292186856,
+            "p95_px": 0.2938779298232658
+          },
+          "masked_candidates": 20,
+          "measurement_status": "BLOCKED"
+        },
+        "146": {
+          "accepted_matches": 7,
+          "candidates": 35,
+          "identity_diagnostic": {
+            "count": 7,
+            "maximum_px": 0.5821719959556213,
+            "median_px": 0.14997965910214636,
+            "p95_px": 0.5019280080406564
+          },
+          "masked_candidates": 20,
+          "measurement_status": "BLOCKED"
+        },
+        "293": {
+          "accepted_matches": 7,
+          "candidates": 35,
+          "identity_diagnostic": {
+            "count": 7,
+            "maximum_px": 0.47301230489097545,
+            "median_px": 0.21527915491184987,
+            "p95_px": 0.41829167151847757
+          },
+          "masked_candidates": 20,
+          "measurement_status": "BLOCKED"
+        }
+      },
+      "identity_diagnostic_aggregate": {
+        "count": 16,
+        "maximum_px": 0.5821719959556213,
+        "median_px": 0.21127017090570577,
+        "p95_px": 0.5003022276571369
+      },
+      "identity_diagnostic_use": "descriptive distances on confidence-selected surviving correspondences only; not an accepted transform, fit or independent validation",
+      "inverse": null,
+      "matrix": null,
+      "qualified_status": "BLOCKED_METHOD_V1",
+      "reason": "Insufficient strong unique spatially distributed correspondences in at least one required estimation frame; model hierarchy not reached.",
+      "roi_use_authorized": false,
+      "selection_history": [],
+      "status": "BLOCKED",
+      "transform_class": null,
+      "transform_existence": "UNDETERMINED",
+      "validation_metrics": null,
+      "validation_status": "BLOCKED_DEPENDENCY"
+    },
+    "ESM5-to-ESM4": {
+      "estimation": {
+        "0": {
+          "accepted_matches": 0,
+          "candidates": 35,
+          "identity_diagnostic": null,
+          "masked_candidates": 20,
+          "measurement_status": "BLOCKED"
+        },
+        "197": {
+          "accepted_matches": 1,
+          "candidates": 35,
+          "identity_diagnostic": {
+            "count": 1,
+            "maximum_px": 0.3434833644165227,
+            "median_px": 0.3434833644165227,
+            "p95_px": 0.3434833644165227
+          },
+          "masked_candidates": 20,
+          "measurement_status": "BLOCKED"
+        },
+        "394": {
+          "accepted_matches": 0,
+          "candidates": 35,
+          "identity_diagnostic": null,
+          "masked_candidates": 20,
+          "measurement_status": "BLOCKED"
+        }
+      },
+      "identity_diagnostic_aggregate": {
+        "count": 1,
+        "maximum_px": 0.3434833644165227,
+        "median_px": 0.3434833644165227,
+        "p95_px": 0.3434833644165227
+      },
+      "identity_diagnostic_use": "descriptive distances on confidence-selected surviving correspondences only; not an accepted transform, fit or independent validation",
+      "inverse": null,
+      "matrix": null,
+      "qualified_status": "BLOCKED_METHOD_V1",
+      "reason": "Insufficient strong unique spatially distributed correspondences in at least one required estimation frame; model hierarchy not reached.",
+      "roi_use_authorized": false,
+      "selection_history": [],
+      "status": "BLOCKED",
+      "transform_class": null,
+      "transform_existence": "UNDETERMINED",
+      "validation_metrics": null,
+      "validation_status": "BLOCKED_DEPENDENCY"
+    },
+    "ESM6-to-ESM4": {
+      "estimation": {
+        "0": {
+          "accepted_matches": 0,
+          "candidates": 35,
+          "identity_diagnostic": null,
+          "masked_candidates": 20,
+          "measurement_status": "BLOCKED"
+        },
+        "197": {
+          "accepted_matches": 13,
+          "candidates": 35,
+          "identity_diagnostic": {
+            "count": 13,
+            "maximum_px": 0.8618388346092354,
+            "median_px": 0.3254369478225939,
+            "p95_px": 0.7929985669855663
+          },
+          "masked_candidates": 20,
+          "measurement_status": "PASS"
+        },
+        "394": {
+          "accepted_matches": 13,
+          "candidates": 35,
+          "identity_diagnostic": {
+            "count": 13,
+            "maximum_px": 0.6146866108731562,
+            "median_px": 0.21459697090917262,
+            "p95_px": 0.47509403494297064
+          },
+          "masked_candidates": 20,
+          "measurement_status": "PASS"
+        }
+      },
+      "identity_diagnostic_aggregate": {
+        "count": 26,
+        "maximum_px": 0.8618388346092354,
+        "median_px": 0.2706590208602521,
+        "p95_px": 0.7140004441456294
+      },
+      "identity_diagnostic_use": "descriptive distances on confidence-selected surviving correspondences only; not an accepted transform, fit or independent validation",
+      "inverse": null,
+      "matrix": null,
+      "qualified_status": "BLOCKED_METHOD_V1",
+      "reason": "Insufficient strong unique spatially distributed correspondences in at least one required estimation frame; model hierarchy not reached.",
+      "roi_use_authorized": false,
+      "selection_history": [],
+      "status": "BLOCKED",
+      "transform_class": null,
+      "transform_existence": "UNDETERMINED",
+      "validation_metrics": null,
+      "validation_status": "BLOCKED_DEPENDENCY"
+    }
+  },
+  "qualified_decision": "BLOCKED_METHOD_V1",
+  "quantitative_limits_px": {
+    "maximum": 3.0,
+    "median": 1.0,
+    "p95": 2.0,
+    "roundtrip": 0.25
+  },
+  "raw_buffer_description": "Headerless pixel buffers decoded from MP4; these are not raw detector data.",
+  "schema_version": "1.0.0",
+  "ti3_to_ti8_executed": false,
+  "transform_existence": "UNDETERMINED"
+}
