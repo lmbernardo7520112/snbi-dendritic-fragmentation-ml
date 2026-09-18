@@ -1,0 +1,42 @@
+{
+  "PR8_MERGE": "PASS",
+  "approved_base": "b7bbb6a1f0d3eaa43866027762eb2ed061c3d7c6",
+  "approved_head": "6905d17a39853cbb80666194f3a32542a3b82f42",
+  "chain": [
+    "cf84c5ef1c5b6f8efb39b87825d9bc08f34014b7",
+    "a91b7093ce7dff530ab9020d5f69c30d365c10f5",
+    "6905d17a39853cbb80666194f3a32542a3b82f42"
+  ],
+  "historical_ci_runs": [
+    35357545606,
+    35357710250
+  ],
+  "historical_ci": "SUCCESS_ALL_JOBS_AND_STEPS",
+  "comment": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/pull/8#issuecomment-5731984039",
+  "ready": "COMPLETED_NO_NEW_CI_OBSERVED",
+  "merge_sha": "db03183e1456f67b5b663a4cb71361cad1404dcb",
+  "merge_parents": [
+    "b7bbb6a1f0d3eaa43866027762eb2ed061c3d7c6",
+    "6905d17a39853cbb80666194f3a32542a3b82f42"
+  ],
+  "merge_tree_equals_audited_head": "aa82e7decbae3e6dfad6532ccc0d3511174aba95",
+  "head_is_ancestor": true,
+  "postmerge_ci": {
+    "run": 35360692165,
+    "status": "SUCCESS_ALL_JOBS_AND_STEPS",
+    "sha": "db03183e1456f67b5b663a4cb71361cad1404dcb",
+    "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35360692165"
+  },
+  "main_synchronized_ff_only": true,
+  "main_equals_origin_main": true,
+  "prior_branches_preserved": true,
+  "initial_worktree_and_index_clean": true,
+  "new_branch": "feat/ti2r-solute-direct-mapping",
+  "dimensions_checked_from_text_before_pixels": true,
+  "experimental_access_this_phase": false,
+  "data_guard": {
+    "status": "PASS",
+    "tracked_entries": 210,
+    "content_bytes_read": 0
+  }
+}

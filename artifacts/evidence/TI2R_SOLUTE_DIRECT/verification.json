@@ -1,0 +1,31 @@
+{
+  "phase": "TI2R_SOLUTE_DIRECT",
+  "pre_C1": {
+    "authority": "PREPARED_INACTIVE",
+    "experimental_assets_opened_this_phase": 0,
+    "scientific_runner_invocations": 0,
+    "stdlib": {"testsRun": 372, "passed": 298, "skipped": 74, "failures": 0, "errors": 0, "exit_code": 0},
+    "scientific_synthetic_legacy": {"testsRun": 5, "passed": 5, "skipped": 0, "failures": 0, "errors": 0, "exit_code": 0},
+    "scientific_synthetic_FRAG": {"testsRun": 16, "passed": 16, "skipped": 0, "failures": 0, "errors": 0, "exit_code": 0},
+    "scientific_synthetic_FRAG_DIRECT": {"testsRun": 26, "passed": 26, "skipped": 0, "failures": 0, "errors": 0, "exit_code": 0},
+    "scientific_synthetic_SOLUTE_DIRECT": {"testsRun": 27, "passed": 27, "skipped": 0, "failures": 0, "errors": 0, "exit_code": 0},
+    "new_authority_focused": {"testsRun": 21, "passed": 21, "exit_code": 0},
+    "new_orchestration_focused": {"testsRun": 11, "passed": 11, "exit_code": 0},
+    "dependencies_existing_only": {"numpy": "1.26.4", "scipy": "1.11.4"},
+    "red_contracts": "Actual missing-module import errors before implementation, not experimental failures or fabricated behavioral RED. One malformed synthetic percentile example was corrected before C1 without changing the method.",
+    "tracked_data_guard": {"status": "PASS", "tracked_entries_before_staging": 210, "content_bytes_read": 0, "exit_code": 0},
+    "scope_guard": {"status": "PASS", "experimental_content_bytes_read": 0, "exit_code": 0},
+    "bootstrap_guard": {"status": "PASS", "exit_code": 0},
+    "text_checksums": {"verified": 95, "listed": 95, "status": "PASS", "exit_code": 0},
+    "new_python_compile_in_memory": {"files": 7, "bytecode_written": false, "status": "PASS", "exit_code": 0},
+    "diff_check": {"status": "PASS", "exit_code": 0},
+    "independent_scientific_text_review": "PASS_NO_REMAINING_CRITICAL_FINDING",
+    "independent_authority_runner_text_review": "PASS_NO_REMAINING_CRITICAL_FINDING",
+    "method_calibration": "All thresholds fixed and validated on the 27 synthetic controls only before C1; no experimental calibration or inspection in this phase",
+    "descriptor": "LOCAL_SELF_SIMILARITY_8_NOT_EXACT_MIND_SSC",
+    "test_temporary_root": ".bootstrap-test-tmp",
+    "limitations": "The 74 optional stdlib skips are exercised separately by the 5/16/26/27 mandatory scientific suites. Synthetic checks do not certify experimental geometry. References were exposed in prior fragment phases; no global holdout virginity is claimed."
+  },
+  "post_execution": "NOT_EXECUTED",
+  "publication": "NOT_EXECUTED; effective C3 SHA and remote CI belong in the Draft PR and terminal report"
+}
