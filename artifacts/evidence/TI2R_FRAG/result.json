@@ -1,0 +1,3950 @@
+{
+  "G2_FRAG": "BLOCKED",
+  "G2_SOLUTE": "NOT_EXECUTED",
+  "TI2R_FRAG": "BLOCKED_REFERENCE_INSUFFICIENT",
+  "TI3_PLUS_AUTHORIZED": false,
+  "authorized_asset_count": 20,
+  "ffmpeg_or_redecoding": false,
+  "invocations": 1,
+  "opened_assets": [
+    {
+      "asset_id": "ESM1:0",
+      "bytes_read": 1951506,
+      "role": "development",
+      "status": "PASS"
+    },
+    {
+      "asset_id": "ESM3:0",
+      "bytes_read": 1966080,
+      "role": "development",
+      "status": "PASS"
+    },
+    {
+      "asset_id": "ESM1:146",
+      "bytes_read": 1951506,
+      "role": "development",
+      "status": "PASS"
+    },
+    {
+      "asset_id": "ESM3:146",
+      "bytes_read": 1966080,
+      "role": "development",
+      "status": "PASS"
+    },
+    {
+      "asset_id": "ESM1:293",
+      "bytes_read": 1951506,
+      "role": "development",
+      "status": "PASS"
+    },
+    {
+      "asset_id": "ESM3:293",
+      "bytes_read": 1966080,
+      "role": "development",
+      "status": "PASS"
+    },
+    {
+      "asset_id": "ESM4:0",
+      "bytes_read": 1940004,
+      "role": "development",
+      "status": "PASS"
+    },
+    {
+      "asset_id": "ESM6:0",
+      "bytes_read": 1943040,
+      "role": "development",
+      "status": "PASS"
+    },
+    {
+      "asset_id": "ESM4:197",
+      "bytes_read": 1940004,
+      "role": "development",
+      "status": "PASS"
+    },
+    {
+      "asset_id": "ESM6:197",
+      "bytes_read": 1943040,
+      "role": "development",
+      "status": "PASS"
+    },
+    {
+      "asset_id": "ESM4:394",
+      "bytes_read": 1940004,
+      "role": "development",
+      "status": "PASS"
+    },
+    {
+      "asset_id": "ESM6:394",
+      "bytes_read": 1943040,
+      "role": "development",
+      "status": "PASS"
+    }
+  ],
+  "pairs": {
+    "ESM3-to-ESM1": {
+      "development": {
+        "aggregate": {
+          "count": 18,
+          "maximum_px": 1.0159150115867548,
+          "median_px": 0.2120866569420461,
+          "p95_px": 0.9561593434095879,
+          "roundtrip_max_px": 0.0,
+          "status": "PASS"
+        },
+        "common_support": {
+          "bounding_box_is_fully_supported_roi": false,
+          "bounding_box_xyxy": [
+            6,
+            125,
+            1273,
+            864
+          ],
+          "pixel_count": 745211,
+          "rectangle_roi": null
+        },
+        "determinant": 1.0,
+        "inverse": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "per_frame": [
+          {
+            "count": 0,
+            "frame_position": 0,
+            "maximum_px": null,
+            "median_px": null,
+            "p95_px": null,
+            "quadrants": 0,
+            "roundtrip_max_px": 0.0,
+            "status": "BLOCKED_REFERENCE_INSUFFICIENT",
+            "support_fraction": 0.9978610708500298,
+            "tiles": [
+              {
+                "id": "r0c0",
+                "quadrant": [
+                  0,
+                  0
+                ],
+                "reason": "reference_texture",
+                "status": "UNAVAILABLE_PREMETRIC",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  198,
+                  202,
+                  262,
+                  266
+                ]
+              },
+              {
+                "id": "r0c1",
+                "quadrant": [
+                  0,
+                  0
+                ],
+                "reason": "reference_texture",
+                "status": "UNAVAILABLE_PREMETRIC",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  466,
+                  202,
+                  530,
+                  266
+                ]
+              },
+              {
+                "id": "r0c2",
+                "quadrant": [
+                  1,
+                  0
+                ],
+                "reason": "reference_texture",
+                "status": "UNAVAILABLE_PREMETRIC",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  747,
+                  202,
+                  811,
+                  266
+                ]
+              },
+              {
+                "id": "r0c3",
+                "quadrant": [
+                  1,
+                  0
+                ],
+                "reason": "reference_texture",
+                "status": "UNAVAILABLE_PREMETRIC",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  1015,
+                  202,
+                  1079,
+                  266
+                ]
+              },
+              {
+                "id": "r1c0",
+                "quadrant": [
+                  0,
+                  0
+                ],
+                "reason": "reference_texture",
+                "status": "UNAVAILABLE_PREMETRIC",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  198,
+                  385,
+                  262,
+                  449
+                ]
+              },
+              {
+                "id": "r1c1",
+                "quadrant": [
+                  0,
+                  0
+                ],
+                "reason": "reference_texture",
+                "status": "UNAVAILABLE_PREMETRIC",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  466,
+                  385,
+                  530,
+                  449
+                ]
+              },
+              {
+                "id": "r1c2",
+                "quadrant": [
+                  1,
+                  0
+                ],
+                "reason": "reference_texture",
+                "status": "UNAVAILABLE_PREMETRIC",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  747,
+                  385,
+                  811,
+                  449
+                ]
+              },
+              {
+                "id": "r1c3",
+                "quadrant": [
+                  1,
+                  0
+                ],
+                "reason": "reference_texture",
+                "status": "UNAVAILABLE_PREMETRIC",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  1015,
+                  385,
+                  1079,
+                  449
+                ]
+              },
+              {
+                "id": "r2c0",
+                "quadrant": [
+                  0,
+                  1
+                ],
+                "reason": "reference_texture",
+                "status": "UNAVAILABLE_PREMETRIC",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  198,
+                  568,
+                  262,
+                  632
+                ]
+              },
+              {
+                "id": "r2c1",
+                "quadrant": [
+                  0,
+                  1
+                ],
+                "reason": "reference_texture",
+                "status": "UNAVAILABLE_PREMETRIC",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  466,
+                  568,
+                  530,
+                  632
+                ]
+              },
+              {
+                "id": "r2c2",
+                "quadrant": [
+                  1,
+                  1
+                ],
+                "reason": "reference_texture",
+                "status": "UNAVAILABLE_PREMETRIC",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  747,
+                  568,
+                  811,
+                  632
+                ]
+              },
+              {
+                "id": "r2c3",
+                "quadrant": [
+                  1,
+                  1
+                ],
+                "reason": "reference_texture",
+                "status": "UNAVAILABLE_PREMETRIC",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  1015,
+                  568,
+                  1079,
+                  632
+                ]
+              },
+              {
+                "id": "r3c0",
+                "quadrant": [
+                  0,
+                  1
+                ],
+                "reason": "reference_texture",
+                "status": "UNAVAILABLE_PREMETRIC",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  198,
+                  751,
+                  262,
+                  815
+                ]
+              },
+              {
+                "id": "r3c1",
+                "quadrant": [
+                  0,
+                  1
+                ],
+                "reason": "reference_texture",
+                "status": "UNAVAILABLE_PREMETRIC",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  466,
+                  751,
+                  530,
+                  815
+                ]
+              },
+              {
+                "id": "r3c2",
+                "quadrant": [
+                  1,
+                  1
+                ],
+                "reason": "reference_texture",
+                "status": "UNAVAILABLE_PREMETRIC",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  747,
+                  751,
+                  811,
+                  815
+                ]
+              },
+              {
+                "id": "r3c3",
+                "quadrant": [
+                  1,
+                  1
+                ],
+                "reason": "reference_texture",
+                "status": "UNAVAILABLE_PREMETRIC",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  1015,
+                  751,
+                  1079,
+                  815
+                ]
+              }
+            ],
+            "valid_tiles": 0
+          },
+          {
+            "count": 9,
+            "frame_position": 1,
+            "maximum_px": 1.0159150115867548,
+            "median_px": 0.22107632691153714,
+            "p95_px": 0.987794697150441,
+            "quadrants": 4,
+            "roundtrip_max_px": 0.0,
+            "status": "FAIL_ABSOLUTE_SUPPORT",
+            "support_fraction": 0.7973729644470969,
+            "tiles": [
+              {
+                "id": "r0c0",
+                "quadrant": [
+                  0,
+                  0
+                ],
+                "residual_px": 1.0159150115867548,
+                "residual_xy_px": [
+                  -1.0141226488975084,
+                  -0.060320508622001306
+                ],
+                "status": "MEASURED",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  198,
+                  202,
+                  262,
+                  266
+                ]
+              },
+              {
+                "id": "r0c1",
+                "quadrant": [
+                  0,
+                  0
+                ],
+                "residual_px": 0.38845643436748983,
+                "residual_xy_px": [
+                  0.06418767144785864,
+                  0.3831166196285482
+                ],
+                "status": "MEASURED",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  466,
+                  202,
+                  530,
+                  266
+                ]
+              },
+              {
+                "id": "r0c2",
+                "quadrant": [
+                  1,
+                  0
+                ],
+                "residual_px": 0.8079460933764352,
+                "residual_xy_px": [
+                  -0.6954675836708015,
+                  0.4112198072385863
+                ],
+                "status": "MEASURED",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  747,
+                  202,
+                  811,
+                  266
+                ]
+              },
+              {
+                "id": "r0c3",
+                "quadrant": [
+                  1,
+                  0
+                ],
+                "residual_px": 0.9456142254959703,
+                "residual_xy_px": [
+                  -0.901307394203714,
+                  0.28606160982217566
+                ],
+                "status": "MEASURED",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  1015,
+                  202,
+                  1079,
+                  266
+                ]
+              },
+              {
+                "id": "r1c0",
+                "quadrant": [
+                  0,
+                  0
+                ],
+                "reason": "support",
+                "status": "UNAVAILABLE_PREMETRIC",
+                "support_fraction": 0.9990234375,
+                "xyxy": [
+                  198,
+                  385,
+                  262,
+                  449
+                ]
+              },
+              {
+                "id": "r1c1",
+                "quadrant": [
+                  0,
+                  0
+                ],
+                "reason": "support",
+                "status": "UNAVAILABLE_PREMETRIC",
+                "support_fraction": 0.9873046875,
+                "xyxy": [
+                  466,
+                  385,
+                  530,
+                  449
+                ]
+              },
+              {
+                "id": "r1c2",
+                "quadrant": [
+                  1,
+                  0
+                ],
+                "reason": "support",
+                "status": "UNAVAILABLE_PREMETRIC",
+                "support_fraction": 0.642578125,
+                "xyxy": [
+                  747,
+                  385,
+                  811,
+                  449
+                ]
+              },
+              {
+                "id": "r1c3",
+                "quadrant": [
+                  1,
+                  0
+                ],
+                "reason": "support",
+                "status": "UNAVAILABLE_PREMETRIC",
+                "support_fraction": 0.4013671875,
+                "xyxy": [
+                  1015,
+                  385,
+                  1079,
+                  449
+                ]
+              },
+              {
+                "id": "r2c0",
+                "quadrant": [
+                  0,
+                  1
+                ],
+                "reason": "support",
+                "status": "UNAVAILABLE_PREMETRIC",
+                "support_fraction": 0.846435546875,
+                "xyxy": [
+                  198,
+                  568,
+                  262,
+                  632
+                ]
+              },
+              {
+                "id": "r2c1",
+                "quadrant": [
+                  0,
+                  1
+                ],
+                "residual_px": 0.05182494571146648,
+                "residual_xy_px": [
+                  0.043304492619747254,
+                  0.02847008810914894
+                ],
+                "status": "MEASURED",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  466,
+                  568,
+                  530,
+                  632
+                ]
+              },
+              {
+                "id": "r2c2",
+                "quadrant": [
+                  1,
+                  1
+                ],
+                "residual_px": 0.03406727220987423,
+                "residual_xy_px": [
+                  0.023883897269154006,
+                  -0.024292766146698213
+                ],
+                "status": "MEASURED",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  747,
+                  568,
+                  811,
+                  632
+                ]
+              },
+              {
+                "id": "r2c3",
+                "quadrant": [
+                  1,
+                  1
+                ],
+                "residual_px": 0.01658982494986567,
+                "residual_xy_px": [
+                  -0.01476927435448618,
+                  -0.00755584719995728
+                ],
+                "status": "MEASURED",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  1015,
+                  568,
+                  1079,
+                  632
+                ]
+              },
+              {
+                "id": "r3c0",
+                "quadrant": [
+                  0,
+                  1
+                ],
+                "residual_px": 0.22107632691153714,
+                "residual_xy_px": [
+                  -0.0529036396969993,
+                  0.21465308576283482
+                ],
+                "status": "MEASURED",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  198,
+                  751,
+                  262,
+                  815
+                ]
+              },
+              {
+                "id": "r3c1",
+                "quadrant": [
+                  0,
+                  1
+                ],
+                "residual_px": 0.13934141004921693,
+                "residual_xy_px": [
+                  -0.1367125656200319,
+                  0.02693887443997037
+                ],
+                "status": "MEASURED",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  466,
+                  751,
+                  530,
+                  815
+                ]
+              },
+              {
+                "id": "r3c2",
+                "quadrant": [
+                  1,
+                  1
+                ],
+                "reason": "support",
+                "status": "UNAVAILABLE_PREMETRIC",
+                "support_fraction": 0.857421875,
+                "xyxy": [
+                  747,
+                  751,
+                  811,
+                  815
+                ]
+              },
+              {
+                "id": "r3c3",
+                "quadrant": [
+                  1,
+                  1
+                ],
+                "reason": "support",
+                "status": "UNAVAILABLE_PREMETRIC",
+                "support_fraction": 0.6142578125,
+                "xyxy": [
+                  1015,
+                  751,
+                  1079,
+                  815
+                ]
+              }
+            ],
+            "valid_tiles": 9
+          },
+          {
+            "count": 9,
+            "frame_position": 2,
+            "maximum_px": 0.694280721838749,
+            "median_px": 0.20994373094399701,
+            "p95_px": 0.5868545262864876,
+            "quadrants": 4,
+            "roundtrip_max_px": 0.0,
+            "status": "FAIL_ABSOLUTE_SUPPORT",
+            "support_fraction": 0.7945935288600904,
+            "tiles": [
+              {
+                "id": "r0c0",
+                "quadrant": [
+                  0,
+                  0
+                ],
+                "residual_px": 0.1349631791938558,
+                "residual_xy_px": [
+                  0.1084842008488181,
+                  0.08028846681999928
+                ],
+                "status": "MEASURED",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  198,
+                  202,
+                  262,
+                  266
+                ]
+              },
+              {
+                "id": "r0c1",
+                "quadrant": [
+                  0,
+                  0
+                ],
+                "residual_px": 0.20913959510133598,
+                "residual_xy_px": [
+                  -0.04178895992126338,
+                  0.20492206583930828
+                ],
+                "status": "MEASURED",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  466,
+                  202,
+                  530,
+                  266
+                ]
+              },
+              {
+                "id": "r0c2",
+                "quadrant": [
+                  1,
+                  0
+                ],
+                "residual_px": 0.694280721838749,
+                "residual_xy_px": [
+                  -0.67473200561989,
+                  0.16359230210830533
+                ],
+                "status": "MEASURED",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  747,
+                  202,
+                  811,
+                  266
+                ]
+              },
+              {
+                "id": "r0c3",
+                "quadrant": [
+                  1,
+                  0
+                ],
+                "residual_px": 0.42571523295809577,
+                "residual_xy_px": [
+                  -0.1922826824165646,
+                  0.3798168369296658
+                ],
+                "status": "MEASURED",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  1015,
+                  202,
+                  1079,
+                  266
+                ]
+              },
+              {
+                "id": "r1c0",
+                "quadrant": [
+                  0,
+                  0
+                ],
+                "reason": "support",
+                "status": "UNAVAILABLE_PREMETRIC",
+                "support_fraction": 0.9990234375,
+                "xyxy": [
+                  198,
+                  385,
+                  262,
+                  449
+                ]
+              },
+              {
+                "id": "r1c1",
+                "quadrant": [
+                  0,
+                  0
+                ],
+                "reason": "support",
+                "status": "UNAVAILABLE_PREMETRIC",
+                "support_fraction": 0.9873046875,
+                "xyxy": [
+                  466,
+                  385,
+                  530,
+                  449
+                ]
+              },
+              {
+                "id": "r1c2",
+                "quadrant": [
+                  1,
+                  0
+                ],
+                "reason": "support",
+                "status": "UNAVAILABLE_PREMETRIC",
+                "support_fraction": 0.6396484375,
+                "xyxy": [
+                  747,
+                  385,
+                  811,
+                  449
+                ]
+              },
+              {
+                "id": "r1c3",
+                "quadrant": [
+                  1,
+                  0
+                ],
+                "reason": "support",
+                "status": "UNAVAILABLE_PREMETRIC",
+                "support_fraction": 0.400390625,
+                "xyxy": [
+                  1015,
+                  385,
+                  1079,
+                  449
+                ]
+              },
+              {
+                "id": "r2c0",
+                "quadrant": [
+                  0,
+                  1
+                ],
+                "reason": "support",
+                "status": "UNAVAILABLE_PREMETRIC",
+                "support_fraction": 0.845458984375,
+                "xyxy": [
+                  198,
+                  568,
+                  262,
+                  632
+                ]
+              },
+              {
+                "id": "r2c1",
+                "quadrant": [
+                  0,
+                  1
+                ],
+                "residual_px": 0.11030663123331448,
+                "residual_xy_px": [
+                  -0.06724098963003147,
+                  0.08744256519348247
+                ],
+                "status": "MEASURED",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  466,
+                  568,
+                  530,
+                  632
+                ]
+              },
+              {
+                "id": "r2c2",
+                "quadrant": [
+                  1,
+                  1
+                ],
+                "residual_px": 0.21422958294009517,
+                "residual_xy_px": [
+                  -0.2139194052503802,
+                  -0.011523986463490992
+                ],
+                "status": "MEASURED",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  747,
+                  568,
+                  811,
+                  632
+                ]
+              },
+              {
+                "id": "r2c3",
+                "quadrant": [
+                  1,
+                  1
+                ],
+                "residual_px": 0.20994373094399701,
+                "residual_xy_px": [
+                  -0.20191030781385297,
+                  -0.05752041169185559
+                ],
+                "status": "MEASURED",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  1015,
+                  568,
+                  1079,
+                  632
+                ]
+              },
+              {
+                "id": "r3c0",
+                "quadrant": [
+                  0,
+                  1
+                ],
+                "residual_px": 0.10879094401250422,
+                "residual_xy_px": [
+                  0.05371390938654337,
+                  0.09460594821440159
+                ],
+                "status": "MEASURED",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  198,
+                  751,
+                  262,
+                  815
+                ]
+              },
+              {
+                "id": "r3c1",
+                "quadrant": [
+                  0,
+                  1
+                ],
+                "residual_px": 0.4047462853837823,
+                "residual_xy_px": [
+                  -0.3264373205831307,
+                  0.23928692246438485
+                ],
+                "status": "MEASURED",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  466,
+                  751,
+                  530,
+                  815
+                ]
+              },
+              {
+                "id": "r3c2",
+                "quadrant": [
+                  1,
+                  1
+                ],
+                "reason": "support",
+                "status": "UNAVAILABLE_PREMETRIC",
+                "support_fraction": 0.8564453125,
+                "xyxy": [
+                  747,
+                  751,
+                  811,
+                  815
+                ]
+              },
+              {
+                "id": "r3c3",
+                "quadrant": [
+                  1,
+                  1
+                ],
+                "reason": "support",
+                "status": "UNAVAILABLE_PREMETRIC",
+                "support_fraction": 0.6142578125,
+                "xyxy": [
+                  1015,
+                  751,
+                  1079,
+                  815
+                ]
+              }
+            ],
+            "valid_tiles": 9
+          }
+        ],
+        "reference": "independent_reserved_luminance_phase_tiles",
+        "refit_performed": false,
+        "status": "BLOCKED_REFERENCE_INSUFFICIENT"
+      },
+      "inverse": null,
+      "matrix": null,
+      "models_tested": [
+        {
+          "development": {
+            "aggregate": {
+              "count": 18,
+              "maximum_px": 1.0159150115867548,
+              "median_px": 0.2120866569420461,
+              "p95_px": 0.9561593434095879,
+              "roundtrip_max_px": 0.0,
+              "status": "PASS"
+            },
+            "common_support": {
+              "bounding_box_is_fully_supported_roi": false,
+              "bounding_box_xyxy": [
+                6,
+                125,
+                1273,
+                864
+              ],
+              "pixel_count": 745211,
+              "rectangle_roi": null
+            },
+            "determinant": 1.0,
+            "inverse": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "per_frame": [
+              {
+                "count": 0,
+                "frame_position": 0,
+                "maximum_px": null,
+                "median_px": null,
+                "p95_px": null,
+                "quadrants": 0,
+                "roundtrip_max_px": 0.0,
+                "status": "BLOCKED_REFERENCE_INSUFFICIENT",
+                "support_fraction": 0.9978610708500298,
+                "tiles": [
+                  {
+                    "id": "r0c0",
+                    "quadrant": [
+                      0,
+                      0
+                    ],
+                    "reason": "reference_texture",
+                    "status": "UNAVAILABLE_PREMETRIC",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      198,
+                      202,
+                      262,
+                      266
+                    ]
+                  },
+                  {
+                    "id": "r0c1",
+                    "quadrant": [
+                      0,
+                      0
+                    ],
+                    "reason": "reference_texture",
+                    "status": "UNAVAILABLE_PREMETRIC",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      466,
+                      202,
+                      530,
+                      266
+                    ]
+                  },
+                  {
+                    "id": "r0c2",
+                    "quadrant": [
+                      1,
+                      0
+                    ],
+                    "reason": "reference_texture",
+                    "status": "UNAVAILABLE_PREMETRIC",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      747,
+                      202,
+                      811,
+                      266
+                    ]
+                  },
+                  {
+                    "id": "r0c3",
+                    "quadrant": [
+                      1,
+                      0
+                    ],
+                    "reason": "reference_texture",
+                    "status": "UNAVAILABLE_PREMETRIC",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      1015,
+                      202,
+                      1079,
+                      266
+                    ]
+                  },
+                  {
+                    "id": "r1c0",
+                    "quadrant": [
+                      0,
+                      0
+                    ],
+                    "reason": "reference_texture",
+                    "status": "UNAVAILABLE_PREMETRIC",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      198,
+                      385,
+                      262,
+                      449
+                    ]
+                  },
+                  {
+                    "id": "r1c1",
+                    "quadrant": [
+                      0,
+                      0
+                    ],
+                    "reason": "reference_texture",
+                    "status": "UNAVAILABLE_PREMETRIC",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      466,
+                      385,
+                      530,
+                      449
+                    ]
+                  },
+                  {
+                    "id": "r1c2",
+                    "quadrant": [
+                      1,
+                      0
+                    ],
+                    "reason": "reference_texture",
+                    "status": "UNAVAILABLE_PREMETRIC",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      747,
+                      385,
+                      811,
+                      449
+                    ]
+                  },
+                  {
+                    "id": "r1c3",
+                    "quadrant": [
+                      1,
+                      0
+                    ],
+                    "reason": "reference_texture",
+                    "status": "UNAVAILABLE_PREMETRIC",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      1015,
+                      385,
+                      1079,
+                      449
+                    ]
+                  },
+                  {
+                    "id": "r2c0",
+                    "quadrant": [
+                      0,
+                      1
+                    ],
+                    "reason": "reference_texture",
+                    "status": "UNAVAILABLE_PREMETRIC",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      198,
+                      568,
+                      262,
+                      632
+                    ]
+                  },
+                  {
+                    "id": "r2c1",
+                    "quadrant": [
+                      0,
+                      1
+                    ],
+                    "reason": "reference_texture",
+                    "status": "UNAVAILABLE_PREMETRIC",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      466,
+                      568,
+                      530,
+                      632
+                    ]
+                  },
+                  {
+                    "id": "r2c2",
+                    "quadrant": [
+                      1,
+                      1
+                    ],
+                    "reason": "reference_texture",
+                    "status": "UNAVAILABLE_PREMETRIC",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      747,
+                      568,
+                      811,
+                      632
+                    ]
+                  },
+                  {
+                    "id": "r2c3",
+                    "quadrant": [
+                      1,
+                      1
+                    ],
+                    "reason": "reference_texture",
+                    "status": "UNAVAILABLE_PREMETRIC",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      1015,
+                      568,
+                      1079,
+                      632
+                    ]
+                  },
+                  {
+                    "id": "r3c0",
+                    "quadrant": [
+                      0,
+                      1
+                    ],
+                    "reason": "reference_texture",
+                    "status": "UNAVAILABLE_PREMETRIC",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      198,
+                      751,
+                      262,
+                      815
+                    ]
+                  },
+                  {
+                    "id": "r3c1",
+                    "quadrant": [
+                      0,
+                      1
+                    ],
+                    "reason": "reference_texture",
+                    "status": "UNAVAILABLE_PREMETRIC",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      466,
+                      751,
+                      530,
+                      815
+                    ]
+                  },
+                  {
+                    "id": "r3c2",
+                    "quadrant": [
+                      1,
+                      1
+                    ],
+                    "reason": "reference_texture",
+                    "status": "UNAVAILABLE_PREMETRIC",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      747,
+                      751,
+                      811,
+                      815
+                    ]
+                  },
+                  {
+                    "id": "r3c3",
+                    "quadrant": [
+                      1,
+                      1
+                    ],
+                    "reason": "reference_texture",
+                    "status": "UNAVAILABLE_PREMETRIC",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      1015,
+                      751,
+                      1079,
+                      815
+                    ]
+                  }
+                ],
+                "valid_tiles": 0
+              },
+              {
+                "count": 9,
+                "frame_position": 1,
+                "maximum_px": 1.0159150115867548,
+                "median_px": 0.22107632691153714,
+                "p95_px": 0.987794697150441,
+                "quadrants": 4,
+                "roundtrip_max_px": 0.0,
+                "status": "FAIL_ABSOLUTE_SUPPORT",
+                "support_fraction": 0.7973729644470969,
+                "tiles": [
+                  {
+                    "id": "r0c0",
+                    "quadrant": [
+                      0,
+                      0
+                    ],
+                    "residual_px": 1.0159150115867548,
+                    "residual_xy_px": [
+                      -1.0141226488975084,
+                      -0.060320508622001306
+                    ],
+                    "status": "MEASURED",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      198,
+                      202,
+                      262,
+                      266
+                    ]
+                  },
+                  {
+                    "id": "r0c1",
+                    "quadrant": [
+                      0,
+                      0
+                    ],
+                    "residual_px": 0.38845643436748983,
+                    "residual_xy_px": [
+                      0.06418767144785864,
+                      0.3831166196285482
+                    ],
+                    "status": "MEASURED",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      466,
+                      202,
+                      530,
+                      266
+                    ]
+                  },
+                  {
+                    "id": "r0c2",
+                    "quadrant": [
+                      1,
+                      0
+                    ],
+                    "residual_px": 0.8079460933764352,
+                    "residual_xy_px": [
+                      -0.6954675836708015,
+                      0.4112198072385863
+                    ],
+                    "status": "MEASURED",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      747,
+                      202,
+                      811,
+                      266
+                    ]
+                  },
+                  {
+                    "id": "r0c3",
+                    "quadrant": [
+                      1,
+                      0
+                    ],
+                    "residual_px": 0.9456142254959703,
+                    "residual_xy_px": [
+                      -0.901307394203714,
+                      0.28606160982217566
+                    ],
+                    "status": "MEASURED",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      1015,
+                      202,
+                      1079,
+                      266
+                    ]
+                  },
+                  {
+                    "id": "r1c0",
+                    "quadrant": [
+                      0,
+                      0
+                    ],
+                    "reason": "support",
+                    "status": "UNAVAILABLE_PREMETRIC",
+                    "support_fraction": 0.9990234375,
+                    "xyxy": [
+                      198,
+                      385,
+                      262,
+                      449
+                    ]
+                  },
+                  {
+                    "id": "r1c1",
+                    "quadrant": [
+                      0,
+                      0
+                    ],
+                    "reason": "support",
+                    "status": "UNAVAILABLE_PREMETRIC",
+                    "support_fraction": 0.9873046875,
+                    "xyxy": [
+                      466,
+                      385,
+                      530,
+                      449
+                    ]
+                  },
+                  {
+                    "id": "r1c2",
+                    "quadrant": [
+                      1,
+                      0
+                    ],
+                    "reason": "support",
+                    "status": "UNAVAILABLE_PREMETRIC",
+                    "support_fraction": 0.642578125,
+                    "xyxy": [
+                      747,
+                      385,
+                      811,
+                      449
+                    ]
+                  },
+                  {
+                    "id": "r1c3",
+                    "quadrant": [
+                      1,
+                      0
+                    ],
+                    "reason": "support",
+                    "status": "UNAVAILABLE_PREMETRIC",
+                    "support_fraction": 0.4013671875,
+                    "xyxy": [
+                      1015,
+                      385,
+                      1079,
+                      449
+                    ]
+                  },
+                  {
+                    "id": "r2c0",
+                    "quadrant": [
+                      0,
+                      1
+                    ],
+                    "reason": "support",
+                    "status": "UNAVAILABLE_PREMETRIC",
+                    "support_fraction": 0.846435546875,
+                    "xyxy": [
+                      198,
+                      568,
+                      262,
+                      632
+                    ]
+                  },
+                  {
+                    "id": "r2c1",
+                    "quadrant": [
+                      0,
+                      1
+                    ],
+                    "residual_px": 0.05182494571146648,
+                    "residual_xy_px": [
+                      0.043304492619747254,
+                      0.02847008810914894
+                    ],
+                    "status": "MEASURED",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      466,
+                      568,
+                      530,
+                      632
+                    ]
+                  },
+                  {
+                    "id": "r2c2",
+                    "quadrant": [
+                      1,
+                      1
+                    ],
+                    "residual_px": 0.03406727220987423,
+                    "residual_xy_px": [
+                      0.023883897269154006,
+                      -0.024292766146698213
+                    ],
+                    "status": "MEASURED",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      747,
+                      568,
+                      811,
+                      632
+                    ]
+                  },
+                  {
+                    "id": "r2c3",
+                    "quadrant": [
+                      1,
+                      1
+                    ],
+                    "residual_px": 0.01658982494986567,
+                    "residual_xy_px": [
+                      -0.01476927435448618,
+                      -0.00755584719995728
+                    ],
+                    "status": "MEASURED",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      1015,
+                      568,
+                      1079,
+                      632
+                    ]
+                  },
+                  {
+                    "id": "r3c0",
+                    "quadrant": [
+                      0,
+                      1
+                    ],
+                    "residual_px": 0.22107632691153714,
+                    "residual_xy_px": [
+                      -0.0529036396969993,
+                      0.21465308576283482
+                    ],
+                    "status": "MEASURED",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      198,
+                      751,
+                      262,
+                      815
+                    ]
+                  },
+                  {
+                    "id": "r3c1",
+                    "quadrant": [
+                      0,
+                      1
+                    ],
+                    "residual_px": 0.13934141004921693,
+                    "residual_xy_px": [
+                      -0.1367125656200319,
+                      0.02693887443997037
+                    ],
+                    "status": "MEASURED",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      466,
+                      751,
+                      530,
+                      815
+                    ]
+                  },
+                  {
+                    "id": "r3c2",
+                    "quadrant": [
+                      1,
+                      1
+                    ],
+                    "reason": "support",
+                    "status": "UNAVAILABLE_PREMETRIC",
+                    "support_fraction": 0.857421875,
+                    "xyxy": [
+                      747,
+                      751,
+                      811,
+                      815
+                    ]
+                  },
+                  {
+                    "id": "r3c3",
+                    "quadrant": [
+                      1,
+                      1
+                    ],
+                    "reason": "support",
+                    "status": "UNAVAILABLE_PREMETRIC",
+                    "support_fraction": 0.6142578125,
+                    "xyxy": [
+                      1015,
+                      751,
+                      1079,
+                      815
+                    ]
+                  }
+                ],
+                "valid_tiles": 9
+              },
+              {
+                "count": 9,
+                "frame_position": 2,
+                "maximum_px": 0.694280721838749,
+                "median_px": 0.20994373094399701,
+                "p95_px": 0.5868545262864876,
+                "quadrants": 4,
+                "roundtrip_max_px": 0.0,
+                "status": "FAIL_ABSOLUTE_SUPPORT",
+                "support_fraction": 0.7945935288600904,
+                "tiles": [
+                  {
+                    "id": "r0c0",
+                    "quadrant": [
+                      0,
+                      0
+                    ],
+                    "residual_px": 0.1349631791938558,
+                    "residual_xy_px": [
+                      0.1084842008488181,
+                      0.08028846681999928
+                    ],
+                    "status": "MEASURED",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      198,
+                      202,
+                      262,
+                      266
+                    ]
+                  },
+                  {
+                    "id": "r0c1",
+                    "quadrant": [
+                      0,
+                      0
+                    ],
+                    "residual_px": 0.20913959510133598,
+                    "residual_xy_px": [
+                      -0.04178895992126338,
+                      0.20492206583930828
+                    ],
+                    "status": "MEASURED",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      466,
+                      202,
+                      530,
+                      266
+                    ]
+                  },
+                  {
+                    "id": "r0c2",
+                    "quadrant": [
+                      1,
+                      0
+                    ],
+                    "residual_px": 0.694280721838749,
+                    "residual_xy_px": [
+                      -0.67473200561989,
+                      0.16359230210830533
+                    ],
+                    "status": "MEASURED",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      747,
+                      202,
+                      811,
+                      266
+                    ]
+                  },
+                  {
+                    "id": "r0c3",
+                    "quadrant": [
+                      1,
+                      0
+                    ],
+                    "residual_px": 0.42571523295809577,
+                    "residual_xy_px": [
+                      -0.1922826824165646,
+                      0.3798168369296658
+                    ],
+                    "status": "MEASURED",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      1015,
+                      202,
+                      1079,
+                      266
+                    ]
+                  },
+                  {
+                    "id": "r1c0",
+                    "quadrant": [
+                      0,
+                      0
+                    ],
+                    "reason": "support",
+                    "status": "UNAVAILABLE_PREMETRIC",
+                    "support_fraction": 0.9990234375,
+                    "xyxy": [
+                      198,
+                      385,
+                      262,
+                      449
+                    ]
+                  },
+                  {
+                    "id": "r1c1",
+                    "quadrant": [
+                      0,
+                      0
+                    ],
+                    "reason": "support",
+                    "status": "UNAVAILABLE_PREMETRIC",
+                    "support_fraction": 0.9873046875,
+                    "xyxy": [
+                      466,
+                      385,
+                      530,
+                      449
+                    ]
+                  },
+                  {
+                    "id": "r1c2",
+                    "quadrant": [
+                      1,
+                      0
+                    ],
+                    "reason": "support",
+                    "status": "UNAVAILABLE_PREMETRIC",
+                    "support_fraction": 0.6396484375,
+                    "xyxy": [
+                      747,
+                      385,
+                      811,
+                      449
+                    ]
+                  },
+                  {
+                    "id": "r1c3",
+                    "quadrant": [
+                      1,
+                      0
+                    ],
+                    "reason": "support",
+                    "status": "UNAVAILABLE_PREMETRIC",
+                    "support_fraction": 0.400390625,
+                    "xyxy": [
+                      1015,
+                      385,
+                      1079,
+                      449
+                    ]
+                  },
+                  {
+                    "id": "r2c0",
+                    "quadrant": [
+                      0,
+                      1
+                    ],
+                    "reason": "support",
+                    "status": "UNAVAILABLE_PREMETRIC",
+                    "support_fraction": 0.845458984375,
+                    "xyxy": [
+                      198,
+                      568,
+                      262,
+                      632
+                    ]
+                  },
+                  {
+                    "id": "r2c1",
+                    "quadrant": [
+                      0,
+                      1
+                    ],
+                    "residual_px": 0.11030663123331448,
+                    "residual_xy_px": [
+                      -0.06724098963003147,
+                      0.08744256519348247
+                    ],
+                    "status": "MEASURED",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      466,
+                      568,
+                      530,
+                      632
+                    ]
+                  },
+                  {
+                    "id": "r2c2",
+                    "quadrant": [
+                      1,
+                      1
+                    ],
+                    "residual_px": 0.21422958294009517,
+                    "residual_xy_px": [
+                      -0.2139194052503802,
+                      -0.011523986463490992
+                    ],
+                    "status": "MEASURED",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      747,
+                      568,
+                      811,
+                      632
+                    ]
+                  },
+                  {
+                    "id": "r2c3",
+                    "quadrant": [
+                      1,
+                      1
+                    ],
+                    "residual_px": 0.20994373094399701,
+                    "residual_xy_px": [
+                      -0.20191030781385297,
+                      -0.05752041169185559
+                    ],
+                    "status": "MEASURED",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      1015,
+                      568,
+                      1079,
+                      632
+                    ]
+                  },
+                  {
+                    "id": "r3c0",
+                    "quadrant": [
+                      0,
+                      1
+                    ],
+                    "residual_px": 0.10879094401250422,
+                    "residual_xy_px": [
+                      0.05371390938654337,
+                      0.09460594821440159
+                    ],
+                    "status": "MEASURED",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      198,
+                      751,
+                      262,
+                      815
+                    ]
+                  },
+                  {
+                    "id": "r3c1",
+                    "quadrant": [
+                      0,
+                      1
+                    ],
+                    "residual_px": 0.4047462853837823,
+                    "residual_xy_px": [
+                      -0.3264373205831307,
+                      0.23928692246438485
+                    ],
+                    "status": "MEASURED",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      466,
+                      751,
+                      530,
+                      815
+                    ]
+                  },
+                  {
+                    "id": "r3c2",
+                    "quadrant": [
+                      1,
+                      1
+                    ],
+                    "reason": "support",
+                    "status": "UNAVAILABLE_PREMETRIC",
+                    "support_fraction": 0.8564453125,
+                    "xyxy": [
+                      747,
+                      751,
+                      811,
+                      815
+                    ]
+                  },
+                  {
+                    "id": "r3c3",
+                    "quadrant": [
+                      1,
+                      1
+                    ],
+                    "reason": "support",
+                    "status": "UNAVAILABLE_PREMETRIC",
+                    "support_fraction": 0.6142578125,
+                    "xyxy": [
+                      1015,
+                      751,
+                      1079,
+                      815
+                    ]
+                  }
+                ],
+                "valid_tiles": 9
+              }
+            ],
+            "reference": "independent_reserved_luminance_phase_tiles",
+            "refit_performed": false,
+            "status": "BLOCKED_REFERENCE_INSUFFICIENT"
+          },
+          "matrix": [
+            [
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "model": "M0_IDENTITY",
+          "optimization": {
+            "fit_performed": false
+          },
+          "status": "BLOCKED_REFERENCE_INSUFFICIENT"
+        }
+      ],
+      "selected_model": null,
+      "status": "BLOCKED_REFERENCE_INSUFFICIENT",
+      "validation": {
+        "reason": "NO_DEVELOPMENT_CANDIDATE",
+        "status": "NOT_OPENED"
+      }
+    },
+    "ESM6-to-ESM4": {
+      "development": {
+        "aggregate": {
+          "count": 29,
+          "maximum_px": 10.129614683755616,
+          "median_px": 0.2132306846473831,
+          "p95_px": 0.7866829384415279,
+          "roundtrip_max_px": 0.0,
+          "status": "FAIL_ABSOLUTE_RESIDUAL"
+        },
+        "common_support": {
+          "bounding_box_is_fully_supported_roi": false,
+          "bounding_box_xyxy": [
+            6,
+            124,
+            1273,
+            858
+          ],
+          "pixel_count": 907040,
+          "rectangle_roi": null
+        },
+        "determinant": 1.0,
+        "inverse": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "per_frame": [
+          {
+            "count": 1,
+            "frame_position": 0,
+            "maximum_px": 10.129614683755616,
+            "median_px": 10.129614683755616,
+            "p95_px": 10.129614683755616,
+            "quadrants": 1,
+            "roundtrip_max_px": 0.0,
+            "status": "BLOCKED_REFERENCE_INSUFFICIENT",
+            "support_fraction": 0.9964961082156083,
+            "tiles": [
+              {
+                "id": "r0c0",
+                "quadrant": [
+                  0,
+                  0
+                ],
+                "reason": "moving_texture",
+                "status": "UNAVAILABLE_PREMETRIC",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  198,
+                  201,
+                  262,
+                  265
+                ]
+              },
+              {
+                "id": "r0c1",
+                "quadrant": [
+                  0,
+                  0
+                ],
+                "reason": "reference_texture",
+                "status": "UNAVAILABLE_PREMETRIC",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  466,
+                  201,
+                  530,
+                  265
+                ]
+              },
+              {
+                "id": "r0c2",
+                "quadrant": [
+                  1,
+                  0
+                ],
+                "reason": "reference_texture",
+                "status": "UNAVAILABLE_PREMETRIC",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  747,
+                  201,
+                  811,
+                  265
+                ]
+              },
+              {
+                "id": "r0c3",
+                "quadrant": [
+                  1,
+                  0
+                ],
+                "reason": "reference_texture",
+                "status": "UNAVAILABLE_PREMETRIC",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  1015,
+                  201,
+                  1079,
+                  265
+                ]
+              },
+              {
+                "id": "r1c0",
+                "quadrant": [
+                  0,
+                  0
+                ],
+                "residual_px": 10.129614683755616,
+                "residual_xy_px": [
+                  -10.129180122317441,
+                  -0.09382798626532769
+                ],
+                "status": "MEASURED",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  198,
+                  383,
+                  262,
+                  447
+                ]
+              },
+              {
+                "id": "r1c1",
+                "quadrant": [
+                  0,
+                  0
+                ],
+                "reason": "reference_texture",
+                "status": "UNAVAILABLE_PREMETRIC",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  466,
+                  383,
+                  530,
+                  447
+                ]
+              },
+              {
+                "id": "r1c2",
+                "quadrant": [
+                  1,
+                  0
+                ],
+                "reason": "moving_texture",
+                "status": "UNAVAILABLE_PREMETRIC",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  747,
+                  383,
+                  811,
+                  447
+                ]
+              },
+              {
+                "id": "r1c3",
+                "quadrant": [
+                  1,
+                  0
+                ],
+                "reason": "reference_texture",
+                "status": "UNAVAILABLE_PREMETRIC",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  1015,
+                  383,
+                  1079,
+                  447
+                ]
+              },
+              {
+                "id": "r2c0",
+                "quadrant": [
+                  0,
+                  1
+                ],
+                "reason": "moving_texture",
+                "status": "UNAVAILABLE_PREMETRIC",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  198,
+                  564,
+                  262,
+                  628
+                ]
+              },
+              {
+                "id": "r2c1",
+                "quadrant": [
+                  0,
+                  1
+                ],
+                "reason": "reference_texture",
+                "status": "UNAVAILABLE_PREMETRIC",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  466,
+                  564,
+                  530,
+                  628
+                ]
+              },
+              {
+                "id": "r2c2",
+                "quadrant": [
+                  1,
+                  1
+                ],
+                "reason": "reference_texture",
+                "status": "UNAVAILABLE_PREMETRIC",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  747,
+                  564,
+                  811,
+                  628
+                ]
+              },
+              {
+                "id": "r2c3",
+                "quadrant": [
+                  1,
+                  1
+                ],
+                "reason": "reference_texture",
+                "status": "UNAVAILABLE_PREMETRIC",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  1015,
+                  564,
+                  1079,
+                  628
+                ]
+              },
+              {
+                "id": "r3c0",
+                "quadrant": [
+                  0,
+                  1
+                ],
+                "reason": "reference_texture",
+                "status": "UNAVAILABLE_PREMETRIC",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  198,
+                  746,
+                  262,
+                  810
+                ]
+              },
+              {
+                "id": "r3c1",
+                "quadrant": [
+                  0,
+                  1
+                ],
+                "reason": "reference_texture",
+                "status": "UNAVAILABLE_PREMETRIC",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  466,
+                  746,
+                  530,
+                  810
+                ]
+              },
+              {
+                "id": "r3c2",
+                "quadrant": [
+                  1,
+                  1
+                ],
+                "reason": "reference_texture",
+                "status": "UNAVAILABLE_PREMETRIC",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  747,
+                  746,
+                  811,
+                  810
+                ]
+              },
+              {
+                "id": "r3c3",
+                "quadrant": [
+                  1,
+                  1
+                ],
+                "reason": "reference_texture",
+                "status": "UNAVAILABLE_PREMETRIC",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  1015,
+                  746,
+                  1079,
+                  810
+                ]
+              }
+            ],
+            "valid_tiles": 1
+          },
+          {
+            "count": 14,
+            "frame_position": 1,
+            "maximum_px": 0.851859827471325,
+            "median_px": 0.28575965100253886,
+            "p95_px": 0.7459473827979052,
+            "quadrants": 4,
+            "roundtrip_max_px": 0.0,
+            "status": "PASS",
+            "support_fraction": 0.971964579618708,
+            "tiles": [
+              {
+                "id": "r0c0",
+                "quadrant": [
+                  0,
+                  0
+                ],
+                "residual_px": 0.31622819936248014,
+                "residual_xy_px": [
+                  0.1018150359117583,
+                  0.29938933269962015
+                ],
+                "status": "MEASURED",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  198,
+                  201,
+                  262,
+                  265
+                ]
+              },
+              {
+                "id": "r0c1",
+                "quadrant": [
+                  0,
+                  0
+                ],
+                "residual_px": 0.044752654091154614,
+                "residual_xy_px": [
+                  -0.04471183655824868,
+                  -0.001910947354323109
+                ],
+                "status": "MEASURED",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  466,
+                  201,
+                  530,
+                  265
+                ]
+              },
+              {
+                "id": "r0c2",
+                "quadrant": [
+                  1,
+                  0
+                ],
+                "residual_px": 0.851859827471325,
+                "residual_xy_px": [
+                  0.8518519377624301,
+                  -0.0036663046611974085
+                ],
+                "status": "MEASURED",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  747,
+                  201,
+                  811,
+                  265
+                ]
+              },
+              {
+                "id": "r0c3",
+                "quadrant": [
+                  1,
+                  0
+                ],
+                "residual_px": 0.6889176048968331,
+                "residual_xy_px": [
+                  -0.682383294686439,
+                  0.09465994649095003
+                ],
+                "status": "MEASURED",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  1015,
+                  201,
+                  1079,
+                  265
+                ]
+              },
+              {
+                "id": "r1c0",
+                "quadrant": [
+                  0,
+                  0
+                ],
+                "residual_px": 0.1707873362787329,
+                "residual_xy_px": [
+                  0.06772378322057908,
+                  0.15678585210240434
+                ],
+                "status": "MEASURED",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  198,
+                  383,
+                  262,
+                  447
+                ]
+              },
+              {
+                "id": "r1c1",
+                "quadrant": [
+                  0,
+                  0
+                ],
+                "residual_px": 0.6718648265693461,
+                "residual_xy_px": [
+                  0.19429522520754042,
+                  0.6431576094882254
+                ],
+                "status": "MEASURED",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  466,
+                  383,
+                  530,
+                  447
+                ]
+              },
+              {
+                "id": "r1c2",
+                "quadrant": [
+                  1,
+                  0
+                ],
+                "residual_px": 0.0671324926233502,
+                "residual_xy_px": [
+                  -0.011890121782280251,
+                  0.06607114778650901
+                ],
+                "status": "MEASURED",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  747,
+                  383,
+                  811,
+                  447
+                ]
+              },
+              {
+                "id": "r1c3",
+                "quadrant": [
+                  1,
+                  0
+                ],
+                "residual_px": 0.42984791332462424,
+                "residual_xy_px": [
+                  -0.42836562213975776,
+                  0.035666824337918755
+                ],
+                "status": "MEASURED",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  1015,
+                  383,
+                  1079,
+                  447
+                ]
+              },
+              {
+                "id": "r2c0",
+                "quadrant": [
+                  0,
+                  1
+                ],
+                "residual_px": 0.14506266245204227,
+                "residual_xy_px": [
+                  -0.13916612795598188,
+                  -0.040938549893888974
+                ],
+                "status": "MEASURED",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  198,
+                  564,
+                  262,
+                  628
+                ]
+              },
+              {
+                "id": "r2c1",
+                "quadrant": [
+                  0,
+                  1
+                ],
+                "reason": "support",
+                "status": "UNAVAILABLE_PREMETRIC",
+                "support_fraction": 0.61328125,
+                "xyxy": [
+                  466,
+                  564,
+                  530,
+                  628
+                ]
+              },
+              {
+                "id": "r2c2",
+                "quadrant": [
+                  1,
+                  1
+                ],
+                "residual_px": 0.24906727791179062,
+                "residual_xy_px": [
+                  -0.1347229762039989,
+                  0.2094856286457997
+                ],
+                "status": "MEASURED",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  747,
+                  564,
+                  811,
+                  628
+                ]
+              },
+              {
+                "id": "r2c3",
+                "quadrant": [
+                  1,
+                  1
+                ],
+                "residual_px": 0.34149175518873703,
+                "residual_xy_px": [
+                  -0.2598482137379255,
+                  0.22157509941122377
+                ],
+                "status": "MEASURED",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  1015,
+                  564,
+                  1079,
+                  628
+                ]
+              },
+              {
+                "id": "r3c0",
+                "quadrant": [
+                  0,
+                  1
+                ],
+                "reason": "support",
+                "status": "UNAVAILABLE_PREMETRIC",
+                "support_fraction": 0.62939453125,
+                "xyxy": [
+                  198,
+                  746,
+                  262,
+                  810
+                ]
+              },
+              {
+                "id": "r3c1",
+                "quadrant": [
+                  0,
+                  1
+                ],
+                "residual_px": 0.2594056994054126,
+                "residual_xy_px": [
+                  0.14289687048520297,
+                  0.2164989637147171
+                ],
+                "status": "MEASURED",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  466,
+                  746,
+                  530,
+                  810
+                ]
+              },
+              {
+                "id": "r3c2",
+                "quadrant": [
+                  1,
+                  1
+                ],
+                "residual_px": 0.27566956212425203,
+                "residual_xy_px": [
+                  -0.187389810911166,
+                  -0.2021849802741398
+                ],
+                "status": "MEASURED",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  747,
+                  746,
+                  811,
+                  810
+                ]
+              },
+              {
+                "id": "r3c3",
+                "quadrant": [
+                  1,
+                  1
+                ],
+                "residual_px": 0.2958497398808257,
+                "residual_xy_px": [
+                  0.16828739323151234,
+                  -0.2433236977092337
+                ],
+                "status": "MEASURED",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  1015,
+                  746,
+                  1079,
+                  810
+                ]
+              }
+            ],
+            "valid_tiles": 14
+          },
+          {
+            "count": 14,
+            "frame_position": 2,
+            "maximum_px": 0.3146373855286793,
+            "median_px": 0.13143720938978548,
+            "p95_px": 0.2833653156567227,
+            "quadrants": 4,
+            "roundtrip_max_px": 0.0,
+            "status": "PASS",
+            "support_fraction": 0.9719517213002332,
+            "tiles": [
+              {
+                "id": "r0c0",
+                "quadrant": [
+                  0,
+                  0
+                ],
+                "residual_px": 0.2565466591941038,
+                "residual_xy_px": [
+                  -0.014051524909243093,
+                  0.25616155642754157
+                ],
+                "status": "MEASURED",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  198,
+                  201,
+                  262,
+                  265
+                ]
+              },
+              {
+                "id": "r0c1",
+                "quadrant": [
+                  0,
+                  0
+                ],
+                "residual_px": 0.11863019798273369,
+                "residual_xy_px": [
+                  -0.10822471388797582,
+                  0.04858533911879558
+                ],
+                "status": "MEASURED",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  466,
+                  201,
+                  530,
+                  265
+                ]
+              },
+              {
+                "id": "r0c2",
+                "quadrant": [
+                  1,
+                  0
+                ],
+                "residual_px": 0.02398922433207737,
+                "residual_xy_px": [
+                  0.016723346857195908,
+                  -0.017199202131164357
+                ],
+                "status": "MEASURED",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  747,
+                  201,
+                  811,
+                  265
+                ]
+              },
+              {
+                "id": "r0c3",
+                "quadrant": [
+                  1,
+                  0
+                ],
+                "residual_px": 0.19788793434233978,
+                "residual_xy_px": [
+                  -0.11322068443199558,
+                  0.16229821679559098
+                ],
+                "status": "MEASURED",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  1015,
+                  201,
+                  1079,
+                  265
+                ]
+              },
+              {
+                "id": "r1c0",
+                "quadrant": [
+                  0,
+                  0
+                ],
+                "residual_px": 0.09316957312135363,
+                "residual_xy_px": [
+                  -0.04548791479963128,
+                  0.08131063253226324
+                ],
+                "status": "MEASURED",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  198,
+                  383,
+                  262,
+                  447
+                ]
+              },
+              {
+                "id": "r1c1",
+                "quadrant": [
+                  0,
+                  0
+                ],
+                "residual_px": 0.1408576461983317,
+                "residual_xy_px": [
+                  -0.14077740323330176,
+                  0.004753864893194121
+                ],
+                "status": "MEASURED",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  466,
+                  383,
+                  530,
+                  447
+                ]
+              },
+              {
+                "id": "r1c2",
+                "quadrant": [
+                  1,
+                  0
+                ],
+                "residual_px": 0.20529207232364602,
+                "residual_xy_px": [
+                  -0.1722924065099422,
+                  0.11162509403333074
+                ],
+                "status": "MEASURED",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  747,
+                  383,
+                  811,
+                  447
+                ]
+              },
+              {
+                "id": "r1c3",
+                "quadrant": [
+                  1,
+                  0
+                ],
+                "residual_px": 0.2665265088025922,
+                "residual_xy_px": [
+                  -0.2609365226867817,
+                  -0.054300193578190305
+                ],
+                "status": "MEASURED",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  1015,
+                  383,
+                  1079,
+                  447
+                ]
+              },
+              {
+                "id": "r2c0",
+                "quadrant": [
+                  0,
+                  1
+                ],
+                "residual_px": 0.3146373855286793,
+                "residual_xy_px": [
+                  -0.2981291768837585,
+                  -0.10057672823737819
+                ],
+                "status": "MEASURED",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  198,
+                  564,
+                  262,
+                  628
+                ]
+              },
+              {
+                "id": "r2c1",
+                "quadrant": [
+                  0,
+                  1
+                ],
+                "reason": "support",
+                "status": "UNAVAILABLE_PREMETRIC",
+                "support_fraction": 0.6123046875,
+                "xyxy": [
+                  466,
+                  564,
+                  530,
+                  628
+                ]
+              },
+              {
+                "id": "r2c2",
+                "quadrant": [
+                  1,
+                  1
+                ],
+                "residual_px": 0.11911123033655877,
+                "residual_xy_px": [
+                  0.11597094338439456,
+                  0.027170305166160882
+                ],
+                "status": "MEASURED",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  747,
+                  564,
+                  811,
+                  628
+                ]
+              },
+              {
+                "id": "r2c3",
+                "quadrant": [
+                  1,
+                  1
+                ],
+                "residual_px": 0.12201677258123927,
+                "residual_xy_px": [
+                  -0.12168206651828284,
+                  -0.00903147158452341
+                ],
+                "status": "MEASURED",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  1015,
+                  564,
+                  1079,
+                  628
+                ]
+              },
+              {
+                "id": "r3c0",
+                "quadrant": [
+                  0,
+                  1
+                ],
+                "reason": "support",
+                "status": "UNAVAILABLE_PREMETRIC",
+                "support_fraction": 0.62939453125,
+                "xyxy": [
+                  198,
+                  746,
+                  262,
+                  810
+                ]
+              },
+              {
+                "id": "r3c1",
+                "quadrant": [
+                  0,
+                  1
+                ],
+                "residual_px": 0.2132306846473831,
+                "residual_xy_px": [
+                  -0.16110131697173555,
+                  0.13969141185185338
+                ],
+                "status": "MEASURED",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  466,
+                  746,
+                  530,
+                  810
+                ]
+              },
+              {
+                "id": "r3c2",
+                "quadrant": [
+                  1,
+                  1
+                ],
+                "residual_px": 0.07854845837732251,
+                "residual_xy_px": [
+                  -0.07811048497012943,
+                  -0.008283263317385848
+                ],
+                "status": "MEASURED",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  747,
+                  746,
+                  811,
+                  810
+                ]
+              },
+              {
+                "id": "r3c3",
+                "quadrant": [
+                  1,
+                  1
+                ],
+                "residual_px": 0.06824483518070791,
+                "residual_xy_px": [
+                  0.014723425114055846,
+                  0.0666376641378791
+                ],
+                "status": "MEASURED",
+                "support_fraction": 1.0,
+                "xyxy": [
+                  1015,
+                  746,
+                  1079,
+                  810
+                ]
+              }
+            ],
+            "valid_tiles": 14
+          }
+        ],
+        "reference": "independent_reserved_luminance_phase_tiles",
+        "refit_performed": false,
+        "status": "BLOCKED_REFERENCE_INSUFFICIENT"
+      },
+      "inverse": null,
+      "matrix": null,
+      "models_tested": [
+        {
+          "development": {
+            "aggregate": {
+              "count": 29,
+              "maximum_px": 10.129614683755616,
+              "median_px": 0.2132306846473831,
+              "p95_px": 0.7866829384415279,
+              "roundtrip_max_px": 0.0,
+              "status": "FAIL_ABSOLUTE_RESIDUAL"
+            },
+            "common_support": {
+              "bounding_box_is_fully_supported_roi": false,
+              "bounding_box_xyxy": [
+                6,
+                124,
+                1273,
+                858
+              ],
+              "pixel_count": 907040,
+              "rectangle_roi": null
+            },
+            "determinant": 1.0,
+            "inverse": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "per_frame": [
+              {
+                "count": 1,
+                "frame_position": 0,
+                "maximum_px": 10.129614683755616,
+                "median_px": 10.129614683755616,
+                "p95_px": 10.129614683755616,
+                "quadrants": 1,
+                "roundtrip_max_px": 0.0,
+                "status": "BLOCKED_REFERENCE_INSUFFICIENT",
+                "support_fraction": 0.9964961082156083,
+                "tiles": [
+                  {
+                    "id": "r0c0",
+                    "quadrant": [
+                      0,
+                      0
+                    ],
+                    "reason": "moving_texture",
+                    "status": "UNAVAILABLE_PREMETRIC",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      198,
+                      201,
+                      262,
+                      265
+                    ]
+                  },
+                  {
+                    "id": "r0c1",
+                    "quadrant": [
+                      0,
+                      0
+                    ],
+                    "reason": "reference_texture",
+                    "status": "UNAVAILABLE_PREMETRIC",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      466,
+                      201,
+                      530,
+                      265
+                    ]
+                  },
+                  {
+                    "id": "r0c2",
+                    "quadrant": [
+                      1,
+                      0
+                    ],
+                    "reason": "reference_texture",
+                    "status": "UNAVAILABLE_PREMETRIC",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      747,
+                      201,
+                      811,
+                      265
+                    ]
+                  },
+                  {
+                    "id": "r0c3",
+                    "quadrant": [
+                      1,
+                      0
+                    ],
+                    "reason": "reference_texture",
+                    "status": "UNAVAILABLE_PREMETRIC",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      1015,
+                      201,
+                      1079,
+                      265
+                    ]
+                  },
+                  {
+                    "id": "r1c0",
+                    "quadrant": [
+                      0,
+                      0
+                    ],
+                    "residual_px": 10.129614683755616,
+                    "residual_xy_px": [
+                      -10.129180122317441,
+                      -0.09382798626532769
+                    ],
+                    "status": "MEASURED",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      198,
+                      383,
+                      262,
+                      447
+                    ]
+                  },
+                  {
+                    "id": "r1c1",
+                    "quadrant": [
+                      0,
+                      0
+                    ],
+                    "reason": "reference_texture",
+                    "status": "UNAVAILABLE_PREMETRIC",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      466,
+                      383,
+                      530,
+                      447
+                    ]
+                  },
+                  {
+                    "id": "r1c2",
+                    "quadrant": [
+                      1,
+                      0
+                    ],
+                    "reason": "moving_texture",
+                    "status": "UNAVAILABLE_PREMETRIC",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      747,
+                      383,
+                      811,
+                      447
+                    ]
+                  },
+                  {
+                    "id": "r1c3",
+                    "quadrant": [
+                      1,
+                      0
+                    ],
+                    "reason": "reference_texture",
+                    "status": "UNAVAILABLE_PREMETRIC",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      1015,
+                      383,
+                      1079,
+                      447
+                    ]
+                  },
+                  {
+                    "id": "r2c0",
+                    "quadrant": [
+                      0,
+                      1
+                    ],
+                    "reason": "moving_texture",
+                    "status": "UNAVAILABLE_PREMETRIC",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      198,
+                      564,
+                      262,
+                      628
+                    ]
+                  },
+                  {
+                    "id": "r2c1",
+                    "quadrant": [
+                      0,
+                      1
+                    ],
+                    "reason": "reference_texture",
+                    "status": "UNAVAILABLE_PREMETRIC",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      466,
+                      564,
+                      530,
+                      628
+                    ]
+                  },
+                  {
+                    "id": "r2c2",
+                    "quadrant": [
+                      1,
+                      1
+                    ],
+                    "reason": "reference_texture",
+                    "status": "UNAVAILABLE_PREMETRIC",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      747,
+                      564,
+                      811,
+                      628
+                    ]
+                  },
+                  {
+                    "id": "r2c3",
+                    "quadrant": [
+                      1,
+                      1
+                    ],
+                    "reason": "reference_texture",
+                    "status": "UNAVAILABLE_PREMETRIC",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      1015,
+                      564,
+                      1079,
+                      628
+                    ]
+                  },
+                  {
+                    "id": "r3c0",
+                    "quadrant": [
+                      0,
+                      1
+                    ],
+                    "reason": "reference_texture",
+                    "status": "UNAVAILABLE_PREMETRIC",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      198,
+                      746,
+                      262,
+                      810
+                    ]
+                  },
+                  {
+                    "id": "r3c1",
+                    "quadrant": [
+                      0,
+                      1
+                    ],
+                    "reason": "reference_texture",
+                    "status": "UNAVAILABLE_PREMETRIC",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      466,
+                      746,
+                      530,
+                      810
+                    ]
+                  },
+                  {
+                    "id": "r3c2",
+                    "quadrant": [
+                      1,
+                      1
+                    ],
+                    "reason": "reference_texture",
+                    "status": "UNAVAILABLE_PREMETRIC",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      747,
+                      746,
+                      811,
+                      810
+                    ]
+                  },
+                  {
+                    "id": "r3c3",
+                    "quadrant": [
+                      1,
+                      1
+                    ],
+                    "reason": "reference_texture",
+                    "status": "UNAVAILABLE_PREMETRIC",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      1015,
+                      746,
+                      1079,
+                      810
+                    ]
+                  }
+                ],
+                "valid_tiles": 1
+              },
+              {
+                "count": 14,
+                "frame_position": 1,
+                "maximum_px": 0.851859827471325,
+                "median_px": 0.28575965100253886,
+                "p95_px": 0.7459473827979052,
+                "quadrants": 4,
+                "roundtrip_max_px": 0.0,
+                "status": "PASS",
+                "support_fraction": 0.971964579618708,
+                "tiles": [
+                  {
+                    "id": "r0c0",
+                    "quadrant": [
+                      0,
+                      0
+                    ],
+                    "residual_px": 0.31622819936248014,
+                    "residual_xy_px": [
+                      0.1018150359117583,
+                      0.29938933269962015
+                    ],
+                    "status": "MEASURED",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      198,
+                      201,
+                      262,
+                      265
+                    ]
+                  },
+                  {
+                    "id": "r0c1",
+                    "quadrant": [
+                      0,
+                      0
+                    ],
+                    "residual_px": 0.044752654091154614,
+                    "residual_xy_px": [
+                      -0.04471183655824868,
+                      -0.001910947354323109
+                    ],
+                    "status": "MEASURED",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      466,
+                      201,
+                      530,
+                      265
+                    ]
+                  },
+                  {
+                    "id": "r0c2",
+                    "quadrant": [
+                      1,
+                      0
+                    ],
+                    "residual_px": 0.851859827471325,
+                    "residual_xy_px": [
+                      0.8518519377624301,
+                      -0.0036663046611974085
+                    ],
+                    "status": "MEASURED",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      747,
+                      201,
+                      811,
+                      265
+                    ]
+                  },
+                  {
+                    "id": "r0c3",
+                    "quadrant": [
+                      1,
+                      0
+                    ],
+                    "residual_px": 0.6889176048968331,
+                    "residual_xy_px": [
+                      -0.682383294686439,
+                      0.09465994649095003
+                    ],
+                    "status": "MEASURED",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      1015,
+                      201,
+                      1079,
+                      265
+                    ]
+                  },
+                  {
+                    "id": "r1c0",
+                    "quadrant": [
+                      0,
+                      0
+                    ],
+                    "residual_px": 0.1707873362787329,
+                    "residual_xy_px": [
+                      0.06772378322057908,
+                      0.15678585210240434
+                    ],
+                    "status": "MEASURED",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      198,
+                      383,
+                      262,
+                      447
+                    ]
+                  },
+                  {
+                    "id": "r1c1",
+                    "quadrant": [
+                      0,
+                      0
+                    ],
+                    "residual_px": 0.6718648265693461,
+                    "residual_xy_px": [
+                      0.19429522520754042,
+                      0.6431576094882254
+                    ],
+                    "status": "MEASURED",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      466,
+                      383,
+                      530,
+                      447
+                    ]
+                  },
+                  {
+                    "id": "r1c2",
+                    "quadrant": [
+                      1,
+                      0
+                    ],
+                    "residual_px": 0.0671324926233502,
+                    "residual_xy_px": [
+                      -0.011890121782280251,
+                      0.06607114778650901
+                    ],
+                    "status": "MEASURED",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      747,
+                      383,
+                      811,
+                      447
+                    ]
+                  },
+                  {
+                    "id": "r1c3",
+                    "quadrant": [
+                      1,
+                      0
+                    ],
+                    "residual_px": 0.42984791332462424,
+                    "residual_xy_px": [
+                      -0.42836562213975776,
+                      0.035666824337918755
+                    ],
+                    "status": "MEASURED",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      1015,
+                      383,
+                      1079,
+                      447
+                    ]
+                  },
+                  {
+                    "id": "r2c0",
+                    "quadrant": [
+                      0,
+                      1
+                    ],
+                    "residual_px": 0.14506266245204227,
+                    "residual_xy_px": [
+                      -0.13916612795598188,
+                      -0.040938549893888974
+                    ],
+                    "status": "MEASURED",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      198,
+                      564,
+                      262,
+                      628
+                    ]
+                  },
+                  {
+                    "id": "r2c1",
+                    "quadrant": [
+                      0,
+                      1
+                    ],
+                    "reason": "support",
+                    "status": "UNAVAILABLE_PREMETRIC",
+                    "support_fraction": 0.61328125,
+                    "xyxy": [
+                      466,
+                      564,
+                      530,
+                      628
+                    ]
+                  },
+                  {
+                    "id": "r2c2",
+                    "quadrant": [
+                      1,
+                      1
+                    ],
+                    "residual_px": 0.24906727791179062,
+                    "residual_xy_px": [
+                      -0.1347229762039989,
+                      0.2094856286457997
+                    ],
+                    "status": "MEASURED",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      747,
+                      564,
+                      811,
+                      628
+                    ]
+                  },
+                  {
+                    "id": "r2c3",
+                    "quadrant": [
+                      1,
+                      1
+                    ],
+                    "residual_px": 0.34149175518873703,
+                    "residual_xy_px": [
+                      -0.2598482137379255,
+                      0.22157509941122377
+                    ],
+                    "status": "MEASURED",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      1015,
+                      564,
+                      1079,
+                      628
+                    ]
+                  },
+                  {
+                    "id": "r3c0",
+                    "quadrant": [
+                      0,
+                      1
+                    ],
+                    "reason": "support",
+                    "status": "UNAVAILABLE_PREMETRIC",
+                    "support_fraction": 0.62939453125,
+                    "xyxy": [
+                      198,
+                      746,
+                      262,
+                      810
+                    ]
+                  },
+                  {
+                    "id": "r3c1",
+                    "quadrant": [
+                      0,
+                      1
+                    ],
+                    "residual_px": 0.2594056994054126,
+                    "residual_xy_px": [
+                      0.14289687048520297,
+                      0.2164989637147171
+                    ],
+                    "status": "MEASURED",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      466,
+                      746,
+                      530,
+                      810
+                    ]
+                  },
+                  {
+                    "id": "r3c2",
+                    "quadrant": [
+                      1,
+                      1
+                    ],
+                    "residual_px": 0.27566956212425203,
+                    "residual_xy_px": [
+                      -0.187389810911166,
+                      -0.2021849802741398
+                    ],
+                    "status": "MEASURED",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      747,
+                      746,
+                      811,
+                      810
+                    ]
+                  },
+                  {
+                    "id": "r3c3",
+                    "quadrant": [
+                      1,
+                      1
+                    ],
+                    "residual_px": 0.2958497398808257,
+                    "residual_xy_px": [
+                      0.16828739323151234,
+                      -0.2433236977092337
+                    ],
+                    "status": "MEASURED",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      1015,
+                      746,
+                      1079,
+                      810
+                    ]
+                  }
+                ],
+                "valid_tiles": 14
+              },
+              {
+                "count": 14,
+                "frame_position": 2,
+                "maximum_px": 0.3146373855286793,
+                "median_px": 0.13143720938978548,
+                "p95_px": 0.2833653156567227,
+                "quadrants": 4,
+                "roundtrip_max_px": 0.0,
+                "status": "PASS",
+                "support_fraction": 0.9719517213002332,
+                "tiles": [
+                  {
+                    "id": "r0c0",
+                    "quadrant": [
+                      0,
+                      0
+                    ],
+                    "residual_px": 0.2565466591941038,
+                    "residual_xy_px": [
+                      -0.014051524909243093,
+                      0.25616155642754157
+                    ],
+                    "status": "MEASURED",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      198,
+                      201,
+                      262,
+                      265
+                    ]
+                  },
+                  {
+                    "id": "r0c1",
+                    "quadrant": [
+                      0,
+                      0
+                    ],
+                    "residual_px": 0.11863019798273369,
+                    "residual_xy_px": [
+                      -0.10822471388797582,
+                      0.04858533911879558
+                    ],
+                    "status": "MEASURED",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      466,
+                      201,
+                      530,
+                      265
+                    ]
+                  },
+                  {
+                    "id": "r0c2",
+                    "quadrant": [
+                      1,
+                      0
+                    ],
+                    "residual_px": 0.02398922433207737,
+                    "residual_xy_px": [
+                      0.016723346857195908,
+                      -0.017199202131164357
+                    ],
+                    "status": "MEASURED",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      747,
+                      201,
+                      811,
+                      265
+                    ]
+                  },
+                  {
+                    "id": "r0c3",
+                    "quadrant": [
+                      1,
+                      0
+                    ],
+                    "residual_px": 0.19788793434233978,
+                    "residual_xy_px": [
+                      -0.11322068443199558,
+                      0.16229821679559098
+                    ],
+                    "status": "MEASURED",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      1015,
+                      201,
+                      1079,
+                      265
+                    ]
+                  },
+                  {
+                    "id": "r1c0",
+                    "quadrant": [
+                      0,
+                      0
+                    ],
+                    "residual_px": 0.09316957312135363,
+                    "residual_xy_px": [
+                      -0.04548791479963128,
+                      0.08131063253226324
+                    ],
+                    "status": "MEASURED",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      198,
+                      383,
+                      262,
+                      447
+                    ]
+                  },
+                  {
+                    "id": "r1c1",
+                    "quadrant": [
+                      0,
+                      0
+                    ],
+                    "residual_px": 0.1408576461983317,
+                    "residual_xy_px": [
+                      -0.14077740323330176,
+                      0.004753864893194121
+                    ],
+                    "status": "MEASURED",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      466,
+                      383,
+                      530,
+                      447
+                    ]
+                  },
+                  {
+                    "id": "r1c2",
+                    "quadrant": [
+                      1,
+                      0
+                    ],
+                    "residual_px": 0.20529207232364602,
+                    "residual_xy_px": [
+                      -0.1722924065099422,
+                      0.11162509403333074
+                    ],
+                    "status": "MEASURED",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      747,
+                      383,
+                      811,
+                      447
+                    ]
+                  },
+                  {
+                    "id": "r1c3",
+                    "quadrant": [
+                      1,
+                      0
+                    ],
+                    "residual_px": 0.2665265088025922,
+                    "residual_xy_px": [
+                      -0.2609365226867817,
+                      -0.054300193578190305
+                    ],
+                    "status": "MEASURED",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      1015,
+                      383,
+                      1079,
+                      447
+                    ]
+                  },
+                  {
+                    "id": "r2c0",
+                    "quadrant": [
+                      0,
+                      1
+                    ],
+                    "residual_px": 0.3146373855286793,
+                    "residual_xy_px": [
+                      -0.2981291768837585,
+                      -0.10057672823737819
+                    ],
+                    "status": "MEASURED",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      198,
+                      564,
+                      262,
+                      628
+                    ]
+                  },
+                  {
+                    "id": "r2c1",
+                    "quadrant": [
+                      0,
+                      1
+                    ],
+                    "reason": "support",
+                    "status": "UNAVAILABLE_PREMETRIC",
+                    "support_fraction": 0.6123046875,
+                    "xyxy": [
+                      466,
+                      564,
+                      530,
+                      628
+                    ]
+                  },
+                  {
+                    "id": "r2c2",
+                    "quadrant": [
+                      1,
+                      1
+                    ],
+                    "residual_px": 0.11911123033655877,
+                    "residual_xy_px": [
+                      0.11597094338439456,
+                      0.027170305166160882
+                    ],
+                    "status": "MEASURED",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      747,
+                      564,
+                      811,
+                      628
+                    ]
+                  },
+                  {
+                    "id": "r2c3",
+                    "quadrant": [
+                      1,
+                      1
+                    ],
+                    "residual_px": 0.12201677258123927,
+                    "residual_xy_px": [
+                      -0.12168206651828284,
+                      -0.00903147158452341
+                    ],
+                    "status": "MEASURED",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      1015,
+                      564,
+                      1079,
+                      628
+                    ]
+                  },
+                  {
+                    "id": "r3c0",
+                    "quadrant": [
+                      0,
+                      1
+                    ],
+                    "reason": "support",
+                    "status": "UNAVAILABLE_PREMETRIC",
+                    "support_fraction": 0.62939453125,
+                    "xyxy": [
+                      198,
+                      746,
+                      262,
+                      810
+                    ]
+                  },
+                  {
+                    "id": "r3c1",
+                    "quadrant": [
+                      0,
+                      1
+                    ],
+                    "residual_px": 0.2132306846473831,
+                    "residual_xy_px": [
+                      -0.16110131697173555,
+                      0.13969141185185338
+                    ],
+                    "status": "MEASURED",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      466,
+                      746,
+                      530,
+                      810
+                    ]
+                  },
+                  {
+                    "id": "r3c2",
+                    "quadrant": [
+                      1,
+                      1
+                    ],
+                    "residual_px": 0.07854845837732251,
+                    "residual_xy_px": [
+                      -0.07811048497012943,
+                      -0.008283263317385848
+                    ],
+                    "status": "MEASURED",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      747,
+                      746,
+                      811,
+                      810
+                    ]
+                  },
+                  {
+                    "id": "r3c3",
+                    "quadrant": [
+                      1,
+                      1
+                    ],
+                    "residual_px": 0.06824483518070791,
+                    "residual_xy_px": [
+                      0.014723425114055846,
+                      0.0666376641378791
+                    ],
+                    "status": "MEASURED",
+                    "support_fraction": 1.0,
+                    "xyxy": [
+                      1015,
+                      746,
+                      1079,
+                      810
+                    ]
+                  }
+                ],
+                "valid_tiles": 14
+              }
+            ],
+            "reference": "independent_reserved_luminance_phase_tiles",
+            "refit_performed": false,
+            "status": "BLOCKED_REFERENCE_INSUFFICIENT"
+          },
+          "matrix": [
+            [
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "model": "M0_IDENTITY",
+          "optimization": {
+            "fit_performed": false
+          },
+          "status": "BLOCKED_REFERENCE_INSUFFICIENT"
+        }
+      ],
+      "selected_model": null,
+      "status": "BLOCKED_REFERENCE_INSUFFICIENT",
+      "validation": {
+        "reason": "NO_DEVELOPMENT_CANDIDATE",
+        "status": "NOT_OPENED"
+      }
+    }
+  },
+  "physical_conversion": false
+}

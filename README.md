@@ -8,6 +8,18 @@ research and presented at COBEM.
 
 ## Current authorization
 
+The 2026-09-18 [TI2R-FRAG decision](docs/decisions/AUTHORIZATION-TI2R-FRAG-2026-09-18.md)
+authorizes one integrated recovery attempt for ESM3→ESM1 and ESM6→ESM4.
+Its canonical state is `configs/authority/ti2r-frag.json`; the legacy
+`pyproject.toml [tool.snbi]` remains closed and never enables this new runner.
+See the [frozen protocol](docs/protocols/TI2R_FRAG_PROTOCOL.md) and
+[exposure record](artifacts/evidence/TI2R_FRAG/exposure.json).
+Only the existing 20 permitted pilot buffers may be used, after inactive
+implementation C1 and activation C2. C3 closes the authority before publication.
+No new decoding, ESM2/ESM5 access, physical conversion or TI-3+ work is allowed.
+The following PR #6 narrative records the preceding closed TI-2 state; its
+prohibitions are superseded only within this explicit TI2R-FRAG scope.
+
 **TI-0 — Governed Technical Bootstrap** and **TI-1 — Deterministic Audit** are
 formally complete. G1 and G2-TEMP were approved by the author. LB0 is **PASS**
 and SDR-2-A is **RESOLVED** after the successful real Codex sandbox smoke test.

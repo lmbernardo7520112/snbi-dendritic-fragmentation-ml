@@ -1,0 +1,20 @@
+{
+  "phase": "TI2R_FRAG",
+  "state": "CLOSED_CONSUMED",
+  "authorization_id": "TI2R-FRAG-2026-09-18",
+  "authorized_branch": "feat/ti2r-frag-registration",
+  "base_sha": "0245faf74aa15424d95d43f92e87b32a06ac987b",
+  "allowed_pairs": ["ESM3-to-ESM1", "ESM6-to-ESM4"],
+  "allowed_frame_indices": {
+    "ESM1": {"development": [0, 146, 293], "validation": [73, 219]},
+    "ESM3": {"development": [0, 146, 293], "validation": [73, 219]},
+    "ESM4": {"development": [0, 197, 394], "validation": [98, 295]},
+    "ESM6": {"development": [0, 197, 394], "validation": [98, 295]}
+  },
+  "max_invocations": 1,
+  "validation_policy": "OPEN_ONCE_AFTER_FREEZE",
+  "current_authorized_activity": "NONE_AWAITING_AUTHOR_DECISION",
+  "ti2r_execution_authorized": false,
+  "ti3_plus_authorized": false,
+  "merge_authorized": false
+}

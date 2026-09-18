@@ -6,11 +6,26 @@ SDR-2-A is RESOLVED. No further sandbox diagnostic or OS remediation is authoriz
 
 ## Current authority
 
+The explicit 2026-09-18 [TI2R-FRAG decision](docs/decisions/AUTHORIZATION-TI2R-FRAG-2026-09-18.md)
+supersedes the older branch/write restrictions only for its three-commit,
+one-invocation scope on `feat/ti2r-frag-registration`. Its separate canonical
+authority is `configs/authority/ti2r-frag.json`; consult its current state,
+not this documentary summary. The [frozen protocol](docs/protocols/TI2R_FRAG_PROTOCOL.md)
+limits access to 20 existing ESM1/3/4/6 assets, with conditional validation.
+No old TI-2 API or authority is reactivated. The new validator requires the
+legacy authority to remain closed before accepting its own active state.
+C1 is inactive; C2 activates only one receipt-protected invocation; C3 consumes
+it permanently before any push or Draft PR. No scientific edits after C2.
+The previous single-commit maintenance constraints below are historical to
+PR #6; other filesystem, data, sandbox and publication boundaries still apply.
+The newer decision expressly permits the new branch, exact staging, three
+commits, bounded execution, fast-forward push and a Draft PR, never its merge.
+
 The author approved TI2-CLOSEOUT-1 as PASS. The scientific attempt remains
 blocked, preserved at `f3c6da78b04299475c7bb85e986eb7435b08bd22`; published
 closeout is `a1d675f5dbbe3862621aebad2bcb80ab7584858d`.
 
-**The sole canonical active-state source is `pyproject.toml [tool.snbi]`.**
+**The canonical legacy authority remains `pyproject.toml [tool.snbi]`.**
 This block is a documentary mirror, not an alternative authorization source:
 
 ```text
