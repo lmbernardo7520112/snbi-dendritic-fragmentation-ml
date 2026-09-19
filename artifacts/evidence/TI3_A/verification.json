@@ -1,0 +1,172 @@
+{
+  "verified_at_utc": "2026-09-19T11:14:16.644309+00:00",
+  "phase_0": "PASS",
+  "branch": "feat/ti3-canonical-dataset-baseline",
+  "head": "67786bd4e23406e7f19860a53fe237e6d7b648cb",
+  "main": "67786bd4e23406e7f19860a53fe237e6d7b648cb",
+  "origin_main": "67786bd4e23406e7f19860a53fe237e6d7b648cb",
+  "tracked_content_diff_from_baseline": false,
+  "frozen_scientific_files": [
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha256": "404f90eb4f3789f741b5f369e61661673d4691df2164270cd67306c4beb9c75f",
+      "identical_to_C1_C2": true
+    },
+    {
+      "path": "artifacts/evidence/TI2R_SOLUTE_DIRECT/result.json",
+      "sha256": "485c5a8da36a421927fc50165dbfadf4b87981223f47de6518c16e4c03d28c95",
+      "identical_to_C1_C2": true
+    },
+    {
+      "path": "artifacts/evidence/TI2R_SOLUTE_V2/exposure.json",
+      "sha256": "1555e6440535e9d13575e115f8e0afbaa028d152ae8df042c2c76adaff82bf42",
+      "identical_to_C1_C2": true
+    },
+    {
+      "path": "artifacts/metadata/ti2-pilot-manifest.json",
+      "sha256": "4f84a50e65e7541729d9a6c58e2649a872d6a92e55b305a66a0ce4e9f63a09a9",
+      "identical_to_C1_C2": true
+    },
+    {
+      "path": "configs/authority/ti2r-frag-direct.json",
+      "sha256": "4133dd7b7e4af85769ed1a0fa28f32202f4082f9e9d3e0320a7194556c6abf6c",
+      "identical_to_C1_C2": true
+    },
+    {
+      "path": "configs/authority/ti2r-frag.json",
+      "sha256": "d62571e33696af63e1425e3add370efcf5a642ced99dd52cfa3897ec3be93816",
+      "identical_to_C1_C2": true
+    },
+    {
+      "path": "configs/authority/ti2r-solute-direct.json",
+      "sha256": "f329923a4ab406f5bc819aa301e2e5f7289a59a6959af08b075b7f9cf69f0b3f",
+      "identical_to_C1_C2": true
+    },
+    {
+      "path": "configs/authority/ti2r-solute-v2.json",
+      "sha256": "6351a15e26c2a0c3bc22642c5eb3e0b539de576dffd242721d9a82101625039a",
+      "identical_to_C1_C2": true
+    },
+    {
+      "path": "configs/registration/ti2r-solute-direct-method.json",
+      "sha256": "cf024e61cd12c1d21377a6d64aa9529f2e90686b3879fa2221aca34c4cdd772f",
+      "identical_to_C1_C2": true
+    },
+    {
+      "path": "configs/registration/ti2r-solute-v2-method.json",
+      "sha256": "da6ee2e6ca457a92ec2e3f0185a9b36720472d506426a19ab78f15fe8a4b2b14",
+      "identical_to_C1_C2": true
+    },
+    {
+      "path": "docs/decisions/AUTHORIZATION-TI2R-SOLUTE-V2-D-2026-09-18.md",
+      "sha256": "ebab0cff2cf7747a97b52b6c85fcd7a014cb503156de12d7efe534ae5bd7cc0c",
+      "identical_to_C1_C2": true
+    },
+    {
+      "path": "docs/protocols/TI2R_SOLUTE_V2_PROTOCOL.md",
+      "sha256": "8c4a947001160603d731c9a0e5dd2114a66decc67636b39a94028ae8a6b33eeb",
+      "identical_to_C1_C2": true
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "3d4195d69c33c9d18dd0c0c64ffb937f9e7cd3549c3d4c76dbebb05b9242fcc1",
+      "identical_to_C1_C2": true
+    },
+    {
+      "path": "scripts/run_ti2r_solute_v2.py",
+      "sha256": "e07e50e65c856fe6f8b03076870647dfecee4a68c2c1af22c49d580eb976b4b8",
+      "identical_to_C1_C2": true
+    },
+    {
+      "path": "scripts/run_ti2r_solute_v2_synthetic.py",
+      "sha256": "51f4972af89865ccddf0ba665af2a6fcdeaac9fb4a4fbc4c32b4903422373fd1",
+      "identical_to_C1_C2": true
+    },
+    {
+      "path": "src/snbi_fragmentation/ti2_authority.py",
+      "sha256": "bcc9a586555b78c1c55341a43b66a40ac6ad4953714fa2273dd99ac0a78471f3",
+      "identical_to_C1_C2": true
+    },
+    {
+      "path": "src/snbi_fragmentation/ti2r_frag_authority.py",
+      "sha256": "f030046d6b4a6bc392e9e14c4e871d6581c99cdcbf927f31535e322c49c45a42",
+      "identical_to_C1_C2": true
+    },
+    {
+      "path": "src/snbi_fragmentation/ti2r_frag_direct_authority.py",
+      "sha256": "ec62a88a42ca4f84530103848e39927fc320fed7117039d8c57615abdb3bf6fb",
+      "identical_to_C1_C2": true
+    },
+    {
+      "path": "src/snbi_fragmentation/ti2r_solute_direct_authority.py",
+      "sha256": "77a33c74594dc5050ddbef1720b42f29103aa02b5b51686da7c2ca4bcbe87955",
+      "identical_to_C1_C2": true
+    },
+    {
+      "path": "src/snbi_fragmentation/ti2r_solute_direct_registration.py",
+      "sha256": "5cdd336e9f21e4f26631dbb29445d5cb92e9b2724482d7a90e085b589ca75450",
+      "identical_to_C1_C2": true
+    },
+    {
+      "path": "src/snbi_fragmentation/ti2r_solute_v2_authority.py",
+      "sha256": "44c1e0f462422b30ba59c5c1b1721df102520f04dd451b64aaa4008b47b87027",
+      "identical_to_C1_C2": true
+    },
+    {
+      "path": "src/snbi_fragmentation/ti2r_solute_v2_calibration.py",
+      "sha256": "223dccf6a2e565b4b8b487c55a35d4c88ee3c8cab5c0b304dcfd90ad0b88bc2b",
+      "identical_to_C1_C2": true
+    },
+    {
+      "path": "tests/test_ti2r_solute_v2_authority.py",
+      "sha256": "56c82074336c1e9115c4911e6a114a6e7101bc48a66b218c11783d2ce6d160f4",
+      "identical_to_C1_C2": true
+    },
+    {
+      "path": "tests/test_ti2r_solute_v2_calibration.py",
+      "sha256": "db75c6ee78fe15689aeea5743e60ed3dd82afcc48ea9448823925ff882c1847e",
+      "identical_to_C1_C2": true
+    },
+    {
+      "path": "tests/test_ti2r_solute_v2_execution.py",
+      "sha256": "62aaba06d05c23cb3abcb15cd6148e2590c7c590d659b8374e5fef17cda1f92a",
+      "identical_to_C1_C2": true
+    }
+  ],
+  "frozen_file_count": 25,
+  "frozen_status": "PASS",
+  "experimental_open_count": 0,
+  "experimental_bytes_read": 0,
+  "python_version": "3.12.3",
+  "scientific_kernels_imported": false,
+  "interpretation": "Textual custody verification only; no experimental result recomputed.",
+  "documentary_closeout_validation": {
+    "status": "PASS",
+    "new_text_files": [
+      "artifacts/evidence/TI3_A/authorization.md",
+      "artifacts/evidence/TI3_A/commands.json",
+      "artifacts/evidence/TI3_A/environment.json",
+      "artifacts/evidence/TI3_A/execution-report.md",
+      "artifacts/evidence/TI3_A/results.json",
+      "artifacts/evidence/TI3_A/verification.json"
+    ],
+    "new_file_count": 6,
+    "valid_json_files": 4,
+    "tracked_files_changed": 0,
+    "staged_files": 0,
+    "head_main_origin_equal": true,
+    "scientific_runs": 0,
+    "experimental_opens": 0,
+    "final_test": "NOT_DEFINED_NOT_OPENED",
+    "checks_scope": "UTF-8/JSON/schema-state consistency, exact new-file allowlist, bounded text pattern checks and Git state; not a universal secret audit."
+  },
+  "independent_documentary_review": {
+    "status": "PASS",
+    "scope": [
+      "execution-report.md",
+      "results.json"
+    ],
+    "scientific_reexecution": false,
+    "remarks": "No confusion between buffers and samples; final test not falsely declared SEALED; temporal internal split possibility explicitly preserved."
+  }
+}

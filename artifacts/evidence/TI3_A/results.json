@@ -1,0 +1,104 @@
+{
+  "schema_version": "1.0.0",
+  "phase": "TI3_A",
+  "state": "BLOCKED_METHOD_PRECONDITIONS",
+  "branch": "feat/ti3-canonical-dataset-baseline",
+  "head": "67786bd4e23406e7f19860a53fe237e6d7b648cb",
+  "baseline": "67786bd4e23406e7f19860a53fe237e6d7b648cb",
+  "phase_0": "PASS",
+  "blocked_at_phase": "1_DOMAIN_PRECONDITIONS",
+  "blockers": [
+    {
+      "id": "B1",
+      "status": "TARGET_CONTRACT_NOT_VERIFIED",
+      "evidence": [
+        "configs/sources/source_manifest.json",
+        "docs/protocols/TI2_CONTRACT_MATRIX.md:ANN-201",
+        "artifacts/evidence/TI2R_FRAG_DIRECT/execution-report.md"
+      ],
+      "details": "Cumulative location annotations are documented; a validated ML target schema and event/negative/persistence/ambiguity/horizon rules were not found in audited tracked texts."
+    },
+    {
+      "id": "B2",
+      "status": "SPLIT_ASSUMPTIONS_UNRESOLVED",
+      "details": "Two documented acquisition groups cannot populate three nonempty acquisition-disjoint partitions. A temporal internal split requires justified target/context/horizon/embargo and an explicit evaluation claim."
+    },
+    {
+      "id": "B3",
+      "status": "FINAL_TEST_IDS_NOT_DEFINED",
+      "details": "No final-test IDs frozen or opened. Prior solute holdout is CONSUMED; no globally virgin test is claimed."
+    }
+  ],
+  "what_is_one_sample": null,
+  "input_candidates": {
+    "structural": [
+      "ESM1",
+      "ESM4"
+    ],
+    "relative_solutal": [
+      "ESM2",
+      "ESM5"
+    ]
+  },
+  "target": null,
+  "validated_labeled_sample_count": null,
+  "samples_materialized": 0,
+  "documented_inventory": {
+    "pilot_buffers": 30,
+    "documented_acquisition_groups": 2,
+    "pilot_time_groups": 10,
+    "additional_independent_acquisitions": "NOT_VERIFIED",
+    "source_frame_counts": {
+      "ESM1": 294,
+      "ESM2": 294,
+      "ESM3": 294,
+      "ESM4": 395,
+      "ESM5": 395,
+      "ESM6": 395
+    },
+    "note": "Source frame counts and pilot buffer counts are not ML sample counts; no source reopened."
+  },
+  "split": {
+    "status": "NOT_DEFINED",
+    "seed": null,
+    "train_ids": null,
+    "development_ids": null,
+    "final_test_ids": null
+  },
+  "metrics": {
+    "status": "NOT_FROZEN",
+    "primary": null,
+    "secondary": null
+  },
+  "curricular_alignment": "NOT_REACHED",
+  "lbp_rf_decision": "NOT_DELIBERATED_BLOCKED_TARGET",
+  "baseline_model": null,
+  "baseline_parameters": null,
+  "runs": {
+    "technical_ml_runs": 0,
+    "scientific_baseline_runs": 0,
+    "scientific_retries": 0,
+    "experimental_opens": 0,
+    "experimental_bytes_read": 0
+  },
+  "train_results": null,
+  "development_results": null,
+  "final_test": "NOT_DEFINED_NOT_OPENED",
+  "ci": {
+    "ti3": "NOT_RUN",
+    "baseline": "HISTORICALLY_VERIFIED_PASS_NOT_RECONSULTED",
+    "baseline_run": 35413304435
+  },
+  "preserved": {
+    "G2_FRAG": "PASS_DIRECT_RASTER_MAPPING",
+    "G2_SOLUTE": "PASS",
+    "HOLDOUT_SOLUTE": "CONSUMED",
+    "frozen_scientific_files": 25,
+    "all_frozen_files_byte_identical": true
+  },
+  "MODEL_SELECTION": "NOT_STARTED",
+  "TI3_B_READY_FOR_AUTHOR_DECISION": false,
+  "TI3_B_AUTHORIZED": false,
+  "MERGE_AUTHORIZED": false,
+  "CURRENT_AUTHORIZED_ACTIVITY": "NONE_AWAITING_AUTHOR_DECISION"
+}

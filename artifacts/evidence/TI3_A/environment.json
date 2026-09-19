@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "phase": "TI3_A",
+  "observed_at_utc": "2026-09-19T11:14:16.644309+00:00",
+  "python_version": "3.12.3",
+  "local_execution": "default_sandbox",
+  "git_metadata_operations": "individually_approved_exact_commands",
+  "network_operations": [
+    "git fetch --no-tags origin refs/heads/main:refs/remotes/origin/main"
+  ],
+  "package_installations": 0,
+  "ml_dependencies": "NOT_INSPECTED",
+  "system_configuration_changes": 0,
+  "scientific_kernels_imported": false,
+  "experimental_access": false,
+  "purpose": "Operational/documentary block report; not a verified training environment."
+}
