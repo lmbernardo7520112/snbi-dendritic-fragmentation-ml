@@ -1,0 +1,80 @@
+{
+  "phase": "TI2R_SOLUTE_HOLDOUT",
+  "cli_invocations": 1,
+  "scientific_invocations": 0,
+  "retries": 0,
+  "receipt_created": false,
+  "files_opened": 0,
+  "open_count": 0,
+  "open_attempts": 0,
+  "content_bytes_read": 0,
+  "development_open_count": 0,
+  "development_content_bytes_read": 0,
+  "assets": [
+    {
+      "asset_id": "ESM1:73",
+      "path": "data/derived/ti2-pilot/ESM1-0073.raw",
+      "expected_bytes": 1951506,
+      "open_count": 0,
+      "content_bytes_read": 0,
+      "status": "NOT_OPENED"
+    },
+    {
+      "asset_id": "ESM1:219",
+      "path": "data/derived/ti2-pilot/ESM1-0219.raw",
+      "expected_bytes": 1951506,
+      "open_count": 0,
+      "content_bytes_read": 0,
+      "status": "NOT_OPENED"
+    },
+    {
+      "asset_id": "ESM2:73",
+      "path": "data/derived/ti2-pilot/ESM2-0073.raw",
+      "expected_bytes": 1951506,
+      "open_count": 0,
+      "content_bytes_read": 0,
+      "status": "NOT_OPENED"
+    },
+    {
+      "asset_id": "ESM2:219",
+      "path": "data/derived/ti2-pilot/ESM2-0219.raw",
+      "expected_bytes": 1951506,
+      "open_count": 0,
+      "content_bytes_read": 0,
+      "status": "NOT_OPENED"
+    },
+    {
+      "asset_id": "ESM4:98",
+      "path": "data/derived/ti2-pilot/ESM4-0098.raw",
+      "expected_bytes": 1940004,
+      "open_count": 0,
+      "content_bytes_read": 0,
+      "status": "NOT_OPENED"
+    },
+    {
+      "asset_id": "ESM4:295",
+      "path": "data/derived/ti2-pilot/ESM4-0295.raw",
+      "expected_bytes": 1940004,
+      "open_count": 0,
+      "content_bytes_read": 0,
+      "status": "NOT_OPENED"
+    },
+    {
+      "asset_id": "ESM5:98",
+      "path": "data/derived/ti2-pilot/ESM5-0098.raw",
+      "expected_bytes": 1940004,
+      "open_count": 0,
+      "content_bytes_read": 0,
+      "status": "NOT_OPENED"
+    },
+    {
+      "asset_id": "ESM5:295",
+      "path": "data/derived/ti2-pilot/ESM5-0295.raw",
+      "expected_bytes": 1940004,
+      "open_count": 0,
+      "content_bytes_read": 0,
+      "status": "NOT_OPENED"
+    }
+  ],
+  "evidence": "Runner returned from preflight at CONFIGURATION_DIVERGENCE, before O_EXCL receipt and AccountedReader creation. No experimental path was inspected."
+}

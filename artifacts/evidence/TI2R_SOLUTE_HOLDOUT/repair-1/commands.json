@@ -1,0 +1,285 @@
+{
+  "phase": "TI2R_SOLUTE_HOLDOUT_REPAIR_1",
+  "initial_head": "7994771e239afdb998a644626c423c1c627f80a0",
+  "repair_head": "febaa56efdcec210f6efb0d456ab1558bce7fe43",
+  "root_commands": [
+    {
+      "cmd": "cat <new operator authorization attachment>",
+      "exit_code": 0
+    },
+    {
+      "cmd": "git status --short --branch",
+      "exit_code": 0
+    },
+    {
+      "cmd": "git rev-parse HEAD",
+      "exit_code": 0
+    },
+    {
+      "cmd": "cat AGENTS.md",
+      "exit_code": 0
+    },
+    {
+      "cmd": "cat scripts/run_ti2r_solute_locked_holdout.py",
+      "exit_code": 0
+    },
+    {
+      "cmd": "cat artifacts/evidence/TI2R_SOLUTE_HOLDOUT/terminal-state.json",
+      "exit_code": 0
+    },
+    {
+      "cmd": "rg -n 'JSON.stringify|configurations|frozen-manifest' artifacts/evidence/TI2R_SOLUTE_HOLDOUT/commands.json",
+      "exit_code": 0
+    },
+    {
+      "cmd": "/usr/bin/python3 -B scripts/check_repository_data.py",
+      "exit_code": 0
+    },
+    {
+      "tool": "apply_patch",
+      "paths": [
+        "scripts/run_ti2r_solute_locked_holdout.py",
+        "tests/test_ti2r_solute_holdout_manifest.py"
+      ],
+      "purpose": "typed Python manifest encoder and exact new authorization execution binding; minimal regression tests"
+    },
+    {
+      "cmd": "PYTHONPATH=src /usr/bin/python3 -S -B -m unittest discover -s tests -p test_ti2r_solute_holdout_manifest.py -v",
+      "exit_code": 0
+    },
+    {
+      "cmd": "git diff -- scripts/run_ti2r_solute_locked_holdout.py",
+      "exit_code": 0
+    },
+    {
+      "cmd": "/usr/bin/python3 -B - <<'PY'\nfrom pathlib import Path\nimport hashlib,json,subprocess,os\np=Path('artifacts/evidence/TI2R_SOLUTE_HOLDOUT')\nm=json.loads((p/'frozen-manifest.json').read_text())\nfor path,digest in m['scientific_hashes'].items():\n raw=Path(path).read_bytes()\n assert hashlib.sha256(raw).hexdigest()==digest\n for sha in ('e1a98917a20431ecc1c758f210b5e974b3533734','0b820bc61e6dae3b7a98654a3b7d5cd292ca925e'):\n  assert raw==subprocess.check_output(['git','show',sha+':'+path])\nassert not subprocess.check_output(['git','diff','7994771e239afdb998a644626c423c1c627f80a0','--',str(p)])\nassert not subprocess.check_output(['git','diff','7994771e239afdb998a644626c423c1c627f80a0','--','scripts/ti2r_solute_locked_evaluator.py'])\ntry: os.lstat(p/'receipt.json')\nexcept FileNotFoundError: pass\nelse: raise AssertionError('Previous receipt unexpectedly exists')\nprint(json.dumps({'frozen_scientific_files':len(m['scientific_hashes']),'byte_identical_C1_C2':True,'prior_evidence_unchanged':True,'evaluator_unchanged':True,'previous_receipt_present':False,'experimental_reads':0}))\nPY",
+      "exit_code": 0
+    },
+    {
+      "cmd": "gh api repos/lmbernardo7520112/snbi-dendritic-fragmentation-ml/pulls/10 --jq '{number:.number,state:.state,draft:.draft,merged:.merged,repository:.base.repo.full_name,base:.base.ref,base_sha:.base.sha,head:.head.ref,head_sha:.head.sha}'",
+      "exit_code": 0,
+      "boundary": "read-only GitHub"
+    },
+    {
+      "cmd": "gh run view 35399554524 --repo lmbernardo7520112/snbi-dendritic-fragmentation-ml --json databaseId,event,headSha,status,conclusion,jobs,url",
+      "exit_code": 0,
+      "boundary": "read-only GitHub"
+    },
+    {
+      "cmd": "gh run view 35399558120 --repo lmbernardo7520112/snbi-dendritic-fragmentation-ml --json databaseId,event,headSha,status,conclusion,jobs,url",
+      "exit_code": 0,
+      "boundary": "read-only GitHub"
+    },
+    {
+      "cmd": "TMPDIR=.bootstrap-test-tmp PYTHONPATH=src /usr/bin/python3 -S -B -m unittest discover -s tests -q",
+      "exit_code": 0,
+      "output": "----------------------------------------------------------------------\nRan 426 tests in 1.564s\n\nOK (skipped=86)\n"
+    },
+    {
+      "cmd": "git diff --check",
+      "exit_code": 0
+    },
+    {
+      "cmd": "git add -- scripts/run_ti2r_solute_locked_holdout.py tests/test_ti2r_solute_holdout_manifest.py",
+      "exit_code": 0,
+      "boundary": "targeted Git approval"
+    },
+    {
+      "cmd": "git diff --cached --stat",
+      "exit_code": 0,
+      "output": " scripts/run_ti2r_solute_locked_holdout.py  | 54 +++++++++++++++++++++---------\n tests/test_ti2r_solute_holdout_manifest.py | 44 ++++++++++++++++++++++++\n 2 files changed, 83 insertions(+), 15 deletions(-)\n"
+    },
+    {
+      "cmd": "git diff --cached --check",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "cmd": "/usr/bin/python3 -B scripts/check_repository_data.py",
+      "exit_code": 0,
+      "output": "{\n  \"audit\": \"tracked_repository_data_guard\",\n  \"content_bytes_read\": 0,\n  \"examined_entry_count\": 265,\n  \"status\": \"PASS\",\n  \"violations\": []\n}\n"
+    },
+    {
+      "cmd": "git commit -m 'fix(solute): preserve typed holdout manifests for authorized preflight'",
+      "exit_code": 0,
+      "boundary": "targeted Git approval"
+    },
+    {
+      "cmd": "git rev-parse HEAD",
+      "exit_code": 0
+    },
+    {
+      "tool": "apply_patch",
+      "paths": [
+        "artifacts/evidence/TI2R_SOLUTE_HOLDOUT/repair-1/authorization.md",
+        "artifacts/evidence/TI2R_SOLUTE_HOLDOUT/repair-1/verification.json",
+        "artifacts/evidence/TI2R_SOLUTE_HOLDOUT/repair-1/PRE_EXECUTION_AUDIT.md"
+      ],
+      "purpose": "new decision, preparation audit and verification; historical evidence untouched"
+    },
+    {
+      "cmd": "PYTHONPATH=src /usr/bin/python3 -B - <<'PY'\nimport hashlib,importlib.util,json,subprocess\nfrom pathlib import Path\nspec=importlib.util.spec_from_file_location('holdout','scripts/run_ti2r_solute_locked_holdout.py')\nr=importlib.util.module_from_spec(spec); spec.loader.exec_module(r)\nroot=Path.cwd()\nold='artifacts/evidence/TI2R_SOLUTE_HOLDOUT/frozen-manifest.json'\nm=json.loads(r.safe._read_regular(root,old))\nm['head_sha']=subprocess.check_output(['git','rev-parse','HEAD']).decode().strip()\nm['authorization_id']='TI2R_SOLUTE_PREFLIGHT_REPAIR_1'\nm['initial_checkpoint']=r.CHECKPOINT\nm['current_authorization']={'first_scientific_holdout_execution':True,'maximum_scientific_executions':1,'automatic_retry':False,'ti3_plus_authorized':False,'merge_authorized':False,'allowed_assets':sorted(r.ASSET_IDS)}\nm['counter_history']={'PREVIOUS_CLI_INVOCATIONS':1,'PREVIOUS_SCIENTIFIC_HOLDOUT_EXECUTIONS':0}\nm['ci_evidence']=json.loads(r.safe._read_regular(root,r.EVIDENCE+'/verification.json'))['ci_evidence']\nm['operational_hashes']={path:hashlib.sha256(r.safe._read_regular(root,path)).hexdigest() for path in sorted(r.OPERATIONAL_PATHS)}\nconfigs={name:json.loads(r.safe._read_regular(root,path)) for name,path in (('v1',r.V1_CONFIG),('v2',r.V2_CONFIG))}\nencoded=r.encode_manifest(m,configs)\nroundtrip=json.loads(encoded)\nassert r.safe._exact(roundtrip['configurations'],configs)\nfields=('minimum_entropy_bits','saturation_low_y','saturation_high_y','median_limit_px','p95_limit_px','maximum_limit_px')\nassert all(type(roundtrip['configurations']['v1'][field]) is float for field in fields)\nfor path,digest in m['scientific_hashes'].items():\n raw=r.safe._read_regular(root,path)\n assert hashlib.sha256(raw).hexdigest()==digest\n assert raw==subprocess.check_output(['git','show',r.C1+':'+path])\nr.safe._write_exclusive(root,r.MANIFEST,encoded)\nhashes={**m['scientific_hashes'],**m['operational_hashes'],r.MANIFEST:hashlib.sha256(encoded).hexdigest()}\nr.safe._write_exclusive(root,r.EVIDENCE+'/frozen-hashes.sha256',''.join(digest+'  '+path+'\\n' for path,digest in sorted(hashes.items())).encode())\n# Complete read-only operational preflight; this never creates a receipt or reader.\nchecked,_,assets,versions,_=r.preflight(root)\nassert checked==encoded and len(assets)==8\nprint(json.dumps({'PRE_HOLDOUT_GATE':'PASS','head_sha':m['head_sha'],'manifest_sha256':hashlib.sha256(encoded).hexdigest(),'scientific_frozen_files':len(m['scientific_hashes']),'operational_hashes':len(m['operational_hashes']),'checksum_count':len(hashes),'field_types':{field:type(roundtrip['configurations']['v1'][field]).__name__ for field in fields},'field_values':{field:roundtrip['configurations']['v1'][field] for field in fields},'dependencies':versions,'operational_preflight_calls':1,'runner_cli_invocations_this_authorization':0,'scientific_executions':0,'experimental_opens':0,'experimental_bytes':0},indent=2))\nPY",
+      "exit_code": 0,
+      "output": "{\n  \"PRE_HOLDOUT_GATE\": \"PASS\",\n  \"head_sha\": \"febaa56efdcec210f6efb0d456ab1558bce7fe43\",\n  \"manifest_sha256\": \"54ca71aaf8f38877a3ad2944d67b4fc31c0b6212e855ef185207bac992a9a101\",\n  \"scientific_frozen_files\": 25,\n  \"operational_hashes\": 6,\n  \"checksum_count\": 32,\n  \"field_types\": {\n    \"minimum_entropy_bits\": \"float\",\n    \"saturation_low_y\": \"float\",\n    \"saturation_high_y\": \"float\",\n    \"median_limit_px\": \"float\",\n    \"p95_limit_px\": \"float\",\n    \"maximum_limit_px\": \"float\"\n  },\n  \"field_values\": {\n    \"minimum_entropy_bits\": 1.0,\n    \"saturation_low_y\": 16.0,\n    \"saturation_high_y\": 235.0,\n    \"median_limit_px\": 1.0,\n    \"p95_limit_px\": 2.0,\n    \"maximum_limit_px\": 3.0\n  },\n  \"dependencies\": {\n    \"numpy\": \"1.26.4\",\n    \"scipy\": \"1.11.4\"\n  },\n  \"operational_preflight_calls\": 1,\n  \"runner_cli_invocations_this_authorization\": 0,\n  \"scientific_executions\": 0,\n  \"experimental_opens\": 0,\n  \"experimental_bytes\": 0\n}\n",
+      "boundary": "manifest serialization and full read-only preflight; no main/receipt/pixels"
+    },
+    {
+      "cmd": "PYTHONPATH=src /usr/bin/python3 -B scripts/run_ti2r_solute_locked_holdout.py",
+      "exit_code": 0,
+      "output": "{\"CURRENT_AUTHORIZED_ACTIVITY\": \"NONE_AWAITING_AUTHOR_DECISION\", \"G2_FRAG\": \"PASS_DIRECT_RASTER_MAPPING\", \"G2_SOLUTE\": \"PASS\", \"HOLDOUT_RUN_ATTEMPT\": 1, \"HOLDOUT_SOLUTE\": \"CONSUMED\", \"MERGE_AUTHORIZED\": false, \"SOLUTAL_PROTOCOL\": \"VALIDATED_ON_LOCKED_HOLDOUT\", \"STATE\": \"CLOSED\", \"TI2R_EXECUTION_AUTHORIZED\": false, \"TI2R_SOLUTE_HOLDOUT\": \"PASS\", \"TI2R_SOLUTE_HOLDOUT_AUTHORIZED\": false, \"TI3_PLUS_AUTHORIZED\": false, \"branch\": \"feat/ti2r-solute-v2-calibration\", \"content_bytes_read\": 15566040, \"files_opened\": 8, \"head_sha\": \"febaa56efdcec210f6efb0d456ab1558bce7fe43\", \"incident\": null, \"open_count\": 8, \"pair_statuses\": {\"ESM2-to-ESM1\": {\"cases\": [{\"source_index\": 73, \"status\": \"PASS\"}, {\"source_index\": 219, \"status\": \"PASS\"}], \"status\": \"PASS\"}, \"ESM5-to-ESM4\": {\"cases\": [{\"source_index\": 98, \"status\": \"PASS\"}, {\"source_index\": 295, \"status\": \"PASS\"}], \"status\": \"PASS\"}}, \"phase\": \"TI2R_SOLUTE_HOLDOUT\", \"retries\": 0}\n",
+      "boundary": "first scientific holdout execution in default sandbox; no retry"
+    },
+    {
+      "cmd": "/usr/bin/python3 -B - <<'PY'\nfrom pathlib import Path\nimport json\np=Path('artifacts/evidence/TI2R_SOLUTE_HOLDOUT/repair-1')\nr=json.loads((p/'results.json').read_text())\nprint('TOP',json.dumps({k:v for k,v in r.items() if k not in ('pairs','io_audit')},indent=2))\nfor pair,value in r['pairs'].items():\n print('PAIR_KEYS',pair,list(value))\n for f in value['per_frame']:\n  print('FRAME',f['source_index'],f['status'],json.dumps(f['criteria']))\n  for metric in ('SS8','NGF'):\n   original=f['original'][metric]; calibration=f['calibration'][metric]\n   print('ORIGINAL',metric,json.dumps({k:v for k,v in original.items() if k!='raw_v1'},indent=2))\n   print('CALIBRATION_SUMMARY',metric,json.dumps({k:v for k,v in calibration.items() if k not in ('perturbations','blocks','identity_control')},indent=2))\n   print('RECOVERY_KEYS',list(calibration['perturbations'][0]))\n  break\n break\nprint('TERMINAL', (p/'terminal-state.json').read_text())\nPY",
+      "exit_code": 0,
+      "boundary": "text-only results inspection after science closed"
+    },
+    {
+      "cmd": "/usr/bin/python3 -B - <<'PY'\nfrom pathlib import Path\nimport json\nr=json.loads(Path('artifacts/evidence/TI2R_SOLUTE_HOLDOUT/repair-1/results.json').read_text())\nfor name,p in r['pairs'].items():\n for f in p['per_frame']:\n  row={'pair':name,'index':f['source_index'],'status':f['status'],'classification':f['classification'],'metrics':{}}\n  for metric in ('SS8','NGF'):\n   o=f['original'][metric]; raw=o['raw_v1']; c=f['calibration'][metric]; pert=c['perturbations']\n   row['metrics'][metric]={'raw_original_fields':{k:v for k,v in raw.items() if not isinstance(v,(list,dict))},'raw_original_keys':list(raw),'recoveries':c['correct_recoveries'],'minimum_recovery_margin':min(t['margin'] for t in pert),'max_discrete_error':max(t['recovery_error_px'] for t in pert),'ranks':sorted(set(t['correct_rank'] for t in pert)),'all_unique':all(t['unique_maximum'] for t in pert),'blocks':c['available_blocks'],'quadrants':len(c['quadrants']),'eligible_temporal_controls':o['eligible_temporal_controls']}\n  print(json.dumps(row))\nPY",
+      "exit_code": 0,
+      "boundary": "text-only numeric summary; no pixel analysis"
+    },
+    {
+      "cmd": "/usr/bin/python3 -B - <<'PY'\nfrom pathlib import Path\nimport hashlib,json,subprocess\np=Path('artifacts/evidence/TI2R_SOLUTE_HOLDOUT/repair-1')\nm=json.loads((p/'frozen-manifest.json').read_text()); r=json.loads((p/'results.json').read_text()); receipt=(p/'receipt.json').read_bytes(); t=json.loads((p/'terminal-state.json').read_text()); io=json.loads((p/'io-audit.json').read_text())\nfor path,digest in {**m['scientific_hashes'],**m['operational_hashes']}.items():\n assert hashlib.sha256(Path(path).read_bytes()).hexdigest()==digest,path\nassert hashlib.sha256(receipt).hexdigest()==r['receipt_sha256']==t['receipt_sha256']\nassert hashlib.sha256((p/'frozen-manifest.json').read_bytes()).hexdigest()==r['manifest_sha256']==json.loads(receipt)['manifest_sha256']\nassert r['io_audit']==io==t['io_audit']\nassert r['SCIENTIFIC_HOLDOUT_EXECUTIONS']==t['SCIENTIFIC_HOLDOUT_EXECUTIONS']==1\nassert r['TOTAL_CLI_INVOCATIONS']==t['TOTAL_CLI_INVOCATIONS']==2\nassert io['open_count']==io['files_opened']==8 and io['content_bytes_read']==15566040\nassert all(a['open_count']==a['open_attempts']==1 and a['status']=='AUTHENTICATED' for a in io['assets'])\nassert not subprocess.check_output(['git','diff','--name-only'])\nprint(json.dumps({'post_execution_frozen_hashes_verified':31,'scientific_files_unchanged':25,'operational_files_unchanged_since_freeze':6,'receipt_and_manifest_hashes':'PASS','io_accounting':'PASS','TOTAL_CLI_INVOCATIONS':2,'SCIENTIFIC_HOLDOUT_EXECUTIONS':1,'scientific_retries':0,'files_opened':8,'bytes_read':15566040,'current_tracked_changes':0,'verification_experimental_bytes':0},indent=2))\nPY",
+      "exit_code": 0,
+      "boundary": "text-only post-execution custody verification; no new raw reads"
+    },
+    {
+      "tool": "apply_patch",
+      "paths": [
+        "artifacts/evidence/TI2R_SOLUTE_HOLDOUT/repair-1/execution-report.md"
+      ],
+      "purpose": "final evidence-only report after one completed scientific execution"
+    },
+    {
+      "tool": "apply_patch",
+      "paths": [
+        "artifacts/evidence/TI2R_SOLUTE_HOLDOUT/repair-1/execution-report.md"
+      ],
+      "purpose": "pinpointed historical serialization step in final documentary report only"
+    },
+    {
+      "cmd": "git status --short --untracked-files=all",
+      "exit_code": 0
+    }
+  ],
+  "independent_review": {
+    "commands": [
+      "cat <explicit repair authorization attachment>",
+      "cat scripts/run_ti2r_solute_locked_holdout.py",
+      "cat scripts/ti2r_solute_locked_evaluator.py",
+      "cat artifacts/evidence/TI2R_SOLUTE_HOLDOUT/frozen-manifest.json artifacts/evidence/TI2R_SOLUTE_HOLDOUT/terminal-state.json",
+      "cat scripts/ti2r_solute_locked_evaluator.py",
+      "sed -n '270,390p' scripts/run_ti2r_solute_locked_holdout.py",
+      "rg -n 'manifest|serial|float|int\\(' artifacts/evidence/TI2R_SOLUTE_HOLDOUT/commands.json",
+      "git diff -- scripts/run_ti2r_solute_locked_holdout.py",
+      "cat tests/test_ti2r_solute_holdout_manifest.py",
+      "rg -n 'SHA1_RE|def _encoded|def _exact|def _parent_fd|def _read_regular|def _write_exclusive' src/snbi_fragmentation/ti2r_solute_v2_authority.py",
+      "git status --short",
+      "rg -n '\\bHEAD\\b|OPERATIONAL_PATHS|EVIDENCE|PRE_HOLDOUT_GATE|CLI_INVOCATIONS|SCIENTIFIC_HOLDOUT' scripts/run_ti2r_solute_locked_holdout.py",
+      "/usr/bin/python3 -B - [O_NOFOLLOW text-only freeze/receipt hashes; git ls-tree/show compare 12 historical evidence files and evaluator at checkpoint7994771]",
+      "/usr/bin/python3 -B - [textual result, I/O and terminal keys/criteria/calibration structure]",
+      "/usr/bin/python3 -B - [textual original scores, margins, residuals, temporal controls and block fields]",
+      "/usr/bin/python3 -B - [textual 81 recovery scores and 17x81 block matrices]",
+      "/usr/bin/python3 -B - [textual final consistency, eight assets, 128 recoveries/eight identity controls, 198288 matrix values and aggregate-score arithmetic]"
+    ],
+    "command_count": 17,
+    "all_exit_codes": 0,
+    "files_written": 0,
+    "experimental_opens": 0,
+    "experimental_bytes": 0,
+    "scientific_imports_or_reexecution": 0,
+    "result": "PASS",
+    "block_score_values_verified": 198288,
+    "aggregate_score_vectors_verified": 136
+  },
+  "counters": {
+    "PREVIOUS_CLI_INVOCATIONS": 1,
+    "PREVIOUS_SCIENTIFIC_HOLDOUT_EXECUTIONS": 0,
+    "CURRENT_RUNNER_CLI_INVOCATIONS": 1,
+    "TOTAL_CLI_INVOCATIONS": 2,
+    "SCIENTIFIC_HOLDOUT_EXECUTIONS": 1,
+    "SCIENTIFIC_RETRIES": 0,
+    "FILES_OPENED": 8,
+    "BYTES_READ": 15566040,
+    "read_only_full_preflight_before_runner": 1,
+    "preflight_revalidated_inside_runner": 1
+  },
+  "scientific_command": {
+    "command": "PYTHONPATH=src /usr/bin/python3 -B scripts/run_ti2r_solute_locked_holdout.py",
+    "exit_code": 0,
+    "stdout": {
+      "CURRENT_AUTHORIZED_ACTIVITY": "NONE_AWAITING_AUTHOR_DECISION",
+      "G2_FRAG": "PASS_DIRECT_RASTER_MAPPING",
+      "G2_SOLUTE": "PASS",
+      "HOLDOUT_RUN_ATTEMPT": 1,
+      "HOLDOUT_SOLUTE": "CONSUMED",
+      "MERGE_AUTHORIZED": false,
+      "SOLUTAL_PROTOCOL": "VALIDATED_ON_LOCKED_HOLDOUT",
+      "STATE": "CLOSED",
+      "TI2R_EXECUTION_AUTHORIZED": false,
+      "TI2R_SOLUTE_HOLDOUT": "PASS",
+      "TI2R_SOLUTE_HOLDOUT_AUTHORIZED": false,
+      "TI3_PLUS_AUTHORIZED": false,
+      "branch": "feat/ti2r-solute-v2-calibration",
+      "content_bytes_read": 15566040,
+      "files_opened": 8,
+      "head_sha": "febaa56efdcec210f6efb0d456ab1558bce7fe43",
+      "incident": null,
+      "open_count": 8,
+      "pair_statuses": {
+        "ESM2-to-ESM1": {
+          "cases": [
+            {
+              "source_index": 73,
+              "status": "PASS"
+            },
+            {
+              "source_index": 219,
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS"
+        },
+        "ESM5-to-ESM4": {
+          "cases": [
+            {
+              "source_index": 98,
+              "status": "PASS"
+            },
+            {
+              "source_index": 295,
+              "status": "PASS"
+            }
+          ],
+          "status": "PASS"
+        }
+      },
+      "phase": "TI2R_SOLUTE_HOLDOUT",
+      "retries": 0
+    },
+    "boundary": "default sandbox; one first scientific execution; no retry"
+  },
+  "post_execution_verification": {
+    "post_execution_frozen_hashes_verified": 31,
+    "scientific_files_unchanged": 25,
+    "operational_files_unchanged_since_freeze": 6,
+    "receipt_and_manifest_hashes": "PASS",
+    "io_accounting": "PASS",
+    "TOTAL_CLI_INVOCATIONS": 2,
+    "SCIENTIFIC_HOLDOUT_EXECUTIONS": 1,
+    "scientific_retries": 0,
+    "files_opened": 8,
+    "bytes_read": 15566040,
+    "current_tracked_changes": 0,
+    "verification_experimental_bytes": 0
+  },
+  "limits": [
+    "CLI counters refer specifically to the holdout runner entry point, not every shell/tool command, textual preparation, test, or direct read-only preflight function call.",
+    "Root inline scripts are recorded where available; delegated inline scripts are accurately summarized without reconstructing missing source.",
+    "Internal Git queries within listed scripts are represented by their source/summary, not counted as separate runner invocations.",
+    "The final exact staging, evidence commit, checksum generation and final status are recorded in tool history and the terminal report; no future execution is invented here.",
+    "No push, PR mutation, Ready, merge, installation, experimental redecoding or second scientific execution."
+  ],
+  "final_commit_message": "docs(solute): record passing locked holdout and consumed authority"
+}

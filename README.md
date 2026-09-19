@@ -8,6 +8,20 @@ research and presented at COBEM.
 
 ## Current authorization
 
+The [V2-D decision](docs/decisions/AUTHORIZATION-TI2R-SOLUTE-V2-D-2026-09-18.md)
+accepts SOLUTE V1 as a valid blocked result and authorizes development-only
+calibration of relative SS8/NGF discrimination. PR #9 was merged at
+`fcfc5e1445467248566e881c61929d4d3da7b1d8` with green post-merge CI.
+The [preregistered V2 protocol](docs/protocols/TI2R_SOLUTE_V2_PROTOCOL.md)
+requires published C1 and green CI before one invocation on the 12 exposed
+DEV buffers. All eight solute holdouts remain sealed. V1 code, parameters,
+masks and results are preserved; its absolute floors are not lowered.
+The V2 authority config is immutable after C1 and its terminal-state evidence
+permanently closes execution. C2 contains only closure evidence. Fragment
+PASS remains preserved, and even a V2 development PASS cannot approve
+G2_SOLUTE, open holdout, authorize TI-3+ or merge the new Draft PR.
+The following records describe earlier, consumed authorizations.
+
 The latest [SOLUTE-DIRECT decision](docs/decisions/AUTHORIZATION-TI2R-SOLUTE-DIRECT-2026-09-18.md)
 accepts the fragment identity certification and authorizes one separate
 multimodal solute attempt. PR #8 was merged at

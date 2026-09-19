@@ -1,0 +1,115 @@
+{
+  "phase": "C1_PREREGISTRATION",
+  "status": "PASS_LOCAL_PENDING_PUBLICATION_CI",
+  "experimental_content_bytes_read": 0,
+  "experimental_runner_invocations": 0,
+  "stdlib": {
+    "command": "TMPDIR=.bootstrap-test-tmp PYTHONPATH=src /usr/bin/python3 -S -B -m unittest discover -s tests -q",
+    "testsRun": 423,
+    "passed": 337,
+    "skipped": 86,
+    "failures": 0,
+    "errors": 0,
+    "exit_code": 0,
+    "optional_skips_executed_separately": true
+  },
+  "strict_scientific_suites": [
+    {
+      "script": "run_scientific_synthetic_contracts.py",
+      "testsRun": 5,
+      "passed": 5,
+      "skipped": 0,
+      "failures": 0,
+      "errors": 0,
+      "expectedFailures": 0,
+      "unexpectedSuccesses": 0,
+      "exit_code": 0
+    },
+    {
+      "script": "run_ti2r_frag_synthetic.py",
+      "testsRun": 16,
+      "passed": 16,
+      "skipped": 0,
+      "failures": 0,
+      "errors": 0,
+      "expectedFailures": 0,
+      "unexpectedSuccesses": 0,
+      "exit_code": 0
+    },
+    {
+      "script": "run_ti2r_frag_direct_synthetic.py",
+      "testsRun": 26,
+      "passed": 26,
+      "skipped": 0,
+      "failures": 0,
+      "errors": 0,
+      "expectedFailures": 0,
+      "unexpectedSuccesses": 0,
+      "exit_code": 0
+    },
+    {
+      "script": "run_ti2r_solute_direct_synthetic.py",
+      "testsRun": 27,
+      "passed": 27,
+      "skipped": 0,
+      "failures": 0,
+      "errors": 0,
+      "expectedFailures": 0,
+      "unexpectedSuccesses": 0,
+      "exit_code": 0
+    },
+    {
+      "script": "run_ti2r_solute_v2_synthetic.py",
+      "testsRun": 18,
+      "passed": 18,
+      "skipped": 0,
+      "failures": 0,
+      "errors": 0,
+      "expectedFailures": 0,
+      "unexpectedSuccesses": 0,
+      "exit_code": 0
+    }
+  ],
+  "versions": {
+    "numpy": "1.26.4",
+    "scipy": "1.11.4"
+  },
+  "guardrails": [
+    "tracked data PASS 229 entries, 0 experimental bytes",
+    "legacy authority/scope PASS; old permissions remain closed",
+    "95 textual TI2 checksums PASS"
+  ],
+  "v1_bytes_preserved": true,
+  "authority_tests": 24,
+  "integration_tests": 9,
+  "new_v2_contracts": 18,
+  "pre_C1_integration_failures": {
+    "testsRun": 9,
+    "passed": 5,
+    "errors": 4,
+    "reason": "require_preregistered API missing during implementation; added before freeze and subsequent integration/full suite passed",
+    "scientific_run": false
+  },
+  "publication_requires": [
+    "C1 commit on frozen base",
+    "fast-forward push",
+    "OPEN/DRAFT PR",
+    "both push and PR CI at C1, all jobs and steps SUCCESS"
+  ],
+  "no_scientific_changes_after_C1": "mandatory",
+  "independent_textual_review": {
+    "status": "NO_REMAINING_BLOCKERS_IDENTIFIED",
+    "scientific_gate_approval": false,
+    "reviewer_experimental_access": false,
+    "reviewed": [
+      "V1 preservation",
+      "perturbation/search/support convention",
+      "individual positive gates",
+      "CI and receipt before bytes",
+      "unconditional holdout denial",
+      "terminal before result",
+      "integration fixes"
+    ],
+    "limitations": "Textual review, not experimental or metrological validation"
+  }
+}

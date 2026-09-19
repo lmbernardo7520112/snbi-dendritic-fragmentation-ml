@@ -1,0 +1,86 @@
+{
+  "HOLDOUT_RUN_ATTEMPT": 1,
+  "assets": [
+    {
+      "asset_id": "ESM1:73",
+      "content_bytes_read": 1951506,
+      "open_attempts": 1,
+      "open_count": 1,
+      "path": "data/derived/ti2-pilot/ESM1-0073.raw",
+      "sha256": "0209aef0e36c73b017063cbea4661f76ac0d24bd51631e11e1f41b9dae0cc2a5",
+      "status": "AUTHENTICATED"
+    },
+    {
+      "asset_id": "ESM1:219",
+      "content_bytes_read": 1951506,
+      "open_attempts": 1,
+      "open_count": 1,
+      "path": "data/derived/ti2-pilot/ESM1-0219.raw",
+      "sha256": "eb22ec185b465b11abbd6ecbf38d558a9dd5ef8d19f256e42429d70b566f10bd",
+      "status": "AUTHENTICATED"
+    },
+    {
+      "asset_id": "ESM2:73",
+      "content_bytes_read": 1951506,
+      "open_attempts": 1,
+      "open_count": 1,
+      "path": "data/derived/ti2-pilot/ESM2-0073.raw",
+      "sha256": "c5518bf031ae0e18541ce2c72206a8d1e5a53e060ee990dccaeb0cbb5024874f",
+      "status": "AUTHENTICATED"
+    },
+    {
+      "asset_id": "ESM2:219",
+      "content_bytes_read": 1951506,
+      "open_attempts": 1,
+      "open_count": 1,
+      "path": "data/derived/ti2-pilot/ESM2-0219.raw",
+      "sha256": "b50f56a6332e33bfb3e32a8c94694a39e6cce936370f4b5232d257d8e7d0d228",
+      "status": "AUTHENTICATED"
+    },
+    {
+      "asset_id": "ESM4:98",
+      "content_bytes_read": 1940004,
+      "open_attempts": 1,
+      "open_count": 1,
+      "path": "data/derived/ti2-pilot/ESM4-0098.raw",
+      "sha256": "8e9ab504657f44d5f7252ff8a681a4c0007a4f0643f11cc26b171e989be75cc9",
+      "status": "AUTHENTICATED"
+    },
+    {
+      "asset_id": "ESM4:295",
+      "content_bytes_read": 1940004,
+      "open_attempts": 1,
+      "open_count": 1,
+      "path": "data/derived/ti2-pilot/ESM4-0295.raw",
+      "sha256": "ac3b9df34450e8c0f801eb90d2c329c90737f4abda4202d81638395fb5519f2a",
+      "status": "AUTHENTICATED"
+    },
+    {
+      "asset_id": "ESM5:98",
+      "content_bytes_read": 1940004,
+      "open_attempts": 1,
+      "open_count": 1,
+      "path": "data/derived/ti2-pilot/ESM5-0098.raw",
+      "sha256": "e4d51cf146c418faa9c5c97867a8cde76237e6a5086525b3db56ed0c68fa3c07",
+      "status": "AUTHENTICATED"
+    },
+    {
+      "asset_id": "ESM5:295",
+      "content_bytes_read": 1940004,
+      "open_attempts": 1,
+      "open_count": 1,
+      "path": "data/derived/ti2-pilot/ESM5-0295.raw",
+      "sha256": "689719f8ecf7a0b18112d6f6042c11a1edeeb141f545be7fb983ef92b7dfecc6",
+      "status": "AUTHENTICATED"
+    }
+  ],
+  "authorized_buffers": 8,
+  "content_bytes_read": 15566040,
+  "development_content_bytes_read": 0,
+  "development_open_count": 0,
+  "files_opened": 8,
+  "open_attempts": 8,
+  "open_count": 8,
+  "phase": "TI2R_SOLUTE_HOLDOUT",
+  "retries": 0
+}

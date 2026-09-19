@@ -1,0 +1,199 @@
+{
+  "phase": "TI2R_SOLUTE_HOLDOUT",
+  "PRE_HOLDOUT_GATE": "FAIL",
+  "TI2R_SOLUTE_HOLDOUT": "BLOCKED_PRE_EXECUTION_CONFIGURATION_DIVERGENCE",
+  "G2_SOLUTE": "BLOCKED_PENDING_LOCKED_HOLDOUT",
+  "G2_FRAG": "PASS_DIRECT_RASTER_MAPPING",
+  "HOLDOUT_SOLUTE": "SEALED",
+  "STATE": "BLOCKED_PRE_EXECUTION",
+  "CURRENT_AUTHORIZED_ACTIVITY": "NONE_AWAITING_AUTHOR_DECISION",
+  "TI2R_SOLUTE_HOLDOUT_AUTHORIZED": false,
+  "TI2R_EXECUTION_AUTHORIZED": false,
+  "TI3_PLUS_AUTHORIZED": false,
+  "MERGE_AUTHORIZED": false,
+  "cli_invocations": 1,
+  "scientific_invocations": 0,
+  "retries": 0,
+  "receipt_created": false,
+  "attempt_consumed": false,
+  "HOLDOUT_RUN_ATTEMPT": "NOT_ARMED",
+  "head_sha": "0b820bc61e6dae3b7a98654a3b7d5cd292ca925e",
+  "branch": "feat/ti2r-solute-v2-calibration",
+  "incident_category": "A_IMPLEMENTATION_PIPELINE",
+  "incident_code": "CONFIGURATION_DIVERGENCE",
+  "no_automatic_retry": true,
+  "authority_disposition": "STOPPED_REQUIRES_NEW_AUTHOR_DECISION",
+  "scientific_pass_or_fail": null,
+  "runner_exit_code": 3,
+  "runner_stdout": {
+    "PRE_HOLDOUT_GATE": "FAIL",
+    "attempt_consumed": false,
+    "holdout_content_bytes_read": 0,
+    "incident": {
+      "automatic_retry": false,
+      "code": "CONFIGURATION_DIVERGENCE",
+      "completed_pair_results": 0,
+      "errno": null,
+      "exception_type": "HoldoutBlocked",
+      "observation_status": "NO_SCIENTIFIC_EVALUATION_STARTED",
+      "pair_evaluation_calls": 0,
+      "scientific_evaluation_started": false,
+      "scientific_results_obtained": false
+    },
+    "phase": "TI2R_SOLUTE_HOLDOUT",
+    "retries": 0,
+    "scientific_invocations": 0
+  },
+  "incident_analysis": {
+    "incident": "CONFIGURATION_DIVERGENCE",
+    "text_only_differences": [
+      {
+        "field": "configurations.v1.minimum_entropy_bits",
+        "frozen_file_type": "float",
+        "manifest_type": "int",
+        "frozen_file_value": 1,
+        "manifest_value": 1
+      },
+      {
+        "field": "configurations.v1.saturation_low_y",
+        "frozen_file_type": "float",
+        "manifest_type": "int",
+        "frozen_file_value": 16,
+        "manifest_value": 16
+      },
+      {
+        "field": "configurations.v1.saturation_high_y",
+        "frozen_file_type": "float",
+        "manifest_type": "int",
+        "frozen_file_value": 235,
+        "manifest_value": 235
+      },
+      {
+        "field": "configurations.v1.median_limit_px",
+        "frozen_file_type": "float",
+        "manifest_type": "int",
+        "frozen_file_value": 1,
+        "manifest_value": 1
+      },
+      {
+        "field": "configurations.v1.p95_limit_px",
+        "frozen_file_type": "float",
+        "manifest_type": "int",
+        "frozen_file_value": 2,
+        "manifest_value": 2
+      },
+      {
+        "field": "configurations.v1.maximum_limit_px",
+        "frozen_file_type": "float",
+        "manifest_type": "int",
+        "frozen_file_value": 3,
+        "manifest_value": 3
+      }
+    ],
+    "experimental_reads": 0,
+    "repair_performed": false,
+    "retry_performed": false
+  },
+  "io_audit": {
+    "phase": "TI2R_SOLUTE_HOLDOUT",
+    "cli_invocations": 1,
+    "scientific_invocations": 0,
+    "retries": 0,
+    "receipt_created": false,
+    "files_opened": 0,
+    "open_count": 0,
+    "open_attempts": 0,
+    "content_bytes_read": 0,
+    "development_open_count": 0,
+    "development_content_bytes_read": 0,
+    "assets": [
+      {
+        "asset_id": "ESM1:73",
+        "path": "data/derived/ti2-pilot/ESM1-0073.raw",
+        "expected_bytes": 1951506,
+        "open_count": 0,
+        "content_bytes_read": 0,
+        "status": "NOT_OPENED"
+      },
+      {
+        "asset_id": "ESM1:219",
+        "path": "data/derived/ti2-pilot/ESM1-0219.raw",
+        "expected_bytes": 1951506,
+        "open_count": 0,
+        "content_bytes_read": 0,
+        "status": "NOT_OPENED"
+      },
+      {
+        "asset_id": "ESM2:73",
+        "path": "data/derived/ti2-pilot/ESM2-0073.raw",
+        "expected_bytes": 1951506,
+        "open_count": 0,
+        "content_bytes_read": 0,
+        "status": "NOT_OPENED"
+      },
+      {
+        "asset_id": "ESM2:219",
+        "path": "data/derived/ti2-pilot/ESM2-0219.raw",
+        "expected_bytes": 1951506,
+        "open_count": 0,
+        "content_bytes_read": 0,
+        "status": "NOT_OPENED"
+      },
+      {
+        "asset_id": "ESM4:98",
+        "path": "data/derived/ti2-pilot/ESM4-0098.raw",
+        "expected_bytes": 1940004,
+        "open_count": 0,
+        "content_bytes_read": 0,
+        "status": "NOT_OPENED"
+      },
+      {
+        "asset_id": "ESM4:295",
+        "path": "data/derived/ti2-pilot/ESM4-0295.raw",
+        "expected_bytes": 1940004,
+        "open_count": 0,
+        "content_bytes_read": 0,
+        "status": "NOT_OPENED"
+      },
+      {
+        "asset_id": "ESM5:98",
+        "path": "data/derived/ti2-pilot/ESM5-0098.raw",
+        "expected_bytes": 1940004,
+        "open_count": 0,
+        "content_bytes_read": 0,
+        "status": "NOT_OPENED"
+      },
+      {
+        "asset_id": "ESM5:295",
+        "path": "data/derived/ti2-pilot/ESM5-0295.raw",
+        "expected_bytes": 1940004,
+        "open_count": 0,
+        "content_bytes_read": 0,
+        "status": "NOT_OPENED"
+      }
+    ],
+    "evidence": "Runner returned from preflight at CONFIGURATION_DIVERGENCE, before O_EXCL receipt and AccountedReader creation. No experimental path was inspected."
+  },
+  "pairs": {
+    "ESM2-to-ESM1": {
+      "source_indices": [
+        73,
+        219
+      ],
+      "status": "NOT_EVALUATED",
+      "scores": null,
+      "residuals": null
+    },
+    "ESM5-to-ESM4": {
+      "source_indices": [
+        98,
+        295
+      ],
+      "status": "NOT_EVALUATED",
+      "scores": null,
+      "residuals": null
+    }
+  },
+  "scientific_result_obtained": false,
+  "post_mortem": "Operational configuration serialization changed Python numeric types in the manifest; exact typed equality rejected six float-to-int differences before science. No correction, parameter change, scientific inference, or retry."
+}

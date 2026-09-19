@@ -1,0 +1,766 @@
+{
+  "phase": "TI2R_SOLUTE_HOLDOUT",
+  "pre_execution_only": true,
+  "experimental_opens": 0,
+  "experimental_content_bytes": 0,
+  "freeze_audit": {
+    "verification": "PASS",
+    "frozen_files": {
+      ".github/workflows/ci.yml": "404f90eb4f3789f741b5f369e61661673d4691df2164270cd67306c4beb9c75f",
+      "artifacts/evidence/TI2R_SOLUTE_DIRECT/result.json": "485c5a8da36a421927fc50165dbfadf4b87981223f47de6518c16e4c03d28c95",
+      "artifacts/evidence/TI2R_SOLUTE_V2/exposure.json": "1555e6440535e9d13575e115f8e0afbaa028d152ae8df042c2c76adaff82bf42",
+      "artifacts/metadata/ti2-pilot-manifest.json": "4f84a50e65e7541729d9a6c58e2649a872d6a92e55b305a66a0ce4e9f63a09a9",
+      "configs/authority/ti2r-frag-direct.json": "4133dd7b7e4af85769ed1a0fa28f32202f4082f9e9d3e0320a7194556c6abf6c",
+      "configs/authority/ti2r-frag.json": "d62571e33696af63e1425e3add370efcf5a642ced99dd52cfa3897ec3be93816",
+      "configs/authority/ti2r-solute-direct.json": "f329923a4ab406f5bc819aa301e2e5f7289a59a6959af08b075b7f9cf69f0b3f",
+      "configs/authority/ti2r-solute-v2.json": "6351a15e26c2a0c3bc22642c5eb3e0b539de576dffd242721d9a82101625039a",
+      "configs/registration/ti2r-solute-direct-method.json": "cf024e61cd12c1d21377a6d64aa9529f2e90686b3879fa2221aca34c4cdd772f",
+      "configs/registration/ti2r-solute-v2-method.json": "da6ee2e6ca457a92ec2e3f0185a9b36720472d506426a19ab78f15fe8a4b2b14",
+      "docs/decisions/AUTHORIZATION-TI2R-SOLUTE-V2-D-2026-09-18.md": "ebab0cff2cf7747a97b52b6c85fcd7a014cb503156de12d7efe534ae5bd7cc0c",
+      "docs/protocols/TI2R_SOLUTE_V2_PROTOCOL.md": "8c4a947001160603d731c9a0e5dd2114a66decc67636b39a94028ae8a6b33eeb",
+      "pyproject.toml": "3d4195d69c33c9d18dd0c0c64ffb937f9e7cd3549c3d4c76dbebb05b9242fcc1",
+      "scripts/run_ti2r_solute_v2.py": "e07e50e65c856fe6f8b03076870647dfecee4a68c2c1af22c49d580eb976b4b8",
+      "scripts/run_ti2r_solute_v2_synthetic.py": "51f4972af89865ccddf0ba665af2a6fcdeaac9fb4a4fbc4c32b4903422373fd1",
+      "src/snbi_fragmentation/ti2_authority.py": "bcc9a586555b78c1c55341a43b66a40ac6ad4953714fa2273dd99ac0a78471f3",
+      "src/snbi_fragmentation/ti2r_frag_authority.py": "f030046d6b4a6bc392e9e14c4e871d6581c99cdcbf927f31535e322c49c45a42",
+      "src/snbi_fragmentation/ti2r_frag_direct_authority.py": "ec62a88a42ca4f84530103848e39927fc320fed7117039d8c57615abdb3bf6fb",
+      "src/snbi_fragmentation/ti2r_solute_direct_authority.py": "77a33c74594dc5050ddbef1720b42f29103aa02b5b51686da7c2ca4bcbe87955",
+      "src/snbi_fragmentation/ti2r_solute_direct_registration.py": "5cdd336e9f21e4f26631dbb29445d5cb92e9b2724482d7a90e085b589ca75450",
+      "src/snbi_fragmentation/ti2r_solute_v2_authority.py": "44c1e0f462422b30ba59c5c1b1721df102520f04dd451b64aaa4008b47b87027",
+      "src/snbi_fragmentation/ti2r_solute_v2_calibration.py": "223dccf6a2e565b4b8b487c55a35d4c88ee3c8cab5c0b304dcfd90ad0b88bc2b",
+      "tests/test_ti2r_solute_v2_authority.py": "56c82074336c1e9115c4911e6a114a6e7101bc48a66b218c11783d2ce6d160f4",
+      "tests/test_ti2r_solute_v2_calibration.py": "db75c6ee78fe15689aeea5743e60ed3dd82afcc48ea9448823925ff882c1847e",
+      "tests/test_ti2r_solute_v2_execution.py": "62aaba06d05c23cb3abcb15cd6148e2590c7c590d659b8374e5fef17cda1f92a"
+    },
+    "c2_evidence_only_changes": [
+      "artifacts/evidence/TI2R_SOLUTE_V2/checksums.sha256",
+      "artifacts/evidence/TI2R_SOLUTE_V2/commands.json",
+      "artifacts/evidence/TI2R_SOLUTE_V2/execution-report.md",
+      "artifacts/evidence/TI2R_SOLUTE_V2/receipt.json",
+      "artifacts/evidence/TI2R_SOLUTE_V2/result.json",
+      "artifacts/evidence/TI2R_SOLUTE_V2/terminal-state.json",
+      "artifacts/evidence/TI2R_SOLUTE_V2/verification.json"
+    ],
+    "c1_commit": "e1a98917a20431ecc1c758f210b5e974b3533734 fcfc5e1445467248566e881c61929d4d3da7b1d8",
+    "c2_commit": "0b820bc61e6dae3b7a98654a3b7d5cd292ca925e e1a98917a20431ecc1c758f210b5e974b3533734",
+    "assets": [
+      {
+        "asset_id": "ESM1:73",
+        "source_id": "ESM1",
+        "frame_index": 73,
+        "path": "data/derived/ti2-pilot/ESM1-0073.raw",
+        "width": 1278,
+        "height": 1018,
+        "frame_bytes": 1951506,
+        "image_sha256": "0209aef0e36c73b017063cbea4661f76ac0d24bd51631e11e1f41b9dae0cc2a5",
+        "pixel_format": "yuv420p",
+        "bit_depth": 8
+      },
+      {
+        "asset_id": "ESM1:219",
+        "source_id": "ESM1",
+        "frame_index": 219,
+        "path": "data/derived/ti2-pilot/ESM1-0219.raw",
+        "width": 1278,
+        "height": 1018,
+        "frame_bytes": 1951506,
+        "image_sha256": "eb22ec185b465b11abbd6ecbf38d558a9dd5ef8d19f256e42429d70b566f10bd",
+        "pixel_format": "yuv420p",
+        "bit_depth": 8
+      },
+      {
+        "asset_id": "ESM2:73",
+        "source_id": "ESM2",
+        "frame_index": 73,
+        "path": "data/derived/ti2-pilot/ESM2-0073.raw",
+        "width": 1278,
+        "height": 1018,
+        "frame_bytes": 1951506,
+        "image_sha256": "c5518bf031ae0e18541ce2c72206a8d1e5a53e060ee990dccaeb0cbb5024874f",
+        "pixel_format": "yuv420p",
+        "bit_depth": 8
+      },
+      {
+        "asset_id": "ESM2:219",
+        "source_id": "ESM2",
+        "frame_index": 219,
+        "path": "data/derived/ti2-pilot/ESM2-0219.raw",
+        "width": 1278,
+        "height": 1018,
+        "frame_bytes": 1951506,
+        "image_sha256": "b50f56a6332e33bfb3e32a8c94694a39e6cce936370f4b5232d257d8e7d0d228",
+        "pixel_format": "yuv420p",
+        "bit_depth": 8
+      },
+      {
+        "asset_id": "ESM4:98",
+        "source_id": "ESM4",
+        "frame_index": 98,
+        "path": "data/derived/ti2-pilot/ESM4-0098.raw",
+        "width": 1278,
+        "height": 1012,
+        "frame_bytes": 1940004,
+        "image_sha256": "8e9ab504657f44d5f7252ff8a681a4c0007a4f0643f11cc26b171e989be75cc9",
+        "pixel_format": "yuv420p",
+        "bit_depth": 8
+      },
+      {
+        "asset_id": "ESM4:295",
+        "source_id": "ESM4",
+        "frame_index": 295,
+        "path": "data/derived/ti2-pilot/ESM4-0295.raw",
+        "width": 1278,
+        "height": 1012,
+        "frame_bytes": 1940004,
+        "image_sha256": "ac3b9df34450e8c0f801eb90d2c329c90737f4abda4202d81638395fb5519f2a",
+        "pixel_format": "yuv420p",
+        "bit_depth": 8
+      },
+      {
+        "asset_id": "ESM5:98",
+        "source_id": "ESM5",
+        "frame_index": 98,
+        "path": "data/derived/ti2-pilot/ESM5-0098.raw",
+        "width": 1278,
+        "height": 1012,
+        "frame_bytes": 1940004,
+        "image_sha256": "e4d51cf146c418faa9c5c97867a8cde76237e6a5086525b3db56ed0c68fa3c07",
+        "pixel_format": "yuv420p",
+        "bit_depth": 8
+      },
+      {
+        "asset_id": "ESM5:295",
+        "source_id": "ESM5",
+        "frame_index": 295,
+        "path": "data/derived/ti2-pilot/ESM5-0295.raw",
+        "width": 1278,
+        "height": 1012,
+        "frame_bytes": 1940004,
+        "image_sha256": "689719f8ecf7a0b18112d6f6042c11a1edeeb141f545be7fb983ef92b7dfecc6",
+        "pixel_format": "yuv420p",
+        "bit_depth": 8
+      }
+    ],
+    "prior_exposure": {
+      "ESM1:73": {
+        "authorized_this_phase": false,
+        "open_count": 0,
+        "content_bytes_read": 0,
+        "state": "SEALED",
+        "evidence": [
+          "artifacts/metadata/ti2-pilot-manifest.json",
+          "artifacts/evidence/TI2/validation-audit.json",
+          "artifacts/evidence/TI2R_FRAG_DIRECT/result.json",
+          "docs/decisions/AUTHORIZATION-TI2R-SOLUTE-DIRECT-2026-09-18.md",
+          "artifacts/evidence/TI2R_SOLUTE_DIRECT/result.json"
+        ],
+        "previous_exposure": [
+          "TI2: existing lossless MP4-decoded buffer and mechanical custody hashes",
+          "TI2: quartile pixels not analysed according to validation-audit.json",
+          "TI2R-FRAG-DIRECT: pixels opened and used as holdout",
+          "TI2R-SOLUTE-DIRECT V1: NOT_OPENED; no development pair passed."
+        ]
+      },
+      "ESM1:219": {
+        "authorized_this_phase": false,
+        "open_count": 0,
+        "content_bytes_read": 0,
+        "state": "SEALED",
+        "evidence": [
+          "artifacts/metadata/ti2-pilot-manifest.json",
+          "artifacts/evidence/TI2/validation-audit.json",
+          "artifacts/evidence/TI2R_FRAG_DIRECT/result.json",
+          "docs/decisions/AUTHORIZATION-TI2R-SOLUTE-DIRECT-2026-09-18.md",
+          "artifacts/evidence/TI2R_SOLUTE_DIRECT/result.json"
+        ],
+        "previous_exposure": [
+          "TI2: existing lossless MP4-decoded buffer and mechanical custody hashes",
+          "TI2: quartile pixels not analysed according to validation-audit.json",
+          "TI2R-FRAG-DIRECT: pixels opened and used as holdout",
+          "TI2R-SOLUTE-DIRECT V1: NOT_OPENED; no development pair passed."
+        ]
+      },
+      "ESM2:73": {
+        "authorized_this_phase": false,
+        "open_count": 0,
+        "content_bytes_read": 0,
+        "state": "SEALED",
+        "evidence": [
+          "artifacts/metadata/ti2-pilot-manifest.json",
+          "artifacts/evidence/TI2/validation-audit.json",
+          "artifacts/evidence/TI2R_FRAG_DIRECT/result.json",
+          "docs/decisions/AUTHORIZATION-TI2R-SOLUTE-DIRECT-2026-09-18.md",
+          "artifacts/evidence/TI2R_SOLUTE_DIRECT/result.json"
+        ],
+        "previous_exposure": [
+          "TI2: existing lossless MP4-decoded buffer and mechanical custody hashes",
+          "TI2: quartile pixels not analysed according to validation-audit.json",
+          "TI2R-FRAG and TI2R-FRAG-DIRECT: source outside both execution allowlists",
+          "TI2R-SOLUTE-DIRECT V1: NOT_OPENED; no development pair passed."
+        ]
+      },
+      "ESM2:219": {
+        "authorized_this_phase": false,
+        "open_count": 0,
+        "content_bytes_read": 0,
+        "state": "SEALED",
+        "evidence": [
+          "artifacts/metadata/ti2-pilot-manifest.json",
+          "artifacts/evidence/TI2/validation-audit.json",
+          "artifacts/evidence/TI2R_FRAG_DIRECT/result.json",
+          "docs/decisions/AUTHORIZATION-TI2R-SOLUTE-DIRECT-2026-09-18.md",
+          "artifacts/evidence/TI2R_SOLUTE_DIRECT/result.json"
+        ],
+        "previous_exposure": [
+          "TI2: existing lossless MP4-decoded buffer and mechanical custody hashes",
+          "TI2: quartile pixels not analysed according to validation-audit.json",
+          "TI2R-FRAG and TI2R-FRAG-DIRECT: source outside both execution allowlists",
+          "TI2R-SOLUTE-DIRECT V1: NOT_OPENED; no development pair passed."
+        ]
+      },
+      "ESM4:98": {
+        "authorized_this_phase": false,
+        "open_count": 0,
+        "content_bytes_read": 0,
+        "state": "SEALED",
+        "evidence": [
+          "artifacts/metadata/ti2-pilot-manifest.json",
+          "artifacts/evidence/TI2/validation-audit.json",
+          "artifacts/evidence/TI2R_FRAG_DIRECT/result.json",
+          "docs/decisions/AUTHORIZATION-TI2R-SOLUTE-DIRECT-2026-09-18.md",
+          "artifacts/evidence/TI2R_SOLUTE_DIRECT/result.json"
+        ],
+        "previous_exposure": [
+          "TI2: existing lossless MP4-decoded buffer and mechanical custody hashes",
+          "TI2: quartile pixels not analysed according to validation-audit.json",
+          "TI2R-FRAG-DIRECT: pixels opened and used as holdout",
+          "TI2R-SOLUTE-DIRECT V1: NOT_OPENED; no development pair passed."
+        ]
+      },
+      "ESM4:295": {
+        "authorized_this_phase": false,
+        "open_count": 0,
+        "content_bytes_read": 0,
+        "state": "SEALED",
+        "evidence": [
+          "artifacts/metadata/ti2-pilot-manifest.json",
+          "artifacts/evidence/TI2/validation-audit.json",
+          "artifacts/evidence/TI2R_FRAG_DIRECT/result.json",
+          "docs/decisions/AUTHORIZATION-TI2R-SOLUTE-DIRECT-2026-09-18.md",
+          "artifacts/evidence/TI2R_SOLUTE_DIRECT/result.json"
+        ],
+        "previous_exposure": [
+          "TI2: existing lossless MP4-decoded buffer and mechanical custody hashes",
+          "TI2: quartile pixels not analysed according to validation-audit.json",
+          "TI2R-FRAG-DIRECT: pixels opened and used as holdout",
+          "TI2R-SOLUTE-DIRECT V1: NOT_OPENED; no development pair passed."
+        ]
+      },
+      "ESM5:98": {
+        "authorized_this_phase": false,
+        "open_count": 0,
+        "content_bytes_read": 0,
+        "state": "SEALED",
+        "evidence": [
+          "artifacts/metadata/ti2-pilot-manifest.json",
+          "artifacts/evidence/TI2/validation-audit.json",
+          "artifacts/evidence/TI2R_FRAG_DIRECT/result.json",
+          "docs/decisions/AUTHORIZATION-TI2R-SOLUTE-DIRECT-2026-09-18.md",
+          "artifacts/evidence/TI2R_SOLUTE_DIRECT/result.json"
+        ],
+        "previous_exposure": [
+          "TI2: existing lossless MP4-decoded buffer and mechanical custody hashes",
+          "TI2: quartile pixels not analysed according to validation-audit.json",
+          "TI2R-FRAG and TI2R-FRAG-DIRECT: source outside both execution allowlists",
+          "TI2R-SOLUTE-DIRECT V1: NOT_OPENED; no development pair passed."
+        ]
+      },
+      "ESM5:295": {
+        "authorized_this_phase": false,
+        "open_count": 0,
+        "content_bytes_read": 0,
+        "state": "SEALED",
+        "evidence": [
+          "artifacts/metadata/ti2-pilot-manifest.json",
+          "artifacts/evidence/TI2/validation-audit.json",
+          "artifacts/evidence/TI2R_FRAG_DIRECT/result.json",
+          "docs/decisions/AUTHORIZATION-TI2R-SOLUTE-DIRECT-2026-09-18.md",
+          "artifacts/evidence/TI2R_SOLUTE_DIRECT/result.json"
+        ],
+        "previous_exposure": [
+          "TI2: existing lossless MP4-decoded buffer and mechanical custody hashes",
+          "TI2: quartile pixels not analysed according to validation-audit.json",
+          "TI2R-FRAG and TI2R-FRAG-DIRECT: source outside both execution allowlists",
+          "TI2R-SOLUTE-DIRECT V1: NOT_OPENED; no development pair passed."
+        ]
+      }
+    },
+    "pre_execution_experimental_opens": 0,
+    "pre_execution_experimental_bytes": 0,
+    "tracked_entries": 250
+  },
+  "remote_preflight": {
+    "base": "main",
+    "base_sha": "fcfc5e1445467248566e881c61929d4d3da7b1d8",
+    "draft": true,
+    "head": "feat/ti2r-solute-v2-calibration",
+    "head_sha": "0b820bc61e6dae3b7a98654a3b7d5cd292ca925e",
+    "merged": false,
+    "number": 10,
+    "repository": "lmbernardo7520112/snbi-dendritic-fragmentation-ml",
+    "state": "open"
+  },
+  "ci_evidence": {
+    "runs": [
+      {
+        "conclusion": "success",
+        "databaseId": 35399554524,
+        "event": "push",
+        "headSha": "0b820bc61e6dae3b7a98654a3b7d5cd292ca925e",
+        "jobs": [
+          {
+            "completedAt": "2026-09-18T22:01:44Z",
+            "conclusion": "success",
+            "databaseId": 105776080144,
+            "name": "scientific-synthetic-contracts",
+            "startedAt": "2026-09-18T22:00:37Z",
+            "status": "completed",
+            "steps": [
+              {
+                "conclusion": "success",
+                "name": "Set up job",
+                "number": 1,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run actions/checkout@v4",
+                "number": 2,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Enforce tracked-data guard",
+                "number": 3,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run actions/setup-python@v5",
+                "number": 4,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Install exact synthetic-only dependencies on CI",
+                "number": 5,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Require five passing scientific synthetic tests and zero skips",
+                "number": 6,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Require TI2R-FRAG synthetic contracts and zero skips",
+                "number": 7,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Require DIRECT synthetic contracts and zero skips",
+                "number": 8,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Require SOLUTE DIRECT multimodal synthetic contracts and zero skips",
+                "number": 9,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Require SOLUTE V2 development calibration synthetic contracts and zero skips",
+                "number": 10,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Post Run actions/setup-python@v5",
+                "number": 19,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@v4",
+                "number": 20,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Complete job",
+                "number": 21,
+                "status": "completed"
+              }
+            ],
+            "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35399554524/job/105776080144"
+          },
+          {
+            "completedAt": "2026-09-18T22:00:45Z",
+            "conclusion": "success",
+            "databaseId": 105776080531,
+            "name": "deterministic-contracts",
+            "startedAt": "2026-09-18T22:00:37Z",
+            "status": "completed",
+            "steps": [
+              {
+                "conclusion": "success",
+                "name": "Set up job",
+                "number": 1,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run actions/checkout@v4",
+                "number": 2,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Enforce tracked-data guard",
+                "number": 3,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run actions/setup-python@v5",
+                "number": 4,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Compile source",
+                "number": 5,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Validate governed local bootstrap",
+                "number": 6,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Validate canonical manifest",
+                "number": 7,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Validate physical-time rule",
+                "number": 8,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Enforce TI-2 scope without experimental data",
+                "number": 9,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Verify tracked textual TI-2 checksums",
+                "number": 10,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run deterministic tests",
+                "number": 11,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Post Run actions/setup-python@v5",
+                "number": 21,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@v4",
+                "number": 22,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Complete job",
+                "number": 23,
+                "status": "completed"
+              }
+            ],
+            "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35399554524/job/105776080531"
+          }
+        ],
+        "status": "completed",
+        "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35399554524"
+      },
+      {
+        "conclusion": "success",
+        "databaseId": 35399558120,
+        "event": "pull_request",
+        "headSha": "0b820bc61e6dae3b7a98654a3b7d5cd292ca925e",
+        "jobs": [
+          {
+            "completedAt": "2026-09-18T22:02:05Z",
+            "conclusion": "success",
+            "databaseId": 105776089901,
+            "name": "scientific-synthetic-contracts",
+            "startedAt": "2026-09-18T22:00:39Z",
+            "status": "completed",
+            "steps": [
+              {
+                "conclusion": "success",
+                "name": "Set up job",
+                "number": 1,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run actions/checkout@v4",
+                "number": 2,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Enforce tracked-data guard",
+                "number": 3,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run actions/setup-python@v5",
+                "number": 4,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Install exact synthetic-only dependencies on CI",
+                "number": 5,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Require five passing scientific synthetic tests and zero skips",
+                "number": 6,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Require TI2R-FRAG synthetic contracts and zero skips",
+                "number": 7,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Require DIRECT synthetic contracts and zero skips",
+                "number": 8,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Require SOLUTE DIRECT multimodal synthetic contracts and zero skips",
+                "number": 9,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Require SOLUTE V2 development calibration synthetic contracts and zero skips",
+                "number": 10,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Post Run actions/setup-python@v5",
+                "number": 19,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@v4",
+                "number": 20,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Complete job",
+                "number": 21,
+                "status": "completed"
+              }
+            ],
+            "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35399558120/job/105776089901"
+          },
+          {
+            "completedAt": "2026-09-18T22:00:48Z",
+            "conclusion": "success",
+            "databaseId": 105776090183,
+            "name": "deterministic-contracts",
+            "startedAt": "2026-09-18T22:00:39Z",
+            "status": "completed",
+            "steps": [
+              {
+                "conclusion": "success",
+                "name": "Set up job",
+                "number": 1,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run actions/checkout@v4",
+                "number": 2,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Enforce tracked-data guard",
+                "number": 3,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run actions/setup-python@v5",
+                "number": 4,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Compile source",
+                "number": 5,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Validate governed local bootstrap",
+                "number": 6,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Validate canonical manifest",
+                "number": 7,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Validate physical-time rule",
+                "number": 8,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Enforce TI-2 scope without experimental data",
+                "number": 9,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Verify tracked textual TI-2 checksums",
+                "number": 10,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run deterministic tests",
+                "number": 11,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Post Run actions/setup-python@v5",
+                "number": 21,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@v4",
+                "number": 22,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Complete job",
+                "number": 23,
+                "status": "completed"
+              }
+            ],
+            "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35399558120/job/105776090183"
+          }
+        ],
+        "status": "completed",
+        "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35399558120"
+      }
+    ]
+  },
+  "stdlib": {
+    "command": "TMPDIR=.bootstrap-test-tmp PYTHONPATH=src /usr/bin/python3 -S -B -m unittest discover -s tests -q",
+    "exit_code": 0,
+    "total": 423,
+    "passes": 337,
+    "optional_skips": 86,
+    "output": "----------------------------------------------------------------------\nRan 423 tests in 1.472s\n\nOK (skipped=86)\n"
+  },
+  "adapter_orchestration_mocks": {
+    "total": 9,
+    "passes": 9,
+    "skips": 0,
+    "failures": 0,
+    "errors": 0
+  },
+  "independent_adapter_review": {
+    "status": "PASS",
+    "scientific_functions_unchanged": true,
+    "all_four_cases_required": true,
+    "v1_floors_not_gates": true,
+    "no_v1_minimum_one_tolerance": true
+  },
+  "ast": {
+    "status": "PASS",
+    "paths": [
+      "scripts/ti2r_solute_locked_evaluator.py",
+      "scripts/run_ti2r_solute_locked_holdout.py"
+    ]
+  },
+  "limits": [
+    "Remote CI applies to C2 and unchanged frozen kernels, not to a future evidence commit.",
+    "No scientific computation on experimental buffers occurred during these checks.",
+    "Historical reference exposure is disclosed; SEALED is phase-specific."
+  ],
+  "runner_orchestration_mocks": {
+    "total": 14,
+    "passes": 14,
+    "skips": 0,
+    "failures": 0,
+    "errors": 0,
+    "coverage": [
+      "receipt exists: deny before data",
+      "unauthorized/duplicate asset: deny before path",
+      "chunkwise bytes and partial I/O",
+      "PASS/FAIL propagation without retry",
+      "first-pair interruption: UNKNOWN_PARTIAL_POSSIBLE",
+      "second-pair interruption: previous result retained",
+      "one scientific invocation and two pair calls"
+    ]
+  },
+  "independent_runner_review": {
+    "status": "PASS",
+    "receipt_before_bytes": true,
+    "no_automatic_retry": true,
+    "scientific_kernels_unchanged": true,
+    "partial_exception_observation_reported_honestly": true
+  },
+  "operational_code_before_freeze": {
+    "evaluator_sha256": "00726d8c9f44bd6be5a2e8ea4545c4eb342a7bb6bc155193a742c743bd767d78",
+    "runner_sha256": "ca915ec021bd03cc8aa75dd64bdf2531101e95c96359933c152248671600f8b2"
+  }
+}
