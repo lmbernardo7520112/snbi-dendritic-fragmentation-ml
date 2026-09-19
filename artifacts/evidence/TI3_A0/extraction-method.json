@@ -1,0 +1,24 @@
+{
+  "phase": "TI3_A0_GRAPHICAL_EXTRACTION",
+  "frozen_at_utc": "2026-09-19T11:53:57.227847+00:00",
+  "config": {
+    "chroma_distance": 20,
+    "minimum_component_pixels": 32,
+    "minimum_radius": 8.0,
+    "maximum_radius": 16.0,
+    "maximum_axis_ratio": 1.2,
+    "maximum_radial_p95": 4.0,
+    "minimum_angular_coverage": 0.9
+  },
+  "persistence_tolerance_px": 2.0,
+  "frozen_code_sha256": {
+    "scripts/inspect_ti3_a0_annotations.py": "b1f48082f95b0ce9394553145bd697cc870a34a44b8537e1a6864263c2b392dd",
+    "scripts/extract_ti3_a0_annotations.py": "5b27067eb30078c23aed9fb5cfe1f682811001d322e55782d70f717d3cb7801a",
+    "src/snbi_fragmentation/ti3_a0_annotations.py": "89e4dd58cab51bcd4ed2c607e2abc14d11a2f44f5c5e827fa4e58917539619e7",
+    "tests/test_ti3_a0_annotations.py": "6be96a83350d090057bbb2b7f374ef683b4f952b97a40ed954e94e6c43135eea"
+  },
+  "method": "CHROMA_THRESHOLD_CONNECTED_COMPONENTS_ALGEBRAIC_CIRCLE",
+  "hough": "NOT_EXECUTED",
+  "physical_masks": false,
+  "parameters_may_be_changed_after_run": false
+}

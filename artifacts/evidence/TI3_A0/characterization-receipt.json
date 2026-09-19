@@ -1,0 +1,20 @@
+{
+  "phase": "characterization",
+  "started_at_utc": "2026-09-19T11:48:41.202853+00:00",
+  "checkpoint": "1e7f5e8b382e84fd1259637722ce9774ffed7df3",
+  "asset_ids": [
+    "ESM3:0",
+    "ESM3:73",
+    "ESM3:146",
+    "ESM3:219",
+    "ESM3:293",
+    "ESM6:0",
+    "ESM6:98",
+    "ESM6:197",
+    "ESM6:295",
+    "ESM6:394"
+  ],
+  "ml_runs": 0,
+  "new_frame_access": false,
+  "one_invocation_for_this_phase": true
+}

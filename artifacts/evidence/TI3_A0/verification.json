@@ -1,0 +1,217 @@
+{
+  "status": "PASS_TEXTUAL_CUSTODY_AND_CONSISTENCY",
+  "checkpoint": "1e7f5e8b382e84fd1259637722ce9774ffed7df3",
+  "parent": "67786bd4e23406e7f19860a53fe237e6d7b648cb",
+  "prior_six_files": {
+    "artifacts/evidence/TI3_A/authorization.md": "88b62789cc24917e07a36a05c5debd225b4df1a9c9aa78d3756640456bb42cf0",
+    "artifacts/evidence/TI3_A/commands.json": "96a99af9e6ead0f54b95668959311d0b2b7abc1a6791aca4a11aea46efae170d",
+    "artifacts/evidence/TI3_A/environment.json": "20268d35b0bdcb85b41de39cce6410f018c9d75388ee14a2e8ff22b6c21c805e",
+    "artifacts/evidence/TI3_A/execution-report.md": "9976644763a1c77142937dd4789d8ae781b2a6491b99bfd6d022aee8b3d38e7e",
+    "artifacts/evidence/TI3_A/results.json": "34d14e59cce498123fc3e11e51aa106f39c2bdd2caa1927b092e9c75b415f644",
+    "artifacts/evidence/TI3_A/verification.json": "79c87f1e475d03b8c46262fc56bdb094f2355b5edc6924f9ef726d0f6648a758"
+  },
+  "g2_frozen_texts": {
+    ".github/workflows/ci.yml": "404f90eb4f3789f741b5f369e61661673d4691df2164270cd67306c4beb9c75f",
+    "artifacts/evidence/TI2R_SOLUTE_DIRECT/result.json": "485c5a8da36a421927fc50165dbfadf4b87981223f47de6518c16e4c03d28c95",
+    "artifacts/evidence/TI2R_SOLUTE_V2/exposure.json": "1555e6440535e9d13575e115f8e0afbaa028d152ae8df042c2c76adaff82bf42",
+    "artifacts/metadata/ti2-pilot-manifest.json": "4f84a50e65e7541729d9a6c58e2649a872d6a92e55b305a66a0ce4e9f63a09a9",
+    "configs/authority/ti2r-frag-direct.json": "4133dd7b7e4af85769ed1a0fa28f32202f4082f9e9d3e0320a7194556c6abf6c",
+    "configs/authority/ti2r-frag.json": "d62571e33696af63e1425e3add370efcf5a642ced99dd52cfa3897ec3be93816",
+    "configs/authority/ti2r-solute-direct.json": "f329923a4ab406f5bc819aa301e2e5f7289a59a6959af08b075b7f9cf69f0b3f",
+    "configs/authority/ti2r-solute-v2.json": "6351a15e26c2a0c3bc22642c5eb3e0b539de576dffd242721d9a82101625039a",
+    "configs/registration/ti2r-solute-direct-method.json": "cf024e61cd12c1d21377a6d64aa9529f2e90686b3879fa2221aca34c4cdd772f",
+    "configs/registration/ti2r-solute-v2-method.json": "da6ee2e6ca457a92ec2e3f0185a9b36720472d506426a19ab78f15fe8a4b2b14",
+    "docs/decisions/AUTHORIZATION-TI2R-SOLUTE-V2-D-2026-09-18.md": "ebab0cff2cf7747a97b52b6c85fcd7a014cb503156de12d7efe534ae5bd7cc0c",
+    "docs/protocols/TI2R_SOLUTE_V2_PROTOCOL.md": "8c4a947001160603d731c9a0e5dd2114a66decc67636b39a94028ae8a6b33eeb",
+    "pyproject.toml": "3d4195d69c33c9d18dd0c0c64ffb937f9e7cd3549c3d4c76dbebb05b9242fcc1",
+    "scripts/run_ti2r_solute_v2.py": "e07e50e65c856fe6f8b03076870647dfecee4a68c2c1af22c49d580eb976b4b8",
+    "scripts/run_ti2r_solute_v2_synthetic.py": "51f4972af89865ccddf0ba665af2a6fcdeaac9fb4a4fbc4c32b4903422373fd1",
+    "src/snbi_fragmentation/ti2_authority.py": "bcc9a586555b78c1c55341a43b66a40ac6ad4953714fa2273dd99ac0a78471f3",
+    "src/snbi_fragmentation/ti2r_frag_authority.py": "f030046d6b4a6bc392e9e14c4e871d6581c99cdcbf927f31535e322c49c45a42",
+    "src/snbi_fragmentation/ti2r_frag_direct_authority.py": "ec62a88a42ca4f84530103848e39927fc320fed7117039d8c57615abdb3bf6fb",
+    "src/snbi_fragmentation/ti2r_solute_direct_authority.py": "77a33c74594dc5050ddbef1720b42f29103aa02b5b51686da7c2ca4bcbe87955",
+    "src/snbi_fragmentation/ti2r_solute_direct_registration.py": "5cdd336e9f21e4f26631dbb29445d5cb92e9b2724482d7a90e085b589ca75450",
+    "src/snbi_fragmentation/ti2r_solute_v2_authority.py": "44c1e0f462422b30ba59c5c1b1721df102520f04dd451b64aaa4008b47b87027",
+    "src/snbi_fragmentation/ti2r_solute_v2_calibration.py": "223dccf6a2e565b4b8b487c55a35d4c88ee3c8cab5c0b304dcfd90ad0b88bc2b",
+    "tests/test_ti2r_solute_v2_authority.py": "56c82074336c1e9115c4911e6a114a6e7101bc48a66b218c11783d2ce6d160f4",
+    "tests/test_ti2r_solute_v2_calibration.py": "db75c6ee78fe15689aeea5743e60ed3dd82afcc48ea9448823925ff882c1847e",
+    "tests/test_ti2r_solute_v2_execution.py": "62aaba06d05c23cb3abcb15cd6148e2590c7c590d659b8374e5fef17cda1f92a"
+  },
+  "a0_frozen_code": {
+    "scripts/inspect_ti3_a0_annotations.py": "b1f48082f95b0ce9394553145bd697cc870a34a44b8537e1a6864263c2b392dd",
+    "scripts/extract_ti3_a0_annotations.py": "5b27067eb30078c23aed9fb5cfe1f682811001d322e55782d70f717d3cb7801a",
+    "src/snbi_fragmentation/ti3_a0_annotations.py": "89e4dd58cab51bcd4ed2c607e2abc14d11a2f44f5c5e827fa4e58917539619e7",
+    "tests/test_ti3_a0_annotations.py": "6be96a83350d090057bbb2b7f374ef683b4f952b97a40ed954e94e6c43135eea"
+  },
+  "io_consistency": {
+    "status": "PASS",
+    "native_files": 10,
+    "opens": 20,
+    "bytes": 39091200,
+    "new_frames": 0
+  },
+  "graphical_count_consistency": {
+    "component_count": 491,
+    "valid_circle_count": 108,
+    "ambiguous_component_count": 380,
+    "small_component_count": 3
+  },
+  "receipts_and_freeze_order": "PASS",
+  "json_utf8": "PASS",
+  "static_terminal_denial_check": "PASS_SOURCE_INSPECTION_ONLY",
+  "tracked_symlinks": 0,
+  "tracked_worktree_diff": "EMPTY",
+  "index_diff": "EMPTY",
+  "new_evidence_text_hashes": {
+    "artifacts/evidence/TI3_A0/ANNOTATION_EXTRACTION_SPEC.md": {
+      "sha256": "13e10b37310aca50ae303b8aa2fa1b0a8da83d09bc63ddae4b5860cb681d26c4",
+      "bytes": 4020
+    },
+    "artifacts/evidence/TI3_A0/ANNOTATION_SEMANTICS.md": {
+      "sha256": "0a5cc0876313c4789f1387974ece06b5c54b10fa61633496480bf488c3fcea71",
+      "bytes": 4912
+    },
+    "artifacts/evidence/TI3_A0/COURSE_ALIGNMENT_LABEL_EXTRACTION.md": {
+      "sha256": "0e7c349981671af8c7d2e494db6d9302ee9d3536f30270d75d2dffcc363ac9f5",
+      "bytes": 3232
+    },
+    "artifacts/evidence/TI3_A0/DOCUMENTARY_EVIDENCE.md": {
+      "sha256": "b8b7c6027f4fefe0ee34ce02445c06d12b9f46ab790d4165376ab8be1978e8a5",
+      "bytes": 5679
+    },
+    "artifacts/evidence/TI3_A0/SPLIT_FEASIBILITY.md": {
+      "sha256": "aefaca70ce90033ed25cc39fb5d6032b84fb8064faaf08ab07c2b789cfda87a6",
+      "bytes": 8045
+    },
+    "artifacts/evidence/TI3_A0/TARGET_CONTRACT.md": {
+      "sha256": "5f5eef439ddf62442dac0a3e1a0675b14707698914b35a288048f9113e33dff6",
+      "bytes": 4280
+    },
+    "artifacts/evidence/TI3_A0/authorization.md": {
+      "sha256": "5ce04c917829d84d7a367068ecd2ef0691cee6260322515ac76685adf8bb9906",
+      "bytes": 14981
+    },
+    "artifacts/evidence/TI3_A0/characterization-io.json": {
+      "sha256": "fd6b41bb65f205d6780ceafd2c1b56934b737a7bc8d71a3f851067c0c90781a3",
+      "bytes": 3319
+    },
+    "artifacts/evidence/TI3_A0/characterization-receipt.json": {
+      "sha256": "89c41d6af7e4fb7a2dc5c5d8404e97c131a2da0be868dcfec943bba4a3fde139",
+      "bytes": 411
+    },
+    "artifacts/evidence/TI3_A0/characterization.json": {
+      "sha256": "4b295b1763eb38ef95ef70f7c43699d6b095ae7ff4afb32687b1b72154608d07",
+      "bytes": 100583
+    },
+    "artifacts/evidence/TI3_A0/development-manifest.json": {
+      "sha256": "dc2ea4f22e7ea78dc8e381aca5170659d549f0f5357270e85f1cdc60c8372b6d",
+      "bytes": 13432
+    },
+    "artifacts/evidence/TI3_A0/execution-report.md": {
+      "sha256": "e43d4695cb6557227046402af168d983c09cf7d56b42f2bf61dfdccdc946d52b",
+      "bytes": 8281
+    },
+    "artifacts/evidence/TI3_A0/extraction-io.json": {
+      "sha256": "7ef704105df5b24b774475c27e7d5b066b2bd63cf024151195c5fc0eb69fcdbb",
+      "bytes": 3313
+    },
+    "artifacts/evidence/TI3_A0/extraction-method.json": {
+      "sha256": "d15d263ac51455551bfed6f6eb1918e90adcc678300a370562cc870ad3e151e0",
+      "bytes": 1026
+    },
+    "artifacts/evidence/TI3_A0/extraction-receipt.json": {
+      "sha256": "fc4e7ad249cee6803c566c8c6077d0a0dd6e2459b9a9c8243fbd04fa439ea639",
+      "bytes": 405
+    },
+    "artifacts/evidence/TI3_A0/extraction-results.json": {
+      "sha256": "9060042a6bfcd15398e460be3d9cef18a32c610dd12873ba086bac32049dc02d",
+      "bytes": 869345
+    },
+    "artifacts/evidence/TI3_A0/io-audit.json": {
+      "sha256": "c77fe0f1f444c618e9dc9bdc8b899ee7d022766792419d18daa59849e76fb799",
+      "bytes": 12028
+    },
+    "artifacts/evidence/TI3_A0/preflight.json": {
+      "sha256": "a5b8ad749f323c4e8b99a6b6abf575b7af4e3368d311821cb1cd59e699b1f0e1",
+      "bytes": 589
+    },
+    "artifacts/evidence/TI3_A0/results.json": {
+      "sha256": "18e4d378a81e5dd91c2d3d75d7f991acef08a327a07210bb7fea9893c2c88777",
+      "bytes": 3221
+    },
+    "artifacts/evidence/TI3_A0/temporal-results.json": {
+      "sha256": "60a8c86aa502a1dac23e4cbdb32957a3e55a75f127230868e96b618e032c5d7f",
+      "bytes": 136400
+    }
+  },
+  "limits": [
+    "No buffers, PNGs or other experimental content reopened.",
+    "Hashes are for textual files or historical Git blobs only.",
+    "Static guard inspection does not claim universal enforcement."
+  ],
+  "phase": "TI3_A0",
+  "scientific_outcome": "BLOCKED_TARGET_CONTRACT",
+  "data_guard": {
+    "audit": "tracked_repository_data_guard",
+    "content_bytes_read": 0,
+    "examined_entry_count": 283,
+    "status": "PASS",
+    "violations": []
+  },
+  "synthetic_tests": {
+    "command": "TMPDIR=.bootstrap-test-tmp PYTHONPATH=src /usr/bin/python3 -B -m unittest discover -s tests -p test_ti3_a0_annotations.py -v",
+    "tests": 18,
+    "passes": 18,
+    "skips": 0,
+    "failures": 0,
+    "errors": 0,
+    "exit_code": 0,
+    "provenance": "Execution tool transcript reported by ti3a0_graphical_extractor before the experimental extraction; no repeat.",
+    "scope": "In-memory graphical fixtures, not ML or experimental target validation."
+  },
+  "independent_review": {
+    "reviewer": "ti3_domain_audit",
+    "status": "PASS_TEXTUAL_CONSISTENCY",
+    "initial_read_only_commands": 19,
+    "terminal_read_only_commands": 3,
+    "all_exit_codes": 0,
+    "issue_resolved": "Adaptive-threshold claim qualified without changing frozen method or code.",
+    "limits": [
+      "No scientific kernels or pixels reopened.",
+      "No independent OS-level I/O instrumentation.",
+      "One aggregate presentation truncated; targeted readbacks completed relevant fields.",
+      "Not a claim to have manually inspected every one of 491 complete component records."
+    ]
+  },
+  "hash_coverage": {
+    "prior_ti3_a": 6,
+    "g2_frozen": 25,
+    "a0_frozen_code": 4,
+    "new_a0_evidence": 20,
+    "exclusions": [
+      "verification.json (this file)",
+      "commands.json (emitted alongside this file)"
+    ],
+    "note": "Hashes of the twenty finished evidence texts were verified before final metadata emission. Final read-only metadata/inventory validation belongs to the operator return."
+  },
+  "remote_ci": "NOT_RUN_FOR_TI3_A0",
+  "git_state": {
+    "head": "1e7f5e8b382e84fd1259637722ce9774ffed7df3",
+    "main": "67786bd4e23406e7f19860a53fe237e6d7b648cb",
+    "origin_main": "67786bd4e23406e7f19860a53fe237e6d7b648cb",
+    "branch": "feat/ti3-canonical-dataset-baseline",
+    "commits_this_task": 1,
+    "commit_scope": "Six prior TI3_A documentary files only",
+    "a0_new_files": "LOCAL_UNTRACKED_UNSTAGED",
+    "pushes": 0,
+    "pull_requests": 0,
+    "merges": 0,
+    "branch_deletions": 0
+  },
+  "runtime": {
+    "python": "3.12.3",
+    "numpy": "1.26.4",
+    "scipy": "1.11.4",
+    "Pillow": "10.2.0"
+  }
+}

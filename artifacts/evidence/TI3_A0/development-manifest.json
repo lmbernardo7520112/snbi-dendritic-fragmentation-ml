@@ -1,0 +1,445 @@
+{
+  "phase": "TI3_A0",
+  "pilot_manifest_sha256": "4f84a50e65e7541729d9a6c58e2649a872d6a92e55b305a66a0ce4e9f63a09a9",
+  "assets": [
+    {
+      "source_id": "ESM3",
+      "frame_index": 0,
+      "path": "data/derived/ti2-pilot/ESM3-0000.raw",
+      "width": 1280,
+      "height": 1024,
+      "frame_bytes": 1966080,
+      "image_sha256": "484389654c28d85969dc60830ea6be434b677d5fd9897434086f9f8ce9bb6ca8",
+      "experimental_time_s": -25.96,
+      "elapsed_from_first_frame_s": 0.0,
+      "pixel_format": "yuv420p",
+      "planes": [
+        {
+          "bytes": 1310720,
+          "height": 1024,
+          "name": "Y",
+          "offset": 0,
+          "width": 1280
+        },
+        {
+          "bytes": 327680,
+          "height": 512,
+          "name": "U",
+          "offset": 1310720,
+          "width": 640
+        },
+        {
+          "bytes": 327680,
+          "height": 512,
+          "name": "V",
+          "offset": 1638400,
+          "width": 640
+        }
+      ],
+      "condition": "bottom_up_anti_parallel",
+      "experiment_id": "bottom_up_anti_parallel",
+      "source_sha256": "d76a6466e50480a2116bc545a0ee2b8095cc14c54f861ecebee87de5b64e35be",
+      "asset_id": "ESM3:0",
+      "use": "ANNOTATION_CONTRACT_DEVELOPMENT_ONLY",
+      "final_test_eligible": false,
+      "permanent_exclusion_reason": "Previously exposed G2 annotation frame and authorized TI3-A0 development frame."
+    },
+    {
+      "source_id": "ESM3",
+      "frame_index": 73,
+      "path": "data/derived/ti2-pilot/ESM3-0073.raw",
+      "width": 1280,
+      "height": 1024,
+      "frame_bytes": 1966080,
+      "image_sha256": "61e793620b24d5375237da7c19c4e96af5fa0605fa789c23bfba9c1466426365",
+      "experimental_time_s": 60.18,
+      "elapsed_from_first_frame_s": 86.14,
+      "pixel_format": "yuv420p",
+      "planes": [
+        {
+          "bytes": 1310720,
+          "height": 1024,
+          "name": "Y",
+          "offset": 0,
+          "width": 1280
+        },
+        {
+          "bytes": 327680,
+          "height": 512,
+          "name": "U",
+          "offset": 1310720,
+          "width": 640
+        },
+        {
+          "bytes": 327680,
+          "height": 512,
+          "name": "V",
+          "offset": 1638400,
+          "width": 640
+        }
+      ],
+      "condition": "bottom_up_anti_parallel",
+      "experiment_id": "bottom_up_anti_parallel",
+      "source_sha256": "d76a6466e50480a2116bc545a0ee2b8095cc14c54f861ecebee87de5b64e35be",
+      "asset_id": "ESM3:73",
+      "use": "ANNOTATION_CONTRACT_DEVELOPMENT_ONLY",
+      "final_test_eligible": false,
+      "permanent_exclusion_reason": "Previously exposed G2 annotation frame and authorized TI3-A0 development frame."
+    },
+    {
+      "source_id": "ESM3",
+      "frame_index": 146,
+      "path": "data/derived/ti2-pilot/ESM3-0146.raw",
+      "width": 1280,
+      "height": 1024,
+      "frame_bytes": 1966080,
+      "image_sha256": "3d38b23a594b8d23c98fdc95351d3d435c92d6df6eb09ea3d8ac97f63baf50ee",
+      "experimental_time_s": 146.32,
+      "elapsed_from_first_frame_s": 172.28,
+      "pixel_format": "yuv420p",
+      "planes": [
+        {
+          "bytes": 1310720,
+          "height": 1024,
+          "name": "Y",
+          "offset": 0,
+          "width": 1280
+        },
+        {
+          "bytes": 327680,
+          "height": 512,
+          "name": "U",
+          "offset": 1310720,
+          "width": 640
+        },
+        {
+          "bytes": 327680,
+          "height": 512,
+          "name": "V",
+          "offset": 1638400,
+          "width": 640
+        }
+      ],
+      "condition": "bottom_up_anti_parallel",
+      "experiment_id": "bottom_up_anti_parallel",
+      "source_sha256": "d76a6466e50480a2116bc545a0ee2b8095cc14c54f861ecebee87de5b64e35be",
+      "asset_id": "ESM3:146",
+      "use": "ANNOTATION_CONTRACT_DEVELOPMENT_ONLY",
+      "final_test_eligible": false,
+      "permanent_exclusion_reason": "Previously exposed G2 annotation frame and authorized TI3-A0 development frame."
+    },
+    {
+      "source_id": "ESM3",
+      "frame_index": 219,
+      "path": "data/derived/ti2-pilot/ESM3-0219.raw",
+      "width": 1280,
+      "height": 1024,
+      "frame_bytes": 1966080,
+      "image_sha256": "1d4e1e68456b3e21c06384655461ed8094b4259a853580ea0b1fa93741069c15",
+      "experimental_time_s": 232.46,
+      "elapsed_from_first_frame_s": 258.42,
+      "pixel_format": "yuv420p",
+      "planes": [
+        {
+          "bytes": 1310720,
+          "height": 1024,
+          "name": "Y",
+          "offset": 0,
+          "width": 1280
+        },
+        {
+          "bytes": 327680,
+          "height": 512,
+          "name": "U",
+          "offset": 1310720,
+          "width": 640
+        },
+        {
+          "bytes": 327680,
+          "height": 512,
+          "name": "V",
+          "offset": 1638400,
+          "width": 640
+        }
+      ],
+      "condition": "bottom_up_anti_parallel",
+      "experiment_id": "bottom_up_anti_parallel",
+      "source_sha256": "d76a6466e50480a2116bc545a0ee2b8095cc14c54f861ecebee87de5b64e35be",
+      "asset_id": "ESM3:219",
+      "use": "ANNOTATION_CONTRACT_DEVELOPMENT_ONLY",
+      "final_test_eligible": false,
+      "permanent_exclusion_reason": "Previously exposed G2 annotation frame and authorized TI3-A0 development frame."
+    },
+    {
+      "source_id": "ESM3",
+      "frame_index": 293,
+      "path": "data/derived/ti2-pilot/ESM3-0293.raw",
+      "width": 1280,
+      "height": 1024,
+      "frame_bytes": 1966080,
+      "image_sha256": "79e8666e527787c1baf1957152dbe21532bd36c26bf15475aa1bac7d9987df15",
+      "experimental_time_s": 319.78,
+      "elapsed_from_first_frame_s": 345.74,
+      "pixel_format": "yuv420p",
+      "planes": [
+        {
+          "bytes": 1310720,
+          "height": 1024,
+          "name": "Y",
+          "offset": 0,
+          "width": 1280
+        },
+        {
+          "bytes": 327680,
+          "height": 512,
+          "name": "U",
+          "offset": 1310720,
+          "width": 640
+        },
+        {
+          "bytes": 327680,
+          "height": 512,
+          "name": "V",
+          "offset": 1638400,
+          "width": 640
+        }
+      ],
+      "condition": "bottom_up_anti_parallel",
+      "experiment_id": "bottom_up_anti_parallel",
+      "source_sha256": "d76a6466e50480a2116bc545a0ee2b8095cc14c54f861ecebee87de5b64e35be",
+      "asset_id": "ESM3:293",
+      "use": "ANNOTATION_CONTRACT_DEVELOPMENT_ONLY",
+      "final_test_eligible": false,
+      "permanent_exclusion_reason": "Previously exposed G2 annotation frame and authorized TI3-A0 development frame."
+    },
+    {
+      "source_id": "ESM6",
+      "frame_index": 0,
+      "path": "data/derived/ti2-pilot/ESM6-0000.raw",
+      "width": 1280,
+      "height": 1012,
+      "frame_bytes": 1943040,
+      "image_sha256": "df7448b2d94b6e86e19daeb2349705e4bb204c3464294ecf2fcc17c607ec8813",
+      "experimental_time_s": -34.22,
+      "elapsed_from_first_frame_s": 0.0,
+      "pixel_format": "yuv420p",
+      "planes": [
+        {
+          "bytes": 1295360,
+          "height": 1012,
+          "name": "Y",
+          "offset": 0,
+          "width": 1280
+        },
+        {
+          "bytes": 323840,
+          "height": 506,
+          "name": "U",
+          "offset": 1295360,
+          "width": 640
+        },
+        {
+          "bytes": 323840,
+          "height": 506,
+          "name": "V",
+          "offset": 1619200,
+          "width": 640
+        }
+      ],
+      "condition": "top_down_parallel",
+      "experiment_id": "top_down_parallel",
+      "source_sha256": "5b8747758afde34fb626f3c4ffbd0b49ba6ca6f6b49bfa81b8cf9ee8459280ea",
+      "asset_id": "ESM6:0",
+      "use": "ANNOTATION_CONTRACT_DEVELOPMENT_ONLY",
+      "final_test_eligible": false,
+      "permanent_exclusion_reason": "Previously exposed G2 annotation frame and authorized TI3-A0 development frame."
+    },
+    {
+      "source_id": "ESM6",
+      "frame_index": 98,
+      "path": "data/derived/ti2-pilot/ESM6-0098.raw",
+      "width": 1280,
+      "height": 1012,
+      "frame_bytes": 1943040,
+      "image_sha256": "76dea6e55b0f0434ee48d2a114be5b6d41acebedcb8d1bb3d5ee0bfc4fa4a311",
+      "experimental_time_s": 81.42,
+      "elapsed_from_first_frame_s": 115.64,
+      "pixel_format": "yuv420p",
+      "planes": [
+        {
+          "bytes": 1295360,
+          "height": 1012,
+          "name": "Y",
+          "offset": 0,
+          "width": 1280
+        },
+        {
+          "bytes": 323840,
+          "height": 506,
+          "name": "U",
+          "offset": 1295360,
+          "width": 640
+        },
+        {
+          "bytes": 323840,
+          "height": 506,
+          "name": "V",
+          "offset": 1619200,
+          "width": 640
+        }
+      ],
+      "condition": "top_down_parallel",
+      "experiment_id": "top_down_parallel",
+      "source_sha256": "5b8747758afde34fb626f3c4ffbd0b49ba6ca6f6b49bfa81b8cf9ee8459280ea",
+      "asset_id": "ESM6:98",
+      "use": "ANNOTATION_CONTRACT_DEVELOPMENT_ONLY",
+      "final_test_eligible": false,
+      "permanent_exclusion_reason": "Previously exposed G2 annotation frame and authorized TI3-A0 development frame."
+    },
+    {
+      "source_id": "ESM6",
+      "frame_index": 197,
+      "path": "data/derived/ti2-pilot/ESM6-0197.raw",
+      "width": 1280,
+      "height": 1012,
+      "frame_bytes": 1943040,
+      "image_sha256": "eaaf9baa016cb829e3f4bf88101a32cd4d2a79fba78450294a2c904e2f45d2e3",
+      "experimental_time_s": 198.24,
+      "elapsed_from_first_frame_s": 232.46,
+      "pixel_format": "yuv420p",
+      "planes": [
+        {
+          "bytes": 1295360,
+          "height": 1012,
+          "name": "Y",
+          "offset": 0,
+          "width": 1280
+        },
+        {
+          "bytes": 323840,
+          "height": 506,
+          "name": "U",
+          "offset": 1295360,
+          "width": 640
+        },
+        {
+          "bytes": 323840,
+          "height": 506,
+          "name": "V",
+          "offset": 1619200,
+          "width": 640
+        }
+      ],
+      "condition": "top_down_parallel",
+      "experiment_id": "top_down_parallel",
+      "source_sha256": "5b8747758afde34fb626f3c4ffbd0b49ba6ca6f6b49bfa81b8cf9ee8459280ea",
+      "asset_id": "ESM6:197",
+      "use": "ANNOTATION_CONTRACT_DEVELOPMENT_ONLY",
+      "final_test_eligible": false,
+      "permanent_exclusion_reason": "Previously exposed G2 annotation frame and authorized TI3-A0 development frame."
+    },
+    {
+      "source_id": "ESM6",
+      "frame_index": 295,
+      "path": "data/derived/ti2-pilot/ESM6-0295.raw",
+      "width": 1280,
+      "height": 1012,
+      "frame_bytes": 1943040,
+      "image_sha256": "fefdd388948f55ee511f012589427ae9a191b54dbe6695eaf0d08fd763acd24b",
+      "experimental_time_s": 313.88,
+      "elapsed_from_first_frame_s": 348.1,
+      "pixel_format": "yuv420p",
+      "planes": [
+        {
+          "bytes": 1295360,
+          "height": 1012,
+          "name": "Y",
+          "offset": 0,
+          "width": 1280
+        },
+        {
+          "bytes": 323840,
+          "height": 506,
+          "name": "U",
+          "offset": 1295360,
+          "width": 640
+        },
+        {
+          "bytes": 323840,
+          "height": 506,
+          "name": "V",
+          "offset": 1619200,
+          "width": 640
+        }
+      ],
+      "condition": "top_down_parallel",
+      "experiment_id": "top_down_parallel",
+      "source_sha256": "5b8747758afde34fb626f3c4ffbd0b49ba6ca6f6b49bfa81b8cf9ee8459280ea",
+      "asset_id": "ESM6:295",
+      "use": "ANNOTATION_CONTRACT_DEVELOPMENT_ONLY",
+      "final_test_eligible": false,
+      "permanent_exclusion_reason": "Previously exposed G2 annotation frame and authorized TI3-A0 development frame."
+    },
+    {
+      "source_id": "ESM6",
+      "frame_index": 394,
+      "path": "data/derived/ti2-pilot/ESM6-0394.raw",
+      "width": 1280,
+      "height": 1012,
+      "frame_bytes": 1943040,
+      "image_sha256": "15ed13353647307ddeaba428e1bc5974ed7c02572a47ccae0b3d50a78dc140ad",
+      "experimental_time_s": 430.7,
+      "elapsed_from_first_frame_s": 464.92,
+      "pixel_format": "yuv420p",
+      "planes": [
+        {
+          "bytes": 1295360,
+          "height": 1012,
+          "name": "Y",
+          "offset": 0,
+          "width": 1280
+        },
+        {
+          "bytes": 323840,
+          "height": 506,
+          "name": "U",
+          "offset": 1295360,
+          "width": 640
+        },
+        {
+          "bytes": 323840,
+          "height": 506,
+          "name": "V",
+          "offset": 1619200,
+          "width": 640
+        }
+      ],
+      "condition": "top_down_parallel",
+      "experiment_id": "top_down_parallel",
+      "source_sha256": "5b8747758afde34fb626f3c4ffbd0b49ba6ca6f6b49bfa81b8cf9ee8459280ea",
+      "asset_id": "ESM6:394",
+      "use": "ANNOTATION_CONTRACT_DEVELOPMENT_ONLY",
+      "final_test_eligible": false,
+      "permanent_exclusion_reason": "Previously exposed G2 annotation frame and authorized TI3-A0 development frame."
+    }
+  ],
+  "new_frames_authorized_now": false,
+  "future_final_test_excluded_asset_ids": [
+    "ESM3:0",
+    "ESM3:73",
+    "ESM3:146",
+    "ESM3:219",
+    "ESM3:293",
+    "ESM6:0",
+    "ESM6:98",
+    "ESM6:197",
+    "ESM6:295",
+    "ESM6:394"
+  ],
+  "max_source_opens_per_asset": 2,
+  "permitted_read_phases": [
+    "characterization",
+    "extraction"
+  ],
+  "note": "At most one native read per asset in each declared phase; display derivatives are accounted separately. No new frames/window selected."
+}

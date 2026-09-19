@@ -1,0 +1,321 @@
+{
+  "scope": "native buffer I/O for two declared DEV-only passes",
+  "phases": [
+    {
+      "phase": "characterization",
+      "started_at_utc": "2026-09-19T11:48:41.207062+00:00",
+      "status": "COMPLETED",
+      "assets": [
+        {
+          "asset_id": "ESM3:0",
+          "path": "data/derived/ti2-pilot/ESM3-0000.raw",
+          "open_attempts": 1,
+          "open_count": 1,
+          "content_bytes_read": 1966080,
+          "status": "AUTHENTICATED",
+          "sha256": "484389654c28d85969dc60830ea6be434b677d5fd9897434086f9f8ce9bb6ca8"
+        },
+        {
+          "asset_id": "ESM3:73",
+          "path": "data/derived/ti2-pilot/ESM3-0073.raw",
+          "open_attempts": 1,
+          "open_count": 1,
+          "content_bytes_read": 1966080,
+          "status": "AUTHENTICATED",
+          "sha256": "61e793620b24d5375237da7c19c4e96af5fa0605fa789c23bfba9c1466426365"
+        },
+        {
+          "asset_id": "ESM3:146",
+          "path": "data/derived/ti2-pilot/ESM3-0146.raw",
+          "open_attempts": 1,
+          "open_count": 1,
+          "content_bytes_read": 1966080,
+          "status": "AUTHENTICATED",
+          "sha256": "3d38b23a594b8d23c98fdc95351d3d435c92d6df6eb09ea3d8ac97f63baf50ee"
+        },
+        {
+          "asset_id": "ESM3:219",
+          "path": "data/derived/ti2-pilot/ESM3-0219.raw",
+          "open_attempts": 1,
+          "open_count": 1,
+          "content_bytes_read": 1966080,
+          "status": "AUTHENTICATED",
+          "sha256": "1d4e1e68456b3e21c06384655461ed8094b4259a853580ea0b1fa93741069c15"
+        },
+        {
+          "asset_id": "ESM3:293",
+          "path": "data/derived/ti2-pilot/ESM3-0293.raw",
+          "open_attempts": 1,
+          "open_count": 1,
+          "content_bytes_read": 1966080,
+          "status": "AUTHENTICATED",
+          "sha256": "79e8666e527787c1baf1957152dbe21532bd36c26bf15475aa1bac7d9987df15"
+        },
+        {
+          "asset_id": "ESM6:0",
+          "path": "data/derived/ti2-pilot/ESM6-0000.raw",
+          "open_attempts": 1,
+          "open_count": 1,
+          "content_bytes_read": 1943040,
+          "status": "AUTHENTICATED",
+          "sha256": "df7448b2d94b6e86e19daeb2349705e4bb204c3464294ecf2fcc17c607ec8813"
+        },
+        {
+          "asset_id": "ESM6:98",
+          "path": "data/derived/ti2-pilot/ESM6-0098.raw",
+          "open_attempts": 1,
+          "open_count": 1,
+          "content_bytes_read": 1943040,
+          "status": "AUTHENTICATED",
+          "sha256": "76dea6e55b0f0434ee48d2a114be5b6d41acebedcb8d1bb3d5ee0bfc4fa4a311"
+        },
+        {
+          "asset_id": "ESM6:197",
+          "path": "data/derived/ti2-pilot/ESM6-0197.raw",
+          "open_attempts": 1,
+          "open_count": 1,
+          "content_bytes_read": 1943040,
+          "status": "AUTHENTICATED",
+          "sha256": "eaaf9baa016cb829e3f4bf88101a32cd4d2a79fba78450294a2c904e2f45d2e3"
+        },
+        {
+          "asset_id": "ESM6:295",
+          "path": "data/derived/ti2-pilot/ESM6-0295.raw",
+          "open_attempts": 1,
+          "open_count": 1,
+          "content_bytes_read": 1943040,
+          "status": "AUTHENTICATED",
+          "sha256": "fefdd388948f55ee511f012589427ae9a191b54dbe6695eaf0d08fd763acd24b"
+        },
+        {
+          "asset_id": "ESM6:394",
+          "path": "data/derived/ti2-pilot/ESM6-0394.raw",
+          "open_attempts": 1,
+          "open_count": 1,
+          "content_bytes_read": 1943040,
+          "status": "AUTHENTICATED",
+          "sha256": "15ed13353647307ddeaba428e1bc5974ed7c02572a47ccae0b3d50a78dc140ad"
+        }
+      ],
+      "open_attempts": 10,
+      "open_count": 10,
+      "content_bytes_read": 19545600,
+      "max_source_opens_per_asset_in_this_phase": 1,
+      "new_frames": 0,
+      "finished_at_utc": "2026-09-19T11:48:43.248900+00:00"
+    },
+    {
+      "phase": "extraction",
+      "started_at_utc": "2026-09-19T11:54:13.424070+00:00",
+      "status": "COMPLETED",
+      "assets": [
+        {
+          "asset_id": "ESM3:0",
+          "path": "data/derived/ti2-pilot/ESM3-0000.raw",
+          "open_attempts": 1,
+          "open_count": 1,
+          "content_bytes_read": 1966080,
+          "status": "AUTHENTICATED",
+          "sha256": "484389654c28d85969dc60830ea6be434b677d5fd9897434086f9f8ce9bb6ca8"
+        },
+        {
+          "asset_id": "ESM3:73",
+          "path": "data/derived/ti2-pilot/ESM3-0073.raw",
+          "open_attempts": 1,
+          "open_count": 1,
+          "content_bytes_read": 1966080,
+          "status": "AUTHENTICATED",
+          "sha256": "61e793620b24d5375237da7c19c4e96af5fa0605fa789c23bfba9c1466426365"
+        },
+        {
+          "asset_id": "ESM3:146",
+          "path": "data/derived/ti2-pilot/ESM3-0146.raw",
+          "open_attempts": 1,
+          "open_count": 1,
+          "content_bytes_read": 1966080,
+          "status": "AUTHENTICATED",
+          "sha256": "3d38b23a594b8d23c98fdc95351d3d435c92d6df6eb09ea3d8ac97f63baf50ee"
+        },
+        {
+          "asset_id": "ESM3:219",
+          "path": "data/derived/ti2-pilot/ESM3-0219.raw",
+          "open_attempts": 1,
+          "open_count": 1,
+          "content_bytes_read": 1966080,
+          "status": "AUTHENTICATED",
+          "sha256": "1d4e1e68456b3e21c06384655461ed8094b4259a853580ea0b1fa93741069c15"
+        },
+        {
+          "asset_id": "ESM3:293",
+          "path": "data/derived/ti2-pilot/ESM3-0293.raw",
+          "open_attempts": 1,
+          "open_count": 1,
+          "content_bytes_read": 1966080,
+          "status": "AUTHENTICATED",
+          "sha256": "79e8666e527787c1baf1957152dbe21532bd36c26bf15475aa1bac7d9987df15"
+        },
+        {
+          "asset_id": "ESM6:0",
+          "path": "data/derived/ti2-pilot/ESM6-0000.raw",
+          "open_attempts": 1,
+          "open_count": 1,
+          "content_bytes_read": 1943040,
+          "status": "AUTHENTICATED",
+          "sha256": "df7448b2d94b6e86e19daeb2349705e4bb204c3464294ecf2fcc17c607ec8813"
+        },
+        {
+          "asset_id": "ESM6:98",
+          "path": "data/derived/ti2-pilot/ESM6-0098.raw",
+          "open_attempts": 1,
+          "open_count": 1,
+          "content_bytes_read": 1943040,
+          "status": "AUTHENTICATED",
+          "sha256": "76dea6e55b0f0434ee48d2a114be5b6d41acebedcb8d1bb3d5ee0bfc4fa4a311"
+        },
+        {
+          "asset_id": "ESM6:197",
+          "path": "data/derived/ti2-pilot/ESM6-0197.raw",
+          "open_attempts": 1,
+          "open_count": 1,
+          "content_bytes_read": 1943040,
+          "status": "AUTHENTICATED",
+          "sha256": "eaaf9baa016cb829e3f4bf88101a32cd4d2a79fba78450294a2c904e2f45d2e3"
+        },
+        {
+          "asset_id": "ESM6:295",
+          "path": "data/derived/ti2-pilot/ESM6-0295.raw",
+          "open_attempts": 1,
+          "open_count": 1,
+          "content_bytes_read": 1943040,
+          "status": "AUTHENTICATED",
+          "sha256": "fefdd388948f55ee511f012589427ae9a191b54dbe6695eaf0d08fd763acd24b"
+        },
+        {
+          "asset_id": "ESM6:394",
+          "path": "data/derived/ti2-pilot/ESM6-0394.raw",
+          "open_attempts": 1,
+          "open_count": 1,
+          "content_bytes_read": 1943040,
+          "status": "AUTHENTICATED",
+          "sha256": "15ed13353647307ddeaba428e1bc5974ed7c02572a47ccae0b3d50a78dc140ad"
+        }
+      ],
+      "open_attempts": 10,
+      "open_count": 10,
+      "content_bytes_read": 19545600,
+      "max_source_opens_per_asset_in_this_phase": 1,
+      "new_frames": 0,
+      "finished_at_utc": "2026-09-19T11:54:13.853436+00:00"
+    }
+  ],
+  "unique_native_files": 10,
+  "native_open_attempts": 20,
+  "native_open_count": 20,
+  "native_bytes_read": 39091200,
+  "new_frames_opened": 0,
+  "final_test_opened": false,
+  "visual_derivatives": {
+    "scope": "Ten RGB PNG derivatives of the same ten already exposed native buffers; no new frames.",
+    "png_files_created": 10,
+    "png_hash_read_calls": 10,
+    "view_image_tool_calls": 10,
+    "derivative_content_bytes_read": "NOT_INSTRUMENTED",
+    "underlying_tool_os_open_counts": "NOT_INSTRUMENTED",
+    "records": [
+      {
+        "asset_id": "ESM3:0",
+        "path": ".bootstrap-test-tmp/ti3-a0-20260919-inspection/ESM3-0.png",
+        "sha256_at_creation": "995be4f9982520700fe4bd1f5f76b7c5d5db6b92a40fab6aa6eacb4d1bdfc797",
+        "image_save_calls": 1,
+        "post_save_hash_read_calls": 1,
+        "view_image_tool_calls": 1,
+        "development_only": true
+      },
+      {
+        "asset_id": "ESM3:73",
+        "path": ".bootstrap-test-tmp/ti3-a0-20260919-inspection/ESM3-73.png",
+        "sha256_at_creation": "966e99afad51d333e27ec6950b9c6d38655dd51d42d2f292cb0de8434c65b7f4",
+        "image_save_calls": 1,
+        "post_save_hash_read_calls": 1,
+        "view_image_tool_calls": 1,
+        "development_only": true
+      },
+      {
+        "asset_id": "ESM3:146",
+        "path": ".bootstrap-test-tmp/ti3-a0-20260919-inspection/ESM3-146.png",
+        "sha256_at_creation": "09f78820d571ac72c410c99f3a72ecb6ea93d8617fbcfbe87b7da29b8cbc61b8",
+        "image_save_calls": 1,
+        "post_save_hash_read_calls": 1,
+        "view_image_tool_calls": 1,
+        "development_only": true
+      },
+      {
+        "asset_id": "ESM3:219",
+        "path": ".bootstrap-test-tmp/ti3-a0-20260919-inspection/ESM3-219.png",
+        "sha256_at_creation": "f2f5dc418caa091377726184b0012bfd0e747115b628c235ed72a5f1ce653e2c",
+        "image_save_calls": 1,
+        "post_save_hash_read_calls": 1,
+        "view_image_tool_calls": 1,
+        "development_only": true
+      },
+      {
+        "asset_id": "ESM3:293",
+        "path": ".bootstrap-test-tmp/ti3-a0-20260919-inspection/ESM3-293.png",
+        "sha256_at_creation": "d6a59e6e5f7ce32b6588be9d929ecb067cf0fefca8b6f8b9e124d5404987729d",
+        "image_save_calls": 1,
+        "post_save_hash_read_calls": 1,
+        "view_image_tool_calls": 1,
+        "development_only": true
+      },
+      {
+        "asset_id": "ESM6:0",
+        "path": ".bootstrap-test-tmp/ti3-a0-20260919-inspection/ESM6-0.png",
+        "sha256_at_creation": "b1811deb365eefb0e30524e656a87508101f9bad2c9f932d0cec6791614a473a",
+        "image_save_calls": 1,
+        "post_save_hash_read_calls": 1,
+        "view_image_tool_calls": 1,
+        "development_only": true
+      },
+      {
+        "asset_id": "ESM6:98",
+        "path": ".bootstrap-test-tmp/ti3-a0-20260919-inspection/ESM6-98.png",
+        "sha256_at_creation": "b7db2bc78197fa60a7c0c8096c58e08cf9fad85082a2bd04b6d4ae7c54404b09",
+        "image_save_calls": 1,
+        "post_save_hash_read_calls": 1,
+        "view_image_tool_calls": 1,
+        "development_only": true
+      },
+      {
+        "asset_id": "ESM6:197",
+        "path": ".bootstrap-test-tmp/ti3-a0-20260919-inspection/ESM6-197.png",
+        "sha256_at_creation": "7eb885405ce8c891ea93848e7fe6bafce623bce63e89afca6697098d518e8686",
+        "image_save_calls": 1,
+        "post_save_hash_read_calls": 1,
+        "view_image_tool_calls": 1,
+        "development_only": true
+      },
+      {
+        "asset_id": "ESM6:295",
+        "path": ".bootstrap-test-tmp/ti3-a0-20260919-inspection/ESM6-295.png",
+        "sha256_at_creation": "9d4a0cc5392443cfce49c5b99eb3663496fc69ed08072b2b3c2896abb6f9d0fe",
+        "image_save_calls": 1,
+        "post_save_hash_read_calls": 1,
+        "view_image_tool_calls": 1,
+        "development_only": true
+      },
+      {
+        "asset_id": "ESM6:394",
+        "path": ".bootstrap-test-tmp/ti3-a0-20260919-inspection/ESM6-394.png",
+        "sha256_at_creation": "b5c3504d5b782c782c406b3a4fc2a235ab001e5e510816d5c68530068e5dd5cb",
+        "image_save_calls": 1,
+        "post_save_hash_read_calls": 1,
+        "view_image_tool_calls": 1,
+        "development_only": true
+      }
+    ],
+    "verification_limit": "Native byte totals exclude derivative file I/O and tool internals. Existing text records were used after extraction; PNGs were not reopened for final checks."
+  },
+  "ml_runs": 0,
+  "terminal_state_file": "results.json",
+  "terminal_presence_denies_future_preflight": true
+}

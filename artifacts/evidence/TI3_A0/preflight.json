@@ -1,0 +1,21 @@
+{
+  "phase": "TI3_A0",
+  "status": "PREPARED",
+  "checkpoint": "1e7f5e8b382e84fd1259637722ce9774ffed7df3",
+  "allowed_phases": [
+    "characterization",
+    "extraction"
+  ],
+  "authorization_sha256": "5ce04c917829d84d7a367068ecd2ef0691cee6260322515ac76685adf8bb9906",
+  "expected_native_files": 10,
+  "expected_bytes_per_full_pass": 19545600,
+  "versions": {
+    "python": "3.12.3",
+    "numpy": "1.26.4",
+    "scipy": "1.11.4",
+    "Pillow": "10.2.0"
+  },
+  "dependency_installations": 0,
+  "expected_final_test_state": "NOT_DEFINED_NOT_OPENED",
+  "historical_g2_remains_closed": true
+}
