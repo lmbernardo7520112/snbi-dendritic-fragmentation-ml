@@ -1,0 +1,124 @@
+{
+  "scope": "TI3_C0R1_PUBLICATION_C1_AND_SINGLE_SCIENTIFIC_INVOCATION",
+  "C0": "272695a4420e37fddf6674664d0040ef064c153f",
+  "C0R1": "aba4fb6d66fd6bf640b3cd6adad07b2d60dfe49a",
+  "C1": "e6090121471faa8902f68ddd045ab8b54a2e77fc",
+  "git_checkpoints": [
+    {
+      "stage": "git add -- '.github/workflows/ti3-synthetic.yml' 'artifacts/evidence/TI3_GOV_COMPAT/semantic-1/remote-ci.json' 'artifacts/evidence/TI3_GOV_COMPAT/semantic-1/terminal-state.json' 'artifacts/evidence/TI3_GOV_COMPAT/semantic-1/commands-post-publication.json' 'artifacts/evidence/TI3_GOV_COMPAT/semantic-1/execution-report-terminal.md' 'artifacts/evidence/TI3_GOV_COMPAT/semantic-1/post-publication-verification.json' 'artifacts/evidence/TI3_GOV_COMPAT/c0r1/authorization.md' 'artifacts/evidence/TI3_GOV_COMPAT/c0r1/local-guards.json' 'artifacts/evidence/TI3_GOV_COMPAT/c0r1/workflow.diff.txt' 'artifacts/evidence/TI3_GOV_COMPAT/c0r1/ci-profile-local.json' 'artifacts/evidence/TI3_GOV_COMPAT/c0r1/diagnosis.json' 'artifacts/evidence/TI3_GOV_COMPAT/c0r1/tests.json' 'artifacts/evidence/TI3_GOV_COMPAT/c0r1/execution-report.md' 'artifacts/evidence/TI3_GOV_COMPAT/c0r1/commands.json' 'artifacts/evidence/TI3_GOV_COMPAT/c0r1/verification.json'",
+      "stage_exit": 0,
+      "review": {
+        "command": "PYTHONPATH=src:tests:. /usr/bin/python3 -B - <<'PY'\nimport json,hashlib,subprocess\nfrom pathlib import Path\nfrom scripts import check_phase_scope\nv=json.loads(Path('artifacts/evidence/TI3_GOV_COMPAT/c0r1/verification.json').read_text());paths=set(v['exact_paths'])\nassert set(subprocess.check_output(['git','diff','--cached','--name-only']).decode().splitlines())==paths\nfor p in paths:\n b=Path(p).read_bytes();assert b==subprocess.check_output(['git','show',':'+p]),p\n if p in v['text_hashes_excluding_this_file']:assert hashlib.sha256(b).hexdigest()==v['text_hashes_excluding_this_file'][p]['sha256'],p\nsubprocess.run(['git','diff','--cached','--check'],check=True)\nr=check_phase_scope.audit();assert r['status']=='PASS',r\nsubprocess.run(['/usr/bin/python3','-B','scripts/check_ti2_checksums.py'],check=True)\nprint(json.dumps({'STAGED_REVIEW':'PASS','paths':len(paths),'phase_scope':'PASS','active_checksums':'95/95 PASS'}))\nPY",
+        "result": {
+          "chunk_id": "ea0fb6",
+          "wall_time_seconds": 0.15480338,
+          "exit_code": 0,
+          "original_token_count": 84,
+          "output": "{\n  \"audit\": \"ti2_textual_checksums\",\n  \"historical_checksum_count\": 70,\n  \"listed_count\": 95,\n  \"manifest\": \"artifacts/evidence/TI2/checksums.sha256\",\n  \"status\": \"PASS\",\n  \"unique_count\": 95,\n  \"verified_count\": 95,\n  \"violations\": []\n}\n{\"STAGED_REVIEW\": \"PASS\", \"paths\": 15, \"phase_scope\": \"PASS\", \"active_checksums\": \"95/95 PASS\"}\n"
+        }
+      },
+      "commit": "git commit -m 'fix(ci): quote ti3 binary-install command safely'",
+      "commit_exit": 0,
+      "push": "git push origin aba4fb6d66fd6bf640b3cd6adad07b2d60dfe49a:refs/heads/feat/ti3-canonical-dataset-baseline",
+      "push_default_exit": 128,
+      "push_error": "DNS lookup failure",
+      "push_targeted_approved_exit": 0
+    },
+    {
+      "stage": "git add -- 'artifacts/evidence/TI3_A_RESUME/BACKGROUND_PROTOCOL.md' 'artifacts/evidence/TI3_A_RESUME/BASELINE_SPEC.md' 'artifacts/evidence/TI3_A_RESUME/CLAIM_SCOPE.md' 'artifacts/evidence/TI3_A_RESUME/COURSE_ALIGNMENT.md' 'artifacts/evidence/TI3_A_RESUME/DATASET_SPEC.md' 'artifacts/evidence/TI3_A_RESUME/EXECUTION_GUARDS.md' 'artifacts/evidence/TI3_A_RESUME/LEAKAGE_THREAT_MODEL.md' 'artifacts/evidence/TI3_A_RESUME/SPLIT_PROTOCOL.md' 'artifacts/evidence/TI3_A_RESUME/authorization.md' 'artifacts/evidence/TI3_A_RESUME/c0r1-resume/CLAIM_SCOPE.md' 'artifacts/evidence/TI3_A_RESUME/c0r1-resume/OPERATIONAL_BINDINGS.md' 'artifacts/evidence/TI3_A_RESUME/c0r1-resume/ci-profile-local.json' 'artifacts/evidence/TI3_A_RESUME/c0r1-resume/commands-preparation.json' 'artifacts/evidence/TI3_A_RESUME/c0r1-resume/control-preflight-tests.json' 'artifacts/evidence/TI3_A_RESUME/c0r1-resume/method-freeze.json' 'artifacts/evidence/TI3_A_RESUME/c0r1-resume/operational-changes.json' 'artifacts/evidence/TI3_A_RESUME/c0r1-resume/preparation-report.md' 'artifacts/evidence/TI3_A_RESUME/c0r1-resume/prepared-execution.py.snapshot.txt' 'artifacts/evidence/TI3_A_RESUME/c0r1-resume/prepared-runner.py.snapshot.txt' 'artifacts/evidence/TI3_A_RESUME/c0r1-resume/stdlib-tests.json' 'artifacts/evidence/TI3_A_RESUME/c0r1-resume/verification.json' 'artifacts/evidence/TI3_A_RESUME/commands.json' 'artifacts/evidence/TI3_A_RESUME/dataset_manifest.json' 'artifacts/evidence/TI3_A_RESUME/environment.json' 'artifacts/evidence/TI3_A_RESUME/execution-report.md' 'artifacts/evidence/TI3_A_RESUME/final-test-manifest.json' 'artifacts/evidence/TI3_A_RESUME/io-audit.json' 'artifacts/evidence/TI3_A_RESUME/local-scope-preflight.json' 'artifacts/evidence/TI3_A_RESUME/metadata-preflight-freeze.json' 'artifacts/evidence/TI3_A_RESUME/metadata-preflight-receipt.json' 'artifacts/evidence/TI3_A_RESUME/metadata-preflight-result.json' 'artifacts/evidence/TI3_A_RESUME/preflight-recovery/authorization.md' 'artifacts/evidence/TI3_A_RESUME/preflight-recovery/commands.json' 'artifacts/evidence/TI3_A_RESUME/preflight-recovery/environment.json' 'artifacts/evidence/TI3_A_RESUME/preflight-recovery/execution-report.md' 'artifacts/evidence/TI3_A_RESUME/preflight-recovery/verification.json' 'artifacts/evidence/TI3_A_RESUME/results.json' 'artifacts/evidence/TI3_A_RESUME/synthetic-verification.json' 'artifacts/evidence/TI3_A_RESUME/verification.json' 'artifacts/evidence/TI3_GOV_COMPAT/c0r1/remote-ci.json' 'artifacts/evidence/TI3_GOV_COMPAT/c0r1/resume-preflight.json' 'configs/authority/ti3-a-c0r1-resume.json' 'configs/authority/ti3-a-resume.json' 'configs/governance/phase-scope-v1.json' 'scripts/build_ti3_manifest.py' 'scripts/check_ti3_ml_environment.py' 'scripts/run_ti3_baseline.py' 'src/snbi_fragmentation/ti3_baseline.py' 'src/snbi_fragmentation/ti3_dataset.py' 'src/snbi_fragmentation/ti3_execution.py' 'src/snbi_fragmentation/ti3_support.py' 'tests/test_ti3_baseline.py' 'tests/test_ti3_dataset.py' 'tests/test_ti3_execution.py' 'tests/test_ti3_support.py'",
+      "stage_exit": 0,
+      "review": {
+        "command": "PYTHONPATH=src:tests:. /usr/bin/python3 -B - <<'PY'\nimport hashlib,json,subprocess\nfrom pathlib import Path\nfrom scripts import check_phase_scope\nbase=Path('artifacts/evidence/TI3_A_RESUME/c0r1-resume');v=json.loads((base/'verification.json').read_text());paths=set(v['exact_c1_paths'])\nassert set(subprocess.check_output(['git','diff','--cached','--name-only']).decode().splitlines())==paths\nfor p in paths:\n b=Path(p).read_bytes();assert b==subprocess.check_output(['git','show',':'+p]),p\n if p in v['text_hashes_excluding_this_file']:assert hashlib.sha256(b).hexdigest()==v['text_hashes_excluding_this_file'][p]['sha256'],p\nsubprocess.run(['git','diff','--cached','--check'],check=True)\nr=check_phase_scope.audit();assert r['status']=='PASS',r\nfor p,h in json.loads((base/'method-freeze.json').read_text())['text_sha256'].items():assert hashlib.sha256(Path(p).read_bytes()).hexdigest()==h,p\nprint(json.dumps({'STAGED_REVIEW':'PASS','exact_paths':len(paths),'frozen_texts':45,'scope':r['status'],'partition':r['partition'],'experimental_opens':0}))\nPY",
+        "result": {
+          "chunk_id": "13da32",
+          "wall_time_seconds": 0.376820797,
+          "exit_code": 0,
+          "original_token_count": 95,
+          "output": "{\"STAGED_REVIEW\": \"PASS\", \"exact_paths\": 55, \"frozen_texts\": 45, \"scope\": \"PASS\", \"partition\": {\"status\": \"PASS\", \"violations\": [], \"unclassified_paths\": [], \"duplicate_classification_paths\": [], \"missing_paths\": [], \"relevant_tracked_count\": 94, \"legacy_file_count\": 75, \"a0_frozen_file_count\": 4, \"active_tracked_count\": 15, \"active_planned_count\": 0}, \"experimental_opens\": 0}\n"
+        }
+      },
+      "commit": "git commit -m 'feat(ti3): freeze canonical patch baseline protocol'",
+      "commit_exit": 0,
+      "push": "git push origin e6090121471faa8902f68ddd045ab8b54a2e77fc:refs/heads/feat/ti3-canonical-dataset-baseline",
+      "push_default_exit": 128,
+      "push_error": "DNS lookup failure",
+      "push_targeted_approved_exit": 0
+    }
+  ],
+  "remote_reads": {
+    "boundary": "targeted approved Git/GitHub read-only",
+    "commands": [
+      "gh run list --repo lmbernardo7520112/snbi-dendritic-fragmentation-ml --commit aba4fb6d66fd6bf640b3cd6adad07b2d60dfe49a --json databaseId,headSha,status,conclusion,workflowName,url,event --limit 20",
+      "gh run list --repo lmbernardo7520112/snbi-dendritic-fragmentation-ml --commit e6090121471faa8902f68ddd045ab8b54a2e77fc --json databaseId,headSha,status,conclusion,workflowName,url,event --limit 20",
+      "gh run view 35457621439 --repo lmbernardo7520112/snbi-dendritic-fragmentation-ml --json databaseId,headSha,status,conclusion,jobs,url",
+      "gh run view 35457621425 --repo lmbernardo7520112/snbi-dendritic-fragmentation-ml --json databaseId,headSha,status,conclusion,jobs,url",
+      "gh run view 35458441568 --repo lmbernardo7520112/snbi-dendritic-fragmentation-ml --json databaseId,headSha,status,conclusion,jobs,url",
+      "gh run view 35458441566 --repo lmbernardo7520112/snbi-dendritic-fragmentation-ml --json databaseId,headSha,status,conclusion,jobs,url",
+      "git ls-remote --heads origin refs/heads/main refs/heads/feat/ti3-canonical-dataset-baseline"
+    ],
+    "exit_codes": "0; the final historical C1 run was queried twice while completing",
+    "old_run_35455982251_reruns": 0
+  },
+  "prepixel_preflight": {
+    "command": "PYTHONPATH=src:tests:. .venv/bin/python -B - <<'PY'\nimport hashlib,importlib.util,json\nfrom pathlib import Path\nfrom scripts.check_repository_data import audit_entries,tracked_entries\nr=audit_entries(tracked_entries());assert r['status']=='PASS',r\nspec=importlib.util.spec_from_file_location('ti3_actual_preflight_only','scripts/run_ti3_baseline.py');runner=importlib.util.module_from_spec(spec);spec.loader.exec_module(runner)\nhead,manifest,raw,authority,np=runner._preflight()\nassert head=='e6090121471faa8902f68ddd045ab8b54a2e77fc'\nassert not (runner.BASE/'execution-receipt.json').exists() and not (runner.BASE/'results.json').exists()\nreport=dict(status='PASS_PREPIXEL_ACTUAL_C1',head=head,data_guard=r,manifest_sha256=hashlib.sha256(raw).hexdigest(),scientific_invocations=0,experimental_opens=0,experimental_bytes=0,receipt_created=False,ci_required_jobs='ALL_SUCCESS_AT_EXACT_C1',split_counts=manifest['split_counts'],source_inventory_admitted=[{'source_id':s['source_id'],'frame_index':s['frame_index'],'split':s['split']} for s in manifest['source_inventory'] if s['split']!='FINAL_TEST'])\n(runner.BASE/'actual-preflight.json').write_text(json.dumps(report,indent=2,sort_keys=True)+'\\n')\nprint(json.dumps({'ACTUAL_C1_PREFLIGHT':'PASS','head':head,'TRAIN_DEVELOPMENT_BUFFERS':5,'experimental_opens':0,'receipt_created':False}))\nPY",
+    "result": {
+      "chunk_id": "302288",
+      "wall_time_seconds": 0.318062607,
+      "exit_code": 0,
+      "original_token_count": 42,
+      "output": "{\"ACTUAL_C1_PREFLIGHT\": \"PASS\", \"head\": \"e6090121471faa8902f68ddd045ab8b54a2e77fc\", \"TRAIN_DEVELOPMENT_BUFFERS\": 5, \"experimental_opens\": 0, \"receipt_created\": false}\n"
+    }
+  },
+  "scientific_invocation": {
+    "command": "PYTHONPATH=src .venv/bin/python -B scripts/run_ti3_baseline.py",
+    "result": {
+      "chunk_id": "802eb3",
+      "wall_time_seconds": 0.668538999,
+      "exit_code": 0,
+      "original_token_count": 27,
+      "output": "{\"SCIENTIFIC_ML_RUNS\": 1, \"TI3_A\": \"PASS\", \"final_test_opens\": 0, \"patch_count\": 50, \"stage\": \"COMPLETED\"}\n"
+    },
+    "invocations": 1
+  },
+  "postexecution_reads": {
+    "boundary": "sandbox text-only",
+    "activities": [
+      "Read existing results/io-audit/receipt JSON summaries",
+      "Collect installed package versions only, no installation",
+      "Verify frozen textual hashes and Git C1 byte identity",
+      "Audit metrics arithmetically from published JSON predictions"
+    ],
+    "experimental_buffer_reopens": 0
+  },
+  "independent_audits": [
+    {
+      "agent": "c0r1_checksum_audit",
+      "phase": "C1 preparation",
+      "result": "PASS",
+      "commands": "Six read-only commands, all exit0; 45 freeze hashes and limited operational diffs verified"
+    },
+    {
+      "agent": "c0r1_checksum_audit",
+      "phase": "post-execution",
+      "result": "PASS",
+      "commands": "Seven read-only commands, all exit0; 46 internal git show queries",
+      "content": "JSON arithmetic, five native read records, frozen text; no pixels, kernels or models"
+    }
+  ],
+  "counts": {
+    "scientific_cli_invocations": 1,
+    "scientific_ml_runs": 1,
+    "scientific_fit_calls": 1,
+    "scientific_retries": 0,
+    "local_synthetic_rf_fits_current_c1_profile": 3,
+    "experimental_opens": 5,
+    "experimental_bytes": 9734526,
+    "final_test_opens": 0,
+    "final_test_bytes": 0
+  },
+  "limits": [
+    "This inventory records scoped tool operations and grouped reads; it is not a syscall monitor.",
+    "Git commands and remote evidence after this evidence checkpoint will be reported in the terminal return; no future SHA/run is invented.",
+    "No model was retrained for verification. Postexecution metric checks used only JSON predictions."
+  ]
+}
