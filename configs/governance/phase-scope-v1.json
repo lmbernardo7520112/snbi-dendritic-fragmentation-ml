@@ -592,6 +592,41 @@
         "git_mode": "100644",
         "path": "tests/test_ti3_support.py",
         "state": "TRACKED"
+      },
+      {
+        "blob_sha": "34f35c831cf4a89e67b0a980f1c557f0e354c6fd",
+        "classification": "TI3_ACTIVE",
+        "git_mode": "100644",
+        "path": "scripts/run_ti3b_ablation.py",
+        "state": "TRACKED"
+      },
+      {
+        "blob_sha": "f461cd6c77116b959993dc4cd8dec73f2110e2ac",
+        "classification": "TI3_ACTIVE",
+        "git_mode": "100644",
+        "path": "src/snbi_fragmentation/ti3b_ablation.py",
+        "state": "TRACKED"
+      },
+      {
+        "blob_sha": "a6f09a4ce6cb21ce2bcccbe715252513eaf2fe91",
+        "classification": "TI3_ACTIVE",
+        "git_mode": "100644",
+        "path": "src/snbi_fragmentation/ti3b_execution.py",
+        "state": "TRACKED"
+      },
+      {
+        "blob_sha": "63150914f9e264ffb421b7fae1ecf1e1efb8f524",
+        "classification": "TI3_ACTIVE",
+        "git_mode": "100644",
+        "path": "tests/test_ti3b_ablation.py",
+        "state": "TRACKED"
+      },
+      {
+        "blob_sha": "8fe8ee861b7b7ff1d86aecb3c64a0b853f3a099d",
+        "classification": "TI3_ACTIVE",
+        "git_mode": "100644",
+        "path": "tests/test_ti3b_execution.py",
+        "state": "TRACKED"
       }
     ]
   },

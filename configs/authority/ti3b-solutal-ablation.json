@@ -1,0 +1,27 @@
+{
+  "branch": "feat/ti3b-solutal-ablation",
+  "checkpoint": "7a205327b363f8cdbba99c5e58bf2f1e5d1253d3",
+  "ci_jobs_required": [
+    "deterministic-contracts",
+    "scientific-synthetic-contracts",
+    "ti3-synthetic-contracts",
+    "ti3b-synthetic-contracts"
+  ],
+  "cnn_authorized": false,
+  "final_test_execution_authorized": false,
+  "input_sources": [
+    "ESM1",
+    "ESM2",
+    "ESM4",
+    "ESM5"
+  ],
+  "merge_authorized": false,
+  "receipt_path": "artifacts/evidence/TI3_B_SOLUTAL/execution-receipt.json",
+  "repository": "lmbernardo7520112/snbi-dendritic-fragmentation-ml",
+  "results_path": "artifacts/evidence/TI3_B_SOLUTAL/results.json",
+  "schema": "TI3B-ONE-SHOT-1",
+  "scientific_invocation_limit": 1,
+  "state": "CONDITIONAL_ON_B1_AND_GREEN_CI",
+  "structural_baseline_rerun_authorized": false,
+  "ti3_c_authorized": false
+}

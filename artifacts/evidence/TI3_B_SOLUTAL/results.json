@@ -1,0 +1,485 @@
+{
+  "B1": "965e2f10e25eef1fe45ac91c10b8424389f99c10",
+  "CAUSALITY_CLAIM_AUTHORIZED": false,
+  "CURRENT_AUTHORIZED_ACTIVITY": "NONE_AWAITING_AUTHOR_DECISION",
+  "EXTERNAL_GENERALIZATION_CLAIM": false,
+  "FORECASTING_AUTHORIZED": false,
+  "MERGE_AUTHORIZED": false,
+  "ML_FINAL_TEST": "SEALED_WITH_HISTORICAL_NON_ML_EXPOSURE",
+  "ML_FINAL_TEST_EXECUTED": false,
+  "SCIENTIFIC_TI3B_RUNS": 1,
+  "SOLUTAL_ABLATION": "COMPLETED",
+  "STATE": "CLOSED_CONSUMED",
+  "TI3_B": "PASS",
+  "TI3_B_EXECUTION_AUTHORIZED": false,
+  "TI3_C_AUTHORIZED": false,
+  "TI3_C_READY_FOR_AUTHOR_DECISION": true,
+  "ablation": {
+    "background_semantics": "BACKGROUND_CANDIDATE_NOT_PHYSICAL_ABSENCE",
+    "claim": "CONCORDANCE_WITH_PUBLISHED_LOCATION_WEAK_LABELS",
+    "class_order": [
+      0,
+      1
+    ],
+    "decision_scope": "INTERNAL_DEVELOPMENT_ONLY_NOT_EXTERNAL_GENERALIZATION",
+    "delta_dev_balanced_accuracy": 0.0625,
+    "dependency_versions": {
+      "numpy": "1.26.4",
+      "scikit-image": "0.24.0",
+      "scikit-learn": "1.5.2",
+      "scipy": "1.11.4"
+    },
+    "dev_modality_preference": "STRUCTURAL_PLUS_RELATIVE_SOLUTE",
+    "evaluations": {
+      "DEVELOPMENT": {
+        "FN": 0,
+        "FP": 4,
+        "TN": 4,
+        "TP": 8,
+        "accuracy": 0.75,
+        "balanced_accuracy": 0.75,
+        "confusion_matrix": [
+          [
+            4,
+            4
+          ],
+          [
+            0,
+            8
+          ]
+        ],
+        "confusion_order": "rows=true, columns=predicted; labels=[0,1]",
+        "f1": 0.8,
+        "precision": 0.6666666666666666,
+        "predicted_labels": [
+          1,
+          0,
+          1,
+          1,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "probabilities_class_order_0_1": [
+          [
+            0.37,
+            0.63
+          ],
+          [
+            0.69,
+            0.31
+          ],
+          [
+            0.2,
+            0.8
+          ],
+          [
+            0.26,
+            0.74
+          ],
+          [
+            0.3,
+            0.7
+          ],
+          [
+            0.56,
+            0.44
+          ],
+          [
+            0.35,
+            0.65
+          ],
+          [
+            0.77,
+            0.23
+          ],
+          [
+            0.79,
+            0.21
+          ],
+          [
+            0.42,
+            0.58
+          ],
+          [
+            0.34,
+            0.66
+          ],
+          [
+            0.43,
+            0.57
+          ],
+          [
+            0.27,
+            0.73
+          ],
+          [
+            0.21,
+            0.79
+          ],
+          [
+            0.29,
+            0.71
+          ],
+          [
+            0.29,
+            0.71
+          ]
+        ],
+        "recall": 1.0,
+        "sample_count": 16,
+        "true_labels": [
+          0,
+          0,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "TRAIN": {
+        "FN": 0,
+        "FP": 0,
+        "TN": 17,
+        "TP": 17,
+        "accuracy": 1.0,
+        "balanced_accuracy": 1.0,
+        "confusion_matrix": [
+          [
+            17,
+            0
+          ],
+          [
+            0,
+            17
+          ]
+        ],
+        "confusion_order": "rows=true, columns=predicted; labels=[0,1]",
+        "f1": 1.0,
+        "precision": 1.0,
+        "predicted_labels": [
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "probabilities_class_order_0_1": [
+          [
+            0.85,
+            0.15
+          ],
+          [
+            0.82,
+            0.18
+          ],
+          [
+            0.13,
+            0.87
+          ],
+          [
+            0.34,
+            0.66
+          ],
+          [
+            0.24,
+            0.76
+          ],
+          [
+            0.17,
+            0.83
+          ],
+          [
+            0.13,
+            0.87
+          ],
+          [
+            0.09,
+            0.91
+          ],
+          [
+            0.15,
+            0.85
+          ],
+          [
+            0.11,
+            0.89
+          ],
+          [
+            0.04,
+            0.96
+          ],
+          [
+            0.81,
+            0.19
+          ],
+          [
+            0.79,
+            0.21
+          ],
+          [
+            0.74,
+            0.26
+          ],
+          [
+            0.7,
+            0.3
+          ],
+          [
+            0.24,
+            0.76
+          ],
+          [
+            0.36,
+            0.64
+          ],
+          [
+            0.08,
+            0.92
+          ],
+          [
+            0.1,
+            0.9
+          ],
+          [
+            0.14,
+            0.86
+          ],
+          [
+            0.1,
+            0.9
+          ],
+          [
+            0.27,
+            0.73
+          ],
+          [
+            0.89,
+            0.11
+          ],
+          [
+            0.88,
+            0.12
+          ],
+          [
+            0.88,
+            0.12
+          ],
+          [
+            0.89,
+            0.11
+          ],
+          [
+            0.95,
+            0.05
+          ],
+          [
+            0.89,
+            0.11
+          ],
+          [
+            0.9,
+            0.1
+          ],
+          [
+            0.87,
+            0.13
+          ],
+          [
+            0.83,
+            0.17
+          ],
+          [
+            0.73,
+            0.27
+          ],
+          [
+            0.77,
+            0.23
+          ],
+          [
+            0.2,
+            0.8
+          ]
+        ],
+        "recall": 1.0,
+        "sample_count": 34,
+        "true_labels": [
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    "feature_dimension": 20,
+    "feature_order": [
+      "STRUCTURAL_LBP_10",
+      "SOLUTAL_LBP_10"
+    ],
+    "final_test_evaluated": false,
+    "fit_calls": 1,
+    "parameters": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "class_weight": null,
+      "criterion": "gini",
+      "max_depth": null,
+      "max_features": "sqrt",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 1,
+      "min_samples_split": 2,
+      "min_weight_fraction_leaf": 0.0,
+      "monotonic_cst": null,
+      "n_estimators": 100,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "positive_semantics": "PUBLISHED_FRAGMENTATION_LOCATION_PRESENT",
+    "primary_metric": "balanced_accuracy",
+    "solute_semantics": "RELATIVE_SOLUTE_FIELD",
+    "status": "COMPLETED",
+    "structural_baseline_fit_calls": 0,
+    "structural_reference_balanced_accuracy": 0.6875,
+    "tuning_runs": 0
+  },
+  "sample_order": {
+    "DEVELOPMENT": [
+      "background|ESM1|219|102|221",
+      "background|ESM1|219|752|221",
+      "positive|ESM3:annotation-site:3eeab8e9efcb0d21",
+      "positive|ESM3:annotation-site:8e517d7ffab44a8d",
+      "positive|ESM3:annotation-site:c726fa8942e518df",
+      "background|ESM4|197|1077|805",
+      "background|ESM4|197|362|155",
+      "background|ESM4|197|427|350",
+      "background|ESM4|197|492|415",
+      "background|ESM4|197|492|805",
+      "background|ESM4|197|752|545",
+      "positive|ESM6:annotation-site:33c1dc5c4466a022",
+      "positive|ESM6:annotation-site:610a877237d31a5d",
+      "positive|ESM6:annotation-site:7c58fc05ae40787e",
+      "positive|ESM6:annotation-site:8a86a50873360dcf",
+      "positive|ESM6:annotation-site:8acca343f57b1314"
+    ],
+    "TRAIN": [
+      "background|ESM1|73|102|676",
+      "background|ESM1|73|167|286",
+      "positive|ESM3:annotation-site:4b88c441ae9c6696",
+      "positive|ESM3:annotation-site:4c41286cef74d212",
+      "positive|ESM3:annotation-site:4e3f86cfe00b170b",
+      "positive|ESM3:annotation-site:921edb3b46971a2c",
+      "positive|ESM3:annotation-site:95a85828fc0c1117",
+      "positive|ESM3:annotation-site:b6b216ac7f401b9a",
+      "positive|ESM3:annotation-site:c0913343ab666a5f",
+      "positive|ESM3:annotation-site:e8c88192a10fa74d",
+      "positive|ESM3:annotation-site:edefb8faa424fa0f",
+      "background|ESM1|146|167|611",
+      "background|ESM1|146|37|546",
+      "background|ESM1|146|817|481",
+      "background|ESM1|146|947|676",
+      "positive|ESM3:annotation-site:5e9a4c2b4df0a4dd",
+      "positive|ESM3:annotation-site:73e02d077c181e27",
+      "positive|ESM3:annotation-site:7bb50a0b75f78145",
+      "positive|ESM3:annotation-site:ab91a579d35b7a8c",
+      "positive|ESM3:annotation-site:aea18fa3b37ada51",
+      "positive|ESM3:annotation-site:dc8e4cc74e0dc7a3",
+      "positive|ESM3:annotation-site:e83161571f674407",
+      "background|ESM4|98|1012|675",
+      "background|ESM4|98|1142|610",
+      "background|ESM4|98|297|610",
+      "background|ESM4|98|37|285",
+      "background|ESM4|98|492|480",
+      "background|ESM4|98|622|610",
+      "background|ESM4|98|687|155",
+      "background|ESM4|98|752|675",
+      "background|ESM4|98|882|415",
+      "background|ESM4|98|882|610",
+      "background|ESM4|98|882|805",
+      "positive|ESM6:annotation-site:63498902ef491c68"
+    ]
+  }
+}

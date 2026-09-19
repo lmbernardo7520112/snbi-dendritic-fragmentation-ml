@@ -1,0 +1,204 @@
+{
+  "schema": "TI3B-PREPARATION-COMMAND-INVENTORY-1",
+  "scope": "Grouped command inventory through preparation; exact tool transcripts remain in the session. This is not universal syscall monitoring. Private attachment paths are omitted. Later staging/commit/push/CI are reported after execution.",
+  "default_sandbox": [
+    {
+      "activity": "read exact operator attachment and repository instructions/protocols/approved textual evidence",
+      "exit_codes": [
+        0
+      ],
+      "experimental_access": false
+    },
+    {
+      "command": "git status --short; git branch --show-current; git rev-parse HEAD; git remote -v",
+      "note": "independent read-only Git queries",
+      "exit_code": 0
+    },
+    {
+      "command": "/usr/bin/python3 -B scripts/check_repository_data.py",
+      "exit_code": 0,
+      "examined_entries": 436,
+      "experimental_content_bytes_read": 0
+    },
+    {
+      "commands": [
+        "gh pr list --repo lmbernardo7520112/snbi-dendritic-fragmentation-ml --head feat/ti3-canonical-dataset-baseline --state all --json number,state,isDraft,headRefOid,baseRefName,url,mergeCommit",
+        "git ls-remote origin refs/heads/main refs/heads/feat/ti3-canonical-dataset-baseline",
+        "gh run list --repo lmbernardo7520112/snbi-dendritic-fragmentation-ml --commit cab4fcd6f2d1fb70027cc6abff2590fae3d7c64b --json databaseId,headSha,status,conclusion,workflowName,event,url"
+      ],
+      "exit_codes": [
+        1,
+        128,
+        1
+      ],
+      "cause": "sandbox network/API/DNS unavailable; exact read-only operations individually approved afterwards"
+    },
+    {
+      "activity": "read-only Git diff/log/tree/ancestry/status checks before integration; textual JSON/hash audit",
+      "exit_code": 0
+    },
+    {
+      "activity": "Python -B creates exact ignored PR body, copies author attachment, writes allowlisted JSON/protocol/workflow and compiles embedded workflow Python in memory",
+      "exit_code": 0,
+      "experimental_access": false
+    },
+    {
+      "activity": "PyYAML 6.0.1 parses new workflow; embedded Python compiles in memory; no workflow step invoked by that check",
+      "exit_code": 0
+    },
+    {
+      "activity": "textual lookup used a nonexistent source filename; corrected via rg --files",
+      "exit_code": 2,
+      "scientific_invocation": false
+    },
+    {
+      "activity": "early textual cat before delegated runner file existed",
+      "exit_code": 1,
+      "scientific_invocation": false
+    },
+    {
+      "activity": "existing .venv dependency version metadata read; no install or fit",
+      "exit_code": 0
+    },
+    {
+      "activity": "historical freeze45 text hashes and merge Git blobs compared before additive scope update",
+      "exit_code": 0
+    }
+  ],
+  "targeted_git_github_approvals": [
+    {
+      "activity": "read-only PR list, exact remote refs and C2 CI runs/jobs/steps",
+      "exit_code": 0
+    },
+    {
+      "command": "gh pr create --repo lmbernardo7520112/snbi-dendritic-fragmentation-ml --base main --head feat/ti3-canonical-dataset-baseline --draft --title <recorded PR11 title> --body-file .bootstrap-test-tmp/ti3-a-integration-pr-body.md",
+      "exit_code": 0,
+      "pr": 11
+    },
+    {
+      "activity": "gh pr view using unsupported baseRefOid JSON field",
+      "exit_code": 1,
+      "remote_mutation": false,
+      "resolution": "read-only pulls/11 REST query supported by existing gh"
+    },
+    {
+      "activity": "PR11 state/head/base/conflicts and CI35463800860/35463800878 with all jobs/steps SUCCESS",
+      "exit_code": 0
+    },
+    {
+      "command": "gh pr ready 11 --repo lmbernardo7520112/snbi-dendritic-fragmentation-ml",
+      "exit_code": 0
+    },
+    {
+      "activity": "Ready state/checks reconfirmed; repository merge-commit enabled and automatic branch deletion disabled",
+      "exit_code": 0
+    },
+    {
+      "command": "gh pr merge 11 --repo lmbernardo7520112/snbi-dendritic-fragmentation-ml --merge --match-head-commit cab4fcd6f2d1fb70027cc6abff2590fae3d7c64b",
+      "exit_code": 0
+    },
+    {
+      "activity": "merged state, parents/tree and post-merge CI35463972857/35463972865; all jobs and steps SUCCESS",
+      "exit_code": 0
+    },
+    {
+      "command": "git fetch --no-tags origin refs/heads/main:refs/remotes/origin/main",
+      "exit_code": 0
+    },
+    {
+      "command": "git switch main",
+      "exit_code": 0
+    },
+    {
+      "command": "git merge --ff-only origin/main",
+      "exit_code": 0
+    },
+    {
+      "command": "git switch -c feat/ti3b-solutal-ablation 7a205327b363f8cdbba99c5e58bf2f1e5d1253d3",
+      "exit_code": 0
+    }
+  ],
+  "independent_integration_audit": {
+    "shell_invocations": 19,
+    "all_exit_zero": true,
+    "scope": "read-only text, hashes, Git blobs, geometry and prediction arithmetic; no scientific imports, pixels, network or writes"
+  },
+  "delegated_core": {
+    "shell_invocations": 10,
+    "apply_patch_calls": 2,
+    "test_command": "PYTHONPATH=src TMPDIR=.bootstrap-test-tmp .venv/bin/python -B -m unittest discover -s tests -p test_ti3b_ablation.py -v",
+    "tests_run": 20,
+    "passes": 20,
+    "skips": 0,
+    "failures": 0,
+    "errors": 0,
+    "test_exit": 0,
+    "synthetic_rf_fits": 1,
+    "scientific_runs": 0
+  },
+  "delegated_runner_preparation": {
+    "textual_reference_validation_exits": [
+      1,
+      0
+    ],
+    "cause": "observed input_hash_if_opened differs from planned null; exact factual-field handling corrected before B1",
+    "actual_config_and_authority_exact": true,
+    "native_opens": 0,
+    "source_stat_calls": 0,
+    "test_command": "PYTHONPATH=src:tests .venv/bin/python -B -m unittest test_ti3b_execution -v",
+    "tests": 24,
+    "pass": 24,
+    "skips": 0,
+    "failures": 0,
+    "errors": 0,
+    "test_exit": 0,
+    "synthetic_fits": 0
+  },
+  "counters_at_this_record": {
+    "TI3B_scientific_invocations": 0,
+    "experimental_opens": 0,
+    "experimental_bytes": 0,
+    "local_installations": 0,
+    "ci_reruns": 0
+  },
+  "root_final_preparation": {
+    "stdlib_command": "TMPDIR=.bootstrap-test-tmp PYTHONPATH=src:tests:. /usr/bin/python3 -S -B - (unittest discover tests)",
+    "stdlib_exit": 0,
+    "stdlib_counts": {
+      "run": 579,
+      "pass": 462,
+      "skips_optional": 117,
+      "failures": 0,
+      "errors": 0
+    },
+    "synthetic_command": "TMPDIR=.bootstrap-test-tmp PYTHONPATH=src:tests:. .venv/bin/python -B - (environment smoke and explicit 9 test modules)",
+    "synthetic_exit": 0,
+    "synthetic_counts": {
+      "run": 153,
+      "pass": 153,
+      "skips": 0,
+      "failures": 0,
+      "errors": 0,
+      "environment_smoke_exit": 0
+    },
+    "control_command": "TMPDIR=.bootstrap-test-tmp PYTHONPATH=src:tests:. .venv/bin/python -B - (seven control cases; actual texts and mock Git/CI)",
+    "control_exit": 0,
+    "control_counts": {
+      "cases": 7,
+      "passed": 7,
+      "git_and_ci": "IN_MEMORY_MOCKS_NOT_REMOTE_PROOF",
+      "actual_serialized_config_and_reference_text": true,
+      "receipt_created": false,
+      "experimental_opens": 0,
+      "fits": 0
+    },
+    "prospective_guard": "PASS451 entries; new exact allowlist; no index writes",
+    "checksums": "PASS95/95",
+    "workflow_validation": "PASS PyYAML6.0.1 and embedded Python compile"
+  },
+  "independent_ti3b_audit": {
+    "read_only_commands": 20,
+    "reported_shell_exits": 0,
+    "note": "one search pipeline reported missing directory before file creation; corrected lookup; no source bytes/imports/tests/network/writes"
+  }
+}

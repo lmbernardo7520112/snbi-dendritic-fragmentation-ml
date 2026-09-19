@@ -1,0 +1,69 @@
+{
+  "status": "PASS_BEFORE_B1",
+  "checkpoint": "7a205327b363f8cdbba99c5e58bf2f1e5d1253d3",
+  "multimodal_synthetic_test_count": 44,
+  "new_core_tests": 20,
+  "new_execution_tests": 24,
+  "synthetic_full_profile": {
+    "run": 153,
+    "pass": 153,
+    "skips": 0,
+    "failures": 0,
+    "errors": 0,
+    "environment_smoke_exit": 0
+  },
+  "stdlib_profile": {
+    "run": 579,
+    "pass": 462,
+    "skips_optional": 117,
+    "failures": 0,
+    "errors": 0
+  },
+  "preparatory_control_only": {
+    "cases": 7,
+    "passed": 7,
+    "git_and_ci": "IN_MEMORY_MOCKS_NOT_REMOTE_PROOF",
+    "actual_serialized_config_and_reference_text": true,
+    "receipt_created": false,
+    "experimental_opens": 0,
+    "fits": 0
+  },
+  "synthetic_rf_fits_local_total": 5,
+  "synthetic_rf_fit_accounting": {
+    "delegated_core": 1,
+    "delegated_execution": 0,
+    "root_full_profile": 4,
+    "stdlib": 0,
+    "preparatory_control": 0
+  },
+  "scientific_ti3b_runs": 0,
+  "experimental_opens": 0,
+  "experimental_bytes": 0,
+  "yaml_parser": "PyYAML6.0.1 PASS; embedded Python compiled in memory",
+  "prospective_guard": {
+    "state": "PASS",
+    "examined_entries_at_check": 451,
+    "not_real_index": true,
+    "LEGACY_TI2": 75,
+    "TI3_A0_FROZEN": 4,
+    "TI3_ACTIVE": 20,
+    "unclassified": 0,
+    "duplicates": 0
+  },
+  "legacy_checksums": {
+    "pass": 95,
+    "changed": 0
+  },
+  "historical_C1_current_texts": {
+    "unchanged": 44,
+    "changed_only": [
+      "configs/governance/phase-scope-v1.json"
+    ],
+    "scope_change": "five additive entries; original 75+4+15 modes/blobs byte-identical; historical manifest anchored in merge Git; old freeze not rewritten"
+  },
+  "independent_static_review": "PASS after correction of two factual materialization fields; full control preflight exercised separately by root",
+  "limitations": [
+    "Tests and static review grant no experimental authority before published B1 and real complete green CI.",
+    "Prepared control audit uses mock Git/CI, never presented as remote CI or scientific execution."
+  ]
+}
