@@ -1,0 +1,97 @@
+{
+  "active_checksum_entries_changed": 0,
+  "c0_profile_tests": 59,
+  "c0_sha": "272695a4420e37fddf6674664d0040ef064c153f",
+  "data_guard": {
+    "audit": "tracked_repository_data_guard",
+    "content_bytes_read": 0,
+    "examined_entry_count": 370,
+    "status": "PASS",
+    "violations": []
+  },
+  "exact_paths": [
+    ".github/workflows/ti3-synthetic.yml",
+    "artifacts/evidence/TI3_GOV_COMPAT/semantic-1/remote-ci.json",
+    "artifacts/evidence/TI3_GOV_COMPAT/semantic-1/terminal-state.json",
+    "artifacts/evidence/TI3_GOV_COMPAT/semantic-1/commands-post-publication.json",
+    "artifacts/evidence/TI3_GOV_COMPAT/semantic-1/execution-report-terminal.md",
+    "artifacts/evidence/TI3_GOV_COMPAT/semantic-1/post-publication-verification.json",
+    "artifacts/evidence/TI3_GOV_COMPAT/c0r1/authorization.md",
+    "artifacts/evidence/TI3_GOV_COMPAT/c0r1/local-guards.json",
+    "artifacts/evidence/TI3_GOV_COMPAT/c0r1/workflow.diff.txt",
+    "artifacts/evidence/TI3_GOV_COMPAT/c0r1/ci-profile-local.json",
+    "artifacts/evidence/TI3_GOV_COMPAT/c0r1/diagnosis.json",
+    "artifacts/evidence/TI3_GOV_COMPAT/c0r1/tests.json",
+    "artifacts/evidence/TI3_GOV_COMPAT/c0r1/execution-report.md",
+    "artifacts/evidence/TI3_GOV_COMPAT/c0r1/commands.json",
+    "artifacts/evidence/TI3_GOV_COMPAT/c0r1/verification.json"
+  ],
+  "experimental_bytes": 0,
+  "experimental_opens": 0,
+  "git_stage_and_commit": "PENDING_TARGETED_APPROVAL",
+  "governance_tests": 41,
+  "historical_snapshot": "BYTE_IDENTICAL",
+  "optional_skips": 0,
+  "phase_scope": "PASS",
+  "previous_terminal_files_byte_identical": 5,
+  "scientific_ml_runs": 0,
+  "status": "PASS_EXACT_REPAIR_PREFLIGHT",
+  "text_hashes_excluding_this_file": {
+    ".github/workflows/ti3-synthetic.yml": {
+      "bytes": 4381,
+      "sha256": "1495370c54d8e76e73f16c7278742969de628821c6494884761c8efbea0b400d"
+    },
+    "artifacts/evidence/TI3_GOV_COMPAT/c0r1/authorization.md": {
+      "bytes": 9590,
+      "sha256": "656388e0c53614552b9d51a1e0cf71b6066358b58b05724b833cc7da09b465b8"
+    },
+    "artifacts/evidence/TI3_GOV_COMPAT/c0r1/ci-profile-local.json": {
+      "bytes": 8867,
+      "sha256": "ab0b30f2187ef9effba91cf1c9b0f72478bfc06c0570d4db4ac8ada75970e36f"
+    },
+    "artifacts/evidence/TI3_GOV_COMPAT/c0r1/commands.json": {
+      "bytes": 12556,
+      "sha256": "16b4db4b7f97aa420173758dbcbb5447c1ea606051ba41e6f5417336f4d59fd8"
+    },
+    "artifacts/evidence/TI3_GOV_COMPAT/c0r1/diagnosis.json": {
+      "bytes": 1022,
+      "sha256": "172ea4b500254f0a501cbcddc9aa831234c25b9d89deaf20354e32144858e727"
+    },
+    "artifacts/evidence/TI3_GOV_COMPAT/c0r1/execution-report.md": {
+      "bytes": 2976,
+      "sha256": "f0e575cfd357c9657501abb937b51033be4aa7238b968c581ffdafc7a4ae5eca"
+    },
+    "artifacts/evidence/TI3_GOV_COMPAT/c0r1/local-guards.json": {
+      "bytes": 2804,
+      "sha256": "22a13ac8fd7dd3bb2bb8867b18272c918a3f0a103cccaca79197fe7962104182"
+    },
+    "artifacts/evidence/TI3_GOV_COMPAT/c0r1/tests.json": {
+      "bytes": 6871,
+      "sha256": "a2f6c45a6f652962028794286afe65923893584373b096dfa59e8a081d4a3e43"
+    },
+    "artifacts/evidence/TI3_GOV_COMPAT/c0r1/workflow.diff.txt": {
+      "bytes": 775,
+      "sha256": "9a8aadbdc9b112d396a4761777e7ac6fd9fcbf2c270ff306537895e2c436f299"
+    },
+    "artifacts/evidence/TI3_GOV_COMPAT/semantic-1/commands-post-publication.json": {
+      "bytes": 7701,
+      "sha256": "82faac3af094f26cc2dd01a7a7037ec406886a7e4a87c92762f8f0c224d67aa1"
+    },
+    "artifacts/evidence/TI3_GOV_COMPAT/semantic-1/execution-report-terminal.md": {
+      "bytes": 8510,
+      "sha256": "f4fb36d38aa5665f4cae50bce8ec71f4ae6c3b5947404863b8d1058c832550eb"
+    },
+    "artifacts/evidence/TI3_GOV_COMPAT/semantic-1/post-publication-verification.json": {
+      "bytes": 1481,
+      "sha256": "b392e280f0d9c7cf7722766c9fb7b432885ac55e1920e6c3d487fb39b98abc49"
+    },
+    "artifacts/evidence/TI3_GOV_COMPAT/semantic-1/remote-ci.json": {
+      "bytes": 6672,
+      "sha256": "3cbebd79aedff721de9910d1eac84a8ce4647d8cdc4d8234474bec71cc1322f2"
+    },
+    "artifacts/evidence/TI3_GOV_COMPAT/semantic-1/terminal-state.json": {
+      "bytes": 1243,
+      "sha256": "2b21967fe1baaa9db08db884094c409f3642f4aadb1300ff3472f1395f55dd39"
+    }
+  }
+}

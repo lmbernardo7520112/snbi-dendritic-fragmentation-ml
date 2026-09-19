@@ -25,7 +25,12 @@ jobs:
           python-version: "3.12"
           cache: ""
       - name: Install pinned TI3 dependencies on CI
-        run: python -B -m pip --isolated install --disable-pip-version-check --no-cache-dir --only-binary=:all: -r requirements-ti3-ml.txt
+        run: >-
+          python -B -m pip --isolated install
+          --disable-pip-version-check
+          --no-cache-dir
+          --only-binary=:all:
+          -r requirements-ti3-ml.txt
       - name: Verify all four exact dependency versions
         run: |
           python -B - <<'PY'

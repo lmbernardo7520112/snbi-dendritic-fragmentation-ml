@@ -1,0 +1,22 @@
+{
+  "C0_CI_FAILURE_CAUSE": "VERIFIED_YAML_PLAIN_SCALAR_COLON_PARSE_ERROR",
+  "original_parser_result": {
+    "status": "EXPECTED_ORIGINAL_SYNTAX_FAILURE_CONFIRMED",
+    "parser": "PyYAML",
+    "version": "6.0.1",
+    "error_type": "ScannerError",
+    "error": "mapping values are not allowed here\n  in \"<unicode string>\", line 28, column 111:\n     ... -no-cache-dir --only-binary=:all: -r requirements-ti3-ml.txt\n                                         ^",
+    "C0_CI_FAILURE_CAUSE": "VERIFIED_YAML_PLAIN_SCALAR_COLON_PARSE_ERROR"
+  },
+  "checksum_audit": "No active checksum entry includes .github/workflows/ti3-synthetic.yml; historical verification snapshots remain immutable.",
+  "initial_integrity": {
+    "status": "PASS_INITIAL_INTEGRITY",
+    "head": "272695a4420e37fddf6674664d0040ef064c153f",
+    "branch": "feat/ti3-canonical-dataset-baseline",
+    "index": "CLEAN",
+    "tracked_worktree": "CLEAN",
+    "previous_untracked_files": 44,
+    "experimental_opens": 0,
+    "yaml_parser_available": true
+  }
+}
