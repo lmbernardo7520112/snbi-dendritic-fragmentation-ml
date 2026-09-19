@@ -1,0 +1,247 @@
+{
+  "active_checksum_changed_paths": [
+    ".github/workflows/ci.yml"
+  ],
+  "c0_exact_paths": [
+    ".github/workflows/ci.yml",
+    ".github/workflows/ti3-synthetic.yml",
+    "artifacts/evidence/TI2/checksums.sha256",
+    "artifacts/evidence/TI2/checksums-pre-ti3-41d523e.sha256",
+    "configs/governance/pre-ti3-code-scope.json",
+    "configs/governance/phase-scope-v1.json",
+    "scripts/check_ti3_scope.py",
+    "scripts/check_phase_scope.py",
+    "tests/test_ti3_scope.py",
+    "tests/test_phase_scope.py",
+    "requirements-ti3-ml.txt",
+    "artifacts/evidence/TI3_GOV_COMPAT/authorization.md",
+    "artifacts/evidence/TI3_GOV_COMPAT/preflight.json",
+    "artifacts/evidence/TI3_GOV_COMPAT/legacy-scope-gate.json",
+    "artifacts/evidence/TI3_GOV_COMPAT/results.json",
+    "artifacts/evidence/TI3_GOV_COMPAT/commands.json",
+    "artifacts/evidence/TI3_GOV_COMPAT/verification.json",
+    "artifacts/evidence/TI3_GOV_COMPAT/execution-report.md",
+    "artifacts/evidence/TI3_GOV_COMPAT/pre-ti3-code-scope.blocked-snapshot.json",
+    "artifacts/evidence/TI3_GOV_COMPAT/semantic-1/authorization.md",
+    "artifacts/evidence/TI3_GOV_COMPAT/semantic-1/preflight.json",
+    "artifacts/evidence/TI3_GOV_COMPAT/semantic-1/local-current-scope.json",
+    "artifacts/evidence/TI3_GOV_COMPAT/semantic-1/local-prospective-c0-scope.json",
+    "artifacts/evidence/TI3_GOV_COMPAT/semantic-1/ci-profile-local.json",
+    "artifacts/evidence/TI3_GOV_COMPAT/semantic-1/active-checksum-changes.json",
+    "artifacts/evidence/TI3_GOV_COMPAT/semantic-1/GOVERNANCE_PROTOCOL.md",
+    "artifacts/evidence/TI3_GOV_COMPAT/semantic-1/execution-report.md",
+    "artifacts/evidence/TI3_GOV_COMPAT/semantic-1/commands.json",
+    "artifacts/evidence/TI3_GOV_COMPAT/semantic-1/verification.json"
+  ],
+  "c0_text_hashes_excluding_this_file": {
+    ".github/workflows/ci.yml": {
+      "bytes": 2695,
+      "sha256": "d74503a122f08e82c22f2015a76960395e22941f5aeb39873277a8a3b20be299"
+    },
+    ".github/workflows/ti3-synthetic.yml": {
+      "bytes": 4328,
+      "sha256": "a45770dee3f1b8e308450e120e1ce0c68f78ffcb141b50a89cff2ad4285269a4"
+    },
+    "artifacts/evidence/TI2/checksums-pre-ti3-41d523e.sha256": {
+      "bytes": 10212,
+      "sha256": "e7d30ca626088e1e3c58c8702b96e9afc388ee75c48011d885393230dc7d245d"
+    },
+    "artifacts/evidence/TI2/checksums.sha256": {
+      "bytes": 10212,
+      "sha256": "e18a0f3e7815558a44ea8c70024d0a61b9d58231c95432a67507d12caeb5de9d"
+    },
+    "artifacts/evidence/TI3_GOV_COMPAT/authorization.md": {
+      "bytes": 19012,
+      "sha256": "8ccb27afe04526ff8dd7d202c1ba87e2839748fca1697c72b52480aff356d2a0"
+    },
+    "artifacts/evidence/TI3_GOV_COMPAT/commands.json": {
+      "bytes": 9327,
+      "sha256": "b1fb057e5a443794d118b90cb16bb3420ebe82a0117c7779ce98bf912b579e7a"
+    },
+    "artifacts/evidence/TI3_GOV_COMPAT/execution-report.md": {
+      "bytes": 8113,
+      "sha256": "0988fada4d6516575f5ecfad1a013ffaebda32b8e05050f26da62024572ead9d"
+    },
+    "artifacts/evidence/TI3_GOV_COMPAT/legacy-scope-gate.json": {
+      "bytes": 1624,
+      "sha256": "940dadacacb8ce4463053ad52afae638c82684bde66e32b9e51bb331019dfce4"
+    },
+    "artifacts/evidence/TI3_GOV_COMPAT/pre-ti3-code-scope.blocked-snapshot.json": {
+      "bytes": 15859,
+      "sha256": "3c63b51ff86aeda79244d09e5bc7f5196be01f8aa8672ab3dc2f8fe6d90f9971"
+    },
+    "artifacts/evidence/TI3_GOV_COMPAT/preflight.json": {
+      "bytes": 680,
+      "sha256": "1507d1252ba427716d82dc7a7d1bbf21eb10ac4f0d830a91c6eeb08271a05446"
+    },
+    "artifacts/evidence/TI3_GOV_COMPAT/results.json": {
+      "bytes": 2845,
+      "sha256": "f330aeb16e4d6a65c38432f1ce11bfbf49ddf3f841c00f681de91ad2b63e8e75"
+    },
+    "artifacts/evidence/TI3_GOV_COMPAT/semantic-1/GOVERNANCE_PROTOCOL.md": {
+      "bytes": 3262,
+      "sha256": "b0220dfbff316cd3daf600ff419a934455653052f8d182b18dfa478a272040c1"
+    },
+    "artifacts/evidence/TI3_GOV_COMPAT/semantic-1/active-checksum-changes.json": {
+      "bytes": 219,
+      "sha256": "5fdb7807f650ad5817435ea8efac5ad40bd9ac4f32b0d9375bbc840f6bf4f807"
+    },
+    "artifacts/evidence/TI3_GOV_COMPAT/semantic-1/authorization.md": {
+      "bytes": 19794,
+      "sha256": "efc047241e5f8cbaeace8d7bdbab0db766a61d5b8afd2c8b74a0e4ab8556b3d9"
+    },
+    "artifacts/evidence/TI3_GOV_COMPAT/semantic-1/ci-profile-local.json": {
+      "bytes": 8867,
+      "sha256": "ab0b30f2187ef9effba91cf1c9b0f72478bfc06c0570d4db4ac8ada75970e36f"
+    },
+    "artifacts/evidence/TI3_GOV_COMPAT/semantic-1/commands.json": {
+      "bytes": 11658,
+      "sha256": "c9cfbb86d0d6c5baa885ae71e8de8fd6a9a356471d340568b464a528d5ed0eb4"
+    },
+    "artifacts/evidence/TI3_GOV_COMPAT/semantic-1/execution-report.md": {
+      "bytes": 3354,
+      "sha256": "fd3c498d9321f7b4c99a327f75f65d861902c6ae1393f41adcd15a410eecaaa7"
+    },
+    "artifacts/evidence/TI3_GOV_COMPAT/semantic-1/local-current-scope.json": {
+      "bytes": 1972,
+      "sha256": "74b2a007d95a4de12999ef2cec3aed7f9ab47893c11568dbe57f6a48013b7e43"
+    },
+    "artifacts/evidence/TI3_GOV_COMPAT/semantic-1/local-prospective-c0-scope.json": {
+      "bytes": 2054,
+      "sha256": "f650566cff28b7c8b46b93beed45e0a213fd84186ff350ad5c470f3d77408771"
+    },
+    "artifacts/evidence/TI3_GOV_COMPAT/semantic-1/preflight.json": {
+      "bytes": 835,
+      "sha256": "3077cfe13dd94556e8f42009f6d3f840b66cce0b0f656d6df67d49f209f3c942"
+    },
+    "artifacts/evidence/TI3_GOV_COMPAT/verification.json": {
+      "bytes": 3122,
+      "sha256": "9f4a831cebcb53b4cc6d3c8edb6bdb00346a562476905477f46b6c6f8c4ebf1d"
+    },
+    "configs/governance/phase-scope-v1.json": {
+      "bytes": 20075,
+      "sha256": "405b8eaaa9b322614c2f10e23f257e2c8d03fe58d820068644b2b17f8b1519dd"
+    },
+    "configs/governance/pre-ti3-code-scope.json": {
+      "bytes": 15859,
+      "sha256": "3c63b51ff86aeda79244d09e5bc7f5196be01f8aa8672ab3dc2f8fe6d90f9971"
+    },
+    "requirements-ti3-ml.txt": {
+      "bytes": 69,
+      "sha256": "5224d2ac1f631a0132d3ef66c28da0919bbc46995d1f7cfac4690aafe9b057d9"
+    },
+    "scripts/check_phase_scope.py": {
+      "bytes": 16151,
+      "sha256": "065580bea70d062bdb1ae41544667cc6cce95c710800c31bc679da8289b6aee0"
+    },
+    "scripts/check_ti3_scope.py": {
+      "bytes": 5398,
+      "sha256": "78b8cd2c990118af0aec6c97355daaaa1bb73887042b130d0a91c71f820be7cf"
+    },
+    "tests/test_phase_scope.py": {
+      "bytes": 12665,
+      "sha256": "77d93fb11ff9a4bf16188edd1252937b55935b2f13694bcb479f6a5d7193cd9a"
+    },
+    "tests/test_ti3_scope.py": {
+      "bytes": 4089,
+      "sha256": "15b3f2bd2ec2965acca1ebf1af3c99441ceaef391c0d285b63e2784f6d1720bc"
+    }
+  },
+  "experimental_bytes": 0,
+  "experimental_opens": 0,
+  "historical_checksums": 95,
+  "previous_gov_files_preserved": 9,
+  "previous_prepared_files_preserved_except_authorized_ti3_workflow": true,
+  "scientific_ml_runs": 0,
+  "scope_report": {
+    "a0_frozen_scope": {
+      "examined_file_count": 4,
+      "status": "PASS",
+      "violations": []
+    },
+    "active_custody": {
+      "examined_file_count": 4,
+      "status": "PASS",
+      "violations": []
+    },
+    "audit": "composed_phase_scope",
+    "authorized_scientific_phases": [],
+    "data_guard": {
+      "audit": "tracked_repository_data_guard",
+      "content_bytes_read": 0,
+      "examined_entry_count": 356,
+      "status": "PASS",
+      "violations": []
+    },
+    "experimental_content_bytes_read": 0,
+    "legacy_custody": {
+      "examined_file_count": 75,
+      "status": "PASS",
+      "violations": []
+    },
+    "legacy_scope": {
+      "authorized_phase": null,
+      "authorized_scientific_phases": [],
+      "blocked_phases": [
+        "TI-2",
+        "TI-2R",
+        "TI-3",
+        "TI-4",
+        "TI-5",
+        "TI-6",
+        "TI-7",
+        "TI-8"
+      ],
+      "codex_local_write_readiness": "BLOCKED_AWAITING_AUTHOR_DECISION",
+      "current_authorized_activity": "NONE_AWAITING_AUTHOR_DECISION",
+      "current_gate_documents": {
+        "document_count": 2,
+        "status": "PASS",
+        "violations": []
+      },
+      "experimental_content_bytes_read": 0,
+      "merge_authorized": false,
+      "scientific_readiness": "BLOCKED",
+      "status": "PASS",
+      "ti2_execution_authorized": false,
+      "ti2r_authorized": false,
+      "ti3_plus_authorized": false,
+      "violations": []
+    },
+    "merge_authorized": false,
+    "partition": {
+      "a0_frozen_file_count": 4,
+      "active_planned_count": 11,
+      "active_tracked_count": 4,
+      "duplicate_classification_paths": [],
+      "legacy_file_count": 75,
+      "missing_paths": [],
+      "relevant_tracked_count": 83,
+      "status": "PASS",
+      "unclassified_paths": [],
+      "violations": []
+    },
+    "scientific_readiness": "BLOCKED",
+    "status": "PASS",
+    "ti2_execution_authorized": false,
+    "ti3_plus_authorized": false,
+    "ti3_scope": {
+      "examined_entry_count": 4,
+      "experimental_content_bytes_read": 0,
+      "status": "PASS",
+      "violations": []
+    },
+    "violations": []
+  },
+  "staged_verification": "PERFORM_AFTER_EXACT_STAGING_AND_REPORT_TO_OPERATOR",
+  "status": "PASS_C0_PROSPECTIVE",
+  "tests": {
+    "c0_ci_profile": 59,
+    "c0_skips": 0,
+    "governance": 41,
+    "governance_skips": 0,
+    "legacy_optional_skips": 94,
+    "legacy_pass": 350,
+    "legacy_total": 444
+  }
+}

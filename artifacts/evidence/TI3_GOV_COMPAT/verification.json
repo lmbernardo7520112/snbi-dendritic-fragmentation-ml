@@ -1,0 +1,79 @@
+{
+  "C0": "NOT_CREATED",
+  "C1": "NOT_CREATED",
+  "C2": "NOT_CREATED",
+  "active_checksum_entries_changed": [],
+  "branch": "feat/ti3-canonical-dataset-baseline",
+  "experimental_bytes": 0,
+  "experimental_opens": 0,
+  "g2_text_hashes_verified": 25,
+  "head": "41d523e038e844588ee7724e07b00f75bdf29fdc",
+  "historical_checksum_entries_verified": 95,
+  "historical_snapshot_byte_identity": true,
+  "index_diff": [],
+  "legacy_python_blobs_verified": 79,
+  "legacy_scoped_gate": "BLOCKED_THREE_A0_ANNOTATION_PATHS",
+  "limits": [
+    "Textual custody only; no scientific validation or CI execution.",
+    "This verification excludes its own hash; no commit was requested or created."
+  ],
+  "new_text_files_current_task": [
+    "configs/governance/pre-ti3-code-scope.json",
+    "artifacts/evidence/TI2/checksums-pre-ti3-41d523e.sha256",
+    "artifacts/evidence/TI3_GOV_COMPAT/authorization.md",
+    "artifacts/evidence/TI3_GOV_COMPAT/preflight.json",
+    "artifacts/evidence/TI3_GOV_COMPAT/legacy-scope-gate.json",
+    "artifacts/evidence/TI3_GOV_COMPAT/results.json",
+    "artifacts/evidence/TI3_GOV_COMPAT/execution-report.md",
+    "artifacts/evidence/TI3_GOV_COMPAT/commands.json",
+    "artifacts/evidence/TI3_GOV_COMPAT/verification.json"
+  ],
+  "new_text_sha256_excluding_this_verification": {
+    "artifacts/evidence/TI2/checksums-pre-ti3-41d523e.sha256": {
+      "bytes": 10212,
+      "sha256": "e7d30ca626088e1e3c58c8702b96e9afc388ee75c48011d885393230dc7d245d"
+    },
+    "artifacts/evidence/TI3_GOV_COMPAT/authorization.md": {
+      "bytes": 19012,
+      "sha256": "8ccb27afe04526ff8dd7d202c1ba87e2839748fca1697c72b52480aff356d2a0"
+    },
+    "artifacts/evidence/TI3_GOV_COMPAT/commands.json": {
+      "bytes": 9327,
+      "sha256": "b1fb057e5a443794d118b90cb16bb3420ebe82a0117c7779ce98bf912b579e7a"
+    },
+    "artifacts/evidence/TI3_GOV_COMPAT/execution-report.md": {
+      "bytes": 8113,
+      "sha256": "0988fada4d6516575f5ecfad1a013ffaebda32b8e05050f26da62024572ead9d"
+    },
+    "artifacts/evidence/TI3_GOV_COMPAT/legacy-scope-gate.json": {
+      "bytes": 1624,
+      "sha256": "940dadacacb8ce4463053ad52afae638c82684bde66e32b9e51bb331019dfce4"
+    },
+    "artifacts/evidence/TI3_GOV_COMPAT/preflight.json": {
+      "bytes": 680,
+      "sha256": "1507d1252ba427716d82dc7a7d1bbf21eb10ac4f0d830a91c6eeb08271a05446"
+    },
+    "artifacts/evidence/TI3_GOV_COMPAT/results.json": {
+      "bytes": 2845,
+      "sha256": "f330aeb16e4d6a65c38432f1ce11bfbf49ddf3f841c00f681de91ad2b63e8e75"
+    },
+    "configs/governance/pre-ti3-code-scope.json": {
+      "bytes": 15859,
+      "sha256": "3c63b51ff86aeda79244d09e5bc7f5196be01f8aa8672ab3dc2f8fe6d90f9971"
+    }
+  },
+  "previous_local_files_byte_identical": 41,
+  "prospective_global_data_guard": {
+    "audit": "tracked_repository_data_guard",
+    "content_bytes_read": 0,
+    "examined_entry_count": 379,
+    "status": "PASS",
+    "violations": []
+  },
+  "remote_ci": "NOT_RUN",
+  "scientific_ml_runs": 0,
+  "status": "PASS_CUSTODY_OF_TERMINAL_BLOCK",
+  "tracked_worktree_diff": [],
+  "unclassified_tracked_python": 0,
+  "untracked_files_after_this_verification": 50
+}

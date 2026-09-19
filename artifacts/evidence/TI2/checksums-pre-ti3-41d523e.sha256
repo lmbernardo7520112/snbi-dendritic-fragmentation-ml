@@ -1,5 +1,5 @@
 # SHA-256 safe tracked textual evidence/code/governance; excludes this manifest. Experimental hashes remain historical metadata only.
-d74503a122f08e82c22f2015a76960395e22941f5aeb39873277a8a3b20be299  .github/workflows/ci.yml
+404f90eb4f3789f741b5f369e61661673d4691df2164270cd67306c4beb9c75f  .github/workflows/ci.yml
 e395553f10826ff9676d50925581c11b96b6b2f421feaf50eb876d9802a57632  AGENTS.md
 b0e0602069f7cb0a5dc54a3d200c60804f303f5be085c1e452a3c1b02003a2fe  Makefile
 6474b51cec8d95eaf4ff791e6db1bf5ded09339357644a2415299d1a86359404  README.md

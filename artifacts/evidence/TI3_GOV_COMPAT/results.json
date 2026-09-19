@@ -1,0 +1,83 @@
+{
+  "TI3_GOV_COMPAT": "BLOCKED_LEGACY_BASELINE_CLASSIFICATION",
+  "LEGACY_SCOPE_GUARD": "BLOCKED",
+  "TI3_SCOPE_GUARD": "NOT_IMPLEMENTED_STOP_AT_LEGACY_GATE",
+  "PHASE_SCOPE_GUARD": "NOT_IMPLEMENTED_STOP_AT_LEGACY_GATE",
+  "GLOBAL_TRACKED_DATA_GUARD": "PASS",
+  "HEAD_INITIAL": "41d523e038e844588ee7724e07b00f75bdf29fdc",
+  "HEAD_FINAL": "41d523e038e844588ee7724e07b00f75bdf29fdc",
+  "BRANCH": "feat/ti3-canonical-dataset-baseline",
+  "LEGACY_CODE_FILES": 79,
+  "TI3_CODE_CLASSIFIED_IN_NEW_OPERATIONAL_SCOPE": 0,
+  "UNCLASSIFIED_TRACKED_PYTHON_PATHS": 0,
+  "UNCLASSIFIED_SCOPE_NOTE": "Coverage refers to the 79 src/scripts/tests Python files tracked at the specified baseline, not to untracked prepared TI3 files.",
+  "C0": "NOT_CREATED",
+  "C0_CI": "NOT_RUN",
+  "C1": "NOT_CREATED",
+  "C1_CI": "NOT_RUN",
+  "C2": "NOT_CREATED",
+  "FINAL_CI": "NOT_RUN",
+  "EXPERIMENTAL_OPENS": 0,
+  "EXPERIMENTAL_BYTES": 0,
+  "SCIENTIFIC_ML_RUNS": 0,
+  "REAL_SUPPORT_GUARD": "NOT_EXECUTED",
+  "TRAIN_PLANNED": {
+    "positive": 17,
+    "background": 17,
+    "samples": 34
+  },
+  "DEV_PLANNED": {
+    "positive": 8,
+    "background": 8,
+    "samples": 16
+  },
+  "TRAIN_MATERIALIZED": 0,
+  "DEV_MATERIALIZED": 0,
+  "TRAIN_METRICS": null,
+  "DEV_METRICS": null,
+  "DEV_CONFUSION_MATRIX": null,
+  "ML_FINAL_TEST": "SEALED_WITH_HISTORICAL_NON_ML_EXPOSURE",
+  "ML_FINAL_TEST_EXECUTED": false,
+  "FINAL_OPENS": 0,
+  "FINAL_BYTES": 0,
+  "FINAL_PLANNED": {
+    "positive": 3,
+    "background": 3,
+    "samples": 6
+  },
+  "LBP": {
+    "P": 8,
+    "R": 1,
+    "method": "uniform",
+    "histogram_bins": 10,
+    "histogram_range": [
+      0,
+      10
+    ],
+    "density": true
+  },
+  "RF": {
+    "n_estimators": 100,
+    "random_state": 42,
+    "other_parameters": "PREVIOUSLY_RECORDED_PINNED_DEFAULTS_UNCHANGED"
+  },
+  "SOLUTAL_MODEL_INPUT": "NOT_USED",
+  "TI3_B_AUTHORIZED": false,
+  "MERGE_AUTHORIZED": false,
+  "CURRENT_AUTHORIZED_ACTIVITY": "NONE_AWAITING_AUTHOR_DECISION",
+  "violations": [
+    "TI-3+ code path prohibited: scripts/extract_ti3_a0_annotations.py (annotations)",
+    "TI-3+ code path prohibited: scripts/inspect_ti3_a0_annotations.py (annotations)",
+    "TI-3+ code path prohibited: src/snbi_fragmentation/ti3_a0_annotations.py (annotations)"
+  ],
+  "corpus_manifest": "configs/governance/pre-ti3-code-scope.json",
+  "corpus_manifest_sha256": "3c63b51ff86aeda79244d09e5bc7f5196be01f8aa8672ab3dc2f8fe6d90f9971",
+  "checksum_snapshot": "artifacts/evidence/TI2/checksums-pre-ti3-41d523e.sha256",
+  "checksum_snapshot_sha256": "e7d30ca626088e1e3c58c8702b96e9afc388ee75c48011d885393230dc7d245d",
+  "checksum_snapshot_entries": 95,
+  "active_checksum_entries_changed": [],
+  "previous_41_local_files": "BYTE_IDENTICAL",
+  "legacy_and_g2_science": "UNCHANGED",
+  "stop_rule": "AUTHOR_SECTION_33_ANY_FAILED_GATE_STOP",
+  "scientific_result": "NOT_PRODUCED"
+}

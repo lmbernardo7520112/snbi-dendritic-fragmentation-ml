@@ -1,0 +1,599 @@
+{
+  "baseline_sha": "41d523e038e844588ee7724e07b00f75bdf29fdc",
+  "domains": {
+    "LEGACY_TI2": [
+      {
+        "blob_sha": "49d734c58fde643d56da68d1a80ea554e3ec62f3",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "scripts/check_local_bootstrap.py"
+      },
+      {
+        "blob_sha": "8a99e551ac10a77c4791290e97d68a5196411850",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "scripts/check_local_environment.py"
+      },
+      {
+        "blob_sha": "9e39878e5bf18df0e05d6388c26745b7c11a4414",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "scripts/check_repository_data.py"
+      },
+      {
+        "blob_sha": "12a164b8a7c52f220ec8435ed004a41e2b53a74f",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "scripts/check_ti0_scope.py"
+      },
+      {
+        "blob_sha": "954abaa7ed4adf3eb80aa5b242daa477dc98a856",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "scripts/check_ti1_scope.py"
+      },
+      {
+        "blob_sha": "8d950e88879360bd74a28d4a3338610287ce0bf2",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "scripts/check_ti2_checksums.py"
+      },
+      {
+        "blob_sha": "aaf7444cec553e5aa2115c71fc8436097364d9e6",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "scripts/check_ti2_scope.py"
+      },
+      {
+        "blob_sha": "a7d3fb5d9c0e386fd667408689183032826f96f7",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "scripts/run_scientific_synthetic_contracts.py"
+      },
+      {
+        "blob_sha": "e4aee0b9448be680ccb78e06563a7ff21e9fcda7",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "scripts/run_ti1_audit.py"
+      },
+      {
+        "blob_sha": "5b8767d2182013b7c84a0dccfb546fd43b73ee4c",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "scripts/run_ti2.py"
+      },
+      {
+        "blob_sha": "bf4319c5f550158770fdcd4f1a2f0e8a12aef498",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "scripts/run_ti2r_frag.py"
+      },
+      {
+        "blob_sha": "d8e6beeb4bf870eb694aa0a50d7fbb7a445b1dea",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "scripts/run_ti2r_frag_direct.py"
+      },
+      {
+        "blob_sha": "c9d2de51a2ee8148763827471d77bcac18349db7",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "scripts/run_ti2r_frag_direct_synthetic.py"
+      },
+      {
+        "blob_sha": "1cb6fc40f9e34954b8c30e1a3c2e5af62dfe0a84",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "scripts/run_ti2r_frag_synthetic.py"
+      },
+      {
+        "blob_sha": "d26e94da87b355620294d2b20a4e75305eaf6a37",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "scripts/run_ti2r_solute_direct.py"
+      },
+      {
+        "blob_sha": "bde31f621e34b91e5f85fe1ebb913ec00de888fd",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "scripts/run_ti2r_solute_direct_synthetic.py"
+      },
+      {
+        "blob_sha": "8a93ad55974bcd1d47fadae031264730c1932a35",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "scripts/run_ti2r_solute_locked_holdout.py"
+      },
+      {
+        "blob_sha": "383b53668ec2b8f670c5ac539b5b8bc00086af93",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "scripts/run_ti2r_solute_v2.py"
+      },
+      {
+        "blob_sha": "ade89d56a65cda6fe81e6be51e10e2629e5ae114",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "scripts/run_ti2r_solute_v2_synthetic.py"
+      },
+      {
+        "blob_sha": "db23fd791f67e0dd4bd5ffa42f1543d42a3ba35c",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "scripts/ti2_authority.py"
+      },
+      {
+        "blob_sha": "c244e625f8a535775a5207d05151d0970f23e4f3",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "scripts/ti2r_solute_locked_evaluator.py"
+      },
+      {
+        "blob_sha": "b8ae5afff66cecdc23a3b739744d2c0debb2de8c",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "src/snbi_fragmentation/__init__.py"
+      },
+      {
+        "blob_sha": "e58d7ed36065c833d492a5fe288382dce184a958",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "src/snbi_fragmentation/correspondence.py"
+      },
+      {
+        "blob_sha": "5e9507b52150d52c8c8e28ce7fa2932d2a1e7837",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "src/snbi_fragmentation/custody.py"
+      },
+      {
+        "blob_sha": "07aed0ad8e0de3378f349327fed02bb20091b6d2",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "src/snbi_fragmentation/domain.py"
+      },
+      {
+        "blob_sha": "0d43092ab172a2009774ef603a1fe0f0943ffbcf",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "src/snbi_fragmentation/gate_authority.py"
+      },
+      {
+        "blob_sha": "8aaf5eafd4684851a41e37e5580e4069cced8b59",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "src/snbi_fragmentation/metadata.py"
+      },
+      {
+        "blob_sha": "5397b62c0b52736d47c0c3ed8158c1d486273222",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "src/snbi_fragmentation/ti2_authority.py"
+      },
+      {
+        "blob_sha": "665f9972e3900731a68af8a9874d497ad99016cc",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "src/snbi_fragmentation/ti2_calibration.py"
+      },
+      {
+        "blob_sha": "02c27b84a93d019421eb85a12986e3574712168b",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "src/snbi_fragmentation/ti2_geometry.py"
+      },
+      {
+        "blob_sha": "698e50aee3afed70b6f67391669fe96065d26b10",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "src/snbi_fragmentation/ti2_pilot.py"
+      },
+      {
+        "blob_sha": "63494c0f9802d98e7cee511c103804309b88b59c",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "src/snbi_fragmentation/ti2_registration.py"
+      },
+      {
+        "blob_sha": "8dc628fd256a8179d3b15b1fef56c8582ef952a2",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "src/snbi_fragmentation/ti2r_frag_authority.py"
+      },
+      {
+        "blob_sha": "7e143ff348924876da745c61057345a3451befb1",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "src/snbi_fragmentation/ti2r_frag_direct_authority.py"
+      },
+      {
+        "blob_sha": "76c84452c822a7f77a303f71469e3641433d66a8",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "src/snbi_fragmentation/ti2r_frag_direct_registration.py"
+      },
+      {
+        "blob_sha": "11232767b2698e76c4b896117fb278444e9c92a2",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "src/snbi_fragmentation/ti2r_frag_registration.py"
+      },
+      {
+        "blob_sha": "f163392ada9f33cbb718f0fb398499f59c2e2a57",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "src/snbi_fragmentation/ti2r_solute_direct_authority.py"
+      },
+      {
+        "blob_sha": "7edec13fa23ae6174a3471ff4aca72437623b6ad",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "src/snbi_fragmentation/ti2r_solute_direct_registration.py"
+      },
+      {
+        "blob_sha": "f2042361a95c5f82d192864026d7ced83fbc7558",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "src/snbi_fragmentation/ti2r_solute_v2_authority.py"
+      },
+      {
+        "blob_sha": "0e424902ae6cb41ae509a9bb119ab954d6a84bd1",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "src/snbi_fragmentation/ti2r_solute_v2_calibration.py"
+      },
+      {
+        "blob_sha": "2f7eedb86b1c9e34ca8943eb37a1a60aabcaae3b",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "src/snbi_fragmentation/timebase.py"
+      },
+      {
+        "blob_sha": "e96bc82139906ddbcc676b014257854c01f173c6",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "tests/test_correspondence.py"
+      },
+      {
+        "blob_sha": "127f5d04838a9b29c4f891833a2f433fc4f045d3",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "tests/test_gate_authority.py"
+      },
+      {
+        "blob_sha": "d4881f150f5bc7b35165bb9bdf551d8f00218d45",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "tests/test_hash_verifier.py"
+      },
+      {
+        "blob_sha": "6c3a18efc1eeffeff68f489e58d5ec0beba5693e",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "tests/test_local_bootstrap.py"
+      },
+      {
+        "blob_sha": "9b3a600239f328e0831edb0b8672b7dcd15d310a",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "tests/test_local_environment.py"
+      },
+      {
+        "blob_sha": "7a88d1a870319f2b59a45881636d65797fc2f1ef",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "tests/test_manifest_contract.py"
+      },
+      {
+        "blob_sha": "e4ed5c5a4912b493bf48c2b52d36d6c9a10fbbd9",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "tests/test_metadata_parser.py"
+      },
+      {
+        "blob_sha": "bdab27e84b325092d3a6763805fe95e72117d84d",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "tests/test_repository_data_guard.py"
+      },
+      {
+        "blob_sha": "7749ef978e8ae2a1b5f72b814be80b1c058b52a2",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "tests/test_scientific_synthetic_runner.py"
+      },
+      {
+        "blob_sha": "90021eb4d2729605d1900fcfabf48786d43125af",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "tests/test_scope_guard.py"
+      },
+      {
+        "blob_sha": "c7ce37e246aebbc3ca7333eb21f235f798673564",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "tests/test_ti1_scope_guard.py"
+      },
+      {
+        "blob_sha": "690c3943dc0a57ca5bb3a9b8f6b15844c9d10aa4",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "tests/test_ti2_authority.py"
+      },
+      {
+        "blob_sha": "f70fd0c72635ea5176a42a3c9bf5490375f68f07",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "tests/test_ti2_calibration.py"
+      },
+      {
+        "blob_sha": "e003cf89d52c97cf1161ac72006162027bc19dab",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "tests/test_ti2_checksums.py"
+      },
+      {
+        "blob_sha": "3978be2beda3340b55b671583f851fe2640abed2",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "tests/test_ti2_closeout.py"
+      },
+      {
+        "blob_sha": "747c92ce722b7d1b0c25ff664af762006c33cdbd",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "tests/test_ti2_execution.py"
+      },
+      {
+        "blob_sha": "56af67fffe0fc9f2e4dd5b6fbdb47413ea4f0b1e",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "tests/test_ti2_geometry.py"
+      },
+      {
+        "blob_sha": "853a21d594b1cbcaf440d73aa2c1f754c76a3bff",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "tests/test_ti2_io_authority.py"
+      },
+      {
+        "blob_sha": "880e745e21ed7449877a8dba207776157cdc5546",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "tests/test_ti2_pilot.py"
+      },
+      {
+        "blob_sha": "d8d926d12acea02265f06a4203d13afbeb265bba",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "tests/test_ti2_registration.py"
+      },
+      {
+        "blob_sha": "1d8968c2b1dac41c70566827d4dcc95c96f59f0f",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "tests/test_ti2r_frag_authority.py"
+      },
+      {
+        "blob_sha": "a2105c61b2468bc09b86287c91af35c9ee31daec",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "tests/test_ti2r_frag_direct_authority.py"
+      },
+      {
+        "blob_sha": "f1c261d3c5ae2d2a97f8dc1d03241be122c077cc",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "tests/test_ti2r_frag_direct_execution.py"
+      },
+      {
+        "blob_sha": "95ea66ba5dac266af3448ba2b89ea5b11bfa838e",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "tests/test_ti2r_frag_direct_registration.py"
+      },
+      {
+        "blob_sha": "7c2aac2c0dfc1e10ee7b2049fd25946def0943c5",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "tests/test_ti2r_frag_execution.py"
+      },
+      {
+        "blob_sha": "99b7ea62756f1f69781776d1910afdb09ac1d746",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "tests/test_ti2r_frag_registration.py"
+      },
+      {
+        "blob_sha": "911d5f9d98d3f5436f3177efabc027f647d51761",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "tests/test_ti2r_solute_direct_authority.py"
+      },
+      {
+        "blob_sha": "cfec053cead2309064c26ceec7eaa9c4467a2657",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "tests/test_ti2r_solute_direct_execution.py"
+      },
+      {
+        "blob_sha": "bb52f92642489e861245567c69d89246e17f5f40",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "tests/test_ti2r_solute_direct_registration.py"
+      },
+      {
+        "blob_sha": "bf44ed97ce8ba051cc4982f04f119cb6d668bbfe",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "tests/test_ti2r_solute_holdout_manifest.py"
+      },
+      {
+        "blob_sha": "72c043059f4642db0cddb6f47f943dac2653d6e5",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "tests/test_ti2r_solute_v2_authority.py"
+      },
+      {
+        "blob_sha": "46f9c7a59fd8615bad8c7abe49c816d3c086227e",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "tests/test_ti2r_solute_v2_calibration.py"
+      },
+      {
+        "blob_sha": "701d2b2699bf0777329aa6d78ef3a676ba1cc2e4",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "tests/test_ti2r_solute_v2_execution.py"
+      },
+      {
+        "blob_sha": "bc7adc6b78830f6cb0888fc4a471e5f434f8b73f",
+        "classification": "LEGACY_TI2",
+        "git_mode": "100644",
+        "path": "tests/test_timebase.py"
+      }
+    ],
+    "TI3_A0_FROZEN": [
+      {
+        "blob_sha": "edcd947bd4268d89153452b0518130499ef9617d",
+        "classification": "TI3_A0_FROZEN",
+        "git_mode": "100644",
+        "mutable": false,
+        "origin_phase": "TI3_A0",
+        "path": "scripts/extract_ti3_a0_annotations.py"
+      },
+      {
+        "blob_sha": "5600ff86f55b61709b75ad380a287347dd302dbd",
+        "classification": "TI3_A0_FROZEN",
+        "git_mode": "100644",
+        "mutable": false,
+        "origin_phase": "TI3_A0",
+        "path": "scripts/inspect_ti3_a0_annotations.py"
+      },
+      {
+        "blob_sha": "879083a025e8734ac2a066c9457eac8ecb5d8cb2",
+        "classification": "TI3_A0_FROZEN",
+        "git_mode": "100644",
+        "mutable": false,
+        "origin_phase": "TI3_A0",
+        "path": "src/snbi_fragmentation/ti3_a0_annotations.py"
+      },
+      {
+        "blob_sha": "222664f90128b7cadb32c31720511563e11b4065",
+        "classification": "TI3_A0_FROZEN",
+        "git_mode": "100644",
+        "mutable": false,
+        "origin_phase": "TI3_A0",
+        "path": "tests/test_ti3_a0_annotations.py"
+      }
+    ],
+    "TI3_ACTIVE": [
+      {
+        "blob_sha": "d59ec8f2c5d9625090528a1cf21b56013102f5be",
+        "classification": "TI3_ACTIVE",
+        "git_mode": "100644",
+        "path": "scripts/build_ti3_manifest.py",
+        "state": "PLANNED"
+      },
+      {
+        "blob_sha": "dd7a8062fb7c7bec3864c338d6aa8ef0f793be99",
+        "classification": "TI3_ACTIVE",
+        "git_mode": "100644",
+        "path": "scripts/check_phase_scope.py",
+        "state": "TRACKED"
+      },
+      {
+        "blob_sha": "d8ebfbbe150a03521a3d23a494873f8e07d7aab7",
+        "classification": "TI3_ACTIVE",
+        "git_mode": "100644",
+        "path": "scripts/check_ti3_ml_environment.py",
+        "state": "PLANNED"
+      },
+      {
+        "blob_sha": "c0aa3e3a406abac4d3f62a6107993ddf333566e6",
+        "classification": "TI3_ACTIVE",
+        "git_mode": "100644",
+        "path": "scripts/check_ti3_scope.py",
+        "state": "TRACKED"
+      },
+      {
+        "blob_sha": "483fb0e2ba158fa12772ff0e2411727d909edc02",
+        "classification": "TI3_ACTIVE",
+        "git_mode": "100644",
+        "path": "scripts/run_ti3_baseline.py",
+        "state": "PLANNED"
+      },
+      {
+        "blob_sha": "2ca8989a74ebc4aadbf140e82e089c6e09b60488",
+        "classification": "TI3_ACTIVE",
+        "git_mode": "100644",
+        "path": "src/snbi_fragmentation/ti3_baseline.py",
+        "state": "PLANNED"
+      },
+      {
+        "blob_sha": "ca4819d3072cbef0e35e5d0cdfe10a6b697885bc",
+        "classification": "TI3_ACTIVE",
+        "git_mode": "100644",
+        "path": "src/snbi_fragmentation/ti3_dataset.py",
+        "state": "PLANNED"
+      },
+      {
+        "blob_sha": "2f74f578fa90a5d47e36a91c3c79111224f766b4",
+        "classification": "TI3_ACTIVE",
+        "git_mode": "100644",
+        "path": "src/snbi_fragmentation/ti3_execution.py",
+        "state": "PLANNED"
+      },
+      {
+        "blob_sha": "227d93d795124233d7de94fbf1e53921f2f16c1d",
+        "classification": "TI3_ACTIVE",
+        "git_mode": "100644",
+        "path": "src/snbi_fragmentation/ti3_support.py",
+        "state": "PLANNED"
+      },
+      {
+        "blob_sha": "af0243223b2ddb799cf9bfa1dd75e0e1abff10f9",
+        "classification": "TI3_ACTIVE",
+        "git_mode": "100644",
+        "path": "tests/test_phase_scope.py",
+        "state": "TRACKED"
+      },
+      {
+        "blob_sha": "107fdbadc61302ad3d41e28cfee90e82b95c83ca",
+        "classification": "TI3_ACTIVE",
+        "git_mode": "100644",
+        "path": "tests/test_ti3_baseline.py",
+        "state": "PLANNED"
+      },
+      {
+        "blob_sha": "cffc47b3abd1bda1ab26506dfedca3751eb188a9",
+        "classification": "TI3_ACTIVE",
+        "git_mode": "100644",
+        "path": "tests/test_ti3_dataset.py",
+        "state": "PLANNED"
+      },
+      {
+        "blob_sha": "481493ce696dd43cadac56827203b1d47df5cdff",
+        "classification": "TI3_ACTIVE",
+        "git_mode": "100644",
+        "path": "tests/test_ti3_execution.py",
+        "state": "PLANNED"
+      },
+      {
+        "blob_sha": "922e996b5f1acd5e63819ee5d023cc91cf26a1dc",
+        "classification": "TI3_ACTIVE",
+        "git_mode": "100644",
+        "path": "tests/test_ti3_scope.py",
+        "state": "TRACKED"
+      },
+      {
+        "blob_sha": "cc9aba8e28059c990596efe1c0db436cedefc92e",
+        "classification": "TI3_ACTIVE",
+        "git_mode": "100644",
+        "path": "tests/test_ti3_support.py",
+        "state": "PLANNED"
+      }
+    ]
+  },
+  "schema_version": 1
+}
