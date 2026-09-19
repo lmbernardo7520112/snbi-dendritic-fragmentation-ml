@@ -1,0 +1,37 @@
+{
+  "C2_evidence_only_paths": 12,
+  "active_checksums95_verified": true,
+  "all_jobs_and_steps_success": true,
+  "audited_head": "cab4fcd6f2d1fb70027cc6abff2590fae3d7c64b",
+  "branch_preserved": true,
+  "final_bytes": 0,
+  "final_opens": 0,
+  "freeze45_verified": true,
+  "independent_textual_audit": "PASS; no experimental bytes or scientific imports",
+  "main_fast_forwarded": true,
+  "merge_parents": [
+    "67786bd4e23406e7f19860a53fe237e6d7b648cb",
+    "cab4fcd6f2d1fb70027cc6abff2590fae3d7c64b"
+  ],
+  "merge_sha": "7a205327b363f8cdbba99c5e58bf2f1e5d1253d3",
+  "merge_tree": "43981ac293a690b70528ac5c6bce47b045b87a9a",
+  "merge_tree_equals_audited_head": true,
+  "post_merge_ci_runs": [
+    35463972857,
+    35463972865
+  ],
+  "post_merge_required_jobs": [
+    "deterministic-contracts",
+    "scientific-synthetic-contracts",
+    "ti3-synthetic-contracts"
+  ],
+  "postrun57_verified": true,
+  "pr": 11,
+  "pr_ci_runs": [
+    35463800860,
+    35463800878
+  ],
+  "scientific_C1": "e6090121471faa8902f68ddd045ab8b54a2e77fc",
+  "status": "PASS",
+  "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/pull/11"
+}

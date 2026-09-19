@@ -1,0 +1,12 @@
+{
+  "python": "3.12.3",
+  "top_level": {
+    "numpy": "1.26.4",
+    "scipy": "1.11.4",
+    "scikit-image": "0.24.0",
+    "scikit-learn": "1.5.2"
+  },
+  "local_installations_this_task": 0,
+  "scope": "existing_repository_venv",
+  "scientific_imports_or_fits_this_command": 0
+}

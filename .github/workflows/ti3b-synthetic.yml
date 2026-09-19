@@ -1,0 +1,59 @@
+name: ti3b-synthetic-ci
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  ti3b-synthetic-contracts:
+    runs-on: ubuntu-latest
+    env:
+      PYTHONPATH: src:tests:.
+      PYTHONDONTWRITEBYTECODE: "1"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - name: Enforce tracked-data guard
+        run: python3 -B scripts/check_repository_data.py
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: ""
+      - name: Install the four unchanged TI3 dependency pins
+        run: >-
+          python -B -m pip --isolated install
+          --disable-pip-version-check --no-cache-dir
+          --only-binary=:all: -r requirements-ti3-ml.txt
+      - name: Enforce composed scope and frozen historical custody
+        run: python -B scripts/check_phase_scope.py
+      - name: Require multimodal synthetic contracts with zero skips
+        run: |
+          python -B - <<'PY'
+          import json
+          import unittest
+          from pathlib import Path
+          from snbi_fragmentation.ti3_baseline import _scientific_runtime
+
+          _scientific_runtime()
+          proof = json.loads(Path("artifacts/evidence/TI3_B_SOLUTAL/preparation-verification.json").read_text())
+          expected = proof["multimodal_synthetic_test_count"]
+          if type(expected) is not int or expected <= 0:
+              raise SystemExit("Explicit positive frozen synthetic count required")
+          suite = unittest.defaultTestLoader.loadTestsFromNames(
+              ["test_ti3b_ablation", "test_ti3b_execution"]
+          )
+          result = unittest.TextTestRunner(verbosity=2).run(suite)
+          passed = (
+              result.testsRun == expected
+              and result.wasSuccessful()
+              and not result.skipped
+              and not result.expectedFailures
+              and not result.unexpectedSuccesses
+          )
+          raise SystemExit(0 if passed else 1)
+          PY

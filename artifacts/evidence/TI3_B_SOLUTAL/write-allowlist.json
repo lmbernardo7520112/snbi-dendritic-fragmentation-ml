@@ -1,0 +1,38 @@
+{
+  "paths": [
+    ".github/workflows/ti3b-synthetic.yml",
+    "artifacts/evidence/TI3_B_SOLUTAL/PROTOCOL.md",
+    "artifacts/evidence/TI3_B_SOLUTAL/actual-preflight.json",
+    "artifacts/evidence/TI3_B_SOLUTAL/authorization.md",
+    "artifacts/evidence/TI3_B_SOLUTAL/ci-proof.json",
+    "artifacts/evidence/TI3_B_SOLUTAL/commands-execution.json",
+    "artifacts/evidence/TI3_B_SOLUTAL/environment.json",
+    "artifacts/evidence/TI3_B_SOLUTAL/execution-receipt.json",
+    "artifacts/evidence/TI3_B_SOLUTAL/execution-report.md",
+    "artifacts/evidence/TI3_B_SOLUTAL/integration-audit.json",
+    "artifacts/evidence/TI3_B_SOLUTAL/io-audit.json",
+    "artifacts/evidence/TI3_B_SOLUTAL/io-plan.json",
+    "artifacts/evidence/TI3_B_SOLUTAL/materialization-manifest.json",
+    "artifacts/evidence/TI3_B_SOLUTAL/method-freeze.json",
+    "artifacts/evidence/TI3_B_SOLUTAL/post-run-hashes.sha256",
+    "artifacts/evidence/TI3_B_SOLUTAL/preparation-commands.json",
+    "artifacts/evidence/TI3_B_SOLUTAL/preparation-verification.json",
+    "artifacts/evidence/TI3_B_SOLUTAL/results.json",
+    "artifacts/evidence/TI3_B_SOLUTAL/terminal-state.json",
+    "artifacts/evidence/TI3_B_SOLUTAL/verification-terminal.json",
+    "artifacts/evidence/TI3_B_SOLUTAL/write-allowlist.json",
+    "configs/authority/ti3b-solutal-ablation.json",
+    "configs/governance/phase-scope-v1.json",
+    "configs/ti3/solute-ablation.json",
+    "scripts/run_ti3b_ablation.py",
+    "src/snbi_fragmentation/ti3b_ablation.py",
+    "src/snbi_fragmentation/ti3b_execution.py",
+    "tests/test_ti3b_ablation.py",
+    "tests/test_ti3b_execution.py"
+  ],
+  "existing_file_changes": [
+    "configs/governance/phase-scope-v1.json"
+  ],
+  "all_other_paths_new": true,
+  "experimental_binaries_written": false
+}
