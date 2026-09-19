@@ -23,10 +23,11 @@ sys.path.insert(0, str(ROOT / "src"))
 from snbi_fragmentation import ti2r_solute_v2_authority as safe
 
 C1 = "e1a98917a20431ecc1c758f210b5e974b3533734"
-HEAD = "0b820bc61e6dae3b7a98654a3b7d5cd292ca925e"
+C2 = "0b820bc61e6dae3b7a98654a3b7d5cd292ca925e"
+CHECKPOINT = "7994771e239afdb998a644626c423c1c627f80a0"
 BRANCH = "feat/ti2r-solute-v2-calibration"
 PHASE = "TI2R_SOLUTE_HOLDOUT"
-EVIDENCE = "artifacts/evidence/" + PHASE
+EVIDENCE = "artifacts/evidence/" + PHASE + "/repair-1"
 MANIFEST = EVIDENCE + "/frozen-manifest.json"
 RECEIPT = EVIDENCE + "/receipt.json"
 TERMINAL = EVIDENCE + "/terminal-state.json"
@@ -35,10 +36,11 @@ V1_CONFIG = "configs/registration/ti2r-solute-direct-method.json"
 V2_CONFIG = "configs/registration/ti2r-solute-v2-method.json"
 EVALUATOR = "scripts/ti2r_solute_locked_evaluator.py"
 RUNNER = "scripts/run_ti2r_solute_locked_holdout.py"
+REPAIR_PATHS = frozenset({RUNNER, "tests/test_ti2r_solute_holdout_manifest.py"})
 OPERATIONAL_PATHS = frozenset({
     EVALUATOR, RUNNER, EVIDENCE + "/PRE_EXECUTION_AUDIT.md",
     EVIDENCE + "/authorization.md", EVIDENCE + "/verification.json",
-})
+}) | REPAIR_PATHS
 OUTPUT_NAMES = ("receipt.json", "io-audit.json", "results.json", "terminal-state.json")
 ALLOWED_NEW_PATHS = OPERATIONAL_PATHS | frozenset(
     EVIDENCE + "/" + name for name in OUTPUT_NAMES + (
@@ -76,6 +78,14 @@ def document(root, relative):
     return raw, json.loads(raw, object_pairs_hook=safe._unique_object)
 
 
+def encode_manifest(document, configurations):
+    """Preserve frozen Python JSON types; never pass configurations through JS."""
+    repaired = dict(document, configurations=configurations)
+    encoded = safe._encoded(repaired)
+    require(safe._exact(json.loads(encoded), repaired), "MANIFEST_TYPED_ROUNDTRIP")
+    return encoded
+
+
 def require_absent(root, relative):
     """Presence, including a symlink, blocks; never follows its target."""
     parent, name = safe._parent_fd(root, relative)
@@ -89,10 +99,16 @@ def require_absent(root, relative):
         os.close(parent)
 
 
-def validate_git(root):
-    require(git(root, "rev-parse", "HEAD").decode().strip() == HEAD, "HEAD_DIVERGENCE")
+def validate_git(root, head):
+    require(type(head) is str and safe.SHA1_RE.fullmatch(head) is not None,
+            "INVALID_EXECUTION_HEAD")
+    require(git(root, "rev-parse", "HEAD").decode().strip() == head, "HEAD_DIVERGENCE")
+    require(git(root, "rev-list", "--parents", "-n", "1", head).decode().split()
+            == [head, CHECKPOINT], "REPAIR_COMMIT_LINEAGE_DIVERGENCE")
+    require(set(git(root, "diff", "--name-only", CHECKPOINT, head).decode().splitlines())
+            == REPAIR_PATHS, "REPAIR_COMMIT_SCOPE_DIVERGENCE")
     require(git(root, "branch", "--show-current").decode().strip() == BRANCH, "BRANCH_DIVERGENCE")
-    require(git(root, "rev-parse", "refs/remotes/origin/" + BRANCH).decode().strip() == HEAD,
+    require(git(root, "rev-parse", "refs/remotes/origin/" + BRANCH).decode().strip() == C2,
             "TRACKING_BRANCH_DIVERGENCE")
     status = git(root, "status", "--porcelain=v1", "--untracked-files=all").decode()
     require(all(line.startswith("?? ") and line[3:] in ALLOWED_NEW_PATHS
@@ -107,7 +123,7 @@ def validate_ci(evidence):
             and len(evidence["runs"]) == 2, "BOTH_C2_CI_RUNS_REQUIRED")
     events, identifiers = set(), set()
     for run in evidence["runs"]:
-        require(type(run) is dict and run.get("headSha") == HEAD
+        require(type(run) is dict and run.get("headSha") == C2
                 and run.get("status") == "completed" and run.get("conclusion") == "success"
                 and run.get("event") in ("push", "pull_request")
                 and run["event"] not in events and type(run.get("databaseId")) is int
@@ -158,10 +174,10 @@ def preflight(root):
     # Refuse a second invocation before inspecting any experimental path.
     for name in OUTPUT_NAMES:
         require_absent(root, EVIDENCE + "/" + name)
-    validate_git(root)
     manifest_bytes, manifest = document(root, MANIFEST)
+    validate_git(root, manifest.get("head_sha"))
     require(manifest.get("phase") == PHASE and manifest.get("pre_holdout_gate") == "PASS"
-            and manifest.get("head_sha") == HEAD and manifest.get("branch") == BRANCH,
+            and manifest.get("branch") == BRANCH,
             "PRE_HOLDOUT_GATE_NOT_PASS")
     scientific = manifest.get("scientific_hashes")
     operational = manifest.get("operational_hashes")
@@ -184,7 +200,7 @@ def preflight(root):
     from snbi_fragmentation import ti2r_solute_v2_calibration as v2
     v2.validate_config(configs["v2"])
     old_raw, old = document(root, safe.TERMINAL_PATH)
-    require(old_raw == git(root, "show", f"{HEAD}:{safe.TERMINAL_PATH}"), "V2_TERMINAL_DIVERGENCE")
+    require(old_raw == git(root, "show", f"{C2}:{safe.TERMINAL_PATH}"), "V2_TERMINAL_DIVERGENCE")
     require(old.get("state") == "CLOSED_CONSUMED"
             and old.get("TI2R_SOLUTE_V2_DEV") == "PASS_PROTOCOL_FROZEN_READY_FOR_HOLDOUT_DECISION"
             and old.get("HOLDOUT_SOLUTE") == "SEALED"
@@ -298,14 +314,17 @@ def terminal_fields(outcome):
 def main():
     reader = None
     consumed = False
-    report = {"phase": PHASE, "head_sha": HEAD, "branch": BRANCH, "pairs": {},
+    report = {"phase": PHASE, "branch": BRANCH, "pairs": {},
               "scientific_evaluation_started": False, "pair_evaluation_calls": 0,
-              "cli_invocations": 1}
+              "cli_invocations": 1, "PREVIOUS_CLI_INVOCATIONS": 1,
+              "PREVIOUS_SCIENTIFIC_HOLDOUT_EXECUTIONS": 0, "TOTAL_CLI_INVOCATIONS": 2}
     outcome = "TECHNICAL_INCIDENT_REQUIRES_AUTHOR_DECISION"
     try:
         require(len(sys.argv) == 1, "NO_ARGUMENTS_ALLOWED")
         manifest_bytes, manifest, assets, versions, evaluator_bytes = preflight(ROOT)
-        receipt = {"phase": PHASE, "timestamp_utc": timestamp(), "head_sha": HEAD, "branch": BRANCH,
+        head = manifest["head_sha"]
+        report["head_sha"] = head
+        receipt = {"phase": PHASE, "timestamp_utc": timestamp(), "head_sha": head, "branch": BRANCH,
                    "frozen_c1_sha": C1, "manifest_sha256": hashlib.sha256(manifest_bytes).hexdigest(),
                    "scientific_hashes": manifest["scientific_hashes"],
                    "operational_hashes": manifest["operational_hashes"],
@@ -350,9 +369,14 @@ def main():
     accounting = reader.audit()
     report.update(fields, io_audit=accounting, finished_at_utc=timestamp(),
                   scientific_invocations=int(report["scientific_evaluation_started"]),
+                  SCIENTIFIC_HOLDOUT_EXECUTIONS=int(report["scientific_evaluation_started"]),
                   new_data_or_redecoding=False, development_buffers_reopened=False,
                   physical_conversion=False, scientific_edits_after_holdout=False)
-    terminal = dict(fields, head_sha=HEAD, branch=BRANCH,
+    terminal = dict(fields, head_sha=head, branch=BRANCH,
+                    PREVIOUS_CLI_INVOCATIONS=1, TOTAL_CLI_INVOCATIONS=2,
+                    PREVIOUS_SCIENTIFIC_HOLDOUT_EXECUTIONS=0,
+                    SCIENTIFIC_HOLDOUT_EXECUTIONS=report["SCIENTIFIC_HOLDOUT_EXECUTIONS"],
+                    PRE_HOLDOUT_GATE="PASS",
                     receipt_sha256=report["receipt_sha256"], io_audit=accounting)
     try:
         # The immutable receipt already consumed the attempt. Close its state
@@ -365,7 +389,7 @@ def main():
                           "evidence_persistence_incident": type(exc).__name__, "io_audit": accounting,
                           "retries": 0}, sort_keys=True), flush=True)
         return 3
-    print(json.dumps(dict(fields, head_sha=HEAD, branch=BRANCH,
+    print(json.dumps(dict(fields, head_sha=head, branch=BRANCH,
                           pair_statuses={name: {"status": value["status"],
                               "cases": [{"source_index": frame["source_index"], "status": frame["status"]}
                                         for frame in value["per_frame"]]}
