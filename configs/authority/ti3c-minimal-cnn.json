@@ -1,0 +1,29 @@
+{
+  "branch": "feat/ti3c-minimal-multimodal-cnn",
+  "checkpoint": "48da1af69ce48b3287f19b26bfbd24b79243d90e",
+  "ci_jobs_required": [
+    "deterministic-contracts",
+    "scientific-synthetic-contracts",
+    "ti3-synthetic-contracts",
+    "ti3b-synthetic-contracts",
+    "ti3c-synthetic-contracts"
+  ],
+  "cnn_authorized": true,
+  "final_evaluation_authorized": false,
+  "final_test_execution_authorized": false,
+  "input_sources": [
+    "ESM1",
+    "ESM2",
+    "ESM4",
+    "ESM5"
+  ],
+  "merge_authorized": false,
+  "multimodal_rf_rerun_authorized": false,
+  "receipt_path": "artifacts/evidence/TI3_C_CNN/execution-receipt.json",
+  "repository": "lmbernardo7520112/snbi-dendritic-fragmentation-ml",
+  "results_path": "artifacts/evidence/TI3_C_CNN/results.json",
+  "schema": "TI3C-ONE-SHOT-1",
+  "scientific_invocation_limit": 1,
+  "state": "CONDITIONAL_ON_C1_AND_GREEN_CI",
+  "structural_baseline_rerun_authorized": false
+}

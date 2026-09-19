@@ -510,7 +510,7 @@
         "state": "TRACKED"
       },
       {
-        "blob_sha": "c0aa3e3a406abac4d3f62a6107993ddf333566e6",
+        "blob_sha": "83ec85de0e97e6502a9873d9abf3ba637c6a9e96",
         "classification": "TI3_ACTIVE",
         "git_mode": "100644",
         "path": "scripts/check_ti3_scope.py",
@@ -626,6 +626,48 @@
         "classification": "TI3_ACTIVE",
         "git_mode": "100644",
         "path": "tests/test_ti3b_execution.py",
+        "state": "TRACKED"
+      },
+      {
+        "blob_sha": "26791ab93c0e58ed7ca36ede11d1e01ca48eae79",
+        "classification": "TI3_ACTIVE",
+        "git_mode": "100644",
+        "path": "scripts/run_ti3c_cnn.py",
+        "state": "TRACKED"
+      },
+      {
+        "blob_sha": "e01dae0729a0c8b37367c79de1c3f5821d56d051",
+        "classification": "TI3_ACTIVE",
+        "git_mode": "100644",
+        "path": "src/snbi_fragmentation/ti3c_cnn.py",
+        "state": "TRACKED"
+      },
+      {
+        "blob_sha": "b12ec7823403cccf9e29de65bbd1fa8241ce11a6",
+        "classification": "TI3_ACTIVE",
+        "git_mode": "100644",
+        "path": "src/snbi_fragmentation/ti3c_execution.py",
+        "state": "TRACKED"
+      },
+      {
+        "blob_sha": "ebbb17c807951f60833783fff0d83c907ea7cf07",
+        "classification": "TI3_ACTIVE",
+        "git_mode": "100644",
+        "path": "tests/test_ti3c_cnn.py",
+        "state": "TRACKED"
+      },
+      {
+        "blob_sha": "8b46a4978f3790e1eebf26920793ad861cd28138",
+        "classification": "TI3_ACTIVE",
+        "git_mode": "100644",
+        "path": "tests/test_ti3c_execution.py",
+        "state": "TRACKED"
+      },
+      {
+        "blob_sha": "ec91d2626ff0f4d1bcf58f0569ab401b33e1ef8b",
+        "classification": "TI3_ACTIVE",
+        "git_mode": "100644",
+        "path": "tests/test_ti3c_scope.py",
         "state": "TRACKED"
       }
     ]

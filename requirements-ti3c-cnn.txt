@@ -1,0 +1,3 @@
+-r requirements-ti3-ml.txt
+-c constraints-ti3c-cnn.txt
+torch==2.4.1+cpu

@@ -1,0 +1,55 @@
+{
+  "architecture": [
+    "Conv2d(2,8,3,padding=1,bias=True)",
+    "ReLU()",
+    "MaxPool2d(2,stride=2)",
+    "AdaptiveAvgPool2d((1,1))",
+    "Flatten()",
+    "Linear(8,2,bias=True)"
+  ],
+  "augmentation": "NONE",
+  "batch_size": 8,
+  "channel_order": [
+    "STRUCTURAL_LUMINANCE",
+    "RELATIVE_SOLUTE_FIELD_LUMINANCE"
+  ],
+  "decision_rule": "CNN_GT_0_75_ELSE_MULTIMODAL_LBP_RF",
+  "deterministic_algorithms": true,
+  "device": "cpu",
+  "early_stopping": false,
+  "epochs": 10,
+  "execution_order": [
+    "MATERIALIZE_TRAIN",
+    "TRAIN_10_EPOCHS",
+    "EVALUATE_TRAIN",
+    "MATERIALIZE_DEVELOPMENT",
+    "EVALUATE_DEVELOPMENT_ONCE"
+  ],
+  "input_shape": [
+    2,
+    65,
+    65
+  ],
+  "learning_rate": 0.005,
+  "loss": "CrossEntropyLoss()",
+  "mapping": "IDENTITY",
+  "normalization": "FLOAT32_DIVIDE_255",
+  "num_workers": 0,
+  "optimizer": "Adam",
+  "parameter_count": 170,
+  "representation": "NATIVE_Y",
+  "rf_reference_dev_balanced_accuracy": 0.75,
+  "scheduler": null,
+  "schema": "TI3C-MINIMAL-CNN-1",
+  "seeds": {
+    "loader_generator": 42,
+    "numpy": 42,
+    "python": 42,
+    "torch": 42
+  },
+  "support_policy": "UNCHANGED_TI3B_STRUCTURAL_AND_SOLUTAL",
+  "torch_num_threads": 1,
+  "torch_version": "2.4.1+cpu",
+  "train_shuffle": true,
+  "weight_decay": 0.0
+}

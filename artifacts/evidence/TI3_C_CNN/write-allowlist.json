@@ -1,0 +1,50 @@
+{
+  "modified_existing": [
+    "scripts/check_ti3_scope.py",
+    "configs/governance/phase-scope-v1.json"
+  ],
+  "new_c1_paths": [
+    ".github/workflows/ti3c-synthetic.yml",
+    "requirements-ti3c-cnn.txt",
+    "constraints-ti3c-cnn.txt",
+    "configs/authority/ti3c-minimal-cnn.json",
+    "configs/ti3/minimal-cnn.json",
+    "scripts/run_ti3c_cnn.py",
+    "src/snbi_fragmentation/ti3c_cnn.py",
+    "src/snbi_fragmentation/ti3c_execution.py",
+    "tests/test_ti3c_cnn.py",
+    "tests/test_ti3c_execution.py",
+    "tests/test_ti3c_scope.py",
+    "artifacts/evidence/TI3_C_CNN/authorization.md",
+    "artifacts/evidence/TI3_C_CNN/PROTOCOL.md",
+    "artifacts/evidence/TI3_C_CNN/environment.json",
+    "artifacts/evidence/TI3_C_CNN/integration-audit.json",
+    "artifacts/evidence/TI3_C_CNN/dependency-resolution.json",
+    "artifacts/evidence/TI3_C_CNN/acquisition-only-diagnostic.json",
+    "artifacts/evidence/TI3_C_CNN/io-plan.json",
+    "artifacts/evidence/TI3_C_CNN/method-freeze.json",
+    "artifacts/evidence/TI3_C_CNN/preparation-commands.json",
+    "artifacts/evidence/TI3_C_CNN/preparation-verification.json",
+    "artifacts/evidence/TI3_C_CNN/write-allowlist.json"
+  ],
+  "post_c1_evidence_only": [
+    "artifacts/evidence/TI3_C_CNN/actual-preflight.json",
+    "artifacts/evidence/TI3_C_CNN/ci-proof.json",
+    "artifacts/evidence/TI3_C_CNN/commands-execution.json",
+    "artifacts/evidence/TI3_C_CNN/execution-receipt.json",
+    "artifacts/evidence/TI3_C_CNN/execution-report.md",
+    "artifacts/evidence/TI3_C_CNN/io-audit.json",
+    "artifacts/evidence/TI3_C_CNN/materialization-manifest.json",
+    "artifacts/evidence/TI3_C_CNN/post-run-hashes.sha256",
+    "artifacts/evidence/TI3_C_CNN/results.json",
+    "artifacts/evidence/TI3_C_CNN/terminal-state.json",
+    "artifacts/evidence/TI3_C_CNN/verification-terminal.json"
+  ],
+  "local_ignored": [
+    ".venv/",
+    ".bootstrap-test-tmp/ti3b-integration-pr-body.md",
+    ".bootstrap-test-tmp/ti3c-dependency-resolution.json"
+  ],
+  "experimental_writes": false,
+  "binary_export": false
+}

@@ -1,0 +1,292 @@
+{
+  "coverage": "Grouped inventory of principal commands and delegated reports; not universal syscall monitoring. Read-only textual helper bodies are summarized; operational failures are retained. Git C1 staging/commit/push occur after this preregistration and belong to terminal return/history.",
+  "delegated_reports": {
+    "core": {
+      "epochs_synthetic": 20,
+      "experimental_access": 0,
+      "failed_inference_control": 1,
+      "optimizer_steps_synthetic": 40,
+      "passes": 19,
+      "skips": 0,
+      "stdlib_profile": {
+        "pass": 8,
+        "skip": 11,
+        "tests": 19
+      },
+      "successful_evaluations_synthetic": 2,
+      "tests": 19,
+      "training_calls_synthetic": 2
+    },
+    "independent_static_review": {
+      "core": "PASS",
+      "counter_patch_test": "PASS",
+      "experimental_access": 0,
+      "metadata_and_prior_custody": "PASS",
+      "reader": "PASS",
+      "runner": "PASS after pre-freeze invocation/completion counter distinction",
+      "tests_reexecuted": false
+    },
+    "premerge_audit": {
+      "commands_reported": 8,
+      "experimental_access": 0,
+      "last_helper_git_queries": 152,
+      "status": "PASS"
+    },
+    "runner": {
+      "all_exit_zero": true,
+      "apply_patch_calls": 2,
+      "cnn_or_rf_fits": 0,
+      "experimental_access": 0,
+      "invocations": 1,
+      "passes": 27,
+      "shell_calls": 14,
+      "skips": 0,
+      "tests": 27
+    },
+    "scope": {
+      "all_pass": true,
+      "experimental_access": 0,
+      "historical_tests": 15,
+      "invocations": 2,
+      "new_tests": 22,
+      "note": "pre-freeze narrow policy and exact pin validation developed before science; unchanged historical tests",
+      "operational_missing_file_search": true,
+      "shell_calls": 20,
+      "shell_exit_one": 1,
+      "shell_exit_zero": 19
+    }
+  },
+  "experimental_bytes": 0,
+  "experimental_opens": 0,
+  "final_bytes": 0,
+  "final_opens": 0,
+  "integration": [
+    {
+      "boundary": "default sandbox",
+      "commands": [
+        "cat exact author attachment",
+        "git status --short",
+        "git branch --show-current",
+        "git rev-parse HEAD",
+        "git remote -v",
+        "python3 -B scripts/check_repository_data.py"
+      ],
+      "data_guard_entries": 464,
+      "exit": 0
+    },
+    {
+      "boundary": "sandbox",
+      "commands": [
+        "gh pr list --head feat/ti3b-solutal-ablation",
+        "git ls-remote --heads origin main feat/ti3b-solutal-ablation",
+        "gh run list --commit dc9d0bb467bfc3c94302bb59b91db296e788451e"
+      ],
+      "exit": [
+        1,
+        128,
+        1
+      ],
+      "reason": "API/DNS unavailable; exact read-only requests subsequently approved"
+    },
+    {
+      "b2_runs": [
+        35465713084,
+        35465713137,
+        35465713074
+      ],
+      "boundary": "targeted approvals",
+      "commands": [
+        "gh pr list",
+        "git ls-remote",
+        "gh run list",
+        "gh run view"
+      ],
+      "exit": 0,
+      "postmerge_runs": [
+        35468947398,
+        35468947411,
+        35468947421
+      ],
+      "pr_runs": [
+        35468678408,
+        35468678496,
+        35468678487
+      ],
+      "scope": "exact repository, B2 SHA, named runs only"
+    },
+    {
+      "boundary": "local body and Git read-only sandbox; remote commands individually targeted-approved",
+      "commands": [
+        "write exclusive ignored PR-body text",
+        "gh api repository merge settings",
+        "gh pr create --draft --base main --head feat/ti3b-solutal-ablation --body-file .bootstrap-test-tmp/ti3b-integration-pr-body.md",
+        "gh api pulls/12",
+        "gh pr ready 12",
+        "gh pr view 12",
+        "git ls-remote --heads origin main feat/ti3b-solutal-ablation",
+        "gh pr merge 12 --merge --match-head-commit dc9d0bb467bfc3c94302bb59b91db296e788451e",
+        "gh pr view 12",
+        "gh api git/commits/48da1af69ce48b3287f19b26bfbd24b79243d90e",
+        "git rev-parse dc9d0bb467bfc3c94302bb59b91db296e788451e^{tree}"
+      ],
+      "exit": 0
+    },
+    {
+      "boundary": "read-only sandbox; each Git mutation targeted-approved after green postmerge CI",
+      "commands": [
+        "git status --short",
+        "git fetch --no-tags origin refs/heads/main:refs/remotes/origin/main",
+        "git switch main",
+        "git merge --ff-only origin/main",
+        "git rev-parse main origin/main",
+        "git switch -c feat/ti3c-minimal-multimodal-cnn 48da1af69ce48b3287f19b26bfbd24b79243d90e"
+      ],
+      "exit": 0
+    }
+  ],
+  "preparation": [
+    {
+      "boundary": "default sandbox",
+      "commands": [
+        "cat README.md pyproject.toml docs/protocols/LOCAL_DEVELOPMENT.md docs/security/LOCAL_SANDBOX.md",
+        "read named TI3 governance/runner/core/workflow/config/freeze text",
+        "git diff -- scripts/check_ti3_scope.py",
+        "git diff --stat",
+        "git status --short",
+        "git diff --check"
+      ],
+      "exit": 0
+    },
+    {
+      "commands": [
+        "rg ti3c runner/test paths during delegated construction"
+      ],
+      "exit": 2,
+      "reason": "requested new runner/test file not yet written on two reads; no source divergence or execution"
+    },
+    {
+      "boundary": "default sandbox",
+      "commands": [
+        "create authorization copy, requirements/constraints",
+        "pip --isolated install --dry-run --no-cache-dir --only-binary=:all: --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-ti3c-cnn.txt --report .bootstrap-test-tmp/ti3c-dependency-resolution.json"
+      ],
+      "exit": 1,
+      "reason": "DNS unavailable; pip reported ResolutionImpossible after network failures, not proven dependency incompatibility"
+    },
+    {
+      "boundary": "targeted network approval",
+      "commands": [
+        "same exact pip dry-run and report after targeted approval"
+      ],
+      "exit": 0,
+      "result": "official CPU cp312 wheel and nine added packages resolved without installation"
+    },
+    {
+      "boundary": "default sandbox; repository TMPDIR",
+      "commands": [
+        "freeze resolved transitive pins and sanitize dependency report",
+        "pip --isolated install --no-cache-dir --only-binary=:all: --retries 0 --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-ti3c-cnn.txt"
+      ],
+      "exit": [
+        0,
+        1
+      ],
+      "reason": "installation attempt unavailable under sandbox network"
+    },
+    {
+      "boundary": "targeted network approval; only repository virtualenv installation",
+      "commands": [
+        "same exact pip install with repository TMPDIR and .venv after targeted approval"
+      ],
+      "exit": 0,
+      "new_packages": 9
+    },
+    {
+      "commands": [
+        ".venv Python import/metadata checks for22 pins, CPU Torch and forbidden-package absence; write environment.json",
+        "create integration-audit, PROTOCOL, workflow and explicit write allowlist",
+        "PyYAML parse workflow and compile inline Python in memory"
+      ],
+      "exit": 0,
+      "experimental_opens": 0
+    },
+    {
+      "commands": [
+        "PYTHONPATH=src python3 -S -B metadata-only acquisition diagnostic using existing dataset JSON"
+      ],
+      "diagnostic_ba": 0.5625,
+      "exit": 0,
+      "ml_fits": 0
+    },
+    {
+      "commands": [
+        "PYTHONPATH=src:. python3 -S -B serialize exact runner constants; exact roundtrip; validate TI3B reference and14-entry metadata inventory; write io-plan"
+      ],
+      "exit": 0,
+      "native_opens": 0
+    },
+    {
+      "checksums": 95,
+      "commands": [
+        "python3 -B scripts/check_repository_data.py",
+        "python3 -B scripts/check_ti2_checksums.py",
+        "python3 -B scripts/check_local_bootstrap.py"
+      ],
+      "data_guard_entries": 464,
+      "exit": 0,
+      "legacy_authority_stays_closed": true
+    },
+    {
+      "a0": 4,
+      "active": 26,
+      "commands": [
+        "update phase manifest: six additive Python paths and checker blob only",
+        "prospective phase/data guard using explicitly labeled synthetic index inventory"
+      ],
+      "duplicates": 0,
+      "exit": 0,
+      "legacy": 75,
+      "prospective_entries": 484,
+      "unclassified": 0
+    },
+    {
+      "commands": [
+        "TMPDIR=repository/.bootstrap-test-tmp PYTHONPATH=src:tests:. PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -B combined TI3A/B/C unittest profile and environment smoke"
+      ],
+      "exit": 0,
+      "pass": 221,
+      "skips": 0,
+      "synthetic_cnn_train_calls": 2,
+      "synthetic_rf_fits": 4,
+      "tests": 221
+    },
+    {
+      "commands": [
+        "TMPDIR=repository/.bootstrap-test-tmp PYTHONPATH=src:tests:. PYTHONDONTWRITEBYTECODE=1 python3 -S -B -m unittest discover -s tests"
+      ],
+      "exit": 0,
+      "optional_skips": 128,
+      "passes": 519,
+      "tests": 647
+    },
+    {
+      "cases": 8,
+      "commands": [
+        ".venv Python actual serialized preflight with in-memory Git/CI proof; seven CI/type negative controls"
+      ],
+      "exit": 0,
+      "full_preflight_calls": 1,
+      "receipt": false,
+      "science": 0
+    },
+    {
+      "commands": [
+        "git diff --check",
+        "git diff --numstat"
+      ],
+      "exit": 0
+    }
+  ],
+  "schema": "TI3C-PREPARATION-COMMANDS-1",
+  "scientific_ti3c_runs": 0
+}
