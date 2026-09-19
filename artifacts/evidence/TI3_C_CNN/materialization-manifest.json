@@ -1,0 +1,3077 @@
+{
+  "C1_CNN": "b2d8839ca2b6c6e5ddd2be1de3ff9589ada9a93c",
+  "final_samples": [
+    {
+      "input_uint8_sha256": null,
+      "sample_id": "positive|ESM3:annotation-site:2d8693eaf74b3e06",
+      "solutal_input_opened": false,
+      "solutal_patch_sha256": null,
+      "split": "FINAL_TEST",
+      "structural_input_opened": false,
+      "structural_patch_sha256": null
+    },
+    {
+      "input_uint8_sha256": null,
+      "sample_id": "positive|ESM3:annotation-site:f96050cb91a60afe",
+      "solutal_input_opened": false,
+      "solutal_patch_sha256": null,
+      "split": "FINAL_TEST",
+      "structural_input_opened": false,
+      "structural_patch_sha256": null
+    },
+    {
+      "input_uint8_sha256": null,
+      "sample_id": "positive|ESM6:annotation-site:8c97cae8aaa8f4f3",
+      "solutal_input_opened": false,
+      "solutal_patch_sha256": null,
+      "split": "FINAL_TEST",
+      "structural_input_opened": false,
+      "structural_patch_sha256": null
+    },
+    {
+      "input_uint8_sha256": null,
+      "sample_id": "background|ESM4|295|817|350",
+      "solutal_input_opened": false,
+      "solutal_patch_sha256": null,
+      "split": "FINAL_TEST",
+      "structural_input_opened": false,
+      "structural_patch_sha256": null
+    },
+    {
+      "input_uint8_sha256": null,
+      "sample_id": "background|ESM1|293|622|806",
+      "solutal_input_opened": false,
+      "solutal_patch_sha256": null,
+      "split": "FINAL_TEST",
+      "structural_input_opened": false,
+      "structural_patch_sha256": null
+    },
+    {
+      "input_uint8_sha256": null,
+      "sample_id": "background|ESM4|295|1142|545",
+      "solutal_input_opened": false,
+      "solutal_patch_sha256": null,
+      "split": "FINAL_TEST",
+      "structural_input_opened": false,
+      "structural_patch_sha256": null
+    }
+  ],
+  "patch_pairs": 50,
+  "planning_manifest_sha256": "c8e82b72ff5dc51d188a764c577c11d514474b14d90aea6292c1439e776fb487",
+  "samples": [
+    {
+      "center_x": 102,
+      "center_y": 676,
+      "frame_index": 73,
+      "input_shape": [
+        2,
+        65,
+        65
+      ],
+      "input_uint8_sha256": "46f588abb9b91d881bf8c182379e49e472c2dde3d13300a806042ea1c4f16199",
+      "patch_side_px": 65,
+      "sample_id": "background|ESM1|73|102|676",
+      "solutal_patch_sha256": "76be8f483ffbf2c42cc4da1987163d78d3219b85de3dcfd6aee200daad527f37",
+      "solutal_source_id": "ESM2",
+      "solutal_support": {
+        "representation": "NATIVE_Y_RELATIVE_SOLUTE_FIELD",
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM1|73|102|676",
+          "background|ESM1|73|167|286",
+          "positive|ESM3:annotation-site:4b88c441ae9c6696",
+          "positive|ESM3:annotation-site:4c41286cef74d212",
+          "positive|ESM3:annotation-site:4e3f86cfe00b170b",
+          "positive|ESM3:annotation-site:921edb3b46971a2c",
+          "positive|ESM3:annotation-site:95a85828fc0c1117",
+          "positive|ESM3:annotation-site:b6b216ac7f401b9a",
+          "positive|ESM3:annotation-site:c0913343ab666a5f",
+          "positive|ESM3:annotation-site:e8c88192a10fa74d",
+          "positive|ESM3:annotation-site:edefb8faa424fa0f"
+        ],
+        "status": "PASS",
+        "support_contract": "SOLUTAL_GEOMETRY_12PCT_15PCT_BORDER4_EROSION1_NO_CHROMA",
+        "support_xyxy": [
+          5,
+          124,
+          1273,
+          864
+        ]
+      },
+      "split": "TRAIN",
+      "structural_patch_sha256": "34f10987698118f17456cfc0e458862c1cfb9d4daae31fdccb496f84c39ffe4e",
+      "structural_source_id": "ESM1",
+      "structural_support": {
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM1|73|102|676",
+          "background|ESM1|73|167|286",
+          "positive|ESM3:annotation-site:4b88c441ae9c6696",
+          "positive|ESM3:annotation-site:4c41286cef74d212",
+          "positive|ESM3:annotation-site:4e3f86cfe00b170b",
+          "positive|ESM3:annotation-site:921edb3b46971a2c",
+          "positive|ESM3:annotation-site:95a85828fc0c1117",
+          "positive|ESM3:annotation-site:b6b216ac7f401b9a",
+          "positive|ESM3:annotation-site:c0913343ab666a5f",
+          "positive|ESM3:annotation-site:e8c88192a10fa74d",
+          "positive|ESM3:annotation-site:edefb8faa424fa0f"
+        ],
+        "status": "PASS"
+      },
+      "ti3b_both_patch_hashes_equal": true
+    },
+    {
+      "center_x": 167,
+      "center_y": 286,
+      "frame_index": 73,
+      "input_shape": [
+        2,
+        65,
+        65
+      ],
+      "input_uint8_sha256": "2cc8978782501dc2f987f06b7585b2ae8ee70090728a4bcd1a50fc5cbd55f87e",
+      "patch_side_px": 65,
+      "sample_id": "background|ESM1|73|167|286",
+      "solutal_patch_sha256": "605c664342d40cdeb3abf892bb7aa631c7d5783b21d6f0dd5168d0d9492131eb",
+      "solutal_source_id": "ESM2",
+      "solutal_support": {
+        "representation": "NATIVE_Y_RELATIVE_SOLUTE_FIELD",
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM1|73|102|676",
+          "background|ESM1|73|167|286",
+          "positive|ESM3:annotation-site:4b88c441ae9c6696",
+          "positive|ESM3:annotation-site:4c41286cef74d212",
+          "positive|ESM3:annotation-site:4e3f86cfe00b170b",
+          "positive|ESM3:annotation-site:921edb3b46971a2c",
+          "positive|ESM3:annotation-site:95a85828fc0c1117",
+          "positive|ESM3:annotation-site:b6b216ac7f401b9a",
+          "positive|ESM3:annotation-site:c0913343ab666a5f",
+          "positive|ESM3:annotation-site:e8c88192a10fa74d",
+          "positive|ESM3:annotation-site:edefb8faa424fa0f"
+        ],
+        "status": "PASS",
+        "support_contract": "SOLUTAL_GEOMETRY_12PCT_15PCT_BORDER4_EROSION1_NO_CHROMA",
+        "support_xyxy": [
+          5,
+          124,
+          1273,
+          864
+        ]
+      },
+      "split": "TRAIN",
+      "structural_patch_sha256": "217dad857a6594ee89ca1920f35de7447cfa4b520afa2158f3aea8be53ebf955",
+      "structural_source_id": "ESM1",
+      "structural_support": {
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM1|73|102|676",
+          "background|ESM1|73|167|286",
+          "positive|ESM3:annotation-site:4b88c441ae9c6696",
+          "positive|ESM3:annotation-site:4c41286cef74d212",
+          "positive|ESM3:annotation-site:4e3f86cfe00b170b",
+          "positive|ESM3:annotation-site:921edb3b46971a2c",
+          "positive|ESM3:annotation-site:95a85828fc0c1117",
+          "positive|ESM3:annotation-site:b6b216ac7f401b9a",
+          "positive|ESM3:annotation-site:c0913343ab666a5f",
+          "positive|ESM3:annotation-site:e8c88192a10fa74d",
+          "positive|ESM3:annotation-site:edefb8faa424fa0f"
+        ],
+        "status": "PASS"
+      },
+      "ti3b_both_patch_hashes_equal": true
+    },
+    {
+      "center_x": 364,
+      "center_y": 696,
+      "frame_index": 73,
+      "input_shape": [
+        2,
+        65,
+        65
+      ],
+      "input_uint8_sha256": "1e47afd3a2467ef8cdf1332fbb6a5ac1029da79273877023986782795646453e",
+      "patch_side_px": 65,
+      "sample_id": "positive|ESM3:annotation-site:4b88c441ae9c6696",
+      "solutal_patch_sha256": "827b0a0d00e7a8aa1d874c6f9bba08f12753504745d7dde77a5e4a4d669c96c0",
+      "solutal_source_id": "ESM2",
+      "solutal_support": {
+        "representation": "NATIVE_Y_RELATIVE_SOLUTE_FIELD",
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM1|73|102|676",
+          "background|ESM1|73|167|286",
+          "positive|ESM3:annotation-site:4b88c441ae9c6696",
+          "positive|ESM3:annotation-site:4c41286cef74d212",
+          "positive|ESM3:annotation-site:4e3f86cfe00b170b",
+          "positive|ESM3:annotation-site:921edb3b46971a2c",
+          "positive|ESM3:annotation-site:95a85828fc0c1117",
+          "positive|ESM3:annotation-site:b6b216ac7f401b9a",
+          "positive|ESM3:annotation-site:c0913343ab666a5f",
+          "positive|ESM3:annotation-site:e8c88192a10fa74d",
+          "positive|ESM3:annotation-site:edefb8faa424fa0f"
+        ],
+        "status": "PASS",
+        "support_contract": "SOLUTAL_GEOMETRY_12PCT_15PCT_BORDER4_EROSION1_NO_CHROMA",
+        "support_xyxy": [
+          5,
+          124,
+          1273,
+          864
+        ]
+      },
+      "split": "TRAIN",
+      "structural_patch_sha256": "c2bab13217a12e46dea5a4ce4af55e304bdc597ac0d852ef53807ec5de05f579",
+      "structural_source_id": "ESM1",
+      "structural_support": {
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM1|73|102|676",
+          "background|ESM1|73|167|286",
+          "positive|ESM3:annotation-site:4b88c441ae9c6696",
+          "positive|ESM3:annotation-site:4c41286cef74d212",
+          "positive|ESM3:annotation-site:4e3f86cfe00b170b",
+          "positive|ESM3:annotation-site:921edb3b46971a2c",
+          "positive|ESM3:annotation-site:95a85828fc0c1117",
+          "positive|ESM3:annotation-site:b6b216ac7f401b9a",
+          "positive|ESM3:annotation-site:c0913343ab666a5f",
+          "positive|ESM3:annotation-site:e8c88192a10fa74d",
+          "positive|ESM3:annotation-site:edefb8faa424fa0f"
+        ],
+        "status": "PASS"
+      },
+      "ti3b_both_patch_hashes_equal": true
+    },
+    {
+      "center_x": 1020,
+      "center_y": 528,
+      "frame_index": 73,
+      "input_shape": [
+        2,
+        65,
+        65
+      ],
+      "input_uint8_sha256": "74331184593b21c33613a6007ea26988f63086ddcf9d018159c70b948369d316",
+      "patch_side_px": 65,
+      "sample_id": "positive|ESM3:annotation-site:4c41286cef74d212",
+      "solutal_patch_sha256": "ad5feb21e2bcd6b9c68647956411344e51ccdcc412b1dcc7a0447bea521c18ad",
+      "solutal_source_id": "ESM2",
+      "solutal_support": {
+        "representation": "NATIVE_Y_RELATIVE_SOLUTE_FIELD",
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM1|73|102|676",
+          "background|ESM1|73|167|286",
+          "positive|ESM3:annotation-site:4b88c441ae9c6696",
+          "positive|ESM3:annotation-site:4c41286cef74d212",
+          "positive|ESM3:annotation-site:4e3f86cfe00b170b",
+          "positive|ESM3:annotation-site:921edb3b46971a2c",
+          "positive|ESM3:annotation-site:95a85828fc0c1117",
+          "positive|ESM3:annotation-site:b6b216ac7f401b9a",
+          "positive|ESM3:annotation-site:c0913343ab666a5f",
+          "positive|ESM3:annotation-site:e8c88192a10fa74d",
+          "positive|ESM3:annotation-site:edefb8faa424fa0f"
+        ],
+        "status": "PASS",
+        "support_contract": "SOLUTAL_GEOMETRY_12PCT_15PCT_BORDER4_EROSION1_NO_CHROMA",
+        "support_xyxy": [
+          5,
+          124,
+          1273,
+          864
+        ]
+      },
+      "split": "TRAIN",
+      "structural_patch_sha256": "9133e8efd5083169a6b839cd8d131b6d08f4a77c4137801bc13538a2f373f47f",
+      "structural_source_id": "ESM1",
+      "structural_support": {
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM1|73|102|676",
+          "background|ESM1|73|167|286",
+          "positive|ESM3:annotation-site:4b88c441ae9c6696",
+          "positive|ESM3:annotation-site:4c41286cef74d212",
+          "positive|ESM3:annotation-site:4e3f86cfe00b170b",
+          "positive|ESM3:annotation-site:921edb3b46971a2c",
+          "positive|ESM3:annotation-site:95a85828fc0c1117",
+          "positive|ESM3:annotation-site:b6b216ac7f401b9a",
+          "positive|ESM3:annotation-site:c0913343ab666a5f",
+          "positive|ESM3:annotation-site:e8c88192a10fa74d",
+          "positive|ESM3:annotation-site:edefb8faa424fa0f"
+        ],
+        "status": "PASS"
+      },
+      "ti3b_both_patch_hashes_equal": true
+    },
+    {
+      "center_x": 59,
+      "center_y": 474,
+      "frame_index": 73,
+      "input_shape": [
+        2,
+        65,
+        65
+      ],
+      "input_uint8_sha256": "683958eb83bd5810e8d62224068b3ece2b71ad6bdeda6242733002d70b93303a",
+      "patch_side_px": 65,
+      "sample_id": "positive|ESM3:annotation-site:4e3f86cfe00b170b",
+      "solutal_patch_sha256": "5fb72f4b8de04eb3bba61ed26bb87a86d37cec5fd7c770b5193a4879e855d9e2",
+      "solutal_source_id": "ESM2",
+      "solutal_support": {
+        "representation": "NATIVE_Y_RELATIVE_SOLUTE_FIELD",
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM1|73|102|676",
+          "background|ESM1|73|167|286",
+          "positive|ESM3:annotation-site:4b88c441ae9c6696",
+          "positive|ESM3:annotation-site:4c41286cef74d212",
+          "positive|ESM3:annotation-site:4e3f86cfe00b170b",
+          "positive|ESM3:annotation-site:921edb3b46971a2c",
+          "positive|ESM3:annotation-site:95a85828fc0c1117",
+          "positive|ESM3:annotation-site:b6b216ac7f401b9a",
+          "positive|ESM3:annotation-site:c0913343ab666a5f",
+          "positive|ESM3:annotation-site:e8c88192a10fa74d",
+          "positive|ESM3:annotation-site:edefb8faa424fa0f"
+        ],
+        "status": "PASS",
+        "support_contract": "SOLUTAL_GEOMETRY_12PCT_15PCT_BORDER4_EROSION1_NO_CHROMA",
+        "support_xyxy": [
+          5,
+          124,
+          1273,
+          864
+        ]
+      },
+      "split": "TRAIN",
+      "structural_patch_sha256": "d60493a34751cd7d2e0355b1e0ea4c150511d37744781ab27f14d08a2624e399",
+      "structural_source_id": "ESM1",
+      "structural_support": {
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM1|73|102|676",
+          "background|ESM1|73|167|286",
+          "positive|ESM3:annotation-site:4b88c441ae9c6696",
+          "positive|ESM3:annotation-site:4c41286cef74d212",
+          "positive|ESM3:annotation-site:4e3f86cfe00b170b",
+          "positive|ESM3:annotation-site:921edb3b46971a2c",
+          "positive|ESM3:annotation-site:95a85828fc0c1117",
+          "positive|ESM3:annotation-site:b6b216ac7f401b9a",
+          "positive|ESM3:annotation-site:c0913343ab666a5f",
+          "positive|ESM3:annotation-site:e8c88192a10fa74d",
+          "positive|ESM3:annotation-site:edefb8faa424fa0f"
+        ],
+        "status": "PASS"
+      },
+      "ti3b_both_patch_hashes_equal": true
+    },
+    {
+      "center_x": 170,
+      "center_y": 200,
+      "frame_index": 73,
+      "input_shape": [
+        2,
+        65,
+        65
+      ],
+      "input_uint8_sha256": "b959d0984b5ee8b6716092cc056f93e248d34c94ade221d366a0b92a4dd4980c",
+      "patch_side_px": 65,
+      "sample_id": "positive|ESM3:annotation-site:921edb3b46971a2c",
+      "solutal_patch_sha256": "69a5407e045badd216870647f314f4a7a1d94358849b8ab0b19b24cb71bb060f",
+      "solutal_source_id": "ESM2",
+      "solutal_support": {
+        "representation": "NATIVE_Y_RELATIVE_SOLUTE_FIELD",
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM1|73|102|676",
+          "background|ESM1|73|167|286",
+          "positive|ESM3:annotation-site:4b88c441ae9c6696",
+          "positive|ESM3:annotation-site:4c41286cef74d212",
+          "positive|ESM3:annotation-site:4e3f86cfe00b170b",
+          "positive|ESM3:annotation-site:921edb3b46971a2c",
+          "positive|ESM3:annotation-site:95a85828fc0c1117",
+          "positive|ESM3:annotation-site:b6b216ac7f401b9a",
+          "positive|ESM3:annotation-site:c0913343ab666a5f",
+          "positive|ESM3:annotation-site:e8c88192a10fa74d",
+          "positive|ESM3:annotation-site:edefb8faa424fa0f"
+        ],
+        "status": "PASS",
+        "support_contract": "SOLUTAL_GEOMETRY_12PCT_15PCT_BORDER4_EROSION1_NO_CHROMA",
+        "support_xyxy": [
+          5,
+          124,
+          1273,
+          864
+        ]
+      },
+      "split": "TRAIN",
+      "structural_patch_sha256": "3d405cf403e8e35ca3d5ea1b5cd9ab921a63a8c470b7e49a300c7baccb565b6f",
+      "structural_source_id": "ESM1",
+      "structural_support": {
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM1|73|102|676",
+          "background|ESM1|73|167|286",
+          "positive|ESM3:annotation-site:4b88c441ae9c6696",
+          "positive|ESM3:annotation-site:4c41286cef74d212",
+          "positive|ESM3:annotation-site:4e3f86cfe00b170b",
+          "positive|ESM3:annotation-site:921edb3b46971a2c",
+          "positive|ESM3:annotation-site:95a85828fc0c1117",
+          "positive|ESM3:annotation-site:b6b216ac7f401b9a",
+          "positive|ESM3:annotation-site:c0913343ab666a5f",
+          "positive|ESM3:annotation-site:e8c88192a10fa74d",
+          "positive|ESM3:annotation-site:edefb8faa424fa0f"
+        ],
+        "status": "PASS"
+      },
+      "ti3b_both_patch_hashes_equal": true
+    },
+    {
+      "center_x": 419,
+      "center_y": 257,
+      "frame_index": 73,
+      "input_shape": [
+        2,
+        65,
+        65
+      ],
+      "input_uint8_sha256": "264adb6853ed3fe146312956aba0e405b191240ce7d489290b7b8be99a5c61b8",
+      "patch_side_px": 65,
+      "sample_id": "positive|ESM3:annotation-site:95a85828fc0c1117",
+      "solutal_patch_sha256": "e361940cbabb42b2ead17c267abb0930df429b7c768f6f6e159b137a66dc1d23",
+      "solutal_source_id": "ESM2",
+      "solutal_support": {
+        "representation": "NATIVE_Y_RELATIVE_SOLUTE_FIELD",
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM1|73|102|676",
+          "background|ESM1|73|167|286",
+          "positive|ESM3:annotation-site:4b88c441ae9c6696",
+          "positive|ESM3:annotation-site:4c41286cef74d212",
+          "positive|ESM3:annotation-site:4e3f86cfe00b170b",
+          "positive|ESM3:annotation-site:921edb3b46971a2c",
+          "positive|ESM3:annotation-site:95a85828fc0c1117",
+          "positive|ESM3:annotation-site:b6b216ac7f401b9a",
+          "positive|ESM3:annotation-site:c0913343ab666a5f",
+          "positive|ESM3:annotation-site:e8c88192a10fa74d",
+          "positive|ESM3:annotation-site:edefb8faa424fa0f"
+        ],
+        "status": "PASS",
+        "support_contract": "SOLUTAL_GEOMETRY_12PCT_15PCT_BORDER4_EROSION1_NO_CHROMA",
+        "support_xyxy": [
+          5,
+          124,
+          1273,
+          864
+        ]
+      },
+      "split": "TRAIN",
+      "structural_patch_sha256": "e34f53710a3f2d6f89bd4d52d483a70a84702ca8882a14eef546dde23dcf4695",
+      "structural_source_id": "ESM1",
+      "structural_support": {
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM1|73|102|676",
+          "background|ESM1|73|167|286",
+          "positive|ESM3:annotation-site:4b88c441ae9c6696",
+          "positive|ESM3:annotation-site:4c41286cef74d212",
+          "positive|ESM3:annotation-site:4e3f86cfe00b170b",
+          "positive|ESM3:annotation-site:921edb3b46971a2c",
+          "positive|ESM3:annotation-site:95a85828fc0c1117",
+          "positive|ESM3:annotation-site:b6b216ac7f401b9a",
+          "positive|ESM3:annotation-site:c0913343ab666a5f",
+          "positive|ESM3:annotation-site:e8c88192a10fa74d",
+          "positive|ESM3:annotation-site:edefb8faa424fa0f"
+        ],
+        "status": "PASS"
+      },
+      "ti3b_both_patch_hashes_equal": true
+    },
+    {
+      "center_x": 839,
+      "center_y": 585,
+      "frame_index": 73,
+      "input_shape": [
+        2,
+        65,
+        65
+      ],
+      "input_uint8_sha256": "8bc0d1d6a6f08f837c937493b36d9d7bbb6be9b57348b94ee2555a5d2033eb21",
+      "patch_side_px": 65,
+      "sample_id": "positive|ESM3:annotation-site:b6b216ac7f401b9a",
+      "solutal_patch_sha256": "bff2acdf62062c30667c008dcb0f25aba999790f7097584cfd6f797c34b28889",
+      "solutal_source_id": "ESM2",
+      "solutal_support": {
+        "representation": "NATIVE_Y_RELATIVE_SOLUTE_FIELD",
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM1|73|102|676",
+          "background|ESM1|73|167|286",
+          "positive|ESM3:annotation-site:4b88c441ae9c6696",
+          "positive|ESM3:annotation-site:4c41286cef74d212",
+          "positive|ESM3:annotation-site:4e3f86cfe00b170b",
+          "positive|ESM3:annotation-site:921edb3b46971a2c",
+          "positive|ESM3:annotation-site:95a85828fc0c1117",
+          "positive|ESM3:annotation-site:b6b216ac7f401b9a",
+          "positive|ESM3:annotation-site:c0913343ab666a5f",
+          "positive|ESM3:annotation-site:e8c88192a10fa74d",
+          "positive|ESM3:annotation-site:edefb8faa424fa0f"
+        ],
+        "status": "PASS",
+        "support_contract": "SOLUTAL_GEOMETRY_12PCT_15PCT_BORDER4_EROSION1_NO_CHROMA",
+        "support_xyxy": [
+          5,
+          124,
+          1273,
+          864
+        ]
+      },
+      "split": "TRAIN",
+      "structural_patch_sha256": "ab5fabbdbdc27c6ee4fb32b34ceadf93f6594e2dbb7bdf5e6fc788e71b7d2d1a",
+      "structural_source_id": "ESM1",
+      "structural_support": {
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM1|73|102|676",
+          "background|ESM1|73|167|286",
+          "positive|ESM3:annotation-site:4b88c441ae9c6696",
+          "positive|ESM3:annotation-site:4c41286cef74d212",
+          "positive|ESM3:annotation-site:4e3f86cfe00b170b",
+          "positive|ESM3:annotation-site:921edb3b46971a2c",
+          "positive|ESM3:annotation-site:95a85828fc0c1117",
+          "positive|ESM3:annotation-site:b6b216ac7f401b9a",
+          "positive|ESM3:annotation-site:c0913343ab666a5f",
+          "positive|ESM3:annotation-site:e8c88192a10fa74d",
+          "positive|ESM3:annotation-site:edefb8faa424fa0f"
+        ],
+        "status": "PASS"
+      },
+      "ti3b_both_patch_hashes_equal": true
+    },
+    {
+      "center_x": 440,
+      "center_y": 576,
+      "frame_index": 73,
+      "input_shape": [
+        2,
+        65,
+        65
+      ],
+      "input_uint8_sha256": "3080711886a948d30d858b0bf331b1e6c366d619e77424207338e8929afc5956",
+      "patch_side_px": 65,
+      "sample_id": "positive|ESM3:annotation-site:c0913343ab666a5f",
+      "solutal_patch_sha256": "39d133b00224563a33e3292863a05d45af8e1d2510b7c26a0b0b642cb0cf75d2",
+      "solutal_source_id": "ESM2",
+      "solutal_support": {
+        "representation": "NATIVE_Y_RELATIVE_SOLUTE_FIELD",
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM1|73|102|676",
+          "background|ESM1|73|167|286",
+          "positive|ESM3:annotation-site:4b88c441ae9c6696",
+          "positive|ESM3:annotation-site:4c41286cef74d212",
+          "positive|ESM3:annotation-site:4e3f86cfe00b170b",
+          "positive|ESM3:annotation-site:921edb3b46971a2c",
+          "positive|ESM3:annotation-site:95a85828fc0c1117",
+          "positive|ESM3:annotation-site:b6b216ac7f401b9a",
+          "positive|ESM3:annotation-site:c0913343ab666a5f",
+          "positive|ESM3:annotation-site:e8c88192a10fa74d",
+          "positive|ESM3:annotation-site:edefb8faa424fa0f"
+        ],
+        "status": "PASS",
+        "support_contract": "SOLUTAL_GEOMETRY_12PCT_15PCT_BORDER4_EROSION1_NO_CHROMA",
+        "support_xyxy": [
+          5,
+          124,
+          1273,
+          864
+        ]
+      },
+      "split": "TRAIN",
+      "structural_patch_sha256": "876afe8f366fa0c9626e963dc1c9bf0a269179b5084a56cff9aecea5ed1f4016",
+      "structural_source_id": "ESM1",
+      "structural_support": {
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM1|73|102|676",
+          "background|ESM1|73|167|286",
+          "positive|ESM3:annotation-site:4b88c441ae9c6696",
+          "positive|ESM3:annotation-site:4c41286cef74d212",
+          "positive|ESM3:annotation-site:4e3f86cfe00b170b",
+          "positive|ESM3:annotation-site:921edb3b46971a2c",
+          "positive|ESM3:annotation-site:95a85828fc0c1117",
+          "positive|ESM3:annotation-site:b6b216ac7f401b9a",
+          "positive|ESM3:annotation-site:c0913343ab666a5f",
+          "positive|ESM3:annotation-site:e8c88192a10fa74d",
+          "positive|ESM3:annotation-site:edefb8faa424fa0f"
+        ],
+        "status": "PASS"
+      },
+      "ti3b_both_patch_hashes_equal": true
+    },
+    {
+      "center_x": 629,
+      "center_y": 697,
+      "frame_index": 73,
+      "input_shape": [
+        2,
+        65,
+        65
+      ],
+      "input_uint8_sha256": "3153fc8493a6a334b6da669fe69daf34950e5b70f83f2a3bb78501e81eaa6182",
+      "patch_side_px": 65,
+      "sample_id": "positive|ESM3:annotation-site:e8c88192a10fa74d",
+      "solutal_patch_sha256": "554b458cbd6237571734958b1ee3949bf284f41ab9b79229db251bb2be1b2077",
+      "solutal_source_id": "ESM2",
+      "solutal_support": {
+        "representation": "NATIVE_Y_RELATIVE_SOLUTE_FIELD",
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM1|73|102|676",
+          "background|ESM1|73|167|286",
+          "positive|ESM3:annotation-site:4b88c441ae9c6696",
+          "positive|ESM3:annotation-site:4c41286cef74d212",
+          "positive|ESM3:annotation-site:4e3f86cfe00b170b",
+          "positive|ESM3:annotation-site:921edb3b46971a2c",
+          "positive|ESM3:annotation-site:95a85828fc0c1117",
+          "positive|ESM3:annotation-site:b6b216ac7f401b9a",
+          "positive|ESM3:annotation-site:c0913343ab666a5f",
+          "positive|ESM3:annotation-site:e8c88192a10fa74d",
+          "positive|ESM3:annotation-site:edefb8faa424fa0f"
+        ],
+        "status": "PASS",
+        "support_contract": "SOLUTAL_GEOMETRY_12PCT_15PCT_BORDER4_EROSION1_NO_CHROMA",
+        "support_xyxy": [
+          5,
+          124,
+          1273,
+          864
+        ]
+      },
+      "split": "TRAIN",
+      "structural_patch_sha256": "76544faa9068b1212e2224df2253b2824e2a3b9bec669b4e06fe73a2c53a4103",
+      "structural_source_id": "ESM1",
+      "structural_support": {
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM1|73|102|676",
+          "background|ESM1|73|167|286",
+          "positive|ESM3:annotation-site:4b88c441ae9c6696",
+          "positive|ESM3:annotation-site:4c41286cef74d212",
+          "positive|ESM3:annotation-site:4e3f86cfe00b170b",
+          "positive|ESM3:annotation-site:921edb3b46971a2c",
+          "positive|ESM3:annotation-site:95a85828fc0c1117",
+          "positive|ESM3:annotation-site:b6b216ac7f401b9a",
+          "positive|ESM3:annotation-site:c0913343ab666a5f",
+          "positive|ESM3:annotation-site:e8c88192a10fa74d",
+          "positive|ESM3:annotation-site:edefb8faa424fa0f"
+        ],
+        "status": "PASS"
+      },
+      "ti3b_both_patch_hashes_equal": true
+    },
+    {
+      "center_x": 999,
+      "center_y": 550,
+      "frame_index": 73,
+      "input_shape": [
+        2,
+        65,
+        65
+      ],
+      "input_uint8_sha256": "be1b401b6323a906da37bfaf52b32d394dd94cd0a8c2573c18a3e35eb6869ace",
+      "patch_side_px": 65,
+      "sample_id": "positive|ESM3:annotation-site:edefb8faa424fa0f",
+      "solutal_patch_sha256": "9fbf4306a0736eb8179327561102ce5a977289d356707d62b397625885ca4816",
+      "solutal_source_id": "ESM2",
+      "solutal_support": {
+        "representation": "NATIVE_Y_RELATIVE_SOLUTE_FIELD",
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM1|73|102|676",
+          "background|ESM1|73|167|286",
+          "positive|ESM3:annotation-site:4b88c441ae9c6696",
+          "positive|ESM3:annotation-site:4c41286cef74d212",
+          "positive|ESM3:annotation-site:4e3f86cfe00b170b",
+          "positive|ESM3:annotation-site:921edb3b46971a2c",
+          "positive|ESM3:annotation-site:95a85828fc0c1117",
+          "positive|ESM3:annotation-site:b6b216ac7f401b9a",
+          "positive|ESM3:annotation-site:c0913343ab666a5f",
+          "positive|ESM3:annotation-site:e8c88192a10fa74d",
+          "positive|ESM3:annotation-site:edefb8faa424fa0f"
+        ],
+        "status": "PASS",
+        "support_contract": "SOLUTAL_GEOMETRY_12PCT_15PCT_BORDER4_EROSION1_NO_CHROMA",
+        "support_xyxy": [
+          5,
+          124,
+          1273,
+          864
+        ]
+      },
+      "split": "TRAIN",
+      "structural_patch_sha256": "2bef2a1851ca35cd36766f2e3d1c942f1996beed30e0fb89e08d3e3ad51f3cec",
+      "structural_source_id": "ESM1",
+      "structural_support": {
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM1|73|102|676",
+          "background|ESM1|73|167|286",
+          "positive|ESM3:annotation-site:4b88c441ae9c6696",
+          "positive|ESM3:annotation-site:4c41286cef74d212",
+          "positive|ESM3:annotation-site:4e3f86cfe00b170b",
+          "positive|ESM3:annotation-site:921edb3b46971a2c",
+          "positive|ESM3:annotation-site:95a85828fc0c1117",
+          "positive|ESM3:annotation-site:b6b216ac7f401b9a",
+          "positive|ESM3:annotation-site:c0913343ab666a5f",
+          "positive|ESM3:annotation-site:e8c88192a10fa74d",
+          "positive|ESM3:annotation-site:edefb8faa424fa0f"
+        ],
+        "status": "PASS"
+      },
+      "ti3b_both_patch_hashes_equal": true
+    },
+    {
+      "center_x": 167,
+      "center_y": 611,
+      "frame_index": 146,
+      "input_shape": [
+        2,
+        65,
+        65
+      ],
+      "input_uint8_sha256": "bfadf1ad04e9438fac849fa54f664d9b72a6f22f908cd5a6497205cf87412197",
+      "patch_side_px": 65,
+      "sample_id": "background|ESM1|146|167|611",
+      "solutal_patch_sha256": "51034f90981c880d626027464e3af9bafd97d5023cd4fdecb8368082e4cda2cb",
+      "solutal_source_id": "ESM2",
+      "solutal_support": {
+        "representation": "NATIVE_Y_RELATIVE_SOLUTE_FIELD",
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM1|146|167|611",
+          "background|ESM1|146|37|546",
+          "background|ESM1|146|817|481",
+          "background|ESM1|146|947|676",
+          "positive|ESM3:annotation-site:5e9a4c2b4df0a4dd",
+          "positive|ESM3:annotation-site:73e02d077c181e27",
+          "positive|ESM3:annotation-site:7bb50a0b75f78145",
+          "positive|ESM3:annotation-site:ab91a579d35b7a8c",
+          "positive|ESM3:annotation-site:aea18fa3b37ada51",
+          "positive|ESM3:annotation-site:dc8e4cc74e0dc7a3",
+          "positive|ESM3:annotation-site:e83161571f674407"
+        ],
+        "status": "PASS",
+        "support_contract": "SOLUTAL_GEOMETRY_12PCT_15PCT_BORDER4_EROSION1_NO_CHROMA",
+        "support_xyxy": [
+          5,
+          124,
+          1273,
+          864
+        ]
+      },
+      "split": "TRAIN",
+      "structural_patch_sha256": "6a0ede69cf9883ad09cc9d358ce05294f80b11b68f80e65f7012189a8afc8cc1",
+      "structural_source_id": "ESM1",
+      "structural_support": {
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM1|146|167|611",
+          "background|ESM1|146|37|546",
+          "background|ESM1|146|817|481",
+          "background|ESM1|146|947|676",
+          "positive|ESM3:annotation-site:5e9a4c2b4df0a4dd",
+          "positive|ESM3:annotation-site:73e02d077c181e27",
+          "positive|ESM3:annotation-site:7bb50a0b75f78145",
+          "positive|ESM3:annotation-site:ab91a579d35b7a8c",
+          "positive|ESM3:annotation-site:aea18fa3b37ada51",
+          "positive|ESM3:annotation-site:dc8e4cc74e0dc7a3",
+          "positive|ESM3:annotation-site:e83161571f674407"
+        ],
+        "status": "PASS"
+      },
+      "ti3b_both_patch_hashes_equal": true
+    },
+    {
+      "center_x": 37,
+      "center_y": 546,
+      "frame_index": 146,
+      "input_shape": [
+        2,
+        65,
+        65
+      ],
+      "input_uint8_sha256": "1e4dee877cd4f6377bc3e9f1076d746565e3de84a837b13845785cee9c3b2272",
+      "patch_side_px": 65,
+      "sample_id": "background|ESM1|146|37|546",
+      "solutal_patch_sha256": "55e264af395adc34ab2591e1041141629b536ab9bbb331fcb9b539df0b849446",
+      "solutal_source_id": "ESM2",
+      "solutal_support": {
+        "representation": "NATIVE_Y_RELATIVE_SOLUTE_FIELD",
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM1|146|167|611",
+          "background|ESM1|146|37|546",
+          "background|ESM1|146|817|481",
+          "background|ESM1|146|947|676",
+          "positive|ESM3:annotation-site:5e9a4c2b4df0a4dd",
+          "positive|ESM3:annotation-site:73e02d077c181e27",
+          "positive|ESM3:annotation-site:7bb50a0b75f78145",
+          "positive|ESM3:annotation-site:ab91a579d35b7a8c",
+          "positive|ESM3:annotation-site:aea18fa3b37ada51",
+          "positive|ESM3:annotation-site:dc8e4cc74e0dc7a3",
+          "positive|ESM3:annotation-site:e83161571f674407"
+        ],
+        "status": "PASS",
+        "support_contract": "SOLUTAL_GEOMETRY_12PCT_15PCT_BORDER4_EROSION1_NO_CHROMA",
+        "support_xyxy": [
+          5,
+          124,
+          1273,
+          864
+        ]
+      },
+      "split": "TRAIN",
+      "structural_patch_sha256": "e54188eae09e21562e93b0db7895716203f5b7994d1c7808f9f80da4d342b46b",
+      "structural_source_id": "ESM1",
+      "structural_support": {
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM1|146|167|611",
+          "background|ESM1|146|37|546",
+          "background|ESM1|146|817|481",
+          "background|ESM1|146|947|676",
+          "positive|ESM3:annotation-site:5e9a4c2b4df0a4dd",
+          "positive|ESM3:annotation-site:73e02d077c181e27",
+          "positive|ESM3:annotation-site:7bb50a0b75f78145",
+          "positive|ESM3:annotation-site:ab91a579d35b7a8c",
+          "positive|ESM3:annotation-site:aea18fa3b37ada51",
+          "positive|ESM3:annotation-site:dc8e4cc74e0dc7a3",
+          "positive|ESM3:annotation-site:e83161571f674407"
+        ],
+        "status": "PASS"
+      },
+      "ti3b_both_patch_hashes_equal": true
+    },
+    {
+      "center_x": 817,
+      "center_y": 481,
+      "frame_index": 146,
+      "input_shape": [
+        2,
+        65,
+        65
+      ],
+      "input_uint8_sha256": "a67a18e6df55a055684fe1b07f566f5f49012dc4570202af412689b3746c7369",
+      "patch_side_px": 65,
+      "sample_id": "background|ESM1|146|817|481",
+      "solutal_patch_sha256": "fb050fea68db267c768ea7ec8b83a55a501421ab5c492cc0e591fc55024493e9",
+      "solutal_source_id": "ESM2",
+      "solutal_support": {
+        "representation": "NATIVE_Y_RELATIVE_SOLUTE_FIELD",
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM1|146|167|611",
+          "background|ESM1|146|37|546",
+          "background|ESM1|146|817|481",
+          "background|ESM1|146|947|676",
+          "positive|ESM3:annotation-site:5e9a4c2b4df0a4dd",
+          "positive|ESM3:annotation-site:73e02d077c181e27",
+          "positive|ESM3:annotation-site:7bb50a0b75f78145",
+          "positive|ESM3:annotation-site:ab91a579d35b7a8c",
+          "positive|ESM3:annotation-site:aea18fa3b37ada51",
+          "positive|ESM3:annotation-site:dc8e4cc74e0dc7a3",
+          "positive|ESM3:annotation-site:e83161571f674407"
+        ],
+        "status": "PASS",
+        "support_contract": "SOLUTAL_GEOMETRY_12PCT_15PCT_BORDER4_EROSION1_NO_CHROMA",
+        "support_xyxy": [
+          5,
+          124,
+          1273,
+          864
+        ]
+      },
+      "split": "TRAIN",
+      "structural_patch_sha256": "1b233662cd82470e78aa9f2db8ee1f6f7e27869bc080bc81661cc5bd0a40995a",
+      "structural_source_id": "ESM1",
+      "structural_support": {
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM1|146|167|611",
+          "background|ESM1|146|37|546",
+          "background|ESM1|146|817|481",
+          "background|ESM1|146|947|676",
+          "positive|ESM3:annotation-site:5e9a4c2b4df0a4dd",
+          "positive|ESM3:annotation-site:73e02d077c181e27",
+          "positive|ESM3:annotation-site:7bb50a0b75f78145",
+          "positive|ESM3:annotation-site:ab91a579d35b7a8c",
+          "positive|ESM3:annotation-site:aea18fa3b37ada51",
+          "positive|ESM3:annotation-site:dc8e4cc74e0dc7a3",
+          "positive|ESM3:annotation-site:e83161571f674407"
+        ],
+        "status": "PASS"
+      },
+      "ti3b_both_patch_hashes_equal": true
+    },
+    {
+      "center_x": 947,
+      "center_y": 676,
+      "frame_index": 146,
+      "input_shape": [
+        2,
+        65,
+        65
+      ],
+      "input_uint8_sha256": "03881ccfed37c8f38ead829284f7a53fad1387179bd23fee6e0e8e0d5a227555",
+      "patch_side_px": 65,
+      "sample_id": "background|ESM1|146|947|676",
+      "solutal_patch_sha256": "355163b15f5b7ab8c4cfed20ecdef7ecc304cd3d1ec1c63e92bd0a1de7d5ac5a",
+      "solutal_source_id": "ESM2",
+      "solutal_support": {
+        "representation": "NATIVE_Y_RELATIVE_SOLUTE_FIELD",
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM1|146|167|611",
+          "background|ESM1|146|37|546",
+          "background|ESM1|146|817|481",
+          "background|ESM1|146|947|676",
+          "positive|ESM3:annotation-site:5e9a4c2b4df0a4dd",
+          "positive|ESM3:annotation-site:73e02d077c181e27",
+          "positive|ESM3:annotation-site:7bb50a0b75f78145",
+          "positive|ESM3:annotation-site:ab91a579d35b7a8c",
+          "positive|ESM3:annotation-site:aea18fa3b37ada51",
+          "positive|ESM3:annotation-site:dc8e4cc74e0dc7a3",
+          "positive|ESM3:annotation-site:e83161571f674407"
+        ],
+        "status": "PASS",
+        "support_contract": "SOLUTAL_GEOMETRY_12PCT_15PCT_BORDER4_EROSION1_NO_CHROMA",
+        "support_xyxy": [
+          5,
+          124,
+          1273,
+          864
+        ]
+      },
+      "split": "TRAIN",
+      "structural_patch_sha256": "8d3a4a03b724d00f3b189668dbfd009043bbe9aa0203ed0c07297f17477a6338",
+      "structural_source_id": "ESM1",
+      "structural_support": {
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM1|146|167|611",
+          "background|ESM1|146|37|546",
+          "background|ESM1|146|817|481",
+          "background|ESM1|146|947|676",
+          "positive|ESM3:annotation-site:5e9a4c2b4df0a4dd",
+          "positive|ESM3:annotation-site:73e02d077c181e27",
+          "positive|ESM3:annotation-site:7bb50a0b75f78145",
+          "positive|ESM3:annotation-site:ab91a579d35b7a8c",
+          "positive|ESM3:annotation-site:aea18fa3b37ada51",
+          "positive|ESM3:annotation-site:dc8e4cc74e0dc7a3",
+          "positive|ESM3:annotation-site:e83161571f674407"
+        ],
+        "status": "PASS"
+      },
+      "ti3b_both_patch_hashes_equal": true
+    },
+    {
+      "center_x": 1142,
+      "center_y": 400,
+      "frame_index": 146,
+      "input_shape": [
+        2,
+        65,
+        65
+      ],
+      "input_uint8_sha256": "cf57d8d5ad7c07a708379fad77ce8851f59eb476dd4a5c23a0e1c3c1d38549d1",
+      "patch_side_px": 65,
+      "sample_id": "positive|ESM3:annotation-site:5e9a4c2b4df0a4dd",
+      "solutal_patch_sha256": "79fe830a06fb789d1bea6477fafb5330d4e9c39b80aa37d3f9810ea13db55e8d",
+      "solutal_source_id": "ESM2",
+      "solutal_support": {
+        "representation": "NATIVE_Y_RELATIVE_SOLUTE_FIELD",
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM1|146|167|611",
+          "background|ESM1|146|37|546",
+          "background|ESM1|146|817|481",
+          "background|ESM1|146|947|676",
+          "positive|ESM3:annotation-site:5e9a4c2b4df0a4dd",
+          "positive|ESM3:annotation-site:73e02d077c181e27",
+          "positive|ESM3:annotation-site:7bb50a0b75f78145",
+          "positive|ESM3:annotation-site:ab91a579d35b7a8c",
+          "positive|ESM3:annotation-site:aea18fa3b37ada51",
+          "positive|ESM3:annotation-site:dc8e4cc74e0dc7a3",
+          "positive|ESM3:annotation-site:e83161571f674407"
+        ],
+        "status": "PASS",
+        "support_contract": "SOLUTAL_GEOMETRY_12PCT_15PCT_BORDER4_EROSION1_NO_CHROMA",
+        "support_xyxy": [
+          5,
+          124,
+          1273,
+          864
+        ]
+      },
+      "split": "TRAIN",
+      "structural_patch_sha256": "5af4462ab2abb61a6ea87ab5835180a4f2e92d5ec79b9c73d042dace5dfb74ae",
+      "structural_source_id": "ESM1",
+      "structural_support": {
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM1|146|167|611",
+          "background|ESM1|146|37|546",
+          "background|ESM1|146|817|481",
+          "background|ESM1|146|947|676",
+          "positive|ESM3:annotation-site:5e9a4c2b4df0a4dd",
+          "positive|ESM3:annotation-site:73e02d077c181e27",
+          "positive|ESM3:annotation-site:7bb50a0b75f78145",
+          "positive|ESM3:annotation-site:ab91a579d35b7a8c",
+          "positive|ESM3:annotation-site:aea18fa3b37ada51",
+          "positive|ESM3:annotation-site:dc8e4cc74e0dc7a3",
+          "positive|ESM3:annotation-site:e83161571f674407"
+        ],
+        "status": "PASS"
+      },
+      "ti3b_both_patch_hashes_equal": true
+    },
+    {
+      "center_x": 1100,
+      "center_y": 228,
+      "frame_index": 146,
+      "input_shape": [
+        2,
+        65,
+        65
+      ],
+      "input_uint8_sha256": "5500565837c6f7e569f6fd22469bfd748056fff7b6143e97f19c4c8ca6b11ad5",
+      "patch_side_px": 65,
+      "sample_id": "positive|ESM3:annotation-site:73e02d077c181e27",
+      "solutal_patch_sha256": "870d35d3dc7a8ef854b6878b436d61eeebaee9a97c66a1b7eba232e5fe96c9e9",
+      "solutal_source_id": "ESM2",
+      "solutal_support": {
+        "representation": "NATIVE_Y_RELATIVE_SOLUTE_FIELD",
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM1|146|167|611",
+          "background|ESM1|146|37|546",
+          "background|ESM1|146|817|481",
+          "background|ESM1|146|947|676",
+          "positive|ESM3:annotation-site:5e9a4c2b4df0a4dd",
+          "positive|ESM3:annotation-site:73e02d077c181e27",
+          "positive|ESM3:annotation-site:7bb50a0b75f78145",
+          "positive|ESM3:annotation-site:ab91a579d35b7a8c",
+          "positive|ESM3:annotation-site:aea18fa3b37ada51",
+          "positive|ESM3:annotation-site:dc8e4cc74e0dc7a3",
+          "positive|ESM3:annotation-site:e83161571f674407"
+        ],
+        "status": "PASS",
+        "support_contract": "SOLUTAL_GEOMETRY_12PCT_15PCT_BORDER4_EROSION1_NO_CHROMA",
+        "support_xyxy": [
+          5,
+          124,
+          1273,
+          864
+        ]
+      },
+      "split": "TRAIN",
+      "structural_patch_sha256": "a94237ffe9cb8b9f035244e75e2756bf10c47c3ad21a0add084dd3517589bdf6",
+      "structural_source_id": "ESM1",
+      "structural_support": {
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM1|146|167|611",
+          "background|ESM1|146|37|546",
+          "background|ESM1|146|817|481",
+          "background|ESM1|146|947|676",
+          "positive|ESM3:annotation-site:5e9a4c2b4df0a4dd",
+          "positive|ESM3:annotation-site:73e02d077c181e27",
+          "positive|ESM3:annotation-site:7bb50a0b75f78145",
+          "positive|ESM3:annotation-site:ab91a579d35b7a8c",
+          "positive|ESM3:annotation-site:aea18fa3b37ada51",
+          "positive|ESM3:annotation-site:dc8e4cc74e0dc7a3",
+          "positive|ESM3:annotation-site:e83161571f674407"
+        ],
+        "status": "PASS"
+      },
+      "ti3b_both_patch_hashes_equal": true
+    },
+    {
+      "center_x": 1110,
+      "center_y": 789,
+      "frame_index": 146,
+      "input_shape": [
+        2,
+        65,
+        65
+      ],
+      "input_uint8_sha256": "8ede0f0628ee3e0ae2aec600fde13a84443255f7e439e852cc42a4222e3bd21d",
+      "patch_side_px": 65,
+      "sample_id": "positive|ESM3:annotation-site:7bb50a0b75f78145",
+      "solutal_patch_sha256": "51d145ed7002903d92aac5becc8e162276097ac55164599d53bcf51d0bee5268",
+      "solutal_source_id": "ESM2",
+      "solutal_support": {
+        "representation": "NATIVE_Y_RELATIVE_SOLUTE_FIELD",
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM1|146|167|611",
+          "background|ESM1|146|37|546",
+          "background|ESM1|146|817|481",
+          "background|ESM1|146|947|676",
+          "positive|ESM3:annotation-site:5e9a4c2b4df0a4dd",
+          "positive|ESM3:annotation-site:73e02d077c181e27",
+          "positive|ESM3:annotation-site:7bb50a0b75f78145",
+          "positive|ESM3:annotation-site:ab91a579d35b7a8c",
+          "positive|ESM3:annotation-site:aea18fa3b37ada51",
+          "positive|ESM3:annotation-site:dc8e4cc74e0dc7a3",
+          "positive|ESM3:annotation-site:e83161571f674407"
+        ],
+        "status": "PASS",
+        "support_contract": "SOLUTAL_GEOMETRY_12PCT_15PCT_BORDER4_EROSION1_NO_CHROMA",
+        "support_xyxy": [
+          5,
+          124,
+          1273,
+          864
+        ]
+      },
+      "split": "TRAIN",
+      "structural_patch_sha256": "8409f10f4ab31cbc5722481d846f053c4a615e931f7160711b6ec9a42b931e3b",
+      "structural_source_id": "ESM1",
+      "structural_support": {
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM1|146|167|611",
+          "background|ESM1|146|37|546",
+          "background|ESM1|146|817|481",
+          "background|ESM1|146|947|676",
+          "positive|ESM3:annotation-site:5e9a4c2b4df0a4dd",
+          "positive|ESM3:annotation-site:73e02d077c181e27",
+          "positive|ESM3:annotation-site:7bb50a0b75f78145",
+          "positive|ESM3:annotation-site:ab91a579d35b7a8c",
+          "positive|ESM3:annotation-site:aea18fa3b37ada51",
+          "positive|ESM3:annotation-site:dc8e4cc74e0dc7a3",
+          "positive|ESM3:annotation-site:e83161571f674407"
+        ],
+        "status": "PASS"
+      },
+      "ti3b_both_patch_hashes_equal": true
+    },
+    {
+      "center_x": 1169,
+      "center_y": 387,
+      "frame_index": 146,
+      "input_shape": [
+        2,
+        65,
+        65
+      ],
+      "input_uint8_sha256": "9bc2ce190157f5af44b51bbfaa34bc5293ea3de1df95c49b54b11f7779b2cfb2",
+      "patch_side_px": 65,
+      "sample_id": "positive|ESM3:annotation-site:ab91a579d35b7a8c",
+      "solutal_patch_sha256": "64511ee6358b398efc376de66f8c1e3ac60b0d5ebb9c2e7d4f0b33553b448c58",
+      "solutal_source_id": "ESM2",
+      "solutal_support": {
+        "representation": "NATIVE_Y_RELATIVE_SOLUTE_FIELD",
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM1|146|167|611",
+          "background|ESM1|146|37|546",
+          "background|ESM1|146|817|481",
+          "background|ESM1|146|947|676",
+          "positive|ESM3:annotation-site:5e9a4c2b4df0a4dd",
+          "positive|ESM3:annotation-site:73e02d077c181e27",
+          "positive|ESM3:annotation-site:7bb50a0b75f78145",
+          "positive|ESM3:annotation-site:ab91a579d35b7a8c",
+          "positive|ESM3:annotation-site:aea18fa3b37ada51",
+          "positive|ESM3:annotation-site:dc8e4cc74e0dc7a3",
+          "positive|ESM3:annotation-site:e83161571f674407"
+        ],
+        "status": "PASS",
+        "support_contract": "SOLUTAL_GEOMETRY_12PCT_15PCT_BORDER4_EROSION1_NO_CHROMA",
+        "support_xyxy": [
+          5,
+          124,
+          1273,
+          864
+        ]
+      },
+      "split": "TRAIN",
+      "structural_patch_sha256": "bf6330e123b26d97ad9947849e42c210873a62cf055caeede3135102b9621e3e",
+      "structural_source_id": "ESM1",
+      "structural_support": {
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM1|146|167|611",
+          "background|ESM1|146|37|546",
+          "background|ESM1|146|817|481",
+          "background|ESM1|146|947|676",
+          "positive|ESM3:annotation-site:5e9a4c2b4df0a4dd",
+          "positive|ESM3:annotation-site:73e02d077c181e27",
+          "positive|ESM3:annotation-site:7bb50a0b75f78145",
+          "positive|ESM3:annotation-site:ab91a579d35b7a8c",
+          "positive|ESM3:annotation-site:aea18fa3b37ada51",
+          "positive|ESM3:annotation-site:dc8e4cc74e0dc7a3",
+          "positive|ESM3:annotation-site:e83161571f674407"
+        ],
+        "status": "PASS"
+      },
+      "ti3b_both_patch_hashes_equal": true
+    },
+    {
+      "center_x": 1238,
+      "center_y": 655,
+      "frame_index": 146,
+      "input_shape": [
+        2,
+        65,
+        65
+      ],
+      "input_uint8_sha256": "065c5123fe86cb845e0dccf0949eebecc1a8a2a175253d0e841055e1bfd15b06",
+      "patch_side_px": 65,
+      "sample_id": "positive|ESM3:annotation-site:aea18fa3b37ada51",
+      "solutal_patch_sha256": "b069a6233e9cfc183200ee803290a58c3b822e68f81887ae97568f98920889c2",
+      "solutal_source_id": "ESM2",
+      "solutal_support": {
+        "representation": "NATIVE_Y_RELATIVE_SOLUTE_FIELD",
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM1|146|167|611",
+          "background|ESM1|146|37|546",
+          "background|ESM1|146|817|481",
+          "background|ESM1|146|947|676",
+          "positive|ESM3:annotation-site:5e9a4c2b4df0a4dd",
+          "positive|ESM3:annotation-site:73e02d077c181e27",
+          "positive|ESM3:annotation-site:7bb50a0b75f78145",
+          "positive|ESM3:annotation-site:ab91a579d35b7a8c",
+          "positive|ESM3:annotation-site:aea18fa3b37ada51",
+          "positive|ESM3:annotation-site:dc8e4cc74e0dc7a3",
+          "positive|ESM3:annotation-site:e83161571f674407"
+        ],
+        "status": "PASS",
+        "support_contract": "SOLUTAL_GEOMETRY_12PCT_15PCT_BORDER4_EROSION1_NO_CHROMA",
+        "support_xyxy": [
+          5,
+          124,
+          1273,
+          864
+        ]
+      },
+      "split": "TRAIN",
+      "structural_patch_sha256": "dd110f72e67e69f98d9647ba3349a165903f8731c684d2e8f1afaf65342610d7",
+      "structural_source_id": "ESM1",
+      "structural_support": {
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM1|146|167|611",
+          "background|ESM1|146|37|546",
+          "background|ESM1|146|817|481",
+          "background|ESM1|146|947|676",
+          "positive|ESM3:annotation-site:5e9a4c2b4df0a4dd",
+          "positive|ESM3:annotation-site:73e02d077c181e27",
+          "positive|ESM3:annotation-site:7bb50a0b75f78145",
+          "positive|ESM3:annotation-site:ab91a579d35b7a8c",
+          "positive|ESM3:annotation-site:aea18fa3b37ada51",
+          "positive|ESM3:annotation-site:dc8e4cc74e0dc7a3",
+          "positive|ESM3:annotation-site:e83161571f674407"
+        ],
+        "status": "PASS"
+      },
+      "ti3b_both_patch_hashes_equal": true
+    },
+    {
+      "center_x": 354,
+      "center_y": 809,
+      "frame_index": 146,
+      "input_shape": [
+        2,
+        65,
+        65
+      ],
+      "input_uint8_sha256": "b89aebbd64df01da9dc7e10c1087203b5b95b0d52a2f9d752a99573ffbb91217",
+      "patch_side_px": 65,
+      "sample_id": "positive|ESM3:annotation-site:dc8e4cc74e0dc7a3",
+      "solutal_patch_sha256": "ad2e30fb22e66eabf4070d0a38f6839fd148cfe582bfc78f57eea22f5fbde507",
+      "solutal_source_id": "ESM2",
+      "solutal_support": {
+        "representation": "NATIVE_Y_RELATIVE_SOLUTE_FIELD",
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM1|146|167|611",
+          "background|ESM1|146|37|546",
+          "background|ESM1|146|817|481",
+          "background|ESM1|146|947|676",
+          "positive|ESM3:annotation-site:5e9a4c2b4df0a4dd",
+          "positive|ESM3:annotation-site:73e02d077c181e27",
+          "positive|ESM3:annotation-site:7bb50a0b75f78145",
+          "positive|ESM3:annotation-site:ab91a579d35b7a8c",
+          "positive|ESM3:annotation-site:aea18fa3b37ada51",
+          "positive|ESM3:annotation-site:dc8e4cc74e0dc7a3",
+          "positive|ESM3:annotation-site:e83161571f674407"
+        ],
+        "status": "PASS",
+        "support_contract": "SOLUTAL_GEOMETRY_12PCT_15PCT_BORDER4_EROSION1_NO_CHROMA",
+        "support_xyxy": [
+          5,
+          124,
+          1273,
+          864
+        ]
+      },
+      "split": "TRAIN",
+      "structural_patch_sha256": "600b5d901d78c7ec931587d4b49e5ccf182da0c4206d629d7a8c586db74a9fd9",
+      "structural_source_id": "ESM1",
+      "structural_support": {
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM1|146|167|611",
+          "background|ESM1|146|37|546",
+          "background|ESM1|146|817|481",
+          "background|ESM1|146|947|676",
+          "positive|ESM3:annotation-site:5e9a4c2b4df0a4dd",
+          "positive|ESM3:annotation-site:73e02d077c181e27",
+          "positive|ESM3:annotation-site:7bb50a0b75f78145",
+          "positive|ESM3:annotation-site:ab91a579d35b7a8c",
+          "positive|ESM3:annotation-site:aea18fa3b37ada51",
+          "positive|ESM3:annotation-site:dc8e4cc74e0dc7a3",
+          "positive|ESM3:annotation-site:e83161571f674407"
+        ],
+        "status": "PASS"
+      },
+      "ti3b_both_patch_hashes_equal": true
+    },
+    {
+      "center_x": 1077,
+      "center_y": 340,
+      "frame_index": 146,
+      "input_shape": [
+        2,
+        65,
+        65
+      ],
+      "input_uint8_sha256": "74fcc1b61b11aa2ffe389f1c530be60b26cfc774aa53bcab1e80fb888b7d9660",
+      "patch_side_px": 65,
+      "sample_id": "positive|ESM3:annotation-site:e83161571f674407",
+      "solutal_patch_sha256": "7dc7de33c3dbedae5822cb96e9e6a5d5dc9c6ff57d83844038c47abee104dc05",
+      "solutal_source_id": "ESM2",
+      "solutal_support": {
+        "representation": "NATIVE_Y_RELATIVE_SOLUTE_FIELD",
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM1|146|167|611",
+          "background|ESM1|146|37|546",
+          "background|ESM1|146|817|481",
+          "background|ESM1|146|947|676",
+          "positive|ESM3:annotation-site:5e9a4c2b4df0a4dd",
+          "positive|ESM3:annotation-site:73e02d077c181e27",
+          "positive|ESM3:annotation-site:7bb50a0b75f78145",
+          "positive|ESM3:annotation-site:ab91a579d35b7a8c",
+          "positive|ESM3:annotation-site:aea18fa3b37ada51",
+          "positive|ESM3:annotation-site:dc8e4cc74e0dc7a3",
+          "positive|ESM3:annotation-site:e83161571f674407"
+        ],
+        "status": "PASS",
+        "support_contract": "SOLUTAL_GEOMETRY_12PCT_15PCT_BORDER4_EROSION1_NO_CHROMA",
+        "support_xyxy": [
+          5,
+          124,
+          1273,
+          864
+        ]
+      },
+      "split": "TRAIN",
+      "structural_patch_sha256": "9ef6732ebed6e6786ed6dea7656e790f4ec10a05def419371fa66af5636a6644",
+      "structural_source_id": "ESM1",
+      "structural_support": {
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM1|146|167|611",
+          "background|ESM1|146|37|546",
+          "background|ESM1|146|817|481",
+          "background|ESM1|146|947|676",
+          "positive|ESM3:annotation-site:5e9a4c2b4df0a4dd",
+          "positive|ESM3:annotation-site:73e02d077c181e27",
+          "positive|ESM3:annotation-site:7bb50a0b75f78145",
+          "positive|ESM3:annotation-site:ab91a579d35b7a8c",
+          "positive|ESM3:annotation-site:aea18fa3b37ada51",
+          "positive|ESM3:annotation-site:dc8e4cc74e0dc7a3",
+          "positive|ESM3:annotation-site:e83161571f674407"
+        ],
+        "status": "PASS"
+      },
+      "ti3b_both_patch_hashes_equal": true
+    },
+    {
+      "center_x": 1012,
+      "center_y": 675,
+      "frame_index": 98,
+      "input_shape": [
+        2,
+        65,
+        65
+      ],
+      "input_uint8_sha256": "f03089e48b6e0c6daf060cbbf78eaf5416e87aa915ef6f564a069c479abe6178",
+      "patch_side_px": 65,
+      "sample_id": "background|ESM4|98|1012|675",
+      "solutal_patch_sha256": "6d5229f7fe10c1681f0dde1722dc014d49a12bf0480dc19ead8ae721b39e5778",
+      "solutal_source_id": "ESM5",
+      "solutal_support": {
+        "representation": "NATIVE_Y_RELATIVE_SOLUTE_FIELD",
+        "sample_count": 12,
+        "samples_checked": [
+          "background|ESM4|98|1012|675",
+          "background|ESM4|98|1142|610",
+          "background|ESM4|98|297|610",
+          "background|ESM4|98|37|285",
+          "background|ESM4|98|492|480",
+          "background|ESM4|98|622|610",
+          "background|ESM4|98|687|155",
+          "background|ESM4|98|752|675",
+          "background|ESM4|98|882|415",
+          "background|ESM4|98|882|610",
+          "background|ESM4|98|882|805",
+          "positive|ESM6:annotation-site:63498902ef491c68"
+        ],
+        "status": "PASS",
+        "support_contract": "SOLUTAL_GEOMETRY_12PCT_15PCT_BORDER4_EROSION1_NO_CHROMA",
+        "support_xyxy": [
+          5,
+          123,
+          1273,
+          859
+        ]
+      },
+      "split": "TRAIN",
+      "structural_patch_sha256": "04692e7c2ab36385c635c05ad38f388ce7ba5d6ba6d24d56d0a117ed5b337da7",
+      "structural_source_id": "ESM4",
+      "structural_support": {
+        "sample_count": 12,
+        "samples_checked": [
+          "background|ESM4|98|1012|675",
+          "background|ESM4|98|1142|610",
+          "background|ESM4|98|297|610",
+          "background|ESM4|98|37|285",
+          "background|ESM4|98|492|480",
+          "background|ESM4|98|622|610",
+          "background|ESM4|98|687|155",
+          "background|ESM4|98|752|675",
+          "background|ESM4|98|882|415",
+          "background|ESM4|98|882|610",
+          "background|ESM4|98|882|805",
+          "positive|ESM6:annotation-site:63498902ef491c68"
+        ],
+        "status": "PASS"
+      },
+      "ti3b_both_patch_hashes_equal": true
+    },
+    {
+      "center_x": 1142,
+      "center_y": 610,
+      "frame_index": 98,
+      "input_shape": [
+        2,
+        65,
+        65
+      ],
+      "input_uint8_sha256": "8c1ad3eb8a8ac84d852bb0a9543a12e1d86a6f619c3880194831c3915a1254c6",
+      "patch_side_px": 65,
+      "sample_id": "background|ESM4|98|1142|610",
+      "solutal_patch_sha256": "7890ff87f536f8b34179cf8cb37dd27128292034cd184a6b33e315f5ea681544",
+      "solutal_source_id": "ESM5",
+      "solutal_support": {
+        "representation": "NATIVE_Y_RELATIVE_SOLUTE_FIELD",
+        "sample_count": 12,
+        "samples_checked": [
+          "background|ESM4|98|1012|675",
+          "background|ESM4|98|1142|610",
+          "background|ESM4|98|297|610",
+          "background|ESM4|98|37|285",
+          "background|ESM4|98|492|480",
+          "background|ESM4|98|622|610",
+          "background|ESM4|98|687|155",
+          "background|ESM4|98|752|675",
+          "background|ESM4|98|882|415",
+          "background|ESM4|98|882|610",
+          "background|ESM4|98|882|805",
+          "positive|ESM6:annotation-site:63498902ef491c68"
+        ],
+        "status": "PASS",
+        "support_contract": "SOLUTAL_GEOMETRY_12PCT_15PCT_BORDER4_EROSION1_NO_CHROMA",
+        "support_xyxy": [
+          5,
+          123,
+          1273,
+          859
+        ]
+      },
+      "split": "TRAIN",
+      "structural_patch_sha256": "856002ac46efc2f97bd89c896b5b22aae6251088bd29db20eaedf31ee2eeaca1",
+      "structural_source_id": "ESM4",
+      "structural_support": {
+        "sample_count": 12,
+        "samples_checked": [
+          "background|ESM4|98|1012|675",
+          "background|ESM4|98|1142|610",
+          "background|ESM4|98|297|610",
+          "background|ESM4|98|37|285",
+          "background|ESM4|98|492|480",
+          "background|ESM4|98|622|610",
+          "background|ESM4|98|687|155",
+          "background|ESM4|98|752|675",
+          "background|ESM4|98|882|415",
+          "background|ESM4|98|882|610",
+          "background|ESM4|98|882|805",
+          "positive|ESM6:annotation-site:63498902ef491c68"
+        ],
+        "status": "PASS"
+      },
+      "ti3b_both_patch_hashes_equal": true
+    },
+    {
+      "center_x": 297,
+      "center_y": 610,
+      "frame_index": 98,
+      "input_shape": [
+        2,
+        65,
+        65
+      ],
+      "input_uint8_sha256": "29bd14b9a7a8eb0a7fee7eff9b9a8dcd5a8a153cce81a90c9598690ff32661eb",
+      "patch_side_px": 65,
+      "sample_id": "background|ESM4|98|297|610",
+      "solutal_patch_sha256": "1133e4f49fa36f4a84cbd320dd06eb6c02fe88f45fca4b63414091fa069a8735",
+      "solutal_source_id": "ESM5",
+      "solutal_support": {
+        "representation": "NATIVE_Y_RELATIVE_SOLUTE_FIELD",
+        "sample_count": 12,
+        "samples_checked": [
+          "background|ESM4|98|1012|675",
+          "background|ESM4|98|1142|610",
+          "background|ESM4|98|297|610",
+          "background|ESM4|98|37|285",
+          "background|ESM4|98|492|480",
+          "background|ESM4|98|622|610",
+          "background|ESM4|98|687|155",
+          "background|ESM4|98|752|675",
+          "background|ESM4|98|882|415",
+          "background|ESM4|98|882|610",
+          "background|ESM4|98|882|805",
+          "positive|ESM6:annotation-site:63498902ef491c68"
+        ],
+        "status": "PASS",
+        "support_contract": "SOLUTAL_GEOMETRY_12PCT_15PCT_BORDER4_EROSION1_NO_CHROMA",
+        "support_xyxy": [
+          5,
+          123,
+          1273,
+          859
+        ]
+      },
+      "split": "TRAIN",
+      "structural_patch_sha256": "d4e76c0ac2414b7b512988d087456adae6a3dfe62e738dc6cecdc39fde6756d5",
+      "structural_source_id": "ESM4",
+      "structural_support": {
+        "sample_count": 12,
+        "samples_checked": [
+          "background|ESM4|98|1012|675",
+          "background|ESM4|98|1142|610",
+          "background|ESM4|98|297|610",
+          "background|ESM4|98|37|285",
+          "background|ESM4|98|492|480",
+          "background|ESM4|98|622|610",
+          "background|ESM4|98|687|155",
+          "background|ESM4|98|752|675",
+          "background|ESM4|98|882|415",
+          "background|ESM4|98|882|610",
+          "background|ESM4|98|882|805",
+          "positive|ESM6:annotation-site:63498902ef491c68"
+        ],
+        "status": "PASS"
+      },
+      "ti3b_both_patch_hashes_equal": true
+    },
+    {
+      "center_x": 37,
+      "center_y": 285,
+      "frame_index": 98,
+      "input_shape": [
+        2,
+        65,
+        65
+      ],
+      "input_uint8_sha256": "a9037d20ebcd613b3bdbc694e9ffc497a9855b2e3cf7a75467ebe836bcc25541",
+      "patch_side_px": 65,
+      "sample_id": "background|ESM4|98|37|285",
+      "solutal_patch_sha256": "8560cf5873d13bf270bdfe97e615a7b9ab5cdb9d60897bb7f842786d888e2f17",
+      "solutal_source_id": "ESM5",
+      "solutal_support": {
+        "representation": "NATIVE_Y_RELATIVE_SOLUTE_FIELD",
+        "sample_count": 12,
+        "samples_checked": [
+          "background|ESM4|98|1012|675",
+          "background|ESM4|98|1142|610",
+          "background|ESM4|98|297|610",
+          "background|ESM4|98|37|285",
+          "background|ESM4|98|492|480",
+          "background|ESM4|98|622|610",
+          "background|ESM4|98|687|155",
+          "background|ESM4|98|752|675",
+          "background|ESM4|98|882|415",
+          "background|ESM4|98|882|610",
+          "background|ESM4|98|882|805",
+          "positive|ESM6:annotation-site:63498902ef491c68"
+        ],
+        "status": "PASS",
+        "support_contract": "SOLUTAL_GEOMETRY_12PCT_15PCT_BORDER4_EROSION1_NO_CHROMA",
+        "support_xyxy": [
+          5,
+          123,
+          1273,
+          859
+        ]
+      },
+      "split": "TRAIN",
+      "structural_patch_sha256": "c47a6961c210d5ce419269cc0c72316dfa02d6d4e194ff19524afc15be122d66",
+      "structural_source_id": "ESM4",
+      "structural_support": {
+        "sample_count": 12,
+        "samples_checked": [
+          "background|ESM4|98|1012|675",
+          "background|ESM4|98|1142|610",
+          "background|ESM4|98|297|610",
+          "background|ESM4|98|37|285",
+          "background|ESM4|98|492|480",
+          "background|ESM4|98|622|610",
+          "background|ESM4|98|687|155",
+          "background|ESM4|98|752|675",
+          "background|ESM4|98|882|415",
+          "background|ESM4|98|882|610",
+          "background|ESM4|98|882|805",
+          "positive|ESM6:annotation-site:63498902ef491c68"
+        ],
+        "status": "PASS"
+      },
+      "ti3b_both_patch_hashes_equal": true
+    },
+    {
+      "center_x": 492,
+      "center_y": 480,
+      "frame_index": 98,
+      "input_shape": [
+        2,
+        65,
+        65
+      ],
+      "input_uint8_sha256": "ac7ba7951ec192df17ad11cfff9ea7223e0629e88d5d7c65b9a63b752b63e65f",
+      "patch_side_px": 65,
+      "sample_id": "background|ESM4|98|492|480",
+      "solutal_patch_sha256": "1d3f96200a519db1b9fb721d4aa362747bce49c9d54e5c19eb61b55495011420",
+      "solutal_source_id": "ESM5",
+      "solutal_support": {
+        "representation": "NATIVE_Y_RELATIVE_SOLUTE_FIELD",
+        "sample_count": 12,
+        "samples_checked": [
+          "background|ESM4|98|1012|675",
+          "background|ESM4|98|1142|610",
+          "background|ESM4|98|297|610",
+          "background|ESM4|98|37|285",
+          "background|ESM4|98|492|480",
+          "background|ESM4|98|622|610",
+          "background|ESM4|98|687|155",
+          "background|ESM4|98|752|675",
+          "background|ESM4|98|882|415",
+          "background|ESM4|98|882|610",
+          "background|ESM4|98|882|805",
+          "positive|ESM6:annotation-site:63498902ef491c68"
+        ],
+        "status": "PASS",
+        "support_contract": "SOLUTAL_GEOMETRY_12PCT_15PCT_BORDER4_EROSION1_NO_CHROMA",
+        "support_xyxy": [
+          5,
+          123,
+          1273,
+          859
+        ]
+      },
+      "split": "TRAIN",
+      "structural_patch_sha256": "2c74dc3dbfdd9069ea79f205646e2957e5503bbfe7fdee6c89e451593857a5a9",
+      "structural_source_id": "ESM4",
+      "structural_support": {
+        "sample_count": 12,
+        "samples_checked": [
+          "background|ESM4|98|1012|675",
+          "background|ESM4|98|1142|610",
+          "background|ESM4|98|297|610",
+          "background|ESM4|98|37|285",
+          "background|ESM4|98|492|480",
+          "background|ESM4|98|622|610",
+          "background|ESM4|98|687|155",
+          "background|ESM4|98|752|675",
+          "background|ESM4|98|882|415",
+          "background|ESM4|98|882|610",
+          "background|ESM4|98|882|805",
+          "positive|ESM6:annotation-site:63498902ef491c68"
+        ],
+        "status": "PASS"
+      },
+      "ti3b_both_patch_hashes_equal": true
+    },
+    {
+      "center_x": 622,
+      "center_y": 610,
+      "frame_index": 98,
+      "input_shape": [
+        2,
+        65,
+        65
+      ],
+      "input_uint8_sha256": "26ff3ffc66e62cade57d4d2095cfd574a3a04743d49740ec2cacaa9e9df1af44",
+      "patch_side_px": 65,
+      "sample_id": "background|ESM4|98|622|610",
+      "solutal_patch_sha256": "a939beaf5aae7b84bf3d604f1181e13e3df5c650a8964a857616f39373e45e46",
+      "solutal_source_id": "ESM5",
+      "solutal_support": {
+        "representation": "NATIVE_Y_RELATIVE_SOLUTE_FIELD",
+        "sample_count": 12,
+        "samples_checked": [
+          "background|ESM4|98|1012|675",
+          "background|ESM4|98|1142|610",
+          "background|ESM4|98|297|610",
+          "background|ESM4|98|37|285",
+          "background|ESM4|98|492|480",
+          "background|ESM4|98|622|610",
+          "background|ESM4|98|687|155",
+          "background|ESM4|98|752|675",
+          "background|ESM4|98|882|415",
+          "background|ESM4|98|882|610",
+          "background|ESM4|98|882|805",
+          "positive|ESM6:annotation-site:63498902ef491c68"
+        ],
+        "status": "PASS",
+        "support_contract": "SOLUTAL_GEOMETRY_12PCT_15PCT_BORDER4_EROSION1_NO_CHROMA",
+        "support_xyxy": [
+          5,
+          123,
+          1273,
+          859
+        ]
+      },
+      "split": "TRAIN",
+      "structural_patch_sha256": "c0b94bade1ac5156cdb78e7346d38b2aebb6fb46a399f3a59105ec1d0652ce9b",
+      "structural_source_id": "ESM4",
+      "structural_support": {
+        "sample_count": 12,
+        "samples_checked": [
+          "background|ESM4|98|1012|675",
+          "background|ESM4|98|1142|610",
+          "background|ESM4|98|297|610",
+          "background|ESM4|98|37|285",
+          "background|ESM4|98|492|480",
+          "background|ESM4|98|622|610",
+          "background|ESM4|98|687|155",
+          "background|ESM4|98|752|675",
+          "background|ESM4|98|882|415",
+          "background|ESM4|98|882|610",
+          "background|ESM4|98|882|805",
+          "positive|ESM6:annotation-site:63498902ef491c68"
+        ],
+        "status": "PASS"
+      },
+      "ti3b_both_patch_hashes_equal": true
+    },
+    {
+      "center_x": 687,
+      "center_y": 155,
+      "frame_index": 98,
+      "input_shape": [
+        2,
+        65,
+        65
+      ],
+      "input_uint8_sha256": "202b4d077fdce1f1739a70b71ea79375c0406d1ad62a0bcdeaa79de0d0326e81",
+      "patch_side_px": 65,
+      "sample_id": "background|ESM4|98|687|155",
+      "solutal_patch_sha256": "ca754f4315d9b87015a58fc03131f9d8380ee1e37b6a54b6d870c8011561878e",
+      "solutal_source_id": "ESM5",
+      "solutal_support": {
+        "representation": "NATIVE_Y_RELATIVE_SOLUTE_FIELD",
+        "sample_count": 12,
+        "samples_checked": [
+          "background|ESM4|98|1012|675",
+          "background|ESM4|98|1142|610",
+          "background|ESM4|98|297|610",
+          "background|ESM4|98|37|285",
+          "background|ESM4|98|492|480",
+          "background|ESM4|98|622|610",
+          "background|ESM4|98|687|155",
+          "background|ESM4|98|752|675",
+          "background|ESM4|98|882|415",
+          "background|ESM4|98|882|610",
+          "background|ESM4|98|882|805",
+          "positive|ESM6:annotation-site:63498902ef491c68"
+        ],
+        "status": "PASS",
+        "support_contract": "SOLUTAL_GEOMETRY_12PCT_15PCT_BORDER4_EROSION1_NO_CHROMA",
+        "support_xyxy": [
+          5,
+          123,
+          1273,
+          859
+        ]
+      },
+      "split": "TRAIN",
+      "structural_patch_sha256": "ec10b23f799507ba04bdf0a5ce5b2be1a040a9d872f5a5a21f430b0912a2c3b8",
+      "structural_source_id": "ESM4",
+      "structural_support": {
+        "sample_count": 12,
+        "samples_checked": [
+          "background|ESM4|98|1012|675",
+          "background|ESM4|98|1142|610",
+          "background|ESM4|98|297|610",
+          "background|ESM4|98|37|285",
+          "background|ESM4|98|492|480",
+          "background|ESM4|98|622|610",
+          "background|ESM4|98|687|155",
+          "background|ESM4|98|752|675",
+          "background|ESM4|98|882|415",
+          "background|ESM4|98|882|610",
+          "background|ESM4|98|882|805",
+          "positive|ESM6:annotation-site:63498902ef491c68"
+        ],
+        "status": "PASS"
+      },
+      "ti3b_both_patch_hashes_equal": true
+    },
+    {
+      "center_x": 752,
+      "center_y": 675,
+      "frame_index": 98,
+      "input_shape": [
+        2,
+        65,
+        65
+      ],
+      "input_uint8_sha256": "7b5ed0e0a32f8f9f5925465cc143982f927de1615f8cb1bea8818621cf6337ae",
+      "patch_side_px": 65,
+      "sample_id": "background|ESM4|98|752|675",
+      "solutal_patch_sha256": "2954a19d9e0f58b7e4f9590d4915be13664dad491b893c0d66ca39cb8b39c205",
+      "solutal_source_id": "ESM5",
+      "solutal_support": {
+        "representation": "NATIVE_Y_RELATIVE_SOLUTE_FIELD",
+        "sample_count": 12,
+        "samples_checked": [
+          "background|ESM4|98|1012|675",
+          "background|ESM4|98|1142|610",
+          "background|ESM4|98|297|610",
+          "background|ESM4|98|37|285",
+          "background|ESM4|98|492|480",
+          "background|ESM4|98|622|610",
+          "background|ESM4|98|687|155",
+          "background|ESM4|98|752|675",
+          "background|ESM4|98|882|415",
+          "background|ESM4|98|882|610",
+          "background|ESM4|98|882|805",
+          "positive|ESM6:annotation-site:63498902ef491c68"
+        ],
+        "status": "PASS",
+        "support_contract": "SOLUTAL_GEOMETRY_12PCT_15PCT_BORDER4_EROSION1_NO_CHROMA",
+        "support_xyxy": [
+          5,
+          123,
+          1273,
+          859
+        ]
+      },
+      "split": "TRAIN",
+      "structural_patch_sha256": "a8040dffd1ac7f5bccf710a5e94179279498b17114c71275387c010c83dc5e51",
+      "structural_source_id": "ESM4",
+      "structural_support": {
+        "sample_count": 12,
+        "samples_checked": [
+          "background|ESM4|98|1012|675",
+          "background|ESM4|98|1142|610",
+          "background|ESM4|98|297|610",
+          "background|ESM4|98|37|285",
+          "background|ESM4|98|492|480",
+          "background|ESM4|98|622|610",
+          "background|ESM4|98|687|155",
+          "background|ESM4|98|752|675",
+          "background|ESM4|98|882|415",
+          "background|ESM4|98|882|610",
+          "background|ESM4|98|882|805",
+          "positive|ESM6:annotation-site:63498902ef491c68"
+        ],
+        "status": "PASS"
+      },
+      "ti3b_both_patch_hashes_equal": true
+    },
+    {
+      "center_x": 882,
+      "center_y": 415,
+      "frame_index": 98,
+      "input_shape": [
+        2,
+        65,
+        65
+      ],
+      "input_uint8_sha256": "84d88b6da01e9ba1b9e637c2dcd387fa5087fc488b34becfa3add9a028521523",
+      "patch_side_px": 65,
+      "sample_id": "background|ESM4|98|882|415",
+      "solutal_patch_sha256": "cd585ac8fed4262209e52d6b5230f42ce1de28d4fe6cd03714e6ee1c344f355a",
+      "solutal_source_id": "ESM5",
+      "solutal_support": {
+        "representation": "NATIVE_Y_RELATIVE_SOLUTE_FIELD",
+        "sample_count": 12,
+        "samples_checked": [
+          "background|ESM4|98|1012|675",
+          "background|ESM4|98|1142|610",
+          "background|ESM4|98|297|610",
+          "background|ESM4|98|37|285",
+          "background|ESM4|98|492|480",
+          "background|ESM4|98|622|610",
+          "background|ESM4|98|687|155",
+          "background|ESM4|98|752|675",
+          "background|ESM4|98|882|415",
+          "background|ESM4|98|882|610",
+          "background|ESM4|98|882|805",
+          "positive|ESM6:annotation-site:63498902ef491c68"
+        ],
+        "status": "PASS",
+        "support_contract": "SOLUTAL_GEOMETRY_12PCT_15PCT_BORDER4_EROSION1_NO_CHROMA",
+        "support_xyxy": [
+          5,
+          123,
+          1273,
+          859
+        ]
+      },
+      "split": "TRAIN",
+      "structural_patch_sha256": "3110d0708d313b72d88553fa19b56f369319da0601752b0500d84c3e2fc4e3da",
+      "structural_source_id": "ESM4",
+      "structural_support": {
+        "sample_count": 12,
+        "samples_checked": [
+          "background|ESM4|98|1012|675",
+          "background|ESM4|98|1142|610",
+          "background|ESM4|98|297|610",
+          "background|ESM4|98|37|285",
+          "background|ESM4|98|492|480",
+          "background|ESM4|98|622|610",
+          "background|ESM4|98|687|155",
+          "background|ESM4|98|752|675",
+          "background|ESM4|98|882|415",
+          "background|ESM4|98|882|610",
+          "background|ESM4|98|882|805",
+          "positive|ESM6:annotation-site:63498902ef491c68"
+        ],
+        "status": "PASS"
+      },
+      "ti3b_both_patch_hashes_equal": true
+    },
+    {
+      "center_x": 882,
+      "center_y": 610,
+      "frame_index": 98,
+      "input_shape": [
+        2,
+        65,
+        65
+      ],
+      "input_uint8_sha256": "aa97a0e40a10a72b8c4e74d8cbe75e7f123f1d05c069d2966a73ec83c415aeff",
+      "patch_side_px": 65,
+      "sample_id": "background|ESM4|98|882|610",
+      "solutal_patch_sha256": "93b19d301960d39a421cf1e1e00b2a12f9e63a5700c59d1d992868a408ac1430",
+      "solutal_source_id": "ESM5",
+      "solutal_support": {
+        "representation": "NATIVE_Y_RELATIVE_SOLUTE_FIELD",
+        "sample_count": 12,
+        "samples_checked": [
+          "background|ESM4|98|1012|675",
+          "background|ESM4|98|1142|610",
+          "background|ESM4|98|297|610",
+          "background|ESM4|98|37|285",
+          "background|ESM4|98|492|480",
+          "background|ESM4|98|622|610",
+          "background|ESM4|98|687|155",
+          "background|ESM4|98|752|675",
+          "background|ESM4|98|882|415",
+          "background|ESM4|98|882|610",
+          "background|ESM4|98|882|805",
+          "positive|ESM6:annotation-site:63498902ef491c68"
+        ],
+        "status": "PASS",
+        "support_contract": "SOLUTAL_GEOMETRY_12PCT_15PCT_BORDER4_EROSION1_NO_CHROMA",
+        "support_xyxy": [
+          5,
+          123,
+          1273,
+          859
+        ]
+      },
+      "split": "TRAIN",
+      "structural_patch_sha256": "ea5f905258dfc8d53a60aa41a4c9f637d0d2122fd9c72c068c5c00bd23407c87",
+      "structural_source_id": "ESM4",
+      "structural_support": {
+        "sample_count": 12,
+        "samples_checked": [
+          "background|ESM4|98|1012|675",
+          "background|ESM4|98|1142|610",
+          "background|ESM4|98|297|610",
+          "background|ESM4|98|37|285",
+          "background|ESM4|98|492|480",
+          "background|ESM4|98|622|610",
+          "background|ESM4|98|687|155",
+          "background|ESM4|98|752|675",
+          "background|ESM4|98|882|415",
+          "background|ESM4|98|882|610",
+          "background|ESM4|98|882|805",
+          "positive|ESM6:annotation-site:63498902ef491c68"
+        ],
+        "status": "PASS"
+      },
+      "ti3b_both_patch_hashes_equal": true
+    },
+    {
+      "center_x": 882,
+      "center_y": 805,
+      "frame_index": 98,
+      "input_shape": [
+        2,
+        65,
+        65
+      ],
+      "input_uint8_sha256": "76e88de28424695b9c580474ca71df2012a6c384639982b7bbf53cae10b34c7a",
+      "patch_side_px": 65,
+      "sample_id": "background|ESM4|98|882|805",
+      "solutal_patch_sha256": "e7be61e86c9f371dd3cea0ca99100c011685bf91820c22233a237e2971c34380",
+      "solutal_source_id": "ESM5",
+      "solutal_support": {
+        "representation": "NATIVE_Y_RELATIVE_SOLUTE_FIELD",
+        "sample_count": 12,
+        "samples_checked": [
+          "background|ESM4|98|1012|675",
+          "background|ESM4|98|1142|610",
+          "background|ESM4|98|297|610",
+          "background|ESM4|98|37|285",
+          "background|ESM4|98|492|480",
+          "background|ESM4|98|622|610",
+          "background|ESM4|98|687|155",
+          "background|ESM4|98|752|675",
+          "background|ESM4|98|882|415",
+          "background|ESM4|98|882|610",
+          "background|ESM4|98|882|805",
+          "positive|ESM6:annotation-site:63498902ef491c68"
+        ],
+        "status": "PASS",
+        "support_contract": "SOLUTAL_GEOMETRY_12PCT_15PCT_BORDER4_EROSION1_NO_CHROMA",
+        "support_xyxy": [
+          5,
+          123,
+          1273,
+          859
+        ]
+      },
+      "split": "TRAIN",
+      "structural_patch_sha256": "25495361fca9df0e28ed2c31ad94058b42d6ea49fb256c85d086564673e84ba4",
+      "structural_source_id": "ESM4",
+      "structural_support": {
+        "sample_count": 12,
+        "samples_checked": [
+          "background|ESM4|98|1012|675",
+          "background|ESM4|98|1142|610",
+          "background|ESM4|98|297|610",
+          "background|ESM4|98|37|285",
+          "background|ESM4|98|492|480",
+          "background|ESM4|98|622|610",
+          "background|ESM4|98|687|155",
+          "background|ESM4|98|752|675",
+          "background|ESM4|98|882|415",
+          "background|ESM4|98|882|610",
+          "background|ESM4|98|882|805",
+          "positive|ESM6:annotation-site:63498902ef491c68"
+        ],
+        "status": "PASS"
+      },
+      "ti3b_both_patch_hashes_equal": true
+    },
+    {
+      "center_x": 574,
+      "center_y": 415,
+      "frame_index": 98,
+      "input_shape": [
+        2,
+        65,
+        65
+      ],
+      "input_uint8_sha256": "ede499c51e1e6cbfd5689b7b01c03a1f057db6279ad804ec4919394f1741ef54",
+      "patch_side_px": 65,
+      "sample_id": "positive|ESM6:annotation-site:63498902ef491c68",
+      "solutal_patch_sha256": "04fe2e05ddceea811118e01005d8955e0c44fe71d5eb8962e37cf8f2593869ff",
+      "solutal_source_id": "ESM5",
+      "solutal_support": {
+        "representation": "NATIVE_Y_RELATIVE_SOLUTE_FIELD",
+        "sample_count": 12,
+        "samples_checked": [
+          "background|ESM4|98|1012|675",
+          "background|ESM4|98|1142|610",
+          "background|ESM4|98|297|610",
+          "background|ESM4|98|37|285",
+          "background|ESM4|98|492|480",
+          "background|ESM4|98|622|610",
+          "background|ESM4|98|687|155",
+          "background|ESM4|98|752|675",
+          "background|ESM4|98|882|415",
+          "background|ESM4|98|882|610",
+          "background|ESM4|98|882|805",
+          "positive|ESM6:annotation-site:63498902ef491c68"
+        ],
+        "status": "PASS",
+        "support_contract": "SOLUTAL_GEOMETRY_12PCT_15PCT_BORDER4_EROSION1_NO_CHROMA",
+        "support_xyxy": [
+          5,
+          123,
+          1273,
+          859
+        ]
+      },
+      "split": "TRAIN",
+      "structural_patch_sha256": "eb31f451af77100caedad5241d37576ac76aa05af912922b758c97cb0d311f5e",
+      "structural_source_id": "ESM4",
+      "structural_support": {
+        "sample_count": 12,
+        "samples_checked": [
+          "background|ESM4|98|1012|675",
+          "background|ESM4|98|1142|610",
+          "background|ESM4|98|297|610",
+          "background|ESM4|98|37|285",
+          "background|ESM4|98|492|480",
+          "background|ESM4|98|622|610",
+          "background|ESM4|98|687|155",
+          "background|ESM4|98|752|675",
+          "background|ESM4|98|882|415",
+          "background|ESM4|98|882|610",
+          "background|ESM4|98|882|805",
+          "positive|ESM6:annotation-site:63498902ef491c68"
+        ],
+        "status": "PASS"
+      },
+      "ti3b_both_patch_hashes_equal": true
+    },
+    {
+      "center_x": 102,
+      "center_y": 221,
+      "frame_index": 219,
+      "input_shape": [
+        2,
+        65,
+        65
+      ],
+      "input_uint8_sha256": "9550b902f597125ba3f617e6a05205110abaf6a946f75fac0204aa4e1d35d6c1",
+      "patch_side_px": 65,
+      "sample_id": "background|ESM1|219|102|221",
+      "solutal_patch_sha256": "d7300f6b406a62384c2a3810950e2948079bd568a8f05fbb59f7a522dd1279d3",
+      "solutal_source_id": "ESM2",
+      "solutal_support": {
+        "representation": "NATIVE_Y_RELATIVE_SOLUTE_FIELD",
+        "sample_count": 5,
+        "samples_checked": [
+          "background|ESM1|219|102|221",
+          "background|ESM1|219|752|221",
+          "positive|ESM3:annotation-site:3eeab8e9efcb0d21",
+          "positive|ESM3:annotation-site:8e517d7ffab44a8d",
+          "positive|ESM3:annotation-site:c726fa8942e518df"
+        ],
+        "status": "PASS",
+        "support_contract": "SOLUTAL_GEOMETRY_12PCT_15PCT_BORDER4_EROSION1_NO_CHROMA",
+        "support_xyxy": [
+          5,
+          124,
+          1273,
+          864
+        ]
+      },
+      "split": "DEVELOPMENT",
+      "structural_patch_sha256": "7efa42ec3bf12131c1e66bd2af71d752cebb4a5242c837fc410400bea1dc0de6",
+      "structural_source_id": "ESM1",
+      "structural_support": {
+        "sample_count": 5,
+        "samples_checked": [
+          "background|ESM1|219|102|221",
+          "background|ESM1|219|752|221",
+          "positive|ESM3:annotation-site:3eeab8e9efcb0d21",
+          "positive|ESM3:annotation-site:8e517d7ffab44a8d",
+          "positive|ESM3:annotation-site:c726fa8942e518df"
+        ],
+        "status": "PASS"
+      },
+      "ti3b_both_patch_hashes_equal": true
+    },
+    {
+      "center_x": 752,
+      "center_y": 221,
+      "frame_index": 219,
+      "input_shape": [
+        2,
+        65,
+        65
+      ],
+      "input_uint8_sha256": "babad31efedfcb81e6ced65b01f04207854623575321a21b689b7ddeeee1bb25",
+      "patch_side_px": 65,
+      "sample_id": "background|ESM1|219|752|221",
+      "solutal_patch_sha256": "0169373598339ac11037a900a9896f783ca301119d599a9fc91ccca5f76c83bd",
+      "solutal_source_id": "ESM2",
+      "solutal_support": {
+        "representation": "NATIVE_Y_RELATIVE_SOLUTE_FIELD",
+        "sample_count": 5,
+        "samples_checked": [
+          "background|ESM1|219|102|221",
+          "background|ESM1|219|752|221",
+          "positive|ESM3:annotation-site:3eeab8e9efcb0d21",
+          "positive|ESM3:annotation-site:8e517d7ffab44a8d",
+          "positive|ESM3:annotation-site:c726fa8942e518df"
+        ],
+        "status": "PASS",
+        "support_contract": "SOLUTAL_GEOMETRY_12PCT_15PCT_BORDER4_EROSION1_NO_CHROMA",
+        "support_xyxy": [
+          5,
+          124,
+          1273,
+          864
+        ]
+      },
+      "split": "DEVELOPMENT",
+      "structural_patch_sha256": "11b4a51bc4a316c9831e4053ba076839291b036b4391b281d7152064dc70925b",
+      "structural_source_id": "ESM1",
+      "structural_support": {
+        "sample_count": 5,
+        "samples_checked": [
+          "background|ESM1|219|102|221",
+          "background|ESM1|219|752|221",
+          "positive|ESM3:annotation-site:3eeab8e9efcb0d21",
+          "positive|ESM3:annotation-site:8e517d7ffab44a8d",
+          "positive|ESM3:annotation-site:c726fa8942e518df"
+        ],
+        "status": "PASS"
+      },
+      "ti3b_both_patch_hashes_equal": true
+    },
+    {
+      "center_x": 352,
+      "center_y": 174,
+      "frame_index": 219,
+      "input_shape": [
+        2,
+        65,
+        65
+      ],
+      "input_uint8_sha256": "53570dd1c153ed62ef506b6c44e37bd687f72cd8e37d91a47c29161f7ef433ee",
+      "patch_side_px": 65,
+      "sample_id": "positive|ESM3:annotation-site:3eeab8e9efcb0d21",
+      "solutal_patch_sha256": "38923b772b13624ec0208a35296501793e15357017cdf445f274ca52e3a2f1a5",
+      "solutal_source_id": "ESM2",
+      "solutal_support": {
+        "representation": "NATIVE_Y_RELATIVE_SOLUTE_FIELD",
+        "sample_count": 5,
+        "samples_checked": [
+          "background|ESM1|219|102|221",
+          "background|ESM1|219|752|221",
+          "positive|ESM3:annotation-site:3eeab8e9efcb0d21",
+          "positive|ESM3:annotation-site:8e517d7ffab44a8d",
+          "positive|ESM3:annotation-site:c726fa8942e518df"
+        ],
+        "status": "PASS",
+        "support_contract": "SOLUTAL_GEOMETRY_12PCT_15PCT_BORDER4_EROSION1_NO_CHROMA",
+        "support_xyxy": [
+          5,
+          124,
+          1273,
+          864
+        ]
+      },
+      "split": "DEVELOPMENT",
+      "structural_patch_sha256": "4c3607476d12084145ee459d3457c520a5650c55810c85350458d31b1ac469af",
+      "structural_source_id": "ESM1",
+      "structural_support": {
+        "sample_count": 5,
+        "samples_checked": [
+          "background|ESM1|219|102|221",
+          "background|ESM1|219|752|221",
+          "positive|ESM3:annotation-site:3eeab8e9efcb0d21",
+          "positive|ESM3:annotation-site:8e517d7ffab44a8d",
+          "positive|ESM3:annotation-site:c726fa8942e518df"
+        ],
+        "status": "PASS"
+      },
+      "ti3b_both_patch_hashes_equal": true
+    },
+    {
+      "center_x": 56,
+      "center_y": 300,
+      "frame_index": 219,
+      "input_shape": [
+        2,
+        65,
+        65
+      ],
+      "input_uint8_sha256": "c7eb874e3d37da4447f43dce6eb587c909184adbc7a6266f8d5dae1489f34752",
+      "patch_side_px": 65,
+      "sample_id": "positive|ESM3:annotation-site:8e517d7ffab44a8d",
+      "solutal_patch_sha256": "d3768f94819c918e16b8586382b5ea3f4d90c481a8b5471a347600db190d1c1f",
+      "solutal_source_id": "ESM2",
+      "solutal_support": {
+        "representation": "NATIVE_Y_RELATIVE_SOLUTE_FIELD",
+        "sample_count": 5,
+        "samples_checked": [
+          "background|ESM1|219|102|221",
+          "background|ESM1|219|752|221",
+          "positive|ESM3:annotation-site:3eeab8e9efcb0d21",
+          "positive|ESM3:annotation-site:8e517d7ffab44a8d",
+          "positive|ESM3:annotation-site:c726fa8942e518df"
+        ],
+        "status": "PASS",
+        "support_contract": "SOLUTAL_GEOMETRY_12PCT_15PCT_BORDER4_EROSION1_NO_CHROMA",
+        "support_xyxy": [
+          5,
+          124,
+          1273,
+          864
+        ]
+      },
+      "split": "DEVELOPMENT",
+      "structural_patch_sha256": "9ebb616a5c16c64cfef6fde5957647296f6f22e7aaeb0cd4481d90bc6c28d3aa",
+      "structural_source_id": "ESM1",
+      "structural_support": {
+        "sample_count": 5,
+        "samples_checked": [
+          "background|ESM1|219|102|221",
+          "background|ESM1|219|752|221",
+          "positive|ESM3:annotation-site:3eeab8e9efcb0d21",
+          "positive|ESM3:annotation-site:8e517d7ffab44a8d",
+          "positive|ESM3:annotation-site:c726fa8942e518df"
+        ],
+        "status": "PASS"
+      },
+      "ti3b_both_patch_hashes_equal": true
+    },
+    {
+      "center_x": 555,
+      "center_y": 422,
+      "frame_index": 219,
+      "input_shape": [
+        2,
+        65,
+        65
+      ],
+      "input_uint8_sha256": "0a883b564ba1f99676efc5fa6c356ffdff16137426584ff7c2b157170a49648f",
+      "patch_side_px": 65,
+      "sample_id": "positive|ESM3:annotation-site:c726fa8942e518df",
+      "solutal_patch_sha256": "1583b140e1bf977003f01e60c3d1c1044a515483f6d90edde106ff37a894bcc7",
+      "solutal_source_id": "ESM2",
+      "solutal_support": {
+        "representation": "NATIVE_Y_RELATIVE_SOLUTE_FIELD",
+        "sample_count": 5,
+        "samples_checked": [
+          "background|ESM1|219|102|221",
+          "background|ESM1|219|752|221",
+          "positive|ESM3:annotation-site:3eeab8e9efcb0d21",
+          "positive|ESM3:annotation-site:8e517d7ffab44a8d",
+          "positive|ESM3:annotation-site:c726fa8942e518df"
+        ],
+        "status": "PASS",
+        "support_contract": "SOLUTAL_GEOMETRY_12PCT_15PCT_BORDER4_EROSION1_NO_CHROMA",
+        "support_xyxy": [
+          5,
+          124,
+          1273,
+          864
+        ]
+      },
+      "split": "DEVELOPMENT",
+      "structural_patch_sha256": "173a0418933aaba262688b5db5443ba6302a1479d4ea825df41a4da2ac215d53",
+      "structural_source_id": "ESM1",
+      "structural_support": {
+        "sample_count": 5,
+        "samples_checked": [
+          "background|ESM1|219|102|221",
+          "background|ESM1|219|752|221",
+          "positive|ESM3:annotation-site:3eeab8e9efcb0d21",
+          "positive|ESM3:annotation-site:8e517d7ffab44a8d",
+          "positive|ESM3:annotation-site:c726fa8942e518df"
+        ],
+        "status": "PASS"
+      },
+      "ti3b_both_patch_hashes_equal": true
+    },
+    {
+      "center_x": 1077,
+      "center_y": 805,
+      "frame_index": 197,
+      "input_shape": [
+        2,
+        65,
+        65
+      ],
+      "input_uint8_sha256": "dd492d5c37daf271a74501e3c40f7fd5a30e052117b703e3fef84938d63f6725",
+      "patch_side_px": 65,
+      "sample_id": "background|ESM4|197|1077|805",
+      "solutal_patch_sha256": "2559e09eaebe2ccaecb3affc751917eaee7396d790e0c88c9ee8a835d7b7c03d",
+      "solutal_source_id": "ESM5",
+      "solutal_support": {
+        "representation": "NATIVE_Y_RELATIVE_SOLUTE_FIELD",
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM4|197|1077|805",
+          "background|ESM4|197|362|155",
+          "background|ESM4|197|427|350",
+          "background|ESM4|197|492|415",
+          "background|ESM4|197|492|805",
+          "background|ESM4|197|752|545",
+          "positive|ESM6:annotation-site:33c1dc5c4466a022",
+          "positive|ESM6:annotation-site:610a877237d31a5d",
+          "positive|ESM6:annotation-site:7c58fc05ae40787e",
+          "positive|ESM6:annotation-site:8a86a50873360dcf",
+          "positive|ESM6:annotation-site:8acca343f57b1314"
+        ],
+        "status": "PASS",
+        "support_contract": "SOLUTAL_GEOMETRY_12PCT_15PCT_BORDER4_EROSION1_NO_CHROMA",
+        "support_xyxy": [
+          5,
+          123,
+          1273,
+          859
+        ]
+      },
+      "split": "DEVELOPMENT",
+      "structural_patch_sha256": "52b85ad4024607925830f549e1d87447f858918f10a870fd8a41a9820b40dd40",
+      "structural_source_id": "ESM4",
+      "structural_support": {
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM4|197|1077|805",
+          "background|ESM4|197|362|155",
+          "background|ESM4|197|427|350",
+          "background|ESM4|197|492|415",
+          "background|ESM4|197|492|805",
+          "background|ESM4|197|752|545",
+          "positive|ESM6:annotation-site:33c1dc5c4466a022",
+          "positive|ESM6:annotation-site:610a877237d31a5d",
+          "positive|ESM6:annotation-site:7c58fc05ae40787e",
+          "positive|ESM6:annotation-site:8a86a50873360dcf",
+          "positive|ESM6:annotation-site:8acca343f57b1314"
+        ],
+        "status": "PASS"
+      },
+      "ti3b_both_patch_hashes_equal": true
+    },
+    {
+      "center_x": 362,
+      "center_y": 155,
+      "frame_index": 197,
+      "input_shape": [
+        2,
+        65,
+        65
+      ],
+      "input_uint8_sha256": "a73fcb5aae4519262723381fb647d87503708780c708dc6b8c67e836c73f0a54",
+      "patch_side_px": 65,
+      "sample_id": "background|ESM4|197|362|155",
+      "solutal_patch_sha256": "91de97392e78391f11cb1876b85cd328c9b0b75c74b260d0dd192e58526627c5",
+      "solutal_source_id": "ESM5",
+      "solutal_support": {
+        "representation": "NATIVE_Y_RELATIVE_SOLUTE_FIELD",
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM4|197|1077|805",
+          "background|ESM4|197|362|155",
+          "background|ESM4|197|427|350",
+          "background|ESM4|197|492|415",
+          "background|ESM4|197|492|805",
+          "background|ESM4|197|752|545",
+          "positive|ESM6:annotation-site:33c1dc5c4466a022",
+          "positive|ESM6:annotation-site:610a877237d31a5d",
+          "positive|ESM6:annotation-site:7c58fc05ae40787e",
+          "positive|ESM6:annotation-site:8a86a50873360dcf",
+          "positive|ESM6:annotation-site:8acca343f57b1314"
+        ],
+        "status": "PASS",
+        "support_contract": "SOLUTAL_GEOMETRY_12PCT_15PCT_BORDER4_EROSION1_NO_CHROMA",
+        "support_xyxy": [
+          5,
+          123,
+          1273,
+          859
+        ]
+      },
+      "split": "DEVELOPMENT",
+      "structural_patch_sha256": "866844444326271464d5a3f8bd648250421aeeb18dde2b99b0de84cdc50342bc",
+      "structural_source_id": "ESM4",
+      "structural_support": {
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM4|197|1077|805",
+          "background|ESM4|197|362|155",
+          "background|ESM4|197|427|350",
+          "background|ESM4|197|492|415",
+          "background|ESM4|197|492|805",
+          "background|ESM4|197|752|545",
+          "positive|ESM6:annotation-site:33c1dc5c4466a022",
+          "positive|ESM6:annotation-site:610a877237d31a5d",
+          "positive|ESM6:annotation-site:7c58fc05ae40787e",
+          "positive|ESM6:annotation-site:8a86a50873360dcf",
+          "positive|ESM6:annotation-site:8acca343f57b1314"
+        ],
+        "status": "PASS"
+      },
+      "ti3b_both_patch_hashes_equal": true
+    },
+    {
+      "center_x": 427,
+      "center_y": 350,
+      "frame_index": 197,
+      "input_shape": [
+        2,
+        65,
+        65
+      ],
+      "input_uint8_sha256": "9c293f3c9fd6fa8cd0553d71a15ea5d4640337005c43d917ba1ff61eea543925",
+      "patch_side_px": 65,
+      "sample_id": "background|ESM4|197|427|350",
+      "solutal_patch_sha256": "635498221b453e76afc27bdff3216e2c1410f487507933ceae7e9fe9bb9543bf",
+      "solutal_source_id": "ESM5",
+      "solutal_support": {
+        "representation": "NATIVE_Y_RELATIVE_SOLUTE_FIELD",
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM4|197|1077|805",
+          "background|ESM4|197|362|155",
+          "background|ESM4|197|427|350",
+          "background|ESM4|197|492|415",
+          "background|ESM4|197|492|805",
+          "background|ESM4|197|752|545",
+          "positive|ESM6:annotation-site:33c1dc5c4466a022",
+          "positive|ESM6:annotation-site:610a877237d31a5d",
+          "positive|ESM6:annotation-site:7c58fc05ae40787e",
+          "positive|ESM6:annotation-site:8a86a50873360dcf",
+          "positive|ESM6:annotation-site:8acca343f57b1314"
+        ],
+        "status": "PASS",
+        "support_contract": "SOLUTAL_GEOMETRY_12PCT_15PCT_BORDER4_EROSION1_NO_CHROMA",
+        "support_xyxy": [
+          5,
+          123,
+          1273,
+          859
+        ]
+      },
+      "split": "DEVELOPMENT",
+      "structural_patch_sha256": "212c5b311f569a9479a7416d7ff3da17e6a2c78bd23414d525391b759c612667",
+      "structural_source_id": "ESM4",
+      "structural_support": {
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM4|197|1077|805",
+          "background|ESM4|197|362|155",
+          "background|ESM4|197|427|350",
+          "background|ESM4|197|492|415",
+          "background|ESM4|197|492|805",
+          "background|ESM4|197|752|545",
+          "positive|ESM6:annotation-site:33c1dc5c4466a022",
+          "positive|ESM6:annotation-site:610a877237d31a5d",
+          "positive|ESM6:annotation-site:7c58fc05ae40787e",
+          "positive|ESM6:annotation-site:8a86a50873360dcf",
+          "positive|ESM6:annotation-site:8acca343f57b1314"
+        ],
+        "status": "PASS"
+      },
+      "ti3b_both_patch_hashes_equal": true
+    },
+    {
+      "center_x": 492,
+      "center_y": 415,
+      "frame_index": 197,
+      "input_shape": [
+        2,
+        65,
+        65
+      ],
+      "input_uint8_sha256": "77eb5a006cf45afdb7ed558f0d80a6a5ae587407a77f85156f67d5e83d7fc140",
+      "patch_side_px": 65,
+      "sample_id": "background|ESM4|197|492|415",
+      "solutal_patch_sha256": "aa9f63ac49c31d734a1612860fd48f92732e5b1e143c4397a6f1f3c3cf4e1dc0",
+      "solutal_source_id": "ESM5",
+      "solutal_support": {
+        "representation": "NATIVE_Y_RELATIVE_SOLUTE_FIELD",
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM4|197|1077|805",
+          "background|ESM4|197|362|155",
+          "background|ESM4|197|427|350",
+          "background|ESM4|197|492|415",
+          "background|ESM4|197|492|805",
+          "background|ESM4|197|752|545",
+          "positive|ESM6:annotation-site:33c1dc5c4466a022",
+          "positive|ESM6:annotation-site:610a877237d31a5d",
+          "positive|ESM6:annotation-site:7c58fc05ae40787e",
+          "positive|ESM6:annotation-site:8a86a50873360dcf",
+          "positive|ESM6:annotation-site:8acca343f57b1314"
+        ],
+        "status": "PASS",
+        "support_contract": "SOLUTAL_GEOMETRY_12PCT_15PCT_BORDER4_EROSION1_NO_CHROMA",
+        "support_xyxy": [
+          5,
+          123,
+          1273,
+          859
+        ]
+      },
+      "split": "DEVELOPMENT",
+      "structural_patch_sha256": "c6e3dee5ce3f7660ae60a5870fbefbe100bdba05ad6ef66f8228da0f71459880",
+      "structural_source_id": "ESM4",
+      "structural_support": {
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM4|197|1077|805",
+          "background|ESM4|197|362|155",
+          "background|ESM4|197|427|350",
+          "background|ESM4|197|492|415",
+          "background|ESM4|197|492|805",
+          "background|ESM4|197|752|545",
+          "positive|ESM6:annotation-site:33c1dc5c4466a022",
+          "positive|ESM6:annotation-site:610a877237d31a5d",
+          "positive|ESM6:annotation-site:7c58fc05ae40787e",
+          "positive|ESM6:annotation-site:8a86a50873360dcf",
+          "positive|ESM6:annotation-site:8acca343f57b1314"
+        ],
+        "status": "PASS"
+      },
+      "ti3b_both_patch_hashes_equal": true
+    },
+    {
+      "center_x": 492,
+      "center_y": 805,
+      "frame_index": 197,
+      "input_shape": [
+        2,
+        65,
+        65
+      ],
+      "input_uint8_sha256": "325e6060b992b1f27eac549ab22068e357bb8d82a4ec8699c73fb6a258eec6f9",
+      "patch_side_px": 65,
+      "sample_id": "background|ESM4|197|492|805",
+      "solutal_patch_sha256": "3c26fa864d7c0e02f91ffb134246d3ba784200bd4969fad52131dcf6f1134a4e",
+      "solutal_source_id": "ESM5",
+      "solutal_support": {
+        "representation": "NATIVE_Y_RELATIVE_SOLUTE_FIELD",
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM4|197|1077|805",
+          "background|ESM4|197|362|155",
+          "background|ESM4|197|427|350",
+          "background|ESM4|197|492|415",
+          "background|ESM4|197|492|805",
+          "background|ESM4|197|752|545",
+          "positive|ESM6:annotation-site:33c1dc5c4466a022",
+          "positive|ESM6:annotation-site:610a877237d31a5d",
+          "positive|ESM6:annotation-site:7c58fc05ae40787e",
+          "positive|ESM6:annotation-site:8a86a50873360dcf",
+          "positive|ESM6:annotation-site:8acca343f57b1314"
+        ],
+        "status": "PASS",
+        "support_contract": "SOLUTAL_GEOMETRY_12PCT_15PCT_BORDER4_EROSION1_NO_CHROMA",
+        "support_xyxy": [
+          5,
+          123,
+          1273,
+          859
+        ]
+      },
+      "split": "DEVELOPMENT",
+      "structural_patch_sha256": "7b0579e1361b5e5d2010b36f4062dbea52f34333ac15bbfaa2cc4602b841d29c",
+      "structural_source_id": "ESM4",
+      "structural_support": {
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM4|197|1077|805",
+          "background|ESM4|197|362|155",
+          "background|ESM4|197|427|350",
+          "background|ESM4|197|492|415",
+          "background|ESM4|197|492|805",
+          "background|ESM4|197|752|545",
+          "positive|ESM6:annotation-site:33c1dc5c4466a022",
+          "positive|ESM6:annotation-site:610a877237d31a5d",
+          "positive|ESM6:annotation-site:7c58fc05ae40787e",
+          "positive|ESM6:annotation-site:8a86a50873360dcf",
+          "positive|ESM6:annotation-site:8acca343f57b1314"
+        ],
+        "status": "PASS"
+      },
+      "ti3b_both_patch_hashes_equal": true
+    },
+    {
+      "center_x": 752,
+      "center_y": 545,
+      "frame_index": 197,
+      "input_shape": [
+        2,
+        65,
+        65
+      ],
+      "input_uint8_sha256": "4d5cd859e53605efb1a9466dc821a5b34407945d6b69650ec799cab3e132bd68",
+      "patch_side_px": 65,
+      "sample_id": "background|ESM4|197|752|545",
+      "solutal_patch_sha256": "12542809101f329f42f3be941cc0f8547fded8088cde1f23ddb64ca2c3f51977",
+      "solutal_source_id": "ESM5",
+      "solutal_support": {
+        "representation": "NATIVE_Y_RELATIVE_SOLUTE_FIELD",
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM4|197|1077|805",
+          "background|ESM4|197|362|155",
+          "background|ESM4|197|427|350",
+          "background|ESM4|197|492|415",
+          "background|ESM4|197|492|805",
+          "background|ESM4|197|752|545",
+          "positive|ESM6:annotation-site:33c1dc5c4466a022",
+          "positive|ESM6:annotation-site:610a877237d31a5d",
+          "positive|ESM6:annotation-site:7c58fc05ae40787e",
+          "positive|ESM6:annotation-site:8a86a50873360dcf",
+          "positive|ESM6:annotation-site:8acca343f57b1314"
+        ],
+        "status": "PASS",
+        "support_contract": "SOLUTAL_GEOMETRY_12PCT_15PCT_BORDER4_EROSION1_NO_CHROMA",
+        "support_xyxy": [
+          5,
+          123,
+          1273,
+          859
+        ]
+      },
+      "split": "DEVELOPMENT",
+      "structural_patch_sha256": "2dc98f806537c68c281e83d9364e6a8f6e1a246bcf7a48f88ea3144740175fb6",
+      "structural_source_id": "ESM4",
+      "structural_support": {
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM4|197|1077|805",
+          "background|ESM4|197|362|155",
+          "background|ESM4|197|427|350",
+          "background|ESM4|197|492|415",
+          "background|ESM4|197|492|805",
+          "background|ESM4|197|752|545",
+          "positive|ESM6:annotation-site:33c1dc5c4466a022",
+          "positive|ESM6:annotation-site:610a877237d31a5d",
+          "positive|ESM6:annotation-site:7c58fc05ae40787e",
+          "positive|ESM6:annotation-site:8a86a50873360dcf",
+          "positive|ESM6:annotation-site:8acca343f57b1314"
+        ],
+        "status": "PASS"
+      },
+      "ti3b_both_patch_hashes_equal": true
+    },
+    {
+      "center_x": 457,
+      "center_y": 692,
+      "frame_index": 197,
+      "input_shape": [
+        2,
+        65,
+        65
+      ],
+      "input_uint8_sha256": "4a068c713050e0d17e615ba3c62b130c3eeed0296c17f2efb07274804594a4b3",
+      "patch_side_px": 65,
+      "sample_id": "positive|ESM6:annotation-site:33c1dc5c4466a022",
+      "solutal_patch_sha256": "397b7eb74b7d0ef9029ff3a41cc71e687cfcde4caa32eeadae42f2a679b05d0a",
+      "solutal_source_id": "ESM5",
+      "solutal_support": {
+        "representation": "NATIVE_Y_RELATIVE_SOLUTE_FIELD",
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM4|197|1077|805",
+          "background|ESM4|197|362|155",
+          "background|ESM4|197|427|350",
+          "background|ESM4|197|492|415",
+          "background|ESM4|197|492|805",
+          "background|ESM4|197|752|545",
+          "positive|ESM6:annotation-site:33c1dc5c4466a022",
+          "positive|ESM6:annotation-site:610a877237d31a5d",
+          "positive|ESM6:annotation-site:7c58fc05ae40787e",
+          "positive|ESM6:annotation-site:8a86a50873360dcf",
+          "positive|ESM6:annotation-site:8acca343f57b1314"
+        ],
+        "status": "PASS",
+        "support_contract": "SOLUTAL_GEOMETRY_12PCT_15PCT_BORDER4_EROSION1_NO_CHROMA",
+        "support_xyxy": [
+          5,
+          123,
+          1273,
+          859
+        ]
+      },
+      "split": "DEVELOPMENT",
+      "structural_patch_sha256": "197d2751826c434f712f23f8c597b17e0d03b8399784c882bc9e7c11aaf99237",
+      "structural_source_id": "ESM4",
+      "structural_support": {
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM4|197|1077|805",
+          "background|ESM4|197|362|155",
+          "background|ESM4|197|427|350",
+          "background|ESM4|197|492|415",
+          "background|ESM4|197|492|805",
+          "background|ESM4|197|752|545",
+          "positive|ESM6:annotation-site:33c1dc5c4466a022",
+          "positive|ESM6:annotation-site:610a877237d31a5d",
+          "positive|ESM6:annotation-site:7c58fc05ae40787e",
+          "positive|ESM6:annotation-site:8a86a50873360dcf",
+          "positive|ESM6:annotation-site:8acca343f57b1314"
+        ],
+        "status": "PASS"
+      },
+      "ti3b_both_patch_hashes_equal": true
+    },
+    {
+      "center_x": 96,
+      "center_y": 636,
+      "frame_index": 197,
+      "input_shape": [
+        2,
+        65,
+        65
+      ],
+      "input_uint8_sha256": "9cfe1a84b7e3e2be22ca1ca41a7730bbf3a3ed609a4f81b6a50e82a329ff4fad",
+      "patch_side_px": 65,
+      "sample_id": "positive|ESM6:annotation-site:610a877237d31a5d",
+      "solutal_patch_sha256": "272f588dced8336a6df491cb416b387bfb301124ae8199715a74b51eab143418",
+      "solutal_source_id": "ESM5",
+      "solutal_support": {
+        "representation": "NATIVE_Y_RELATIVE_SOLUTE_FIELD",
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM4|197|1077|805",
+          "background|ESM4|197|362|155",
+          "background|ESM4|197|427|350",
+          "background|ESM4|197|492|415",
+          "background|ESM4|197|492|805",
+          "background|ESM4|197|752|545",
+          "positive|ESM6:annotation-site:33c1dc5c4466a022",
+          "positive|ESM6:annotation-site:610a877237d31a5d",
+          "positive|ESM6:annotation-site:7c58fc05ae40787e",
+          "positive|ESM6:annotation-site:8a86a50873360dcf",
+          "positive|ESM6:annotation-site:8acca343f57b1314"
+        ],
+        "status": "PASS",
+        "support_contract": "SOLUTAL_GEOMETRY_12PCT_15PCT_BORDER4_EROSION1_NO_CHROMA",
+        "support_xyxy": [
+          5,
+          123,
+          1273,
+          859
+        ]
+      },
+      "split": "DEVELOPMENT",
+      "structural_patch_sha256": "a3f0646c3bd6f548adbc4945eae1a99195f8210e2ac109221ad72e94562ae3a0",
+      "structural_source_id": "ESM4",
+      "structural_support": {
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM4|197|1077|805",
+          "background|ESM4|197|362|155",
+          "background|ESM4|197|427|350",
+          "background|ESM4|197|492|415",
+          "background|ESM4|197|492|805",
+          "background|ESM4|197|752|545",
+          "positive|ESM6:annotation-site:33c1dc5c4466a022",
+          "positive|ESM6:annotation-site:610a877237d31a5d",
+          "positive|ESM6:annotation-site:7c58fc05ae40787e",
+          "positive|ESM6:annotation-site:8a86a50873360dcf",
+          "positive|ESM6:annotation-site:8acca343f57b1314"
+        ],
+        "status": "PASS"
+      },
+      "ti3b_both_patch_hashes_equal": true
+    },
+    {
+      "center_x": 898,
+      "center_y": 294,
+      "frame_index": 197,
+      "input_shape": [
+        2,
+        65,
+        65
+      ],
+      "input_uint8_sha256": "177575af8b164de54a1e454ee74022d85c7a0f25cc48564f99d7e09114f652ad",
+      "patch_side_px": 65,
+      "sample_id": "positive|ESM6:annotation-site:7c58fc05ae40787e",
+      "solutal_patch_sha256": "d6bcc4c1b4af49109defa246a985b236a84d6cc86ad8d07ee098084f8e43b883",
+      "solutal_source_id": "ESM5",
+      "solutal_support": {
+        "representation": "NATIVE_Y_RELATIVE_SOLUTE_FIELD",
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM4|197|1077|805",
+          "background|ESM4|197|362|155",
+          "background|ESM4|197|427|350",
+          "background|ESM4|197|492|415",
+          "background|ESM4|197|492|805",
+          "background|ESM4|197|752|545",
+          "positive|ESM6:annotation-site:33c1dc5c4466a022",
+          "positive|ESM6:annotation-site:610a877237d31a5d",
+          "positive|ESM6:annotation-site:7c58fc05ae40787e",
+          "positive|ESM6:annotation-site:8a86a50873360dcf",
+          "positive|ESM6:annotation-site:8acca343f57b1314"
+        ],
+        "status": "PASS",
+        "support_contract": "SOLUTAL_GEOMETRY_12PCT_15PCT_BORDER4_EROSION1_NO_CHROMA",
+        "support_xyxy": [
+          5,
+          123,
+          1273,
+          859
+        ]
+      },
+      "split": "DEVELOPMENT",
+      "structural_patch_sha256": "198cfe665d7e59dee9113b524afa1627e1ec1b047bfb82eebe24704edb1572d8",
+      "structural_source_id": "ESM4",
+      "structural_support": {
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM4|197|1077|805",
+          "background|ESM4|197|362|155",
+          "background|ESM4|197|427|350",
+          "background|ESM4|197|492|415",
+          "background|ESM4|197|492|805",
+          "background|ESM4|197|752|545",
+          "positive|ESM6:annotation-site:33c1dc5c4466a022",
+          "positive|ESM6:annotation-site:610a877237d31a5d",
+          "positive|ESM6:annotation-site:7c58fc05ae40787e",
+          "positive|ESM6:annotation-site:8a86a50873360dcf",
+          "positive|ESM6:annotation-site:8acca343f57b1314"
+        ],
+        "status": "PASS"
+      },
+      "ti3b_both_patch_hashes_equal": true
+    },
+    {
+      "center_x": 495,
+      "center_y": 599,
+      "frame_index": 197,
+      "input_shape": [
+        2,
+        65,
+        65
+      ],
+      "input_uint8_sha256": "6cb64ce6dfa89542024a502bf895217ce4c4ab4f3e8c2db2d55bcb5685bb39eb",
+      "patch_side_px": 65,
+      "sample_id": "positive|ESM6:annotation-site:8a86a50873360dcf",
+      "solutal_patch_sha256": "389712fc09ed664dadce37e2b67c748485323d798902af51ad29157b1fd2fd2b",
+      "solutal_source_id": "ESM5",
+      "solutal_support": {
+        "representation": "NATIVE_Y_RELATIVE_SOLUTE_FIELD",
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM4|197|1077|805",
+          "background|ESM4|197|362|155",
+          "background|ESM4|197|427|350",
+          "background|ESM4|197|492|415",
+          "background|ESM4|197|492|805",
+          "background|ESM4|197|752|545",
+          "positive|ESM6:annotation-site:33c1dc5c4466a022",
+          "positive|ESM6:annotation-site:610a877237d31a5d",
+          "positive|ESM6:annotation-site:7c58fc05ae40787e",
+          "positive|ESM6:annotation-site:8a86a50873360dcf",
+          "positive|ESM6:annotation-site:8acca343f57b1314"
+        ],
+        "status": "PASS",
+        "support_contract": "SOLUTAL_GEOMETRY_12PCT_15PCT_BORDER4_EROSION1_NO_CHROMA",
+        "support_xyxy": [
+          5,
+          123,
+          1273,
+          859
+        ]
+      },
+      "split": "DEVELOPMENT",
+      "structural_patch_sha256": "ed5b2524bbc258fd97760cda767cd8a2f91b3e91ecbe24a697a45e85666866f8",
+      "structural_source_id": "ESM4",
+      "structural_support": {
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM4|197|1077|805",
+          "background|ESM4|197|362|155",
+          "background|ESM4|197|427|350",
+          "background|ESM4|197|492|415",
+          "background|ESM4|197|492|805",
+          "background|ESM4|197|752|545",
+          "positive|ESM6:annotation-site:33c1dc5c4466a022",
+          "positive|ESM6:annotation-site:610a877237d31a5d",
+          "positive|ESM6:annotation-site:7c58fc05ae40787e",
+          "positive|ESM6:annotation-site:8a86a50873360dcf",
+          "positive|ESM6:annotation-site:8acca343f57b1314"
+        ],
+        "status": "PASS"
+      },
+      "ti3b_both_patch_hashes_equal": true
+    },
+    {
+      "center_x": 722,
+      "center_y": 800,
+      "frame_index": 197,
+      "input_shape": [
+        2,
+        65,
+        65
+      ],
+      "input_uint8_sha256": "ae8cb1705f741f38b8044fb957089a7f2d64bf991171b63c194a724334af5328",
+      "patch_side_px": 65,
+      "sample_id": "positive|ESM6:annotation-site:8acca343f57b1314",
+      "solutal_patch_sha256": "3eaeda58b5e6b3c9338d2d7c75de3a47615478f640881923b98cb0b3b31684e9",
+      "solutal_source_id": "ESM5",
+      "solutal_support": {
+        "representation": "NATIVE_Y_RELATIVE_SOLUTE_FIELD",
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM4|197|1077|805",
+          "background|ESM4|197|362|155",
+          "background|ESM4|197|427|350",
+          "background|ESM4|197|492|415",
+          "background|ESM4|197|492|805",
+          "background|ESM4|197|752|545",
+          "positive|ESM6:annotation-site:33c1dc5c4466a022",
+          "positive|ESM6:annotation-site:610a877237d31a5d",
+          "positive|ESM6:annotation-site:7c58fc05ae40787e",
+          "positive|ESM6:annotation-site:8a86a50873360dcf",
+          "positive|ESM6:annotation-site:8acca343f57b1314"
+        ],
+        "status": "PASS",
+        "support_contract": "SOLUTAL_GEOMETRY_12PCT_15PCT_BORDER4_EROSION1_NO_CHROMA",
+        "support_xyxy": [
+          5,
+          123,
+          1273,
+          859
+        ]
+      },
+      "split": "DEVELOPMENT",
+      "structural_patch_sha256": "4dffee94c4d316e70cb226ddb1e48defabe1859b2e16748fe3a8fdb68f954a4c",
+      "structural_source_id": "ESM4",
+      "structural_support": {
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM4|197|1077|805",
+          "background|ESM4|197|362|155",
+          "background|ESM4|197|427|350",
+          "background|ESM4|197|492|415",
+          "background|ESM4|197|492|805",
+          "background|ESM4|197|752|545",
+          "positive|ESM6:annotation-site:33c1dc5c4466a022",
+          "positive|ESM6:annotation-site:610a877237d31a5d",
+          "positive|ESM6:annotation-site:7c58fc05ae40787e",
+          "positive|ESM6:annotation-site:8a86a50873360dcf",
+          "positive|ESM6:annotation-site:8acca343f57b1314"
+        ],
+        "status": "PASS"
+      },
+      "ti3b_both_patch_hashes_equal": true
+    }
+  ]
+}

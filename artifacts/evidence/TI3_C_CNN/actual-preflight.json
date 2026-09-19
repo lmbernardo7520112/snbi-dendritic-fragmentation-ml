@@ -1,0 +1,31 @@
+{
+  "acquisition_only_dev_ba": 0.5625,
+  "dependency_pins_verified": 22,
+  "experimental_bytes": 0,
+  "experimental_opens": 0,
+  "final_bytes": 0,
+  "final_opens": 0,
+  "freeze_sha256": "261703d3a377465c56a5a61c867c749308a17b1201f3c1b0edc8dc399fd5b11e",
+  "head_sha": "b2d8839ca2b6c6e5ddd2be1de3ff9589ada9a93c",
+  "inventory_entries": 14,
+  "inventory_sha256": "cbbd9e444efafa60c360c93200c833d7f253826fc6f56d8e4831cf0599642bf6",
+  "manifest_sha256": "c8e82b72ff5dc51d188a764c577c11d514474b14d90aea6292c1439e776fb487",
+  "receipt_created": false,
+  "required_jobs": [
+    "deterministic-contracts",
+    "scientific-synthetic-contracts",
+    "ti3-synthetic-contracts",
+    "ti3b-synthetic-contracts",
+    "ti3c-synthetic-contracts"
+  ],
+  "runtime": {
+    "device": "cpu",
+    "numpy": "1.26.4",
+    "python": "3.12.3",
+    "torch": "2.4.1+cpu",
+    "torch_cuda_build": null
+  },
+  "scientific_ti3c_runs": 0,
+  "source": "ACTUAL_COMMITTED_C1_AND_REAL_REMOTE_CI",
+  "status": "PASS"
+}
