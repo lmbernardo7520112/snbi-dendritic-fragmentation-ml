@@ -1,0 +1,14 @@
+{
+  "phase": "TI3_TARGET_RESOLUTION",
+  "checkpoint": "0f1284e86052e505e8ccfc9ceaecb58cb41065f2",
+  "started_at_utc": "2026-09-19T13:09:07.754765+00:00",
+  "textual_target_resolution_attempt": 1,
+  "experimental_opens": 0,
+  "experimental_bytes": 0,
+  "ml_runs": 0,
+  "inputs_sha256": {
+    "artifacts/evidence/TI3_A0/extraction-results.json": "9060042a6bfcd15398e460be3d9cef18a32c610dd12873ba086bac32049dc02d",
+    "artifacts/evidence/TI3_A0/development-manifest.json": "dc2ea4f22e7ea78dc8e381aca5170659d549f0f5357270e85f1cdc60c8372b6d"
+  },
+  "freeze_sha256": "9415f164d39e6f60c6e7727cc504a2886fe23e99981039ea7a3b429eb505a88b"
+}

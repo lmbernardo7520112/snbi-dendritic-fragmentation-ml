@@ -1,0 +1,33 @@
+{
+  "phase": "TI3_TARGET_RESOLUTION",
+  "frozen_at_utc": "2026-09-19T13:09:01.663311+00:00",
+  "association_tolerance_px": 3,
+  "minimum_sites": 3,
+  "algorithm": "CONNECTED_COMPONENTS_EUCLIDEAN_DISTANCE_LE_3PX_BY_SOURCE_ACQUISITION",
+  "representative": "OBSERVED_MEDOID_MIN_SUM_SQUARED_DISTANCE_LEXICOGRAPHIC_ID_TIE",
+  "sha256": {
+    "artifacts/evidence/TI3_TARGET_RESOLUTION/authorization.md": "638292dacf43d8bb19246b62b8cb4afc2fc7712e11390cb72faf4422c2256cf4",
+    "artifacts/evidence/TI3_TARGET_RESOLUTION/RESOLUTION_PROTOCOL.md": "f5c83516fa5deb6b22ea9506ca2f3c2549a315a188b835fd8242bb467e90d347",
+    "artifacts/evidence/TI3_TARGET_RESOLUTION/TARGET_CONTRACT.md": "89a7855dc0b4b3da41861c0f6677f3a9255922274b4108ea18f74137308e5e6a",
+    "artifacts/evidence/TI3_TARGET_RESOLUTION/SPLIT_CONTRACT.md": "bb940b9162661018e8df76d2c9c9a5a62a1fccc95287f7f616b33ed5009e18b5",
+    "artifacts/evidence/TI3_TARGET_RESOLUTION/COURSE_ALIGNMENT.md": "1a6d40a761f6c522318d385c3b0f85f940f29ebf4674debb93f9c4ec5f886e07",
+    "artifacts/evidence/TI3_TARGET_RESOLUTION/CLAIM_SCOPE.md": "e78ea2542888c9b0f8c8ff42f8565ec4a017c192331b985d2dbe344335fbdd8a",
+    "artifacts/evidence/TI3_TARGET_RESOLUTION/resolve.py": "f2c78ec49edd3751973b72b22db19f992897410a8a3df3729ebec4623dcb6519",
+    "artifacts/evidence/TI3_TARGET_RESOLUTION/test_resolution.py": "1987618e654f8159fd3f65787da0c688079826cff870062217560973806be197",
+    "artifacts/evidence/TI3_TARGET_RESOLUTION/run_resolution.py": "c76ab1f2909865e5f714e981217c21289f94eaf54af25f716089c511d9663f50",
+    "artifacts/evidence/TI3_A0/extraction-results.json": "9060042a6bfcd15398e460be3d9cef18a32c610dd12873ba086bac32049dc02d",
+    "artifacts/evidence/TI3_A0/development-manifest.json": "dc2ea4f22e7ea78dc8e381aca5170659d549f0f5357270e85f1cdc60c8372b6d"
+  },
+  "synthetic_tests": {
+    "unique_tests": 16,
+    "invocations": 2,
+    "total_pass_results": 32,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "note": "Second invocation followed mandatory output-schema completion before any actual resolution."
+  },
+  "new_pixels_authorized": false,
+  "ml_authorized": false,
+  "actual_split_authorized": false
+}

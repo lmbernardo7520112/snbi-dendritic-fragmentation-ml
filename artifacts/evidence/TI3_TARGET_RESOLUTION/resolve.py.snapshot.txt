@@ -1,0 +1,277 @@
+"""Pure, finite resolution of frozen graphical annotation observations.
+
+This module performs no I/O. Its 3 px relation groups annotation observations,
+not physical events. It neither creates samples/splits nor estimates onset.
+"""
+
+from collections import Counter
+from copy import deepcopy
+import hashlib
+import json
+import math
+
+
+VALID = "VALID_GRAPHICAL_CIRCLE"
+IGNORED = frozenset(("AMBIGUOUS_OR_NONCIRCULAR", "SMALL_COMPONENT"))
+EDGE_DISTANCE_PX = 3.0
+EDGE_DISTANCE_SQUARED = 9.0
+
+
+def _string(value, name):
+    if not isinstance(value, str) or not value:
+        raise ValueError(f"{name} must be a nonempty string")
+    return value
+
+
+def _number(value, name, nullable=False):
+    if nullable and value is None:
+        return None
+    if isinstance(value, bool) or not isinstance(value, (int, float)):
+        raise ValueError(f"{name} must be a finite number")
+    try:
+        finite = math.isfinite(value)
+    except (OverflowError, TypeError):
+        finite = False
+    if not finite:
+        raise ValueError(f"{name} must be a finite number")
+    return value
+
+
+def _required(record, name):
+    if name not in record:
+        raise ValueError(f"missing required field: {name}")
+    return record[name]
+
+
+def _squared_distance(a, b):
+    value = (a["center_x"] - b["center_x"]) ** 2 + (a["center_y"] - b["center_y"]) ** 2
+    if not math.isfinite(value):
+        raise ValueError("coordinate differences exceed finite arithmetic")
+    return value
+
+
+def _normalise(frames, acquisition_by_source):
+    if not isinstance(frames, list) or not isinstance(acquisition_by_source, dict):
+        raise ValueError("frames must be a list and acquisition_by_source a dict")
+    records, frame_records, observation_ids, asset_ids, frame_keys = [], [], set(), set(), set()
+    for frame in frames:
+        if not isinstance(frame, dict):
+            raise ValueError("frame must be a dict")
+        asset = _string(_required(frame, "asset_id"), "asset_id")
+        source = _string(_required(frame, "source_id"), "source_id")
+        if source not in acquisition_by_source:
+            raise ValueError("source has no declared acquisition")
+        acquisition = _string(acquisition_by_source[source], "acquisition_id")
+        index = _required(frame, "frame_index")
+        if isinstance(index, bool) or not isinstance(index, int) or index < 0:
+            raise ValueError("frame_index must be a nonnegative integer")
+        time = _number(_required(frame, "experimental_time_s"), "experimental_time_s")
+        if asset in asset_ids or (source, index) in frame_keys:
+            raise ValueError("duplicate frame")
+        asset_ids.add(asset)
+        frame_keys.add((source, index))
+        components = _required(frame, "components")
+        if not isinstance(components, list):
+            raise ValueError("components must be a list")
+        frame_records.append({"asset_id": asset, "source_id": source,
+                              "acquisition_id": acquisition, "frame_index": index,
+                              "experimental_time_s": time})
+        for component in components:
+            if not isinstance(component, dict):
+                raise ValueError("component must be a dict")
+            observation = _string(_required(component, "annotation_id"), "annotation_id")
+            if observation in observation_ids:
+                raise ValueError("duplicate annotation_id")
+            observation_ids.add(observation)
+            classification = _required(component, "classification")
+            if classification != VALID and classification not in IGNORED:
+                raise ValueError("unknown classification")
+            for key, expected in (("source_id", source), ("frame_index", index),
+                                  ("experimental_time_s", time)):
+                if key in component and component[key] != expected:
+                    raise ValueError(f"component {key} disagrees with frame")
+            x = _number(_required(component, "center_x"), "center_x", classification != VALID)
+            y = _number(_required(component, "center_y"), "center_y", classification != VALID)
+            radius = _number(_required(component, "radius_graphical_px"),
+                             "radius_graphical_px", classification != VALID)
+            bbox = _required(component, "bbox_xyxy")
+            if not isinstance(bbox, list) or len(bbox) != 4:
+                raise ValueError("bbox_xyxy must contain four coordinates")
+            for coordinate in bbox:
+                _number(coordinate, "bbox coordinate")
+            reasons = _required(component, "reasons")
+            if not isinstance(reasons, list) or any(not isinstance(reason, str) for reason in reasons):
+                raise ValueError("reasons must be a list of strings")
+            provenance = deepcopy(_required(component, "provenance"))
+            original_semantics = deepcopy(_required(component, "semantic_label"))
+            records.append({
+                "observation_id": observation, "annotation_id": observation,
+                "annotation_site_id": None, "asset_id": asset,
+                "acquisition_id": acquisition, "source_id": source,
+                "frame_index": index, "experimental_time_s": time,
+                "original_classification": classification,
+                "original_semantic_label": original_semantics,
+                "new_supervision": "POSITIVE" if classification == VALID else "IGNORE",
+                "center_x": x, "center_y": y, "radius_graphical_px": radius,
+                "bbox_xyxy": deepcopy(bbox), "reasons": deepcopy(reasons),
+                "provenance": provenance,
+                "physical_event_id": None, "event_onset_frame": None,
+            })
+    records.sort(key=lambda row: (row["acquisition_id"], row["source_id"],
+                                 row["frame_index"], row["observation_id"]))
+    frame_records.sort(key=lambda row: (row["acquisition_id"], row["source_id"], row["frame_index"]))
+    return records, frame_records
+
+
+def _group_sites(positives):
+    """Connected components of the inclusive, unrounded 3 px relation."""
+    remaining = set(range(len(positives)))
+    groups = []
+    while remaining:
+        first = min(remaining)
+        remaining.remove(first)
+        members, queue = [first], [first]
+        while queue:
+            current = queue.pop()
+            neighbours = [other for other in sorted(remaining)
+                          if _squared_distance(positives[current], positives[other]) <= EDGE_DISTANCE_SQUARED]
+            remaining.difference_update(neighbours)
+            members.extend(neighbours)
+            queue.extend(neighbours)
+        groups.append([positives[index] for index in sorted(members)])
+    return groups
+
+
+def _site(observations):
+    ids = sorted(row["observation_id"] for row in observations)
+    encoded = json.dumps(ids, ensure_ascii=True, separators=(",", ":")).encode("ascii")
+    source = observations[0]["source_id"]
+    site_id = source + ":annotation-site:" + hashlib.sha256(encoded).hexdigest()[:16]
+    sums = [math.fsum(_squared_distance(row, other) for other in observations)
+            for row in observations]
+    chosen = min(range(len(observations)), key=lambda i: (sums[i], observations[i]["observation_id"]))
+    representative = observations[chosen]
+    distances_squared = [_squared_distance(representative, row) for row in observations]
+    diameter_squared = max((_squared_distance(left, right)
+                            for left in observations for right in observations), default=0.0)
+    radii = [{"observation_id": row["observation_id"], "radius_graphical_px": row["radius_graphical_px"]}
+             for row in sorted(observations, key=lambda row: row["observation_id"])]
+    first = min(observations, key=lambda row: (row["frame_index"], row["observation_id"]))
+    times_by_frame = {row["frame_index"]: row["experimental_time_s"] for row in observations}
+    for row in observations:
+        row["annotation_site_id"] = site_id
+    return {
+        "annotation_site_id": site_id, "source_id": source,
+        "acquisition_id": observations[0]["acquisition_id"],
+        "status": "OPERATIONAL_PUBLISHED_LOCATION_SITE",
+        "observations": [
+            {key: row[key] for key in ("observation_id", "frame_index", "experimental_time_s",
+                                      "center_x", "center_y", "radius_graphical_px")}
+            for row in sorted(observations, key=lambda row: (row["frame_index"], row["observation_id"]))
+        ],
+        "frame_indices": sorted(times_by_frame),
+        "experimental_times": [times_by_frame[index] for index in sorted(times_by_frame)],
+        "representative_x": representative["center_x"],
+        "representative_y": representative["center_y"],
+        "spatial_dispersion_px": {
+            "diameter": math.sqrt(diameter_squared),
+            "max": math.sqrt(max(distances_squared)),
+            "rms": math.sqrt(math.fsum(distances_squared) / len(observations)),
+        },
+        "number_of_observations": len(observations),
+        "observation_ids": ids, "observation_count": len(observations),
+        "observed_frame_indices": sorted({row["frame_index"] for row in observations}),
+        "distinct_observed_frame_count": len({row["frame_index"] for row in observations}),
+        "representative": {"observation_id": representative["observation_id"],
+                           "center_x": representative["center_x"], "center_y": representative["center_y"],
+                           "selection_rule": "OBSERVED_MEDOID_MIN_SUM_SQUARED_DISTANCE_LEXICOGRAPHIC_ID_TIE"},
+        "maximum_pairwise_diameter_px": math.sqrt(diameter_squared),
+        "maximum_distance_to_representative_px": math.sqrt(max(distances_squared)),
+        "rms_distance_to_representative_px": math.sqrt(math.fsum(distances_squared) / len(observations)),
+        "radius_by_observation": radii,
+        "radius_range_graphical_px": [min(row["radius_graphical_px"] for row in observations),
+                                      max(row["radius_graphical_px"] for row in observations)],
+        "first_confident_observation": {"observation_id": first["observation_id"],
+                                         "frame_index": first["frame_index"],
+                                         "experimental_time_s": first["experimental_time_s"]},
+        "first_observation_is_physical_onset": False,
+        "physical_event_id": None, "event_onset_frame": None,
+        "grouping_rule": "CONNECTED_COMPONENTS_OF_DISTANCE_LE_3_PX",
+        "transitive_diameter_can_exceed_3_px": True,
+    }
+
+
+def _counts(records, sites, frames):
+    positives = [row for row in records if row["new_supervision"] == "POSITIVE"]
+    return {
+        "component_count": len(records), "positive_observation_count": len(positives),
+        "ignore_component_count": len(records) - len(positives),
+        "annotation_site_count": len(sites),
+        "singleton_site_count": sum(site["observation_count"] == 1 for site in sites),
+        "repeated_site_count": sum(site["observation_count"] > 1 for site in sites),
+        "observed_frame_count": len(frames),
+        "positive_distinct_frame_count": len({row["asset_id"] for row in positives}),
+        "observed_frame_indices": sorted({frame["frame_index"] for frame in frames}),
+        "site_multiplicity_distribution": dict(sorted(Counter(str(site["observation_count"])
+                                                               for site in sites).items(), key=lambda item: int(item[0]))),
+    }
+
+
+def resolve(frames, acquisition_by_source):
+    """Resolve a supplied textual table without filtering or modifying its inputs.
+
+    POSITIVE denotes an author-defined weak graphical target. IGNORE preserves
+    every other component. No absence is converted into a negative label.
+    """
+    ledger, frame_records = _normalise(frames, acquisition_by_source)
+    sites = []
+    groups = sorted({(row["acquisition_id"], row["source_id"]) for row in ledger})
+    for acquisition, source in groups:
+        positives = [row for row in ledger if row["acquisition_id"] == acquisition
+                     and row["source_id"] == source and row["new_supervision"] == "POSITIVE"]
+        sites.extend(_site(group) for group in _group_sites(positives))
+    sites.sort(key=lambda site: (site["acquisition_id"], site["source_id"], site["annotation_site_id"]))
+    if len({site["annotation_site_id"] for site in sites}) != len(sites):
+        raise ValueError("truncated site identifier collision")
+    summary = _counts(ledger, sites, frame_records)
+    for field, name in (("source_id", "by_source"), ("acquisition_id", "by_acquisition")):
+        summary[name] = {
+            value: _counts([row for row in ledger if row[field] == value],
+                           [site for site in sites if site[field] == value],
+                           [frame for frame in frame_records if frame[field] == value])
+            for value in sorted({frame[field] for frame in frame_records})
+        }
+    summary["by_observed_frame"] = []
+    for frame in frame_records:
+        rows = [row for row in ledger if row["asset_id"] == frame["asset_id"]]
+        positives = [row for row in rows if row["new_supervision"] == "POSITIVE"]
+        summary["by_observed_frame"].append({
+            **frame, "component_count": len(rows), "positive_observation_count": len(positives),
+            "ignore_component_count": len(rows) - len(positives),
+            "annotation_site_count": len({row["annotation_site_id"] for row in positives}),
+            "first_confident_site_count": sum(site["source_id"] == frame["source_id"]
+                                               and site["first_confident_observation"]["frame_index"] == frame["frame_index"]
+                                               for site in sites),
+        })
+    acquisition_counts = {key: value["annotation_site_count"] for key, value in summary["by_acquisition"].items()}
+    summary["structural_gate"] = {
+        "minimum_sites_for_three_nonempty_partitions": 3,
+        "pass": len(sites) >= 3,
+        "meaning": "NECESSARY_COUNT_CONDITION_ONLY_NOT_A_SPLIT_OR_STATISTICAL_POWER_CLAIM",
+    }
+    summary["within_acquisition_stratification"] = {
+        "annotation_site_counts": acquisition_counts,
+        "pass": bool(acquisition_counts) and all(count >= 3 for count in acquisition_counts.values()),
+        "meaning": "THREE_NONEMPTY_PARTITIONS_POSSIBLE_BY_COUNT_IN_EACH_OBSERVED_ACQUISITION_ONLY",
+    }
+    return {
+        "schema_version": 1, "ledger": ledger, "sites": sites, "summary": summary,
+        "distance_rule": {"edge_distance_px": EDGE_DISTANCE_PX,
+                          "edge_distance_squared_px2": EDGE_DISTANCE_SQUARED,
+                          "inclusive": True, "round_before_comparison": False,
+                          "transitive_connected_components": True},
+        "background_rule": "ANNOTATED_BACKGROUND_IS_A_FUTURE_SAMPLING_CONVENTION_NOT_A_PHYSICAL_NEGATIVE; NO_BACKGROUND_MATERIALISED",
+        "patches_created": 0, "split_ids_created": False,
+        "physical_event_identity_inferred": False, "physical_onset_inferred": False,
+        "ml_runs": 0,
+    }

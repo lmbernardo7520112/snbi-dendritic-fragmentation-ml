@@ -1,0 +1,4382 @@
+[
+  {
+    "annotation_site_id": "ESM3:annotation-site:0e1e69b05a93e8c0",
+    "source_id": "ESM3",
+    "acquisition_id": "bottom_up_anti_parallel",
+    "status": "OPERATIONAL_PUBLISHED_LOCATION_SITE",
+    "observations": [
+      {
+        "observation_id": "ESM3:73:graphic-component-0061",
+        "frame_index": 73,
+        "experimental_time_s": 60.18,
+        "center_x": 1259.1417849930556,
+        "center_y": 737.80629624713,
+        "radius_graphical_px": 10.81446202332647
+      }
+    ],
+    "frame_indices": [
+      73
+    ],
+    "experimental_times": [
+      60.18
+    ],
+    "representative_x": 1259.1417849930556,
+    "representative_y": 737.80629624713,
+    "spatial_dispersion_px": {
+      "diameter": 0.0,
+      "max": 0.0,
+      "rms": 0.0
+    },
+    "number_of_observations": 1,
+    "observation_ids": [
+      "ESM3:73:graphic-component-0061"
+    ],
+    "observation_count": 1,
+    "observed_frame_indices": [
+      73
+    ],
+    "distinct_observed_frame_count": 1,
+    "representative": {
+      "observation_id": "ESM3:73:graphic-component-0061",
+      "center_x": 1259.1417849930556,
+      "center_y": 737.80629624713,
+      "selection_rule": "OBSERVED_MEDOID_MIN_SUM_SQUARED_DISTANCE_LEXICOGRAPHIC_ID_TIE"
+    },
+    "maximum_pairwise_diameter_px": 0.0,
+    "maximum_distance_to_representative_px": 0.0,
+    "rms_distance_to_representative_px": 0.0,
+    "radius_by_observation": [
+      {
+        "observation_id": "ESM3:73:graphic-component-0061",
+        "radius_graphical_px": 10.81446202332647
+      }
+    ],
+    "radius_range_graphical_px": [
+      10.81446202332647,
+      10.81446202332647
+    ],
+    "first_confident_observation": {
+      "observation_id": "ESM3:73:graphic-component-0061",
+      "frame_index": 73,
+      "experimental_time_s": 60.18
+    },
+    "first_observation_is_physical_onset": false,
+    "physical_event_id": null,
+    "event_onset_frame": null,
+    "grouping_rule": "CONNECTED_COMPONENTS_OF_DISTANCE_LE_3_PX",
+    "transitive_diameter_can_exceed_3_px": true
+  },
+  {
+    "annotation_site_id": "ESM3:annotation-site:154e3356f94c4c97",
+    "source_id": "ESM3",
+    "acquisition_id": "bottom_up_anti_parallel",
+    "status": "OPERATIONAL_PUBLISHED_LOCATION_SITE",
+    "observations": [
+      {
+        "observation_id": "ESM3:146:graphic-component-0088",
+        "frame_index": 146,
+        "experimental_time_s": 146.32,
+        "center_x": 145.0689880164384,
+        "center_y": 837.0893098004552,
+        "radius_graphical_px": 10.759293967419616
+      }
+    ],
+    "frame_indices": [
+      146
+    ],
+    "experimental_times": [
+      146.32
+    ],
+    "representative_x": 145.0689880164384,
+    "representative_y": 837.0893098004552,
+    "spatial_dispersion_px": {
+      "diameter": 0.0,
+      "max": 0.0,
+      "rms": 0.0
+    },
+    "number_of_observations": 1,
+    "observation_ids": [
+      "ESM3:146:graphic-component-0088"
+    ],
+    "observation_count": 1,
+    "observed_frame_indices": [
+      146
+    ],
+    "distinct_observed_frame_count": 1,
+    "representative": {
+      "observation_id": "ESM3:146:graphic-component-0088",
+      "center_x": 145.0689880164384,
+      "center_y": 837.0893098004552,
+      "selection_rule": "OBSERVED_MEDOID_MIN_SUM_SQUARED_DISTANCE_LEXICOGRAPHIC_ID_TIE"
+    },
+    "maximum_pairwise_diameter_px": 0.0,
+    "maximum_distance_to_representative_px": 0.0,
+    "rms_distance_to_representative_px": 0.0,
+    "radius_by_observation": [
+      {
+        "observation_id": "ESM3:146:graphic-component-0088",
+        "radius_graphical_px": 10.759293967419616
+      }
+    ],
+    "radius_range_graphical_px": [
+      10.759293967419616,
+      10.759293967419616
+    ],
+    "first_confident_observation": {
+      "observation_id": "ESM3:146:graphic-component-0088",
+      "frame_index": 146,
+      "experimental_time_s": 146.32
+    },
+    "first_observation_is_physical_onset": false,
+    "physical_event_id": null,
+    "event_onset_frame": null,
+    "grouping_rule": "CONNECTED_COMPONENTS_OF_DISTANCE_LE_3_PX",
+    "transitive_diameter_can_exceed_3_px": true
+  },
+  {
+    "annotation_site_id": "ESM3:annotation-site:25e68d0e4b29a7aa",
+    "source_id": "ESM3",
+    "acquisition_id": "bottom_up_anti_parallel",
+    "status": "OPERATIONAL_PUBLISHED_LOCATION_SITE",
+    "observations": [
+      {
+        "observation_id": "ESM3:293:graphic-component-0095",
+        "frame_index": 293,
+        "experimental_time_s": 319.78,
+        "center_x": 673.8745558457005,
+        "center_y": 897.8745558457002,
+        "radius_graphical_px": 10.7864240740449
+      }
+    ],
+    "frame_indices": [
+      293
+    ],
+    "experimental_times": [
+      319.78
+    ],
+    "representative_x": 673.8745558457005,
+    "representative_y": 897.8745558457002,
+    "spatial_dispersion_px": {
+      "diameter": 0.0,
+      "max": 0.0,
+      "rms": 0.0
+    },
+    "number_of_observations": 1,
+    "observation_ids": [
+      "ESM3:293:graphic-component-0095"
+    ],
+    "observation_count": 1,
+    "observed_frame_indices": [
+      293
+    ],
+    "distinct_observed_frame_count": 1,
+    "representative": {
+      "observation_id": "ESM3:293:graphic-component-0095",
+      "center_x": 673.8745558457005,
+      "center_y": 897.8745558457002,
+      "selection_rule": "OBSERVED_MEDOID_MIN_SUM_SQUARED_DISTANCE_LEXICOGRAPHIC_ID_TIE"
+    },
+    "maximum_pairwise_diameter_px": 0.0,
+    "maximum_distance_to_representative_px": 0.0,
+    "rms_distance_to_representative_px": 0.0,
+    "radius_by_observation": [
+      {
+        "observation_id": "ESM3:293:graphic-component-0095",
+        "radius_graphical_px": 10.7864240740449
+      }
+    ],
+    "radius_range_graphical_px": [
+      10.7864240740449,
+      10.7864240740449
+    ],
+    "first_confident_observation": {
+      "observation_id": "ESM3:293:graphic-component-0095",
+      "frame_index": 293,
+      "experimental_time_s": 319.78
+    },
+    "first_observation_is_physical_onset": false,
+    "physical_event_id": null,
+    "event_onset_frame": null,
+    "grouping_rule": "CONNECTED_COMPONENTS_OF_DISTANCE_LE_3_PX",
+    "transitive_diameter_can_exceed_3_px": true
+  },
+  {
+    "annotation_site_id": "ESM3:annotation-site:2d8693eaf74b3e06",
+    "source_id": "ESM3",
+    "acquisition_id": "bottom_up_anti_parallel",
+    "status": "OPERATIONAL_PUBLISHED_LOCATION_SITE",
+    "observations": [
+      {
+        "observation_id": "ESM3:293:graphic-component-0066",
+        "frame_index": 293,
+        "experimental_time_s": 319.78,
+        "center_x": 561.0689880164384,
+        "center_y": 665.910690199544,
+        "radius_graphical_px": 10.759293967419623
+      }
+    ],
+    "frame_indices": [
+      293
+    ],
+    "experimental_times": [
+      319.78
+    ],
+    "representative_x": 561.0689880164384,
+    "representative_y": 665.910690199544,
+    "spatial_dispersion_px": {
+      "diameter": 0.0,
+      "max": 0.0,
+      "rms": 0.0
+    },
+    "number_of_observations": 1,
+    "observation_ids": [
+      "ESM3:293:graphic-component-0066"
+    ],
+    "observation_count": 1,
+    "observed_frame_indices": [
+      293
+    ],
+    "distinct_observed_frame_count": 1,
+    "representative": {
+      "observation_id": "ESM3:293:graphic-component-0066",
+      "center_x": 561.0689880164384,
+      "center_y": 665.910690199544,
+      "selection_rule": "OBSERVED_MEDOID_MIN_SUM_SQUARED_DISTANCE_LEXICOGRAPHIC_ID_TIE"
+    },
+    "maximum_pairwise_diameter_px": 0.0,
+    "maximum_distance_to_representative_px": 0.0,
+    "rms_distance_to_representative_px": 0.0,
+    "radius_by_observation": [
+      {
+        "observation_id": "ESM3:293:graphic-component-0066",
+        "radius_graphical_px": 10.759293967419623
+      }
+    ],
+    "radius_range_graphical_px": [
+      10.759293967419623,
+      10.759293967419623
+    ],
+    "first_confident_observation": {
+      "observation_id": "ESM3:293:graphic-component-0066",
+      "frame_index": 293,
+      "experimental_time_s": 319.78
+    },
+    "first_observation_is_physical_onset": false,
+    "physical_event_id": null,
+    "event_onset_frame": null,
+    "grouping_rule": "CONNECTED_COMPONENTS_OF_DISTANCE_LE_3_PX",
+    "transitive_diameter_can_exceed_3_px": true
+  },
+  {
+    "annotation_site_id": "ESM3:annotation-site:3eeab8e9efcb0d21",
+    "source_id": "ESM3",
+    "acquisition_id": "bottom_up_anti_parallel",
+    "status": "OPERATIONAL_PUBLISHED_LOCATION_SITE",
+    "observations": [
+      {
+        "observation_id": "ESM3:219:graphic-component-0020",
+        "frame_index": 219,
+        "experimental_time_s": 232.46,
+        "center_x": 351.8582150069445,
+        "center_y": 173.80629624713097,
+        "radius_graphical_px": 10.814462023326463
+      }
+    ],
+    "frame_indices": [
+      219
+    ],
+    "experimental_times": [
+      232.46
+    ],
+    "representative_x": 351.8582150069445,
+    "representative_y": 173.80629624713097,
+    "spatial_dispersion_px": {
+      "diameter": 0.0,
+      "max": 0.0,
+      "rms": 0.0
+    },
+    "number_of_observations": 1,
+    "observation_ids": [
+      "ESM3:219:graphic-component-0020"
+    ],
+    "observation_count": 1,
+    "observed_frame_indices": [
+      219
+    ],
+    "distinct_observed_frame_count": 1,
+    "representative": {
+      "observation_id": "ESM3:219:graphic-component-0020",
+      "center_x": 351.8582150069445,
+      "center_y": 173.80629624713097,
+      "selection_rule": "OBSERVED_MEDOID_MIN_SUM_SQUARED_DISTANCE_LEXICOGRAPHIC_ID_TIE"
+    },
+    "maximum_pairwise_diameter_px": 0.0,
+    "maximum_distance_to_representative_px": 0.0,
+    "rms_distance_to_representative_px": 0.0,
+    "radius_by_observation": [
+      {
+        "observation_id": "ESM3:219:graphic-component-0020",
+        "radius_graphical_px": 10.814462023326463
+      }
+    ],
+    "radius_range_graphical_px": [
+      10.814462023326463,
+      10.814462023326463
+    ],
+    "first_confident_observation": {
+      "observation_id": "ESM3:219:graphic-component-0020",
+      "frame_index": 219,
+      "experimental_time_s": 232.46
+    },
+    "first_observation_is_physical_onset": false,
+    "physical_event_id": null,
+    "event_onset_frame": null,
+    "grouping_rule": "CONNECTED_COMPONENTS_OF_DISTANCE_LE_3_PX",
+    "transitive_diameter_can_exceed_3_px": true
+  },
+  {
+    "annotation_site_id": "ESM3:annotation-site:402568b092cf3023",
+    "source_id": "ESM3",
+    "acquisition_id": "bottom_up_anti_parallel",
+    "status": "OPERATIONAL_PUBLISHED_LOCATION_SITE",
+    "observations": [
+      {
+        "observation_id": "ESM3:73:graphic-component-0086",
+        "frame_index": 73,
+        "experimental_time_s": 60.18,
+        "center_x": 1201.1417849930556,
+        "center_y": 975.80629624713,
+        "radius_graphical_px": 10.81446202332647
+      },
+      {
+        "observation_id": "ESM3:146:graphic-component-0107",
+        "frame_index": 146,
+        "experimental_time_s": 146.32,
+        "center_x": 1201.1254441542997,
+        "center_y": 975.8745558457002,
+        "radius_graphical_px": 10.786424074044898
+      },
+      {
+        "observation_id": "ESM3:219:graphic-component-0107",
+        "frame_index": 219,
+        "experimental_time_s": 232.46,
+        "center_x": 1201.1254441542997,
+        "center_y": 975.8745558457002,
+        "radius_graphical_px": 10.786424074044898
+      },
+      {
+        "observation_id": "ESM3:293:graphic-component-0108",
+        "frame_index": 293,
+        "experimental_time_s": 319.78,
+        "center_x": 1201.0689880164384,
+        "center_y": 975.910690199544,
+        "radius_graphical_px": 10.759293967419623
+      }
+    ],
+    "frame_indices": [
+      73,
+      146,
+      219,
+      293
+    ],
+    "experimental_times": [
+      60.18,
+      146.32,
+      232.46,
+      319.78
+    ],
+    "representative_x": 1201.1254441542997,
+    "representative_y": 975.8745558457002,
+    "spatial_dispersion_px": {
+      "diameter": 0.1272693879344256,
+      "max": 0.0701882882553141,
+      "rms": 0.04852675251374969
+    },
+    "number_of_observations": 4,
+    "observation_ids": [
+      "ESM3:146:graphic-component-0107",
+      "ESM3:219:graphic-component-0107",
+      "ESM3:293:graphic-component-0108",
+      "ESM3:73:graphic-component-0086"
+    ],
+    "observation_count": 4,
+    "observed_frame_indices": [
+      73,
+      146,
+      219,
+      293
+    ],
+    "distinct_observed_frame_count": 4,
+    "representative": {
+      "observation_id": "ESM3:146:graphic-component-0107",
+      "center_x": 1201.1254441542997,
+      "center_y": 975.8745558457002,
+      "selection_rule": "OBSERVED_MEDOID_MIN_SUM_SQUARED_DISTANCE_LEXICOGRAPHIC_ID_TIE"
+    },
+    "maximum_pairwise_diameter_px": 0.1272693879344256,
+    "maximum_distance_to_representative_px": 0.0701882882553141,
+    "rms_distance_to_representative_px": 0.04852675251374969,
+    "radius_by_observation": [
+      {
+        "observation_id": "ESM3:146:graphic-component-0107",
+        "radius_graphical_px": 10.786424074044898
+      },
+      {
+        "observation_id": "ESM3:219:graphic-component-0107",
+        "radius_graphical_px": 10.786424074044898
+      },
+      {
+        "observation_id": "ESM3:293:graphic-component-0108",
+        "radius_graphical_px": 10.759293967419623
+      },
+      {
+        "observation_id": "ESM3:73:graphic-component-0086",
+        "radius_graphical_px": 10.81446202332647
+      }
+    ],
+    "radius_range_graphical_px": [
+      10.759293967419623,
+      10.81446202332647
+    ],
+    "first_confident_observation": {
+      "observation_id": "ESM3:73:graphic-component-0086",
+      "frame_index": 73,
+      "experimental_time_s": 60.18
+    },
+    "first_observation_is_physical_onset": false,
+    "physical_event_id": null,
+    "event_onset_frame": null,
+    "grouping_rule": "CONNECTED_COMPONENTS_OF_DISTANCE_LE_3_PX",
+    "transitive_diameter_can_exceed_3_px": true
+  },
+  {
+    "annotation_site_id": "ESM3:annotation-site:4946e59e22391ce7",
+    "source_id": "ESM3",
+    "acquisition_id": "bottom_up_anti_parallel",
+    "status": "OPERATIONAL_PUBLISHED_LOCATION_SITE",
+    "observations": [
+      {
+        "observation_id": "ESM3:293:graphic-component-0055",
+        "frame_index": 293,
+        "experimental_time_s": 319.78,
+        "center_x": 365.9310119835616,
+        "center_y": 533.089309800456,
+        "radius_graphical_px": 10.75929396741962
+      }
+    ],
+    "frame_indices": [
+      293
+    ],
+    "experimental_times": [
+      319.78
+    ],
+    "representative_x": 365.9310119835616,
+    "representative_y": 533.089309800456,
+    "spatial_dispersion_px": {
+      "diameter": 0.0,
+      "max": 0.0,
+      "rms": 0.0
+    },
+    "number_of_observations": 1,
+    "observation_ids": [
+      "ESM3:293:graphic-component-0055"
+    ],
+    "observation_count": 1,
+    "observed_frame_indices": [
+      293
+    ],
+    "distinct_observed_frame_count": 1,
+    "representative": {
+      "observation_id": "ESM3:293:graphic-component-0055",
+      "center_x": 365.9310119835616,
+      "center_y": 533.089309800456,
+      "selection_rule": "OBSERVED_MEDOID_MIN_SUM_SQUARED_DISTANCE_LEXICOGRAPHIC_ID_TIE"
+    },
+    "maximum_pairwise_diameter_px": 0.0,
+    "maximum_distance_to_representative_px": 0.0,
+    "rms_distance_to_representative_px": 0.0,
+    "radius_by_observation": [
+      {
+        "observation_id": "ESM3:293:graphic-component-0055",
+        "radius_graphical_px": 10.75929396741962
+      }
+    ],
+    "radius_range_graphical_px": [
+      10.75929396741962,
+      10.75929396741962
+    ],
+    "first_confident_observation": {
+      "observation_id": "ESM3:293:graphic-component-0055",
+      "frame_index": 293,
+      "experimental_time_s": 319.78
+    },
+    "first_observation_is_physical_onset": false,
+    "physical_event_id": null,
+    "event_onset_frame": null,
+    "grouping_rule": "CONNECTED_COMPONENTS_OF_DISTANCE_LE_3_PX",
+    "transitive_diameter_can_exceed_3_px": true
+  },
+  {
+    "annotation_site_id": "ESM3:annotation-site:4b80618dde9397fd",
+    "source_id": "ESM3",
+    "acquisition_id": "bottom_up_anti_parallel",
+    "status": "OPERATIONAL_PUBLISHED_LOCATION_SITE",
+    "observations": [
+      {
+        "observation_id": "ESM3:146:graphic-component-0096",
+        "frame_index": 146,
+        "experimental_time_s": 146.32,
+        "center_x": 231.92941629273605,
+        "center_y": 907.929416292736,
+        "radius_graphical_px": 10.730923008472482
+      },
+      {
+        "observation_id": "ESM3:219:graphic-component-0095",
+        "frame_index": 219,
+        "experimental_time_s": 232.46,
+        "center_x": 231.87455584570043,
+        "center_y": 907.8745558457002,
+        "radius_graphical_px": 10.7864240740449
+      }
+    ],
+    "frame_indices": [
+      146,
+      219
+    ],
+    "experimental_times": [
+      146.32,
+      232.46
+    ],
+    "representative_x": 231.92941629273605,
+    "representative_y": 907.929416292736,
+    "spatial_dispersion_px": {
+      "diameter": 0.07758438823576878,
+      "max": 0.07758438823576878,
+      "rms": 0.054860447035721904
+    },
+    "number_of_observations": 2,
+    "observation_ids": [
+      "ESM3:146:graphic-component-0096",
+      "ESM3:219:graphic-component-0095"
+    ],
+    "observation_count": 2,
+    "observed_frame_indices": [
+      146,
+      219
+    ],
+    "distinct_observed_frame_count": 2,
+    "representative": {
+      "observation_id": "ESM3:146:graphic-component-0096",
+      "center_x": 231.92941629273605,
+      "center_y": 907.929416292736,
+      "selection_rule": "OBSERVED_MEDOID_MIN_SUM_SQUARED_DISTANCE_LEXICOGRAPHIC_ID_TIE"
+    },
+    "maximum_pairwise_diameter_px": 0.07758438823576878,
+    "maximum_distance_to_representative_px": 0.07758438823576878,
+    "rms_distance_to_representative_px": 0.054860447035721904,
+    "radius_by_observation": [
+      {
+        "observation_id": "ESM3:146:graphic-component-0096",
+        "radius_graphical_px": 10.730923008472482
+      },
+      {
+        "observation_id": "ESM3:219:graphic-component-0095",
+        "radius_graphical_px": 10.7864240740449
+      }
+    ],
+    "radius_range_graphical_px": [
+      10.730923008472482,
+      10.7864240740449
+    ],
+    "first_confident_observation": {
+      "observation_id": "ESM3:146:graphic-component-0096",
+      "frame_index": 146,
+      "experimental_time_s": 146.32
+    },
+    "first_observation_is_physical_onset": false,
+    "physical_event_id": null,
+    "event_onset_frame": null,
+    "grouping_rule": "CONNECTED_COMPONENTS_OF_DISTANCE_LE_3_PX",
+    "transitive_diameter_can_exceed_3_px": true
+  },
+  {
+    "annotation_site_id": "ESM3:annotation-site:4b88c441ae9c6696",
+    "source_id": "ESM3",
+    "acquisition_id": "bottom_up_anti_parallel",
+    "status": "OPERATIONAL_PUBLISHED_LOCATION_SITE",
+    "observations": [
+      {
+        "observation_id": "ESM3:73:graphic-component-0055",
+        "frame_index": 73,
+        "experimental_time_s": 60.18,
+        "center_x": 364.06518841266706,
+        "center_y": 695.7905892189165,
+        "radius_graphical_px": 10.733377423329955
+      },
+      {
+        "observation_id": "ESM3:146:graphic-component-0071",
+        "frame_index": 146,
+        "experimental_time_s": 146.32,
+        "center_x": 363.92077661723084,
+        "center_y": 695.810902492945,
+        "radius_graphical_px": 10.7894977050917
+      },
+      {
+        "observation_id": "ESM3:219:graphic-component-0070",
+        "frame_index": 219,
+        "experimental_time_s": 232.46,
+        "center_x": 363.9439100981467,
+        "center_y": 695.8601749944364,
+        "radius_graphical_px": 10.758743837333267
+      },
+      {
+        "observation_id": "ESM3:293:graphic-component-0071",
+        "frame_index": 293,
+        "experimental_time_s": 319.78,
+        "center_x": 363.92674310155365,
+        "center_y": 695.7914357872498,
+        "radius_graphical_px": 10.787366317122173
+      }
+    ],
+    "frame_indices": [
+      73,
+      146,
+      219,
+      293
+    ],
+    "experimental_times": [
+      60.18,
+      146.32,
+      232.46,
+      319.78
+    ],
+    "representative_x": 363.92674310155365,
+    "representative_y": 695.7914357872498,
+    "spatial_dispersion_px": {
+      "diameter": 0.1458334521393181,
+      "max": 0.13844789939623278,
+      "rms": 0.07842537342865126
+    },
+    "number_of_observations": 4,
+    "observation_ids": [
+      "ESM3:146:graphic-component-0071",
+      "ESM3:219:graphic-component-0070",
+      "ESM3:293:graphic-component-0071",
+      "ESM3:73:graphic-component-0055"
+    ],
+    "observation_count": 4,
+    "observed_frame_indices": [
+      73,
+      146,
+      219,
+      293
+    ],
+    "distinct_observed_frame_count": 4,
+    "representative": {
+      "observation_id": "ESM3:293:graphic-component-0071",
+      "center_x": 363.92674310155365,
+      "center_y": 695.7914357872498,
+      "selection_rule": "OBSERVED_MEDOID_MIN_SUM_SQUARED_DISTANCE_LEXICOGRAPHIC_ID_TIE"
+    },
+    "maximum_pairwise_diameter_px": 0.1458334521393181,
+    "maximum_distance_to_representative_px": 0.13844789939623278,
+    "rms_distance_to_representative_px": 0.07842537342865126,
+    "radius_by_observation": [
+      {
+        "observation_id": "ESM3:146:graphic-component-0071",
+        "radius_graphical_px": 10.7894977050917
+      },
+      {
+        "observation_id": "ESM3:219:graphic-component-0070",
+        "radius_graphical_px": 10.758743837333267
+      },
+      {
+        "observation_id": "ESM3:293:graphic-component-0071",
+        "radius_graphical_px": 10.787366317122173
+      },
+      {
+        "observation_id": "ESM3:73:graphic-component-0055",
+        "radius_graphical_px": 10.733377423329955
+      }
+    ],
+    "radius_range_graphical_px": [
+      10.733377423329955,
+      10.7894977050917
+    ],
+    "first_confident_observation": {
+      "observation_id": "ESM3:73:graphic-component-0055",
+      "frame_index": 73,
+      "experimental_time_s": 60.18
+    },
+    "first_observation_is_physical_onset": false,
+    "physical_event_id": null,
+    "event_onset_frame": null,
+    "grouping_rule": "CONNECTED_COMPONENTS_OF_DISTANCE_LE_3_PX",
+    "transitive_diameter_can_exceed_3_px": true
+  },
+  {
+    "annotation_site_id": "ESM3:annotation-site:4c41286cef74d212",
+    "source_id": "ESM3",
+    "acquisition_id": "bottom_up_anti_parallel",
+    "status": "OPERATIONAL_PUBLISHED_LOCATION_SITE",
+    "observations": [
+      {
+        "observation_id": "ESM3:73:graphic-component-0037",
+        "frame_index": 73,
+        "experimental_time_s": 60.18,
+        "center_x": 1019.9939418702457,
+        "center_y": 527.7957335940216,
+        "radius_graphical_px": 10.760913967817851
+      },
+      {
+        "observation_id": "ESM3:146:graphic-component-0052",
+        "frame_index": 146,
+        "experimental_time_s": 146.32,
+        "center_x": 1019.8582150069445,
+        "center_y": 527.80629624713,
+        "radius_graphical_px": 10.814462023326469
+      }
+    ],
+    "frame_indices": [
+      73,
+      146
+    ],
+    "experimental_times": [
+      60.18,
+      146.32
+    ],
+    "representative_x": 1019.8582150069445,
+    "representative_y": 527.80629624713,
+    "spatial_dispersion_px": {
+      "diameter": 0.1361372508253185,
+      "max": 0.1361372508253185,
+      "rms": 0.09626357323067664
+    },
+    "number_of_observations": 2,
+    "observation_ids": [
+      "ESM3:146:graphic-component-0052",
+      "ESM3:73:graphic-component-0037"
+    ],
+    "observation_count": 2,
+    "observed_frame_indices": [
+      73,
+      146
+    ],
+    "distinct_observed_frame_count": 2,
+    "representative": {
+      "observation_id": "ESM3:146:graphic-component-0052",
+      "center_x": 1019.8582150069445,
+      "center_y": 527.80629624713,
+      "selection_rule": "OBSERVED_MEDOID_MIN_SUM_SQUARED_DISTANCE_LEXICOGRAPHIC_ID_TIE"
+    },
+    "maximum_pairwise_diameter_px": 0.1361372508253185,
+    "maximum_distance_to_representative_px": 0.1361372508253185,
+    "rms_distance_to_representative_px": 0.09626357323067664,
+    "radius_by_observation": [
+      {
+        "observation_id": "ESM3:146:graphic-component-0052",
+        "radius_graphical_px": 10.814462023326469
+      },
+      {
+        "observation_id": "ESM3:73:graphic-component-0037",
+        "radius_graphical_px": 10.760913967817851
+      }
+    ],
+    "radius_range_graphical_px": [
+      10.760913967817851,
+      10.814462023326469
+    ],
+    "first_confident_observation": {
+      "observation_id": "ESM3:73:graphic-component-0037",
+      "frame_index": 73,
+      "experimental_time_s": 60.18
+    },
+    "first_observation_is_physical_onset": false,
+    "physical_event_id": null,
+    "event_onset_frame": null,
+    "grouping_rule": "CONNECTED_COMPONENTS_OF_DISTANCE_LE_3_PX",
+    "transitive_diameter_can_exceed_3_px": true
+  },
+  {
+    "annotation_site_id": "ESM3:annotation-site:4ce252ca0ab4c2ff",
+    "source_id": "ESM3",
+    "acquisition_id": "bottom_up_anti_parallel",
+    "status": "OPERATIONAL_PUBLISHED_LOCATION_SITE",
+    "observations": [
+      {
+        "observation_id": "ESM3:73:graphic-component-0088",
+        "frame_index": 73,
+        "experimental_time_s": 60.18,
+        "center_x": 735.8963555555894,
+        "center_y": 985.1195640773201,
+        "radius_graphical_px": 10.846570179947951
+      },
+      {
+        "observation_id": "ESM3:146:graphic-component-0109",
+        "frame_index": 146,
+        "experimental_time_s": 146.32,
+        "center_x": 735.9267431015536,
+        "center_y": 985.20856421275,
+        "radius_graphical_px": 10.78736631712217
+      }
+    ],
+    "frame_indices": [
+      73,
+      146
+    ],
+    "experimental_times": [
+      60.18,
+      146.32
+    ],
+    "representative_x": 735.9267431015536,
+    "representative_y": 985.20856421275,
+    "spatial_dispersion_px": {
+      "diameter": 0.09404481408498143,
+      "max": 0.09404481408498143,
+      "rms": 0.0664997257749185
+    },
+    "number_of_observations": 2,
+    "observation_ids": [
+      "ESM3:146:graphic-component-0109",
+      "ESM3:73:graphic-component-0088"
+    ],
+    "observation_count": 2,
+    "observed_frame_indices": [
+      73,
+      146
+    ],
+    "distinct_observed_frame_count": 2,
+    "representative": {
+      "observation_id": "ESM3:146:graphic-component-0109",
+      "center_x": 735.9267431015536,
+      "center_y": 985.20856421275,
+      "selection_rule": "OBSERVED_MEDOID_MIN_SUM_SQUARED_DISTANCE_LEXICOGRAPHIC_ID_TIE"
+    },
+    "maximum_pairwise_diameter_px": 0.09404481408498143,
+    "maximum_distance_to_representative_px": 0.09404481408498143,
+    "rms_distance_to_representative_px": 0.0664997257749185,
+    "radius_by_observation": [
+      {
+        "observation_id": "ESM3:146:graphic-component-0109",
+        "radius_graphical_px": 10.78736631712217
+      },
+      {
+        "observation_id": "ESM3:73:graphic-component-0088",
+        "radius_graphical_px": 10.846570179947951
+      }
+    ],
+    "radius_range_graphical_px": [
+      10.78736631712217,
+      10.846570179947951
+    ],
+    "first_confident_observation": {
+      "observation_id": "ESM3:73:graphic-component-0088",
+      "frame_index": 73,
+      "experimental_time_s": 60.18
+    },
+    "first_observation_is_physical_onset": false,
+    "physical_event_id": null,
+    "event_onset_frame": null,
+    "grouping_rule": "CONNECTED_COMPONENTS_OF_DISTANCE_LE_3_PX",
+    "transitive_diameter_can_exceed_3_px": true
+  },
+  {
+    "annotation_site_id": "ESM3:annotation-site:4e3f86cfe00b170b",
+    "source_id": "ESM3",
+    "acquisition_id": "bottom_up_anti_parallel",
+    "status": "OPERATIONAL_PUBLISHED_LOCATION_SITE",
+    "observations": [
+      {
+        "observation_id": "ESM3:73:graphic-component-0033",
+        "frame_index": 73,
+        "experimental_time_s": 60.18,
+        "center_x": 59.141784993055516,
+        "center_y": 473.80629624713004,
+        "radius_graphical_px": 10.81446202332647
+      },
+      {
+        "observation_id": "ESM3:146:graphic-component-0048",
+        "frame_index": 146,
+        "experimental_time_s": 146.32,
+        "center_x": 59.141784993055516,
+        "center_y": 473.80629624713004,
+        "radius_graphical_px": 10.81446202332647
+      },
+      {
+        "observation_id": "ESM3:219:graphic-component-0047",
+        "frame_index": 219,
+        "experimental_time_s": 232.46,
+        "center_x": 59.141784993055516,
+        "center_y": 473.80629624713004,
+        "radius_graphical_px": 10.81446202332647
+      },
+      {
+        "observation_id": "ESM3:293:graphic-component-0048",
+        "frame_index": 293,
+        "experimental_time_s": 319.78,
+        "center_x": 59.141784993055516,
+        "center_y": 473.80629624713004,
+        "radius_graphical_px": 10.81446202332647
+      }
+    ],
+    "frame_indices": [
+      73,
+      146,
+      219,
+      293
+    ],
+    "experimental_times": [
+      60.18,
+      146.32,
+      232.46,
+      319.78
+    ],
+    "representative_x": 59.141784993055516,
+    "representative_y": 473.80629624713004,
+    "spatial_dispersion_px": {
+      "diameter": 0.0,
+      "max": 0.0,
+      "rms": 0.0
+    },
+    "number_of_observations": 4,
+    "observation_ids": [
+      "ESM3:146:graphic-component-0048",
+      "ESM3:219:graphic-component-0047",
+      "ESM3:293:graphic-component-0048",
+      "ESM3:73:graphic-component-0033"
+    ],
+    "observation_count": 4,
+    "observed_frame_indices": [
+      73,
+      146,
+      219,
+      293
+    ],
+    "distinct_observed_frame_count": 4,
+    "representative": {
+      "observation_id": "ESM3:146:graphic-component-0048",
+      "center_x": 59.141784993055516,
+      "center_y": 473.80629624713004,
+      "selection_rule": "OBSERVED_MEDOID_MIN_SUM_SQUARED_DISTANCE_LEXICOGRAPHIC_ID_TIE"
+    },
+    "maximum_pairwise_diameter_px": 0.0,
+    "maximum_distance_to_representative_px": 0.0,
+    "rms_distance_to_representative_px": 0.0,
+    "radius_by_observation": [
+      {
+        "observation_id": "ESM3:146:graphic-component-0048",
+        "radius_graphical_px": 10.81446202332647
+      },
+      {
+        "observation_id": "ESM3:219:graphic-component-0047",
+        "radius_graphical_px": 10.81446202332647
+      },
+      {
+        "observation_id": "ESM3:293:graphic-component-0048",
+        "radius_graphical_px": 10.81446202332647
+      },
+      {
+        "observation_id": "ESM3:73:graphic-component-0033",
+        "radius_graphical_px": 10.81446202332647
+      }
+    ],
+    "radius_range_graphical_px": [
+      10.81446202332647,
+      10.81446202332647
+    ],
+    "first_confident_observation": {
+      "observation_id": "ESM3:73:graphic-component-0033",
+      "frame_index": 73,
+      "experimental_time_s": 60.18
+    },
+    "first_observation_is_physical_onset": false,
+    "physical_event_id": null,
+    "event_onset_frame": null,
+    "grouping_rule": "CONNECTED_COMPONENTS_OF_DISTANCE_LE_3_PX",
+    "transitive_diameter_can_exceed_3_px": true
+  },
+  {
+    "annotation_site_id": "ESM3:annotation-site:5b418572d0664fed",
+    "source_id": "ESM3",
+    "acquisition_id": "bottom_up_anti_parallel",
+    "status": "OPERATIONAL_PUBLISHED_LOCATION_SITE",
+    "observations": [
+      {
+        "observation_id": "ESM3:293:graphic-component-0086",
+        "frame_index": 293,
+        "experimental_time_s": 319.78,
+        "center_x": 19.056089901853305,
+        "center_y": 825.8601749944362,
+        "radius_graphical_px": 10.758743837333268
+      }
+    ],
+    "frame_indices": [
+      293
+    ],
+    "experimental_times": [
+      319.78
+    ],
+    "representative_x": 19.056089901853305,
+    "representative_y": 825.8601749944362,
+    "spatial_dispersion_px": {
+      "diameter": 0.0,
+      "max": 0.0,
+      "rms": 0.0
+    },
+    "number_of_observations": 1,
+    "observation_ids": [
+      "ESM3:293:graphic-component-0086"
+    ],
+    "observation_count": 1,
+    "observed_frame_indices": [
+      293
+    ],
+    "distinct_observed_frame_count": 1,
+    "representative": {
+      "observation_id": "ESM3:293:graphic-component-0086",
+      "center_x": 19.056089901853305,
+      "center_y": 825.8601749944362,
+      "selection_rule": "OBSERVED_MEDOID_MIN_SUM_SQUARED_DISTANCE_LEXICOGRAPHIC_ID_TIE"
+    },
+    "maximum_pairwise_diameter_px": 0.0,
+    "maximum_distance_to_representative_px": 0.0,
+    "rms_distance_to_representative_px": 0.0,
+    "radius_by_observation": [
+      {
+        "observation_id": "ESM3:293:graphic-component-0086",
+        "radius_graphical_px": 10.758743837333268
+      }
+    ],
+    "radius_range_graphical_px": [
+      10.758743837333268,
+      10.758743837333268
+    ],
+    "first_confident_observation": {
+      "observation_id": "ESM3:293:graphic-component-0086",
+      "frame_index": 293,
+      "experimental_time_s": 319.78
+    },
+    "first_observation_is_physical_onset": false,
+    "physical_event_id": null,
+    "event_onset_frame": null,
+    "grouping_rule": "CONNECTED_COMPONENTS_OF_DISTANCE_LE_3_PX",
+    "transitive_diameter_can_exceed_3_px": true
+  },
+  {
+    "annotation_site_id": "ESM3:annotation-site:5e9a4c2b4df0a4dd",
+    "source_id": "ESM3",
+    "acquisition_id": "bottom_up_anti_parallel",
+    "status": "OPERATIONAL_PUBLISHED_LOCATION_SITE",
+    "observations": [
+      {
+        "observation_id": "ESM3:146:graphic-component-0042",
+        "frame_index": 146,
+        "experimental_time_s": 146.32,
+        "center_x": 1141.8582150069444,
+        "center_y": 399.80629624713004,
+        "radius_graphical_px": 10.814462023326465
+      }
+    ],
+    "frame_indices": [
+      146
+    ],
+    "experimental_times": [
+      146.32
+    ],
+    "representative_x": 1141.8582150069444,
+    "representative_y": 399.80629624713004,
+    "spatial_dispersion_px": {
+      "diameter": 0.0,
+      "max": 0.0,
+      "rms": 0.0
+    },
+    "number_of_observations": 1,
+    "observation_ids": [
+      "ESM3:146:graphic-component-0042"
+    ],
+    "observation_count": 1,
+    "observed_frame_indices": [
+      146
+    ],
+    "distinct_observed_frame_count": 1,
+    "representative": {
+      "observation_id": "ESM3:146:graphic-component-0042",
+      "center_x": 1141.8582150069444,
+      "center_y": 399.80629624713004,
+      "selection_rule": "OBSERVED_MEDOID_MIN_SUM_SQUARED_DISTANCE_LEXICOGRAPHIC_ID_TIE"
+    },
+    "maximum_pairwise_diameter_px": 0.0,
+    "maximum_distance_to_representative_px": 0.0,
+    "rms_distance_to_representative_px": 0.0,
+    "radius_by_observation": [
+      {
+        "observation_id": "ESM3:146:graphic-component-0042",
+        "radius_graphical_px": 10.814462023326465
+      }
+    ],
+    "radius_range_graphical_px": [
+      10.814462023326465,
+      10.814462023326465
+    ],
+    "first_confident_observation": {
+      "observation_id": "ESM3:146:graphic-component-0042",
+      "frame_index": 146,
+      "experimental_time_s": 146.32
+    },
+    "first_observation_is_physical_onset": false,
+    "physical_event_id": null,
+    "event_onset_frame": null,
+    "grouping_rule": "CONNECTED_COMPONENTS_OF_DISTANCE_LE_3_PX",
+    "transitive_diameter_can_exceed_3_px": true
+  },
+  {
+    "annotation_site_id": "ESM3:annotation-site:602422dbcb9a48ef",
+    "source_id": "ESM3",
+    "acquisition_id": "bottom_up_anti_parallel",
+    "status": "OPERATIONAL_PUBLISHED_LOCATION_SITE",
+    "observations": [
+      {
+        "observation_id": "ESM3:146:graphic-component-0003",
+        "frame_index": 146,
+        "experimental_time_s": 146.32,
+        "center_x": 1189.9267431015537,
+        "center_y": 31.791435787249966,
+        "radius_graphical_px": 10.787366317122174
+      },
+      {
+        "observation_id": "ESM3:219:graphic-component-0003",
+        "frame_index": 219,
+        "experimental_time_s": 232.46,
+        "center_x": 1189.9886912785262,
+        "center_y": 31.73853598102747,
+        "radius_graphical_px": 10.81730569472524
+      },
+      {
+        "observation_id": "ESM3:293:graphic-component-0003",
+        "frame_index": 293,
+        "experimental_time_s": 319.78,
+        "center_x": 1189.9886912785262,
+        "center_y": 31.73853598102747,
+        "radius_graphical_px": 10.81730569472524
+      }
+    ],
+    "frame_indices": [
+      146,
+      219,
+      293
+    ],
+    "experimental_times": [
+      146.32,
+      232.46,
+      319.78
+    ],
+    "representative_x": 1189.9886912785262,
+    "representative_y": 31.73853598102747,
+    "spatial_dispersion_px": {
+      "diameter": 0.08146143951950079,
+      "max": 0.08146143951950079,
+      "rms": 0.047031784035158196
+    },
+    "number_of_observations": 3,
+    "observation_ids": [
+      "ESM3:146:graphic-component-0003",
+      "ESM3:219:graphic-component-0003",
+      "ESM3:293:graphic-component-0003"
+    ],
+    "observation_count": 3,
+    "observed_frame_indices": [
+      146,
+      219,
+      293
+    ],
+    "distinct_observed_frame_count": 3,
+    "representative": {
+      "observation_id": "ESM3:219:graphic-component-0003",
+      "center_x": 1189.9886912785262,
+      "center_y": 31.73853598102747,
+      "selection_rule": "OBSERVED_MEDOID_MIN_SUM_SQUARED_DISTANCE_LEXICOGRAPHIC_ID_TIE"
+    },
+    "maximum_pairwise_diameter_px": 0.08146143951950079,
+    "maximum_distance_to_representative_px": 0.08146143951950079,
+    "rms_distance_to_representative_px": 0.047031784035158196,
+    "radius_by_observation": [
+      {
+        "observation_id": "ESM3:146:graphic-component-0003",
+        "radius_graphical_px": 10.787366317122174
+      },
+      {
+        "observation_id": "ESM3:219:graphic-component-0003",
+        "radius_graphical_px": 10.81730569472524
+      },
+      {
+        "observation_id": "ESM3:293:graphic-component-0003",
+        "radius_graphical_px": 10.81730569472524
+      }
+    ],
+    "radius_range_graphical_px": [
+      10.787366317122174,
+      10.81730569472524
+    ],
+    "first_confident_observation": {
+      "observation_id": "ESM3:146:graphic-component-0003",
+      "frame_index": 146,
+      "experimental_time_s": 146.32
+    },
+    "first_observation_is_physical_onset": false,
+    "physical_event_id": null,
+    "event_onset_frame": null,
+    "grouping_rule": "CONNECTED_COMPONENTS_OF_DISTANCE_LE_3_PX",
+    "transitive_diameter_can_exceed_3_px": true
+  },
+  {
+    "annotation_site_id": "ESM3:annotation-site:73e02d077c181e27",
+    "source_id": "ESM3",
+    "acquisition_id": "bottom_up_anti_parallel",
+    "status": "OPERATIONAL_PUBLISHED_LOCATION_SITE",
+    "observations": [
+      {
+        "observation_id": "ESM3:146:graphic-component-0027",
+        "frame_index": 146,
+        "experimental_time_s": 146.32,
+        "center_x": 1099.998004787753,
+        "center_y": 227.79991160069596,
+        "radius_graphical_px": 10.791519359483544
+      }
+    ],
+    "frame_indices": [
+      146
+    ],
+    "experimental_times": [
+      146.32
+    ],
+    "representative_x": 1099.998004787753,
+    "representative_y": 227.79991160069596,
+    "spatial_dispersion_px": {
+      "diameter": 0.0,
+      "max": 0.0,
+      "rms": 0.0
+    },
+    "number_of_observations": 1,
+    "observation_ids": [
+      "ESM3:146:graphic-component-0027"
+    ],
+    "observation_count": 1,
+    "observed_frame_indices": [
+      146
+    ],
+    "distinct_observed_frame_count": 1,
+    "representative": {
+      "observation_id": "ESM3:146:graphic-component-0027",
+      "center_x": 1099.998004787753,
+      "center_y": 227.79991160069596,
+      "selection_rule": "OBSERVED_MEDOID_MIN_SUM_SQUARED_DISTANCE_LEXICOGRAPHIC_ID_TIE"
+    },
+    "maximum_pairwise_diameter_px": 0.0,
+    "maximum_distance_to_representative_px": 0.0,
+    "rms_distance_to_representative_px": 0.0,
+    "radius_by_observation": [
+      {
+        "observation_id": "ESM3:146:graphic-component-0027",
+        "radius_graphical_px": 10.791519359483544
+      }
+    ],
+    "radius_range_graphical_px": [
+      10.791519359483544,
+      10.791519359483544
+    ],
+    "first_confident_observation": {
+      "observation_id": "ESM3:146:graphic-component-0027",
+      "frame_index": 146,
+      "experimental_time_s": 146.32
+    },
+    "first_observation_is_physical_onset": false,
+    "physical_event_id": null,
+    "event_onset_frame": null,
+    "grouping_rule": "CONNECTED_COMPONENTS_OF_DISTANCE_LE_3_PX",
+    "transitive_diameter_can_exceed_3_px": true
+  },
+  {
+    "annotation_site_id": "ESM3:annotation-site:7bb50a0b75f78145",
+    "source_id": "ESM3",
+    "acquisition_id": "bottom_up_anti_parallel",
+    "status": "OPERATIONAL_PUBLISHED_LOCATION_SITE",
+    "observations": [
+      {
+        "observation_id": "ESM3:146:graphic-component-0082",
+        "frame_index": 146,
+        "experimental_time_s": 146.32,
+        "center_x": 1109.970289812817,
+        "center_y": 789.0297101871829,
+        "radius_graphical_px": 10.730656214726633
+      },
+      {
+        "observation_id": "ESM3:219:graphic-component-0081",
+        "frame_index": 219,
+        "experimental_time_s": 232.46,
+        "center_x": 1109.8360350088844,
+        "center_y": 789.0792519465131,
+        "radius_graphical_px": 10.82049319388652
+      },
+      {
+        "observation_id": "ESM3:293:graphic-component-0082",
+        "frame_index": 293,
+        "experimental_time_s": 319.78,
+        "center_x": 1109.8546841571545,
+        "center_y": 789.0067233306074,
+        "radius_graphical_px": 10.790922021950085
+      }
+    ],
+    "frame_indices": [
+      146,
+      219,
+      293
+    ],
+    "experimental_times": [
+      146.32,
+      232.46,
+      319.78
+    ],
+    "representative_x": 1109.8546841571545,
+    "representative_y": 789.0067233306074,
+    "spatial_dispersion_px": {
+      "diameter": 0.14310394228156706,
+      "max": 0.11786883895420391,
+      "rms": 0.08062516987640365
+    },
+    "number_of_observations": 3,
+    "observation_ids": [
+      "ESM3:146:graphic-component-0082",
+      "ESM3:219:graphic-component-0081",
+      "ESM3:293:graphic-component-0082"
+    ],
+    "observation_count": 3,
+    "observed_frame_indices": [
+      146,
+      219,
+      293
+    ],
+    "distinct_observed_frame_count": 3,
+    "representative": {
+      "observation_id": "ESM3:293:graphic-component-0082",
+      "center_x": 1109.8546841571545,
+      "center_y": 789.0067233306074,
+      "selection_rule": "OBSERVED_MEDOID_MIN_SUM_SQUARED_DISTANCE_LEXICOGRAPHIC_ID_TIE"
+    },
+    "maximum_pairwise_diameter_px": 0.14310394228156706,
+    "maximum_distance_to_representative_px": 0.11786883895420391,
+    "rms_distance_to_representative_px": 0.08062516987640365,
+    "radius_by_observation": [
+      {
+        "observation_id": "ESM3:146:graphic-component-0082",
+        "radius_graphical_px": 10.730656214726633
+      },
+      {
+        "observation_id": "ESM3:219:graphic-component-0081",
+        "radius_graphical_px": 10.82049319388652
+      },
+      {
+        "observation_id": "ESM3:293:graphic-component-0082",
+        "radius_graphical_px": 10.790922021950085
+      }
+    ],
+    "radius_range_graphical_px": [
+      10.730656214726633,
+      10.82049319388652
+    ],
+    "first_confident_observation": {
+      "observation_id": "ESM3:146:graphic-component-0082",
+      "frame_index": 146,
+      "experimental_time_s": 146.32
+    },
+    "first_observation_is_physical_onset": false,
+    "physical_event_id": null,
+    "event_onset_frame": null,
+    "grouping_rule": "CONNECTED_COMPONENTS_OF_DISTANCE_LE_3_PX",
+    "transitive_diameter_can_exceed_3_px": true
+  },
+  {
+    "annotation_site_id": "ESM3:annotation-site:7ccbbb95eb40deda",
+    "source_id": "ESM3",
+    "acquisition_id": "bottom_up_anti_parallel",
+    "status": "OPERATIONAL_PUBLISHED_LOCATION_SITE",
+    "observations": [
+      {
+        "observation_id": "ESM3:73:graphic-component-0069",
+        "frame_index": 73,
+        "experimental_time_s": 60.18,
+        "center_x": 873.9439100981467,
+        "center_y": 837.1398250055635,
+        "radius_graphical_px": 10.758743837333268
+      }
+    ],
+    "frame_indices": [
+      73
+    ],
+    "experimental_times": [
+      60.18
+    ],
+    "representative_x": 873.9439100981467,
+    "representative_y": 837.1398250055635,
+    "spatial_dispersion_px": {
+      "diameter": 0.0,
+      "max": 0.0,
+      "rms": 0.0
+    },
+    "number_of_observations": 1,
+    "observation_ids": [
+      "ESM3:73:graphic-component-0069"
+    ],
+    "observation_count": 1,
+    "observed_frame_indices": [
+      73
+    ],
+    "distinct_observed_frame_count": 1,
+    "representative": {
+      "observation_id": "ESM3:73:graphic-component-0069",
+      "center_x": 873.9439100981467,
+      "center_y": 837.1398250055635,
+      "selection_rule": "OBSERVED_MEDOID_MIN_SUM_SQUARED_DISTANCE_LEXICOGRAPHIC_ID_TIE"
+    },
+    "maximum_pairwise_diameter_px": 0.0,
+    "maximum_distance_to_representative_px": 0.0,
+    "rms_distance_to_representative_px": 0.0,
+    "radius_by_observation": [
+      {
+        "observation_id": "ESM3:73:graphic-component-0069",
+        "radius_graphical_px": 10.758743837333268
+      }
+    ],
+    "radius_range_graphical_px": [
+      10.758743837333268,
+      10.758743837333268
+    ],
+    "first_confident_observation": {
+      "observation_id": "ESM3:73:graphic-component-0069",
+      "frame_index": 73,
+      "experimental_time_s": 60.18
+    },
+    "first_observation_is_physical_onset": false,
+    "physical_event_id": null,
+    "event_onset_frame": null,
+    "grouping_rule": "CONNECTED_COMPONENTS_OF_DISTANCE_LE_3_PX",
+    "transitive_diameter_can_exceed_3_px": true
+  },
+  {
+    "annotation_site_id": "ESM3:annotation-site:7e8e28c247047fc2",
+    "source_id": "ESM3",
+    "acquisition_id": "bottom_up_anti_parallel",
+    "status": "OPERATIONAL_PUBLISHED_LOCATION_SITE",
+    "observations": [
+      {
+        "observation_id": "ESM3:219:graphic-component-0056",
+        "frame_index": 219,
+        "experimental_time_s": 232.46,
+        "center_x": 343.1417849930555,
+        "center_y": 559.806296247131,
+        "radius_graphical_px": 10.814462023326467
+      },
+      {
+        "observation_id": "ESM3:293:graphic-component-0057",
+        "frame_index": 293,
+        "experimental_time_s": 319.78,
+        "center_x": 343.1417849930555,
+        "center_y": 559.806296247131,
+        "radius_graphical_px": 10.814462023326467
+      }
+    ],
+    "frame_indices": [
+      219,
+      293
+    ],
+    "experimental_times": [
+      232.46,
+      319.78
+    ],
+    "representative_x": 343.1417849930555,
+    "representative_y": 559.806296247131,
+    "spatial_dispersion_px": {
+      "diameter": 0.0,
+      "max": 0.0,
+      "rms": 0.0
+    },
+    "number_of_observations": 2,
+    "observation_ids": [
+      "ESM3:219:graphic-component-0056",
+      "ESM3:293:graphic-component-0057"
+    ],
+    "observation_count": 2,
+    "observed_frame_indices": [
+      219,
+      293
+    ],
+    "distinct_observed_frame_count": 2,
+    "representative": {
+      "observation_id": "ESM3:219:graphic-component-0056",
+      "center_x": 343.1417849930555,
+      "center_y": 559.806296247131,
+      "selection_rule": "OBSERVED_MEDOID_MIN_SUM_SQUARED_DISTANCE_LEXICOGRAPHIC_ID_TIE"
+    },
+    "maximum_pairwise_diameter_px": 0.0,
+    "maximum_distance_to_representative_px": 0.0,
+    "rms_distance_to_representative_px": 0.0,
+    "radius_by_observation": [
+      {
+        "observation_id": "ESM3:219:graphic-component-0056",
+        "radius_graphical_px": 10.814462023326467
+      },
+      {
+        "observation_id": "ESM3:293:graphic-component-0057",
+        "radius_graphical_px": 10.814462023326467
+      }
+    ],
+    "radius_range_graphical_px": [
+      10.814462023326467,
+      10.814462023326467
+    ],
+    "first_confident_observation": {
+      "observation_id": "ESM3:219:graphic-component-0056",
+      "frame_index": 219,
+      "experimental_time_s": 232.46
+    },
+    "first_observation_is_physical_onset": false,
+    "physical_event_id": null,
+    "event_onset_frame": null,
+    "grouping_rule": "CONNECTED_COMPONENTS_OF_DISTANCE_LE_3_PX",
+    "transitive_diameter_can_exceed_3_px": true
+  },
+  {
+    "annotation_site_id": "ESM3:annotation-site:8e517d7ffab44a8d",
+    "source_id": "ESM3",
+    "acquisition_id": "bottom_up_anti_parallel",
+    "status": "OPERATIONAL_PUBLISHED_LOCATION_SITE",
+    "observations": [
+      {
+        "observation_id": "ESM3:219:graphic-component-0032",
+        "frame_index": 219,
+        "experimental_time_s": 232.46,
+        "center_x": 55.855794287304455,
+        "center_y": 299.77680897708905,
+        "radius_graphical_px": 10.815837351604937
+      },
+      {
+        "observation_id": "ESM3:293:graphic-component-0033",
+        "frame_index": 293,
+        "experimental_time_s": 319.78,
+        "center_x": 55.926743101553626,
+        "center_y": 299.79143578724995,
+        "radius_graphical_px": 10.787366317122173
+      }
+    ],
+    "frame_indices": [
+      219,
+      293
+    ],
+    "experimental_times": [
+      232.46,
+      319.78
+    ],
+    "representative_x": 55.855794287304455,
+    "representative_y": 299.77680897708905,
+    "spatial_dispersion_px": {
+      "diameter": 0.07244085738619124,
+      "max": 0.07244085738619124,
+      "rms": 0.051223421492743434
+    },
+    "number_of_observations": 2,
+    "observation_ids": [
+      "ESM3:219:graphic-component-0032",
+      "ESM3:293:graphic-component-0033"
+    ],
+    "observation_count": 2,
+    "observed_frame_indices": [
+      219,
+      293
+    ],
+    "distinct_observed_frame_count": 2,
+    "representative": {
+      "observation_id": "ESM3:219:graphic-component-0032",
+      "center_x": 55.855794287304455,
+      "center_y": 299.77680897708905,
+      "selection_rule": "OBSERVED_MEDOID_MIN_SUM_SQUARED_DISTANCE_LEXICOGRAPHIC_ID_TIE"
+    },
+    "maximum_pairwise_diameter_px": 0.07244085738619124,
+    "maximum_distance_to_representative_px": 0.07244085738619124,
+    "rms_distance_to_representative_px": 0.051223421492743434,
+    "radius_by_observation": [
+      {
+        "observation_id": "ESM3:219:graphic-component-0032",
+        "radius_graphical_px": 10.815837351604937
+      },
+      {
+        "observation_id": "ESM3:293:graphic-component-0033",
+        "radius_graphical_px": 10.787366317122173
+      }
+    ],
+    "radius_range_graphical_px": [
+      10.787366317122173,
+      10.815837351604937
+    ],
+    "first_confident_observation": {
+      "observation_id": "ESM3:219:graphic-component-0032",
+      "frame_index": 219,
+      "experimental_time_s": 232.46
+    },
+    "first_observation_is_physical_onset": false,
+    "physical_event_id": null,
+    "event_onset_frame": null,
+    "grouping_rule": "CONNECTED_COMPONENTS_OF_DISTANCE_LE_3_PX",
+    "transitive_diameter_can_exceed_3_px": true
+  },
+  {
+    "annotation_site_id": "ESM3:annotation-site:921edb3b46971a2c",
+    "source_id": "ESM3",
+    "acquisition_id": "bottom_up_anti_parallel",
+    "status": "OPERATIONAL_PUBLISHED_LOCATION_SITE",
+    "observations": [
+      {
+        "observation_id": "ESM3:73:graphic-component-0013",
+        "frame_index": 73,
+        "experimental_time_s": 60.18,
+        "center_x": 169.8582150069445,
+        "center_y": 199.80629624712972,
+        "radius_graphical_px": 10.814462023326469
+      },
+      {
+        "observation_id": "ESM3:219:graphic-component-0022",
+        "frame_index": 219,
+        "experimental_time_s": 232.46,
+        "center_x": 169.92674310155363,
+        "center_y": 199.79143578724975,
+        "radius_graphical_px": 10.787366317122173
+      },
+      {
+        "observation_id": "ESM3:293:graphic-component-0023",
+        "frame_index": 293,
+        "experimental_time_s": 319.78,
+        "center_x": 169.8582150069445,
+        "center_y": 199.80629624712972,
+        "radius_graphical_px": 10.814462023326469
+      }
+    ],
+    "frame_indices": [
+      73,
+      219,
+      293
+    ],
+    "experimental_times": [
+      60.18,
+      232.46,
+      319.78
+    ],
+    "representative_x": 169.8582150069445,
+    "representative_y": 199.80629624712972,
+    "spatial_dispersion_px": {
+      "diameter": 0.07012084582063192,
+      "max": 0.07012084582063192,
+      "rms": 0.04048428921034609
+    },
+    "number_of_observations": 3,
+    "observation_ids": [
+      "ESM3:219:graphic-component-0022",
+      "ESM3:293:graphic-component-0023",
+      "ESM3:73:graphic-component-0013"
+    ],
+    "observation_count": 3,
+    "observed_frame_indices": [
+      73,
+      219,
+      293
+    ],
+    "distinct_observed_frame_count": 3,
+    "representative": {
+      "observation_id": "ESM3:293:graphic-component-0023",
+      "center_x": 169.8582150069445,
+      "center_y": 199.80629624712972,
+      "selection_rule": "OBSERVED_MEDOID_MIN_SUM_SQUARED_DISTANCE_LEXICOGRAPHIC_ID_TIE"
+    },
+    "maximum_pairwise_diameter_px": 0.07012084582063192,
+    "maximum_distance_to_representative_px": 0.07012084582063192,
+    "rms_distance_to_representative_px": 0.04048428921034609,
+    "radius_by_observation": [
+      {
+        "observation_id": "ESM3:219:graphic-component-0022",
+        "radius_graphical_px": 10.787366317122173
+      },
+      {
+        "observation_id": "ESM3:293:graphic-component-0023",
+        "radius_graphical_px": 10.814462023326469
+      },
+      {
+        "observation_id": "ESM3:73:graphic-component-0013",
+        "radius_graphical_px": 10.814462023326469
+      }
+    ],
+    "radius_range_graphical_px": [
+      10.787366317122173,
+      10.814462023326469
+    ],
+    "first_confident_observation": {
+      "observation_id": "ESM3:73:graphic-component-0013",
+      "frame_index": 73,
+      "experimental_time_s": 60.18
+    },
+    "first_observation_is_physical_onset": false,
+    "physical_event_id": null,
+    "event_onset_frame": null,
+    "grouping_rule": "CONNECTED_COMPONENTS_OF_DISTANCE_LE_3_PX",
+    "transitive_diameter_can_exceed_3_px": true
+  },
+  {
+    "annotation_site_id": "ESM3:annotation-site:943991148d21d7f8",
+    "source_id": "ESM3",
+    "acquisition_id": "bottom_up_anti_parallel",
+    "status": "OPERATIONAL_PUBLISHED_LOCATION_SITE",
+    "observations": [
+      {
+        "observation_id": "ESM3:219:graphic-component-0004",
+        "frame_index": 219,
+        "experimental_time_s": 232.46,
+        "center_x": 111.55861128765936,
+        "center_y": 46.00355027032223,
+        "radius_graphical_px": 10.681001566408975
+      }
+    ],
+    "frame_indices": [
+      219
+    ],
+    "experimental_times": [
+      232.46
+    ],
+    "representative_x": 111.55861128765936,
+    "representative_y": 46.00355027032223,
+    "spatial_dispersion_px": {
+      "diameter": 0.0,
+      "max": 0.0,
+      "rms": 0.0
+    },
+    "number_of_observations": 1,
+    "observation_ids": [
+      "ESM3:219:graphic-component-0004"
+    ],
+    "observation_count": 1,
+    "observed_frame_indices": [
+      219
+    ],
+    "distinct_observed_frame_count": 1,
+    "representative": {
+      "observation_id": "ESM3:219:graphic-component-0004",
+      "center_x": 111.55861128765936,
+      "center_y": 46.00355027032223,
+      "selection_rule": "OBSERVED_MEDOID_MIN_SUM_SQUARED_DISTANCE_LEXICOGRAPHIC_ID_TIE"
+    },
+    "maximum_pairwise_diameter_px": 0.0,
+    "maximum_distance_to_representative_px": 0.0,
+    "rms_distance_to_representative_px": 0.0,
+    "radius_by_observation": [
+      {
+        "observation_id": "ESM3:219:graphic-component-0004",
+        "radius_graphical_px": 10.681001566408975
+      }
+    ],
+    "radius_range_graphical_px": [
+      10.681001566408975,
+      10.681001566408975
+    ],
+    "first_confident_observation": {
+      "observation_id": "ESM3:219:graphic-component-0004",
+      "frame_index": 219,
+      "experimental_time_s": 232.46
+    },
+    "first_observation_is_physical_onset": false,
+    "physical_event_id": null,
+    "event_onset_frame": null,
+    "grouping_rule": "CONNECTED_COMPONENTS_OF_DISTANCE_LE_3_PX",
+    "transitive_diameter_can_exceed_3_px": true
+  },
+  {
+    "annotation_site_id": "ESM3:annotation-site:95a85828fc0c1117",
+    "source_id": "ESM3",
+    "acquisition_id": "bottom_up_anti_parallel",
+    "status": "OPERATIONAL_PUBLISHED_LOCATION_SITE",
+    "observations": [
+      {
+        "observation_id": "ESM3:73:graphic-component-0018",
+        "frame_index": 73,
+        "experimental_time_s": 60.18,
+        "center_x": 419.0560899018533,
+        "center_y": 257.13982500556364,
+        "radius_graphical_px": 10.75874383733327
+      }
+    ],
+    "frame_indices": [
+      73
+    ],
+    "experimental_times": [
+      60.18
+    ],
+    "representative_x": 419.0560899018533,
+    "representative_y": 257.13982500556364,
+    "spatial_dispersion_px": {
+      "diameter": 0.0,
+      "max": 0.0,
+      "rms": 0.0
+    },
+    "number_of_observations": 1,
+    "observation_ids": [
+      "ESM3:73:graphic-component-0018"
+    ],
+    "observation_count": 1,
+    "observed_frame_indices": [
+      73
+    ],
+    "distinct_observed_frame_count": 1,
+    "representative": {
+      "observation_id": "ESM3:73:graphic-component-0018",
+      "center_x": 419.0560899018533,
+      "center_y": 257.13982500556364,
+      "selection_rule": "OBSERVED_MEDOID_MIN_SUM_SQUARED_DISTANCE_LEXICOGRAPHIC_ID_TIE"
+    },
+    "maximum_pairwise_diameter_px": 0.0,
+    "maximum_distance_to_representative_px": 0.0,
+    "rms_distance_to_representative_px": 0.0,
+    "radius_by_observation": [
+      {
+        "observation_id": "ESM3:73:graphic-component-0018",
+        "radius_graphical_px": 10.75874383733327
+      }
+    ],
+    "radius_range_graphical_px": [
+      10.75874383733327,
+      10.75874383733327
+    ],
+    "first_confident_observation": {
+      "observation_id": "ESM3:73:graphic-component-0018",
+      "frame_index": 73,
+      "experimental_time_s": 60.18
+    },
+    "first_observation_is_physical_onset": false,
+    "physical_event_id": null,
+    "event_onset_frame": null,
+    "grouping_rule": "CONNECTED_COMPONENTS_OF_DISTANCE_LE_3_PX",
+    "transitive_diameter_can_exceed_3_px": true
+  },
+  {
+    "annotation_site_id": "ESM3:annotation-site:99310ef66db54339",
+    "source_id": "ESM3",
+    "acquisition_id": "bottom_up_anti_parallel",
+    "status": "OPERATIONAL_PUBLISHED_LOCATION_SITE",
+    "observations": [
+      {
+        "observation_id": "ESM3:73:graphic-component-0007",
+        "frame_index": 73,
+        "experimental_time_s": 60.18,
+        "center_x": 385.1417849930555,
+        "center_y": 101.80629624713096,
+        "radius_graphical_px": 10.814462023326465
+      },
+      {
+        "observation_id": "ESM3:146:graphic-component-0014",
+        "frame_index": 146,
+        "experimental_time_s": 146.32,
+        "center_x": 385.1981945817025,
+        "center_y": 101.86840961579176,
+        "radius_graphical_px": 10.845862319449866
+      },
+      {
+        "observation_id": "ESM3:219:graphic-component-0013",
+        "frame_index": 219,
+        "experimental_time_s": 232.46,
+        "center_x": 385.1417849930555,
+        "center_y": 101.80629624713096,
+        "radius_graphical_px": 10.814462023326465
+      },
+      {
+        "observation_id": "ESM3:293:graphic-component-0014",
+        "frame_index": 293,
+        "experimental_time_s": 319.78,
+        "center_x": 385.07325689844635,
+        "center_y": 101.79143578724982,
+        "radius_graphical_px": 10.787366317122173
+      }
+    ],
+    "frame_indices": [
+      73,
+      146,
+      219,
+      293
+    ],
+    "experimental_times": [
+      60.18,
+      146.32,
+      232.46,
+      319.78
+    ],
+    "representative_x": 385.1417849930555,
+    "representative_y": 101.80629624713096,
+    "spatial_dispersion_px": {
+      "diameter": 0.14674602201703696,
+      "max": 0.08390537681052752,
+      "rms": 0.05467413757060981
+    },
+    "number_of_observations": 4,
+    "observation_ids": [
+      "ESM3:146:graphic-component-0014",
+      "ESM3:219:graphic-component-0013",
+      "ESM3:293:graphic-component-0014",
+      "ESM3:73:graphic-component-0007"
+    ],
+    "observation_count": 4,
+    "observed_frame_indices": [
+      73,
+      146,
+      219,
+      293
+    ],
+    "distinct_observed_frame_count": 4,
+    "representative": {
+      "observation_id": "ESM3:219:graphic-component-0013",
+      "center_x": 385.1417849930555,
+      "center_y": 101.80629624713096,
+      "selection_rule": "OBSERVED_MEDOID_MIN_SUM_SQUARED_DISTANCE_LEXICOGRAPHIC_ID_TIE"
+    },
+    "maximum_pairwise_diameter_px": 0.14674602201703696,
+    "maximum_distance_to_representative_px": 0.08390537681052752,
+    "rms_distance_to_representative_px": 0.05467413757060981,
+    "radius_by_observation": [
+      {
+        "observation_id": "ESM3:146:graphic-component-0014",
+        "radius_graphical_px": 10.845862319449866
+      },
+      {
+        "observation_id": "ESM3:219:graphic-component-0013",
+        "radius_graphical_px": 10.814462023326465
+      },
+      {
+        "observation_id": "ESM3:293:graphic-component-0014",
+        "radius_graphical_px": 10.787366317122173
+      },
+      {
+        "observation_id": "ESM3:73:graphic-component-0007",
+        "radius_graphical_px": 10.814462023326465
+      }
+    ],
+    "radius_range_graphical_px": [
+      10.787366317122173,
+      10.845862319449866
+    ],
+    "first_confident_observation": {
+      "observation_id": "ESM3:73:graphic-component-0007",
+      "frame_index": 73,
+      "experimental_time_s": 60.18
+    },
+    "first_observation_is_physical_onset": false,
+    "physical_event_id": null,
+    "event_onset_frame": null,
+    "grouping_rule": "CONNECTED_COMPONENTS_OF_DISTANCE_LE_3_PX",
+    "transitive_diameter_can_exceed_3_px": true
+  },
+  {
+    "annotation_site_id": "ESM3:annotation-site:a16a59de93164e59",
+    "source_id": "ESM3",
+    "acquisition_id": "bottom_up_anti_parallel",
+    "status": "OPERATIONAL_PUBLISHED_LOCATION_SITE",
+    "observations": [
+      {
+        "observation_id": "ESM3:293:graphic-component-0111",
+        "frame_index": 293,
+        "experimental_time_s": 319.78,
+        "center_x": 249.87455584570043,
+        "center_y": 1001.8745558457002,
+        "radius_graphical_px": 10.7864240740449
+      }
+    ],
+    "frame_indices": [
+      293
+    ],
+    "experimental_times": [
+      319.78
+    ],
+    "representative_x": 249.87455584570043,
+    "representative_y": 1001.8745558457002,
+    "spatial_dispersion_px": {
+      "diameter": 0.0,
+      "max": 0.0,
+      "rms": 0.0
+    },
+    "number_of_observations": 1,
+    "observation_ids": [
+      "ESM3:293:graphic-component-0111"
+    ],
+    "observation_count": 1,
+    "observed_frame_indices": [
+      293
+    ],
+    "distinct_observed_frame_count": 1,
+    "representative": {
+      "observation_id": "ESM3:293:graphic-component-0111",
+      "center_x": 249.87455584570043,
+      "center_y": 1001.8745558457002,
+      "selection_rule": "OBSERVED_MEDOID_MIN_SUM_SQUARED_DISTANCE_LEXICOGRAPHIC_ID_TIE"
+    },
+    "maximum_pairwise_diameter_px": 0.0,
+    "maximum_distance_to_representative_px": 0.0,
+    "rms_distance_to_representative_px": 0.0,
+    "radius_by_observation": [
+      {
+        "observation_id": "ESM3:293:graphic-component-0111",
+        "radius_graphical_px": 10.7864240740449
+      }
+    ],
+    "radius_range_graphical_px": [
+      10.7864240740449,
+      10.7864240740449
+    ],
+    "first_confident_observation": {
+      "observation_id": "ESM3:293:graphic-component-0111",
+      "frame_index": 293,
+      "experimental_time_s": 319.78
+    },
+    "first_observation_is_physical_onset": false,
+    "physical_event_id": null,
+    "event_onset_frame": null,
+    "grouping_rule": "CONNECTED_COMPONENTS_OF_DISTANCE_LE_3_PX",
+    "transitive_diameter_can_exceed_3_px": true
+  },
+  {
+    "annotation_site_id": "ESM3:annotation-site:ab91a579d35b7a8c",
+    "source_id": "ESM3",
+    "acquisition_id": "bottom_up_anti_parallel",
+    "status": "OPERATIONAL_PUBLISHED_LOCATION_SITE",
+    "observations": [
+      {
+        "observation_id": "ESM3:146:graphic-component-0040",
+        "frame_index": 146,
+        "experimental_time_s": 146.32,
+        "center_x": 1169.1651765347578,
+        "center_y": 386.9368170088433,
+        "radius_graphical_px": 10.672720534585267
+      }
+    ],
+    "frame_indices": [
+      146
+    ],
+    "experimental_times": [
+      146.32
+    ],
+    "representative_x": 1169.1651765347578,
+    "representative_y": 386.9368170088433,
+    "spatial_dispersion_px": {
+      "diameter": 0.0,
+      "max": 0.0,
+      "rms": 0.0
+    },
+    "number_of_observations": 1,
+    "observation_ids": [
+      "ESM3:146:graphic-component-0040"
+    ],
+    "observation_count": 1,
+    "observed_frame_indices": [
+      146
+    ],
+    "distinct_observed_frame_count": 1,
+    "representative": {
+      "observation_id": "ESM3:146:graphic-component-0040",
+      "center_x": 1169.1651765347578,
+      "center_y": 386.9368170088433,
+      "selection_rule": "OBSERVED_MEDOID_MIN_SUM_SQUARED_DISTANCE_LEXICOGRAPHIC_ID_TIE"
+    },
+    "maximum_pairwise_diameter_px": 0.0,
+    "maximum_distance_to_representative_px": 0.0,
+    "rms_distance_to_representative_px": 0.0,
+    "radius_by_observation": [
+      {
+        "observation_id": "ESM3:146:graphic-component-0040",
+        "radius_graphical_px": 10.672720534585267
+      }
+    ],
+    "radius_range_graphical_px": [
+      10.672720534585267,
+      10.672720534585267
+    ],
+    "first_confident_observation": {
+      "observation_id": "ESM3:146:graphic-component-0040",
+      "frame_index": 146,
+      "experimental_time_s": 146.32
+    },
+    "first_observation_is_physical_onset": false,
+    "physical_event_id": null,
+    "event_onset_frame": null,
+    "grouping_rule": "CONNECTED_COMPONENTS_OF_DISTANCE_LE_3_PX",
+    "transitive_diameter_can_exceed_3_px": true
+  },
+  {
+    "annotation_site_id": "ESM3:annotation-site:aea18fa3b37ada51",
+    "source_id": "ESM3",
+    "acquisition_id": "bottom_up_anti_parallel",
+    "status": "OPERATIONAL_PUBLISHED_LOCATION_SITE",
+    "observations": [
+      {
+        "observation_id": "ESM3:146:graphic-component-0064",
+        "frame_index": 146,
+        "experimental_time_s": 146.32,
+        "center_x": 1237.8745558457003,
+        "center_y": 655.1254441542998,
+        "radius_graphical_px": 10.7864240740449
+      },
+      {
+        "observation_id": "ESM3:293:graphic-component-0064",
+        "frame_index": 293,
+        "experimental_time_s": 319.78,
+        "center_x": 1237.8745558457003,
+        "center_y": 655.1254441542998,
+        "radius_graphical_px": 10.7864240740449
+      }
+    ],
+    "frame_indices": [
+      146,
+      293
+    ],
+    "experimental_times": [
+      146.32,
+      319.78
+    ],
+    "representative_x": 1237.8745558457003,
+    "representative_y": 655.1254441542998,
+    "spatial_dispersion_px": {
+      "diameter": 0.0,
+      "max": 0.0,
+      "rms": 0.0
+    },
+    "number_of_observations": 2,
+    "observation_ids": [
+      "ESM3:146:graphic-component-0064",
+      "ESM3:293:graphic-component-0064"
+    ],
+    "observation_count": 2,
+    "observed_frame_indices": [
+      146,
+      293
+    ],
+    "distinct_observed_frame_count": 2,
+    "representative": {
+      "observation_id": "ESM3:146:graphic-component-0064",
+      "center_x": 1237.8745558457003,
+      "center_y": 655.1254441542998,
+      "selection_rule": "OBSERVED_MEDOID_MIN_SUM_SQUARED_DISTANCE_LEXICOGRAPHIC_ID_TIE"
+    },
+    "maximum_pairwise_diameter_px": 0.0,
+    "maximum_distance_to_representative_px": 0.0,
+    "rms_distance_to_representative_px": 0.0,
+    "radius_by_observation": [
+      {
+        "observation_id": "ESM3:146:graphic-component-0064",
+        "radius_graphical_px": 10.7864240740449
+      },
+      {
+        "observation_id": "ESM3:293:graphic-component-0064",
+        "radius_graphical_px": 10.7864240740449
+      }
+    ],
+    "radius_range_graphical_px": [
+      10.7864240740449,
+      10.7864240740449
+    ],
+    "first_confident_observation": {
+      "observation_id": "ESM3:146:graphic-component-0064",
+      "frame_index": 146,
+      "experimental_time_s": 146.32
+    },
+    "first_observation_is_physical_onset": false,
+    "physical_event_id": null,
+    "event_onset_frame": null,
+    "grouping_rule": "CONNECTED_COMPONENTS_OF_DISTANCE_LE_3_PX",
+    "transitive_diameter_can_exceed_3_px": true
+  },
+  {
+    "annotation_site_id": "ESM3:annotation-site:b6b216ac7f401b9a",
+    "source_id": "ESM3",
+    "acquisition_id": "bottom_up_anti_parallel",
+    "status": "OPERATIONAL_PUBLISHED_LOCATION_SITE",
+    "observations": [
+      {
+        "observation_id": "ESM3:73:graphic-component-0044",
+        "frame_index": 73,
+        "experimental_time_s": 60.18,
+        "center_x": 839.0689880164384,
+        "center_y": 585.089309800456,
+        "radius_graphical_px": 10.75929396741962
+      }
+    ],
+    "frame_indices": [
+      73
+    ],
+    "experimental_times": [
+      60.18
+    ],
+    "representative_x": 839.0689880164384,
+    "representative_y": 585.089309800456,
+    "spatial_dispersion_px": {
+      "diameter": 0.0,
+      "max": 0.0,
+      "rms": 0.0
+    },
+    "number_of_observations": 1,
+    "observation_ids": [
+      "ESM3:73:graphic-component-0044"
+    ],
+    "observation_count": 1,
+    "observed_frame_indices": [
+      73
+    ],
+    "distinct_observed_frame_count": 1,
+    "representative": {
+      "observation_id": "ESM3:73:graphic-component-0044",
+      "center_x": 839.0689880164384,
+      "center_y": 585.089309800456,
+      "selection_rule": "OBSERVED_MEDOID_MIN_SUM_SQUARED_DISTANCE_LEXICOGRAPHIC_ID_TIE"
+    },
+    "maximum_pairwise_diameter_px": 0.0,
+    "maximum_distance_to_representative_px": 0.0,
+    "rms_distance_to_representative_px": 0.0,
+    "radius_by_observation": [
+      {
+        "observation_id": "ESM3:73:graphic-component-0044",
+        "radius_graphical_px": 10.75929396741962
+      }
+    ],
+    "radius_range_graphical_px": [
+      10.75929396741962,
+      10.75929396741962
+    ],
+    "first_confident_observation": {
+      "observation_id": "ESM3:73:graphic-component-0044",
+      "frame_index": 73,
+      "experimental_time_s": 60.18
+    },
+    "first_observation_is_physical_onset": false,
+    "physical_event_id": null,
+    "event_onset_frame": null,
+    "grouping_rule": "CONNECTED_COMPONENTS_OF_DISTANCE_LE_3_PX",
+    "transitive_diameter_can_exceed_3_px": true
+  },
+  {
+    "annotation_site_id": "ESM3:annotation-site:c0913343ab666a5f",
+    "source_id": "ESM3",
+    "acquisition_id": "bottom_up_anti_parallel",
+    "status": "OPERATIONAL_PUBLISHED_LOCATION_SITE",
+    "observations": [
+      {
+        "observation_id": "ESM3:73:graphic-component-0042",
+        "frame_index": 73,
+        "experimental_time_s": 60.18,
+        "center_x": 439.87455584570046,
+        "center_y": 575.8745558457002,
+        "radius_graphical_px": 10.7864240740449
+      },
+      {
+        "observation_id": "ESM3:146:graphic-component-0058",
+        "frame_index": 146,
+        "experimental_time_s": 146.32,
+        "center_x": 439.8018054182975,
+        "center_y": 575.8684096157917,
+        "radius_graphical_px": 10.845862319449868
+      },
+      {
+        "observation_id": "ESM3:219:graphic-component-0057",
+        "frame_index": 219,
+        "experimental_time_s": 232.46,
+        "center_x": 439.92674310155365,
+        "center_y": 575.7914357872498,
+        "radius_graphical_px": 10.787366317122173
+      }
+    ],
+    "frame_indices": [
+      73,
+      146,
+      219
+    ],
+    "experimental_times": [
+      60.18,
+      146.32,
+      232.46
+    ],
+    "representative_x": 439.87455584570046,
+    "representative_y": 575.8745558457002,
+    "spatial_dispersion_px": {
+      "diameter": 0.14674602201701462,
+      "max": 0.09814506503275384,
+      "rms": 0.07062307134756034
+    },
+    "number_of_observations": 3,
+    "observation_ids": [
+      "ESM3:146:graphic-component-0058",
+      "ESM3:219:graphic-component-0057",
+      "ESM3:73:graphic-component-0042"
+    ],
+    "observation_count": 3,
+    "observed_frame_indices": [
+      73,
+      146,
+      219
+    ],
+    "distinct_observed_frame_count": 3,
+    "representative": {
+      "observation_id": "ESM3:73:graphic-component-0042",
+      "center_x": 439.87455584570046,
+      "center_y": 575.8745558457002,
+      "selection_rule": "OBSERVED_MEDOID_MIN_SUM_SQUARED_DISTANCE_LEXICOGRAPHIC_ID_TIE"
+    },
+    "maximum_pairwise_diameter_px": 0.14674602201701462,
+    "maximum_distance_to_representative_px": 0.09814506503275384,
+    "rms_distance_to_representative_px": 0.07062307134756034,
+    "radius_by_observation": [
+      {
+        "observation_id": "ESM3:146:graphic-component-0058",
+        "radius_graphical_px": 10.845862319449868
+      },
+      {
+        "observation_id": "ESM3:219:graphic-component-0057",
+        "radius_graphical_px": 10.787366317122173
+      },
+      {
+        "observation_id": "ESM3:73:graphic-component-0042",
+        "radius_graphical_px": 10.7864240740449
+      }
+    ],
+    "radius_range_graphical_px": [
+      10.7864240740449,
+      10.845862319449868
+    ],
+    "first_confident_observation": {
+      "observation_id": "ESM3:73:graphic-component-0042",
+      "frame_index": 73,
+      "experimental_time_s": 60.18
+    },
+    "first_observation_is_physical_onset": false,
+    "physical_event_id": null,
+    "event_onset_frame": null,
+    "grouping_rule": "CONNECTED_COMPONENTS_OF_DISTANCE_LE_3_PX",
+    "transitive_diameter_can_exceed_3_px": true
+  },
+  {
+    "annotation_site_id": "ESM3:annotation-site:c726fa8942e518df",
+    "source_id": "ESM3",
+    "acquisition_id": "bottom_up_anti_parallel",
+    "status": "OPERATIONAL_PUBLISHED_LOCATION_SITE",
+    "observations": [
+      {
+        "observation_id": "ESM3:219:graphic-component-0044",
+        "frame_index": 219,
+        "experimental_time_s": 232.46,
+        "center_x": 555.0351609900976,
+        "center_y": 421.86564065982515,
+        "radius_graphical_px": 10.81974220352941
+      },
+      {
+        "observation_id": "ESM3:293:graphic-component-0045",
+        "frame_index": 293,
+        "experimental_time_s": 319.78,
+        "center_x": 555.0406828559975,
+        "center_y": 421.8233556837604,
+        "radius_graphical_px": 10.822427180042444
+      }
+    ],
+    "frame_indices": [
+      219,
+      293
+    ],
+    "experimental_times": [
+      232.46,
+      319.78
+    ],
+    "representative_x": 555.0351609900976,
+    "representative_y": 421.86564065982515,
+    "spatial_dispersion_px": {
+      "diameter": 0.042643993760136,
+      "max": 0.042643993760136,
+      "rms": 0.030153857164668986
+    },
+    "number_of_observations": 2,
+    "observation_ids": [
+      "ESM3:219:graphic-component-0044",
+      "ESM3:293:graphic-component-0045"
+    ],
+    "observation_count": 2,
+    "observed_frame_indices": [
+      219,
+      293
+    ],
+    "distinct_observed_frame_count": 2,
+    "representative": {
+      "observation_id": "ESM3:219:graphic-component-0044",
+      "center_x": 555.0351609900976,
+      "center_y": 421.86564065982515,
+      "selection_rule": "OBSERVED_MEDOID_MIN_SUM_SQUARED_DISTANCE_LEXICOGRAPHIC_ID_TIE"
+    },
+    "maximum_pairwise_diameter_px": 0.042643993760136,
+    "maximum_distance_to_representative_px": 0.042643993760136,
+    "rms_distance_to_representative_px": 0.030153857164668986,
+    "radius_by_observation": [
+      {
+        "observation_id": "ESM3:219:graphic-component-0044",
+        "radius_graphical_px": 10.81974220352941
+      },
+      {
+        "observation_id": "ESM3:293:graphic-component-0045",
+        "radius_graphical_px": 10.822427180042444
+      }
+    ],
+    "radius_range_graphical_px": [
+      10.81974220352941,
+      10.822427180042444
+    ],
+    "first_confident_observation": {
+      "observation_id": "ESM3:219:graphic-component-0044",
+      "frame_index": 219,
+      "experimental_time_s": 232.46
+    },
+    "first_observation_is_physical_onset": false,
+    "physical_event_id": null,
+    "event_onset_frame": null,
+    "grouping_rule": "CONNECTED_COMPONENTS_OF_DISTANCE_LE_3_PX",
+    "transitive_diameter_can_exceed_3_px": true
+  },
+  {
+    "annotation_site_id": "ESM3:annotation-site:dc8e4cc74e0dc7a3",
+    "source_id": "ESM3",
+    "acquisition_id": "bottom_up_anti_parallel",
+    "status": "OPERATIONAL_PUBLISHED_LOCATION_SITE",
+    "observations": [
+      {
+        "observation_id": "ESM3:146:graphic-component-0084",
+        "frame_index": 146,
+        "experimental_time_s": 146.32,
+        "center_x": 353.9310119835616,
+        "center_y": 809.089309800456,
+        "radius_graphical_px": 10.75929396741962
+      },
+      {
+        "observation_id": "ESM3:219:graphic-component-0083",
+        "frame_index": 219,
+        "experimental_time_s": 232.46,
+        "center_x": 353.8582150069445,
+        "center_y": 809.193703752869,
+        "radius_graphical_px": 10.814462023326465
+      }
+    ],
+    "frame_indices": [
+      146,
+      219
+    ],
+    "experimental_times": [
+      146.32,
+      232.46
+    ],
+    "representative_x": 353.9310119835616,
+    "representative_y": 809.089309800456,
+    "spatial_dispersion_px": {
+      "diameter": 0.1272693879336471,
+      "max": 0.1272693879336471,
+      "rms": 0.08999304724534321
+    },
+    "number_of_observations": 2,
+    "observation_ids": [
+      "ESM3:146:graphic-component-0084",
+      "ESM3:219:graphic-component-0083"
+    ],
+    "observation_count": 2,
+    "observed_frame_indices": [
+      146,
+      219
+    ],
+    "distinct_observed_frame_count": 2,
+    "representative": {
+      "observation_id": "ESM3:146:graphic-component-0084",
+      "center_x": 353.9310119835616,
+      "center_y": 809.089309800456,
+      "selection_rule": "OBSERVED_MEDOID_MIN_SUM_SQUARED_DISTANCE_LEXICOGRAPHIC_ID_TIE"
+    },
+    "maximum_pairwise_diameter_px": 0.1272693879336471,
+    "maximum_distance_to_representative_px": 0.1272693879336471,
+    "rms_distance_to_representative_px": 0.08999304724534321,
+    "radius_by_observation": [
+      {
+        "observation_id": "ESM3:146:graphic-component-0084",
+        "radius_graphical_px": 10.75929396741962
+      },
+      {
+        "observation_id": "ESM3:219:graphic-component-0083",
+        "radius_graphical_px": 10.814462023326465
+      }
+    ],
+    "radius_range_graphical_px": [
+      10.75929396741962,
+      10.814462023326465
+    ],
+    "first_confident_observation": {
+      "observation_id": "ESM3:146:graphic-component-0084",
+      "frame_index": 146,
+      "experimental_time_s": 146.32
+    },
+    "first_observation_is_physical_onset": false,
+    "physical_event_id": null,
+    "event_onset_frame": null,
+    "grouping_rule": "CONNECTED_COMPONENTS_OF_DISTANCE_LE_3_PX",
+    "transitive_diameter_can_exceed_3_px": true
+  },
+  {
+    "annotation_site_id": "ESM3:annotation-site:e4e61d2e63ef0f49",
+    "source_id": "ESM3",
+    "acquisition_id": "bottom_up_anti_parallel",
+    "status": "OPERATIONAL_PUBLISHED_LOCATION_SITE",
+    "observations": [
+      {
+        "observation_id": "ESM3:219:graphic-component-0098",
+        "frame_index": 219,
+        "experimental_time_s": 232.46,
+        "center_x": 801.9439100981467,
+        "center_y": 913.1398250055635,
+        "radius_graphical_px": 10.758743837333268
+      }
+    ],
+    "frame_indices": [
+      219
+    ],
+    "experimental_times": [
+      232.46
+    ],
+    "representative_x": 801.9439100981467,
+    "representative_y": 913.1398250055635,
+    "spatial_dispersion_px": {
+      "diameter": 0.0,
+      "max": 0.0,
+      "rms": 0.0
+    },
+    "number_of_observations": 1,
+    "observation_ids": [
+      "ESM3:219:graphic-component-0098"
+    ],
+    "observation_count": 1,
+    "observed_frame_indices": [
+      219
+    ],
+    "distinct_observed_frame_count": 1,
+    "representative": {
+      "observation_id": "ESM3:219:graphic-component-0098",
+      "center_x": 801.9439100981467,
+      "center_y": 913.1398250055635,
+      "selection_rule": "OBSERVED_MEDOID_MIN_SUM_SQUARED_DISTANCE_LEXICOGRAPHIC_ID_TIE"
+    },
+    "maximum_pairwise_diameter_px": 0.0,
+    "maximum_distance_to_representative_px": 0.0,
+    "rms_distance_to_representative_px": 0.0,
+    "radius_by_observation": [
+      {
+        "observation_id": "ESM3:219:graphic-component-0098",
+        "radius_graphical_px": 10.758743837333268
+      }
+    ],
+    "radius_range_graphical_px": [
+      10.758743837333268,
+      10.758743837333268
+    ],
+    "first_confident_observation": {
+      "observation_id": "ESM3:219:graphic-component-0098",
+      "frame_index": 219,
+      "experimental_time_s": 232.46
+    },
+    "first_observation_is_physical_onset": false,
+    "physical_event_id": null,
+    "event_onset_frame": null,
+    "grouping_rule": "CONNECTED_COMPONENTS_OF_DISTANCE_LE_3_PX",
+    "transitive_diameter_can_exceed_3_px": true
+  },
+  {
+    "annotation_site_id": "ESM3:annotation-site:e83161571f674407",
+    "source_id": "ESM3",
+    "acquisition_id": "bottom_up_anti_parallel",
+    "status": "OPERATIONAL_PUBLISHED_LOCATION_SITE",
+    "observations": [
+      {
+        "observation_id": "ESM3:146:graphic-component-0038",
+        "frame_index": 146,
+        "experimental_time_s": 146.32,
+        "center_x": 1077.0560899018533,
+        "center_y": 339.86017499443625,
+        "radius_graphical_px": 10.758743837333272
+      }
+    ],
+    "frame_indices": [
+      146
+    ],
+    "experimental_times": [
+      146.32
+    ],
+    "representative_x": 1077.0560899018533,
+    "representative_y": 339.86017499443625,
+    "spatial_dispersion_px": {
+      "diameter": 0.0,
+      "max": 0.0,
+      "rms": 0.0
+    },
+    "number_of_observations": 1,
+    "observation_ids": [
+      "ESM3:146:graphic-component-0038"
+    ],
+    "observation_count": 1,
+    "observed_frame_indices": [
+      146
+    ],
+    "distinct_observed_frame_count": 1,
+    "representative": {
+      "observation_id": "ESM3:146:graphic-component-0038",
+      "center_x": 1077.0560899018533,
+      "center_y": 339.86017499443625,
+      "selection_rule": "OBSERVED_MEDOID_MIN_SUM_SQUARED_DISTANCE_LEXICOGRAPHIC_ID_TIE"
+    },
+    "maximum_pairwise_diameter_px": 0.0,
+    "maximum_distance_to_representative_px": 0.0,
+    "rms_distance_to_representative_px": 0.0,
+    "radius_by_observation": [
+      {
+        "observation_id": "ESM3:146:graphic-component-0038",
+        "radius_graphical_px": 10.758743837333272
+      }
+    ],
+    "radius_range_graphical_px": [
+      10.758743837333272,
+      10.758743837333272
+    ],
+    "first_confident_observation": {
+      "observation_id": "ESM3:146:graphic-component-0038",
+      "frame_index": 146,
+      "experimental_time_s": 146.32
+    },
+    "first_observation_is_physical_onset": false,
+    "physical_event_id": null,
+    "event_onset_frame": null,
+    "grouping_rule": "CONNECTED_COMPONENTS_OF_DISTANCE_LE_3_PX",
+    "transitive_diameter_can_exceed_3_px": true
+  },
+  {
+    "annotation_site_id": "ESM3:annotation-site:e8c88192a10fa74d",
+    "source_id": "ESM3",
+    "acquisition_id": "bottom_up_anti_parallel",
+    "status": "OPERATIONAL_PUBLISHED_LOCATION_SITE",
+    "observations": [
+      {
+        "observation_id": "ESM3:73:graphic-component-0056",
+        "frame_index": 73,
+        "experimental_time_s": 60.18,
+        "center_x": 629.1254441542995,
+        "center_y": 697.1254441542998,
+        "radius_graphical_px": 10.786424074044898
+      },
+      {
+        "observation_id": "ESM3:146:graphic-component-0072",
+        "frame_index": 146,
+        "experimental_time_s": 146.32,
+        "center_x": 629.1813619275396,
+        "center_y": 697.0631635959833,
+        "radius_graphical_px": 10.817778825243906
+      },
+      {
+        "observation_id": "ESM3:293:graphic-component-0072",
+        "frame_index": 293,
+        "experimental_time_s": 319.78,
+        "center_x": 629.1928521181087,
+        "center_y": 697.0952662232643,
+        "radius_graphical_px": 10.758349188032044
+      }
+    ],
+    "frame_indices": [
+      73,
+      146,
+      293
+    ],
+    "experimental_times": [
+      60.18,
+      146.32,
+      319.78
+    ],
+    "representative_x": 629.1928521181087,
+    "representative_y": 697.0952662232643,
+    "spatial_dispersion_px": {
+      "diameter": 0.08369985249890305,
+      "max": 0.07385486515105248,
+      "rms": 0.046965037578104656
+    },
+    "number_of_observations": 3,
+    "observation_ids": [
+      "ESM3:146:graphic-component-0072",
+      "ESM3:293:graphic-component-0072",
+      "ESM3:73:graphic-component-0056"
+    ],
+    "observation_count": 3,
+    "observed_frame_indices": [
+      73,
+      146,
+      293
+    ],
+    "distinct_observed_frame_count": 3,
+    "representative": {
+      "observation_id": "ESM3:293:graphic-component-0072",
+      "center_x": 629.1928521181087,
+      "center_y": 697.0952662232643,
+      "selection_rule": "OBSERVED_MEDOID_MIN_SUM_SQUARED_DISTANCE_LEXICOGRAPHIC_ID_TIE"
+    },
+    "maximum_pairwise_diameter_px": 0.08369985249890305,
+    "maximum_distance_to_representative_px": 0.07385486515105248,
+    "rms_distance_to_representative_px": 0.046965037578104656,
+    "radius_by_observation": [
+      {
+        "observation_id": "ESM3:146:graphic-component-0072",
+        "radius_graphical_px": 10.817778825243906
+      },
+      {
+        "observation_id": "ESM3:293:graphic-component-0072",
+        "radius_graphical_px": 10.758349188032044
+      },
+      {
+        "observation_id": "ESM3:73:graphic-component-0056",
+        "radius_graphical_px": 10.786424074044898
+      }
+    ],
+    "radius_range_graphical_px": [
+      10.758349188032044,
+      10.817778825243906
+    ],
+    "first_confident_observation": {
+      "observation_id": "ESM3:73:graphic-component-0056",
+      "frame_index": 73,
+      "experimental_time_s": 60.18
+    },
+    "first_observation_is_physical_onset": false,
+    "physical_event_id": null,
+    "event_onset_frame": null,
+    "grouping_rule": "CONNECTED_COMPONENTS_OF_DISTANCE_LE_3_PX",
+    "transitive_diameter_can_exceed_3_px": true
+  },
+  {
+    "annotation_site_id": "ESM3:annotation-site:edefb8faa424fa0f",
+    "source_id": "ESM3",
+    "acquisition_id": "bottom_up_anti_parallel",
+    "status": "OPERATIONAL_PUBLISHED_LOCATION_SITE",
+    "observations": [
+      {
+        "observation_id": "ESM3:73:graphic-component-0040",
+        "frame_index": 73,
+        "experimental_time_s": 60.18,
+        "center_x": 999.1417849930555,
+        "center_y": 549.80629624713,
+        "radius_graphical_px": 10.814462023326469
+      },
+      {
+        "observation_id": "ESM3:219:graphic-component-0055",
+        "frame_index": 219,
+        "experimental_time_s": 232.46,
+        "center_x": 999.1254441542995,
+        "center_y": 549.8745558457002,
+        "radius_graphical_px": 10.786424074044898
+      }
+    ],
+    "frame_indices": [
+      73,
+      219
+    ],
+    "experimental_times": [
+      60.18,
+      232.46
+    ],
+    "representative_x": 999.1254441542995,
+    "representative_y": 549.8745558457002,
+    "spatial_dispersion_px": {
+      "diameter": 0.0701882882553141,
+      "max": 0.0701882882553141,
+      "rms": 0.04963061458520871
+    },
+    "number_of_observations": 2,
+    "observation_ids": [
+      "ESM3:219:graphic-component-0055",
+      "ESM3:73:graphic-component-0040"
+    ],
+    "observation_count": 2,
+    "observed_frame_indices": [
+      73,
+      219
+    ],
+    "distinct_observed_frame_count": 2,
+    "representative": {
+      "observation_id": "ESM3:219:graphic-component-0055",
+      "center_x": 999.1254441542995,
+      "center_y": 549.8745558457002,
+      "selection_rule": "OBSERVED_MEDOID_MIN_SUM_SQUARED_DISTANCE_LEXICOGRAPHIC_ID_TIE"
+    },
+    "maximum_pairwise_diameter_px": 0.0701882882553141,
+    "maximum_distance_to_representative_px": 0.0701882882553141,
+    "rms_distance_to_representative_px": 0.04963061458520871,
+    "radius_by_observation": [
+      {
+        "observation_id": "ESM3:219:graphic-component-0055",
+        "radius_graphical_px": 10.786424074044898
+      },
+      {
+        "observation_id": "ESM3:73:graphic-component-0040",
+        "radius_graphical_px": 10.814462023326469
+      }
+    ],
+    "radius_range_graphical_px": [
+      10.786424074044898,
+      10.814462023326469
+    ],
+    "first_confident_observation": {
+      "observation_id": "ESM3:73:graphic-component-0040",
+      "frame_index": 73,
+      "experimental_time_s": 60.18
+    },
+    "first_observation_is_physical_onset": false,
+    "physical_event_id": null,
+    "event_onset_frame": null,
+    "grouping_rule": "CONNECTED_COMPONENTS_OF_DISTANCE_LE_3_PX",
+    "transitive_diameter_can_exceed_3_px": true
+  },
+  {
+    "annotation_site_id": "ESM3:annotation-site:f96050cb91a60afe",
+    "source_id": "ESM3",
+    "acquisition_id": "bottom_up_anti_parallel",
+    "status": "OPERATIONAL_PUBLISHED_LOCATION_SITE",
+    "observations": [
+      {
+        "observation_id": "ESM3:293:graphic-component-0049",
+        "frame_index": 293,
+        "experimental_time_s": 319.78,
+        "center_x": 607.8582150069445,
+        "center_y": 489.19370375286996,
+        "radius_graphical_px": 10.814462023326465
+      }
+    ],
+    "frame_indices": [
+      293
+    ],
+    "experimental_times": [
+      319.78
+    ],
+    "representative_x": 607.8582150069445,
+    "representative_y": 489.19370375286996,
+    "spatial_dispersion_px": {
+      "diameter": 0.0,
+      "max": 0.0,
+      "rms": 0.0
+    },
+    "number_of_observations": 1,
+    "observation_ids": [
+      "ESM3:293:graphic-component-0049"
+    ],
+    "observation_count": 1,
+    "observed_frame_indices": [
+      293
+    ],
+    "distinct_observed_frame_count": 1,
+    "representative": {
+      "observation_id": "ESM3:293:graphic-component-0049",
+      "center_x": 607.8582150069445,
+      "center_y": 489.19370375286996,
+      "selection_rule": "OBSERVED_MEDOID_MIN_SUM_SQUARED_DISTANCE_LEXICOGRAPHIC_ID_TIE"
+    },
+    "maximum_pairwise_diameter_px": 0.0,
+    "maximum_distance_to_representative_px": 0.0,
+    "rms_distance_to_representative_px": 0.0,
+    "radius_by_observation": [
+      {
+        "observation_id": "ESM3:293:graphic-component-0049",
+        "radius_graphical_px": 10.814462023326465
+      }
+    ],
+    "radius_range_graphical_px": [
+      10.814462023326465,
+      10.814462023326465
+    ],
+    "first_confident_observation": {
+      "observation_id": "ESM3:293:graphic-component-0049",
+      "frame_index": 293,
+      "experimental_time_s": 319.78
+    },
+    "first_observation_is_physical_onset": false,
+    "physical_event_id": null,
+    "event_onset_frame": null,
+    "grouping_rule": "CONNECTED_COMPONENTS_OF_DISTANCE_LE_3_PX",
+    "transitive_diameter_can_exceed_3_px": true
+  },
+  {
+    "annotation_site_id": "ESM3:annotation-site:f9920f6617bd11b6",
+    "source_id": "ESM3",
+    "acquisition_id": "bottom_up_anti_parallel",
+    "status": "OPERATIONAL_PUBLISHED_LOCATION_SITE",
+    "observations": [
+      {
+        "observation_id": "ESM3:219:graphic-component-0092",
+        "frame_index": 219,
+        "experimental_time_s": 232.46,
+        "center_x": 285.8601749944363,
+        "center_y": 867.0560899018544,
+        "radius_graphical_px": 10.75874383733328
+      },
+      {
+        "observation_id": "ESM3:293:graphic-component-0093",
+        "frame_index": 293,
+        "experimental_time_s": 319.78,
+        "center_x": 285.8601749944363,
+        "center_y": 867.0560899018544,
+        "radius_graphical_px": 10.75874383733328
+      }
+    ],
+    "frame_indices": [
+      219,
+      293
+    ],
+    "experimental_times": [
+      232.46,
+      319.78
+    ],
+    "representative_x": 285.8601749944363,
+    "representative_y": 867.0560899018544,
+    "spatial_dispersion_px": {
+      "diameter": 0.0,
+      "max": 0.0,
+      "rms": 0.0
+    },
+    "number_of_observations": 2,
+    "observation_ids": [
+      "ESM3:219:graphic-component-0092",
+      "ESM3:293:graphic-component-0093"
+    ],
+    "observation_count": 2,
+    "observed_frame_indices": [
+      219,
+      293
+    ],
+    "distinct_observed_frame_count": 2,
+    "representative": {
+      "observation_id": "ESM3:219:graphic-component-0092",
+      "center_x": 285.8601749944363,
+      "center_y": 867.0560899018544,
+      "selection_rule": "OBSERVED_MEDOID_MIN_SUM_SQUARED_DISTANCE_LEXICOGRAPHIC_ID_TIE"
+    },
+    "maximum_pairwise_diameter_px": 0.0,
+    "maximum_distance_to_representative_px": 0.0,
+    "rms_distance_to_representative_px": 0.0,
+    "radius_by_observation": [
+      {
+        "observation_id": "ESM3:219:graphic-component-0092",
+        "radius_graphical_px": 10.75874383733328
+      },
+      {
+        "observation_id": "ESM3:293:graphic-component-0093",
+        "radius_graphical_px": 10.75874383733328
+      }
+    ],
+    "radius_range_graphical_px": [
+      10.75874383733328,
+      10.75874383733328
+    ],
+    "first_confident_observation": {
+      "observation_id": "ESM3:219:graphic-component-0092",
+      "frame_index": 219,
+      "experimental_time_s": 232.46
+    },
+    "first_observation_is_physical_onset": false,
+    "physical_event_id": null,
+    "event_onset_frame": null,
+    "grouping_rule": "CONNECTED_COMPONENTS_OF_DISTANCE_LE_3_PX",
+    "transitive_diameter_can_exceed_3_px": true
+  },
+  {
+    "annotation_site_id": "ESM3:annotation-site:fa750a97def45a3f",
+    "source_id": "ESM3",
+    "acquisition_id": "bottom_up_anti_parallel",
+    "status": "OPERATIONAL_PUBLISHED_LOCATION_SITE",
+    "observations": [
+      {
+        "observation_id": "ESM3:219:graphic-component-0088",
+        "frame_index": 219,
+        "experimental_time_s": 232.46,
+        "center_x": 469.9128153343074,
+        "center_y": 836.9673676192997,
+        "radius_graphical_px": 10.76304361728588
+      },
+      {
+        "observation_id": "ESM3:293:graphic-component-0089",
+        "frame_index": 293,
+        "experimental_time_s": 319.78,
+        "center_x": 469.9702898128171,
+        "center_y": 837.0297101871829,
+        "radius_graphical_px": 10.730656214726636
+      }
+    ],
+    "frame_indices": [
+      219,
+      293
+    ],
+    "experimental_times": [
+      232.46,
+      319.78
+    ],
+    "representative_x": 469.9128153343074,
+    "representative_y": 836.9673676192997,
+    "spatial_dispersion_px": {
+      "diameter": 0.08479334555394863,
+      "max": 0.08479334555394863,
+      "rms": 0.05995794964069127
+    },
+    "number_of_observations": 2,
+    "observation_ids": [
+      "ESM3:219:graphic-component-0088",
+      "ESM3:293:graphic-component-0089"
+    ],
+    "observation_count": 2,
+    "observed_frame_indices": [
+      219,
+      293
+    ],
+    "distinct_observed_frame_count": 2,
+    "representative": {
+      "observation_id": "ESM3:219:graphic-component-0088",
+      "center_x": 469.9128153343074,
+      "center_y": 836.9673676192997,
+      "selection_rule": "OBSERVED_MEDOID_MIN_SUM_SQUARED_DISTANCE_LEXICOGRAPHIC_ID_TIE"
+    },
+    "maximum_pairwise_diameter_px": 0.08479334555394863,
+    "maximum_distance_to_representative_px": 0.08479334555394863,
+    "rms_distance_to_representative_px": 0.05995794964069127,
+    "radius_by_observation": [
+      {
+        "observation_id": "ESM3:219:graphic-component-0088",
+        "radius_graphical_px": 10.76304361728588
+      },
+      {
+        "observation_id": "ESM3:293:graphic-component-0089",
+        "radius_graphical_px": 10.730656214726636
+      }
+    ],
+    "radius_range_graphical_px": [
+      10.730656214726636,
+      10.76304361728588
+    ],
+    "first_confident_observation": {
+      "observation_id": "ESM3:219:graphic-component-0088",
+      "frame_index": 219,
+      "experimental_time_s": 232.46
+    },
+    "first_observation_is_physical_onset": false,
+    "physical_event_id": null,
+    "event_onset_frame": null,
+    "grouping_rule": "CONNECTED_COMPONENTS_OF_DISTANCE_LE_3_PX",
+    "transitive_diameter_can_exceed_3_px": true
+  },
+  {
+    "annotation_site_id": "ESM6:annotation-site:06c0d30a17e26499",
+    "source_id": "ESM6",
+    "acquisition_id": "top_down_parallel",
+    "status": "OPERATIONAL_PUBLISHED_LOCATION_SITE",
+    "observations": [
+      {
+        "observation_id": "ESM6:197:graphic-component-0014",
+        "frame_index": 197,
+        "experimental_time_s": 198.24,
+        "center_x": 49.87455584570042,
+        "center_y": 775.1254441542993,
+        "radius_graphical_px": 10.786424074044891
+      },
+      {
+        "observation_id": "ESM6:394:graphic-component-0014",
+        "frame_index": 394,
+        "experimental_time_s": 430.7,
+        "center_x": 49.87455584570042,
+        "center_y": 775.1254441542993,
+        "radius_graphical_px": 10.786424074044891
+      }
+    ],
+    "frame_indices": [
+      197,
+      394
+    ],
+    "experimental_times": [
+      198.24,
+      430.7
+    ],
+    "representative_x": 49.87455584570042,
+    "representative_y": 775.1254441542993,
+    "spatial_dispersion_px": {
+      "diameter": 0.0,
+      "max": 0.0,
+      "rms": 0.0
+    },
+    "number_of_observations": 2,
+    "observation_ids": [
+      "ESM6:197:graphic-component-0014",
+      "ESM6:394:graphic-component-0014"
+    ],
+    "observation_count": 2,
+    "observed_frame_indices": [
+      197,
+      394
+    ],
+    "distinct_observed_frame_count": 2,
+    "representative": {
+      "observation_id": "ESM6:197:graphic-component-0014",
+      "center_x": 49.87455584570042,
+      "center_y": 775.1254441542993,
+      "selection_rule": "OBSERVED_MEDOID_MIN_SUM_SQUARED_DISTANCE_LEXICOGRAPHIC_ID_TIE"
+    },
+    "maximum_pairwise_diameter_px": 0.0,
+    "maximum_distance_to_representative_px": 0.0,
+    "rms_distance_to_representative_px": 0.0,
+    "radius_by_observation": [
+      {
+        "observation_id": "ESM6:197:graphic-component-0014",
+        "radius_graphical_px": 10.786424074044891
+      },
+      {
+        "observation_id": "ESM6:394:graphic-component-0014",
+        "radius_graphical_px": 10.786424074044891
+      }
+    ],
+    "radius_range_graphical_px": [
+      10.786424074044891,
+      10.786424074044891
+    ],
+    "first_confident_observation": {
+      "observation_id": "ESM6:197:graphic-component-0014",
+      "frame_index": 197,
+      "experimental_time_s": 198.24
+    },
+    "first_observation_is_physical_onset": false,
+    "physical_event_id": null,
+    "event_onset_frame": null,
+    "grouping_rule": "CONNECTED_COMPONENTS_OF_DISTANCE_LE_3_PX",
+    "transitive_diameter_can_exceed_3_px": true
+  },
+  {
+    "annotation_site_id": "ESM6:annotation-site:0f7c84350afec256",
+    "source_id": "ESM6",
+    "acquisition_id": "top_down_parallel",
+    "status": "OPERATIONAL_PUBLISHED_LOCATION_SITE",
+    "observations": [
+      {
+        "observation_id": "ESM6:98:graphic-component-0003",
+        "frame_index": 98,
+        "experimental_time_s": 81.42,
+        "center_x": 645.8582150069445,
+        "center_y": 239.80629624713006,
+        "radius_graphical_px": 10.814462023326469
+      },
+      {
+        "observation_id": "ESM6:197:graphic-component-0003",
+        "frame_index": 197,
+        "experimental_time_s": 198.24,
+        "center_x": 645.9267431015536,
+        "center_y": 239.79143578724995,
+        "radius_graphical_px": 10.787366317122173
+      },
+      {
+        "observation_id": "ESM6:295:graphic-component-0003",
+        "frame_index": 295,
+        "experimental_time_s": 313.88,
+        "center_x": 645.9267431015536,
+        "center_y": 239.79143578724995,
+        "radius_graphical_px": 10.787366317122173
+      },
+      {
+        "observation_id": "ESM6:394:graphic-component-0003",
+        "frame_index": 394,
+        "experimental_time_s": 430.7,
+        "center_x": 645.8582150069445,
+        "center_y": 239.80629624713006,
+        "radius_graphical_px": 10.814462023326469
+      }
+    ],
+    "frame_indices": [
+      98,
+      197,
+      295,
+      394
+    ],
+    "experimental_times": [
+      81.42,
+      198.24,
+      313.88,
+      430.7
+    ],
+    "representative_x": 645.9267431015536,
+    "representative_y": 239.79143578724995,
+    "spatial_dispersion_px": {
+      "diameter": 0.07012084582060649,
+      "max": 0.07012084582060649,
+      "rms": 0.049582925582287225
+    },
+    "number_of_observations": 4,
+    "observation_ids": [
+      "ESM6:197:graphic-component-0003",
+      "ESM6:295:graphic-component-0003",
+      "ESM6:394:graphic-component-0003",
+      "ESM6:98:graphic-component-0003"
+    ],
+    "observation_count": 4,
+    "observed_frame_indices": [
+      98,
+      197,
+      295,
+      394
+    ],
+    "distinct_observed_frame_count": 4,
+    "representative": {
+      "observation_id": "ESM6:197:graphic-component-0003",
+      "center_x": 645.9267431015536,
+      "center_y": 239.79143578724995,
+      "selection_rule": "OBSERVED_MEDOID_MIN_SUM_SQUARED_DISTANCE_LEXICOGRAPHIC_ID_TIE"
+    },
+    "maximum_pairwise_diameter_px": 0.07012084582060649,
+    "maximum_distance_to_representative_px": 0.07012084582060649,
+    "rms_distance_to_representative_px": 0.049582925582287225,
+    "radius_by_observation": [
+      {
+        "observation_id": "ESM6:197:graphic-component-0003",
+        "radius_graphical_px": 10.787366317122173
+      },
+      {
+        "observation_id": "ESM6:295:graphic-component-0003",
+        "radius_graphical_px": 10.787366317122173
+      },
+      {
+        "observation_id": "ESM6:394:graphic-component-0003",
+        "radius_graphical_px": 10.814462023326469
+      },
+      {
+        "observation_id": "ESM6:98:graphic-component-0003",
+        "radius_graphical_px": 10.814462023326469
+      }
+    ],
+    "radius_range_graphical_px": [
+      10.787366317122173,
+      10.814462023326469
+    ],
+    "first_confident_observation": {
+      "observation_id": "ESM6:98:graphic-component-0003",
+      "frame_index": 98,
+      "experimental_time_s": 81.42
+    },
+    "first_observation_is_physical_onset": false,
+    "physical_event_id": null,
+    "event_onset_frame": null,
+    "grouping_rule": "CONNECTED_COMPONENTS_OF_DISTANCE_LE_3_PX",
+    "transitive_diameter_can_exceed_3_px": true
+  },
+  {
+    "annotation_site_id": "ESM6:annotation-site:33c1dc5c4466a022",
+    "source_id": "ESM6",
+    "acquisition_id": "top_down_parallel",
+    "status": "OPERATIONAL_PUBLISHED_LOCATION_SITE",
+    "observations": [
+      {
+        "observation_id": "ESM6:197:graphic-component-0011",
+        "frame_index": 197,
+        "experimental_time_s": 198.24,
+        "center_x": 457.12544415429954,
+        "center_y": 691.8745558457002,
+        "radius_graphical_px": 10.786424074044898
+      },
+      {
+        "observation_id": "ESM6:295:graphic-component-0011",
+        "frame_index": 295,
+        "experimental_time_s": 313.88,
+        "center_x": 457.12544415429954,
+        "center_y": 691.8745558457002,
+        "radius_graphical_px": 10.786424074044898
+      }
+    ],
+    "frame_indices": [
+      197,
+      295
+    ],
+    "experimental_times": [
+      198.24,
+      313.88
+    ],
+    "representative_x": 457.12544415429954,
+    "representative_y": 691.8745558457002,
+    "spatial_dispersion_px": {
+      "diameter": 0.0,
+      "max": 0.0,
+      "rms": 0.0
+    },
+    "number_of_observations": 2,
+    "observation_ids": [
+      "ESM6:197:graphic-component-0011",
+      "ESM6:295:graphic-component-0011"
+    ],
+    "observation_count": 2,
+    "observed_frame_indices": [
+      197,
+      295
+    ],
+    "distinct_observed_frame_count": 2,
+    "representative": {
+      "observation_id": "ESM6:197:graphic-component-0011",
+      "center_x": 457.12544415429954,
+      "center_y": 691.8745558457002,
+      "selection_rule": "OBSERVED_MEDOID_MIN_SUM_SQUARED_DISTANCE_LEXICOGRAPHIC_ID_TIE"
+    },
+    "maximum_pairwise_diameter_px": 0.0,
+    "maximum_distance_to_representative_px": 0.0,
+    "rms_distance_to_representative_px": 0.0,
+    "radius_by_observation": [
+      {
+        "observation_id": "ESM6:197:graphic-component-0011",
+        "radius_graphical_px": 10.786424074044898
+      },
+      {
+        "observation_id": "ESM6:295:graphic-component-0011",
+        "radius_graphical_px": 10.786424074044898
+      }
+    ],
+    "radius_range_graphical_px": [
+      10.786424074044898,
+      10.786424074044898
+    ],
+    "first_confident_observation": {
+      "observation_id": "ESM6:197:graphic-component-0011",
+      "frame_index": 197,
+      "experimental_time_s": 198.24
+    },
+    "first_observation_is_physical_onset": false,
+    "physical_event_id": null,
+    "event_onset_frame": null,
+    "grouping_rule": "CONNECTED_COMPONENTS_OF_DISTANCE_LE_3_PX",
+    "transitive_diameter_can_exceed_3_px": true
+  },
+  {
+    "annotation_site_id": "ESM6:annotation-site:3f6362655a542a6c",
+    "source_id": "ESM6",
+    "acquisition_id": "top_down_parallel",
+    "status": "OPERATIONAL_PUBLISHED_LOCATION_SITE",
+    "observations": [
+      {
+        "observation_id": "ESM6:197:graphic-component-0017",
+        "frame_index": 197,
+        "experimental_time_s": 198.24,
+        "center_x": 1105.102287314787,
+        "center_y": 901.5112553965733,
+        "radius_graphical_px": 10.639042577665721
+      },
+      {
+        "observation_id": "ESM6:295:graphic-component-0017",
+        "frame_index": 295,
+        "experimental_time_s": 313.88,
+        "center_x": 1105.11730383717,
+        "center_y": 901.5427729511497,
+        "radius_graphical_px": 10.60748925736417
+      },
+      {
+        "observation_id": "ESM6:394:graphic-component-0017",
+        "frame_index": 394,
+        "experimental_time_s": 430.7,
+        "center_x": 1105.1668836001697,
+        "center_y": 901.5982959634524,
+        "radius_graphical_px": 10.679154856697957
+      }
+    ],
+    "frame_indices": [
+      197,
+      295,
+      394
+    ],
+    "experimental_times": [
+      198.24,
+      313.88,
+      430.7
+    ],
+    "representative_x": 1105.11730383717,
+    "representative_y": 901.5427729511497,
+    "spatial_dispersion_px": {
+      "diameter": 0.10839160653797268,
+      "max": 0.07443761007898496,
+      "rms": 0.04746862116256842
+    },
+    "number_of_observations": 3,
+    "observation_ids": [
+      "ESM6:197:graphic-component-0017",
+      "ESM6:295:graphic-component-0017",
+      "ESM6:394:graphic-component-0017"
+    ],
+    "observation_count": 3,
+    "observed_frame_indices": [
+      197,
+      295,
+      394
+    ],
+    "distinct_observed_frame_count": 3,
+    "representative": {
+      "observation_id": "ESM6:295:graphic-component-0017",
+      "center_x": 1105.11730383717,
+      "center_y": 901.5427729511497,
+      "selection_rule": "OBSERVED_MEDOID_MIN_SUM_SQUARED_DISTANCE_LEXICOGRAPHIC_ID_TIE"
+    },
+    "maximum_pairwise_diameter_px": 0.10839160653797268,
+    "maximum_distance_to_representative_px": 0.07443761007898496,
+    "rms_distance_to_representative_px": 0.04746862116256842,
+    "radius_by_observation": [
+      {
+        "observation_id": "ESM6:197:graphic-component-0017",
+        "radius_graphical_px": 10.639042577665721
+      },
+      {
+        "observation_id": "ESM6:295:graphic-component-0017",
+        "radius_graphical_px": 10.60748925736417
+      },
+      {
+        "observation_id": "ESM6:394:graphic-component-0017",
+        "radius_graphical_px": 10.679154856697957
+      }
+    ],
+    "radius_range_graphical_px": [
+      10.60748925736417,
+      10.679154856697957
+    ],
+    "first_confident_observation": {
+      "observation_id": "ESM6:197:graphic-component-0017",
+      "frame_index": 197,
+      "experimental_time_s": 198.24
+    },
+    "first_observation_is_physical_onset": false,
+    "physical_event_id": null,
+    "event_onset_frame": null,
+    "grouping_rule": "CONNECTED_COMPONENTS_OF_DISTANCE_LE_3_PX",
+    "transitive_diameter_can_exceed_3_px": true
+  },
+  {
+    "annotation_site_id": "ESM6:annotation-site:610a877237d31a5d",
+    "source_id": "ESM6",
+    "acquisition_id": "top_down_parallel",
+    "status": "OPERATIONAL_PUBLISHED_LOCATION_SITE",
+    "observations": [
+      {
+        "observation_id": "ESM6:197:graphic-component-0010",
+        "frame_index": 197,
+        "experimental_time_s": 198.24,
+        "center_x": 95.8802981373982,
+        "center_y": 635.9385830429959,
+        "radius_graphical_px": 10.760607632061616
+      },
+      {
+        "observation_id": "ESM6:295:graphic-component-0010",
+        "frame_index": 295,
+        "experimental_time_s": 313.88,
+        "center_x": 95.87455584570043,
+        "center_y": 635.8745558457002,
+        "radius_graphical_px": 10.7864240740449
+      },
+      {
+        "observation_id": "ESM6:394:graphic-component-0010",
+        "frame_index": 394,
+        "experimental_time_s": 430.7,
+        "center_x": 95.9310119835616,
+        "center_y": 635.9106901995438,
+        "radius_graphical_px": 10.75929396741962
+      }
+    ],
+    "frame_indices": [
+      197,
+      295,
+      394
+    ],
+    "experimental_times": [
+      198.24,
+      313.88,
+      430.7
+    ],
+    "representative_x": 95.8802981373982,
+    "representative_y": 635.9385830429959,
+    "spatial_dispersion_px": {
+      "diameter": 0.06702974735062735,
+      "max": 0.06428418084942258,
+      "rms": 0.049941168108127876
+    },
+    "number_of_observations": 3,
+    "observation_ids": [
+      "ESM6:197:graphic-component-0010",
+      "ESM6:295:graphic-component-0010",
+      "ESM6:394:graphic-component-0010"
+    ],
+    "observation_count": 3,
+    "observed_frame_indices": [
+      197,
+      295,
+      394
+    ],
+    "distinct_observed_frame_count": 3,
+    "representative": {
+      "observation_id": "ESM6:197:graphic-component-0010",
+      "center_x": 95.8802981373982,
+      "center_y": 635.9385830429959,
+      "selection_rule": "OBSERVED_MEDOID_MIN_SUM_SQUARED_DISTANCE_LEXICOGRAPHIC_ID_TIE"
+    },
+    "maximum_pairwise_diameter_px": 0.06702974735062735,
+    "maximum_distance_to_representative_px": 0.06428418084942258,
+    "rms_distance_to_representative_px": 0.049941168108127876,
+    "radius_by_observation": [
+      {
+        "observation_id": "ESM6:197:graphic-component-0010",
+        "radius_graphical_px": 10.760607632061616
+      },
+      {
+        "observation_id": "ESM6:295:graphic-component-0010",
+        "radius_graphical_px": 10.7864240740449
+      },
+      {
+        "observation_id": "ESM6:394:graphic-component-0010",
+        "radius_graphical_px": 10.75929396741962
+      }
+    ],
+    "radius_range_graphical_px": [
+      10.75929396741962,
+      10.7864240740449
+    ],
+    "first_confident_observation": {
+      "observation_id": "ESM6:197:graphic-component-0010",
+      "frame_index": 197,
+      "experimental_time_s": 198.24
+    },
+    "first_observation_is_physical_onset": false,
+    "physical_event_id": null,
+    "event_onset_frame": null,
+    "grouping_rule": "CONNECTED_COMPONENTS_OF_DISTANCE_LE_3_PX",
+    "transitive_diameter_can_exceed_3_px": true
+  },
+  {
+    "annotation_site_id": "ESM6:annotation-site:63498902ef491c68",
+    "source_id": "ESM6",
+    "acquisition_id": "top_down_parallel",
+    "status": "OPERATIONAL_PUBLISHED_LOCATION_SITE",
+    "observations": [
+      {
+        "observation_id": "ESM6:98:graphic-component-0006",
+        "frame_index": 98,
+        "experimental_time_s": 81.42,
+        "center_x": 573.8636227435649,
+        "center_y": 415.0595646501485,
+        "radius_graphical_px": 10.73125899111766
+      },
+      {
+        "observation_id": "ESM6:197:graphic-component-0007",
+        "frame_index": 197,
+        "experimental_time_s": 198.24,
+        "center_x": 574.0039760192421,
+        "center_y": 415.1030232469441,
+        "radius_graphical_px": 10.73029990342624
+      },
+      {
+        "observation_id": "ESM6:295:graphic-component-0007",
+        "frame_index": 295,
+        "experimental_time_s": 313.88,
+        "center_x": 573.8582150069445,
+        "center_y": 415.19370375286996,
+        "radius_graphical_px": 10.814462023326465
+      },
+      {
+        "observation_id": "ESM6:394:graphic-component-0007",
+        "frame_index": 394,
+        "experimental_time_s": 430.7,
+        "center_x": 573.9310119835616,
+        "center_y": 415.0893098004561,
+        "radius_graphical_px": 10.759293967419623
+      }
+    ],
+    "frame_indices": [
+      98,
+      197,
+      295,
+      394
+    ],
+    "experimental_times": [
+      81.42,
+      198.24,
+      313.88,
+      430.7
+    ],
+    "representative_x": 573.9310119835616,
+    "representative_y": 415.0893098004561,
+    "spatial_dispersion_px": {
+      "diameter": 0.17166603292730842,
+      "max": 0.12726938793431394,
+      "rms": 0.08236411514838349
+    },
+    "number_of_observations": 4,
+    "observation_ids": [
+      "ESM6:197:graphic-component-0007",
+      "ESM6:295:graphic-component-0007",
+      "ESM6:394:graphic-component-0007",
+      "ESM6:98:graphic-component-0006"
+    ],
+    "observation_count": 4,
+    "observed_frame_indices": [
+      98,
+      197,
+      295,
+      394
+    ],
+    "distinct_observed_frame_count": 4,
+    "representative": {
+      "observation_id": "ESM6:394:graphic-component-0007",
+      "center_x": 573.9310119835616,
+      "center_y": 415.0893098004561,
+      "selection_rule": "OBSERVED_MEDOID_MIN_SUM_SQUARED_DISTANCE_LEXICOGRAPHIC_ID_TIE"
+    },
+    "maximum_pairwise_diameter_px": 0.17166603292730842,
+    "maximum_distance_to_representative_px": 0.12726938793431394,
+    "rms_distance_to_representative_px": 0.08236411514838349,
+    "radius_by_observation": [
+      {
+        "observation_id": "ESM6:197:graphic-component-0007",
+        "radius_graphical_px": 10.73029990342624
+      },
+      {
+        "observation_id": "ESM6:295:graphic-component-0007",
+        "radius_graphical_px": 10.814462023326465
+      },
+      {
+        "observation_id": "ESM6:394:graphic-component-0007",
+        "radius_graphical_px": 10.759293967419623
+      },
+      {
+        "observation_id": "ESM6:98:graphic-component-0006",
+        "radius_graphical_px": 10.73125899111766
+      }
+    ],
+    "radius_range_graphical_px": [
+      10.73029990342624,
+      10.814462023326465
+    ],
+    "first_confident_observation": {
+      "observation_id": "ESM6:98:graphic-component-0006",
+      "frame_index": 98,
+      "experimental_time_s": 81.42
+    },
+    "first_observation_is_physical_onset": false,
+    "physical_event_id": null,
+    "event_onset_frame": null,
+    "grouping_rule": "CONNECTED_COMPONENTS_OF_DISTANCE_LE_3_PX",
+    "transitive_diameter_can_exceed_3_px": true
+  },
+  {
+    "annotation_site_id": "ESM6:annotation-site:66debc7da14ef231",
+    "source_id": "ESM6",
+    "acquisition_id": "top_down_parallel",
+    "status": "OPERATIONAL_PUBLISHED_LOCATION_SITE",
+    "observations": [
+      {
+        "observation_id": "ESM6:197:graphic-component-0001",
+        "frame_index": 197,
+        "experimental_time_s": 198.24,
+        "center_x": 319.87455584570046,
+        "center_y": 49.87455584570025,
+        "radius_graphical_px": 10.7864240740449
+      },
+      {
+        "observation_id": "ESM6:295:graphic-component-0001",
+        "frame_index": 295,
+        "experimental_time_s": 313.88,
+        "center_x": 319.8582150069445,
+        "center_y": 49.806296247130966,
+        "radius_graphical_px": 10.814462023326465
+      },
+      {
+        "observation_id": "ESM6:394:graphic-component-0001",
+        "frame_index": 394,
+        "experimental_time_s": 430.7,
+        "center_x": 319.92674310155365,
+        "center_y": 49.79143578724975,
+        "radius_graphical_px": 10.787366317122174
+      }
+    ],
+    "frame_indices": [
+      197,
+      295,
+      394
+    ],
+    "experimental_times": [
+      198.24,
+      313.88,
+      430.7
+    ],
+    "representative_x": 319.8582150069445,
+    "representative_y": 49.806296247130966,
+    "spatial_dispersion_px": {
+      "diameter": 0.0981450650328441,
+      "max": 0.07018828825444284,
+      "rms": 0.05728097073995383
+    },
+    "number_of_observations": 3,
+    "observation_ids": [
+      "ESM6:197:graphic-component-0001",
+      "ESM6:295:graphic-component-0001",
+      "ESM6:394:graphic-component-0001"
+    ],
+    "observation_count": 3,
+    "observed_frame_indices": [
+      197,
+      295,
+      394
+    ],
+    "distinct_observed_frame_count": 3,
+    "representative": {
+      "observation_id": "ESM6:295:graphic-component-0001",
+      "center_x": 319.8582150069445,
+      "center_y": 49.806296247130966,
+      "selection_rule": "OBSERVED_MEDOID_MIN_SUM_SQUARED_DISTANCE_LEXICOGRAPHIC_ID_TIE"
+    },
+    "maximum_pairwise_diameter_px": 0.0981450650328441,
+    "maximum_distance_to_representative_px": 0.07018828825444284,
+    "rms_distance_to_representative_px": 0.05728097073995383,
+    "radius_by_observation": [
+      {
+        "observation_id": "ESM6:197:graphic-component-0001",
+        "radius_graphical_px": 10.7864240740449
+      },
+      {
+        "observation_id": "ESM6:295:graphic-component-0001",
+        "radius_graphical_px": 10.814462023326465
+      },
+      {
+        "observation_id": "ESM6:394:graphic-component-0001",
+        "radius_graphical_px": 10.787366317122174
+      }
+    ],
+    "radius_range_graphical_px": [
+      10.7864240740449,
+      10.814462023326465
+    ],
+    "first_confident_observation": {
+      "observation_id": "ESM6:197:graphic-component-0001",
+      "frame_index": 197,
+      "experimental_time_s": 198.24
+    },
+    "first_observation_is_physical_onset": false,
+    "physical_event_id": null,
+    "event_onset_frame": null,
+    "grouping_rule": "CONNECTED_COMPONENTS_OF_DISTANCE_LE_3_PX",
+    "transitive_diameter_can_exceed_3_px": true
+  },
+  {
+    "annotation_site_id": "ESM6:annotation-site:7c58fc05ae40787e",
+    "source_id": "ESM6",
+    "acquisition_id": "top_down_parallel",
+    "status": "OPERATIONAL_PUBLISHED_LOCATION_SITE",
+    "observations": [
+      {
+        "observation_id": "ESM6:197:graphic-component-0005",
+        "frame_index": 197,
+        "experimental_time_s": 198.24,
+        "center_x": 897.9267431015536,
+        "center_y": 293.79143578724995,
+        "radius_graphical_px": 10.787366317122173
+      },
+      {
+        "observation_id": "ESM6:295:graphic-component-0005",
+        "frame_index": 295,
+        "experimental_time_s": 313.88,
+        "center_x": 897.9267431015536,
+        "center_y": 293.79143578724995,
+        "radius_graphical_px": 10.787366317122173
+      },
+      {
+        "observation_id": "ESM6:394:graphic-component-0005",
+        "frame_index": 394,
+        "experimental_time_s": 430.7,
+        "center_x": 897.9439100981467,
+        "center_y": 293.8601749944364,
+        "radius_graphical_px": 10.758743837333267
+      }
+    ],
+    "frame_indices": [
+      197,
+      295,
+      394
+    ],
+    "experimental_times": [
+      198.24,
+      313.88,
+      430.7
+    ],
+    "representative_x": 897.9267431015536,
+    "representative_y": 293.79143578724995,
+    "spatial_dispersion_px": {
+      "diameter": 0.07085043667227679,
+      "max": 0.07085043667227679,
+      "rms": 0.040905518684941536
+    },
+    "number_of_observations": 3,
+    "observation_ids": [
+      "ESM6:197:graphic-component-0005",
+      "ESM6:295:graphic-component-0005",
+      "ESM6:394:graphic-component-0005"
+    ],
+    "observation_count": 3,
+    "observed_frame_indices": [
+      197,
+      295,
+      394
+    ],
+    "distinct_observed_frame_count": 3,
+    "representative": {
+      "observation_id": "ESM6:197:graphic-component-0005",
+      "center_x": 897.9267431015536,
+      "center_y": 293.79143578724995,
+      "selection_rule": "OBSERVED_MEDOID_MIN_SUM_SQUARED_DISTANCE_LEXICOGRAPHIC_ID_TIE"
+    },
+    "maximum_pairwise_diameter_px": 0.07085043667227679,
+    "maximum_distance_to_representative_px": 0.07085043667227679,
+    "rms_distance_to_representative_px": 0.040905518684941536,
+    "radius_by_observation": [
+      {
+        "observation_id": "ESM6:197:graphic-component-0005",
+        "radius_graphical_px": 10.787366317122173
+      },
+      {
+        "observation_id": "ESM6:295:graphic-component-0005",
+        "radius_graphical_px": 10.787366317122173
+      },
+      {
+        "observation_id": "ESM6:394:graphic-component-0005",
+        "radius_graphical_px": 10.758743837333267
+      }
+    ],
+    "radius_range_graphical_px": [
+      10.758743837333267,
+      10.787366317122173
+    ],
+    "first_confident_observation": {
+      "observation_id": "ESM6:197:graphic-component-0005",
+      "frame_index": 197,
+      "experimental_time_s": 198.24
+    },
+    "first_observation_is_physical_onset": false,
+    "physical_event_id": null,
+    "event_onset_frame": null,
+    "grouping_rule": "CONNECTED_COMPONENTS_OF_DISTANCE_LE_3_PX",
+    "transitive_diameter_can_exceed_3_px": true
+  },
+  {
+    "annotation_site_id": "ESM6:annotation-site:8a86a50873360dcf",
+    "source_id": "ESM6",
+    "acquisition_id": "top_down_parallel",
+    "status": "OPERATIONAL_PUBLISHED_LOCATION_SITE",
+    "observations": [
+      {
+        "observation_id": "ESM6:197:graphic-component-0008",
+        "frame_index": 197,
+        "experimental_time_s": 198.24,
+        "center_x": 495.0560899018533,
+        "center_y": 599.1398250055636,
+        "radius_graphical_px": 10.75874383733327
+      },
+      {
+        "observation_id": "ESM6:394:graphic-component-0008",
+        "frame_index": 394,
+        "experimental_time_s": 430.7,
+        "center_x": 495.12544415429954,
+        "center_y": 599.1254441542998,
+        "radius_graphical_px": 10.786424074044898
+      }
+    ],
+    "frame_indices": [
+      197,
+      394
+    ],
+    "experimental_times": [
+      198.24,
+      430.7
+    ],
+    "representative_x": 495.0560899018533,
+    "representative_y": 599.1398250055636,
+    "spatial_dispersion_px": {
+      "diameter": 0.07082952220261943,
+      "max": 0.07082952220261943,
+      "rms": 0.05008403545767532
+    },
+    "number_of_observations": 2,
+    "observation_ids": [
+      "ESM6:197:graphic-component-0008",
+      "ESM6:394:graphic-component-0008"
+    ],
+    "observation_count": 2,
+    "observed_frame_indices": [
+      197,
+      394
+    ],
+    "distinct_observed_frame_count": 2,
+    "representative": {
+      "observation_id": "ESM6:197:graphic-component-0008",
+      "center_x": 495.0560899018533,
+      "center_y": 599.1398250055636,
+      "selection_rule": "OBSERVED_MEDOID_MIN_SUM_SQUARED_DISTANCE_LEXICOGRAPHIC_ID_TIE"
+    },
+    "maximum_pairwise_diameter_px": 0.07082952220261943,
+    "maximum_distance_to_representative_px": 0.07082952220261943,
+    "rms_distance_to_representative_px": 0.05008403545767532,
+    "radius_by_observation": [
+      {
+        "observation_id": "ESM6:197:graphic-component-0008",
+        "radius_graphical_px": 10.75874383733327
+      },
+      {
+        "observation_id": "ESM6:394:graphic-component-0008",
+        "radius_graphical_px": 10.786424074044898
+      }
+    ],
+    "radius_range_graphical_px": [
+      10.75874383733327,
+      10.786424074044898
+    ],
+    "first_confident_observation": {
+      "observation_id": "ESM6:197:graphic-component-0008",
+      "frame_index": 197,
+      "experimental_time_s": 198.24
+    },
+    "first_observation_is_physical_onset": false,
+    "physical_event_id": null,
+    "event_onset_frame": null,
+    "grouping_rule": "CONNECTED_COMPONENTS_OF_DISTANCE_LE_3_PX",
+    "transitive_diameter_can_exceed_3_px": true
+  },
+  {
+    "annotation_site_id": "ESM6:annotation-site:8acca343f57b1314",
+    "source_id": "ESM6",
+    "acquisition_id": "top_down_parallel",
+    "status": "OPERATIONAL_PUBLISHED_LOCATION_SITE",
+    "observations": [
+      {
+        "observation_id": "ESM6:197:graphic-component-0015",
+        "frame_index": 197,
+        "experimental_time_s": 198.24,
+        "center_x": 721.9310119835616,
+        "center_y": 799.910690199544,
+        "radius_graphical_px": 10.759293967419618
+      },
+      {
+        "observation_id": "ESM6:295:graphic-component-0015",
+        "frame_index": 295,
+        "experimental_time_s": 313.88,
+        "center_x": 721.8745558457005,
+        "center_y": 799.8745558457002,
+        "radius_graphical_px": 10.7864240740449
+      },
+      {
+        "observation_id": "ESM6:394:graphic-component-0015",
+        "frame_index": 394,
+        "experimental_time_s": 430.7,
+        "center_x": 721.8745558457005,
+        "center_y": 799.8745558457002,
+        "radius_graphical_px": 10.7864240740449
+      }
+    ],
+    "frame_indices": [
+      197,
+      295,
+      394
+    ],
+    "experimental_times": [
+      198.24,
+      313.88,
+      430.7
+    ],
+    "representative_x": 721.8745558457005,
+    "representative_y": 799.8745558457002,
+    "spatial_dispersion_px": {
+      "diameter": 0.06702974735070205,
+      "max": 0.06702974735070205,
+      "rms": 0.03869964267664043
+    },
+    "number_of_observations": 3,
+    "observation_ids": [
+      "ESM6:197:graphic-component-0015",
+      "ESM6:295:graphic-component-0015",
+      "ESM6:394:graphic-component-0015"
+    ],
+    "observation_count": 3,
+    "observed_frame_indices": [
+      197,
+      295,
+      394
+    ],
+    "distinct_observed_frame_count": 3,
+    "representative": {
+      "observation_id": "ESM6:295:graphic-component-0015",
+      "center_x": 721.8745558457005,
+      "center_y": 799.8745558457002,
+      "selection_rule": "OBSERVED_MEDOID_MIN_SUM_SQUARED_DISTANCE_LEXICOGRAPHIC_ID_TIE"
+    },
+    "maximum_pairwise_diameter_px": 0.06702974735070205,
+    "maximum_distance_to_representative_px": 0.06702974735070205,
+    "rms_distance_to_representative_px": 0.03869964267664043,
+    "radius_by_observation": [
+      {
+        "observation_id": "ESM6:197:graphic-component-0015",
+        "radius_graphical_px": 10.759293967419618
+      },
+      {
+        "observation_id": "ESM6:295:graphic-component-0015",
+        "radius_graphical_px": 10.7864240740449
+      },
+      {
+        "observation_id": "ESM6:394:graphic-component-0015",
+        "radius_graphical_px": 10.7864240740449
+      }
+    ],
+    "radius_range_graphical_px": [
+      10.759293967419618,
+      10.7864240740449
+    ],
+    "first_confident_observation": {
+      "observation_id": "ESM6:197:graphic-component-0015",
+      "frame_index": 197,
+      "experimental_time_s": 198.24
+    },
+    "first_observation_is_physical_onset": false,
+    "physical_event_id": null,
+    "event_onset_frame": null,
+    "grouping_rule": "CONNECTED_COMPONENTS_OF_DISTANCE_LE_3_PX",
+    "transitive_diameter_can_exceed_3_px": true
+  },
+  {
+    "annotation_site_id": "ESM6:annotation-site:8c97cae8aaa8f4f3",
+    "source_id": "ESM6",
+    "acquisition_id": "top_down_parallel",
+    "status": "OPERATIONAL_PUBLISHED_LOCATION_SITE",
+    "observations": [
+      {
+        "observation_id": "ESM6:295:graphic-component-0013",
+        "frame_index": 295,
+        "experimental_time_s": 313.88,
+        "center_x": 223.19285211810873,
+        "center_y": 763.9047337767357,
+        "radius_graphical_px": 10.758349188032051
+      }
+    ],
+    "frame_indices": [
+      295
+    ],
+    "experimental_times": [
+      313.88
+    ],
+    "representative_x": 223.19285211810873,
+    "representative_y": 763.9047337767357,
+    "spatial_dispersion_px": {
+      "diameter": 0.0,
+      "max": 0.0,
+      "rms": 0.0
+    },
+    "number_of_observations": 1,
+    "observation_ids": [
+      "ESM6:295:graphic-component-0013"
+    ],
+    "observation_count": 1,
+    "observed_frame_indices": [
+      295
+    ],
+    "distinct_observed_frame_count": 1,
+    "representative": {
+      "observation_id": "ESM6:295:graphic-component-0013",
+      "center_x": 223.19285211810873,
+      "center_y": 763.9047337767357,
+      "selection_rule": "OBSERVED_MEDOID_MIN_SUM_SQUARED_DISTANCE_LEXICOGRAPHIC_ID_TIE"
+    },
+    "maximum_pairwise_diameter_px": 0.0,
+    "maximum_distance_to_representative_px": 0.0,
+    "rms_distance_to_representative_px": 0.0,
+    "radius_by_observation": [
+      {
+        "observation_id": "ESM6:295:graphic-component-0013",
+        "radius_graphical_px": 10.758349188032051
+      }
+    ],
+    "radius_range_graphical_px": [
+      10.758349188032051,
+      10.758349188032051
+    ],
+    "first_confident_observation": {
+      "observation_id": "ESM6:295:graphic-component-0013",
+      "frame_index": 295,
+      "experimental_time_s": 313.88
+    },
+    "first_observation_is_physical_onset": false,
+    "physical_event_id": null,
+    "event_onset_frame": null,
+    "grouping_rule": "CONNECTED_COMPONENTS_OF_DISTANCE_LE_3_PX",
+    "transitive_diameter_can_exceed_3_px": true
+  },
+  {
+    "annotation_site_id": "ESM6:annotation-site:a1757a70e7f3865c",
+    "source_id": "ESM6",
+    "acquisition_id": "top_down_parallel",
+    "status": "OPERATIONAL_PUBLISHED_LOCATION_SITE",
+    "observations": [
+      {
+        "observation_id": "ESM6:295:graphic-component-0012",
+        "frame_index": 295,
+        "experimental_time_s": 313.88,
+        "center_x": 29.0689880164384,
+        "center_y": 745.9106901995438,
+        "radius_graphical_px": 10.759293967419621
+      },
+      {
+        "observation_id": "ESM6:394:graphic-component-0012",
+        "frame_index": 394,
+        "experimental_time_s": 430.7,
+        "center_x": 29.015403086674365,
+        "center_y": 745.8253756352384,
+        "radius_graphical_px": 10.760254296663033
+      }
+    ],
+    "frame_indices": [
+      295,
+      394
+    ],
+    "experimental_times": [
+      313.88,
+      430.7
+    ],
+    "representative_x": 29.0689880164384,
+    "representative_y": 745.9106901995438,
+    "spatial_dispersion_px": {
+      "diameter": 0.10074680928162545,
+      "max": 0.10074680928162545,
+      "rms": 0.07123875202594517
+    },
+    "number_of_observations": 2,
+    "observation_ids": [
+      "ESM6:295:graphic-component-0012",
+      "ESM6:394:graphic-component-0012"
+    ],
+    "observation_count": 2,
+    "observed_frame_indices": [
+      295,
+      394
+    ],
+    "distinct_observed_frame_count": 2,
+    "representative": {
+      "observation_id": "ESM6:295:graphic-component-0012",
+      "center_x": 29.0689880164384,
+      "center_y": 745.9106901995438,
+      "selection_rule": "OBSERVED_MEDOID_MIN_SUM_SQUARED_DISTANCE_LEXICOGRAPHIC_ID_TIE"
+    },
+    "maximum_pairwise_diameter_px": 0.10074680928162545,
+    "maximum_distance_to_representative_px": 0.10074680928162545,
+    "rms_distance_to_representative_px": 0.07123875202594517,
+    "radius_by_observation": [
+      {
+        "observation_id": "ESM6:295:graphic-component-0012",
+        "radius_graphical_px": 10.759293967419621
+      },
+      {
+        "observation_id": "ESM6:394:graphic-component-0012",
+        "radius_graphical_px": 10.760254296663033
+      }
+    ],
+    "radius_range_graphical_px": [
+      10.759293967419621,
+      10.760254296663033
+    ],
+    "first_confident_observation": {
+      "observation_id": "ESM6:295:graphic-component-0012",
+      "frame_index": 295,
+      "experimental_time_s": 313.88
+    },
+    "first_observation_is_physical_onset": false,
+    "physical_event_id": null,
+    "event_onset_frame": null,
+    "grouping_rule": "CONNECTED_COMPONENTS_OF_DISTANCE_LE_3_PX",
+    "transitive_diameter_can_exceed_3_px": true
+  },
+  {
+    "annotation_site_id": "ESM6:annotation-site:cfa5e4ec79820b1e",
+    "source_id": "ESM6",
+    "acquisition_id": "top_down_parallel",
+    "status": "OPERATIONAL_PUBLISHED_LOCATION_SITE",
+    "observations": [
+      {
+        "observation_id": "ESM6:197:graphic-component-0004",
+        "frame_index": 197,
+        "experimental_time_s": 198.24,
+        "center_x": 625.8745558457005,
+        "center_y": 287.87455584570023,
+        "radius_graphical_px": 10.7864240740449
+      },
+      {
+        "observation_id": "ESM6:295:graphic-component-0004",
+        "frame_index": 295,
+        "experimental_time_s": 313.88,
+        "center_x": 625.8745558457005,
+        "center_y": 287.87455584570023,
+        "radius_graphical_px": 10.7864240740449
+      },
+      {
+        "observation_id": "ESM6:394:graphic-component-0004",
+        "frame_index": 394,
+        "experimental_time_s": 430.7,
+        "center_x": 625.9845969133256,
+        "center_y": 287.82537563523925,
+        "radius_graphical_px": 10.76025429666303
+      }
+    ],
+    "frame_indices": [
+      197,
+      295,
+      394
+    ],
+    "experimental_times": [
+      198.24,
+      313.88,
+      430.7
+    ],
+    "representative_x": 625.8745558457005,
+    "representative_y": 287.87455584570023,
+    "spatial_dispersion_px": {
+      "diameter": 0.12053103195887391,
+      "max": 0.12053103195887391,
+      "rms": 0.06958862374715924
+    },
+    "number_of_observations": 3,
+    "observation_ids": [
+      "ESM6:197:graphic-component-0004",
+      "ESM6:295:graphic-component-0004",
+      "ESM6:394:graphic-component-0004"
+    ],
+    "observation_count": 3,
+    "observed_frame_indices": [
+      197,
+      295,
+      394
+    ],
+    "distinct_observed_frame_count": 3,
+    "representative": {
+      "observation_id": "ESM6:197:graphic-component-0004",
+      "center_x": 625.8745558457005,
+      "center_y": 287.87455584570023,
+      "selection_rule": "OBSERVED_MEDOID_MIN_SUM_SQUARED_DISTANCE_LEXICOGRAPHIC_ID_TIE"
+    },
+    "maximum_pairwise_diameter_px": 0.12053103195887391,
+    "maximum_distance_to_representative_px": 0.12053103195887391,
+    "rms_distance_to_representative_px": 0.06958862374715924,
+    "radius_by_observation": [
+      {
+        "observation_id": "ESM6:197:graphic-component-0004",
+        "radius_graphical_px": 10.7864240740449
+      },
+      {
+        "observation_id": "ESM6:295:graphic-component-0004",
+        "radius_graphical_px": 10.7864240740449
+      },
+      {
+        "observation_id": "ESM6:394:graphic-component-0004",
+        "radius_graphical_px": 10.76025429666303
+      }
+    ],
+    "radius_range_graphical_px": [
+      10.76025429666303,
+      10.7864240740449
+    ],
+    "first_confident_observation": {
+      "observation_id": "ESM6:197:graphic-component-0004",
+      "frame_index": 197,
+      "experimental_time_s": 198.24
+    },
+    "first_observation_is_physical_onset": false,
+    "physical_event_id": null,
+    "event_onset_frame": null,
+    "grouping_rule": "CONNECTED_COMPONENTS_OF_DISTANCE_LE_3_PX",
+    "transitive_diameter_can_exceed_3_px": true
+  },
+  {
+    "annotation_site_id": "ESM6:annotation-site:fd001a3ce7ddabd8",
+    "source_id": "ESM6",
+    "acquisition_id": "top_down_parallel",
+    "status": "OPERATIONAL_PUBLISHED_LOCATION_SITE",
+    "observations": [
+      {
+        "observation_id": "ESM6:197:graphic-component-0018",
+        "frame_index": 197,
+        "experimental_time_s": 198.24,
+        "center_x": 681.1254441542995,
+        "center_y": 925.8745558457002,
+        "radius_graphical_px": 10.786424074044898
+      },
+      {
+        "observation_id": "ESM6:295:graphic-component-0018",
+        "frame_index": 295,
+        "experimental_time_s": 313.88,
+        "center_x": 681.1254441542995,
+        "center_y": 925.8745558457002,
+        "radius_graphical_px": 10.786424074044898
+      }
+    ],
+    "frame_indices": [
+      197,
+      295
+    ],
+    "experimental_times": [
+      198.24,
+      313.88
+    ],
+    "representative_x": 681.1254441542995,
+    "representative_y": 925.8745558457002,
+    "spatial_dispersion_px": {
+      "diameter": 0.0,
+      "max": 0.0,
+      "rms": 0.0
+    },
+    "number_of_observations": 2,
+    "observation_ids": [
+      "ESM6:197:graphic-component-0018",
+      "ESM6:295:graphic-component-0018"
+    ],
+    "observation_count": 2,
+    "observed_frame_indices": [
+      197,
+      295
+    ],
+    "distinct_observed_frame_count": 2,
+    "representative": {
+      "observation_id": "ESM6:197:graphic-component-0018",
+      "center_x": 681.1254441542995,
+      "center_y": 925.8745558457002,
+      "selection_rule": "OBSERVED_MEDOID_MIN_SUM_SQUARED_DISTANCE_LEXICOGRAPHIC_ID_TIE"
+    },
+    "maximum_pairwise_diameter_px": 0.0,
+    "maximum_distance_to_representative_px": 0.0,
+    "rms_distance_to_representative_px": 0.0,
+    "radius_by_observation": [
+      {
+        "observation_id": "ESM6:197:graphic-component-0018",
+        "radius_graphical_px": 10.786424074044898
+      },
+      {
+        "observation_id": "ESM6:295:graphic-component-0018",
+        "radius_graphical_px": 10.786424074044898
+      }
+    ],
+    "radius_range_graphical_px": [
+      10.786424074044898,
+      10.786424074044898
+    ],
+    "first_confident_observation": {
+      "observation_id": "ESM6:197:graphic-component-0018",
+      "frame_index": 197,
+      "experimental_time_s": 198.24
+    },
+    "first_observation_is_physical_onset": false,
+    "physical_event_id": null,
+    "event_onset_frame": null,
+    "grouping_rule": "CONNECTED_COMPONENTS_OF_DISTANCE_LE_3_PX",
+    "transitive_diameter_can_exceed_3_px": true
+  }
+]

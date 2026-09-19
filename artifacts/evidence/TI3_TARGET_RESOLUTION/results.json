@@ -1,0 +1,142 @@
+{
+  "phase": "TI3_TARGET_RESOLUTION",
+  "TI3_TARGET_RESOLUTION": "PASS",
+  "TARGET_CONTRACT": "FROZEN",
+  "WEAK_LABEL_STRATEGY": "HIGH_CONFIDENCE_PLUS_IGNORE",
+  "PUBLISHED_FRAGMENTATION_LOCATION_TARGET": "VALID_FOR_INTERNAL_ML",
+  "LABEL_SOURCE": "ESM3_ESM6_PUBLISHED_CIRCLES",
+  "TARGET_SEMANTICS": "PUBLISHED_FRAGMENTATION_LOCATION",
+  "TARGET": "PUBLISHED_FRAGMENTATION_LOCATION_PRESENT",
+  "CIRCLE_IS_FRAGMENT_MASK": false,
+  "FRAGMENT_EXTENT_AVAILABLE": false,
+  "EXACT_ONSET_REQUIRED": false,
+  "EXACT_ONSET_AVAILABLE": false,
+  "POSITIVE_RULE": "HIGH_CONFIDENCE_ACCEPTED_CIRCLE_CENTER",
+  "AMBIGUOUS_RULE": "IGNORE",
+  "NEGATIVE_SEMANTICS": "NO_PUBLISHED_ANNOTATION_IN_VALID_CANDIDATE_REGION",
+  "FIRST_OBSERVATION_SEMANTICS": "FIRST_CONFIDENT_OBSERVATION_ONLY",
+  "MODEL_CLAIM_SCOPE": "DETECTION_OF_PUBLISHED_FRAGMENTATION_LOCATIONS",
+  "SOLUTAL_INPUT_SEMANTICS": "RELATIVE_SOLUTE_FIELD",
+  "FORECASTING_AUTHORIZED": false,
+  "CAUSALITY_CLAIM_AUTHORIZED": false,
+  "EXTERNAL_GENERALIZATION_CLAIM": false,
+  "FINAL_TEST": "NOT_DEFINED_NOT_OPENED",
+  "ML_RUNS": 0,
+  "MODEL_SELECTION": "NOT_STARTED",
+  "TI3_A_READY_TO_RESUME": true,
+  "TI3_B_AUTHORIZED": false,
+  "MERGE_AUTHORIZED": false,
+  "CURRENT_AUTHORIZED_ACTIVITY": "NONE_AWAITING_AUTHOR_DECISION",
+  "STATE": "CLOSED",
+  "checkpoint_ti3_a0": "0f1284e86052e505e8ccfc9ceaecb58cb41065f2",
+  "head": "0f1284e86052e505e8ccfc9ceaecb58cb41065f2",
+  "branch": "feat/ti3-canonical-dataset-baseline",
+  "BLOCKED_GIT_APPROVAL": "RESOLVED",
+  "GIT_APPROVAL_ATTEMPTS": {
+    "staging": 2,
+    "staging_rejected_before_command_start": 1,
+    "staging_approved": 1,
+    "commit": 1,
+    "commit_approved": 1,
+    "total": 3,
+    "not_scientific_invocations": true
+  },
+  "counters": {
+    "textual_target_resolution_attempts": 1,
+    "experimental_opens": 0,
+    "experimental_bytes_read": 0,
+    "new_pixels": 0,
+    "new_frames": 0,
+    "extractor_invocations": 0,
+    "ml_runs": 0,
+    "patches_created": 0,
+    "background_candidates_materialized": 0,
+    "split_ids_materialized": 0
+  },
+  "supervision_states": [
+    "POSITIVE",
+    "IGNORE",
+    "BACKGROUND_CANDIDATE"
+  ],
+  "counts": {
+    "positive_observations": 108,
+    "unique_annotation_sites": 52,
+    "singleton_sites": 19,
+    "repeated_sites": 33,
+    "ignore_regions": 383,
+    "ambiguous_ignore": 380,
+    "small_ignore": 3
+  },
+  "by_source": {
+    "ESM3": {
+      "component_count": 428,
+      "positive_observation_count": 71,
+      "ignore_component_count": 357,
+      "annotation_site_count": 38,
+      "singleton_site_count": 18,
+      "repeated_site_count": 20,
+      "observed_frame_count": 5,
+      "positive_distinct_frame_count": 4,
+      "observed_frame_indices": [
+        0,
+        73,
+        146,
+        219,
+        293
+      ],
+      "site_multiplicity_distribution": {
+        "1": 18,
+        "2": 11,
+        "3": 5,
+        "4": 4
+      }
+    },
+    "ESM6": {
+      "component_count": 63,
+      "positive_observation_count": 37,
+      "ignore_component_count": 26,
+      "annotation_site_count": 14,
+      "singleton_site_count": 1,
+      "repeated_site_count": 13,
+      "observed_frame_count": 5,
+      "positive_distinct_frame_count": 4,
+      "observed_frame_indices": [
+        0,
+        98,
+        197,
+        295,
+        394
+      ],
+      "site_multiplicity_distribution": {
+        "1": 1,
+        "2": 5,
+        "3": 6,
+        "4": 2
+      }
+    }
+  },
+  "structural_gate": {
+    "minimum_sites_for_three_nonempty_partitions": 3,
+    "pass": true,
+    "meaning": "NECESSARY_COUNT_CONDITION_ONLY_NOT_A_SPLIT_OR_STATISTICAL_POWER_CLAIM"
+  },
+  "within_acquisition_stratification": {
+    "annotation_site_counts": {
+      "bottom_up_anti_parallel": 38,
+      "top_down_parallel": 14
+    },
+    "pass": true,
+    "meaning": "THREE_NONEMPTY_PARTITIONS_POSSIBLE_BY_COUNT_IN_EACH_OBSERVED_ACQUISITION_ONLY"
+  },
+  "freeze": "method-freeze.json",
+  "G2_FRAG": "PASS_DIRECT_RASTER_MAPPING",
+  "G2_SOLUTE": "PASS",
+  "G2_SOLUTE_STATE": "CLOSED",
+  "HOLDOUT_SOLUTE": "CONSUMED",
+  "limits": [
+    "PASS is structural sufficiency for the restricted weak target, not a trained-model result or statistical-power assessment.",
+    "The 10 A0 annotation assets retain DEVELOPMENT_ONLY status and historical exposure is not erased.",
+    "Future patch/context boundaries, valid clean inputs and background generation require verification before materialization.",
+    "No final test partition or eligible final-test input set is certified here."
+  ]
+}
