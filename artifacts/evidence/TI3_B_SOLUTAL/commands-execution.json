@@ -1,0 +1,106 @@
+{
+  "ci_reruns": 0,
+  "default_sandbox": [
+    {
+      "boundary": "staged B1",
+      "command": "/usr/bin/python3 -B scripts/check_repository_data.py",
+      "entries": 453,
+      "exit_code": 0
+    },
+    {
+      "boundary": "real staged B1 index",
+      "command": "/usr/bin/python3 -B scripts/check_phase_scope.py",
+      "exit_code": 0
+    },
+    {
+      "activity": "git diff --cached --check/stat; index bytes vs 67 freeze hashes; exact18paths, UTF8 and bounded patterns",
+      "exit_code": 0
+    },
+    {
+      "activity": "write real CI proof only after all jobs/steps passed; no fake CI artifact",
+      "exit_code": 0
+    },
+    {
+      "command": "PYTHONPATH=src .venv/bin/python -B - (invoke only _preflight then write actual-preflight.json)",
+      "exit_code": 0,
+      "experimental_opens": 0,
+      "receipt_created": false,
+      "scientific_runs": 0
+    },
+    {
+      "command": "PYTHONPATH=src .venv/bin/python -B scripts/run_ti3b_ablation.py",
+      "exit_code": 0,
+      "experimental_bytes": 19469052,
+      "experimental_opens": 10,
+      "invocations": 1,
+      "rf_fit_calls": 1,
+      "scientific_calls": 1,
+      "stage": "COMPLETED"
+    },
+    {
+      "activity": "read results/receipt/io-audit/materialization JSON and freeze/Git for final custody and metric arithmetic; write only allowlisted textual terminal evidence",
+      "experimental_opens": 0,
+      "scientific_runs": 0
+    }
+  ],
+  "final_ml_accesses": 0,
+  "independent_terminal_audit": {
+    "CI_jobs_and_steps_success_before_receipt": 4,
+    "commands": 3,
+    "git_parent_reads": 1,
+    "git_show_reads": 68,
+    "metric_rederivation": "TRAIN all1; DEV BA/accuracy0.75 precision2/3 recall1 F1.8 TN4 FP4 FN0 TP8",
+    "patch_pairs": 50,
+    "scope": "stdlib arithmetic, JSON, hashes and Git custody only; no kernels/tests/pixels",
+    "shell_exits": [
+      0,
+      0,
+      0
+    ],
+    "status": "PASS",
+    "structural_patch_hashes_equal_prior": 50
+  },
+  "limitations": "No test/runner/kernel/native-byte read is used to validate the observed metrics after the scientific invocation.",
+  "local_installs": 0,
+  "post_B1_scientific_edits": 0,
+  "schema": "TI3B-EXECUTION-COMMANDS-1",
+  "scientific_retries": 0,
+  "scope": "Execution/publication boundary after frozen preparation journal; grouped read-only textual audits. Exact Git commands of future B2 belong to Git/session and terminal return, not invented here. Not universal syscall monitoring.",
+  "targeted_approvals": [
+    {
+      "command": "git add -- <the exact 18 allowlisted B1 paths>",
+      "exit_code": 0,
+      "paths_from": "git diff 7a205327b363f8cdbba99c5e58bf2f1e5d1253d3..965e2f10e25eef1fe45ac91c10b8424389f99c10 --name-only"
+    },
+    {
+      "command": "git commit -m feat(ti3b): freeze solutal incremental ablation",
+      "exit_code": 0,
+      "sha": "965e2f10e25eef1fe45ac91c10b8424389f99c10"
+    },
+    {
+      "command": "git push -u origin feat/ti3b-solutal-ablation:feat/ti3b-solutal-ablation",
+      "exit_code": 0
+    },
+    {
+      "command": "gh run list --repo lmbernardo7520112/snbi-dendritic-fragmentation-ml --commit 965e2f10e25eef1fe45ac91c10b8424389f99c10 --json databaseId,headSha,status,conclusion,workflowName,event,url",
+      "exit_code": 0
+    },
+    {
+      "command_template": "gh run view RUN_ID --repo lmbernardo7520112/snbi-dendritic-fragmentation-ml --json databaseId,headSha,status,conclusion,jobs,url",
+      "exit_codes": [
+        0,
+        0,
+        0
+      ],
+      "run_ids": [
+        35465077671,
+        35465077653,
+        35465077709
+      ]
+    },
+    {
+      "command": "git ls-remote origin refs/heads/main refs/heads/feat/ti3-canonical-dataset-baseline refs/heads/feat/ti3b-solutal-ablation",
+      "exit_code": 0
+    }
+  ]
+}

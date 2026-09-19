@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "B1": "965e2f10e25eef1fe45ac91c10b8424389f99c10",
+  "mode": "REAL_READ_ONLY_PREFLIGHT_AFTER_REAL_CI",
+  "inventory_records": 14,
+  "allowed_records": 10,
+  "TRAIN_samples": 34,
+  "DEVELOPMENT_samples": 16,
+  "FINAL_samples": 6,
+  "experimental_opens": 0,
+  "experimental_bytes": 0,
+  "receipt_created": false,
+  "scientific_invocations": 0,
+  "active_hashes": {
+    "state": "ARMED_ONCE",
+    "head_sha": "965e2f10e25eef1fe45ac91c10b8424389f99c10",
+    "scientific_invocation_limit": 1,
+    "manifest_sha256": "c8e82b72ff5dc51d188a764c577c11d514474b14d90aea6292c1439e776fb487",
+    "inventory_sha256": "cbbd9e444efafa60c360c93200c833d7f253826fc6f56d8e4831cf0599642bf6",
+    "method_freeze_sha256": "e30b96d6780b7cb26c28701b5d2cbc434b8309d0bcbd3750d2d895606ded0d3b"
+  },
+  "runtime": "exact pinned versions verified without fit"
+}
