@@ -1,0 +1,115 @@
+"""Finite TI3 target resolution: fixed textual inputs only, no image reader."""
+import hashlib
+import json
+import os
+from pathlib import Path
+import stat
+import subprocess
+from datetime import datetime, timezone
+from resolve import resolve
+
+ROOT = Path(__file__).absolute().parents[3]
+OUT = Path("artifacts/evidence/TI3_TARGET_RESOLUTION")
+CHECKPOINT = "0f1284e86052e505e8ccfc9ceaecb58cb41065f2"
+INPUT = "artifacts/evidence/TI3_A0/extraction-results.json"
+MANIFEST = "artifacts/evidence/TI3_A0/development-manifest.json"
+
+
+def read_text(name):
+    path = Path(name)
+    allowed = {INPUT, MANIFEST} | {
+        str(OUT / n) for n in ("method-freeze.json", "authorization.md",
+            "RESOLUTION_PROTOCOL.md", "resolve.py", "test_resolution.py", "run_resolution.py",
+            "TARGET_CONTRACT.md", "SPLIT_CONTRACT.md", "COURSE_ALIGNMENT.md", "CLAIM_SCOPE.md")
+    }
+    if str(path) not in allowed:
+        raise ValueError("text path outside fixed allowlist")
+    d = os.open(ROOT, os.O_RDONLY | os.O_DIRECTORY | os.O_NOFOLLOW)
+    try:
+        for part in path.parts[:-1]:
+            child = os.open(part, os.O_RDONLY | os.O_DIRECTORY | os.O_NOFOLLOW, dir_fd=d)
+            os.close(d)
+            d = child
+        fd = os.open(path.name, os.O_RDONLY | os.O_NOFOLLOW, dir_fd=d)
+        if not stat.S_ISREG(os.fstat(fd).st_mode):
+            os.close(fd)
+            raise ValueError("not regular text")
+        with os.fdopen(fd, "rb") as stream:
+            data = stream.read()
+        data.decode("utf-8")
+        return data
+    finally:
+        os.close(d)
+
+
+def emit(name, value):
+    if name not in {"resolution-receipt.json", "WEAK_LABEL_LEDGER.json",
+                    "SITE_DEDUPLICATION.json", "resolution-summary.json"}:
+        raise ValueError("output outside allowlist")
+    d = os.open(ROOT, os.O_RDONLY | os.O_DIRECTORY | os.O_NOFOLLOW)
+    try:
+        for part in OUT.parts:
+            child = os.open(part, os.O_RDONLY | os.O_DIRECTORY | os.O_NOFOLLOW, dir_fd=d)
+            os.close(d)
+            d = child
+        f = os.open(name, os.O_WRONLY | os.O_CREAT | os.O_EXCL | os.O_NOFOLLOW,
+                    0o644, dir_fd=d)
+        with os.fdopen(f, "w", encoding="utf-8") as stream:
+            json.dump(value, stream, indent=2, ensure_ascii=False, allow_nan=False)
+            stream.write("\n")
+            stream.flush()
+            os.fsync(stream.fileno())
+    finally:
+        os.close(d)
+
+
+def main():
+    if any(os.path.lexists(ROOT / OUT / n) for n in
+           ("resolution-receipt.json", "results.json", "SITE_DEDUPLICATION.json",
+            "WEAK_LABEL_LEDGER.json", "resolution-summary.json")):
+        raise ValueError("resolution already attempted or terminal")
+    if subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT,
+                               text=True).strip() != CHECKPOINT:
+        raise ValueError("checkpoint differs")
+    freeze = json.loads(read_text(OUT / "method-freeze.json"))
+    if freeze["association_tolerance_px"] != 3 or freeze["minimum_sites"] != 3:
+        raise ValueError("fixed author criteria differ")
+    raw_inputs = {}
+    for name, wanted in freeze["sha256"].items():
+        b = read_text(name)
+        if hashlib.sha256(b).hexdigest() != wanted:
+            raise ValueError("frozen text differs: " + name)
+        if name in {INPUT, MANIFEST}:
+            committed = subprocess.check_output(["git", "show", CHECKPOINT + ":" + name],
+                                               cwd=ROOT)
+            if committed != b:
+                raise ValueError("A0 checkpoint bytes differ")
+            raw_inputs[name] = b
+    if set(raw_inputs) != {INPUT, MANIFEST}:
+        raise ValueError("exact two A0 text inputs required")
+    frames = json.loads(raw_inputs[INPUT])["frames"]
+    assets = json.loads(raw_inputs[MANIFEST])["assets"]
+    mapping = {}
+    for a in assets:
+        if a["source_id"] in mapping and mapping[a["source_id"]] != a["experiment_id"]:
+            raise ValueError("acquisition mismatch")
+        mapping[a["source_id"]] = a["experiment_id"]
+    if set(mapping) != {"ESM3", "ESM6"}:
+        raise ValueError("source scope")
+    emit("resolution-receipt.json", {
+        "phase": "TI3_TARGET_RESOLUTION", "checkpoint": CHECKPOINT,
+        "started_at_utc": datetime.now(timezone.utc).isoformat(),
+        "textual_target_resolution_attempt": 1, "experimental_opens": 0,
+        "experimental_bytes": 0, "ml_runs": 0,
+        "inputs_sha256": {k: hashlib.sha256(v).hexdigest() for k, v in raw_inputs.items()},
+        "freeze_sha256": hashlib.sha256(read_text(OUT / "method-freeze.json")).hexdigest()
+    })
+    output = resolve(frames, mapping)
+    emit("WEAK_LABEL_LEDGER.json", output["ledger"])
+    emit("SITE_DEDUPLICATION.json", output["sites"])
+    emit("resolution-summary.json", output["summary"])
+    print(json.dumps(output["summary"], indent=2, ensure_ascii=False, allow_nan=False))
+
+
+if __name__ == "__main__":
+    main()

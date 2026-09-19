@@ -1,0 +1,797 @@
+{
+  "phase": "TI3_A0",
+  "scope": "Scoped session command inventory, sanitized; not an operating-system syscall trace.",
+  "checkpoint": "1e7f5e8b382e84fd1259637722ce9774ffed7df3",
+  "root_operations": [
+    {
+      "cmd": "cat <explicit user attachment TI3-A0; private path omitted>",
+      "exit_code": 0,
+      "boundary": "default_sandbox"
+    },
+    {
+      "cmd": "git status --short --untracked-files=all",
+      "exit_code": 0,
+      "boundary": "default_sandbox"
+    },
+    {
+      "cmd": "git branch --show-current",
+      "exit_code": 0,
+      "boundary": "default_sandbox"
+    },
+    {
+      "cmd": "git rev-parse HEAD refs/heads/main refs/remotes/origin/main",
+      "exit_code": 0,
+      "boundary": "default_sandbox"
+    },
+    {
+      "cmd": "git diff --stat",
+      "exit_code": 0,
+      "boundary": "default_sandbox"
+    },
+    {
+      "cmd": "git diff --cached --stat",
+      "exit_code": 0,
+      "boundary": "default_sandbox"
+    },
+    {
+      "cmd": "/usr/bin/python3 -B scripts/check_repository_data.py",
+      "exit_code": 0,
+      "boundary": "default_sandbox"
+    },
+    {
+      "cmd": "/usr/bin/python3 -B -c 'import os, stat, json, hashlib, subprocess\nfrom pathlib import Path\nnames = [\"authorization.md\",\"commands.json\",\"environment.json\",\"execution-report.md\",\"results.json\",\"verification.json\"]\nbase = Path(\"artifacts/evidence/TI3_A\")\nexpected = {str(base / n) for n in names}\nassert set(subprocess.check_output([\"git\",\"ls-files\",\"--others\",\"--exclude-standard\"],text=True).splitlines()) == expected\nrecords = {}\ndocs = {}\nfor name in names:\n    p = base/name\n    for parent in [Path(\"artifacts\"),Path(\"artifacts/evidence\"),base]:\n        assert stat.S_ISDIR(parent.lstat().st_mode)\n    assert stat.S_ISREG(p.lstat().st_mode)\n    with os.fdopen(os.open(p,os.O_RDONLY|os.O_NOFOLLOW),\"rb\") as f:\n        raw=f.read()\n    text=raw.decode(\"utf-8\")\n    assert \"/home/\" not in text and \"BEGIN PRIVATE KEY\" not in text\n    records[str(p)]={\"sha256\":hashlib.sha256(raw).hexdigest(),\"bytes\":len(raw),\"lines\":len(text.splitlines())}\n    docs[name] = json.loads(text) if name.endswith(\".json\") else text\nr = docs[\"results.json\"]\nassert r[\"state\"]==\"BLOCKED_METHOD_PRECONDITIONS\"\nassert r[\"target\"] is None and r[\"baseline_model\"] is None\nassert r[\"final_test\"]==\"NOT_DEFINED_NOT_OPENED\"\nassert r[\"runs\"][\"scientific_baseline_runs\"]==r[\"runs\"][\"experimental_opens\"]==r[\"runs\"][\"experimental_bytes_read\"]==0\nassert r[\"preserved\"][\"G2_SOLUTE\"]==\"PASS\" and r[\"preserved\"][\"HOLDOUT_SOLUTE\"]==\"CONSUMED\"\nassert docs[\"verification.json\"][\"documentary_closeout_validation\"][\"status\"]==\"PASS\"\nassert docs[\"verification.json\"][\"frozen_file_count\"]==25\nassert \"TI3_A=BLOCKED_METHOD_PRECONDITIONS\" in docs[\"execution-report.md\"]\nprint(json.dumps({\"status\":\"PASS\",\"file_count\":6,\"files\":records,\"target\":None,\"split\":\"NOT_DEFINED\",\"ml_runs\":0,\"experimental_opens\":0,\"final_test\":\"NOT_DEFINED_NOT_OPENED\",\"scope\":\"six prior documentary artifacts only\"},indent=2))\n'",
+      "exit_code": 1,
+      "boundary": "default_sandbox"
+    },
+    {
+      "cmd": "/usr/bin/python3 -B -c 'import os, stat, json, hashlib, subprocess, re\nfrom pathlib import Path\nnames = [\"authorization.md\",\"commands.json\",\"environment.json\",\"execution-report.md\",\"results.json\",\"verification.json\"]\nbase = Path(\"artifacts/evidence/TI3_A\")\nexpected = {str(base / n) for n in names}\nassert set(subprocess.check_output([\"git\",\"ls-files\",\"--others\",\"--exclude-standard\"],text=True).splitlines()) == expected\nrecords = {}\ndocs = {}\nfor name in names:\n    p = base/name\n    for parent in [Path(\"artifacts\"),Path(\"artifacts/evidence\"),base]:\n        assert stat.S_ISDIR(parent.lstat().st_mode)\n    assert stat.S_ISREG(p.lstat().st_mode)\n    with os.fdopen(os.open(p,os.O_RDONLY|os.O_NOFOLLOW),\"rb\") as f:\n        raw=f.read()\n    text=raw.decode(\"utf-8\")\n    assert re.search(r\"/home/[^/\\s\\\"'\\'']+/\",text) is None, \"Private path in \"+name\n    assert re.search(r\"-----BEGIN (?:[A-Z]+ )?PRIVATE KEY-----\",text) is None, \"PEM header in \"+name\n    records[str(p)]={\"sha256\":hashlib.sha256(raw).hexdigest(),\"bytes\":len(raw),\"lines\":len(text.splitlines())}\n    docs[name] = json.loads(text) if name.endswith(\".json\") else text\nr = docs[\"results.json\"]\nassert r[\"state\"]==\"BLOCKED_METHOD_PRECONDITIONS\"\nassert r[\"target\"] is None and r[\"baseline_model\"] is None\nassert r[\"final_test\"]==\"NOT_DEFINED_NOT_OPENED\"\nassert r[\"runs\"][\"scientific_baseline_runs\"]==r[\"runs\"][\"experimental_opens\"]==r[\"runs\"][\"experimental_bytes_read\"]==0\nassert r[\"preserved\"][\"G2_SOLUTE\"]==\"PASS\" and r[\"preserved\"][\"HOLDOUT_SOLUTE\"]==\"CONSUMED\"\nassert docs[\"verification.json\"][\"documentary_closeout_validation\"][\"status\"]==\"PASS\"\nassert docs[\"verification.json\"][\"frozen_file_count\"]==25\nassert \"TI3_A=BLOCKED_METHOD_PRECONDITIONS\" in docs[\"execution-report.md\"]\nprint(json.dumps({\"status\":\"PASS\",\"file_count\":6,\"files\":records,\"target\":None,\"split\":\"NOT_DEFINED\",\"ml_runs\":0,\"experimental_opens\":0,\"final_test\":\"NOT_DEFINED_NOT_OPENED\",\"scope\":\"six prior documentary artifacts only\",\"first_audit_failure\":\"overbroad literal /home/ match against the journaled audit code; no document changed\"},indent=2))\n'",
+      "exit_code": 0,
+      "boundary": "default_sandbox"
+    },
+    {
+      "cmd": "git add -- artifacts/evidence/TI3_A/authorization.md artifacts/evidence/TI3_A/commands.json artifacts/evidence/TI3_A/environment.json artifacts/evidence/TI3_A/execution-report.md artifacts/evidence/TI3_A/results.json artifacts/evidence/TI3_A/verification.json",
+      "exit_code": 0,
+      "boundary": "targeted_git_approval"
+    },
+    {
+      "cmd": "git diff --cached --stat",
+      "exit_code": 0,
+      "boundary": "default_sandbox"
+    },
+    {
+      "cmd": "git diff --cached --check",
+      "exit_code": 0,
+      "boundary": "default_sandbox"
+    },
+    {
+      "cmd": "/usr/bin/python3 -B scripts/check_repository_data.py",
+      "exit_code": 0,
+      "boundary": "default_sandbox"
+    },
+    {
+      "cmd": "/usr/bin/python3 -B -c 'import hashlib, json, subprocess\nexpected=json.loads(\"{\\\"artifacts/evidence/TI3_A/authorization.md\\\":{\\\"sha256\\\":\\\"88b62789cc24917e07a36a05c5debd225b4df1a9c9aa78d3756640456bb42cf0\\\",\\\"bytes\\\":18916,\\\"lines\\\":833},\\\"artifacts/evidence/TI3_A/commands.json\\\":{\\\"sha256\\\":\\\"96a99af9e6ead0f54b95668959311d0b2b7abc1a6791aca4a11aea46efae170d\\\",\\\"bytes\\\":17087,\\\"lines\\\":290},\\\"artifacts/evidence/TI3_A/environment.json\\\":{\\\"sha256\\\":\\\"20268d35b0bdcb85b41de39cce6410f018c9d75388ee14a2e8ff22b6c21c805e\\\",\\\"bytes\\\":621,\\\"lines\\\":17},\\\"artifacts/evidence/TI3_A/execution-report.md\\\":{\\\"sha256\\\":\\\"9976644763a1c77142937dd4789d8ae781b2a6491b99bfd6d022aee8b3d38e7e\\\",\\\"bytes\\\":10890,\\\"lines\\\":201},\\\"artifacts/evidence/TI3_A/results.json\\\":{\\\"sha256\\\":\\\"34d14e59cce498123fc3e11e51aa106f39c2bdd2caa1927b092e9c75b415f644\\\",\\\"bytes\\\":3223,\\\"lines\\\":104},\\\"artifacts/evidence/TI3_A/verification.json\\\":{\\\"sha256\\\":\\\"79c87f1e475d03b8c46262fc56bdb094f2355b5edc6924f9ef726d0f6648a758\\\",\\\"bytes\\\":6550,\\\"lines\\\":172}}\")\nactual=subprocess.check_output([\"git\",\"diff\",\"--cached\",\"--name-only\"],text=True).splitlines()\nassert set(actual)==set(expected)\nfor path, record in expected.items():\n    content=subprocess.check_output([\"git\",\"show\",\":\"+path])\n    assert hashlib.sha256(content).hexdigest()==record[\"sha256\"], path\nprint(\"PASS: exact six-path staging; every staged blob identical to reviewed snapshot.\")\n'",
+      "exit_code": 0,
+      "boundary": "default_sandbox"
+    },
+    {
+      "cmd": "git commit -m 'docs(ti3): record target-contract precondition block'",
+      "exit_code": 0,
+      "boundary": "targeted_git_approval"
+    },
+    {
+      "cmd": "git rev-parse HEAD HEAD^",
+      "exit_code": 0,
+      "boundary": "default_sandbox"
+    },
+    {
+      "cmd": "git status --short",
+      "exit_code": 0,
+      "boundary": "default_sandbox"
+    },
+    {
+      "cmd": "git show --format=fuller --stat --no-renames HEAD",
+      "exit_code": 0,
+      "boundary": "default_sandbox"
+    },
+    {
+      "cmd": "cat .gitignore",
+      "exit_code": 0,
+      "boundary": "default_sandbox"
+    },
+    {
+      "cmd": "sed -n '1,125p' artifacts/metadata/ti2-pilot-manifest.json",
+      "exit_code": 0,
+      "boundary": "default_sandbox"
+    },
+    {
+      "cmd": "sed -n '1,190p' src/snbi_fragmentation/ti2r_frag_direct_registration.py",
+      "exit_code": 0,
+      "boundary": "default_sandbox"
+    },
+    {
+      "cmd": "cat docs/protocols/TI2R_FRAG_DIRECT_PROTOCOL.md",
+      "exit_code": 0,
+      "boundary": "default_sandbox"
+    },
+    {
+      "cmd": "git ls-files -s -- scripts src tests configs artifacts/metadata docs/protocols",
+      "exit_code": 0,
+      "boundary": "default_sandbox"
+    },
+    {
+      "cmd": "/usr/bin/python3 -B -c <prepare exact ten-asset development manifest, copy explicit authorization, verify existing runtime and compile inspection script>",
+      "exit_code": 0,
+      "boundary": "default_sandbox",
+      "experimental_opens": 0
+    },
+    {
+      "cmd": "/usr/bin/python3 -B scripts/inspect_ti3_a0_annotations.py",
+      "session_id": 18388,
+      "boundary": "default_sandbox_authorized_ten_development_buffers",
+      "exit_code": 0
+    },
+    {
+      "cmd": "/usr/bin/python3 -B -c 'import json,collections; from pathlib import Path; d=json.loads(Path(\"artifacts/evidence/TI3_A0/characterization.json\").read_text()); print(json.dumps([{ \"asset_id\":r[\"asset_id\"], \"components\":len(r[\"components_at_chroma20\"]), \"box_sizes\":collections.Counter((x[\"bbox_xyxy\"][2]-x[\"bbox_xyxy\"][0],x[\"bbox_xyxy\"][3]-x[\"bbox_xyxy\"][1]) for x in r[\"components_at_chroma20\"]).most_common(8), \"uv\":r[\"dominant_colored_uv\"][:3], \"chroma_counts\":r[\"native_chroma_counts\"]} for r in d[\"frames\"]],indent=2))'",
+      "exit_code": 0,
+      "boundary": "default_sandbox_textual_characterization_summary"
+    },
+    {
+      "cmd": "cat src/snbi_fragmentation/ti3_a0_annotations.py tests/test_ti3_a0_annotations.py",
+      "exit_code": 0,
+      "boundary": "default_sandbox_textual_code_review"
+    },
+    {
+      "cmd": "/usr/bin/python3 -B -c 'import json, hashlib\nfrom pathlib import Path\nfrom datetime import datetime, timezone\npaths=[\"scripts/inspect_ti3_a0_annotations.py\",\"scripts/extract_ti3_a0_annotations.py\",\"src/snbi_fragmentation/ti3_a0_annotations.py\",\"tests/test_ti3_a0_annotations.py\"]\nhashes={}\nfor name in paths:\n    p=Path(name)\n    assert not p.is_symlink()\n    text=p.read_text()\n    compile(text,name,\"exec\")\n    hashes[name]=hashlib.sha256(text.encode()).hexdigest()\nmethod={\"phase\":\"TI3_A0_GRAPHICAL_EXTRACTION\",\"frozen_at_utc\":datetime.now(timezone.utc).isoformat(),\"config\":{\"chroma_distance\":20,\"minimum_component_pixels\":32,\"minimum_radius\":8.0,\"maximum_radius\":16.0,\"maximum_axis_ratio\":1.2,\"maximum_radial_p95\":4.0,\"minimum_angular_coverage\":0.9},\"persistence_tolerance_px\":2.0,\"frozen_code_sha256\":hashes,\"method\":\"CHROMA_THRESHOLD_CONNECTED_COMPONENTS_ALGEBRAIC_CIRCLE\",\"hough\":\"NOT_EXECUTED\",\"physical_masks\":False,\"parameters_may_be_changed_after_run\":False}\nwith Path(\"artifacts/evidence/TI3_A0/extraction-method.json\").open(\"x\",encoding=\"utf-8\") as f:\n    json.dump(method,f,indent=2);f.write(\"\\n\")\nprint(json.dumps({\"status\":\"FROZEN_BEFORE_EXTRACTION\",\"config\":method[\"config\"],\"frozen_files\":hashes},indent=2))\n'",
+      "exit_code": 0,
+      "boundary": "default_sandbox_freeze_text_only"
+    },
+    {
+      "cmd": "PYTHONPATH=src /usr/bin/python3 -B scripts/extract_ti3_a0_annotations.py",
+      "exit_code": 0,
+      "boundary": "default_sandbox_authorized_ten_development_buffers"
+    },
+    {
+      "cmd": "/usr/bin/python3 -B -c 'import json,collections; from pathlib import Path; d=json.loads(Path(\"artifacts/evidence/TI3_A0/extraction-results.json\").read_text()); t=json.loads(Path(\"artifacts/evidence/TI3_A0/temporal-results.json\").read_text()); out=[]; v=[]; reasons=collections.Counter(); [v.extend([c for c in r[\"components\"] if c[\"classification\"]==\"VALID_GRAPHICAL_CIRCLE\"]) for r in d[\"frames\"]]; [reasons.update(c[\"reasons\"]) for r in d[\"frames\"] for c in r[\"components\"]]; print(json.dumps({\"accepted_graphic_radius_range\":[min(c[\"radius_graphical_px\"] for c in v),max(c[\"radius_graphical_px\"] for c in v)],\"accepted_graphic_thickness_range\":[min(c[\"radial_thickness_p05_p95_px\"] for c in v),max(c[\"radial_thickness_p05_p95_px\"] for c in v)],\"reason_counts\":reasons,\"ESM6_98_components\":[{k:c[k] for k in (\"component_id\",\"center_xy_px\",\"radius_graphical_px\",\"radial_error_p95_px\",\"enclosed_hole_count\",\"reasons\")} for r in d[\"frames\"] if r[\"asset_id\"]==\"ESM6:98\" for c in r[\"components\"]],\"transitions\":{s:[{\"from\":x[\"previous_frame_index\"],\"to\":x[\"current_frame_index\"],\"links\":len(x[\"links\"]),\"unmatched_previous\":len(x[\"unmatched_previous_component_ids\"]),\"unmatched_current\":len(x[\"unmatched_current_component_ids\"]),\"unresolved_current\":len(x[\"unresolved_current_component_ids\"]),\"status\":x[\"graphical_persistence_status\"]} for x in r[\"transitions\"]] for s,r in t.items()}},indent=2))'",
+      "exit_code": 0,
+      "boundary": "default_sandbox_recorded_results_summary_no_pixels"
+    },
+    {
+      "tool": "apply_patch",
+      "operation": "create_terminal_semantics_target_and_course_documents",
+      "paths": [
+        "artifacts/evidence/TI3_A0/ANNOTATION_SEMANTICS.md",
+        "artifacts/evidence/TI3_A0/TARGET_CONTRACT.md",
+        "artifacts/evidence/TI3_A0/COURSE_ALIGNMENT_LABEL_EXTRACTION.md"
+      ],
+      "exit_code": null,
+      "boundary": "default_sandbox"
+    },
+    {
+      "cmd": "git status --short",
+      "exit_code": 0,
+      "boundary": "default_sandbox_read_only"
+    },
+    {
+      "cmd": "cat artifacts/evidence/TI3_A0/DOCUMENTARY_EVIDENCE.md artifacts/evidence/TI3_A0/ANNOTATION_SEMANTICS.md artifacts/evidence/TI3_A0/TARGET_CONTRACT.md artifacts/evidence/TI3_A0/SPLIT_FEASIBILITY.md artifacts/evidence/TI3_A0/COURSE_ALIGNMENT_LABEL_EXTRACTION.md artifacts/evidence/TI3_A0/io-audit.json",
+      "exit_code": 0,
+      "boundary": "default_sandbox_read_only_text"
+    },
+    {
+      "cmd": "sed -n '1,260p' scripts/inspect_ti3_a0_annotations.py",
+      "exit_code": 0,
+      "boundary": "default_sandbox_final_static_review"
+    },
+    {
+      "cmd": "sed -n '1,230p' scripts/extract_ti3_a0_annotations.py",
+      "exit_code": 0,
+      "boundary": "default_sandbox_final_static_review"
+    },
+    {
+      "cmd": "/usr/bin/python3 -B - <<'PY'\nimport json, os, stat\nfrom pathlib import Path\nfor n in ('artifacts/evidence/TI2R_SOLUTE_HOLDOUT/repair-1/frozen-manifest.json', 'artifacts/evidence/TI3_A0/development-manifest.json', 'artifacts/evidence/TI3_A0/extraction-results.json'):\n    p=Path(n)\n    for q in (p,*p.parents):\n        assert not stat.S_ISLNK(q.lstat().st_mode)\n    d=json.loads(p.read_text())\n    print(n, list(d))\n    if 'scientific_hashes' in d: print(json.dumps(d['scientific_hashes']))\n    if 'assets' in d: print(json.dumps(d['assets'][0]))\n    if 'frames' in d: print(json.dumps({k:v for k,v in d['frames'][0].items() if k!='components'}))\nPY",
+      "exit_code": 0,
+      "boundary": "default_sandbox_read_only_text"
+    },
+    {
+      "cmd": "/usr/bin/python3 -B - <<'PY'\nimport json, stat\nfrom pathlib import Path\nfrom datetime import datetime, timezone\nroot=Path('artifacts/evidence/TI3_A0')\nfor p in (root,*root.parents):\n    assert not stat.S_ISLNK(p.lstat().st_mode)\ndef read(name):\n    p=root/name\n    assert not p.is_symlink()\n    return json.loads(p.read_text())\nex=read('extraction-results.json')\nio=read('io-audit.json')\nchar=read('characterization.json')\nmanifest=read('development-manifest.json')\nassert len(ex['frames'])==10 and io['native_bytes_read']==39091200\ncounts={k:sum(r[k] for r in ex['frames']) for k in ('component_count','valid_circle_count','ambiguous_component_count','small_component_count')}\nassert list(counts.values())==[491,108,380,3]\nresult={\n  'phase':'TI3_A0',\n  'closed_at_utc':datetime.now(timezone.utc).isoformat(),\n  'checkpoint_ti3_a':'1e7f5e8b382e84fd1259637722ce9774ffed7df3',\n  'base_sha':'67786bd4e23406e7f19860a53fe237e6d7b648cb',\n  'branch':'feat/ti3-canonical-dataset-baseline',\n  'TI3_A0':'BLOCKED_TARGET_CONTRACT',\n  'TI3_A0_TARGET_CONTRACT':'BLOCKED',\n  'TARGET_CONTRACT':'BLOCKED',\n  'TI3_A0_SPLIT_FEASIBILITY':'BLOCKED_PENDING_TARGET_AND_EXPOSURE_CONTRACT',\n  'SPLIT_STRATEGY':'INTERNAL_TEMPORAL_BLOCKED_PROPOSED_NOT_EXECUTED',\n  'ANNOTATION_SEMANTICS':'LOCATION_DOCUMENTED_GRAPHICAL_EXTRACTION_PARTIAL',\n  'DOCUMENTARY_SOURCE_VERIFICATION':'VERIFIED_SEARCH_INDEX_TEXT_NOT_FULL_PAPER',\n  'CIRCLE_IS_FRAGMENT_MASK':False,\n  'CUMULATIVE_PERSISTENCE_SUPPORTED_ON_EXPOSED_DEVELOPMENT_FRAMES':'NOT_VERIFIED_GLOBALLY',\n  'EVENT_ONSET_FRAME':'NOT_VERIFIED',\n  'primary_candidate':'POINT_EVENT_LOCALIZATION_FROM_PUBLISHED_ANNOTATIONS_NOT_FROZEN',\n  'WHAT_IS_ONE_SAMPLE':'PROPOSED_ONE_ACQUISITION_FRAME_AND_CORRESPONDING_POINT_SET_NOT_FROZEN',\n  'POSITIVE_RULE':'NOT_VERIFIED_FOR_ML',\n  'NEGATIVE_RULE':'UNLABELED_UNKNOWN_NOT_NEGATIVE',\n  'SPATIAL_TOLERANCE':'NOT_VERIFIED_FOR_TARGET',\n  'graphical_counts':counts,\n  'count_interpretation':'Repeated graphical observations, not independent physical events or certified ML targets.',\n  'blocking_reasons':[\n    'Graphical extraction remains incomplete and ambiguous; the frozen radial criterion also rejects visually isolated rings.',\n    'Graphical centre to event-location tolerance is not independently validated.',\n    'Annotation completeness and reliable negatives are not established; compatible supervision and evaluation remain unspecified.',\n    'Global identity and persistence remain unresolved on the exposed frames.',\n    'Temporal context, embargo, cumulative-event exposure and split-boundary contracts are not justified.'\n  ],\n  'new_frame_window':{'status':'NOT_ELIGIBLE_NOT_CREATED','reason':'Temporal persistence/onset is not the only remaining obstacle.','new_frames_opened':0},\n  'development_only_asset_ids':[a['asset_id'] for a in manifest['assets']],\n  'unique_native_files':10,'native_opens':20,'native_bytes_read':39091200,\n  'characterization_runs':1,'extraction_runs':1,'experimental_retries':0,\n  'post_result_tuning':False,'ml_dataset_created':False,'split_created':False,\n  'physical_event_ledger_created':False,'negative_labels_created':0,\n  'FINAL_TEST':'NOT_DEFINED_NOT_OPENED','EXTERNAL_GENERALIZATION_CLAIM':False,\n  'ML_RUNS':0,'ML_TECHNICAL_RUNS':0,'ML_SCIENTIFIC_RUNS':0,\n  'G2_FRAG':'PASS_HISTORICAL_UNCHANGED','G2_SOLUTE':'PASS','HOLDOUT_SOLUTE':'CONSUMED',\n  'TI3_A_READY_TO_RESUME':False,'TI3_B_AUTHORIZED':False,'MERGE_AUTHORIZED':False,\n  'CURRENT_AUTHORIZED_ACTIVITY':'NONE_AWAITING_AUTHOR_DECISION',\n  'STATE':'CLOSED_BLOCKED',\n  'local_a0_publication':'UNCOMMITTED_UNSTAGED','CI_TI3_A0':'NOT_RUN'\n}\nwith (root/'results.json').open('x',encoding='utf-8') as f:\n    json.dump(result,f,indent=2,ensure_ascii=False,allow_nan=False);f.write('\\n')\nio['visual_derivatives']={\n  'scope':'Ten RGB PNG derivatives of the same ten already exposed native buffers; no new frames.',\n  'png_files_created':10,'png_hash_read_calls':10,'view_image_tool_calls':10,\n  'derivative_content_bytes_read':'NOT_INSTRUMENTED',\n  'underlying_tool_os_open_counts':'NOT_INSTRUMENTED',\n  'records':[{'asset_id':r['asset_id'],'path':r['diagnostic_path'],'sha256_at_creation':r['diagnostic_sha256'],'image_save_calls':1,'post_save_hash_read_calls':1,'view_image_tool_calls':1,'development_only':True} for r in char['frames']],\n  'verification_limit':'Native byte totals exclude derivative file I/O and tool internals. Existing text records were used after extraction; PNGs were not reopened for final checks.'\n}\nio['terminal_state_file']='results.json'\nio['terminal_presence_denies_future_preflight']=True\nwith (root/'io-audit.json').open('w',encoding='utf-8') as f:\n    json.dump(io,f,indent=2,ensure_ascii=False,allow_nan=False);f.write('\\n')\nprint(json.dumps({'terminal':result['TI3_A0'],'native_opens':io['native_open_count'],'native_bytes':io['native_bytes_read'],'derivative_views':10,'counts':counts}))\nPY",
+      "exit_code": 0,
+      "boundary": "default_sandbox_terminal_text_write_no_pixels"
+    },
+    {
+      "tool": "apply_patch",
+      "operation": "qualify_unexecuted_adaptive_threshold_claim_after_textual_review",
+      "paths": [
+        "artifacts/evidence/TI3_A0/COURSE_ALIGNMENT_LABEL_EXTRACTION.md"
+      ],
+      "exit_code": null,
+      "boundary": "default_sandbox_documentary_only"
+    },
+    {
+      "tool": "apply_patch",
+      "operation": "create_twenty_point_terminal_report",
+      "paths": [
+        "artifacts/evidence/TI3_A0/execution-report.md"
+      ],
+      "exit_code": null,
+      "boundary": "default_sandbox_documentary_only"
+    },
+    {
+      "cmd": "/usr/bin/python3 -B - <<'PY'\nimport os, stat, json, hashlib, subprocess, ast\nfrom pathlib import Path\nprior=json.loads(\"{\\\"artifacts/evidence/TI3_A/authorization.md\\\":\\\"88b62789cc24917e07a36a05c5debd225b4df1a9c9aa78d3756640456bb42cf0\\\",\\\"artifacts/evidence/TI3_A/commands.json\\\":\\\"96a99af9e6ead0f54b95668959311d0b2b7abc1a6791aca4a11aea46efae170d\\\",\\\"artifacts/evidence/TI3_A/environment.json\\\":\\\"20268d35b0bdcb85b41de39cce6410f018c9d75388ee14a2e8ff22b6c21c805e\\\",\\\"artifacts/evidence/TI3_A/execution-report.md\\\":\\\"9976644763a1c77142937dd4789d8ae781b2a6491b99bfd6d022aee8b3d38e7e\\\",\\\"artifacts/evidence/TI3_A/results.json\\\":\\\"34d14e59cce498123fc3e11e51aa106f39c2bdd2caa1927b092e9c75b415f644\\\",\\\"artifacts/evidence/TI3_A/verification.json\\\":\\\"79c87f1e475d03b8c46262fc56bdb094f2355b5edc6924f9ef726d0f6648a758\\\"}\")\ndef raw_text(name):\n    p=Path(name)\n    assert not p.is_absolute() and '..' not in p.parts and p.parts[0] not in ('data','.git','.bootstrap-test-tmp')\n    fd=os.open('.',os.O_RDONLY|os.O_DIRECTORY|os.O_NOFOLLOW)\n    try:\n        for part in p.parts[:-1]:\n            child=os.open(part,os.O_RDONLY|os.O_DIRECTORY|os.O_NOFOLLOW,dir_fd=fd)\n            os.close(fd);fd=child\n        f=os.open(p.name,os.O_RDONLY|os.O_NOFOLLOW,dir_fd=fd)\n        assert stat.S_ISREG(os.fstat(f).st_mode)\n        with os.fdopen(f,'rb') as stream: b=stream.read()\n    finally: os.close(fd)\n    b.decode('utf-8')\n    return b\ndef obj(name): return json.loads(raw_text(name))\ndef digest(b): return hashlib.sha256(b).hexdigest()\ndef git(*args): return subprocess.check_output(['git',*args])\ncheckpoint='1e7f5e8b382e84fd1259637722ce9774ffed7df3'\nbaseline='67786bd4e23406e7f19860a53fe237e6d7b648cb'\nassert git('rev-parse','HEAD').decode().strip()==checkpoint\nassert git('rev-parse','HEAD^').decode().strip()==baseline\nassert git('branch','--show-current').decode().strip()=='feat/ti3-canonical-dataset-baseline'\nfor name,wanted in prior.items():\n    assert digest(raw_text(name))==wanted==digest(git('show',checkpoint+':'+name)),name\nhist=obj('artifacts/evidence/TI2R_SOLUTE_HOLDOUT/repair-1/frozen-manifest.json')\nassert len(hist['scientific_hashes'])==25\nfor name,wanted in hist['scientific_hashes'].items():\n    assert digest(raw_text(name))==wanted,name\n    for sha in ('e1a98917a20431ecc1c758f210b5e974b3533734','0b820bc61e6dae3b7a98654a3b7d5cd292ca925e'):\n        assert digest(git('show',sha+':'+name))==wanted,(sha,name)\nprefix='artifacts/evidence/TI3_A0/'\nmethod=obj(prefix+'extraction-method.json')\nassert len(method['frozen_code_sha256'])==4\nfor name,wanted in method['frozen_code_sha256'].items():\n    b=raw_text(name);assert digest(b)==wanted,name;ast.parse(b.decode(),filename=name)\nmanifest=obj(prefix+'development-manifest.json')\npilot=obj('artifacts/metadata/ti2-pilot-manifest.json')\nassert manifest['pilot_manifest_sha256']==digest(raw_text('artifacts/metadata/ti2-pilot-manifest.json'))\nassets={a['asset_id']:a for a in manifest['assets']}\nexpected={'ESM3:0','ESM3:73','ESM3:146','ESM3:219','ESM3:293','ESM6:0','ESM6:98','ESM6:197','ESM6:295','ESM6:394'}\nassert set(assets)==expected and len(manifest['assets'])==10\noriginal={r['source_id']+':'+str(r['frame_index']):r for r in pilot['images']}\nfor k,row in assets.items():\n    assert row['final_test_eligible'] is False and row['use']=='ANNOTATION_CONTRACT_DEVELOPMENT_ONLY'\n    for field in ('path','frame_bytes','image_sha256','width','height','experimental_time_s'):\n        assert row[field]==original[k][field],(k,field)\nassert set(manifest['future_final_test_excluded_asset_ids'])==expected\nassert manifest['max_source_opens_per_asset']==2\nio=obj(prefix+'io-audit.json')\nfor phase in io['phases']:\n    assert phase==obj(prefix+phase['phase']+'-io.json')\n    assert phase['status']=='COMPLETED' and phase['open_count']==phase['open_attempts']==10 and phase['content_bytes_read']==19545600\n    assert {x['asset_id'] for x in phase['assets']}==expected\n    for r in phase['assets']:\n        assert r['open_count']==r['open_attempts']==1 and r['status']=='AUTHENTICATED'\n        assert r['sha256']==assets[r['asset_id']]['image_sha256']\n        assert r['content_bytes_read']==assets[r['asset_id']]['frame_bytes']\n    receipt=obj(prefix+phase['phase']+'-receipt.json')\n    assert receipt['checkpoint']==checkpoint and set(receipt['asset_ids'])==expected\n    assert receipt['started_at_utc']<=phase['started_at_utc']\nassert io['native_open_count']==20 and io['native_bytes_read']==39091200 and io['new_frames_opened']==0\nassert len(io['visual_derivatives']['records'])==10\nex=obj(prefix+'extraction-results.json')\nassert ex['method']==method\nassert method['frozen_at_utc']<obj(prefix+'extraction-receipt.json')['started_at_utc']\nassert {r['asset_id'] for r in ex['frames']}==expected\ncount={k:sum(r[k] for r in ex['frames']) for k in ('component_count','valid_circle_count','ambiguous_component_count','small_component_count')}\nassert list(count.values())==[491,108,380,3]\nfor frame in ex['frames']:\n    assert len(frame['components'])==frame['component_count']\n    for c in frame['components']:\n        assert c['semantic_label']=='UNKNOWN' and c['physical_event_id'] is None and c['provenance']['development_only'] is True\n        if c['classification']!='VALID_GRAPHICAL_CIRCLE': assert c['center_x'] is None and c['center_y'] is None\ntemporal=obj(prefix+'temporal-results.json')\nassert all(v['cumulative_status']=='UNRESOLVED_GRAPHICAL_AMBIGUITY' for v in temporal.values())\nres=obj(prefix+'results.json')\nassert res['graphical_counts']==count and res['TI3_A0_TARGET_CONTRACT']=='BLOCKED' and res['ML_RUNS']==0\nassert res['FINAL_TEST']=='NOT_DEFINED_NOT_OPENED' and res['TI3_A_READY_TO_RESUME'] is False\npre=obj(prefix+'preflight.json')\nassert pre['authorization_sha256']==digest(raw_text(prefix+'authorization.md'))\nassert b'terminal TI3-A0 evidence permanently closes access' in raw_text('scripts/inspect_ti3_a0_annotations.py')\nassert git('diff','--name-only')==b'' and git('diff','--cached','--name-only')==b''\nentries=git('ls-files','--stage','-z').split(b'\\0')\nassert not any(x.startswith(b'120000 ') for x in entries)\nfiles={}\nfor p in sorted(Path(prefix).iterdir()):\n    b=raw_text(str(p))\n    if p.suffix=='.json':json.loads(b)\n    files[str(p)]={'sha256':digest(b),'bytes':len(b)}\nprint(json.dumps({\n 'status':'PASS_TEXTUAL_CUSTODY_AND_CONSISTENCY',\n 'checkpoint':checkpoint,'parent':baseline,\n 'prior_six_files':prior,'g2_frozen_texts':hist['scientific_hashes'],\n 'a0_frozen_code':method['frozen_code_sha256'],\n 'io_consistency':{'status':'PASS','native_files':10,'opens':20,'bytes':39091200,'new_frames':0},\n 'graphical_count_consistency':count,'receipts_and_freeze_order':'PASS',\n 'json_utf8':'PASS','static_terminal_denial_check':'PASS_SOURCE_INSPECTION_ONLY',\n 'tracked_symlinks':0,'tracked_worktree_diff':'EMPTY','index_diff':'EMPTY',\n 'new_evidence_text_hashes':files,\n 'limits':['No buffers, PNGs or other experimental content reopened.','Hashes are for textual files or historical Git blobs only.','Static guard inspection does not claim universal enforcement.']\n},indent=2))\n\nPY",
+      "exit_code": 0,
+      "boundary": "default_sandbox_final_textual_verification",
+      "subprocesses": [
+        "git rev-parse HEAD",
+        "git rev-parse HEAD^",
+        "git branch --show-current",
+        "git show <historical SHA>:<allowlisted textual path>",
+        "git diff --name-only",
+        "git diff --cached --name-only",
+        "git ls-files --stage -z"
+      ]
+    },
+    {
+      "cmd": "/usr/bin/python3 -B scripts/check_repository_data.py",
+      "exit_code": 0,
+      "boundary": "default_sandbox_final_textual_verification"
+    },
+    {
+      "cmd": "git rev-parse HEAD refs/heads/main refs/remotes/origin/main",
+      "exit_code": 0,
+      "boundary": "default_sandbox_final_textual_verification"
+    }
+  ],
+  "additional_grouped_root_writes": [
+    {
+      "tool": "apply_patch",
+      "operation": "Prepared and completed the bounded inspector, added its terminal-presence guard before characterization; created extraction orchestration and frozen extraction specification before extraction.",
+      "paths": [
+        "scripts/inspect_ti3_a0_annotations.py",
+        "scripts/extract_ti3_a0_annotations.py",
+        "artifacts/evidence/TI3_A0/ANNOTATION_EXTRACTION_SPEC.md"
+      ],
+      "exact_patch_call_count": "NOT_RECORDED_IN_THIS_GROUP",
+      "result": "Final bytes confirmed by frozen hashes; no post-extraction code edits."
+    }
+  ],
+  "domain_phase0_review": [
+    {
+      "cmd": "git status --short -- artifacts/evidence/TI3_A/",
+      "exit_code": 0,
+      "presentation_truncated": false,
+      "agent": "ti3_domain_audit",
+      "boundary": "default_sandbox_read_only_text"
+    },
+    {
+      "cmd": "git ls-files -s -- artifacts/evidence/TI3_A/",
+      "exit_code": 0,
+      "presentation_truncated": false,
+      "agent": "ti3_domain_audit",
+      "boundary": "default_sandbox_read_only_text"
+    },
+    {
+      "cmd": "git diff --name-status -- artifacts/evidence/TI3_A/",
+      "exit_code": 0,
+      "presentation_truncated": false,
+      "agent": "ti3_domain_audit",
+      "boundary": "default_sandbox_read_only_text"
+    },
+    {
+      "cmd": "git diff --cached --name-status -- artifacts/evidence/TI3_A/",
+      "exit_code": 0,
+      "presentation_truncated": false,
+      "agent": "ti3_domain_audit",
+      "boundary": "default_sandbox_read_only_text"
+    },
+    {
+      "cmd": "/usr/bin/python3 -B - <<'PY'\nimport json\nimport os\nimport stat\n\nexpected = {'authorization.md', 'execution-report.md', 'results.json', 'commands.json', 'environment.json', 'verification.json'}\ndirectory_fd = os.open('.', os.O_RDONLY | os.O_DIRECTORY | os.O_NOFOLLOW)\ntry:\n    for part in ('artifacts', 'evidence', 'TI3_A'):\n        next_fd = os.open(part, os.O_RDONLY | os.O_DIRECTORY | os.O_NOFOLLOW, dir_fd=directory_fd)\n        os.close(directory_fd)\n        directory_fd = next_fd\n    names = set(os.listdir(directory_fd))\n    print(json.dumps({'file_count': len(names), 'files': sorted(names), 'exact_allowlist': names == expected}))\n    if names != expected:\n        raise RuntimeError('TI3_A file allowlist divergence')\n    for name in sorted(expected):\n        fd = os.open(name, os.O_RDONLY | os.O_NOFOLLOW, dir_fd=directory_fd)\n        try:\n            if not stat.S_ISREG(os.fstat(fd).st_mode):\n                raise RuntimeError('Not a regular file: ' + name)\n            with os.fdopen(fd, 'r', encoding='utf-8', closefd=False) as stream:\n                content = stream.read()\n            print('\\nFILE ' + name)\n            if name.endswith('.json'):\n                document = json.loads(content)\n                print('JSON_VALID=true')\n                if name == 'commands.json':\n                    for key, value in document.items():\n                        if isinstance(value, list):\n                            print(json.dumps({'key': key, 'count': len(value), 'entry_keys': [list(x.keys()) if isinstance(x, dict) else type(x).__name__ for x in value]}, ensure_ascii=False))\n                        else:\n                            print(json.dumps({key: value}, ensure_ascii=False))\n                else:\n                    print(content)\n            else:\n                print(content)\n        finally:\n            os.close(fd)\nfinally:\n    os.close(directory_fd)\nPY",
+      "exit_code": 0,
+      "presentation_truncated": true,
+      "agent": "ti3_domain_audit",
+      "boundary": "default_sandbox_read_only_text"
+    },
+    {
+      "cmd": "/usr/bin/python3 -B - <<'PY'\nimport os\n\nroot = os.open('.', os.O_RDONLY | os.O_DIRECTORY | os.O_NOFOLLOW)\ntry:\n    for part in ('artifacts', 'evidence', 'TI3_A'):\n        child = os.open(part, os.O_RDONLY | os.O_DIRECTORY | os.O_NOFOLLOW, dir_fd=root)\n        os.close(root)\n        root = child\n    for name in ('commands.json', 'environment.json', 'authorization.md'):\n        fd = os.open(name, os.O_RDONLY | os.O_NOFOLLOW, dir_fd=root)\n        with os.fdopen(fd, 'r', encoding='utf-8') as stream:\n            content = stream.read()\n        print('FILE ' + name)\n        if name == 'authorization.md':\n            print(content[content.index('ANTI-REFINAMENTO'):])\n        else:\n            print(content)\nfinally:\n    os.close(root)\nPY",
+      "exit_code": 0,
+      "presentation_truncated": false,
+      "agent": "ti3_domain_audit",
+      "boundary": "default_sandbox_read_only_text"
+    }
+  ],
+  "domain_split_document": [
+    {
+      "tool": "apply_patch",
+      "operation": "create_file",
+      "path": "artifacts/evidence/TI3_A0/SPLIT_FEASIBILITY.md",
+      "result": "CREATED_AND_READ_BACK",
+      "exit_code": null
+    },
+    {
+      "cmd": "/usr/bin/python3 -B - <<'PY'\nimport os\n\nfd = os.open('.', os.O_RDONLY | os.O_DIRECTORY | os.O_NOFOLLOW)\ntry:\n    for part in ('artifacts', 'evidence', 'TI3_A0'):\n        child = os.open(part, os.O_RDONLY | os.O_DIRECTORY | os.O_NOFOLLOW, dir_fd=fd)\n        os.close(fd)\n        fd = child\n    document_fd = os.open('SPLIT_FEASIBILITY.md', os.O_RDONLY | os.O_NOFOLLOW, dir_fd=fd)\n    with os.fdopen(document_fd, 'r', encoding='utf-8') as stream:\n        content = stream.read()\n    print(content)\nfinally:\n    os.close(fd)\nPY",
+      "exit_code": 0
+    }
+  ],
+  "domain_final_review": [
+    {
+      "cmd": "stat -c '%F %n' artifacts artifacts/evidence artifacts/evidence/TI3_A0 artifacts/evidence/TI3_A0/DOCUMENTARY_EVIDENCE.md artifacts/evidence/TI3_A0/ANNOTATION_SEMANTICS.md artifacts/evidence/TI3_A0/ANNOTATION_EXTRACTION_SPEC.md artifacts/evidence/TI3_A0/TARGET_CONTRACT.md artifacts/evidence/TI3_A0/SPLIT_FEASIBILITY.md artifacts/evidence/TI3_A0/COURSE_ALIGNMENT_LABEL_EXTRACTION.md artifacts/evidence/TI3_A0/development-manifest.json artifacts/evidence/TI3_A0/extraction-results.json artifacts/evidence/TI3_A0/temporal-results.json artifacts/evidence/TI3_A0/io-audit.json",
+      "exit_code": 0,
+      "boundary": "default_sandbox_read_only_text",
+      "agent": "ti3_domain_audit"
+    },
+    {
+      "cmd": "cat artifacts/evidence/TI3_A0/DOCUMENTARY_EVIDENCE.md artifacts/evidence/TI3_A0/ANNOTATION_SEMANTICS.md artifacts/evidence/TI3_A0/ANNOTATION_EXTRACTION_SPEC.md",
+      "exit_code": 0,
+      "boundary": "default_sandbox_read_only_text",
+      "agent": "ti3_domain_audit"
+    },
+    {
+      "cmd": "cat artifacts/evidence/TI3_A0/TARGET_CONTRACT.md artifacts/evidence/TI3_A0/SPLIT_FEASIBILITY.md artifacts/evidence/TI3_A0/COURSE_ALIGNMENT_LABEL_EXTRACTION.md",
+      "exit_code": 0,
+      "boundary": "default_sandbox_read_only_text",
+      "agent": "ti3_domain_audit"
+    },
+    {
+      "cmd": "cat artifacts/evidence/TI3_A0/development-manifest.json artifacts/evidence/TI3_A0/temporal-results.json artifacts/evidence/TI3_A0/io-audit.json",
+      "exit_code": 0,
+      "boundary": "default_sandbox_read_only_text",
+      "agent": "ti3_domain_audit"
+    },
+    {
+      "cmd": "sed -n '1,155p' artifacts/evidence/TI3_A0/extraction-results.json",
+      "exit_code": 0,
+      "boundary": "default_sandbox_read_only_text",
+      "agent": "ti3_domain_audit"
+    },
+    {
+      "cmd": "cat artifacts/evidence/TI3_A0/COURSE_ALIGNMENT_LABEL_EXTRACTION.md",
+      "exit_code": 0,
+      "boundary": "default_sandbox_read_only_text",
+      "agent": "ti3_domain_audit"
+    },
+    {
+      "cmd": "cat artifacts/evidence/TI3_A0/development-manifest.json",
+      "exit_code": 0,
+      "boundary": "default_sandbox_read_only_text",
+      "agent": "ti3_domain_audit"
+    },
+    {
+      "cmd": "rg -n 'source_id|frame_indices|graphical_persistence_status|first_observ|onset|ONSET|negative_labels_created|physical_events_inferred|scope|UNRESOLVED|baseline|censor|current_frame|previous_frame' artifacts/evidence/TI3_A0/temporal-results.json",
+      "exit_code": 0,
+      "boundary": "default_sandbox_read_only_text",
+      "agent": "ti3_domain_audit"
+    },
+    {
+      "cmd": "rg -n 'component_count|valid_circle_count|ambiguous_component_count|small_component_count|absence_semantics|semantic_validation|\"asset_id\"' artifacts/evidence/TI3_A0/extraction-results.json",
+      "exit_code": 0,
+      "boundary": "default_sandbox_read_only_text",
+      "agent": "ti3_domain_audit"
+    },
+    {
+      "cmd": "rg -c '\"semantic_label\": \"UNKNOWN\"|\"physical_event_id\": null|\"development_only\": true' artifacts/evidence/TI3_A0/extraction-results.json",
+      "exit_code": 0,
+      "boundary": "default_sandbox_read_only_text",
+      "agent": "ti3_domain_audit"
+    },
+    {
+      "cmd": "sed -n '1,180p' artifacts/evidence/TI3_A0/temporal-results.json",
+      "exit_code": 0,
+      "boundary": "default_sandbox_read_only_text",
+      "agent": "ti3_domain_audit"
+    },
+    {
+      "cmd": "cat artifacts/evidence/TI3_A0/SPLIT_FEASIBILITY.md",
+      "exit_code": 0,
+      "boundary": "default_sandbox_read_only_text",
+      "agent": "ti3_domain_audit"
+    },
+    {
+      "cmd": "rg -n 'Threshold adaptativo|Hough|imposs|NOT_DEFINED|BLOCKED|TI3_A_READY' artifacts/evidence/TI3_A0/COURSE_ALIGNMENT_LABEL_EXTRACTION.md artifacts/evidence/TI3_A0/TARGET_CONTRACT.md artifacts/evidence/TI3_A0/SPLIT_FEASIBILITY.md",
+      "exit_code": 0,
+      "boundary": "default_sandbox_read_only_text",
+      "agent": "ti3_domain_audit"
+    },
+    {
+      "cmd": "rg -c '\"semantic_label\": \"UNKNOWN\"' artifacts/evidence/TI3_A0/extraction-results.json",
+      "exit_code": 0,
+      "boundary": "default_sandbox_read_only_text",
+      "agent": "ti3_domain_audit"
+    },
+    {
+      "cmd": "rg -c '\"physical_event_id\": null' artifacts/evidence/TI3_A0/extraction-results.json",
+      "exit_code": 0,
+      "boundary": "default_sandbox_read_only_text",
+      "agent": "ti3_domain_audit"
+    },
+    {
+      "cmd": "rg -c '\"development_only\": true' artifacts/evidence/TI3_A0/extraction-results.json",
+      "exit_code": 0,
+      "boundary": "default_sandbox_read_only_text",
+      "agent": "ti3_domain_audit"
+    },
+    {
+      "cmd": "rg -c '\"classification\": \"VALID_GRAPHICAL_CIRCLE\"' artifacts/evidence/TI3_A0/extraction-results.json",
+      "exit_code": 0,
+      "boundary": "default_sandbox_read_only_text",
+      "agent": "ti3_domain_audit"
+    },
+    {
+      "cmd": "rg -c '\"classification\": \"AMBIGUOUS_OR_NONCIRCULAR\"' artifacts/evidence/TI3_A0/extraction-results.json",
+      "exit_code": 0,
+      "boundary": "default_sandbox_read_only_text",
+      "agent": "ti3_domain_audit"
+    },
+    {
+      "cmd": "rg -c '\"classification\": \"SMALL_COMPONENT\"' artifacts/evidence/TI3_A0/extraction-results.json",
+      "exit_code": 0,
+      "boundary": "default_sandbox_read_only_text",
+      "agent": "ti3_domain_audit"
+    },
+    {
+      "cmd": "stat -c '%F %n' artifacts/evidence/TI3_A0/results.json artifacts/evidence/TI3_A0/execution-report.md",
+      "exit_code": 0,
+      "boundary": "default_sandbox_read_only_text",
+      "agent": "ti3_domain_audit"
+    },
+    {
+      "cmd": "cat artifacts/evidence/TI3_A0/results.json",
+      "exit_code": 0,
+      "boundary": "default_sandbox_read_only_text",
+      "agent": "ti3_domain_audit"
+    },
+    {
+      "cmd": "cat artifacts/evidence/TI3_A0/execution-report.md",
+      "exit_code": 0,
+      "boundary": "default_sandbox_read_only_text",
+      "agent": "ti3_domain_audit"
+    }
+  ],
+  "extractor_agent": [
+    {
+      "cmd": "sed -n '1,160p' src/snbi_fragmentation/ti2r_solute_v2.py",
+      "exit_code": 2,
+      "reason": "Nonexistent textual source path; no experimental access.",
+      "boundary": "default_sandbox_text_and_synthetic_only",
+      "agent": "ti3a0_graphical_extractor"
+    },
+    {
+      "cmd": "rg --files src/snbi_fragmentation tests -g '*solute*' -g '*geometry*'",
+      "exit_code": 0,
+      "boundary": "default_sandbox_text_and_synthetic_only",
+      "agent": "ti3a0_graphical_extractor"
+    },
+    {
+      "cmd": "sed -n '1,180p' tests/test_ti2r_solute_v2_calibration.py",
+      "exit_code": 0,
+      "boundary": "default_sandbox_text_and_synthetic_only",
+      "agent": "ti3a0_graphical_extractor"
+    },
+    {
+      "cmd": "sed -n '1,120p' src/snbi_fragmentation/ti2r_solute_v2_calibration.py",
+      "exit_code": 0,
+      "boundary": "default_sandbox_text_and_synthetic_only",
+      "agent": "ti3a0_graphical_extractor"
+    },
+    {
+      "cmd": "sed -n '1,100p' pyproject.toml",
+      "exit_code": 0,
+      "boundary": "default_sandbox_text_and_synthetic_only",
+      "agent": "ti3a0_graphical_extractor"
+    },
+    {
+      "tool": "apply_patch",
+      "operation": "create_pure_graphical_module_and_synthetic_tests",
+      "paths": [
+        "src/snbi_fragmentation/ti3_a0_annotations.py",
+        "tests/test_ti3_a0_annotations.py"
+      ],
+      "exit_code": null,
+      "result": "CREATED",
+      "boundary": "default_sandbox_text_and_synthetic_only",
+      "agent": "ti3a0_graphical_extractor"
+    },
+    {
+      "cmd": "TMPDIR=.bootstrap-test-tmp PYTHONPATH=src /usr/bin/python3 -B -m unittest discover -s tests -p test_ti3_a0_annotations.py -v",
+      "exit_code": 0,
+      "tests": 18,
+      "passes": 18,
+      "skips": 0,
+      "failures": 0,
+      "errors": 0,
+      "boundary": "default_sandbox_text_and_synthetic_only",
+      "agent": "ti3a0_graphical_extractor"
+    }
+  ],
+  "primary_evidence_agent": [
+    {
+      "tool": "web.run",
+      "search_query": [
+        {
+          "q": "\"10.1007/s11837-015-1646-7\""
+        }
+      ],
+      "result": "Bibliographic and institutional indexed manuscript records.",
+      "agent": "ti3a0_primary_evidence",
+      "boundary": "authorized_primary_documentary_web"
+    },
+    {
+      "tool": "web.run",
+      "open": [
+        "https://link.springer.com/article/10.1007/s11837-015-1646-7",
+        "https://laro.lanl.gov/esploro/outputs/journalArticle/In-Situ-X-Ray-Observations-of-Dendritic/9916361515603761"
+      ],
+      "result": "Preview and institutional record accessible, no full manuscript.",
+      "agent": "ti3a0_primary_evidence",
+      "boundary": "authorized_primary_documentary_web"
+    },
+    {
+      "tool": "web.run",
+      "click": [
+        {
+          "source_url": "https://laro.lanl.gov/esploro/outputs/journalArticle/In-Situ-X-Ray-Observations-of-Dendritic/9916361515603761",
+          "link_id": 11,
+          "label": "View"
+        }
+      ],
+      "result": "Returned institutional record with query parameters, not full manuscript.",
+      "agent": "ti3a0_primary_evidence",
+      "boundary": "authorized_primary_documentary_web"
+    },
+    {
+      "tool": "web.run",
+      "click": [
+        {
+          "source_url": "https://laro.lanl.gov/esploro/outputs/journalArticle/In-Situ-X-Ray-Observations-of-Dendritic/9916361515603761",
+          "link_id": 10,
+          "label": "Download"
+        }
+      ],
+      "search_query": [
+        {
+          "q": "\"Gibbs\" \"locations of cumulative fragmentation\""
+        },
+        {
+          "q": "\"LA-UR-15-24719\" \"fragmentation\" \"circled\""
+        }
+      ],
+      "error": "Internal Error on click",
+      "result": "Indexed Results passage from accepted manuscript, printed page 4.",
+      "agent": "ti3a0_primary_evidence",
+      "boundary": "authorized_primary_documentary_web"
+    },
+    {
+      "tool": "web.run",
+      "open": [
+        "Indexed institutional Accepted Manuscript.pdf; temporary signed URL omitted",
+        "https://permalink.lanl.gov/object/view?what=info:lanl-repo/lareport/LA-UR-15-24719"
+      ],
+      "errors": [
+        "PDF: Failed to fetch, HTTP 403 Forbidden",
+        "Permalink not accessible via this tool"
+      ],
+      "result": "No full PDF read.",
+      "agent": "ti3a0_primary_evidence",
+      "boundary": "authorized_primary_documentary_web"
+    },
+    {
+      "tool": "web.run",
+      "search_query": [
+        {
+          "q": "\"LA-UR-15-24719\" \"pdf\""
+        },
+        {
+          "q": "\"In Situ X-Ray Observations\" \"fragmentation\" site:osti.gov"
+        },
+        {
+          "q": "\"s11837-015-1646-7\" \"Figure 2\""
+        }
+      ],
+      "result": "No further full-text primary access.",
+      "agent": "ti3a0_primary_evidence",
+      "boundary": "authorized_primary_documentary_web"
+    },
+    {
+      "tool": "web.run",
+      "search_query": [
+        {
+          "q": "\"Gibbs\" \"Sn-Bi\" \"fragmentation\" \"manually\""
+        },
+        {
+          "q": "\"Gibbs\" \"Sn-Bi\" \"fragmentation\" \"circled\""
+        },
+        {
+          "q": "\"LA-UR-15-24719\" site:lanl.gov"
+        },
+        {
+          "q": "\"s11837-015-1646-7\" site:imdea.org"
+        }
+      ],
+      "result": "No new sufficient primary operational contracts.",
+      "agent": "ti3a0_primary_evidence",
+      "boundary": "authorized_primary_documentary_web"
+    },
+    {
+      "tool": "web.run",
+      "search_query": [
+        {
+          "q": "In Situ X-Ray Observations Dendritic Fragmentation Gibbs pdf",
+          "domains": [
+            "lanl.gov",
+            "osti.gov",
+            "imdea.org",
+            "materials.imdea.org",
+            "link.springer.com"
+          ]
+        },
+        {
+          "q": "\"cumulative fragmentation events\""
+        }
+      ],
+      "result": "Reencountered institutional record and indexed passage.",
+      "agent": "ti3a0_primary_evidence",
+      "boundary": "authorized_primary_documentary_web"
+    },
+    {
+      "tool": "web.run",
+      "search_query": [
+        {
+          "q": "\"LA-UR-15-24719\" \"Figure 2\" \"circles\""
+        },
+        {
+          "q": "\"LA-UR-15-24719\" \"Experimental Methods\""
+        },
+        {
+          "q": "\"LA-UR-15-24719\" \"fragmentation events\" \"ImageJ\""
+        }
+      ],
+      "result": "Same indexed Results passage, no full manuscript read.",
+      "agent": "ti3a0_primary_evidence",
+      "boundary": "authorized_primary_documentary_web"
+    },
+    {
+      "tool": "exec_command",
+      "cmd": "rg -n -i 'LA-UR-15-24719|cumulative fragmentation|s11837-015-1646-7|Gibbs' docs artifacts/metadata configs/sources README.md",
+      "exit_code": 0,
+      "agent": "ti3a0_primary_evidence",
+      "boundary": "default_sandbox_text_only"
+    },
+    {
+      "tool": "web.run",
+      "open": [
+        "https://link.springer.com/article/10.1007/s11837-015-1646-7/figures/2",
+        "https://link.springer.com/article/10.1007/s11837-015-1646-7/figures/6"
+      ],
+      "errors": [
+        "Both URLs not accessible via this tool"
+      ],
+      "result": "No figure, image or complete legend viewed.",
+      "agent": "ti3a0_primary_evidence",
+      "boundary": "authorized_primary_documentary_web"
+    },
+    {
+      "tool": "apply_patch",
+      "operation": "create_documentary_evidence",
+      "paths": [
+        "artifacts/evidence/TI3_A0/DOCUMENTARY_EVIDENCE.md"
+      ],
+      "exit_code": null,
+      "result": "CREATED",
+      "agent": "ti3a0_primary_evidence",
+      "boundary": "default_sandbox_text_only"
+    }
+  ],
+  "primary_web_counts": {
+    "web_tool_calls": 10,
+    "search_queries": 15,
+    "open_operations": 6,
+    "click_operations": 2
+  },
+  "visualization_tool_calls": [
+    {
+      "derived_path": ".bootstrap-test-tmp/ti3-a0-20260919-inspection/ESM3-0.png",
+      "tool": "view_image",
+      "purpose": "visual annotation characterization",
+      "status": "viewed"
+    },
+    {
+      "derived_path": ".bootstrap-test-tmp/ti3-a0-20260919-inspection/ESM3-146.png",
+      "tool": "view_image",
+      "purpose": "visual annotation characterization",
+      "status": "viewed"
+    },
+    {
+      "derived_path": ".bootstrap-test-tmp/ti3-a0-20260919-inspection/ESM3-293.png",
+      "tool": "view_image",
+      "purpose": "visual annotation characterization",
+      "status": "viewed"
+    },
+    {
+      "derived_path": ".bootstrap-test-tmp/ti3-a0-20260919-inspection/ESM6-0.png",
+      "tool": "view_image",
+      "purpose": "visual annotation characterization",
+      "status": "viewed"
+    },
+    {
+      "derived_path": ".bootstrap-test-tmp/ti3-a0-20260919-inspection/ESM6-197.png",
+      "tool": "view_image",
+      "purpose": "visual annotation characterization",
+      "status": "viewed"
+    },
+    {
+      "derived_path": ".bootstrap-test-tmp/ti3-a0-20260919-inspection/ESM6-394.png",
+      "tool": "view_image",
+      "purpose": "visual annotation characterization",
+      "status": "viewed"
+    },
+    {
+      "derived_path": ".bootstrap-test-tmp/ti3-a0-20260919-inspection/ESM3-73.png",
+      "tool": "view_image",
+      "purpose": "visual annotation characterization",
+      "status": "viewed"
+    },
+    {
+      "derived_path": ".bootstrap-test-tmp/ti3-a0-20260919-inspection/ESM3-219.png",
+      "tool": "view_image",
+      "purpose": "visual annotation characterization",
+      "status": "viewed"
+    },
+    {
+      "derived_path": ".bootstrap-test-tmp/ti3-a0-20260919-inspection/ESM6-98.png",
+      "tool": "view_image",
+      "purpose": "visual annotation characterization",
+      "status": "viewed"
+    },
+    {
+      "derived_path": ".bootstrap-test-tmp/ti3-a0-20260919-inspection/ESM6-295.png",
+      "tool": "view_image",
+      "purpose": "visual annotation characterization",
+      "status": "viewed"
+    }
+  ],
+  "child_commands_inside_scientific_orchestration": {
+    "per_phase": [
+      "git rev-parse HEAD",
+      "git branch --show-current"
+    ],
+    "phases": [
+      "characterization",
+      "extraction"
+    ],
+    "calls_per_command": 2,
+    "exit_code": 0,
+    "note": "Read-only preflight subprocesses in the inspected code; both phase receipts confirm success."
+  },
+  "boundaries": {
+    "default_sandbox": "All local textual, synthetic, annotation inspection/extraction and evidence writes.",
+    "targeted_git_approval": "Only exact-path staging and the single six-file documentary commit.",
+    "remote": "Primary-publication textual web research only; no Git network operation or publication in this task."
+  },
+  "operational_failures_preserved": [
+    {
+      "scope": "Root initial six-file privacy audit",
+      "exit_code": 1,
+      "reason": "Overbroad literal /home/ match against historical journaled code; corrected checker, no document changed."
+    },
+    {
+      "scope": "Extractor-agent initial textual source read",
+      "exit_code": 2,
+      "reason": "Nonexistent ti2r_solute_v2.py text path; corrected textual lookup."
+    },
+    {
+      "scope": "Primary web",
+      "errors": [
+        "Download link Internal Error",
+        "Indexed accepted PDF HTTP 403 Forbidden",
+        "Permalink and figure-text routes unavailable"
+      ],
+      "result": "Primary passage verified through indexed text only; no full manuscript claim."
+    }
+  ],
+  "record_limits": [
+    "Entries are ordered within each participant, not a reconstructed total order across parallel subtasks.",
+    "Private attachment path and repository-root occurrences are normalized; temporary signed web URL is omitted.",
+    "Some preparation/patch operations are grouped descriptions, explicitly not exact shell strings or complete patch-call counts.",
+    "Tool wrappers, collaboration messages and polling of the already-running characterization command are not separate scientific invocations.",
+    "Receipt-protected native access is accounted in io-audit.json; PNG I/O bytes and view_image internal syscalls were not instrumented.",
+    "Commands that emit this metadata and the final read-only confirmation are excluded from this snapshot to avoid recursive self-recording; their completion is reported in the operator return.",
+    "Agent reports of executed commands were recovered from the session transcript, not rerun to generate this inventory.",
+    "Scientific extraction and characterization each occurred once; no kernel, pixel, threshold or parameter was changed after the extraction."
+  ]
+}

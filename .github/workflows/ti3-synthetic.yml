@@ -1,0 +1,108 @@
+name: ti3-synthetic-ci
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  ti3-synthetic-contracts:
+    runs-on: ubuntu-latest
+    env:
+      PYTHONPATH: src:tests:.
+      PYTHONDONTWRITEBYTECODE: "1"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - name: Enforce tracked-data guard
+        run: python3 -B scripts/check_repository_data.py
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: ""
+      - name: Install pinned TI3 dependencies on CI
+        run: >-
+          python -B -m pip --isolated install
+          --disable-pip-version-check
+          --no-cache-dir
+          --only-binary=:all:
+          -r requirements-ti3-ml.txt
+      - name: Verify all four exact dependency versions
+        run: |
+          python -B - <<'PY'
+          import importlib.metadata
+          import sys
+          import numpy
+          import scipy
+          import skimage
+          import sklearn
+
+          expected = {
+              "numpy": (numpy, "1.26.4"),
+              "scipy": (scipy, "1.11.4"),
+              "scikit-image": (skimage, "0.24.0"),
+              "scikit-learn": (sklearn, "1.5.2"),
+          }
+          if sys.version_info[:2] != (3, 12):
+              raise SystemExit("Python 3.12 required")
+          for distribution, (module, version) in expected.items():
+              if importlib.metadata.version(distribution) != version or module.__version__ != version:
+                  raise SystemExit(f"Dependency version mismatch: {distribution}")
+          print("PASS: Python 3.12 and four exact TI3 dependency versions")
+          PY
+      - name: Enforce composed phase scope and immutable historical custody
+        run: python -B scripts/check_phase_scope.py
+      - name: Require the declared C0 or C1 synthetic suite with zero skips
+        run: |
+          python -B - <<'PY'
+          import json
+          from pathlib import Path
+          import runpy
+          import unittest
+
+          scientific_paths = {
+              "scripts/build_ti3_manifest.py",
+              "scripts/check_ti3_ml_environment.py",
+              "scripts/run_ti3_baseline.py",
+              "src/snbi_fragmentation/ti3_baseline.py",
+              "src/snbi_fragmentation/ti3_dataset.py",
+              "src/snbi_fragmentation/ti3_execution.py",
+              "src/snbi_fragmentation/ti3_support.py",
+              "tests/test_ti3_baseline.py",
+              "tests/test_ti3_dataset.py",
+              "tests/test_ti3_execution.py",
+              "tests/test_ti3_support.py",
+          }
+          manifest = json.loads(Path("configs/governance/phase-scope-v1.json").read_text(encoding="utf-8"))
+          selected = [row for row in manifest["domains"]["TI3_ACTIVE"] if row["path"] in scientific_paths]
+          if len(selected) != 11 or {row["path"] for row in selected} != scientific_paths:
+              raise SystemExit("The exact eleven scientific paths must be declared")
+          states = {row["state"] for row in selected}
+          names = ["test_phase_scope", "test_ti3_scope", "test_ti3_a0_annotations"]
+          if states == {"PLANNED"}:
+              expected_count = 59
+              print("C0: 41 governance + 18 frozen A0 synthetic tests; eleven scientific paths PLANNED")
+          elif states == {"TRACKED"}:
+              expected_count = 109
+              print("C1: 41 governance + 68 TI3 synthetic tests; eleven scientific paths TRACKED")
+              smoke = runpy.run_path("scripts/check_ti3_ml_environment.py")
+              if smoke["main"]() != 0:
+                  raise SystemExit("TI3 environment synthetic smoke failed")
+              names.extend(["test_ti3_dataset", "test_ti3_baseline", "test_ti3_support", "test_ti3_execution"])
+          else:
+              raise SystemExit("Mixed or unknown scientific path states are prohibited")
+          suite = unittest.defaultTestLoader.loadTestsFromNames(names)
+          result = unittest.TextTestRunner(verbosity=2).run(suite)
+          passed = (
+              result.testsRun == expected_count
+              and result.wasSuccessful()
+              and not result.skipped
+              and not result.expectedFailures
+              and not result.unexpectedSuccesses
+          )
+          raise SystemExit(0 if passed else 1)
+          PY

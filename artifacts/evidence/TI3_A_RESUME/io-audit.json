@@ -1,0 +1,19 @@
+{
+  "scope": "THIS_OPERATIONAL_RECOVERY_AND_TI3_A_RESUME_ONLY",
+  "experimental_files_opened": 0,
+  "experimental_opens": 0,
+  "experimental_bytes": 0,
+  "train_opens": 0,
+  "development_opens": 0,
+  "final_test_opens": 0,
+  "final_test_bytes": 0,
+  "ESM2_ESM5_opens": 0,
+  "annotation_buffer_opens": 0,
+  "scientific_runner_invocations": 0,
+  "scientific_execution_receipt": "NOT_CREATED",
+  "metadata_planner_invocations": 1,
+  "metadata_receipt": "metadata-preflight-receipt.json",
+  "note": "Reads were textual evidence/source/configuration plus installed package code and synthetic test fixtures. Counts are scoped to experimental input, not all filesystem I/O. No syscall-wide instrumentation is claimed.",
+  "synthetic_rf_fit_calls": 3,
+  "scientific_ml_runs": 0
+}

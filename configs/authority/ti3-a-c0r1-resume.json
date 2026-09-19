@@ -1,0 +1,26 @@
+{
+  "schema": "TI3-A-C0R1-RESUME-ONE-SHOT-1",
+  "state": "CONDITIONAL_ON_C1_AND_GREEN_CI",
+  "repository": "lmbernardo7520112/snbi-dendritic-fragmentation-ml",
+  "branch": "feat/ti3-canonical-dataset-baseline",
+  "checkpoint": "aba4fb6d66fd6bf640b3cd6adad07b2d60dfe49a",
+  "governing_decision": "artifacts/evidence/TI3_GOV_COMPAT/c0r1/authorization.md",
+  "scientific_invocation_limit": 1,
+  "input_sources": [
+    "ESM1",
+    "ESM4"
+  ],
+  "final_test_execution_authorized": false,
+  "solutal_authorized": false,
+  "ti3_b_authorized": false,
+  "merge_authorized": false,
+  "receipt_path": "artifacts/evidence/TI3_A_RESUME/c0r1-resume/execution-receipt.json",
+  "terminal_path": "artifacts/evidence/TI3_A_RESUME/c0r1-resume/results.json",
+  "terminal_permanently_closes_authority": true,
+  "prior_authority_preserved_closed": "configs/authority/ti3-a-resume.json",
+  "ci_jobs_required": [
+    "deterministic-contracts",
+    "scientific-synthetic-contracts",
+    "ti3-synthetic-contracts"
+  ]
+}

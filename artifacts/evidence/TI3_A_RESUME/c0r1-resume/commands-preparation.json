@@ -1,0 +1,74 @@
+{
+  "scope": "C1_PREPARATION_AFTER_C0R1_SUCCESS",
+  "parent": "aba4fb6d66fd6bf640b3cd6adad07b2d60dfe49a",
+  "scientific_invocations": 0,
+  "experimental_opens": 0,
+  "commands": [
+    {
+      "chunk_id": "76f892",
+      "wall_time_seconds": 0.000007989,
+      "exit_code": 0,
+      "original_token_count": 172,
+      "output": "{\"status\": \"HASH_CUSTODY_PASS_OPERATIONAL_BINDINGS_REQUIRING_REVIEW\", \"documentary_planning_hashes_verified\": 15, \"c0r1_sha\": \"aba4fb6d66fd6bf640b3cd6adad07b2d60dfe49a\", \"expected_c1_parent\": \"aba4fb6d66fd6bf640b3cd6adad07b2d60dfe49a\", \"prepared_runner_required_parent\": \"41d523e038e844588ee7724e07b00f75bdf29fdc\", \"prepared_authority_state\": \"CLOSED_BLOCKED_BEFORE_C1\", \"prepared_authority_checkpoint\": \"41d523e038e844588ee7724e07b00f75bdf29fdc\", \"prepared_terminal_path\": \"artifacts/evidence/TI3_A_RESUME/results.json\", \"prepared_terminal_exists\": true, \"method_freeze_created\": false, \"c1_created\": false, \"scientific_invocations\": 0, \"experimental_opens\": 0, \"experimental_bytes\": 0}\n"
+    },
+    {
+      "command": "PYTHONPATH=src:tests:. /usr/bin/python3 -B - <<'PY'\nimport difflib,hashlib,json\nfrom pathlib import Path\nfrom scripts.check_phase_scope import git_blob_sha\nbase=Path('artifacts/evidence/TI3_A_RESUME/c0r1-resume')\npairs=[('scripts/run_ti3_baseline.py','prepared-runner.py.snapshot.txt'),('src/snbi_fragmentation/ti3_execution.py','prepared-execution.py.snapshot.txt')]\nrecords=[]\nfor path,snapshot in pairs:\n before=(base/snapshot).read_bytes();after=Path(path).read_bytes()\n if path.startswith('scripts/'):\n  expected=before.decode().replace('BASE = Path(\"artifacts/evidence/TI3_A_RESUME\")','PLAN_BASE = Path(\"artifacts/evidence/TI3_A_RESUME\")\\nBASE = PLAN_BASE / \"c0r1-resume\"').replace('CHECKPOINT = \"41d523e038e844588ee7724e07b00f75bdf29fdc\"','CHECKPOINT = \"aba4fb6d66fd6bf640b3cd6adad07b2d60dfe49a\"').replace('AUTHORITY = Path(\"configs/authority/ti3-a-resume.json\")','AUTHORITY = Path(\"configs/authority/ti3-a-c0r1-resume.json\")').replace('_read_text(BASE / \"dataset_manifest.json\")','_read_text(PLAN_BASE / \"dataset_manifest.json\")')\n else:expected=before.decode().replace('artifacts/evidence/TI3_A_RESUME/execution-receipt.json','artifacts/evidence/TI3_A_RESUME/c0r1-resume/execution-receipt.json').replace('artifacts/evidence/TI3_A_RESUME/results.json','artifacts/evidence/TI3_A_RESUME/c0r1-resume/results.json')\n assert after.decode()==expected,path\n records.append(dict(path=path,before_sha256=hashlib.sha256(before).hexdigest(),after_sha256=hashlib.sha256(after).hexdigest(),snapshot=str(base/snapshot),diff=''.join(difflib.unified_diff(before.decode().splitlines(True),after.decode().splitlines(True),fromfile='prepared/'+path,tofile='C1/'+path))))\n(base/'operational-changes.json').write_text(json.dumps({'science_changed':False,'changes':records},indent=2)+'\\n')\np=Path('configs/governance/phase-scope-v1.json');m=json.loads(p.read_text())\nfor row in m['domains']['TI3_ACTIVE']:\n if row['state']=='PLANNED':\n  actual=git_blob_sha(Path(row['path']).read_bytes())\n  if row['path'] not in {p for p,_ in pairs}:assert actual==row['blob_sha'],row['path']\n  row['blob_sha']=actual;row['state']='TRACKED'\np.write_text(json.dumps(m,indent=2,sort_keys=True)+'\\n')\noldfreeze=json.loads(Path('artifacts/evidence/TI3_A_RESUME/metadata-preflight-freeze.json').read_text())\npaths=set(oldfreeze['text_sha256'])|{r['path'] for r in m['domains']['TI3_ACTIVE']}\npaths.update(['configs/governance/phase-scope-v1.json','configs/authority/ti3-a-c0r1-resume.json','configs/authority/ti3-a-resume.json','requirements-ti3-ml.txt','.github/workflows/ci.yml','.github/workflows/ti3-synthetic.yml','artifacts/evidence/TI3_A_RESUME/dataset_manifest.json','artifacts/evidence/TI3_A_RESUME/final-test-manifest.json','artifacts/evidence/TI3_A_RESUME/EXECUTION_GUARDS.md','artifacts/evidence/TI3_A_RESUME/results.json','artifacts/evidence/TI3_GOV_COMPAT/c0r1/authorization.md','artifacts/evidence/TI3_GOV_COMPAT/c0r1/remote-ci.json','artifacts/evidence/TI3_GOV_COMPAT/semantic-1/authorization.md',str(base/'CLAIM_SCOPE.md'),str(base/'OPERATIONAL_BINDINGS.md'),str(base/'operational-changes.json'),str(base/'prepared-runner.py.snapshot.txt'),str(base/'prepared-execution.py.snapshot.txt')])\nfreeze=dict(schema='TI3-A-C1-METHOD-FREEZE-1',parent_sha='aba4fb6d66fd6bf640b3cd6adad07b2d60dfe49a',original_planning_manifest_sha256='c8e82b72ff5dc51d188a764c577c11d514474b14d90aea6292c1439e776fb487',experimental_opens_at_freeze=0,scientific_ml_runs_at_freeze=0,text_sha256={p:hashlib.sha256(Path(p).read_bytes()).hexdigest() for p in sorted(paths)},operational_adaptation_only=[p for p,_ in pairs],scientific_parameters='UNCHANGED_FROM_PREPARED_PLAN')\n(base/'method-freeze.json').write_text(json.dumps(freeze,indent=2,sort_keys=True)+'\\n')\nprint(json.dumps({'C1_FREEZE_TEXTS':len(paths),'active_tracked':len(m['domains']['TI3_ACTIVE']),'operational_code_changes':2,'core_science_changed':False,'experimental_opens':0}))\nPY",
+      "result": {
+        "chunk_id": "3388af",
+        "wall_time_seconds": 0.000004592,
+        "exit_code": 0,
+        "original_token_count": 34,
+        "output": "{\"C1_FREEZE_TEXTS\": 45, \"active_tracked\": 15, \"operational_code_changes\": 2, \"core_science_changed\": false, \"experimental_opens\": 0}\n"
+      }
+    },
+    {
+      "command": "TMPDIR=.bootstrap-test-tmp/ti3-preflight-recovery PYTHONPATH=src:tests:. .venv/bin/python -B - <<'PY'\nimport copy,hashlib,importlib.util,json\nfrom pathlib import Path\nfrom unittest.mock import patch\nspec=importlib.util.spec_from_file_location('ti3_c1_preflight_only','scripts/run_ti3_baseline.py');runner=importlib.util.module_from_spec(spec);spec.loader.exec_module(runner)\nhead='1'*40;jobs=['deterministic-contracts','scientific-synthetic-contracts','ti3-synthetic-contracts']\nproof={'head_sha':head,'repository':runner.REPOSITORY,'runs':[{'head_sha':head,'status':'completed','conclusion':'success','jobs':[{'name':n,'status':'completed','conclusion':'success'} for n in jobs]}]}\nreader=runner._read_text\noriginal_config=json.loads(reader(runner.AUTHORITY))\noriginal_freeze=json.loads(reader(runner.BASE/'method-freeze.json'))\nresults=[]\ndef exercise(name,expected=None,changes=None):\n changes=changes or {};local_proof=copy.deepcopy(proof);config=copy.deepcopy(original_config)\n if 'proof_sha' in changes:local_proof['head_sha']=changes['proof_sha']\n if 'job_failure' in changes:local_proof['runs'][0]['jobs'][0]['conclusion']='failure'\n if 'missing_job' in changes:local_proof['runs'][0]['jobs'].pop()\n if 'closed_authority' in changes:config['state']='CLOSED'\n def read(path):\n  if path==runner.BASE/'ci-proof.json':return json.dumps(local_proof).encode()\n  if path==runner.AUTHORITY and 'closed_authority' in changes:return json.dumps(config).encode()\n  return reader(path)\n def git(*args):\n  if args==('rev-parse','HEAD'):return head\n  if args==('rev-parse','HEAD^'):return changes.get('parent',runner.CHECKPOINT)\n  if args==('branch','--show-current'):return runner.BRANCH\n  if args==('remote','get-url','origin'):return 'https://github.com/'+runner.REPOSITORY+'.git'\n  if args in [('diff','--name-only'),('diff','--cached','--name-only')]:return 'modified.py' if changes.get('dirty') else ''\n  raise AssertionError(args)\n with patch.object(runner,'_git',side_effect=git),patch.object(runner,'_read_text',side_effect=read),patch.object(runner,'arm_execution',side_effect=AssertionError('must not arm')) as arm:\n  try:\n   value=runner._preflight()\n  except ValueError as error:\n   assert expected and str(error)==expected,(name,str(error),expected)\n  else:\n   assert expected is None,name\n   assert value[0]==head and hashlib.sha256(value[2]).hexdigest()=='c8e82b72ff5dc51d188a764c577c11d514474b14d90aea6292c1439e776fb487'\n  arm.assert_not_called()\n results.append({'case':name,'status':'PASS','expected_denial':expected})\nexercise('valid_conditional_preflight')\nexercise('wrong_parent','C1_OR_BRANCH_DIVERGENCE',{'parent':'0'*40})\nexercise('dirty_index_or_worktree','TRACKED_WORKTREE_OR_INDEX_DIRTY',{'dirty':True})\nexercise('closed_authority','CANONICAL_TI3_AUTHORITY_DIVERGENCE',{'closed_authority':True})\nexercise('wrong_ci_head','CI_HEAD_DIVERGENCE',{'proof_sha':'2'*40})\nexercise('failed_job','CI_JOB_NOT_GREEN',{'job_failure':True})\nexercise('missing_job','CI_REQUIRED_JOB_MISSING',{'missing_job':True})\nassert not (runner.BASE/'execution-receipt.json').exists() and not (runner.BASE/'results.json').exists()\nreport={'status':'PASS','boundary':'PREPARATORY_CONTROL_PLANE_WITH_SYNTHETIC_GIT_AND_CI_ONLY','cases':results,'experimental_opens':0,'scientific_cli_invocations':0,'receipt_created':False,'method_freeze_texts':len(original_freeze['text_sha256'])}\n(runner.BASE/'control-preflight-tests.json').write_text(json.dumps(report,indent=2,sort_keys=True)+'\\n')\nprint(json.dumps({'CONTROL_PREFLIGHT':'PASS','cases':len(results),'experimental_opens':0,'scientific_invocations':0}))\nPY",
+      "result": {
+        "chunk_id": "77da9b",
+        "wall_time_seconds": 0.298060897,
+        "exit_code": 0,
+        "original_token_count": 24,
+        "output": "{\"CONTROL_PREFLIGHT\": \"PASS\", \"cases\": 7, \"experimental_opens\": 0, \"scientific_invocations\": 0}\n"
+      }
+    },
+    {
+      "commands": [
+        "TMPDIR=.bootstrap-test-tmp/ti3-preflight-recovery PYTHONPATH=src:tests:. .venv/bin/python -B - <<'PY'\nfrom pathlib import Path\nimport contextlib,io,json\ntext=Path('.github/workflows/ti3-synthetic.yml').read_text();blocks=text.split(\"          python -B - <<'PY'\\n\")[1:];assert len(blocks)==2\nreports=[]\nfor index,block in enumerate(blocks):\n code='\\n'.join(line[10:] for line in block.split('\\n          PY',1)[0].splitlines())+'\\n';capture=io.StringIO()\n with contextlib.redirect_stdout(capture),contextlib.redirect_stderr(capture):\n  try:exec(compile(code,'C1-ci-profile-'+str(index),'exec'),{})\n  except SystemExit as exc:\n   if exc.code not in (None,0):raise\n reports.append({'block':index,'exit_code':0,'output':capture.getvalue()})\nPath('artifacts/evidence/TI3_A_RESUME/c0r1-resume/ci-profile-local.json').write_text(json.dumps(reports,indent=2)+'\\n')\nprint(json.dumps({'C1_PROFILE':'PASS','tests':109,'skips':0,'synthetic_rf_fits':3,'experimental_opens':0}))\nPY",
+        "TMPDIR=.bootstrap-test-tmp/ti3-preflight-recovery PYTHONPATH=src:tests:. /usr/bin/python3 -S -B - <<'PY'\nimport io,json,unittest\nfrom pathlib import Path\nsuite=unittest.defaultTestLoader.discover('tests');stream=io.StringIO();r=unittest.TextTestRunner(stream=stream,verbosity=2).run(suite)\nreport=dict(status='PASS' if r.wasSuccessful() else 'FAIL',tests=r.testsRun,passes=r.testsRun-len(r.skipped)-len(r.errors)-len(r.failures),optional_skips=len(r.skipped),failures=len(r.failures),errors=len(r.errors),output=stream.getvalue())\nPath('artifacts/evidence/TI3_A_RESUME/c0r1-resume/stdlib-tests.json').write_text(json.dumps(report,indent=2)+'\\n')\nprint(json.dumps({k:v for k,v in report.items() if k!='output'}));raise SystemExit(0 if r.wasSuccessful() else 1)\nPY"
+      ],
+      "results": [
+        {
+          "status": "fulfilled",
+          "value": {
+            "chunk_id": "f49de8",
+            "wall_time_seconds": 1.00075132,
+            "session_id": 78136,
+            "original_token_count": 0,
+            "output": ""
+          }
+        },
+        {
+          "status": "fulfilled",
+          "value": {
+            "chunk_id": "41ec27",
+            "wall_time_seconds": 1.001474667,
+            "session_id": 92951,
+            "original_token_count": 0,
+            "output": ""
+          }
+        }
+      ]
+    }
+  ],
+  "delegation": [
+    {
+      "agent": "ti3_resume_operational_audit",
+      "scope": "Hash verification, exact two operational snapshots and minimal two-file bindings patch; three Python -B text commands exit0 and one apply_patch; no tests or science"
+    }
+  ],
+  "limits": [
+    "Read-only cat/sed and writing of directly necessary textual evidence are grouped.",
+    "These are preparatory/synthetic checks; no experiment runner CLI or planner has executed.",
+    "Staging/commit and CI publication are reported after completion; not fabricated here."
+  ]
+}

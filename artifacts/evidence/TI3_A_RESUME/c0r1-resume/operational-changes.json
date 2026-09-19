@@ -1,0 +1,19 @@
+{
+  "science_changed": false,
+  "changes": [
+    {
+      "path": "scripts/run_ti3_baseline.py",
+      "before_sha256": "05c3adfa51f6f57a2a6728c38eb97123c38155f8fbf2785379fe2254c42f663b",
+      "after_sha256": "ed85b02f2d5275ba5f12af1415b84fb9b1488b45e19eeb3b7addfc0232b5067d",
+      "snapshot": "artifacts/evidence/TI3_A_RESUME/c0r1-resume/prepared-runner.py.snapshot.txt",
+      "diff": "--- prepared/scripts/run_ti3_baseline.py\n+++ C1/scripts/run_ti3_baseline.py\n@@ -17,11 +17,12 @@\n from snbi_fragmentation.ti3_execution import arm_execution\n from snbi_fragmentation.ti3_support import checked_native_luminance\n \n-BASE = Path(\"artifacts/evidence/TI3_A_RESUME\")\n-CHECKPOINT = \"41d523e038e844588ee7724e07b00f75bdf29fdc\"\n+PLAN_BASE = Path(\"artifacts/evidence/TI3_A_RESUME\")\n+BASE = PLAN_BASE / \"c0r1-resume\"\n+CHECKPOINT = \"aba4fb6d66fd6bf640b3cd6adad07b2d60dfe49a\"\n BRANCH = \"feat/ti3-canonical-dataset-baseline\"\n REPOSITORY = \"lmbernardo7520112/snbi-dendritic-fragmentation-ml\"\n-AUTHORITY = Path(\"configs/authority/ti3-a-resume.json\")\n+AUTHORITY = Path(\"configs/authority/ti3-a-c0r1-resume.json\")\n \n \n def _git(*arguments):\n@@ -104,7 +105,7 @@\n             observed.add(job[\"name\"])\n     if not required_jobs.issubset(observed):\n         raise ValueError(\"CI_REQUIRED_JOB_MISSING\")\n-    manifest_bytes = _read_text(BASE / \"dataset_manifest.json\")\n+    manifest_bytes = _read_text(PLAN_BASE / \"dataset_manifest.json\")\n     manifest = json.loads(manifest_bytes)\n     validate_manifest(manifest)\n     if manifest[\"site_count\"] != 52 or len(manifest[\"ignore_geometry\"]) != 383:\n"
+    },
+    {
+      "path": "src/snbi_fragmentation/ti3_execution.py",
+      "before_sha256": "e5edd08b229b5418d129fec03a43e72514d79bb72d85fd15bb3697f5d332c7b3",
+      "after_sha256": "573321e4ca83d372d15dc971e4fde3b3987c19ee8a4c201432fff1bda979f80f",
+      "snapshot": "artifacts/evidence/TI3_A_RESUME/c0r1-resume/prepared-execution.py.snapshot.txt",
+      "diff": "--- prepared/src/snbi_fragmentation/ti3_execution.py\n+++ C1/src/snbi_fragmentation/ti3_execution.py\n@@ -16,8 +16,8 @@\n from snbi_fragmentation.ti3_dataset import validate_manifest\n \n \n-RECEIPT_PATH = \"artifacts/evidence/TI3_A_RESUME/execution-receipt.json\"\n-TERMINAL_PATH = \"artifacts/evidence/TI3_A_RESUME/results.json\"\n+RECEIPT_PATH = \"artifacts/evidence/TI3_A_RESUME/c0r1-resume/execution-receipt.json\"\n+TERMINAL_PATH = \"artifacts/evidence/TI3_A_RESUME/c0r1-resume/results.json\"\n ALLOWED_FRAMES = {\n     (\"ESM1\", 73): \"TRAIN\", (\"ESM1\", 146): \"TRAIN\", (\"ESM4\", 98): \"TRAIN\",\n     (\"ESM1\", 219): \"DEVELOPMENT\", (\"ESM4\", 197): \"DEVELOPMENT\",\n"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "active_checksum_entries_changed": [],
+  "baseline_git_sha": "41d523e038e844588ee7724e07b00f75bdf29fdc",
+  "corpus_manifest": "configs/governance/pre-ti3-code-scope.json",
+  "corpus_manifest_sha256": "3c63b51ff86aeda79244d09e5bc7f5196be01f8aa8672ab3dc2f8fe6d90f9971",
+  "experimental_opens": 0,
+  "historical_checksum_snapshot": "artifacts/evidence/TI2/checksums-pre-ti3-41d523e.sha256",
+  "legacy_code_count": 79,
+  "scientific_ml_runs": 0,
+  "snapshot_byte_count": 10212,
+  "snapshot_byte_identical": true,
+  "snapshot_entries": 95,
+  "snapshot_sha256": "e7d30ca626088e1e3c58c8702b96e9afc388ee75c48011d885393230dc7d245d",
+  "status": "PASS_CORPUS_AND_HISTORICAL_SNAPSHOT"
+}

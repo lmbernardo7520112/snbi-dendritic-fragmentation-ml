@@ -1,0 +1,53 @@
+{
+  "baseline_blob_identity": "PASS",
+  "baseline_git_sha": "41d523e038e844588ee7724e07b00f75bdf29fdc",
+  "ci_remote": "NOT_RUN",
+  "experimental_bytes": 0,
+  "experimental_opens": 0,
+  "global_tracked_data_guard": {
+    "audit": "tracked_repository_data_guard",
+    "content_bytes_read": 0,
+    "examined_entry_count": 329,
+    "status": "PASS",
+    "violations": []
+  },
+  "legacy_entries_count": 79,
+  "legacy_scoped_ti2_guard": {
+    "authorized_phase": null,
+    "authorized_scientific_phases": [],
+    "blocked_phases": [
+      "TI-2",
+      "TI-2R",
+      "TI-3",
+      "TI-4",
+      "TI-5",
+      "TI-6",
+      "TI-7",
+      "TI-8"
+    ],
+    "codex_local_write_readiness": "BLOCKED_AWAITING_AUTHOR_DECISION",
+    "current_authorized_activity": "NONE_AWAITING_AUTHOR_DECISION",
+    "current_gate_documents": {
+      "document_count": 2,
+      "status": "PASS",
+      "violations": []
+    },
+    "experimental_content_bytes_read": 0,
+    "merge_authorized": false,
+    "scientific_readiness": "BLOCKED",
+    "status": "BLOCKED",
+    "ti2_execution_authorized": false,
+    "ti2r_authorized": false,
+    "ti3_plus_authorized": false,
+    "violations": [
+      "TI-3+ code path prohibited: scripts/extract_ti3_a0_annotations.py (annotations)",
+      "TI-3+ code path prohibited: scripts/inspect_ti3_a0_annotations.py (annotations)",
+      "TI-3+ code path prohibited: src/snbi_fragmentation/ti3_a0_annotations.py (annotations)"
+    ]
+  },
+  "scientific_ml_runs": 0,
+  "scope": "AUTHOR_SECTION_19_LEGACY_LOCAL_GATE",
+  "stop_on_failure": true,
+  "tracked_relevant_python_count": 79,
+  "unclassified_tracked_python": []
+}

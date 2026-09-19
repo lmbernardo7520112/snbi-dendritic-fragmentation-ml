@@ -1,0 +1,244 @@
+"""One-shot TI3 baseline; C1 and green CI must precede every experimental open."""
+
+from __future__ import annotations
+
+import hashlib
+import json
+import os
+from pathlib import Path
+import stat
+import subprocess
+import sys
+
+from snbi_fragmentation.ti3_baseline import (
+    _scientific_runtime, evaluate_baseline, extract_patch, lbp_features,
+)
+from snbi_fragmentation.ti3_dataset import validate_manifest
+from snbi_fragmentation.ti3_execution import arm_execution
+from snbi_fragmentation.ti3_support import checked_native_luminance
+
+PLAN_BASE = Path("artifacts/evidence/TI3_A_RESUME")
+BASE = PLAN_BASE / "c0r1-resume"
+CHECKPOINT = "aba4fb6d66fd6bf640b3cd6adad07b2d60dfe49a"
+BRANCH = "feat/ti3-canonical-dataset-baseline"
+REPOSITORY = "lmbernardo7520112/snbi-dendritic-fragmentation-ml"
+AUTHORITY = Path("configs/authority/ti3-a-c0r1-resume.json")
+
+
+def _git(*arguments):
+    return subprocess.check_output(
+        ["git", "--no-optional-locks", *arguments], text=True
+    ).strip()
+
+
+def _read_text(path):
+    if path.is_absolute() or ".." in path.parts:
+        raise ValueError("TEXT_PATH_NOT_RELATIVE")
+    if path.parts[0] not in {"artifacts", "src", "tests", "scripts", "configs", ".github", "docs"} and path.name != "requirements-ti3-ml.txt":
+        raise ValueError("TEXT_PATH_NOT_ALLOWED")
+    if path.parts[0] == "artifacts" and not str(path).startswith(("artifacts/evidence/", "artifacts/metadata/")):
+        raise ValueError("TEXT_ARTIFACT_PATH_NOT_ALLOWED")
+    if path.suffix not in {".py", ".json", ".md", ".txt", ".sha256", ".yml"}:
+        raise ValueError("TEXT_SUFFIX_NOT_ALLOWED")
+    for component in (path, *path.parents):
+        if stat.S_ISLNK(component.lstat().st_mode):
+            raise ValueError("TEXT_SYMLINK_PROHIBITED")
+    fd = os.open(path, os.O_RDONLY | os.O_NOFOLLOW)
+    with os.fdopen(fd, "rb") as handle:
+        raw = handle.read()
+    raw.decode("utf-8")
+    return raw
+
+
+def _write_once(name, value):
+    for component in (BASE, *BASE.parents):
+        if stat.S_ISLNK(component.lstat().st_mode):
+            raise ValueError("EVIDENCE_SYMLINK_PROHIBITED")
+    fd = os.open(BASE / name, os.O_WRONLY | os.O_CREAT | os.O_EXCL | os.O_NOFOLLOW, 0o644)
+    with os.fdopen(fd, "w", encoding="utf-8") as handle:
+        json.dump(value, handle, indent=2, sort_keys=True, allow_nan=False)
+        handle.write("\n")
+        handle.flush()
+        os.fsync(handle.fileno())
+
+
+def _preflight():
+    head = _git("rev-parse", "HEAD")
+    if _git("branch", "--show-current") != BRANCH or _git("rev-parse", "HEAD^") != CHECKPOINT:
+        raise ValueError("C1_OR_BRANCH_DIVERGENCE")
+    if _git("diff", "--name-only") or _git("diff", "--cached", "--name-only"):
+        raise ValueError("TRACKED_WORKTREE_OR_INDEX_DIRTY")
+    if _git("remote", "get-url", "origin") != "https://github.com/" + REPOSITORY + ".git":
+        raise ValueError("REPOSITORY_IDENTITY_DIVERGENCE")
+    if sys.version_info[:2] != (3, 12) or Path(sys.prefix).absolute() != Path(".venv").absolute():
+        raise ValueError("REPOSITORY_PYTHON312_VENV_REQUIRED")
+    config = json.loads(_read_text(AUTHORITY))
+    required_jobs = {"deterministic-contracts", "scientific-synthetic-contracts", "ti3-synthetic-contracts"}
+    if (config.get("state") != "CONDITIONAL_ON_C1_AND_GREEN_CI"
+            or config.get("repository") != REPOSITORY or config.get("branch") != BRANCH
+            or config.get("checkpoint") != CHECKPOINT
+            or type(config.get("scientific_invocation_limit")) is not int
+            or config["scientific_invocation_limit"] != 1
+            or config.get("input_sources") != ["ESM1", "ESM4"]
+            or set(config.get("ci_jobs_required", [])) != required_jobs
+            or any(config.get(k) is not False for k in (
+                "final_test_execution_authorized", "solutal_authorized",
+                "ti3_b_authorized", "merge_authorized"))):
+        raise ValueError("CANONICAL_TI3_AUTHORITY_DIVERGENCE")
+    freeze = json.loads(_read_text(BASE / "method-freeze.json"))
+    for name, expected in freeze["text_sha256"].items():
+        if hashlib.sha256(_read_text(Path(name))).hexdigest() != expected:
+            raise ValueError("C1_FROZEN_TEXT_DIVERGENCE")
+    proof = json.loads(_read_text(BASE / "ci-proof.json"))
+    if proof.get("head_sha") != head or proof.get("repository") != REPOSITORY:
+        raise ValueError("CI_HEAD_DIVERGENCE")
+    observed = set()
+    runs = proof.get("runs", [])
+    if not runs:
+        raise ValueError("CI_PROOF_MISSING")
+    for run in runs:
+        if run.get("head_sha") != head or run.get("status") != "completed" or run.get("conclusion") != "success":
+            raise ValueError("CI_NOT_GREEN_AT_C1")
+        for job in run.get("jobs", []):
+            if job.get("status") != "completed" or job.get("conclusion") != "success":
+                raise ValueError("CI_JOB_NOT_GREEN")
+            observed.add(job["name"])
+    if not required_jobs.issubset(observed):
+        raise ValueError("CI_REQUIRED_JOB_MISSING")
+    manifest_bytes = _read_text(PLAN_BASE / "dataset_manifest.json")
+    manifest = json.loads(manifest_bytes)
+    validate_manifest(manifest)
+    if manifest["site_count"] != 52 or len(manifest["ignore_geometry"]) != 383:
+        raise ValueError("TARGET_INVENTORY_DIVERGENCE")
+    # Dependency validation also occurs before receipt and all experimental I/O.
+    np = _scientific_runtime()
+    inventory_bytes = json.dumps(manifest["source_inventory"], sort_keys=True, separators=(",", ":"), ensure_ascii=True).encode("ascii")
+    active = {
+        "state": "ARMED_ONCE", "head_sha": head,
+        "manifest_sha256": hashlib.sha256(manifest_bytes).hexdigest(),
+        "source_inventory_sha256": hashlib.sha256(inventory_bytes).hexdigest(),
+        "scientific_invocation_limit": 1,
+    }
+    return head, manifest, manifest_bytes, active, np
+
+
+def main():
+    try:
+        head, manifest, manifest_bytes, active, np = _preflight()
+    except Exception as error:
+        print(json.dumps({"status": "BLOCKED_PRE_EXECUTION", "error_type": type(error).__name__,
+                          "experimental_opens": 0, "scientific_ml_runs": 0}))
+        return 3
+    reader = None
+    stage = "ARMING"
+    invocation_started = False
+    patch_records = []
+    rows = {"TRAIN": [], "DEVELOPMENT": []}
+    labels = {"TRAIN": [], "DEVELOPMENT": []}
+    sample_ids = {"TRAIN": [], "DEVELOPMENT": []}
+    outcome = None
+    try:
+        reader = arm_execution(Path("."), manifest_bytes, active, head)
+        stage = "INPUT_AUTHENTICATION_AND_SUPPORT"
+        samples = [s for s in manifest["samples"] if s["split"] in rows]
+        for source in manifest["source_inventory"]:
+            current = sorted(
+                [s for s in samples if (s["source_id"], s["frame_index"]) ==
+                 (source["source_id"], source["frame_index"])],
+                key=lambda s: s["sample_id"],
+            )
+            if not current:
+                continue
+            raw = reader.read_native(source)
+            luma, support = checked_native_luminance(raw, source, current)
+            for sample in current:
+                patch = extract_patch(luma, sample)
+                feature = lbp_features(patch)
+                split = sample["split"]
+                rows[split].append(feature)
+                labels[split].append(sample["baseline_label"])
+                sample_ids[split].append(sample["sample_id"])
+                patch_records.append({
+                    "sample_id": sample["sample_id"], "source_id": sample["source_id"],
+                    "frame_index": sample["frame_index"], "split": split,
+                    "center_x": sample["center_x"], "center_y": sample["center_y"],
+                    "patch_side_px": 65, "patch_radius_px": 32,
+                    "patch_sha256": hashlib.sha256(patch.tobytes()).hexdigest(),
+                    "input_sha256": source["image_sha256"],
+                    "input_opened": True, "support_guard": support,
+                })
+            del raw, luma
+        stage = "SINGLE_BASELINE_CALL"
+        invocation_started = True
+        outcome = evaluate_baseline(
+            np.asarray(rows["TRAIN"]), np.asarray(labels["TRAIN"], dtype=np.int64),
+            np.asarray(rows["DEVELOPMENT"]), np.asarray(labels["DEVELOPMENT"], dtype=np.int64),
+        )
+        stage = "COMPLETED"
+        result = {
+            "TI3_A": "PASS", "TI3_A_DATASET": "PASS",
+            "TI3_A_BASELINE": "PASS", "TI3_A_TARGET": "FROZEN",
+            "TI3_A_SPLIT": "FROZEN_TEMPORAL_GROUPED", "TI3_A_LEAKAGE_GUARDS": "PASS",
+            "BASELINE_MODEL": "LBP_RF", "SCIENTIFIC_ML_RUNS": 1,
+            "ML_FINAL_TEST": "SEALED_WITH_HISTORICAL_NON_ML_EXPOSURE",
+            "ML_FINAL_TEST_EXECUTED": False, "SOLUTAL_MODEL_INPUT": "NOT_USED",
+            "FORECASTING_AUTHORIZED": False, "CAUSALITY_CLAIM_AUTHORIZED": False,
+            "EXTERNAL_GENERALIZATION_CLAIM": False,
+            "TI3_B_READY_FOR_AUTHOR_DECISION": True, "TI3_B_AUTHORIZED": False,
+            "MERGE_AUTHORIZED": False,
+            "CURRENT_AUTHORIZED_ACTIVITY": "NONE_AWAITING_AUTHOR_DECISION",
+            "C1": head, "baseline": outcome, "sample_order": sample_ids,
+        }
+        exit_code = 0
+    except Exception as error:
+        # No rerun, parameter change or sample replacement is permitted here.
+        result = {
+            "TI3_A": "BLOCKED", "stage": stage,
+            "error_type": type(error).__name__,
+            "error_code": getattr(error, "code", type(error).__name__),
+            "scientific_baseline_calls_started": int(invocation_started),
+            "SCIENTIFIC_ML_RUNS": 0,
+            "fit_calls_if_failure_inside_baseline": "NOT_VERIFIED" if invocation_started else 0,
+            "ML_FINAL_TEST": "SEALED_WITH_HISTORICAL_NON_ML_EXPOSURE",
+            "ML_FINAL_TEST_EXECUTED": False,
+            "CURRENT_AUTHORIZED_ACTIVITY": "NONE_AWAITING_AUTHOR_DECISION",
+            "TI3_B_AUTHORIZED": False, "MERGE_AUTHORIZED": False,
+            "C1": head,
+        }
+        exit_code = 2
+    if reader is None:
+        # A duplicate receipt/terminal or authority denial must not overwrite history.
+        print(json.dumps(result, sort_keys=True))
+        return exit_code
+    reader.close()
+    audit = reader.report()
+    audit.update({"final_test_opens": 0, "final_test_bytes": 0, "patches": patch_records,
+                  "scientific_baseline_calls_started": int(invocation_started),
+                  "successful_scientific_baselines": int(outcome is not None)})
+    _write_once("io-audit.json", audit)
+    observed = {p["sample_id"]: p for p in patch_records}
+    input_reads = {(r["source_id"], r["frame_index"]): r for r in audit["entries"]}
+    materialization = []
+    for sample in manifest["samples"]:
+        record = dict(sample)
+        patch = observed.get(sample["sample_id"])
+        native = input_reads.get((sample["source_id"], sample["frame_index"]), {})
+        record["input_opened"] = native.get("opens", 0) > 0
+        record["input_hash_if_opened"] = native.get("bytes_read_sha256") if record["input_opened"] else None
+        record["native_integrity_verified"] = native.get("verified", False)
+        record["patch_sha256"] = None if patch is None else patch["patch_sha256"]
+        materialization.append(record)
+    _write_once("materialization-manifest.json", {
+        "planning_manifest_sha256": active["manifest_sha256"],
+        "C1": head, "samples": materialization,
+        "final_test_state": "SEALED_WITH_HISTORICAL_NON_ML_EXPOSURE",
+    })
+    _write_once("results.json", result)
+    print(json.dumps({"TI3_A": result["TI3_A"], "stage": stage,
+                      "SCIENTIFIC_ML_RUNS": result["SCIENTIFIC_ML_RUNS"],
+                      "final_test_opens": 0, "patch_count": len(patch_records)}, sort_keys=True))
+    return exit_code
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

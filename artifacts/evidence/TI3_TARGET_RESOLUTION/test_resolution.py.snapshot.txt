@@ -1,0 +1,183 @@
+"""Synthetic-only tests for the pure textual annotation-site resolver."""
+
+from copy import deepcopy
+import math
+import unittest
+
+from resolve import resolve
+
+
+def component(identifier, x=0.0, y=0.0, classification="VALID_GRAPHICAL_CIRCLE"):
+    return {"annotation_id": identifier, "classification": classification,
+            "center_x": x, "center_y": y, "radius_graphical_px": 10.0,
+            "bbox_xyxy": [0, 0, 24, 24], "reasons": [],
+            "provenance": {"fixture": "SYNTHETIC_ONLY"}, "semantic_label": "UNKNOWN"}
+
+
+def frame(source, index, *components):
+    return {"asset_id": f"{source}:{index}", "source_id": source,
+            "frame_index": index, "experimental_time_s": -2.0 + index * 1.18,
+            "components": list(components)}
+
+
+class ResolutionTests(unittest.TestCase):
+    def test_order_invariance_and_no_input_mutation(self):
+        frames = [frame("A", 9, component("a3", 2, 0), component("b2", 40, 40)),
+                  frame("A", 1, component("a1", 0, 0), component("b1", 40, 41))]
+        before = deepcopy(frames)
+        expected = resolve(frames, {"A": "acquisition"})
+        reverse = deepcopy(frames[::-1])
+        for item in reverse:
+            item["components"].reverse()
+        self.assertEqual(expected, resolve(reverse, {"A": "acquisition"}))
+        self.assertEqual(frames, before)
+        self.assertTrue(all(row["original_semantic_label"] == "UNKNOWN" for row in expected["ledger"]))
+
+    def test_exact_three_included_and_above_three_excluded(self):
+        inside = resolve([frame("A", 0, component("a", 0, 0), component("b", 3, 0))], {"A": "run"})
+        outside = resolve([frame("A", 0, component("a", 0, 0), component("b", math.nextafter(3.0, math.inf), 0))], {"A": "run"})
+        self.assertEqual(inside["summary"]["annotation_site_count"], 1)
+        self.assertEqual(outside["summary"]["annotation_site_count"], 2)
+
+    def test_euclidean_not_axis_box(self):
+        result = resolve([frame("A", 0, component("a", 0, 0), component("b", 3, 3))], {"A": "run"})
+        self.assertEqual(result["summary"]["annotation_site_count"], 2)
+
+    def test_sources_and_acquisitions_are_separate(self):
+        frames = [frame("A", 0, component("a")), frame("B", 0, component("b")),
+                  frame("C", 0, component("c"))]
+        result = resolve(frames, {"A": "run1", "B": "run1", "C": "run2"})
+        self.assertEqual(result["summary"]["annotation_site_count"], 3)
+        self.assertEqual(result["summary"]["by_acquisition"]["run1"]["annotation_site_count"], 2)
+        self.assertEqual(result["summary"]["by_acquisition"]["run2"]["annotation_site_count"], 1)
+
+    def test_transitive_chain_reports_diameter_and_observed_medoid(self):
+        result = resolve([frame("A", 0, component("left", 0, 0), component("middle", 3, 0),
+                                component("right", 6, 0))], {"A": "run"})
+        site = result["sites"][0]
+        self.assertEqual(len(result["sites"]), 1)
+        self.assertEqual(site["maximum_pairwise_diameter_px"], 6.0)
+        self.assertEqual(site["representative"]["observation_id"], "middle")
+        self.assertEqual(site["maximum_distance_to_representative_px"], 3.0)
+        self.assertAlmostEqual(site["rms_distance_to_representative_px"], math.sqrt(6.0))
+
+    def test_medoid_tie_uses_lexicographic_id_and_no_averaged_coordinate(self):
+        result = resolve([frame("A", 0, component("z", 0, 0), component("a", 2, 0))], {"A": "run"})
+        representative = result["sites"][0]["representative"]
+        self.assertEqual(representative["observation_id"], "a")
+        self.assertEqual(representative["center_x"], 2)
+
+    def test_first_confident_observation_is_not_onset(self):
+        result = resolve([frame("A", 73, component("z", 0, 0), component("a", 0, 1)),
+                          frame("A", 146, component("later", 0, 2))], {"A": "run"})
+        site = result["sites"][0]
+        self.assertEqual(site["first_confident_observation"]["frame_index"], 73)
+        self.assertEqual(site["first_confident_observation"]["observation_id"], "a")
+        self.assertFalse(site["first_observation_is_physical_onset"])
+        self.assertIsNone(site["event_onset_frame"])
+        self.assertIsNone(site["physical_event_id"])
+
+    def test_ignored_components_retained_and_never_positive(self):
+        ambiguous = component("ambiguous", None, None, "AMBIGUOUS_OR_NONCIRCULAR")
+        ambiguous["radius_graphical_px"] = None
+        ambiguous["reasons"] = ["GRAPHICAL_AMBIGUITY"]
+        small = component("small", None, None, "SMALL_COMPONENT")
+        result = resolve([frame("A", 0, component("valid"), ambiguous, small)], {"A": "run"})
+        rows = {row["observation_id"]: row for row in result["ledger"]}
+        self.assertEqual(len(rows), 3)
+        for identifier in ("ambiguous", "small"):
+            self.assertEqual(rows[identifier]["new_supervision"], "IGNORE")
+            self.assertIsNone(rows[identifier]["annotation_site_id"])
+        self.assertEqual(rows["ambiguous"]["reasons"], ["GRAPHICAL_AMBIGUITY"])
+        self.assertEqual(result["summary"]["ignore_component_count"], 2)
+        self.assertEqual(result["patches_created"], 0)
+
+    def test_schema_rejects_missing_coordinates(self):
+        record = component("a")
+        del record["center_x"]
+        with self.assertRaises(ValueError):
+            resolve([frame("A", 0, record)], {"A": "run"})
+
+    def test_schema_rejects_nonfinite_boolean_or_text_coordinates(self):
+        for value in (float("nan"), float("inf"), -float("inf"), True, False, "0", None):
+            for coordinate in ("center_x", "center_y"):
+                with self.subTest(value=value, coordinate=coordinate):
+                    record = component("a")
+                    record[coordinate] = value
+                    with self.assertRaises(ValueError):
+                        resolve([frame("A", 0, record)], {"A": "run"})
+
+    def test_schema_rejects_unknown_or_duplicate_identifiers_and_classifications(self):
+        invalid = [([frame("A", 0, component("a"))], {}),
+                   ([frame("A", 0, component("a"), component("a"))], {"A": "run"}),
+                   ([frame("A", 0), frame("A", 0)], {"A": "run"}),
+                   ([frame("A", 0, component("a", classification="POSSIBLY_VALID"))], {"A": "run"})]
+        for frames, mapping in invalid:
+            with self.subTest(frames=frames, mapping=mapping):
+                with self.assertRaises(ValueError):
+                    resolve(frames, mapping)
+
+    def test_component_provenance_must_match_frame_if_repeated(self):
+        for key, value in (("source_id", "B"), ("frame_index", 9), ("experimental_time_s", 100.0)):
+            with self.subTest(key=key):
+                record = component("a")
+                record[key] = value
+                with self.assertRaises(ValueError):
+                    resolve([frame("A", 0, record)], {"A": "run"})
+
+    def test_all_observations_radii_and_frames_retained(self):
+        first = component("a", 0, 0)
+        second = component("b", 1, 0)
+        second["radius_graphical_px"] = 11.5
+        result = resolve([frame("A", 0), frame("A", 10, first), frame("A", 20, second)], {"A": "run"})
+        site = result["sites"][0]
+        self.assertEqual(site["observation_ids"], ["a", "b"])
+        self.assertEqual(site["radius_range_graphical_px"], [10.0, 11.5])
+        self.assertEqual(len(site["radius_by_observation"]), 2)
+        self.assertEqual(site["observed_frame_indices"], [10, 20])
+        self.assertEqual(site["status"], "OPERATIONAL_PUBLISHED_LOCATION_SITE")
+        self.assertEqual(site["number_of_observations"], 2)
+        self.assertEqual(site["frame_indices"], [10, 20])
+        self.assertEqual(site["experimental_times"], [-2.0 + 10 * 1.18, -2.0 + 20 * 1.18])
+        self.assertEqual(site["representative_x"], site["representative"]["center_x"])
+        self.assertEqual(site["representative_y"], site["representative"]["center_y"])
+        self.assertEqual(site["spatial_dispersion_px"], {
+            "diameter": site["maximum_pairwise_diameter_px"],
+            "max": site["maximum_distance_to_representative_px"],
+            "rms": site["rms_distance_to_representative_px"],
+        })
+        self.assertEqual(site["observations"], [
+            {"observation_id": "a", "frame_index": 10, "experimental_time_s": -2.0 + 10 * 1.18,
+             "center_x": 0, "center_y": 0, "radius_graphical_px": 10.0},
+            {"observation_id": "b", "frame_index": 20, "experimental_time_s": -2.0 + 20 * 1.18,
+             "center_x": 1, "center_y": 0, "radius_graphical_px": 11.5},
+        ])
+        self.assertEqual(result["summary"]["observed_frame_count"], 3)
+        self.assertEqual(result["summary"]["repeated_site_count"], 1)
+        self.assertEqual(result["summary"]["by_observed_frame"][0]["component_count"], 0)
+        self.assertEqual(sum(row["first_confident_site_count"] for row in result["summary"]["by_observed_frame"]), 1)
+
+    def test_structural_count_gate_is_only_three_nonempty_partitions(self):
+        for count in (0, 1, 2, 3, 4):
+            with self.subTest(count=count):
+                components = [component(f"a{i}", 20 * i, 0) for i in range(count)]
+                result = resolve([frame("A", 0, *components)], {"A": "run"})
+                self.assertEqual(result["summary"]["structural_gate"]["pass"], count >= 3)
+                self.assertEqual(result["summary"]["within_acquisition_stratification"]["pass"], count >= 3)
+                self.assertFalse(result["split_ids_created"])
+
+    def test_global_count_does_not_imply_within_acquisition_stratification(self):
+        result = resolve([frame("A", 0, component("a", 0, 0), component("b", 20, 0)),
+                          frame("B", 0, component("c", 0, 0))], {"A": "run1", "B": "run2"})
+        self.assertTrue(result["summary"]["structural_gate"]["pass"])
+        self.assertFalse(result["summary"]["within_acquisition_stratification"]["pass"])
+
+    def test_empty_acquisition_with_observed_frames_is_not_sufficient(self):
+        result = resolve([frame("A", 0, component("a", 0, 0), component("b", 20, 0), component("c", 40, 0)),
+                          frame("B", 0)], {"A": "run1", "B": "run2"})
+        self.assertTrue(result["summary"]["structural_gate"]["pass"])
+        self.assertFalse(result["summary"]["within_acquisition_stratification"]["pass"])
+
+
+if __name__ == "__main__":
+    unittest.main(verbosity=2)

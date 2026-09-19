@@ -1,0 +1,57 @@
+{
+  "C1": "e6090121471faa8902f68ddd045ab8b54a2e77fc",
+  "C2_scope": "EVIDENCE_ONLY",
+  "active_checksums": "95/95 PASS",
+  "data_guard": {
+    "audit": "tracked_repository_data_guard",
+    "content_bytes_read": 0,
+    "examined_entry_count": 436,
+    "status": "PASS",
+    "violations": []
+  },
+  "exact_c2_paths": [
+    "artifacts/evidence/TI3_A_RESUME/c0r1-resume/actual-preflight.json",
+    "artifacts/evidence/TI3_A_RESUME/c0r1-resume/ci-proof.json",
+    "artifacts/evidence/TI3_A_RESUME/c0r1-resume/commands-execution.json",
+    "artifacts/evidence/TI3_A_RESUME/c0r1-resume/environment-execution.json",
+    "artifacts/evidence/TI3_A_RESUME/c0r1-resume/execution-receipt.json",
+    "artifacts/evidence/TI3_A_RESUME/c0r1-resume/execution-report.md",
+    "artifacts/evidence/TI3_A_RESUME/c0r1-resume/io-audit.json",
+    "artifacts/evidence/TI3_A_RESUME/c0r1-resume/materialization-manifest.json",
+    "artifacts/evidence/TI3_A_RESUME/c0r1-resume/results.json",
+    "artifacts/evidence/TI3_A_RESUME/c0r1-resume/terminal-state.json",
+    "artifacts/evidence/TI3_A_RESUME/c0r1-resume/verification-terminal.json",
+    "artifacts/evidence/TI3_A_RESUME/c0r1-resume/post-run-hashes.sha256"
+  ],
+  "experimental_bytes": 9734526,
+  "experimental_opens": 5,
+  "final_test_bytes": 0,
+  "final_test_opens": 0,
+  "frozen_texts_byte_identical_to_C1": 45,
+  "independent_textual_audit": "PASS; metrics recalculated from JSON only, zero experimental reopens",
+  "limitations": [
+    "Counters are instrumented application records, not universal independent syscall monitoring.",
+    "No model, buffer, feature extraction or scientific kernel was rerun.",
+    "C2 SHA/publication CI belong to terminal operator return."
+  ],
+  "patches_development": 16,
+  "patches_final": 0,
+  "patches_train": 34,
+  "phase_scope": "PASS",
+  "real_support": "PASS",
+  "scientific_ml_runs": 1,
+  "scientific_retries": 0,
+  "status": "PASS_TEXTUAL_TERMINAL_VERIFICATION",
+  "text_sha256_excluding_this_file_and_hash_manifest": {
+    "artifacts/evidence/TI3_A_RESUME/c0r1-resume/actual-preflight.json": "aeb15327e107f4252916d201adb84dbe5f54bf074bf34f2cded372ae645bdaf6",
+    "artifacts/evidence/TI3_A_RESUME/c0r1-resume/ci-proof.json": "03f2b290f80e9e8e42638fef17c94ee1d386124555fa4b5540eda3360e35ce3c",
+    "artifacts/evidence/TI3_A_RESUME/c0r1-resume/commands-execution.json": "9b8e41355fde82710e2a20bdeec777ff5ddd322ed51d00ff01decb311c7b69d8",
+    "artifacts/evidence/TI3_A_RESUME/c0r1-resume/environment-execution.json": "410b1cc5606b26156abe7800478bdd35dccee5266fc3b0fde2ead35fd8e2258d",
+    "artifacts/evidence/TI3_A_RESUME/c0r1-resume/execution-receipt.json": "8d56a95c011166cd278b8f2349edaeadff98e7485f36c56fcb3aa002a1b4ae11",
+    "artifacts/evidence/TI3_A_RESUME/c0r1-resume/execution-report.md": "1220b557169bcb0883b397a49b7ca042d9ed9a00d005b2d746c681ba5d47080e",
+    "artifacts/evidence/TI3_A_RESUME/c0r1-resume/io-audit.json": "e9b1492fd6bc77be636006920505b6fa8ca4adf6e9c588964e753d99c931b977",
+    "artifacts/evidence/TI3_A_RESUME/c0r1-resume/materialization-manifest.json": "503aaebf87a8339099a2f6cf71f12095a3dd8740c9e0dcdcb31906bec74eddf0",
+    "artifacts/evidence/TI3_A_RESUME/c0r1-resume/results.json": "df314b2460481c4cab147da57b2948b37efc35f66d41fe5975764f01383864b0",
+    "artifacts/evidence/TI3_A_RESUME/c0r1-resume/terminal-state.json": "ae09428acb22989cb57bdc9aefce891d30a40db9f543f9c7309cfdaa207fa12d"
+  }
+}

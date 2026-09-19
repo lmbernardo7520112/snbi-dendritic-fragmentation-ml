@@ -1,0 +1,25 @@
+{
+  "experimental_bytes": 0,
+  "experimental_opens": 0,
+  "head": "41d523e038e844588ee7724e07b00f75bdf29fdc",
+  "metadata_planner_invocations": 1,
+  "scientific_ml_runs": 0,
+  "scope": "DOCUMENTARY_GEOMETRY_ONLY",
+  "text_sha256": {
+    "artifacts/evidence/TI3_A_RESUME/BACKGROUND_PROTOCOL.md": "0101f7a37156830b1dbf6a4d012aac94ecc3f284b6ebf7269a21185dbd9a6055",
+    "artifacts/evidence/TI3_A_RESUME/BASELINE_SPEC.md": "3fc5404b78fc563dc488847f942da8c7542b089ebfb37ee231e0df56a03afdf8",
+    "artifacts/evidence/TI3_A_RESUME/CLAIM_SCOPE.md": "b10a67ccfbd0fe2a5f0fd801c4d5d2f56c59ee4ede4854c2ed36356ced499d95",
+    "artifacts/evidence/TI3_A_RESUME/COURSE_ALIGNMENT.md": "5a397edac0b821caa04cfd41e6ae8f2eb49a2d21cdb976700aa3248b9714a20d",
+    "artifacts/evidence/TI3_A_RESUME/DATASET_SPEC.md": "9c92c29d77df52a20cc087442a309d93391fb9cbd58c68471819419c9a7d8d7d",
+    "artifacts/evidence/TI3_A_RESUME/LEAKAGE_THREAT_MODEL.md": "3b01f77b0cab5dabcde036e3f767d481b94317ebf67adb7fa57f396f09a56e87",
+    "artifacts/evidence/TI3_A_RESUME/SPLIT_PROTOCOL.md": "d07aa104ac1cafc505a99b45644b220d48fa5ff8895658f6c1fc1f71ed9f9c44",
+    "artifacts/evidence/TI3_A_RESUME/authorization.md": "da898073ad9921eb58e48a0be5b409a70226ae39e159639ce006bdf8821f655d",
+    "artifacts/evidence/TI3_TARGET_RESOLUTION/SITE_DEDUPLICATION.json": "6e85dc2446b5f672a21ef86e0095a297bf4452e2160970f22c09a2f32c5f39ad",
+    "artifacts/evidence/TI3_TARGET_RESOLUTION/WEAK_LABEL_LEDGER.json": "e94954e64cbf354ae9a9be53a216ce8f93be53876cbc1907b578d869482203bd",
+    "artifacts/metadata/ti2-pilot-manifest.json": "4f84a50e65e7541729d9a6c58e2649a872d6a92e55b305a66a0ce4e9f63a09a9",
+    "configs/registration/ti2r-frag-direct-method.json": "5a0aff2b39098d9663d58df1875bf92c8f129afa1df32108bfc153461195abfd",
+    "scripts/build_ti3_manifest.py": "e96d666963b3296766b042617ab08b1504c3c4de054806515aa0fac26991cd26",
+    "src/snbi_fragmentation/ti3_dataset.py": "c64e5045d6f8edb111544267bbc62f5b22e47d30217036d8bdb0d4940374c47f",
+    "tests/test_ti3_dataset.py": "9b1ca08332ae081077466752b90bb48236fcea1c0a08f64418d68eaca6109782"
+  }
+}

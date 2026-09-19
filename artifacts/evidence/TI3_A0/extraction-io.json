@@ -1,0 +1,103 @@
+{
+  "phase": "extraction",
+  "started_at_utc": "2026-09-19T11:54:13.424070+00:00",
+  "status": "COMPLETED",
+  "assets": [
+    {
+      "asset_id": "ESM3:0",
+      "path": "data/derived/ti2-pilot/ESM3-0000.raw",
+      "open_attempts": 1,
+      "open_count": 1,
+      "content_bytes_read": 1966080,
+      "status": "AUTHENTICATED",
+      "sha256": "484389654c28d85969dc60830ea6be434b677d5fd9897434086f9f8ce9bb6ca8"
+    },
+    {
+      "asset_id": "ESM3:73",
+      "path": "data/derived/ti2-pilot/ESM3-0073.raw",
+      "open_attempts": 1,
+      "open_count": 1,
+      "content_bytes_read": 1966080,
+      "status": "AUTHENTICATED",
+      "sha256": "61e793620b24d5375237da7c19c4e96af5fa0605fa789c23bfba9c1466426365"
+    },
+    {
+      "asset_id": "ESM3:146",
+      "path": "data/derived/ti2-pilot/ESM3-0146.raw",
+      "open_attempts": 1,
+      "open_count": 1,
+      "content_bytes_read": 1966080,
+      "status": "AUTHENTICATED",
+      "sha256": "3d38b23a594b8d23c98fdc95351d3d435c92d6df6eb09ea3d8ac97f63baf50ee"
+    },
+    {
+      "asset_id": "ESM3:219",
+      "path": "data/derived/ti2-pilot/ESM3-0219.raw",
+      "open_attempts": 1,
+      "open_count": 1,
+      "content_bytes_read": 1966080,
+      "status": "AUTHENTICATED",
+      "sha256": "1d4e1e68456b3e21c06384655461ed8094b4259a853580ea0b1fa93741069c15"
+    },
+    {
+      "asset_id": "ESM3:293",
+      "path": "data/derived/ti2-pilot/ESM3-0293.raw",
+      "open_attempts": 1,
+      "open_count": 1,
+      "content_bytes_read": 1966080,
+      "status": "AUTHENTICATED",
+      "sha256": "79e8666e527787c1baf1957152dbe21532bd36c26bf15475aa1bac7d9987df15"
+    },
+    {
+      "asset_id": "ESM6:0",
+      "path": "data/derived/ti2-pilot/ESM6-0000.raw",
+      "open_attempts": 1,
+      "open_count": 1,
+      "content_bytes_read": 1943040,
+      "status": "AUTHENTICATED",
+      "sha256": "df7448b2d94b6e86e19daeb2349705e4bb204c3464294ecf2fcc17c607ec8813"
+    },
+    {
+      "asset_id": "ESM6:98",
+      "path": "data/derived/ti2-pilot/ESM6-0098.raw",
+      "open_attempts": 1,
+      "open_count": 1,
+      "content_bytes_read": 1943040,
+      "status": "AUTHENTICATED",
+      "sha256": "76dea6e55b0f0434ee48d2a114be5b6d41acebedcb8d1bb3d5ee0bfc4fa4a311"
+    },
+    {
+      "asset_id": "ESM6:197",
+      "path": "data/derived/ti2-pilot/ESM6-0197.raw",
+      "open_attempts": 1,
+      "open_count": 1,
+      "content_bytes_read": 1943040,
+      "status": "AUTHENTICATED",
+      "sha256": "eaaf9baa016cb829e3f4bf88101a32cd4d2a79fba78450294a2c904e2f45d2e3"
+    },
+    {
+      "asset_id": "ESM6:295",
+      "path": "data/derived/ti2-pilot/ESM6-0295.raw",
+      "open_attempts": 1,
+      "open_count": 1,
+      "content_bytes_read": 1943040,
+      "status": "AUTHENTICATED",
+      "sha256": "fefdd388948f55ee511f012589427ae9a191b54dbe6695eaf0d08fd763acd24b"
+    },
+    {
+      "asset_id": "ESM6:394",
+      "path": "data/derived/ti2-pilot/ESM6-0394.raw",
+      "open_attempts": 1,
+      "open_count": 1,
+      "content_bytes_read": 1943040,
+      "status": "AUTHENTICATED",
+      "sha256": "15ed13353647307ddeaba428e1bc5974ed7c02572a47ccae0b3d50a78dc140ad"
+    }
+  ],
+  "open_attempts": 10,
+  "open_count": 10,
+  "content_bytes_read": 19545600,
+  "max_source_opens_per_asset_in_this_phase": 1,
+  "new_frames": 0,
+  "finished_at_utc": "2026-09-19T11:54:13.853436+00:00"
+}

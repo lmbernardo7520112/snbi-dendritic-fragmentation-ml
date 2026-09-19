@@ -1,0 +1,23 @@
+{
+  "schema": "TI3-A-RESUME-ONE-SHOT-1",
+  "state": "CLOSED_BLOCKED_BEFORE_C1",
+  "closure_reason": "BLOCKED_CI_SCOPE_CONTRACT",
+  "current_authorized_activity": "NONE_AWAITING_AUTHOR_DECISION",
+  "scientific_execution_authorized": false,
+  "repository": "lmbernardo7520112/snbi-dendritic-fragmentation-ml",
+  "branch": "feat/ti3-canonical-dataset-baseline",
+  "checkpoint": "41d523e038e844588ee7724e07b00f75bdf29fdc",
+  "scientific_invocation_limit": 1,
+  "input_sources": ["ESM1", "ESM4"],
+  "final_test_execution_authorized": false,
+  "solutal_authorized": false,
+  "ti3_b_authorized": false,
+  "merge_authorized": false,
+  "receipt_path": "artifacts/evidence/TI3_A_RESUME/execution-receipt.json",
+  "terminal_path": "artifacts/evidence/TI3_A_RESUME/results.json",
+  "ci_jobs_required": [
+    "deterministic-contracts",
+    "scientific-synthetic-contracts",
+    "ti3-synthetic-contracts"
+  ]
+}

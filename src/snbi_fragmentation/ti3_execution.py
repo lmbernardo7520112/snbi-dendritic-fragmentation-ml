@@ -1,0 +1,294 @@
+"""Receipt-bound TI3 native reads with no decoding, array processing or ML.
+
+The caller verifies Git/CI custody before arming. This module binds that
+supplied custody to exact manifest bytes and HEAD, consumes one receipt,
+and admits only the five fixed TRAIN/DEVELOPMENT native buffers. It never
+interprets a historical authority or a green test as execution permission.
+"""
+
+import copy
+from datetime import datetime, timezone
+import hashlib
+import json
+import os
+import stat
+
+from snbi_fragmentation.ti3_dataset import validate_manifest
+
+
+RECEIPT_PATH = "artifacts/evidence/TI3_A_RESUME/c0r1-resume/execution-receipt.json"
+TERMINAL_PATH = "artifacts/evidence/TI3_A_RESUME/c0r1-resume/results.json"
+ALLOWED_FRAMES = {
+    ("ESM1", 73): "TRAIN", ("ESM1", 146): "TRAIN", ("ESM4", 98): "TRAIN",
+    ("ESM1", 219): "DEVELOPMENT", ("ESM4", 197): "DEVELOPMENT",
+}
+DIMENSIONS = {"ESM1": (1278, 1018), "ESM4": (1278, 1012)}
+AUTHORITY_FIELDS = {
+    "state", "head_sha", "manifest_sha256", "source_inventory_sha256",
+    "scientific_invocation_limit",
+}
+_ARM_TOKEN = object()
+
+
+class ExecutionContractError(ValueError):
+    """A safe, path-free code describing an execution boundary violation."""
+
+
+def _require(condition, code):
+    if not condition:
+        raise ExecutionContractError(code)
+
+
+def _digest_string(value, length):
+    return type(value) is str and len(value) == length and all(c in "0123456789abcdef" for c in value)
+
+
+def canonical_bytes(value):
+    return json.dumps(value, sort_keys=True, separators=(",", ":"),
+                      ensure_ascii=True, allow_nan=False).encode("ascii")
+
+
+def source_inventory_sha256(manifest):
+    """Hash all seven textual inventory records, including sealed metadata."""
+    return hashlib.sha256(canonical_bytes(manifest["source_inventory"])).hexdigest()
+
+
+def validate_admission(record):
+    """Deny forbidden splits/sources/frames before examining any path or I/O.
+
+    This pure function is an admission check, never an independent authority.
+    Native size, layout and known hash remain mandatory; tests use full-size
+    synthetic bytes under these same constraints.
+    """
+    _require(isinstance(record, dict), "SOURCE_METADATA_REQUIRED")
+    split = record.get("split")
+    _require(split in ("TRAIN", "DEVELOPMENT"), "FINAL_OR_UNKNOWN_SPLIT_DENIED")
+    source = record.get("source_id")
+    _require(type(source) is str and source in DIMENSIONS, "NONSTRUCTURAL_SOURCE_DENIED")
+    frame = record.get("frame_index")
+    _require(type(frame) is int and (source, frame) in ALLOWED_FRAMES, "FRAME_NOT_AUTHORIZED")
+    _require(ALLOWED_FRAMES[(source, frame)] == split, "FRAME_SPLIT_MISMATCH")
+    _require(record.get("path") == f"data/derived/ti2-pilot/{source}-{frame:04d}.raw",
+             "NATIVE_PATH_MISMATCH")
+    width, height = DIMENSIONS[source]
+    _require(type(record.get("width")) is int and type(record.get("height")) is int
+             and (record["width"], record["height"]) == (width, height), "NATIVE_DIMENSIONS_MISMATCH")
+    _require(type(record.get("frame_bytes")) is int
+             and record["frame_bytes"] == width * height * 3 // 2, "NATIVE_BYTE_COUNT_MISMATCH")
+    _require(_digest_string(record.get("image_sha256"), 64), "NATIVE_HASH_REQUIRED")
+    _require(record.get("pixel_format") == "yuv420p" and type(record.get("bit_depth")) is int
+             and record["bit_depth"] == 8 and record.get("plane") == "Y", "NATIVE_LAYOUT_MISMATCH")
+    _require(record.get("y_plane") == {
+        "name": "Y", "offset": 0, "bytes": width * height, "width": width, "height": height,
+    }, "Y_PLANE_METADATA_MISMATCH")
+    return source, frame
+
+
+def _parent_fd(root_fd, relative_path):
+    parts = relative_path.split("/")
+    _require(all(part and part not in (".", "..") for part in parts)
+             and not relative_path.startswith("/"), "RELATIVE_PATH_REQUIRED")
+    current = os.dup(root_fd)
+    try:
+        for part in parts[:-1]:
+            next_fd = os.open(part, os.O_RDONLY | os.O_DIRECTORY | os.O_NOFOLLOW | os.O_CLOEXEC,
+                              dir_fd=current)
+            os.close(current)
+            current = next_fd
+        return current, parts[-1]
+    except BaseException:
+        os.close(current)
+        raise
+
+
+def _entry_exists(parent_fd, name):
+    try:
+        os.stat(name, dir_fd=parent_fd, follow_symlinks=False)
+        return True
+    except FileNotFoundError:
+        return False
+
+
+def arm_execution(repository_root, manifest_bytes, authority, current_head,
+                  receipt_relative_path=RECEIPT_PATH, terminal_relative_path=TERMINAL_PATH):
+    """Consume one exclusive receipt and return an admitted reader.
+
+    The five-field custody is supplied by the caller only after real Git/CI
+    verification. It requires state ARMED_ONCE, exact C1 HEAD,
+    SHA-256 of the original manifest bytes and of its full textual inventory,
+    and integer scientific_invocation_limit=1. No source is probed here.
+    """
+    _require(type(manifest_bytes) is bytes, "EXACT_MANIFEST_BYTES_REQUIRED")
+    _require(type(authority) is dict and set(authority) == AUTHORITY_FIELDS, "CUSTODY_SCHEMA_MISMATCH")
+    _require(authority.get("state") == "ARMED_ONCE", "CUSTODY_NOT_ARMED_ONCE")
+    _require(type(authority.get("scientific_invocation_limit")) is int
+             and authority["scientific_invocation_limit"] == 1, "INVOCATION_LIMIT_MISMATCH")
+    _require(_digest_string(current_head, 40) and authority.get("head_sha") == current_head,
+             "C1_HEAD_MISMATCH")
+    manifest_hash = hashlib.sha256(manifest_bytes).hexdigest()
+    _require(authority.get("manifest_sha256") == manifest_hash, "MANIFEST_HASH_MISMATCH")
+    try:
+        manifest = json.loads(manifest_bytes)
+        validate_manifest(manifest)
+    except (ValueError, TypeError, KeyError, AttributeError):
+        raise ExecutionContractError("MANIFEST_CONTRACT_FAILED") from None
+    _require(authority.get("source_inventory_sha256") == source_inventory_sha256(manifest),
+             "SOURCE_INVENTORY_HASH_MISMATCH")
+    inventory = copy.deepcopy(manifest["source_inventory"])
+    allowed = {}
+    for record in inventory:
+        if record["split"] == "FINAL_TEST":
+            continue
+        key = validate_admission(record)
+        _require(key not in allowed, "DUPLICATE_ADMITTED_SOURCE")
+        allowed[key] = record
+    _require(set(allowed) == set(ALLOWED_FRAMES), "INCOMPLETE_ADMITTED_SOURCE_SET")
+    _require(receipt_relative_path == RECEIPT_PATH and terminal_relative_path == TERMINAL_PATH,
+             "EXECUTION_NAMESPACE_MISMATCH")
+    try:
+        repository_root = os.path.abspath(os.fspath(repository_root))
+    except TypeError:
+        raise ExecutionContractError("EXPLICIT_REPOSITORY_REQUIRED") from None
+    _require(type(repository_root) is str, "EXPLICIT_REPOSITORY_REQUIRED")
+    root_fd = parent_fd = receipt_fd = None
+    try:
+        root_fd = os.open(repository_root, os.O_RDONLY | os.O_DIRECTORY | os.O_NOFOLLOW | os.O_CLOEXEC)
+        parent_fd, receipt_name = _parent_fd(root_fd, RECEIPT_PATH)
+        terminal_name = TERMINAL_PATH.rsplit("/", 1)[1]
+        _require(not _entry_exists(parent_fd, terminal_name), "TERMINAL_ALREADY_EXISTS")
+        _require(not _entry_exists(parent_fd, receipt_name), "RECEIPT_ALREADY_EXISTS")
+        receipt = {
+            "schema": "TI3-EXECUTION-RECEIPT-1", "state": "CONSUMED_BEFORE_NATIVE_BYTES",
+            "timestamp_utc": datetime.now(timezone.utc).isoformat(),
+            "head_sha": current_head, "manifest_sha256": manifest_hash,
+            "source_inventory_sha256": authority["source_inventory_sha256"],
+            "authority": copy.deepcopy(authority), "scientific_invocation": 1,
+            "experimental_opens_at_receipt": 0, "experimental_bytes_at_receipt": 0,
+            "allowed_source_frames": [[source, frame] for source, frame in sorted(allowed)],
+        }
+        payload = canonical_bytes(receipt) + b"\n"
+        receipt_fd = os.open(receipt_name, os.O_WRONLY | os.O_CREAT | os.O_EXCL | os.O_NOFOLLOW
+                             | os.O_CLOEXEC, 0o600, dir_fd=parent_fd)
+        view = memoryview(payload)
+        while view:
+            written = os.write(receipt_fd, view)
+            _require(written > 0, "RECEIPT_WRITE_INCOMPLETE")
+            view = view[written:]
+        os.fsync(receipt_fd)
+        os.close(receipt_fd)
+        receipt_fd = None
+        os.fsync(parent_fd)
+        reader = NativeReader(_ARM_TOKEN, root_fd, inventory, allowed, receipt)
+        root_fd = None
+        return reader
+    except ExecutionContractError:
+        raise
+    except OSError:
+        raise ExecutionContractError("RECEIPT_OR_REPOSITORY_IO_FAILED") from None
+    finally:
+        for fd in (receipt_fd, parent_fd, root_fd):
+            if fd is not None:
+                os.close(fd)
+
+
+class NativeReader:
+    """Read each admitted full native buffer at most once, hashing that read."""
+
+    def __init__(self, token, root_fd, inventory, allowed, receipt):
+        _require(token is _ARM_TOKEN, "EXCLUSIVE_RECEIPT_REQUIRED")
+        self._root_fd = root_fd
+        self._allowed = copy.deepcopy(allowed)
+        self._receipt = copy.deepcopy(receipt)
+        self._failed = False
+        self._closed = False
+        self._attempted = set()
+        self._entries = {
+            (record["source_id"], record["frame_index"]): {
+                "source_id": record["source_id"], "frame_index": record["frame_index"],
+                "split": record["split"], "expected_bytes": record["frame_bytes"],
+                "expected_sha256": record["image_sha256"], "status": "NOT_OPENED",
+                "open_attempts": 0, "opens": 0, "bytes_read": 0,
+                "bytes_read_sha256": None, "verified": False,
+            } for record in inventory
+        }
+
+    def read_native(self, record):
+        """Return complete authenticated YUV bytes; never retry a failed read."""
+        # Source/split/frame denial happens before any path stat or open.
+        key = validate_admission(record)
+        _require(not self._closed and not self._failed, "READER_CLOSED_OR_FAILED")
+        _require(key not in self._attempted, "SOURCE_ALREADY_ATTEMPTED")
+        expected = self._allowed.get(key)
+        _require(expected is not None and record == expected, "FROZEN_SOURCE_METADATA_MISMATCH")
+        self._attempted.add(key)
+        entry = self._entries[key]
+        entry["status"] = "ATTEMPTED"
+        parent_fd = source_fd = None
+        digest = hashlib.sha256()
+        chunks = []
+        try:
+            # Terminal metadata is checked again, without opening it.
+            terminal_parent, terminal_name = _parent_fd(self._root_fd, TERMINAL_PATH)
+            try:
+                _require(not _entry_exists(terminal_parent, terminal_name), "TERMINAL_ALREADY_EXISTS")
+            finally:
+                os.close(terminal_parent)
+            parent_fd, name = _parent_fd(self._root_fd, expected["path"])
+            entry["open_attempts"] += 1
+            source_fd = os.open(name, os.O_RDONLY | os.O_NOFOLLOW | os.O_CLOEXEC | os.O_NONBLOCK,
+                                dir_fd=parent_fd)
+            entry["opens"] += 1
+            _require(stat.S_ISREG(os.fstat(source_fd).st_mode), "NATIVE_SOURCE_NOT_REGULAR")
+            limit = expected["frame_bytes"]
+            while entry["bytes_read"] <= limit:
+                chunk = os.read(source_fd, min(1024 * 1024, limit + 1 - entry["bytes_read"]))
+                if not chunk:
+                    break
+                entry["bytes_read"] += len(chunk)
+                digest.update(chunk)
+                chunks.append(chunk)
+            _require(entry["bytes_read"] == limit, "NATIVE_BYTE_COUNT_MISMATCH")
+            _require(digest.hexdigest() == expected["image_sha256"], "NATIVE_HASH_MISMATCH")
+            entry["verified"] = True
+            entry["status"] = "READ_ONCE_VERIFIED"
+            return b"".join(chunks)
+        except ExecutionContractError as error:
+            self._failed = True
+            entry["status"] = "FAILED"
+            entry["error_code"] = str(error)
+            raise
+        except OSError:
+            self._failed = True
+            entry["status"] = "FAILED"
+            entry["error_code"] = "NATIVE_IO_FAILED"
+            raise ExecutionContractError("NATIVE_IO_FAILED") from None
+        finally:
+            if entry["opens"]:
+                entry["bytes_read_sha256"] = digest.hexdigest()
+            for fd in (source_fd, parent_fd):
+                if fd is not None:
+                    os.close(fd)
+
+    def report(self):
+        """Return factual counters, including partial reads and sealed records."""
+        entries = [copy.deepcopy(self._entries[key]) for key in sorted(self._entries)]
+        return {
+            "schema": "TI3-NATIVE-IO-AUDIT-1", "receipt_invocations": 1,
+            "source_open_attempts": sum(row["open_attempts"] for row in entries),
+            "experimental_opens": sum(row["opens"] for row in entries),
+            "experimental_bytes": sum(row["bytes_read"] for row in entries),
+            "final_test_opens": sum(row["opens"] for row in entries if row["split"] == "FINAL_TEST"),
+            "final_test_bytes": sum(row["bytes_read"] for row in entries if row["split"] == "FINAL_TEST"),
+            "failed": self._failed, "closed": self._closed, "entries": entries,
+        }
+
+    def close(self):
+        if not self._closed:
+            os.close(self._root_fd)
+            self._closed = True
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, exc_type, exc_value, traceback):
+        self.close()

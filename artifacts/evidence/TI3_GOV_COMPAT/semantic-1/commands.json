@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "boundary": "TI3_GOV_COMPAT_SEMANTIC_1",
+  "inventory_limitations": [
+    "Registro delimitado de comandos, não monitoramento universal de syscalls.",
+    "Leituras iniciais e revisões delegadas agrupadas abaixo; comandos Git posteriores ao checkpoint pertencem ao retorno e histórico."
+  ],
+  "initial_read_only": [
+    "Leitura integral do anexo autoral indicado e instruções vigentes.",
+    "Verificação HEAD/branch/index/worktree, 50 arquivos locais e snapshot histórico: PASS.",
+    "Leituras textuais dos checkers, requisitos, workflows e imports dos 15 ativos."
+  ],
+  "commands": [
+    {
+      "boundary": "sandbox",
+      "command": "/usr/bin/python3 -B - <<'PY'\nimport hashlib,json,os,subprocess\nfrom pathlib import Path\nroot=Path.cwd(); base=root/'artifacts/evidence/TI3_GOV_COMPAT/semantic-1'\nbase.mkdir(exist_ok=False)\nann=Path('<operator_authorization_attachment>')\nassert not ann.is_symlink()\n(base/'authorization.md').write_bytes(ann.read_bytes())\nold=root/'configs/governance/pre-ti3-code-scope.json'; raw=old.read_bytes()\nassert hashlib.sha256(raw).hexdigest()=='3c63b51ff86aeda79244d09e5bc7f5196be01f8aa8672ab3dc2f8fe6d90f9971'\nsnap=root/'artifacts/evidence/TI3_GOV_COMPAT/pre-ti3-code-scope.blocked-snapshot.json'\nwith snap.open('xb') as f:f.write(raw)\na0={'scripts/extract_ti3_a0_annotations.py','scripts/inspect_ti3_a0_annotations.py','src/snbi_fragmentation/ti3_a0_annotations.py','tests/test_ti3_a0_annotations.py'}\nhead='41d523e038e844588ee7724e07b00f75bdf29fdc'\nout=subprocess.check_output(['git','ls-tree','-r','-z',head,'--','src','scripts','tests']).decode()\ndomains={'LEGACY_TI2':[],'TI3_A0_FROZEN':[],'TI3_ACTIVE':[]}\nfor rec in out.split('\\0'):\n if not rec:continue\n meta,path=rec.split('\\t');mode,typ,blob=meta.split()\n if not path.endswith('.py'):continue\n domain='TI3_A0_FROZEN' if path in a0 else 'LEGACY_TI2'\n row=dict(path=path,git_mode=mode,blob_sha=blob,classification=domain)\n if path in a0:row.update(origin_phase='TI3_A0',mutable=False)\n domains[domain].append(row)\nactive=['scripts/build_ti3_manifest.py','scripts/check_ti3_ml_environment.py','scripts/run_ti3_baseline.py','src/snbi_fragmentation/ti3_baseline.py','src/snbi_fragmentation/ti3_dataset.py','src/snbi_fragmentation/ti3_execution.py','src/snbi_fragmentation/ti3_support.py','tests/test_ti3_baseline.py','tests/test_ti3_dataset.py','tests/test_ti3_execution.py','tests/test_ti3_support.py','scripts/check_phase_scope.py','scripts/check_ti3_scope.py','tests/test_phase_scope.py','tests/test_ti3_scope.py']\nfor path in sorted(active):\n p=root/path;assert not p.is_symlink();b=p.read_bytes()\n domains['TI3_ACTIVE'].append(dict(path=path,git_mode='100644',blob_sha=hashlib.sha1(f'blob {len(b)}\\0'.encode()+b).hexdigest(),classification='TI3_ACTIVE',state='PLANNED'))\nmanifest=dict(schema_version=1,baseline_sha=head,domains=domains)\np=root/'configs/governance/phase-scope-v1.json'\nwith p.open('x') as f:json.dump(manifest,f,indent=2,sort_keys=True);f.write('\\n')\nreport=dict(status='PASS_INITIAL_CUSTODY',head=head,tracked_worktree='CLEAN',index='CLEAN',previous_local_files_verified=50,experimental_opens=0,experimental_bytes=0,chronological_snapshot=dict(path=str(snap.relative_to(root)),sha256=hashlib.sha256(raw).hexdigest(),bytes=len(raw),entries=79,supersession_reason='LEGACY_PRE_TI3 denoted tracked chronology, not TI2 scientific domain'),domain_counts={k:len(v) for k,v in domains.items()},historical_checksum_snapshot=dict(sha256='e7d30ca626088e1e3c58c8702b96e9afc388ee75c48011d885393230dc7d245d',entries=95,bytes=10212))\n(base/'preflight.json').write_text(json.dumps(report,indent=2,sort_keys=True)+'\\n')\nprint(json.dumps(report,sort_keys=True))\nPY",
+      "exit_code": 0
+    },
+    {
+      "command": "PYTHONPATH=src:tests:. /usr/bin/python3 -B - <<'PY'\nimport copy,hashlib,json\nfrom pathlib import Path\nfrom unittest.mock import patch\nfrom scripts import check_phase_scope as scope\np=Path(scope.MANIFEST_PATH); manifest=json.loads(p.read_text())\nfor row in manifest['domains']['TI3_ACTIVE']:\n b=Path(row['path']).read_bytes(); row['blob_sha']=scope.git_blob_sha(b)\np.write_text(json.dumps(manifest,indent=2,sort_keys=True)+'\\n')\nbase=Path('artifacts/evidence/TI3_GOV_COMPAT/semantic-1')\nactual=scope.audit(); (base/'local-current-scope.json').write_text(json.dumps(actual,indent=2,sort_keys=True)+'\\n')\nprint(json.dumps({'gate':'current_index','status':actual['status'],'partition':actual['partition'],'violations':actual['violations']}))\nif actual['status']!='PASS':raise SystemExit(1)\ngov={'scripts/check_phase_scope.py','scripts/check_ti3_scope.py','tests/test_phase_scope.py','tests/test_ti3_scope.py'}\nprospective=copy.deepcopy(manifest);inventory=scope.read_index_inventory(Path.cwd())\nfor row in prospective['domains']['TI3_ACTIVE']:\n if row['path'] in gov:\n  row['state']='TRACKED'; inventory.append({k:row[k] for k in ('path','git_mode','blob_sha')}|{'stage':'0'})\nreader=scope.read_regular\nwith patch.object(scope,'read_index_inventory',return_value=inventory),patch.object(scope,'read_regular',side_effect=lambda root,path: (json.dumps(prospective).encode(),'100644') if path==scope.MANIFEST_PATH else reader(root,path)):\n report=scope.audit()\nreport['inventory_boundary']='EXPLICIT_PROSPECTIVE_C0_CODE_IN_MEMORY_NOT_GIT_STAGING'\n(base/'local-prospective-c0-scope.json').write_text(json.dumps(report,indent=2,sort_keys=True)+'\\n')\nprint(json.dumps({'gate':'prospective_c0','status':report['status'],'partition':report['partition'],'violations':report['violations']}))\nraise SystemExit(0 if report['status']=='PASS' else 1)\nPY",
+      "boundary": "sandbox",
+      "exit_code": 0
+    },
+    {
+      "command": "TMPDIR=.bootstrap-test-tmp/ti3-preflight-recovery PYTHONPATH=src:tests:. .venv/bin/python -B - <<'PY'\nfrom pathlib import Path\nimport contextlib,io,json\ntext=Path('.github/workflows/ti3-synthetic.yml').read_text()\nblocks=text.split(\"          python -B - <<'PY'\\n\")[1:]\nassert len(blocks)==2\nresult=[]\nfor n,block in enumerate(blocks):\n code='\\n'.join(line[10:] for line in block.split('\\n          PY',1)[0].splitlines())+'\\n'\n capture=io.StringIO()\n with contextlib.redirect_stdout(capture),contextlib.redirect_stderr(capture):\n  try:exec(compile(code,'ti3-synthetic-inline-'+str(n),'exec'),{})\n  except SystemExit as exc:\n   if exc.code not in (None,0):raise\n result.append({'block':n,'exit_code':0,'output':capture.getvalue()})\nPath('artifacts/evidence/TI3_GOV_COMPAT/semantic-1/ci-profile-local.json').write_text(json.dumps(result,indent=2)+'\\n')\nprint(json.dumps({'status':'PASS','inline_blocks':2,'profile':'C0','tests':59,'skips':0,'experimental_opens':0}))\nPY",
+      "boundary": "sandbox",
+      "exit_code": 0
+    },
+    {
+      "command": "/usr/bin/python3 -B - <<'PY'\nimport hashlib,json\nfrom pathlib import Path\np=Path('artifacts/evidence/TI2/checksums.sha256'); raw=p.read_text(); lines=raw.splitlines(keepends=True);changes=[]\nfor i,line in enumerate(lines):\n old,path=line.rstrip('\\n').split('  ',1)\n if path!='.github/workflows/ci.yml':continue\n new=hashlib.sha256(Path(path).read_bytes()).hexdigest()\n assert old!=new\n changes.append(dict(path=path,old_hash=old,new_hash=new));lines[i]=new+'  '+path+'\\n'\nassert len(changes)==1\np.write_text(''.join(lines))\nbase=Path('artifacts/evidence/TI3_GOV_COMPAT/semantic-1')\n(base/'active-checksum-changes.json').write_text(json.dumps(changes,indent=2)+'\\n')\nsnapshot=Path('artifacts/evidence/TI2/checksums-pre-ti3-41d523e.sha256').read_bytes()\nassert hashlib.sha256(snapshot).hexdigest()=='e7d30ca626088e1e3c58c8702b96e9afc388ee75c48011d885393230dc7d245d'\nassert snapshot==raw.encode()\nfor line in p.read_text().splitlines():\n expected,path=line.split('  ',1); assert hashlib.sha256(Path(path).read_bytes()).hexdigest()==expected,path\nprint(json.dumps({'historical_snapshot':'PASS','entries':95,'active_checksums':'PASS','changes':changes}))\nPY",
+      "boundary": "sandbox",
+      "exit_code": 1
+    },
+    {
+      "command": "/usr/bin/python3 -B - <<'PY'\nimport hashlib,json\nfrom pathlib import Path\np=Path('artifacts/evidence/TI2/checksums.sha256'); raw=p.read_bytes(); lines=raw.decode().splitlines(keepends=True);changes=[]\nsnapshot=Path('artifacts/evidence/TI2/checksums-pre-ti3-41d523e.sha256').read_bytes()\nassert hashlib.sha256(snapshot).hexdigest()=='e7d30ca626088e1e3c58c8702b96e9afc388ee75c48011d885393230dc7d245d'\nassert snapshot==raw\ncount=0\nfor i,line in enumerate(lines):\n if not line.strip() or line.startswith('#'):continue\n old,path=line.rstrip('\\n').split('  ',1);count+=1\n new=hashlib.sha256(Path(path).read_bytes()).hexdigest()\n if path=='.github/workflows/ci.yml':\n  assert old!=new\n  changes.append(dict(path=path,old_hash=old,new_hash=new));lines[i]=new+'  '+path+'\\n'\n else:assert old==new,path\nassert len(changes)==1 and count==95\np.write_text(''.join(lines))\nbase=Path('artifacts/evidence/TI3_GOV_COMPAT/semantic-1')\n(base/'active-checksum-changes.json').write_text(json.dumps(changes,indent=2)+'\\n')\nprint(json.dumps({'historical_snapshot':'PASS','entries':95,'active_checksums':'PASS','changes':changes}))\nPY",
+      "boundary": "sandbox",
+      "exit_code": 0
+    }
+  ],
+  "additional_completed": [
+    {
+      "command": "TMPDIR=.bootstrap-test-tmp/ti3-preflight-recovery PYTHONPATH=src:tests:. /usr/bin/python3 -B -m unittest test_ti3_scope -v",
+      "exit_code": 0,
+      "tests": 15,
+      "skips": 0
+    },
+    {
+      "command": "TMPDIR=.bootstrap-test-tmp/ti3-preflight-recovery PYTHONPATH=src:tests:. /usr/bin/python3 -S -B - <<'PY'\nimport json,subprocess,unittest\npaths=subprocess.check_output(['git','ls-tree','-r','--name-only','41d523e038e844588ee7724e07b00f75bdf29fdc','--','tests']).decode().splitlines()\nnames=[p[6:-3].replace('/','.') for p in paths if p.startswith('tests/test_') and p.endswith('.py')]\nsuite=unittest.defaultTestLoader.loadTestsFromNames(names)\nresult=unittest.TextTestRunner(verbosity=1).run(suite)\nprint(json.dumps(dict(suite='legacy_baseline_tracked_tests',modules=names,tests=result.testsRun,skips=len(result.skipped),failures=len(result.failures),errors=len(result.errors),successful=result.wasSuccessful())))\nraise SystemExit(0 if result.wasSuccessful() else 1)\nPY",
+      "exit_code": 0,
+      "tests": 444,
+      "skips": 94
+    },
+    {
+      "command": "git remote -v",
+      "exit_code": 0
+    },
+    {
+      "command": "git ls-remote --heads origin refs/heads/main refs/heads/feat/ti3-canonical-dataset-baseline",
+      "boundary": "sandbox",
+      "exit_code": 128,
+      "error": "Could not resolve host: github.com"
+    },
+    {
+      "command": "git ls-remote --heads origin refs/heads/main refs/heads/feat/ti3-canonical-dataset-baseline",
+      "boundary": "targeted_approved_git_read",
+      "exit_code": 0
+    }
+  ],
+  "delegated": [
+    {
+      "agent": "semantic_phase_composer",
+      "scope": "two governance Python files, static review and two CI files",
+      "test_command": "PYTHONPATH=src:tests:. /usr/bin/python3 -B -m unittest test_phase_scope -v",
+      "exit_code": 0,
+      "tests": 26,
+      "skips": 0,
+      "read_operations": "cat/rg; one initial cat exit1 included nonexistent check_data_artifacts.py; correct data guard read subsequently",
+      "scientific_invocations": 0
+    },
+    {
+      "agent": "ti3_resume_operational_audit",
+      "scope": "ten read-only cat/sed/rg commands on authorized texts",
+      "exit_codes": "all 0",
+      "changes": 0,
+      "experimental_opens": 0
+    }
+  ],
+  "experimental_opens": 0,
+  "experimental_bytes": 0,
+  "scientific_ml_runs": 0
+}

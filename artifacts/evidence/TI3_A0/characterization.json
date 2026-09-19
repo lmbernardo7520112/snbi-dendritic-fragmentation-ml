@@ -1,0 +1,5505 @@
+{
+  "phase": "CHARACTERIZATION_DEVELOPMENT_ONLY",
+  "frames": [
+    {
+      "asset_id": "ESM3:0",
+      "width": 1280,
+      "height": 1024,
+      "experimental_time_s": -25.96,
+      "native_chroma_counts": {
+        "8": 49,
+        "16": 0,
+        "20": 0,
+        "32": 0,
+        "64": 0
+      },
+      "dominant_colored_uv": [],
+      "components_at_chroma20": [],
+      "diagnostic_path": ".bootstrap-test-tmp/ti3-a0-20260919-inspection/ESM3-0.png",
+      "diagnostic_sha256": "995be4f9982520700fe4bd1f5f76b7c5d5db6b92a40fab6aa6eacb4d1bdfc797"
+    },
+    {
+      "asset_id": "ESM3:73",
+      "width": 1280,
+      "height": 1024,
+      "experimental_time_s": 60.18,
+      "native_chroma_counts": {
+        "8": 22629,
+        "16": 20751,
+        "20": 20367,
+        "32": 19180,
+        "64": 16485
+      },
+      "dominant_colored_uv": [
+        {
+          "u": 90,
+          "v": 240,
+          "count": 190
+        },
+        {
+          "u": 89,
+          "v": 240,
+          "count": 184
+        },
+        {
+          "u": 91,
+          "v": 240,
+          "count": 183
+        },
+        {
+          "u": 90,
+          "v": 241,
+          "count": 178
+        },
+        {
+          "u": 91,
+          "v": 239,
+          "count": 175
+        },
+        {
+          "u": 89,
+          "v": 241,
+          "count": 174
+        },
+        {
+          "u": 91,
+          "v": 241,
+          "count": 173
+        },
+        {
+          "u": 92,
+          "v": 239,
+          "count": 164
+        },
+        {
+          "u": 89,
+          "v": 239,
+          "count": 163
+        },
+        {
+          "u": 90,
+          "v": 239,
+          "count": 161
+        }
+      ],
+      "components_at_chroma20": [
+        {
+          "component_id": 1,
+          "pixels": 120,
+          "bbox_xyxy": [
+            100,
+            32,
+            114,
+            46
+          ]
+        },
+        {
+          "component_id": 2,
+          "pixels": 328,
+          "bbox_xyxy": [
+            98,
+            34,
+            126,
+            60
+          ]
+        },
+        {
+          "component_id": 3,
+          "pixels": 432,
+          "bbox_xyxy": [
+            240,
+            36,
+            266,
+            62
+          ]
+        },
+        {
+          "component_id": 4,
+          "pixels": 1436,
+          "bbox_xyxy": [
+            448,
+            50,
+            514,
+            116
+          ]
+        },
+        {
+          "component_id": 5,
+          "pixels": 1608,
+          "bbox_xyxy": [
+            756,
+            50,
+            810,
+            114
+          ]
+        },
+        {
+          "component_id": 6,
+          "pixels": 492,
+          "bbox_xyxy": [
+            740,
+            86,
+            768,
+            114
+          ]
+        },
+        {
+          "component_id": 7,
+          "pixels": 492,
+          "bbox_xyxy": [
+            372,
+            88,
+            400,
+            116
+          ]
+        },
+        {
+          "component_id": 8,
+          "pixels": 484,
+          "bbox_xyxy": [
+            6,
+            94,
+            34,
+            122
+          ]
+        },
+        {
+          "component_id": 9,
+          "pixels": 1092,
+          "bbox_xyxy": [
+            812,
+            116,
+            856,
+            156
+          ]
+        },
+        {
+          "component_id": 10,
+          "pixels": 496,
+          "bbox_xyxy": [
+            314,
+            138,
+            342,
+            166
+          ]
+        },
+        {
+          "component_id": 11,
+          "pixels": 492,
+          "bbox_xyxy": [
+            74,
+            152,
+            102,
+            180
+          ]
+        },
+        {
+          "component_id": 12,
+          "pixels": 484,
+          "bbox_xyxy": [
+            34,
+            184,
+            62,
+            212
+          ]
+        },
+        {
+          "component_id": 13,
+          "pixels": 492,
+          "bbox_xyxy": [
+            156,
+            186,
+            184,
+            214
+          ]
+        },
+        {
+          "component_id": 14,
+          "pixels": 488,
+          "bbox_xyxy": [
+            874,
+            194,
+            902,
+            222
+          ]
+        },
+        {
+          "component_id": 15,
+          "pixels": 496,
+          "bbox_xyxy": [
+            360,
+            198,
+            388,
+            226
+          ]
+        },
+        {
+          "component_id": 16,
+          "pixels": 1872,
+          "bbox_xyxy": [
+            540,
+            204,
+            610,
+            258
+          ]
+        },
+        {
+          "component_id": 17,
+          "pixels": 900,
+          "bbox_xyxy": [
+            892,
+            230,
+            938,
+            268
+          ]
+        },
+        {
+          "component_id": 18,
+          "pixels": 484,
+          "bbox_xyxy": [
+            406,
+            244,
+            434,
+            272
+          ]
+        },
+        {
+          "component_id": 19,
+          "pixels": 3460,
+          "bbox_xyxy": [
+            568,
+            258,
+            682,
+            382
+          ]
+        },
+        {
+          "component_id": 20,
+          "pixels": 1596,
+          "bbox_xyxy": [
+            908,
+            276,
+            966,
+            334
+          ]
+        },
+        {
+          "component_id": 21,
+          "pixels": 488,
+          "bbox_xyxy": [
+            42,
+            286,
+            70,
+            314
+          ]
+        },
+        {
+          "component_id": 22,
+          "pixels": 492,
+          "bbox_xyxy": [
+            1114,
+            292,
+            1142,
+            320
+          ]
+        },
+        {
+          "component_id": 23,
+          "pixels": 2148,
+          "bbox_xyxy": [
+            442,
+            308,
+            502,
+            382
+          ]
+        },
+        {
+          "component_id": 24,
+          "pixels": 508,
+          "bbox_xyxy": [
+            1208,
+            314,
+            1236,
+            342
+          ]
+        },
+        {
+          "component_id": 25,
+          "pixels": 1260,
+          "bbox_xyxy": [
+            962,
+            322,
+            1004,
+            382
+          ]
+        },
+        {
+          "component_id": 26,
+          "pixels": 852,
+          "bbox_xyxy": [
+            92,
+            338,
+            124,
+            382
+          ]
+        },
+        {
+          "component_id": 27,
+          "pixels": 488,
+          "bbox_xyxy": [
+            1156,
+            374,
+            1184,
+            402
+          ]
+        },
+        {
+          "component_id": 28,
+          "pixels": 2784,
+          "bbox_xyxy": [
+            680,
+            378,
+            766,
+            492
+          ]
+        },
+        {
+          "component_id": 29,
+          "pixels": 488,
+          "bbox_xyxy": [
+            1026,
+            392,
+            1054,
+            420
+          ]
+        },
+        {
+          "component_id": 30,
+          "pixels": 4244,
+          "bbox_xyxy": [
+            128,
+            394,
+            248,
+            550
+          ]
+        },
+        {
+          "component_id": 31,
+          "pixels": 492,
+          "bbox_xyxy": [
+            1048,
+            432,
+            1076,
+            460
+          ]
+        },
+        {
+          "component_id": 32,
+          "pixels": 488,
+          "bbox_xyxy": [
+            1232,
+            450,
+            1260,
+            478
+          ]
+        },
+        {
+          "component_id": 33,
+          "pixels": 492,
+          "bbox_xyxy": [
+            46,
+            460,
+            74,
+            488
+          ]
+        },
+        {
+          "component_id": 34,
+          "pixels": 504,
+          "bbox_xyxy": [
+            594,
+            476,
+            622,
+            504
+          ]
+        },
+        {
+          "component_id": 35,
+          "pixels": 492,
+          "bbox_xyxy": [
+            1100,
+            512,
+            1128,
+            540
+          ]
+        },
+        {
+          "component_id": 36,
+          "pixels": 3424,
+          "bbox_xyxy": [
+            622,
+            514,
+            720,
+            634
+          ]
+        },
+        {
+          "component_id": 37,
+          "pixels": 484,
+          "bbox_xyxy": [
+            1006,
+            514,
+            1034,
+            542
+          ]
+        },
+        {
+          "component_id": 38,
+          "pixels": 488,
+          "bbox_xyxy": [
+            484,
+            518,
+            512,
+            546
+          ]
+        },
+        {
+          "component_id": 39,
+          "pixels": 888,
+          "bbox_xyxy": [
+            930,
+            518,
+            974,
+            560
+          ]
+        },
+        {
+          "component_id": 40,
+          "pixels": 492,
+          "bbox_xyxy": [
+            986,
+            536,
+            1014,
+            564
+          ]
+        },
+        {
+          "component_id": 41,
+          "pixels": 492,
+          "bbox_xyxy": [
+            330,
+            546,
+            358,
+            574
+          ]
+        },
+        {
+          "component_id": 42,
+          "pixels": 488,
+          "bbox_xyxy": [
+            426,
+            562,
+            454,
+            590
+          ]
+        },
+        {
+          "component_id": 43,
+          "pixels": 492,
+          "bbox_xyxy": [
+            912,
+            564,
+            940,
+            592
+          ]
+        },
+        {
+          "component_id": 44,
+          "pixels": 484,
+          "bbox_xyxy": [
+            826,
+            572,
+            854,
+            600
+          ]
+        },
+        {
+          "component_id": 45,
+          "pixels": 1644,
+          "bbox_xyxy": [
+            264,
+            602,
+            322,
+            656
+          ]
+        },
+        {
+          "component_id": 46,
+          "pixels": 768,
+          "bbox_xyxy": [
+            576,
+            622,
+            612,
+            650
+          ]
+        },
+        {
+          "component_id": 47,
+          "pixels": 968,
+          "bbox_xyxy": [
+            300,
+            642,
+            348,
+            688
+          ]
+        },
+        {
+          "component_id": 48,
+          "pixels": 488,
+          "bbox_xyxy": [
+            1224,
+            642,
+            1252,
+            670
+          ]
+        },
+        {
+          "component_id": 49,
+          "pixels": 800,
+          "bbox_xyxy": [
+            722,
+            650,
+            756,
+            684
+          ]
+        },
+        {
+          "component_id": 50,
+          "pixels": 492,
+          "bbox_xyxy": [
+            548,
+            652,
+            576,
+            680
+          ]
+        },
+        {
+          "component_id": 51,
+          "pixels": 1448,
+          "bbox_xyxy": [
+            754,
+            662,
+            798,
+            738
+          ]
+        },
+        {
+          "component_id": 52,
+          "pixels": 496,
+          "bbox_xyxy": [
+            188,
+            664,
+            216,
+            692
+          ]
+        },
+        {
+          "component_id": 53,
+          "pixels": 820,
+          "bbox_xyxy": [
+            466,
+            664,
+            500,
+            700
+          ]
+        },
+        {
+          "component_id": 54,
+          "pixels": 476,
+          "bbox_xyxy": [
+            1254,
+            676,
+            1280,
+            704
+          ]
+        },
+        {
+          "component_id": 55,
+          "pixels": 480,
+          "bbox_xyxy": [
+            352,
+            682,
+            378,
+            710
+          ]
+        },
+        {
+          "component_id": 56,
+          "pixels": 488,
+          "bbox_xyxy": [
+            616,
+            684,
+            644,
+            712
+          ]
+        },
+        {
+          "component_id": 57,
+          "pixels": 760,
+          "bbox_xyxy": [
+            498,
+            698,
+            532,
+            726
+          ]
+        },
+        {
+          "component_id": 58,
+          "pixels": 1696,
+          "bbox_xyxy": [
+            640,
+            698,
+            688,
+            760
+          ]
+        },
+        {
+          "component_id": 59,
+          "pixels": 1148,
+          "bbox_xyxy": [
+            946,
+            714,
+            988,
+            756
+          ]
+        },
+        {
+          "component_id": 60,
+          "pixels": 848,
+          "bbox_xyxy": [
+            376,
+            720,
+            412,
+            760
+          ]
+        },
+        {
+          "component_id": 61,
+          "pixels": 492,
+          "bbox_xyxy": [
+            1246,
+            724,
+            1274,
+            752
+          ]
+        },
+        {
+          "component_id": 62,
+          "pixels": 1636,
+          "bbox_xyxy": [
+            806,
+            754,
+            864,
+            824
+          ]
+        },
+        {
+          "component_id": 63,
+          "pixels": 1876,
+          "bbox_xyxy": [
+            980,
+            762,
+            1040,
+            828
+          ]
+        },
+        {
+          "component_id": 64,
+          "pixels": 908,
+          "bbox_xyxy": [
+            698,
+            786,
+            736,
+            834
+          ]
+        },
+        {
+          "component_id": 65,
+          "pixels": 496,
+          "bbox_xyxy": [
+            340,
+            796,
+            368,
+            824
+          ]
+        },
+        {
+          "component_id": 66,
+          "pixels": 2244,
+          "bbox_xyxy": [
+            1040,
+            804,
+            1100,
+            914
+          ]
+        },
+        {
+          "component_id": 67,
+          "pixels": 932,
+          "bbox_xyxy": [
+            300,
+            814,
+            342,
+            858
+          ]
+        },
+        {
+          "component_id": 68,
+          "pixels": 488,
+          "bbox_xyxy": [
+            456,
+            824,
+            484,
+            852
+          ]
+        },
+        {
+          "component_id": 69,
+          "pixels": 484,
+          "bbox_xyxy": [
+            860,
+            824,
+            888,
+            852
+          ]
+        },
+        {
+          "component_id": 70,
+          "pixels": 920,
+          "bbox_xyxy": [
+            732,
+            832,
+            770,
+            880
+          ]
+        },
+        {
+          "component_id": 71,
+          "pixels": 488,
+          "bbox_xyxy": [
+            272,
+            854,
+            300,
+            882
+          ]
+        },
+        {
+          "component_id": 72,
+          "pixels": 1176,
+          "bbox_xyxy": [
+            368,
+            864,
+            412,
+            908
+          ]
+        },
+        {
+          "component_id": 73,
+          "pixels": 500,
+          "bbox_xyxy": [
+            660,
+            884,
+            688,
+            912
+          ]
+        },
+        {
+          "component_id": 74,
+          "pixels": 508,
+          "bbox_xyxy": [
+            218,
+            894,
+            246,
+            922
+          ]
+        },
+        {
+          "component_id": 75,
+          "pixels": 1248,
+          "bbox_xyxy": [
+            36,
+            896,
+            92,
+            952
+          ]
+        },
+        {
+          "component_id": 76,
+          "pixels": 840,
+          "bbox_xyxy": [
+            516,
+            898,
+            550,
+            940
+          ]
+        },
+        {
+          "component_id": 77,
+          "pixels": 496,
+          "bbox_xyxy": [
+            788,
+            900,
+            816,
+            928
+          ]
+        },
+        {
+          "component_id": 78,
+          "pixels": 252,
+          "bbox_xyxy": [
+            914,
+            900,
+            942,
+            914
+          ]
+        },
+        {
+          "component_id": 79,
+          "pixels": 848,
+          "bbox_xyxy": [
+            428,
+            908,
+            464,
+            946
+          ]
+        },
+        {
+          "component_id": 80,
+          "pixels": 816,
+          "bbox_xyxy": [
+            920,
+            924,
+            968,
+            972
+          ]
+        },
+        {
+          "component_id": 81,
+          "pixels": 436,
+          "bbox_xyxy": [
+            1154,
+            924,
+            1182,
+            948
+          ]
+        },
+        {
+          "component_id": 82,
+          "pixels": 1232,
+          "bbox_xyxy": [
+            142,
+            926,
+            190,
+            978
+          ]
+        },
+        {
+          "component_id": 83,
+          "pixels": 964,
+          "bbox_xyxy": [
+            804,
+            928,
+            848,
+            978
+          ]
+        },
+        {
+          "component_id": 84,
+          "pixels": 1884,
+          "bbox_xyxy": [
+            260,
+            934,
+            340,
+            990
+          ]
+        },
+        {
+          "component_id": 85,
+          "pixels": 660,
+          "bbox_xyxy": [
+            958,
+            942,
+            994,
+            992
+          ]
+        },
+        {
+          "component_id": 86,
+          "pixels": 492,
+          "bbox_xyxy": [
+            1188,
+            962,
+            1216,
+            990
+          ]
+        },
+        {
+          "component_id": 87,
+          "pixels": 496,
+          "bbox_xyxy": [
+            368,
+            964,
+            396,
+            992
+          ]
+        },
+        {
+          "component_id": 88,
+          "pixels": 496,
+          "bbox_xyxy": [
+            722,
+            972,
+            750,
+            1000
+          ]
+        },
+        {
+          "component_id": 89,
+          "pixels": 492,
+          "bbox_xyxy": [
+            236,
+            988,
+            264,
+            1016
+          ]
+        },
+        {
+          "component_id": 90,
+          "pixels": 820,
+          "bbox_xyxy": [
+            984,
+            992,
+            1020,
+            1024
+          ]
+        },
+        {
+          "component_id": 91,
+          "pixels": 332,
+          "bbox_xyxy": [
+            1222,
+            1004,
+            1250,
+            1024
+          ]
+        }
+      ],
+      "diagnostic_path": ".bootstrap-test-tmp/ti3-a0-20260919-inspection/ESM3-73.png",
+      "diagnostic_sha256": "966e99afad51d333e27ec6950b9c6d38655dd51d42d2f292cb0de8434c65b7f4"
+    },
+    {
+      "asset_id": "ESM3:146",
+      "width": 1280,
+      "height": 1024,
+      "experimental_time_s": 146.32,
+      "native_chroma_counts": {
+        "8": 28488,
+        "16": 26535,
+        "20": 26059,
+        "32": 24562,
+        "64": 21202
+      },
+      "dominant_colored_uv": [
+        {
+          "u": 90,
+          "v": 240,
+          "count": 446
+        },
+        {
+          "u": 91,
+          "v": 240,
+          "count": 383
+        },
+        {
+          "u": 90,
+          "v": 241,
+          "count": 358
+        },
+        {
+          "u": 91,
+          "v": 241,
+          "count": 342
+        },
+        {
+          "u": 90,
+          "v": 239,
+          "count": 292
+        },
+        {
+          "u": 90,
+          "v": 242,
+          "count": 284
+        },
+        {
+          "u": 91,
+          "v": 239,
+          "count": 277
+        },
+        {
+          "u": 91,
+          "v": 242,
+          "count": 269
+        },
+        {
+          "u": 89,
+          "v": 241,
+          "count": 268
+        },
+        {
+          "u": 89,
+          "v": 242,
+          "count": 264
+        }
+      ],
+      "components_at_chroma20": [
+        {
+          "component_id": 1,
+          "pixels": 492,
+          "bbox_xyxy": [
+            460,
+            2,
+            488,
+            30
+          ]
+        },
+        {
+          "component_id": 2,
+          "pixels": 872,
+          "bbox_xyxy": [
+            334,
+            8,
+            378,
+            42
+          ]
+        },
+        {
+          "component_id": 3,
+          "pixels": 488,
+          "bbox_xyxy": [
+            1176,
+            18,
+            1204,
+            46
+          ]
+        },
+        {
+          "component_id": 4,
+          "pixels": 120,
+          "bbox_xyxy": [
+            100,
+            32,
+            112,
+            46
+          ]
+        },
+        {
+          "component_id": 5,
+          "pixels": 2440,
+          "bbox_xyxy": [
+            746,
+            32,
+            810,
+            114
+          ]
+        },
+        {
+          "component_id": 6,
+          "pixels": 324,
+          "bbox_xyxy": [
+            98,
+            34,
+            126,
+            60
+          ]
+        },
+        {
+          "component_id": 7,
+          "pixels": 436,
+          "bbox_xyxy": [
+            238,
+            36,
+            266,
+            62
+          ]
+        },
+        {
+          "component_id": 8,
+          "pixels": 4,
+          "bbox_xyxy": [
+            230,
+            40,
+            232,
+            42
+          ]
+        },
+        {
+          "component_id": 9,
+          "pixels": 952,
+          "bbox_xyxy": [
+            472,
+            50,
+            514,
+            100
+          ]
+        },
+        {
+          "component_id": 10,
+          "pixels": 488,
+          "bbox_xyxy": [
+            68,
+            54,
+            96,
+            82
+          ]
+        },
+        {
+          "component_id": 11,
+          "pixels": 992,
+          "bbox_xyxy": [
+            246,
+            74,
+            296,
+            120
+          ]
+        },
+        {
+          "component_id": 12,
+          "pixels": 1096,
+          "bbox_xyxy": [
+            734,
+            80,
+            780,
+            124
+          ]
+        },
+        {
+          "component_id": 13,
+          "pixels": 1268,
+          "bbox_xyxy": [
+            0,
+            82,
+            52,
+            142
+          ]
+        },
+        {
+          "component_id": 14,
+          "pixels": 496,
+          "bbox_xyxy": [
+            372,
+            88,
+            400,
+            116
+          ]
+        },
+        {
+          "component_id": 15,
+          "pixels": 492,
+          "bbox_xyxy": [
+            448,
+            88,
+            476,
+            116
+          ]
+        },
+        {
+          "component_id": 16,
+          "pixels": 968,
+          "bbox_xyxy": [
+            310,
+            112,
+            342,
+            166
+          ]
+        },
+        {
+          "component_id": 17,
+          "pixels": 2760,
+          "bbox_xyxy": [
+            812,
+            116,
+            902,
+            222
+          ]
+        },
+        {
+          "component_id": 18,
+          "pixels": 484,
+          "bbox_xyxy": [
+            402,
+            118,
+            430,
+            146
+          ]
+        },
+        {
+          "component_id": 19,
+          "pixels": 496,
+          "bbox_xyxy": [
+            490,
+            134,
+            518,
+            162
+          ]
+        },
+        {
+          "component_id": 20,
+          "pixels": 496,
+          "bbox_xyxy": [
+            74,
+            152,
+            102,
+            180
+          ]
+        },
+        {
+          "component_id": 21,
+          "pixels": 492,
+          "bbox_xyxy": [
+            338,
+            160,
+            366,
+            188
+          ]
+        },
+        {
+          "component_id": 22,
+          "pixels": 492,
+          "bbox_xyxy": [
+            34,
+            184,
+            62,
+            212
+          ]
+        },
+        {
+          "component_id": 23,
+          "pixels": 496,
+          "bbox_xyxy": [
+            156,
+            186,
+            184,
+            214
+          ]
+        },
+        {
+          "component_id": 24,
+          "pixels": 904,
+          "bbox_xyxy": [
+            360,
+            198,
+            404,
+            240
+          ]
+        },
+        {
+          "component_id": 25,
+          "pixels": 2084,
+          "bbox_xyxy": [
+            540,
+            204,
+            610,
+            258
+          ]
+        },
+        {
+          "component_id": 26,
+          "pixels": 980,
+          "bbox_xyxy": [
+            1192,
+            204,
+            1242,
+            250
+          ]
+        },
+        {
+          "component_id": 27,
+          "pixels": 488,
+          "bbox_xyxy": [
+            1086,
+            214,
+            1114,
+            242
+          ]
+        },
+        {
+          "component_id": 28,
+          "pixels": 888,
+          "bbox_xyxy": [
+            892,
+            230,
+            938,
+            268
+          ]
+        },
+        {
+          "component_id": 29,
+          "pixels": 488,
+          "bbox_xyxy": [
+            406,
+            244,
+            434,
+            272
+          ]
+        },
+        {
+          "component_id": 30,
+          "pixels": 3624,
+          "bbox_xyxy": [
+            568,
+            258,
+            682,
+            382
+          ]
+        },
+        {
+          "component_id": 31,
+          "pixels": 500,
+          "bbox_xyxy": [
+            1146,
+            266,
+            1174,
+            294
+          ]
+        },
+        {
+          "component_id": 32,
+          "pixels": 1856,
+          "bbox_xyxy": [
+            906,
+            276,
+            966,
+            334
+          ]
+        },
+        {
+          "component_id": 33,
+          "pixels": 504,
+          "bbox_xyxy": [
+            42,
+            286,
+            70,
+            314
+          ]
+        },
+        {
+          "component_id": 34,
+          "pixels": 896,
+          "bbox_xyxy": [
+            1094,
+            292,
+            1142,
+            326
+          ]
+        },
+        {
+          "component_id": 35,
+          "pixels": 2164,
+          "bbox_xyxy": [
+            442,
+            308,
+            502,
+            382
+          ]
+        },
+        {
+          "component_id": 36,
+          "pixels": 492,
+          "bbox_xyxy": [
+            1208,
+            314,
+            1236,
+            342
+          ]
+        },
+        {
+          "component_id": 37,
+          "pixels": 1272,
+          "bbox_xyxy": [
+            962,
+            322,
+            1004,
+            382
+          ]
+        },
+        {
+          "component_id": 38,
+          "pixels": 484,
+          "bbox_xyxy": [
+            1064,
+            326,
+            1092,
+            354
+          ]
+        },
+        {
+          "component_id": 39,
+          "pixels": 848,
+          "bbox_xyxy": [
+            92,
+            338,
+            124,
+            382
+          ]
+        },
+        {
+          "component_id": 40,
+          "pixels": 480,
+          "bbox_xyxy": [
+            1156,
+            374,
+            1184,
+            402
+          ]
+        },
+        {
+          "component_id": 41,
+          "pixels": 2768,
+          "bbox_xyxy": [
+            680,
+            378,
+            766,
+            492
+          ]
+        },
+        {
+          "component_id": 42,
+          "pixels": 492,
+          "bbox_xyxy": [
+            1128,
+            386,
+            1156,
+            414
+          ]
+        },
+        {
+          "component_id": 43,
+          "pixels": 488,
+          "bbox_xyxy": [
+            1026,
+            392,
+            1054,
+            420
+          ]
+        },
+        {
+          "component_id": 44,
+          "pixels": 4640,
+          "bbox_xyxy": [
+            128,
+            394,
+            248,
+            550
+          ]
+        },
+        {
+          "component_id": 45,
+          "pixels": 988,
+          "bbox_xyxy": [
+            790,
+            396,
+            838,
+            444
+          ]
+        },
+        {
+          "component_id": 46,
+          "pixels": 1532,
+          "bbox_xyxy": [
+            1218,
+            422,
+            1280,
+            478
+          ]
+        },
+        {
+          "component_id": 47,
+          "pixels": 860,
+          "bbox_xyxy": [
+            1048,
+            432,
+            1092,
+            466
+          ]
+        },
+        {
+          "component_id": 48,
+          "pixels": 492,
+          "bbox_xyxy": [
+            46,
+            460,
+            74,
+            488
+          ]
+        },
+        {
+          "component_id": 49,
+          "pixels": 500,
+          "bbox_xyxy": [
+            594,
+            476,
+            622,
+            504
+          ]
+        },
+        {
+          "component_id": 50,
+          "pixels": 484,
+          "bbox_xyxy": [
+            1100,
+            512,
+            1128,
+            540
+          ]
+        },
+        {
+          "component_id": 51,
+          "pixels": 3796,
+          "bbox_xyxy": [
+            622,
+            514,
+            726,
+            648
+          ]
+        },
+        {
+          "component_id": 52,
+          "pixels": 492,
+          "bbox_xyxy": [
+            1006,
+            514,
+            1034,
+            542
+          ]
+        },
+        {
+          "component_id": 53,
+          "pixels": 856,
+          "bbox_xyxy": [
+            472,
+            518,
+            512,
+            550
+          ]
+        },
+        {
+          "component_id": 54,
+          "pixels": 888,
+          "bbox_xyxy": [
+            930,
+            518,
+            974,
+            560
+          ]
+        },
+        {
+          "component_id": 55,
+          "pixels": 496,
+          "bbox_xyxy": [
+            352,
+            520,
+            380,
+            548
+          ]
+        },
+        {
+          "component_id": 56,
+          "pixels": 496,
+          "bbox_xyxy": [
+            986,
+            536,
+            1014,
+            564
+          ]
+        },
+        {
+          "component_id": 57,
+          "pixels": 496,
+          "bbox_xyxy": [
+            330,
+            546,
+            358,
+            574
+          ]
+        },
+        {
+          "component_id": 58,
+          "pixels": 496,
+          "bbox_xyxy": [
+            426,
+            562,
+            454,
+            590
+          ]
+        },
+        {
+          "component_id": 59,
+          "pixels": 492,
+          "bbox_xyxy": [
+            912,
+            564,
+            940,
+            592
+          ]
+        },
+        {
+          "component_id": 60,
+          "pixels": 496,
+          "bbox_xyxy": [
+            826,
+            572,
+            854,
+            600
+          ]
+        },
+        {
+          "component_id": 61,
+          "pixels": 2456,
+          "bbox_xyxy": [
+            252,
+            588,
+            322,
+            656
+          ]
+        },
+        {
+          "component_id": 62,
+          "pixels": 1012,
+          "bbox_xyxy": [
+            576,
+            622,
+            612,
+            660
+          ]
+        },
+        {
+          "component_id": 63,
+          "pixels": 976,
+          "bbox_xyxy": [
+            300,
+            642,
+            348,
+            688
+          ]
+        },
+        {
+          "component_id": 64,
+          "pixels": 488,
+          "bbox_xyxy": [
+            1224,
+            642,
+            1252,
+            670
+          ]
+        },
+        {
+          "component_id": 65,
+          "pixels": 796,
+          "bbox_xyxy": [
+            722,
+            650,
+            756,
+            684
+          ]
+        },
+        {
+          "component_id": 66,
+          "pixels": 496,
+          "bbox_xyxy": [
+            548,
+            652,
+            576,
+            680
+          ]
+        },
+        {
+          "component_id": 67,
+          "pixels": 1456,
+          "bbox_xyxy": [
+            754,
+            662,
+            798,
+            738
+          ]
+        },
+        {
+          "component_id": 68,
+          "pixels": 492,
+          "bbox_xyxy": [
+            188,
+            664,
+            216,
+            692
+          ]
+        },
+        {
+          "component_id": 69,
+          "pixels": 1076,
+          "bbox_xyxy": [
+            458,
+            664,
+            500,
+            700
+          ]
+        },
+        {
+          "component_id": 70,
+          "pixels": 480,
+          "bbox_xyxy": [
+            1254,
+            676,
+            1280,
+            704
+          ]
+        },
+        {
+          "component_id": 71,
+          "pixels": 488,
+          "bbox_xyxy": [
+            350,
+            682,
+            378,
+            710
+          ]
+        },
+        {
+          "component_id": 72,
+          "pixels": 492,
+          "bbox_xyxy": [
+            616,
+            684,
+            644,
+            712
+          ]
+        },
+        {
+          "component_id": 73,
+          "pixels": 768,
+          "bbox_xyxy": [
+            498,
+            698,
+            532,
+            726
+          ]
+        },
+        {
+          "component_id": 74,
+          "pixels": 1704,
+          "bbox_xyxy": [
+            640,
+            698,
+            688,
+            760
+          ]
+        },
+        {
+          "component_id": 75,
+          "pixels": 496,
+          "bbox_xyxy": [
+            228,
+            708,
+            256,
+            736
+          ]
+        },
+        {
+          "component_id": 76,
+          "pixels": 872,
+          "bbox_xyxy": [
+            1232,
+            710,
+            1274,
+            752
+          ]
+        },
+        {
+          "component_id": 77,
+          "pixels": 1220,
+          "bbox_xyxy": [
+            946,
+            714,
+            988,
+            758
+          ]
+        },
+        {
+          "component_id": 78,
+          "pixels": 848,
+          "bbox_xyxy": [
+            376,
+            720,
+            412,
+            760
+          ]
+        },
+        {
+          "component_id": 79,
+          "pixels": 492,
+          "bbox_xyxy": [
+            78,
+            742,
+            106,
+            770
+          ]
+        },
+        {
+          "component_id": 80,
+          "pixels": 1820,
+          "bbox_xyxy": [
+            806,
+            754,
+            864,
+            824
+          ]
+        },
+        {
+          "component_id": 81,
+          "pixels": 1880,
+          "bbox_xyxy": [
+            980,
+            762,
+            1040,
+            828
+          ]
+        },
+        {
+          "component_id": 82,
+          "pixels": 480,
+          "bbox_xyxy": [
+            1096,
+            776,
+            1124,
+            804
+          ]
+        },
+        {
+          "component_id": 83,
+          "pixels": 908,
+          "bbox_xyxy": [
+            698,
+            786,
+            736,
+            834
+          ]
+        },
+        {
+          "component_id": 84,
+          "pixels": 484,
+          "bbox_xyxy": [
+            340,
+            796,
+            368,
+            824
+          ]
+        },
+        {
+          "component_id": 85,
+          "pixels": 2224,
+          "bbox_xyxy": [
+            1040,
+            804,
+            1100,
+            914
+          ]
+        },
+        {
+          "component_id": 86,
+          "pixels": 488,
+          "bbox_xyxy": [
+            6,
+            812,
+            34,
+            840
+          ]
+        },
+        {
+          "component_id": 87,
+          "pixels": 908,
+          "bbox_xyxy": [
+            300,
+            814,
+            342,
+            858
+          ]
+        },
+        {
+          "component_id": 88,
+          "pixels": 484,
+          "bbox_xyxy": [
+            132,
+            824,
+            160,
+            852
+          ]
+        },
+        {
+          "component_id": 89,
+          "pixels": 500,
+          "bbox_xyxy": [
+            456,
+            824,
+            484,
+            852
+          ]
+        },
+        {
+          "component_id": 90,
+          "pixels": 488,
+          "bbox_xyxy": [
+            860,
+            824,
+            888,
+            852
+          ]
+        },
+        {
+          "component_id": 91,
+          "pixels": 940,
+          "bbox_xyxy": [
+            732,
+            832,
+            770,
+            880
+          ]
+        },
+        {
+          "component_id": 92,
+          "pixels": 936,
+          "bbox_xyxy": [
+            884,
+            852,
+            924,
+            900
+          ]
+        },
+        {
+          "component_id": 93,
+          "pixels": 484,
+          "bbox_xyxy": [
+            272,
+            854,
+            300,
+            882
+          ]
+        },
+        {
+          "component_id": 94,
+          "pixels": 1160,
+          "bbox_xyxy": [
+            368,
+            864,
+            412,
+            908
+          ]
+        },
+        {
+          "component_id": 95,
+          "pixels": 500,
+          "bbox_xyxy": [
+            660,
+            884,
+            688,
+            912
+          ]
+        },
+        {
+          "component_id": 96,
+          "pixels": 480,
+          "bbox_xyxy": [
+            218,
+            894,
+            246,
+            922
+          ]
+        },
+        {
+          "component_id": 97,
+          "pixels": 1252,
+          "bbox_xyxy": [
+            36,
+            896,
+            92,
+            952
+          ]
+        },
+        {
+          "component_id": 98,
+          "pixels": 852,
+          "bbox_xyxy": [
+            516,
+            898,
+            550,
+            940
+          ]
+        },
+        {
+          "component_id": 99,
+          "pixels": 492,
+          "bbox_xyxy": [
+            788,
+            900,
+            816,
+            928
+          ]
+        },
+        {
+          "component_id": 100,
+          "pixels": 252,
+          "bbox_xyxy": [
+            914,
+            900,
+            942,
+            914
+          ]
+        },
+        {
+          "component_id": 101,
+          "pixels": 856,
+          "bbox_xyxy": [
+            428,
+            908,
+            464,
+            946
+          ]
+        },
+        {
+          "component_id": 102,
+          "pixels": 1776,
+          "bbox_xyxy": [
+            920,
+            924,
+            994,
+            992
+          ]
+        },
+        {
+          "component_id": 103,
+          "pixels": 436,
+          "bbox_xyxy": [
+            1154,
+            924,
+            1182,
+            948
+          ]
+        },
+        {
+          "component_id": 104,
+          "pixels": 1232,
+          "bbox_xyxy": [
+            142,
+            926,
+            190,
+            978
+          ]
+        },
+        {
+          "component_id": 105,
+          "pixels": 972,
+          "bbox_xyxy": [
+            804,
+            928,
+            848,
+            978
+          ]
+        },
+        {
+          "component_id": 106,
+          "pixels": 1884,
+          "bbox_xyxy": [
+            260,
+            934,
+            340,
+            990
+          ]
+        },
+        {
+          "component_id": 107,
+          "pixels": 488,
+          "bbox_xyxy": [
+            1188,
+            962,
+            1216,
+            990
+          ]
+        },
+        {
+          "component_id": 108,
+          "pixels": 488,
+          "bbox_xyxy": [
+            368,
+            964,
+            396,
+            992
+          ]
+        },
+        {
+          "component_id": 109,
+          "pixels": 488,
+          "bbox_xyxy": [
+            722,
+            972,
+            750,
+            1000
+          ]
+        },
+        {
+          "component_id": 110,
+          "pixels": 492,
+          "bbox_xyxy": [
+            236,
+            988,
+            264,
+            1016
+          ]
+        },
+        {
+          "component_id": 111,
+          "pixels": 824,
+          "bbox_xyxy": [
+            984,
+            992,
+            1020,
+            1024
+          ]
+        },
+        {
+          "component_id": 112,
+          "pixels": 336,
+          "bbox_xyxy": [
+            1222,
+            1004,
+            1250,
+            1024
+          ]
+        }
+      ],
+      "diagnostic_path": ".bootstrap-test-tmp/ti3-a0-20260919-inspection/ESM3-146.png",
+      "diagnostic_sha256": "09f78820d571ac72c410c99f3a72ecb6ea93d8617fbcfbe87b7da29b8cbc61b8"
+    },
+    {
+      "asset_id": "ESM3:219",
+      "width": 1280,
+      "height": 1024,
+      "experimental_time_s": 232.46,
+      "native_chroma_counts": {
+        "8": 28612,
+        "16": 26809,
+        "20": 26374,
+        "32": 24848,
+        "64": 21504
+      },
+      "dominant_colored_uv": [
+        {
+          "u": 90,
+          "v": 240,
+          "count": 491
+        },
+        {
+          "u": 90,
+          "v": 241,
+          "count": 398
+        },
+        {
+          "u": 91,
+          "v": 240,
+          "count": 391
+        },
+        {
+          "u": 90,
+          "v": 239,
+          "count": 386
+        },
+        {
+          "u": 91,
+          "v": 239,
+          "count": 381
+        },
+        {
+          "u": 89,
+          "v": 240,
+          "count": 339
+        },
+        {
+          "u": 91,
+          "v": 241,
+          "count": 323
+        },
+        {
+          "u": 89,
+          "v": 241,
+          "count": 320
+        },
+        {
+          "u": 90,
+          "v": 242,
+          "count": 302
+        },
+        {
+          "u": 89,
+          "v": 239,
+          "count": 287
+        }
+      ],
+      "components_at_chroma20": [
+        {
+          "component_id": 1,
+          "pixels": 492,
+          "bbox_xyxy": [
+            460,
+            2,
+            488,
+            30
+          ]
+        },
+        {
+          "component_id": 2,
+          "pixels": 868,
+          "bbox_xyxy": [
+            334,
+            8,
+            378,
+            42
+          ]
+        },
+        {
+          "component_id": 3,
+          "pixels": 492,
+          "bbox_xyxy": [
+            1176,
+            18,
+            1204,
+            46
+          ]
+        },
+        {
+          "component_id": 4,
+          "pixels": 456,
+          "bbox_xyxy": [
+            98,
+            32,
+            126,
+            60
+          ]
+        },
+        {
+          "component_id": 5,
+          "pixels": 2440,
+          "bbox_xyxy": [
+            746,
+            32,
+            810,
+            112
+          ]
+        },
+        {
+          "component_id": 6,
+          "pixels": 432,
+          "bbox_xyxy": [
+            238,
+            36,
+            266,
+            62
+          ]
+        },
+        {
+          "component_id": 7,
+          "pixels": 8,
+          "bbox_xyxy": [
+            230,
+            40,
+            232,
+            44
+          ]
+        },
+        {
+          "component_id": 8,
+          "pixels": 952,
+          "bbox_xyxy": [
+            472,
+            50,
+            514,
+            100
+          ]
+        },
+        {
+          "component_id": 9,
+          "pixels": 492,
+          "bbox_xyxy": [
+            68,
+            54,
+            96,
+            82
+          ]
+        },
+        {
+          "component_id": 10,
+          "pixels": 984,
+          "bbox_xyxy": [
+            246,
+            74,
+            296,
+            120
+          ]
+        },
+        {
+          "component_id": 11,
+          "pixels": 1080,
+          "bbox_xyxy": [
+            736,
+            80,
+            780,
+            124
+          ]
+        },
+        {
+          "component_id": 12,
+          "pixels": 1272,
+          "bbox_xyxy": [
+            0,
+            82,
+            52,
+            142
+          ]
+        },
+        {
+          "component_id": 13,
+          "pixels": 492,
+          "bbox_xyxy": [
+            372,
+            88,
+            400,
+            116
+          ]
+        },
+        {
+          "component_id": 14,
+          "pixels": 488,
+          "bbox_xyxy": [
+            448,
+            88,
+            476,
+            116
+          ]
+        },
+        {
+          "component_id": 15,
+          "pixels": 964,
+          "bbox_xyxy": [
+            310,
+            112,
+            342,
+            166
+          ]
+        },
+        {
+          "component_id": 16,
+          "pixels": 2744,
+          "bbox_xyxy": [
+            812,
+            116,
+            902,
+            222
+          ]
+        },
+        {
+          "component_id": 17,
+          "pixels": 488,
+          "bbox_xyxy": [
+            402,
+            118,
+            430,
+            146
+          ]
+        },
+        {
+          "component_id": 18,
+          "pixels": 492,
+          "bbox_xyxy": [
+            490,
+            134,
+            518,
+            162
+          ]
+        },
+        {
+          "component_id": 19,
+          "pixels": 496,
+          "bbox_xyxy": [
+            74,
+            152,
+            102,
+            180
+          ]
+        },
+        {
+          "component_id": 20,
+          "pixels": 492,
+          "bbox_xyxy": [
+            338,
+            160,
+            366,
+            188
+          ]
+        },
+        {
+          "component_id": 21,
+          "pixels": 488,
+          "bbox_xyxy": [
+            34,
+            184,
+            62,
+            212
+          ]
+        },
+        {
+          "component_id": 22,
+          "pixels": 488,
+          "bbox_xyxy": [
+            156,
+            186,
+            184,
+            214
+          ]
+        },
+        {
+          "component_id": 23,
+          "pixels": 900,
+          "bbox_xyxy": [
+            360,
+            198,
+            404,
+            240
+          ]
+        },
+        {
+          "component_id": 24,
+          "pixels": 2084,
+          "bbox_xyxy": [
+            540,
+            204,
+            610,
+            258
+          ]
+        },
+        {
+          "component_id": 25,
+          "pixels": 984,
+          "bbox_xyxy": [
+            1192,
+            204,
+            1242,
+            250
+          ]
+        },
+        {
+          "component_id": 26,
+          "pixels": 496,
+          "bbox_xyxy": [
+            1086,
+            214,
+            1114,
+            242
+          ]
+        },
+        {
+          "component_id": 27,
+          "pixels": 888,
+          "bbox_xyxy": [
+            892,
+            230,
+            938,
+            268
+          ]
+        },
+        {
+          "component_id": 28,
+          "pixels": 488,
+          "bbox_xyxy": [
+            406,
+            244,
+            434,
+            272
+          ]
+        },
+        {
+          "component_id": 29,
+          "pixels": 3592,
+          "bbox_xyxy": [
+            568,
+            258,
+            682,
+            382
+          ]
+        },
+        {
+          "component_id": 30,
+          "pixels": 504,
+          "bbox_xyxy": [
+            1146,
+            266,
+            1174,
+            294
+          ]
+        },
+        {
+          "component_id": 31,
+          "pixels": 1860,
+          "bbox_xyxy": [
+            906,
+            276,
+            966,
+            334
+          ]
+        },
+        {
+          "component_id": 32,
+          "pixels": 492,
+          "bbox_xyxy": [
+            42,
+            286,
+            70,
+            314
+          ]
+        },
+        {
+          "component_id": 33,
+          "pixels": 900,
+          "bbox_xyxy": [
+            1094,
+            292,
+            1142,
+            326
+          ]
+        },
+        {
+          "component_id": 34,
+          "pixels": 2180,
+          "bbox_xyxy": [
+            442,
+            308,
+            502,
+            382
+          ]
+        },
+        {
+          "component_id": 35,
+          "pixels": 492,
+          "bbox_xyxy": [
+            1208,
+            314,
+            1236,
+            342
+          ]
+        },
+        {
+          "component_id": 36,
+          "pixels": 1280,
+          "bbox_xyxy": [
+            962,
+            322,
+            1004,
+            382
+          ]
+        },
+        {
+          "component_id": 37,
+          "pixels": 504,
+          "bbox_xyxy": [
+            1064,
+            326,
+            1092,
+            354
+          ]
+        },
+        {
+          "component_id": 38,
+          "pixels": 848,
+          "bbox_xyxy": [
+            92,
+            338,
+            124,
+            382
+          ]
+        },
+        {
+          "component_id": 39,
+          "pixels": 976,
+          "bbox_xyxy": [
+            1128,
+            374,
+            1184,
+            414
+          ]
+        },
+        {
+          "component_id": 40,
+          "pixels": 2756,
+          "bbox_xyxy": [
+            680,
+            378,
+            766,
+            492
+          ]
+        },
+        {
+          "component_id": 41,
+          "pixels": 492,
+          "bbox_xyxy": [
+            1026,
+            392,
+            1054,
+            420
+          ]
+        },
+        {
+          "component_id": 42,
+          "pixels": 4624,
+          "bbox_xyxy": [
+            128,
+            394,
+            248,
+            550
+          ]
+        },
+        {
+          "component_id": 43,
+          "pixels": 984,
+          "bbox_xyxy": [
+            790,
+            396,
+            838,
+            444
+          ]
+        },
+        {
+          "component_id": 44,
+          "pixels": 492,
+          "bbox_xyxy": [
+            542,
+            408,
+            570,
+            436
+          ]
+        },
+        {
+          "component_id": 45,
+          "pixels": 1520,
+          "bbox_xyxy": [
+            1218,
+            422,
+            1280,
+            478
+          ]
+        },
+        {
+          "component_id": 46,
+          "pixels": 852,
+          "bbox_xyxy": [
+            1048,
+            432,
+            1092,
+            466
+          ]
+        },
+        {
+          "component_id": 47,
+          "pixels": 492,
+          "bbox_xyxy": [
+            46,
+            460,
+            74,
+            488
+          ]
+        },
+        {
+          "component_id": 48,
+          "pixels": 500,
+          "bbox_xyxy": [
+            594,
+            476,
+            622,
+            504
+          ]
+        },
+        {
+          "component_id": 49,
+          "pixels": 1332,
+          "bbox_xyxy": [
+            462,
+            496,
+            512,
+            550
+          ]
+        },
+        {
+          "component_id": 50,
+          "pixels": 492,
+          "bbox_xyxy": [
+            1100,
+            512,
+            1128,
+            540
+          ]
+        },
+        {
+          "component_id": 51,
+          "pixels": 3772,
+          "bbox_xyxy": [
+            622,
+            514,
+            726,
+            648
+          ]
+        },
+        {
+          "component_id": 52,
+          "pixels": 496,
+          "bbox_xyxy": [
+            1006,
+            514,
+            1034,
+            542
+          ]
+        },
+        {
+          "component_id": 53,
+          "pixels": 884,
+          "bbox_xyxy": [
+            930,
+            518,
+            974,
+            560
+          ]
+        },
+        {
+          "component_id": 54,
+          "pixels": 488,
+          "bbox_xyxy": [
+            352,
+            520,
+            380,
+            548
+          ]
+        },
+        {
+          "component_id": 55,
+          "pixels": 488,
+          "bbox_xyxy": [
+            986,
+            536,
+            1014,
+            564
+          ]
+        },
+        {
+          "component_id": 56,
+          "pixels": 492,
+          "bbox_xyxy": [
+            330,
+            546,
+            358,
+            574
+          ]
+        },
+        {
+          "component_id": 57,
+          "pixels": 488,
+          "bbox_xyxy": [
+            426,
+            562,
+            454,
+            590
+          ]
+        },
+        {
+          "component_id": 58,
+          "pixels": 492,
+          "bbox_xyxy": [
+            912,
+            564,
+            940,
+            592
+          ]
+        },
+        {
+          "component_id": 59,
+          "pixels": 492,
+          "bbox_xyxy": [
+            826,
+            572,
+            854,
+            600
+          ]
+        },
+        {
+          "component_id": 60,
+          "pixels": 2428,
+          "bbox_xyxy": [
+            252,
+            588,
+            322,
+            656
+          ]
+        },
+        {
+          "component_id": 61,
+          "pixels": 1004,
+          "bbox_xyxy": [
+            576,
+            622,
+            612,
+            660
+          ]
+        },
+        {
+          "component_id": 62,
+          "pixels": 968,
+          "bbox_xyxy": [
+            300,
+            642,
+            348,
+            688
+          ]
+        },
+        {
+          "component_id": 63,
+          "pixels": 496,
+          "bbox_xyxy": [
+            1224,
+            642,
+            1252,
+            670
+          ]
+        },
+        {
+          "component_id": 64,
+          "pixels": 800,
+          "bbox_xyxy": [
+            722,
+            650,
+            756,
+            684
+          ]
+        },
+        {
+          "component_id": 65,
+          "pixels": 496,
+          "bbox_xyxy": [
+            548,
+            652,
+            576,
+            680
+          ]
+        },
+        {
+          "component_id": 66,
+          "pixels": 1452,
+          "bbox_xyxy": [
+            754,
+            662,
+            798,
+            738
+          ]
+        },
+        {
+          "component_id": 67,
+          "pixels": 492,
+          "bbox_xyxy": [
+            188,
+            664,
+            216,
+            692
+          ]
+        },
+        {
+          "component_id": 68,
+          "pixels": 1072,
+          "bbox_xyxy": [
+            458,
+            664,
+            500,
+            700
+          ]
+        },
+        {
+          "component_id": 69,
+          "pixels": 480,
+          "bbox_xyxy": [
+            1254,
+            676,
+            1280,
+            704
+          ]
+        },
+        {
+          "component_id": 70,
+          "pixels": 484,
+          "bbox_xyxy": [
+            350,
+            682,
+            378,
+            710
+          ]
+        },
+        {
+          "component_id": 71,
+          "pixels": 488,
+          "bbox_xyxy": [
+            616,
+            684,
+            644,
+            712
+          ]
+        },
+        {
+          "component_id": 72,
+          "pixels": 760,
+          "bbox_xyxy": [
+            498,
+            698,
+            532,
+            726
+          ]
+        },
+        {
+          "component_id": 73,
+          "pixels": 1684,
+          "bbox_xyxy": [
+            640,
+            698,
+            688,
+            760
+          ]
+        },
+        {
+          "component_id": 74,
+          "pixels": 496,
+          "bbox_xyxy": [
+            228,
+            708,
+            256,
+            736
+          ]
+        },
+        {
+          "component_id": 75,
+          "pixels": 876,
+          "bbox_xyxy": [
+            1232,
+            710,
+            1274,
+            752
+          ]
+        },
+        {
+          "component_id": 76,
+          "pixels": 1240,
+          "bbox_xyxy": [
+            946,
+            714,
+            988,
+            758
+          ]
+        },
+        {
+          "component_id": 77,
+          "pixels": 836,
+          "bbox_xyxy": [
+            376,
+            720,
+            412,
+            760
+          ]
+        },
+        {
+          "component_id": 78,
+          "pixels": 492,
+          "bbox_xyxy": [
+            78,
+            742,
+            106,
+            770
+          ]
+        },
+        {
+          "component_id": 79,
+          "pixels": 1812,
+          "bbox_xyxy": [
+            806,
+            754,
+            864,
+            824
+          ]
+        },
+        {
+          "component_id": 80,
+          "pixels": 1884,
+          "bbox_xyxy": [
+            980,
+            762,
+            1040,
+            828
+          ]
+        },
+        {
+          "component_id": 81,
+          "pixels": 492,
+          "bbox_xyxy": [
+            1096,
+            776,
+            1124,
+            804
+          ]
+        },
+        {
+          "component_id": 82,
+          "pixels": 904,
+          "bbox_xyxy": [
+            698,
+            786,
+            736,
+            834
+          ]
+        },
+        {
+          "component_id": 83,
+          "pixels": 492,
+          "bbox_xyxy": [
+            340,
+            796,
+            368,
+            824
+          ]
+        },
+        {
+          "component_id": 84,
+          "pixels": 2228,
+          "bbox_xyxy": [
+            1040,
+            804,
+            1100,
+            914
+          ]
+        },
+        {
+          "component_id": 85,
+          "pixels": 492,
+          "bbox_xyxy": [
+            6,
+            812,
+            34,
+            840
+          ]
+        },
+        {
+          "component_id": 86,
+          "pixels": 916,
+          "bbox_xyxy": [
+            300,
+            814,
+            342,
+            858
+          ]
+        },
+        {
+          "component_id": 87,
+          "pixels": 488,
+          "bbox_xyxy": [
+            132,
+            824,
+            160,
+            852
+          ]
+        },
+        {
+          "component_id": 88,
+          "pixels": 484,
+          "bbox_xyxy": [
+            456,
+            824,
+            484,
+            852
+          ]
+        },
+        {
+          "component_id": 89,
+          "pixels": 496,
+          "bbox_xyxy": [
+            860,
+            824,
+            888,
+            852
+          ]
+        },
+        {
+          "component_id": 90,
+          "pixels": 928,
+          "bbox_xyxy": [
+            732,
+            832,
+            770,
+            880
+          ]
+        },
+        {
+          "component_id": 91,
+          "pixels": 928,
+          "bbox_xyxy": [
+            884,
+            852,
+            924,
+            900
+          ]
+        },
+        {
+          "component_id": 92,
+          "pixels": 484,
+          "bbox_xyxy": [
+            272,
+            854,
+            300,
+            882
+          ]
+        },
+        {
+          "component_id": 93,
+          "pixels": 1156,
+          "bbox_xyxy": [
+            368,
+            864,
+            412,
+            908
+          ]
+        },
+        {
+          "component_id": 94,
+          "pixels": 496,
+          "bbox_xyxy": [
+            660,
+            884,
+            688,
+            912
+          ]
+        },
+        {
+          "component_id": 95,
+          "pixels": 488,
+          "bbox_xyxy": [
+            218,
+            894,
+            246,
+            922
+          ]
+        },
+        {
+          "component_id": 96,
+          "pixels": 1264,
+          "bbox_xyxy": [
+            36,
+            896,
+            92,
+            952
+          ]
+        },
+        {
+          "component_id": 97,
+          "pixels": 848,
+          "bbox_xyxy": [
+            516,
+            898,
+            550,
+            940
+          ]
+        },
+        {
+          "component_id": 98,
+          "pixels": 484,
+          "bbox_xyxy": [
+            788,
+            900,
+            816,
+            928
+          ]
+        },
+        {
+          "component_id": 99,
+          "pixels": 248,
+          "bbox_xyxy": [
+            914,
+            900,
+            942,
+            914
+          ]
+        },
+        {
+          "component_id": 100,
+          "pixels": 844,
+          "bbox_xyxy": [
+            428,
+            908,
+            464,
+            946
+          ]
+        },
+        {
+          "component_id": 101,
+          "pixels": 492,
+          "bbox_xyxy": [
+            2,
+            920,
+            30,
+            948
+          ]
+        },
+        {
+          "component_id": 102,
+          "pixels": 1772,
+          "bbox_xyxy": [
+            920,
+            924,
+            994,
+            992
+          ]
+        },
+        {
+          "component_id": 103,
+          "pixels": 436,
+          "bbox_xyxy": [
+            1154,
+            924,
+            1182,
+            948
+          ]
+        },
+        {
+          "component_id": 104,
+          "pixels": 1228,
+          "bbox_xyxy": [
+            142,
+            926,
+            190,
+            978
+          ]
+        },
+        {
+          "component_id": 105,
+          "pixels": 976,
+          "bbox_xyxy": [
+            804,
+            928,
+            848,
+            978
+          ]
+        },
+        {
+          "component_id": 106,
+          "pixels": 1876,
+          "bbox_xyxy": [
+            260,
+            934,
+            340,
+            990
+          ]
+        },
+        {
+          "component_id": 107,
+          "pixels": 488,
+          "bbox_xyxy": [
+            1188,
+            962,
+            1216,
+            990
+          ]
+        },
+        {
+          "component_id": 108,
+          "pixels": 496,
+          "bbox_xyxy": [
+            368,
+            964,
+            396,
+            992
+          ]
+        },
+        {
+          "component_id": 109,
+          "pixels": 488,
+          "bbox_xyxy": [
+            722,
+            972,
+            750,
+            1000
+          ]
+        },
+        {
+          "component_id": 110,
+          "pixels": 492,
+          "bbox_xyxy": [
+            236,
+            988,
+            264,
+            1016
+          ]
+        },
+        {
+          "component_id": 111,
+          "pixels": 820,
+          "bbox_xyxy": [
+            984,
+            992,
+            1020,
+            1024
+          ]
+        },
+        {
+          "component_id": 112,
+          "pixels": 336,
+          "bbox_xyxy": [
+            1222,
+            1004,
+            1250,
+            1024
+          ]
+        }
+      ],
+      "diagnostic_path": ".bootstrap-test-tmp/ti3-a0-20260919-inspection/ESM3-219.png",
+      "diagnostic_sha256": "f2f5dc418caa091377726184b0012bfd0e747115b628c235ed72a5f1ce653e2c"
+    },
+    {
+      "asset_id": "ESM3:293",
+      "width": 1280,
+      "height": 1024,
+      "experimental_time_s": 319.78,
+      "native_chroma_counts": {
+        "8": 28634,
+        "16": 26797,
+        "20": 26365,
+        "32": 24877,
+        "64": 21502
+      },
+      "dominant_colored_uv": [
+        {
+          "u": 90,
+          "v": 241,
+          "count": 382
+        },
+        {
+          "u": 90,
+          "v": 240,
+          "count": 370
+        },
+        {
+          "u": 91,
+          "v": 240,
+          "count": 367
+        },
+        {
+          "u": 91,
+          "v": 241,
+          "count": 340
+        },
+        {
+          "u": 90,
+          "v": 239,
+          "count": 334
+        },
+        {
+          "u": 89,
+          "v": 240,
+          "count": 305
+        },
+        {
+          "u": 89,
+          "v": 241,
+          "count": 297
+        },
+        {
+          "u": 91,
+          "v": 239,
+          "count": 286
+        },
+        {
+          "u": 90,
+          "v": 242,
+          "count": 285
+        },
+        {
+          "u": 91,
+          "v": 242,
+          "count": 271
+        }
+      ],
+      "components_at_chroma20": [
+        {
+          "component_id": 1,
+          "pixels": 496,
+          "bbox_xyxy": [
+            460,
+            2,
+            488,
+            30
+          ]
+        },
+        {
+          "component_id": 2,
+          "pixels": 864,
+          "bbox_xyxy": [
+            334,
+            8,
+            378,
+            42
+          ]
+        },
+        {
+          "component_id": 3,
+          "pixels": 492,
+          "bbox_xyxy": [
+            1176,
+            18,
+            1204,
+            46
+          ]
+        },
+        {
+          "component_id": 4,
+          "pixels": 128,
+          "bbox_xyxy": [
+            98,
+            32,
+            112,
+            46
+          ]
+        },
+        {
+          "component_id": 5,
+          "pixels": 2440,
+          "bbox_xyxy": [
+            746,
+            32,
+            810,
+            114
+          ]
+        },
+        {
+          "component_id": 6,
+          "pixels": 324,
+          "bbox_xyxy": [
+            98,
+            34,
+            126,
+            60
+          ]
+        },
+        {
+          "component_id": 7,
+          "pixels": 428,
+          "bbox_xyxy": [
+            238,
+            36,
+            266,
+            62
+          ]
+        },
+        {
+          "component_id": 8,
+          "pixels": 4,
+          "bbox_xyxy": [
+            230,
+            40,
+            232,
+            42
+          ]
+        },
+        {
+          "component_id": 9,
+          "pixels": 952,
+          "bbox_xyxy": [
+            472,
+            50,
+            514,
+            100
+          ]
+        },
+        {
+          "component_id": 10,
+          "pixels": 488,
+          "bbox_xyxy": [
+            68,
+            54,
+            96,
+            82
+          ]
+        },
+        {
+          "component_id": 11,
+          "pixels": 980,
+          "bbox_xyxy": [
+            246,
+            74,
+            296,
+            120
+          ]
+        },
+        {
+          "component_id": 12,
+          "pixels": 1080,
+          "bbox_xyxy": [
+            736,
+            80,
+            780,
+            124
+          ]
+        },
+        {
+          "component_id": 13,
+          "pixels": 1272,
+          "bbox_xyxy": [
+            0,
+            82,
+            52,
+            142
+          ]
+        },
+        {
+          "component_id": 14,
+          "pixels": 488,
+          "bbox_xyxy": [
+            372,
+            88,
+            400,
+            116
+          ]
+        },
+        {
+          "component_id": 15,
+          "pixels": 484,
+          "bbox_xyxy": [
+            448,
+            88,
+            476,
+            116
+          ]
+        },
+        {
+          "component_id": 16,
+          "pixels": 960,
+          "bbox_xyxy": [
+            310,
+            112,
+            342,
+            166
+          ]
+        },
+        {
+          "component_id": 17,
+          "pixels": 2744,
+          "bbox_xyxy": [
+            812,
+            116,
+            902,
+            222
+          ]
+        },
+        {
+          "component_id": 18,
+          "pixels": 488,
+          "bbox_xyxy": [
+            402,
+            118,
+            430,
+            146
+          ]
+        },
+        {
+          "component_id": 19,
+          "pixels": 488,
+          "bbox_xyxy": [
+            490,
+            134,
+            518,
+            162
+          ]
+        },
+        {
+          "component_id": 20,
+          "pixels": 500,
+          "bbox_xyxy": [
+            74,
+            152,
+            102,
+            180
+          ]
+        },
+        {
+          "component_id": 21,
+          "pixels": 496,
+          "bbox_xyxy": [
+            338,
+            160,
+            366,
+            188
+          ]
+        },
+        {
+          "component_id": 22,
+          "pixels": 492,
+          "bbox_xyxy": [
+            34,
+            184,
+            62,
+            212
+          ]
+        },
+        {
+          "component_id": 23,
+          "pixels": 492,
+          "bbox_xyxy": [
+            156,
+            186,
+            184,
+            214
+          ]
+        },
+        {
+          "component_id": 24,
+          "pixels": 900,
+          "bbox_xyxy": [
+            360,
+            198,
+            404,
+            240
+          ]
+        },
+        {
+          "component_id": 25,
+          "pixels": 2080,
+          "bbox_xyxy": [
+            540,
+            204,
+            610,
+            258
+          ]
+        },
+        {
+          "component_id": 26,
+          "pixels": 976,
+          "bbox_xyxy": [
+            1192,
+            204,
+            1242,
+            250
+          ]
+        },
+        {
+          "component_id": 27,
+          "pixels": 504,
+          "bbox_xyxy": [
+            1086,
+            214,
+            1114,
+            242
+          ]
+        },
+        {
+          "component_id": 28,
+          "pixels": 892,
+          "bbox_xyxy": [
+            892,
+            230,
+            938,
+            268
+          ]
+        },
+        {
+          "component_id": 29,
+          "pixels": 496,
+          "bbox_xyxy": [
+            406,
+            244,
+            434,
+            272
+          ]
+        },
+        {
+          "component_id": 30,
+          "pixels": 3584,
+          "bbox_xyxy": [
+            568,
+            258,
+            682,
+            382
+          ]
+        },
+        {
+          "component_id": 31,
+          "pixels": 488,
+          "bbox_xyxy": [
+            1146,
+            266,
+            1174,
+            294
+          ]
+        },
+        {
+          "component_id": 32,
+          "pixels": 1868,
+          "bbox_xyxy": [
+            906,
+            276,
+            966,
+            334
+          ]
+        },
+        {
+          "component_id": 33,
+          "pixels": 488,
+          "bbox_xyxy": [
+            42,
+            286,
+            70,
+            314
+          ]
+        },
+        {
+          "component_id": 34,
+          "pixels": 908,
+          "bbox_xyxy": [
+            1094,
+            292,
+            1142,
+            326
+          ]
+        },
+        {
+          "component_id": 35,
+          "pixels": 2152,
+          "bbox_xyxy": [
+            442,
+            308,
+            502,
+            382
+          ]
+        },
+        {
+          "component_id": 36,
+          "pixels": 500,
+          "bbox_xyxy": [
+            1208,
+            314,
+            1236,
+            342
+          ]
+        },
+        {
+          "component_id": 37,
+          "pixels": 1272,
+          "bbox_xyxy": [
+            962,
+            322,
+            1004,
+            382
+          ]
+        },
+        {
+          "component_id": 38,
+          "pixels": 500,
+          "bbox_xyxy": [
+            1064,
+            326,
+            1092,
+            354
+          ]
+        },
+        {
+          "component_id": 39,
+          "pixels": 852,
+          "bbox_xyxy": [
+            92,
+            338,
+            124,
+            382
+          ]
+        },
+        {
+          "component_id": 40,
+          "pixels": 980,
+          "bbox_xyxy": [
+            1128,
+            374,
+            1184,
+            414
+          ]
+        },
+        {
+          "component_id": 41,
+          "pixels": 2764,
+          "bbox_xyxy": [
+            680,
+            378,
+            766,
+            492
+          ]
+        },
+        {
+          "component_id": 42,
+          "pixels": 492,
+          "bbox_xyxy": [
+            1026,
+            392,
+            1054,
+            420
+          ]
+        },
+        {
+          "component_id": 43,
+          "pixels": 4632,
+          "bbox_xyxy": [
+            128,
+            394,
+            248,
+            550
+          ]
+        },
+        {
+          "component_id": 44,
+          "pixels": 988,
+          "bbox_xyxy": [
+            790,
+            396,
+            838,
+            444
+          ]
+        },
+        {
+          "component_id": 45,
+          "pixels": 492,
+          "bbox_xyxy": [
+            542,
+            408,
+            570,
+            436
+          ]
+        },
+        {
+          "component_id": 46,
+          "pixels": 1520,
+          "bbox_xyxy": [
+            1218,
+            422,
+            1280,
+            478
+          ]
+        },
+        {
+          "component_id": 47,
+          "pixels": 852,
+          "bbox_xyxy": [
+            1048,
+            432,
+            1092,
+            466
+          ]
+        },
+        {
+          "component_id": 48,
+          "pixels": 492,
+          "bbox_xyxy": [
+            46,
+            460,
+            74,
+            488
+          ]
+        },
+        {
+          "component_id": 49,
+          "pixels": 492,
+          "bbox_xyxy": [
+            594,
+            476,
+            622,
+            504
+          ]
+        },
+        {
+          "component_id": 50,
+          "pixels": 1340,
+          "bbox_xyxy": [
+            462,
+            496,
+            512,
+            550
+          ]
+        },
+        {
+          "component_id": 51,
+          "pixels": 488,
+          "bbox_xyxy": [
+            1100,
+            512,
+            1128,
+            540
+          ]
+        },
+        {
+          "component_id": 52,
+          "pixels": 3788,
+          "bbox_xyxy": [
+            622,
+            514,
+            726,
+            648
+          ]
+        },
+        {
+          "component_id": 53,
+          "pixels": 500,
+          "bbox_xyxy": [
+            1006,
+            514,
+            1034,
+            542
+          ]
+        },
+        {
+          "component_id": 54,
+          "pixels": 876,
+          "bbox_xyxy": [
+            930,
+            518,
+            974,
+            560
+          ]
+        },
+        {
+          "component_id": 55,
+          "pixels": 484,
+          "bbox_xyxy": [
+            352,
+            520,
+            380,
+            548
+          ]
+        },
+        {
+          "component_id": 56,
+          "pixels": 492,
+          "bbox_xyxy": [
+            986,
+            536,
+            1014,
+            564
+          ]
+        },
+        {
+          "component_id": 57,
+          "pixels": 492,
+          "bbox_xyxy": [
+            330,
+            546,
+            358,
+            574
+          ]
+        },
+        {
+          "component_id": 58,
+          "pixels": 496,
+          "bbox_xyxy": [
+            426,
+            562,
+            454,
+            590
+          ]
+        },
+        {
+          "component_id": 59,
+          "pixels": 492,
+          "bbox_xyxy": [
+            912,
+            564,
+            940,
+            592
+          ]
+        },
+        {
+          "component_id": 60,
+          "pixels": 492,
+          "bbox_xyxy": [
+            826,
+            572,
+            854,
+            600
+          ]
+        },
+        {
+          "component_id": 61,
+          "pixels": 2464,
+          "bbox_xyxy": [
+            252,
+            588,
+            322,
+            656
+          ]
+        },
+        {
+          "component_id": 62,
+          "pixels": 996,
+          "bbox_xyxy": [
+            576,
+            622,
+            612,
+            660
+          ]
+        },
+        {
+          "component_id": 63,
+          "pixels": 968,
+          "bbox_xyxy": [
+            300,
+            642,
+            348,
+            688
+          ]
+        },
+        {
+          "component_id": 64,
+          "pixels": 488,
+          "bbox_xyxy": [
+            1224,
+            642,
+            1252,
+            670
+          ]
+        },
+        {
+          "component_id": 65,
+          "pixels": 796,
+          "bbox_xyxy": [
+            722,
+            650,
+            756,
+            684
+          ]
+        },
+        {
+          "component_id": 66,
+          "pixels": 484,
+          "bbox_xyxy": [
+            548,
+            652,
+            576,
+            680
+          ]
+        },
+        {
+          "component_id": 67,
+          "pixels": 1444,
+          "bbox_xyxy": [
+            754,
+            662,
+            798,
+            738
+          ]
+        },
+        {
+          "component_id": 68,
+          "pixels": 492,
+          "bbox_xyxy": [
+            188,
+            664,
+            216,
+            692
+          ]
+        },
+        {
+          "component_id": 69,
+          "pixels": 1076,
+          "bbox_xyxy": [
+            458,
+            664,
+            500,
+            700
+          ]
+        },
+        {
+          "component_id": 70,
+          "pixels": 488,
+          "bbox_xyxy": [
+            1254,
+            676,
+            1280,
+            704
+          ]
+        },
+        {
+          "component_id": 71,
+          "pixels": 488,
+          "bbox_xyxy": [
+            350,
+            682,
+            378,
+            710
+          ]
+        },
+        {
+          "component_id": 72,
+          "pixels": 484,
+          "bbox_xyxy": [
+            616,
+            684,
+            644,
+            712
+          ]
+        },
+        {
+          "component_id": 73,
+          "pixels": 760,
+          "bbox_xyxy": [
+            498,
+            698,
+            532,
+            726
+          ]
+        },
+        {
+          "component_id": 74,
+          "pixels": 1692,
+          "bbox_xyxy": [
+            640,
+            698,
+            688,
+            760
+          ]
+        },
+        {
+          "component_id": 75,
+          "pixels": 496,
+          "bbox_xyxy": [
+            228,
+            708,
+            256,
+            736
+          ]
+        },
+        {
+          "component_id": 76,
+          "pixels": 876,
+          "bbox_xyxy": [
+            1232,
+            710,
+            1274,
+            752
+          ]
+        },
+        {
+          "component_id": 77,
+          "pixels": 1224,
+          "bbox_xyxy": [
+            946,
+            714,
+            988,
+            758
+          ]
+        },
+        {
+          "component_id": 78,
+          "pixels": 844,
+          "bbox_xyxy": [
+            376,
+            720,
+            412,
+            760
+          ]
+        },
+        {
+          "component_id": 79,
+          "pixels": 492,
+          "bbox_xyxy": [
+            78,
+            742,
+            106,
+            770
+          ]
+        },
+        {
+          "component_id": 80,
+          "pixels": 1812,
+          "bbox_xyxy": [
+            806,
+            754,
+            864,
+            824
+          ]
+        },
+        {
+          "component_id": 81,
+          "pixels": 1876,
+          "bbox_xyxy": [
+            980,
+            762,
+            1040,
+            828
+          ]
+        },
+        {
+          "component_id": 82,
+          "pixels": 488,
+          "bbox_xyxy": [
+            1096,
+            776,
+            1124,
+            804
+          ]
+        },
+        {
+          "component_id": 83,
+          "pixels": 900,
+          "bbox_xyxy": [
+            698,
+            786,
+            736,
+            834
+          ]
+        },
+        {
+          "component_id": 84,
+          "pixels": 488,
+          "bbox_xyxy": [
+            340,
+            796,
+            368,
+            824
+          ]
+        },
+        {
+          "component_id": 85,
+          "pixels": 2236,
+          "bbox_xyxy": [
+            1040,
+            804,
+            1100,
+            914
+          ]
+        },
+        {
+          "component_id": 86,
+          "pixels": 484,
+          "bbox_xyxy": [
+            6,
+            812,
+            34,
+            840
+          ]
+        },
+        {
+          "component_id": 87,
+          "pixels": 920,
+          "bbox_xyxy": [
+            300,
+            814,
+            342,
+            858
+          ]
+        },
+        {
+          "component_id": 88,
+          "pixels": 492,
+          "bbox_xyxy": [
+            132,
+            824,
+            160,
+            852
+          ]
+        },
+        {
+          "component_id": 89,
+          "pixels": 480,
+          "bbox_xyxy": [
+            456,
+            824,
+            484,
+            852
+          ]
+        },
+        {
+          "component_id": 90,
+          "pixels": 492,
+          "bbox_xyxy": [
+            860,
+            824,
+            888,
+            852
+          ]
+        },
+        {
+          "component_id": 91,
+          "pixels": 932,
+          "bbox_xyxy": [
+            732,
+            832,
+            770,
+            880
+          ]
+        },
+        {
+          "component_id": 92,
+          "pixels": 928,
+          "bbox_xyxy": [
+            884,
+            852,
+            924,
+            900
+          ]
+        },
+        {
+          "component_id": 93,
+          "pixels": 484,
+          "bbox_xyxy": [
+            272,
+            854,
+            300,
+            882
+          ]
+        },
+        {
+          "component_id": 94,
+          "pixels": 1156,
+          "bbox_xyxy": [
+            368,
+            864,
+            412,
+            908
+          ]
+        },
+        {
+          "component_id": 95,
+          "pixels": 488,
+          "bbox_xyxy": [
+            660,
+            884,
+            688,
+            912
+          ]
+        },
+        {
+          "component_id": 96,
+          "pixels": 496,
+          "bbox_xyxy": [
+            218,
+            894,
+            246,
+            922
+          ]
+        },
+        {
+          "component_id": 97,
+          "pixels": 1256,
+          "bbox_xyxy": [
+            36,
+            896,
+            92,
+            952
+          ]
+        },
+        {
+          "component_id": 98,
+          "pixels": 844,
+          "bbox_xyxy": [
+            516,
+            898,
+            550,
+            940
+          ]
+        },
+        {
+          "component_id": 99,
+          "pixels": 496,
+          "bbox_xyxy": [
+            788,
+            900,
+            816,
+            928
+          ]
+        },
+        {
+          "component_id": 100,
+          "pixels": 248,
+          "bbox_xyxy": [
+            914,
+            900,
+            942,
+            914
+          ]
+        },
+        {
+          "component_id": 101,
+          "pixels": 852,
+          "bbox_xyxy": [
+            428,
+            908,
+            464,
+            946
+          ]
+        },
+        {
+          "component_id": 102,
+          "pixels": 492,
+          "bbox_xyxy": [
+            2,
+            920,
+            30,
+            948
+          ]
+        },
+        {
+          "component_id": 103,
+          "pixels": 1756,
+          "bbox_xyxy": [
+            920,
+            924,
+            994,
+            992
+          ]
+        },
+        {
+          "component_id": 104,
+          "pixels": 432,
+          "bbox_xyxy": [
+            1154,
+            924,
+            1182,
+            948
+          ]
+        },
+        {
+          "component_id": 105,
+          "pixels": 1224,
+          "bbox_xyxy": [
+            142,
+            926,
+            190,
+            978
+          ]
+        },
+        {
+          "component_id": 106,
+          "pixels": 976,
+          "bbox_xyxy": [
+            804,
+            928,
+            848,
+            978
+          ]
+        },
+        {
+          "component_id": 107,
+          "pixels": 1876,
+          "bbox_xyxy": [
+            260,
+            934,
+            340,
+            990
+          ]
+        },
+        {
+          "component_id": 108,
+          "pixels": 484,
+          "bbox_xyxy": [
+            1188,
+            962,
+            1216,
+            990
+          ]
+        },
+        {
+          "component_id": 109,
+          "pixels": 500,
+          "bbox_xyxy": [
+            368,
+            964,
+            396,
+            992
+          ]
+        },
+        {
+          "component_id": 110,
+          "pixels": 496,
+          "bbox_xyxy": [
+            722,
+            972,
+            750,
+            1000
+          ]
+        },
+        {
+          "component_id": 111,
+          "pixels": 488,
+          "bbox_xyxy": [
+            236,
+            988,
+            264,
+            1016
+          ]
+        },
+        {
+          "component_id": 112,
+          "pixels": 816,
+          "bbox_xyxy": [
+            984,
+            992,
+            1020,
+            1024
+          ]
+        },
+        {
+          "component_id": 113,
+          "pixels": 336,
+          "bbox_xyxy": [
+            1222,
+            1004,
+            1250,
+            1024
+          ]
+        }
+      ],
+      "diagnostic_path": ".bootstrap-test-tmp/ti3-a0-20260919-inspection/ESM3-293.png",
+      "diagnostic_sha256": "d6a59e6e5f7ce32b6588be9d929ecb067cf0fefca8b6f8b9e124d5404987729d"
+    },
+    {
+      "asset_id": "ESM6:0",
+      "width": 1280,
+      "height": 1012,
+      "experimental_time_s": -34.22,
+      "native_chroma_counts": {
+        "8": 69,
+        "16": 0,
+        "20": 0,
+        "32": 0,
+        "64": 0
+      },
+      "dominant_colored_uv": [],
+      "components_at_chroma20": [],
+      "diagnostic_path": ".bootstrap-test-tmp/ti3-a0-20260919-inspection/ESM6-0.png",
+      "diagnostic_sha256": "b1811deb365eefb0e30524e656a87508101f9bad2c9f932d0cec6791614a473a"
+    },
+    {
+      "asset_id": "ESM6:98",
+      "width": 1280,
+      "height": 1012,
+      "experimental_time_s": 81.42,
+      "native_chroma_counts": {
+        "8": 1343,
+        "16": 1126,
+        "20": 1101,
+        "32": 1029,
+        "64": 858
+      },
+      "dominant_colored_uv": [
+        {
+          "u": 91,
+          "v": 239,
+          "count": 14
+        },
+        {
+          "u": 91,
+          "v": 242,
+          "count": 14
+        },
+        {
+          "u": 90,
+          "v": 240,
+          "count": 12
+        },
+        {
+          "u": 89,
+          "v": 242,
+          "count": 12
+        },
+        {
+          "u": 91,
+          "v": 241,
+          "count": 12
+        },
+        {
+          "u": 90,
+          "v": 241,
+          "count": 11
+        },
+        {
+          "u": 88,
+          "v": 241,
+          "count": 11
+        },
+        {
+          "u": 88,
+          "v": 243,
+          "count": 10
+        },
+        {
+          "u": 89,
+          "v": 239,
+          "count": 10
+        },
+        {
+          "u": 93,
+          "v": 240,
+          "count": 10
+        }
+      ],
+      "components_at_chroma20": [
+        {
+          "component_id": 1,
+          "pixels": 496,
+          "bbox_xyxy": [
+            306,
+            36,
+            334,
+            64
+          ]
+        },
+        {
+          "component_id": 2,
+          "pixels": 484,
+          "bbox_xyxy": [
+            954,
+            112,
+            982,
+            140
+          ]
+        },
+        {
+          "component_id": 3,
+          "pixels": 492,
+          "bbox_xyxy": [
+            632,
+            226,
+            660,
+            254
+          ]
+        },
+        {
+          "component_id": 4,
+          "pixels": 496,
+          "bbox_xyxy": [
+            884,
+            280,
+            912,
+            308
+          ]
+        },
+        {
+          "component_id": 5,
+          "pixels": 504,
+          "bbox_xyxy": [
+            1142,
+            354,
+            1170,
+            382
+          ]
+        },
+        {
+          "component_id": 6,
+          "pixels": 480,
+          "bbox_xyxy": [
+            560,
+            402,
+            588,
+            430
+          ]
+        },
+        {
+          "component_id": 7,
+          "pixels": 492,
+          "bbox_xyxy": [
+            444,
+            678,
+            472,
+            706
+          ]
+        },
+        {
+          "component_id": 8,
+          "pixels": 484,
+          "bbox_xyxy": [
+            1126,
+            814,
+            1154,
+            842
+          ]
+        },
+        {
+          "component_id": 9,
+          "pixels": 476,
+          "bbox_xyxy": [
+            1092,
+            888,
+            1120,
+            914
+          ]
+        }
+      ],
+      "diagnostic_path": ".bootstrap-test-tmp/ti3-a0-20260919-inspection/ESM6-98.png",
+      "diagnostic_sha256": "b7db2bc78197fa60a7c0c8096c58e08cf9fad85082a2bd04b6d4ae7c54404b09"
+    },
+    {
+      "asset_id": "ESM6:197",
+      "width": 1280,
+      "height": 1012,
+      "experimental_time_s": 198.24,
+      "native_chroma_counts": {
+        "8": 2550,
+        "16": 2240,
+        "20": 2188,
+        "32": 2053,
+        "64": 1728
+      },
+      "dominant_colored_uv": [
+        {
+          "u": 89,
+          "v": 241,
+          "count": 30
+        },
+        {
+          "u": 89,
+          "v": 242,
+          "count": 29
+        },
+        {
+          "u": 90,
+          "v": 240,
+          "count": 29
+        },
+        {
+          "u": 91,
+          "v": 240,
+          "count": 29
+        },
+        {
+          "u": 91,
+          "v": 242,
+          "count": 28
+        },
+        {
+          "u": 91,
+          "v": 239,
+          "count": 26
+        },
+        {
+          "u": 90,
+          "v": 242,
+          "count": 26
+        },
+        {
+          "u": 88,
+          "v": 242,
+          "count": 23
+        },
+        {
+          "u": 89,
+          "v": 240,
+          "count": 22
+        },
+        {
+          "u": 91,
+          "v": 241,
+          "count": 21
+        }
+      ],
+      "components_at_chroma20": [
+        {
+          "component_id": 1,
+          "pixels": 488,
+          "bbox_xyxy": [
+            306,
+            36,
+            334,
+            64
+          ]
+        },
+        {
+          "component_id": 2,
+          "pixels": 484,
+          "bbox_xyxy": [
+            954,
+            112,
+            982,
+            140
+          ]
+        },
+        {
+          "component_id": 3,
+          "pixels": 488,
+          "bbox_xyxy": [
+            632,
+            226,
+            660,
+            254
+          ]
+        },
+        {
+          "component_id": 4,
+          "pixels": 488,
+          "bbox_xyxy": [
+            612,
+            274,
+            640,
+            302
+          ]
+        },
+        {
+          "component_id": 5,
+          "pixels": 488,
+          "bbox_xyxy": [
+            884,
+            280,
+            912,
+            308
+          ]
+        },
+        {
+          "component_id": 6,
+          "pixels": 492,
+          "bbox_xyxy": [
+            1142,
+            354,
+            1170,
+            382
+          ]
+        },
+        {
+          "component_id": 7,
+          "pixels": 480,
+          "bbox_xyxy": [
+            560,
+            402,
+            588,
+            430
+          ]
+        },
+        {
+          "component_id": 8,
+          "pixels": 484,
+          "bbox_xyxy": [
+            482,
+            586,
+            510,
+            614
+          ]
+        },
+        {
+          "component_id": 9,
+          "pixels": 492,
+          "bbox_xyxy": [
+            1218,
+            596,
+            1246,
+            624
+          ]
+        },
+        {
+          "component_id": 10,
+          "pixels": 484,
+          "bbox_xyxy": [
+            82,
+            622,
+            110,
+            650
+          ]
+        },
+        {
+          "component_id": 11,
+          "pixels": 488,
+          "bbox_xyxy": [
+            444,
+            678,
+            472,
+            706
+          ]
+        },
+        {
+          "component_id": 12,
+          "pixels": 496,
+          "bbox_xyxy": [
+            16,
+            732,
+            44,
+            760
+          ]
+        },
+        {
+          "component_id": 13,
+          "pixels": 488,
+          "bbox_xyxy": [
+            210,
+            750,
+            238,
+            778
+          ]
+        },
+        {
+          "component_id": 14,
+          "pixels": 488,
+          "bbox_xyxy": [
+            36,
+            762,
+            64,
+            790
+          ]
+        },
+        {
+          "component_id": 15,
+          "pixels": 484,
+          "bbox_xyxy": [
+            708,
+            786,
+            736,
+            814
+          ]
+        },
+        {
+          "component_id": 16,
+          "pixels": 488,
+          "bbox_xyxy": [
+            1126,
+            814,
+            1154,
+            842
+          ]
+        },
+        {
+          "component_id": 17,
+          "pixels": 464,
+          "bbox_xyxy": [
+            1092,
+            888,
+            1120,
+            914
+          ]
+        },
+        {
+          "component_id": 18,
+          "pixels": 488,
+          "bbox_xyxy": [
+            668,
+            912,
+            696,
+            940
+          ]
+        }
+      ],
+      "diagnostic_path": ".bootstrap-test-tmp/ti3-a0-20260919-inspection/ESM6-197.png",
+      "diagnostic_sha256": "7eb885405ce8c891ea93848e7fe6bafce623bce63e89afca6697098d518e8686"
+    },
+    {
+      "asset_id": "ESM6:295",
+      "width": 1280,
+      "height": 1012,
+      "experimental_time_s": 313.88,
+      "native_chroma_counts": {
+        "8": 2519,
+        "16": 2232,
+        "20": 2195,
+        "32": 2047,
+        "64": 1735
+      },
+      "dominant_colored_uv": [
+        {
+          "u": 90,
+          "v": 241,
+          "count": 37
+        },
+        {
+          "u": 91,
+          "v": 241,
+          "count": 31
+        },
+        {
+          "u": 91,
+          "v": 239,
+          "count": 27
+        },
+        {
+          "u": 90,
+          "v": 240,
+          "count": 27
+        },
+        {
+          "u": 89,
+          "v": 241,
+          "count": 26
+        },
+        {
+          "u": 89,
+          "v": 242,
+          "count": 26
+        },
+        {
+          "u": 89,
+          "v": 239,
+          "count": 22
+        },
+        {
+          "u": 91,
+          "v": 242,
+          "count": 22
+        },
+        {
+          "u": 90,
+          "v": 239,
+          "count": 22
+        },
+        {
+          "u": 92,
+          "v": 240,
+          "count": 22
+        }
+      ],
+      "components_at_chroma20": [
+        {
+          "component_id": 1,
+          "pixels": 492,
+          "bbox_xyxy": [
+            306,
+            36,
+            334,
+            64
+          ]
+        },
+        {
+          "component_id": 2,
+          "pixels": 488,
+          "bbox_xyxy": [
+            954,
+            112,
+            982,
+            140
+          ]
+        },
+        {
+          "component_id": 3,
+          "pixels": 488,
+          "bbox_xyxy": [
+            632,
+            226,
+            660,
+            254
+          ]
+        },
+        {
+          "component_id": 4,
+          "pixels": 488,
+          "bbox_xyxy": [
+            612,
+            274,
+            640,
+            302
+          ]
+        },
+        {
+          "component_id": 5,
+          "pixels": 488,
+          "bbox_xyxy": [
+            884,
+            280,
+            912,
+            308
+          ]
+        },
+        {
+          "component_id": 6,
+          "pixels": 488,
+          "bbox_xyxy": [
+            1142,
+            354,
+            1170,
+            382
+          ]
+        },
+        {
+          "component_id": 7,
+          "pixels": 492,
+          "bbox_xyxy": [
+            560,
+            402,
+            588,
+            430
+          ]
+        },
+        {
+          "component_id": 8,
+          "pixels": 492,
+          "bbox_xyxy": [
+            482,
+            586,
+            510,
+            614
+          ]
+        },
+        {
+          "component_id": 9,
+          "pixels": 492,
+          "bbox_xyxy": [
+            1218,
+            596,
+            1246,
+            624
+          ]
+        },
+        {
+          "component_id": 10,
+          "pixels": 488,
+          "bbox_xyxy": [
+            82,
+            622,
+            110,
+            650
+          ]
+        },
+        {
+          "component_id": 11,
+          "pixels": 488,
+          "bbox_xyxy": [
+            444,
+            678,
+            472,
+            706
+          ]
+        },
+        {
+          "component_id": 12,
+          "pixels": 484,
+          "bbox_xyxy": [
+            16,
+            732,
+            44,
+            760
+          ]
+        },
+        {
+          "component_id": 13,
+          "pixels": 484,
+          "bbox_xyxy": [
+            210,
+            750,
+            238,
+            778
+          ]
+        },
+        {
+          "component_id": 14,
+          "pixels": 492,
+          "bbox_xyxy": [
+            36,
+            762,
+            64,
+            790
+          ]
+        },
+        {
+          "component_id": 15,
+          "pixels": 488,
+          "bbox_xyxy": [
+            708,
+            786,
+            736,
+            814
+          ]
+        },
+        {
+          "component_id": 16,
+          "pixels": 492,
+          "bbox_xyxy": [
+            1126,
+            814,
+            1154,
+            842
+          ]
+        },
+        {
+          "component_id": 17,
+          "pixels": 468,
+          "bbox_xyxy": [
+            1092,
+            888,
+            1120,
+            914
+          ]
+        },
+        {
+          "component_id": 18,
+          "pixels": 488,
+          "bbox_xyxy": [
+            668,
+            912,
+            696,
+            940
+          ]
+        }
+      ],
+      "diagnostic_path": ".bootstrap-test-tmp/ti3-a0-20260919-inspection/ESM6-295.png",
+      "diagnostic_sha256": "9d4a0cc5392443cfce49c5b99eb3663496fc69ed08072b2b3c2896abb6f9d0fe"
+    },
+    {
+      "asset_id": "ESM6:394",
+      "width": 1280,
+      "height": 1012,
+      "experimental_time_s": 430.7,
+      "native_chroma_counts": {
+        "8": 2537,
+        "16": 2238,
+        "20": 2197,
+        "32": 2051,
+        "64": 1725
+      },
+      "dominant_colored_uv": [
+        {
+          "u": 90,
+          "v": 239,
+          "count": 31
+        },
+        {
+          "u": 89,
+          "v": 240,
+          "count": 28
+        },
+        {
+          "u": 89,
+          "v": 242,
+          "count": 26
+        },
+        {
+          "u": 92,
+          "v": 239,
+          "count": 25
+        },
+        {
+          "u": 90,
+          "v": 241,
+          "count": 24
+        },
+        {
+          "u": 89,
+          "v": 239,
+          "count": 24
+        },
+        {
+          "u": 92,
+          "v": 241,
+          "count": 24
+        },
+        {
+          "u": 90,
+          "v": 243,
+          "count": 23
+        },
+        {
+          "u": 91,
+          "v": 240,
+          "count": 21
+        },
+        {
+          "u": 90,
+          "v": 238,
+          "count": 20
+        }
+      ],
+      "components_at_chroma20": [
+        {
+          "component_id": 1,
+          "pixels": 488,
+          "bbox_xyxy": [
+            306,
+            36,
+            334,
+            64
+          ]
+        },
+        {
+          "component_id": 2,
+          "pixels": 492,
+          "bbox_xyxy": [
+            954,
+            112,
+            982,
+            140
+          ]
+        },
+        {
+          "component_id": 3,
+          "pixels": 492,
+          "bbox_xyxy": [
+            632,
+            226,
+            660,
+            254
+          ]
+        },
+        {
+          "component_id": 4,
+          "pixels": 484,
+          "bbox_xyxy": [
+            612,
+            274,
+            640,
+            302
+          ]
+        },
+        {
+          "component_id": 5,
+          "pixels": 484,
+          "bbox_xyxy": [
+            884,
+            280,
+            912,
+            308
+          ]
+        },
+        {
+          "component_id": 6,
+          "pixels": 496,
+          "bbox_xyxy": [
+            1142,
+            354,
+            1170,
+            382
+          ]
+        },
+        {
+          "component_id": 7,
+          "pixels": 484,
+          "bbox_xyxy": [
+            560,
+            402,
+            588,
+            430
+          ]
+        },
+        {
+          "component_id": 8,
+          "pixels": 488,
+          "bbox_xyxy": [
+            482,
+            586,
+            510,
+            614
+          ]
+        },
+        {
+          "component_id": 9,
+          "pixels": 496,
+          "bbox_xyxy": [
+            1218,
+            596,
+            1246,
+            624
+          ]
+        },
+        {
+          "component_id": 10,
+          "pixels": 484,
+          "bbox_xyxy": [
+            82,
+            622,
+            110,
+            650
+          ]
+        },
+        {
+          "component_id": 11,
+          "pixels": 492,
+          "bbox_xyxy": [
+            444,
+            678,
+            472,
+            706
+          ]
+        },
+        {
+          "component_id": 12,
+          "pixels": 484,
+          "bbox_xyxy": [
+            16,
+            732,
+            44,
+            760
+          ]
+        },
+        {
+          "component_id": 13,
+          "pixels": 488,
+          "bbox_xyxy": [
+            210,
+            750,
+            238,
+            778
+          ]
+        },
+        {
+          "component_id": 14,
+          "pixels": 488,
+          "bbox_xyxy": [
+            36,
+            762,
+            64,
+            790
+          ]
+        },
+        {
+          "component_id": 15,
+          "pixels": 488,
+          "bbox_xyxy": [
+            708,
+            786,
+            736,
+            814
+          ]
+        },
+        {
+          "component_id": 16,
+          "pixels": 492,
+          "bbox_xyxy": [
+            1126,
+            814,
+            1154,
+            842
+          ]
+        },
+        {
+          "component_id": 17,
+          "pixels": 468,
+          "bbox_xyxy": [
+            1092,
+            888,
+            1120,
+            914
+          ]
+        },
+        {
+          "component_id": 18,
+          "pixels": 500,
+          "bbox_xyxy": [
+            668,
+            912,
+            696,
+            940
+          ]
+        }
+      ],
+      "diagnostic_path": ".bootstrap-test-tmp/ti3-a0-20260919-inspection/ESM6-394.png",
+      "diagnostic_sha256": "b5c3504d5b782c782c406b3a4fc2a235ab001e5e510816d5c68530068e5dd5cb"
+    }
+  ],
+  "method": "native chroma summaries and connected-component geometry, no event labels",
+  "display": "illustrative BT.601 limited-range RGB; colorimetry not certified; analysis native YUV420p",
+  "ml_runs": 0,
+  "new_frames": 0
+}

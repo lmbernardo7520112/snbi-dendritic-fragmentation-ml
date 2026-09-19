@@ -1,0 +1,80 @@
+{
+  "a0_frozen_scope": {
+    "examined_file_count": 4,
+    "status": "PASS",
+    "violations": []
+  },
+  "active_custody": {
+    "examined_file_count": 0,
+    "status": "PASS",
+    "violations": []
+  },
+  "audit": "composed_phase_scope",
+  "authorized_scientific_phases": [],
+  "data_guard": {
+    "audit": "tracked_repository_data_guard",
+    "content_bytes_read": 0,
+    "examined_entry_count": 329,
+    "status": "PASS",
+    "violations": []
+  },
+  "experimental_content_bytes_read": 0,
+  "legacy_custody": {
+    "examined_file_count": 75,
+    "status": "PASS",
+    "violations": []
+  },
+  "legacy_scope": {
+    "authorized_phase": null,
+    "authorized_scientific_phases": [],
+    "blocked_phases": [
+      "TI-2",
+      "TI-2R",
+      "TI-3",
+      "TI-4",
+      "TI-5",
+      "TI-6",
+      "TI-7",
+      "TI-8"
+    ],
+    "codex_local_write_readiness": "BLOCKED_AWAITING_AUTHOR_DECISION",
+    "current_authorized_activity": "NONE_AWAITING_AUTHOR_DECISION",
+    "current_gate_documents": {
+      "document_count": 2,
+      "status": "PASS",
+      "violations": []
+    },
+    "experimental_content_bytes_read": 0,
+    "merge_authorized": false,
+    "scientific_readiness": "BLOCKED",
+    "status": "PASS",
+    "ti2_execution_authorized": false,
+    "ti2r_authorized": false,
+    "ti3_plus_authorized": false,
+    "violations": []
+  },
+  "merge_authorized": false,
+  "partition": {
+    "a0_frozen_file_count": 4,
+    "active_planned_count": 15,
+    "active_tracked_count": 0,
+    "duplicate_classification_paths": [],
+    "legacy_file_count": 75,
+    "missing_paths": [],
+    "relevant_tracked_count": 79,
+    "status": "PASS",
+    "unclassified_paths": [],
+    "violations": []
+  },
+  "scientific_readiness": "BLOCKED",
+  "status": "PASS",
+  "ti2_execution_authorized": false,
+  "ti3_plus_authorized": false,
+  "ti3_scope": {
+    "examined_entry_count": 0,
+    "experimental_content_bytes_read": 0,
+    "status": "PASS",
+    "violations": []
+  },
+  "violations": []
+}

@@ -1,0 +1,388 @@
+{
+  "input_opened": false,
+  "planning_manifest_sha256": "c8e82b72ff5dc51d188a764c577c11d514474b14d90aea6292c1439e776fb487",
+  "sample_count": 6,
+  "samples": [
+    {
+      "acquisition_id": "bottom_up_anti_parallel",
+      "annotation_site_id": "ESM3:annotation-site:2d8693eaf74b3e06",
+      "annotation_site_id_or_background_id": "ESM3:annotation-site:2d8693eaf74b3e06",
+      "annotation_source_id": "ESM3",
+      "baseline_label": 1,
+      "center_native_xy": [
+        561,
+        666
+      ],
+      "center_x": 561,
+      "center_y": 666,
+      "conflicting_site_ids": [],
+      "context_group": "bottom_up_anti_parallel|ESM1|293",
+      "context_group_id": "bottom_up_anti_parallel|ESM1|293",
+      "exclusion_reasons": [],
+      "experimental_time_s": 319.78,
+      "frame_bytes": 1951506,
+      "frame_index": 293,
+      "height": 1018,
+      "ignore_diagnostic_ids": [
+        "ESM3:146:graphic-component-0062",
+        "ESM3:146:graphic-component-0066",
+        "ESM3:146:graphic-component-0073",
+        "ESM3:219:graphic-component-0061",
+        "ESM3:219:graphic-component-0065",
+        "ESM3:219:graphic-component-0072",
+        "ESM3:293:graphic-component-0062",
+        "ESM3:293:graphic-component-0073",
+        "ESM3:73:graphic-component-0046",
+        "ESM3:73:graphic-component-0050",
+        "ESM3:73:graphic-component-0057"
+      ],
+      "image_sha256": "384a0297024fda34b6b2a5a87945297315e27efffdde47c9a3a67a6483fc1e13",
+      "input_hash_if_opened": null,
+      "input_opened": false,
+      "label": "POSITIVE",
+      "mapping_offset_xy": [
+        0,
+        0
+      ],
+      "observation_id": "ESM3:293:graphic-component-0066",
+      "patch_radius_px": 32,
+      "patch_side_px": 65,
+      "patch_xyxy": [
+        529,
+        634,
+        594,
+        699
+      ],
+      "path": "data/derived/ti2-pilot/ESM1-0293.raw",
+      "physical_fragment_absence_claim": false,
+      "plane": "Y",
+      "provenance": {
+        "annotation_source_id": "ESM3",
+        "frame_index": 293,
+        "input_role": "structural_luminance",
+        "known_native_sha256": "384a0297024fda34b6b2a5a87945297315e27efffdde47c9a3a67a6483fc1e13",
+        "native_path": "data/derived/ti2-pilot/ESM1-0293.raw",
+        "native_source_id": "ESM1",
+        "observation_id": "ESM3:293:graphic-component-0066"
+      },
+      "published_center_xy": [
+        561.0689880164384,
+        665.910690199544
+      ],
+      "sample_id": "positive|ESM3:annotation-site:2d8693eaf74b3e06",
+      "source_id": "ESM1",
+      "split": "FINAL_TEST",
+      "status": "VALID",
+      "target": "PUBLISHED_FRAGMENTATION_LOCATION_PRESENT",
+      "weak_label": "POSITIVE",
+      "width": 1278
+    },
+    {
+      "acquisition_id": "bottom_up_anti_parallel",
+      "annotation_site_id": "ESM3:annotation-site:f96050cb91a60afe",
+      "annotation_site_id_or_background_id": "ESM3:annotation-site:f96050cb91a60afe",
+      "annotation_source_id": "ESM3",
+      "baseline_label": 1,
+      "center_native_xy": [
+        608,
+        489
+      ],
+      "center_x": 608,
+      "center_y": 489,
+      "conflicting_site_ids": [],
+      "context_group": "bottom_up_anti_parallel|ESM1|293",
+      "context_group_id": "bottom_up_anti_parallel|ESM1|293",
+      "exclusion_reasons": [],
+      "experimental_time_s": 319.78,
+      "frame_bytes": 1951506,
+      "frame_index": 293,
+      "height": 1018,
+      "ignore_diagnostic_ids": [
+        "ESM3:146:graphic-component-0049",
+        "ESM3:146:graphic-component-0051",
+        "ESM3:219:graphic-component-0048",
+        "ESM3:219:graphic-component-0051",
+        "ESM3:293:graphic-component-0052",
+        "ESM3:73:graphic-component-0034",
+        "ESM3:73:graphic-component-0036"
+      ],
+      "image_sha256": "384a0297024fda34b6b2a5a87945297315e27efffdde47c9a3a67a6483fc1e13",
+      "input_hash_if_opened": null,
+      "input_opened": false,
+      "label": "POSITIVE",
+      "mapping_offset_xy": [
+        0,
+        0
+      ],
+      "observation_id": "ESM3:293:graphic-component-0049",
+      "patch_radius_px": 32,
+      "patch_side_px": 65,
+      "patch_xyxy": [
+        576,
+        457,
+        641,
+        522
+      ],
+      "path": "data/derived/ti2-pilot/ESM1-0293.raw",
+      "physical_fragment_absence_claim": false,
+      "plane": "Y",
+      "provenance": {
+        "annotation_source_id": "ESM3",
+        "frame_index": 293,
+        "input_role": "structural_luminance",
+        "known_native_sha256": "384a0297024fda34b6b2a5a87945297315e27efffdde47c9a3a67a6483fc1e13",
+        "native_path": "data/derived/ti2-pilot/ESM1-0293.raw",
+        "native_source_id": "ESM1",
+        "observation_id": "ESM3:293:graphic-component-0049"
+      },
+      "published_center_xy": [
+        607.8582150069445,
+        489.19370375286996
+      ],
+      "sample_id": "positive|ESM3:annotation-site:f96050cb91a60afe",
+      "source_id": "ESM1",
+      "split": "FINAL_TEST",
+      "status": "VALID",
+      "target": "PUBLISHED_FRAGMENTATION_LOCATION_PRESENT",
+      "weak_label": "POSITIVE",
+      "width": 1278
+    },
+    {
+      "acquisition_id": "top_down_parallel",
+      "annotation_site_id": "ESM6:annotation-site:8c97cae8aaa8f4f3",
+      "annotation_site_id_or_background_id": "ESM6:annotation-site:8c97cae8aaa8f4f3",
+      "annotation_source_id": "ESM6",
+      "baseline_label": 1,
+      "center_native_xy": [
+        223,
+        764
+      ],
+      "center_x": 223,
+      "center_y": 764,
+      "conflicting_site_ids": [],
+      "context_group": "top_down_parallel|ESM4|295",
+      "context_group_id": "top_down_parallel|ESM4|295",
+      "exclusion_reasons": [],
+      "experimental_time_s": 313.88,
+      "frame_bytes": 1940004,
+      "frame_index": 295,
+      "height": 1012,
+      "ignore_diagnostic_ids": [
+        "ESM6:197:graphic-component-0013",
+        "ESM6:394:graphic-component-0013"
+      ],
+      "image_sha256": "ac3b9df34450e8c0f801eb90d2c329c90737f4abda4202d81638395fb5519f2a",
+      "input_hash_if_opened": null,
+      "input_opened": false,
+      "label": "POSITIVE",
+      "mapping_offset_xy": [
+        0,
+        0
+      ],
+      "observation_id": "ESM6:295:graphic-component-0013",
+      "patch_radius_px": 32,
+      "patch_side_px": 65,
+      "patch_xyxy": [
+        191,
+        732,
+        256,
+        797
+      ],
+      "path": "data/derived/ti2-pilot/ESM4-0295.raw",
+      "physical_fragment_absence_claim": false,
+      "plane": "Y",
+      "provenance": {
+        "annotation_source_id": "ESM6",
+        "frame_index": 295,
+        "input_role": "structural_luminance",
+        "known_native_sha256": "ac3b9df34450e8c0f801eb90d2c329c90737f4abda4202d81638395fb5519f2a",
+        "native_path": "data/derived/ti2-pilot/ESM4-0295.raw",
+        "native_source_id": "ESM4",
+        "observation_id": "ESM6:295:graphic-component-0013"
+      },
+      "published_center_xy": [
+        223.19285211810873,
+        763.9047337767357
+      ],
+      "sample_id": "positive|ESM6:annotation-site:8c97cae8aaa8f4f3",
+      "source_id": "ESM4",
+      "split": "FINAL_TEST",
+      "status": "VALID",
+      "target": "PUBLISHED_FRAGMENTATION_LOCATION_PRESENT",
+      "weak_label": "POSITIVE",
+      "width": 1278
+    },
+    {
+      "acquisition_id": "top_down_parallel",
+      "annotation_site_id": null,
+      "annotation_site_id_or_background_id": "background|ESM4|295|817|350",
+      "annotation_source_id": null,
+      "baseline_label": 0,
+      "center_native_xy": [
+        817,
+        350
+      ],
+      "center_x": 817,
+      "center_y": 350,
+      "context_group": "top_down_parallel|ESM4|295",
+      "context_group_id": "top_down_parallel|ESM4|295",
+      "experimental_time_s": 313.88,
+      "frame_bytes": 1940004,
+      "frame_index": 295,
+      "height": 1012,
+      "image_sha256": "ac3b9df34450e8c0f801eb90d2c329c90737f4abda4202d81638395fb5519f2a",
+      "input_hash_if_opened": null,
+      "input_opened": false,
+      "label": "BACKGROUND_CANDIDATE",
+      "mapping_offset_xy": [
+        0,
+        0
+      ],
+      "observation_id": null,
+      "patch_radius_px": 32,
+      "patch_side_px": 65,
+      "patch_xyxy": [
+        785,
+        318,
+        850,
+        383
+      ],
+      "path": "data/derived/ti2-pilot/ESM4-0295.raw",
+      "physical_fragment_absence_claim": false,
+      "plane": "Y",
+      "provenance": {
+        "annotation_source_id": null,
+        "frame_index": 295,
+        "input_role": "structural_luminance",
+        "known_native_sha256": "ac3b9df34450e8c0f801eb90d2c329c90737f4abda4202d81638395fb5519f2a",
+        "native_path": "data/derived/ti2-pilot/ESM4-0295.raw",
+        "native_source_id": "ESM4",
+        "observation_id": null
+      },
+      "published_center_xy": null,
+      "sample_id": "background|ESM4|295|817|350",
+      "selection_rank_sha256": "0132f3f427c6d68b82aece45c0a9e049e11bc152e62f6ed450568bf02d20974e",
+      "selection_rank_text": "TI3_BACKGROUND_V1|42|ESM4|295|817|350",
+      "source_id": "ESM4",
+      "split": "FINAL_TEST",
+      "target": "PUBLISHED_FRAGMENTATION_LOCATION_PRESENT",
+      "weak_label": "BACKGROUND_CANDIDATE",
+      "width": 1278
+    },
+    {
+      "acquisition_id": "bottom_up_anti_parallel",
+      "annotation_site_id": null,
+      "annotation_site_id_or_background_id": "background|ESM1|293|622|806",
+      "annotation_source_id": null,
+      "baseline_label": 0,
+      "center_native_xy": [
+        622,
+        806
+      ],
+      "center_x": 622,
+      "center_y": 806,
+      "context_group": "bottom_up_anti_parallel|ESM1|293",
+      "context_group_id": "bottom_up_anti_parallel|ESM1|293",
+      "experimental_time_s": 319.78,
+      "frame_bytes": 1951506,
+      "frame_index": 293,
+      "height": 1018,
+      "image_sha256": "384a0297024fda34b6b2a5a87945297315e27efffdde47c9a3a67a6483fc1e13",
+      "input_hash_if_opened": null,
+      "input_opened": false,
+      "label": "BACKGROUND_CANDIDATE",
+      "mapping_offset_xy": [
+        0,
+        0
+      ],
+      "observation_id": null,
+      "patch_radius_px": 32,
+      "patch_side_px": 65,
+      "patch_xyxy": [
+        590,
+        774,
+        655,
+        839
+      ],
+      "path": "data/derived/ti2-pilot/ESM1-0293.raw",
+      "physical_fragment_absence_claim": false,
+      "plane": "Y",
+      "provenance": {
+        "annotation_source_id": null,
+        "frame_index": 293,
+        "input_role": "structural_luminance",
+        "known_native_sha256": "384a0297024fda34b6b2a5a87945297315e27efffdde47c9a3a67a6483fc1e13",
+        "native_path": "data/derived/ti2-pilot/ESM1-0293.raw",
+        "native_source_id": "ESM1",
+        "observation_id": null
+      },
+      "published_center_xy": null,
+      "sample_id": "background|ESM1|293|622|806",
+      "selection_rank_sha256": "017f30f5b5b2f5260426d5998cee4b0ea8aa33ced1cb74750441c52392e90a31",
+      "selection_rank_text": "TI3_BACKGROUND_V1|42|ESM1|293|622|806",
+      "source_id": "ESM1",
+      "split": "FINAL_TEST",
+      "target": "PUBLISHED_FRAGMENTATION_LOCATION_PRESENT",
+      "weak_label": "BACKGROUND_CANDIDATE",
+      "width": 1278
+    },
+    {
+      "acquisition_id": "top_down_parallel",
+      "annotation_site_id": null,
+      "annotation_site_id_or_background_id": "background|ESM4|295|1142|545",
+      "annotation_source_id": null,
+      "baseline_label": 0,
+      "center_native_xy": [
+        1142,
+        545
+      ],
+      "center_x": 1142,
+      "center_y": 545,
+      "context_group": "top_down_parallel|ESM4|295",
+      "context_group_id": "top_down_parallel|ESM4|295",
+      "experimental_time_s": 313.88,
+      "frame_bytes": 1940004,
+      "frame_index": 295,
+      "height": 1012,
+      "image_sha256": "ac3b9df34450e8c0f801eb90d2c329c90737f4abda4202d81638395fb5519f2a",
+      "input_hash_if_opened": null,
+      "input_opened": false,
+      "label": "BACKGROUND_CANDIDATE",
+      "mapping_offset_xy": [
+        0,
+        0
+      ],
+      "observation_id": null,
+      "patch_radius_px": 32,
+      "patch_side_px": 65,
+      "patch_xyxy": [
+        1110,
+        513,
+        1175,
+        578
+      ],
+      "path": "data/derived/ti2-pilot/ESM4-0295.raw",
+      "physical_fragment_absence_claim": false,
+      "plane": "Y",
+      "provenance": {
+        "annotation_source_id": null,
+        "frame_index": 295,
+        "input_role": "structural_luminance",
+        "known_native_sha256": "ac3b9df34450e8c0f801eb90d2c329c90737f4abda4202d81638395fb5519f2a",
+        "native_path": "data/derived/ti2-pilot/ESM4-0295.raw",
+        "native_source_id": "ESM4",
+        "observation_id": null
+      },
+      "published_center_xy": null,
+      "sample_id": "background|ESM4|295|1142|545",
+      "selection_rank_sha256": "01c6c7e353cfcfbd521e1ac47539cbf83f7033e4f18c81cbf00e9a1633d07fb4",
+      "selection_rank_text": "TI3_BACKGROUND_V1|42|ESM4|295|1142|545",
+      "source_id": "ESM4",
+      "split": "FINAL_TEST",
+      "target": "PUBLISHED_FRAGMENTATION_LOCATION_PRESENT",
+      "weak_label": "BACKGROUND_CANDIDATE",
+      "width": 1278
+    }
+  ],
+  "status": "SEALED_WITH_HISTORICAL_NON_ML_EXPOSURE"
+}

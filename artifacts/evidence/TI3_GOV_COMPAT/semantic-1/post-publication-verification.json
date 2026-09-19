@@ -1,0 +1,29 @@
+{
+  "authorized_changed_prepared_path": ".github/workflows/ti3-synthetic.yml",
+  "branch": "feat/ti3-canonical-dataset-baseline",
+  "c0_paths_byte_identical": 29,
+  "ci_reruns": 0,
+  "correction_commits": 0,
+  "experimental_bytes": 0,
+  "experimental_opens": 0,
+  "head": "272695a4420e37fddf6674664d0040ef064c153f",
+  "historical_checksum_snapshot": "PASS_BYTE_IDENTICAL",
+  "index": "CLEAN",
+  "local_remote_head_equal": true,
+  "planned_dataset_and_final_manifest": "BYTE_IDENTICAL",
+  "prepared_historical_hashes_rechecked": 40,
+  "previous_untracked_files_preserved": 39,
+  "remote_identity_source": "approved final git ls-remote",
+  "scientific_ml_runs": 0,
+  "scientific_receipt": "ABSENT",
+  "status": "PASS_TERMINAL_TEXT_CUSTODY",
+  "terminal_text_hashes_excluding_this_file": {
+    "artifacts/evidence/TI3_GOV_COMPAT/semantic-1/commands-post-publication.json": "82faac3af094f26cc2dd01a7a7037ec406886a7e4a87c92762f8f0c224d67aa1",
+    "artifacts/evidence/TI3_GOV_COMPAT/semantic-1/execution-report-terminal.md": "f4fb36d38aa5665f4cae50bce8ec71f4ae6c3b5947404863b8d1058c832550eb",
+    "artifacts/evidence/TI3_GOV_COMPAT/semantic-1/remote-ci.json": "3cbebd79aedff721de9910d1eac84a8ce4647d8cdc4d8234474bec71cc1322f2",
+    "artifacts/evidence/TI3_GOV_COMPAT/semantic-1/terminal-state.json": "2b21967fe1baaa9db08db884094c409f3642f4aadb1300ff3472f1395f55dd39"
+  },
+  "terminal_untracked_files_after_this_write": 5,
+  "tracked_worktree": "CLEAN",
+  "worktree_fully_clean": false
+}

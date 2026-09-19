@@ -1,0 +1,1590 @@
+{
+  "closed": true,
+  "entries": [
+    {
+      "bytes_read": 1951506,
+      "bytes_read_sha256": "0209aef0e36c73b017063cbea4661f76ac0d24bd51631e11e1f41b9dae0cc2a5",
+      "expected_bytes": 1951506,
+      "expected_sha256": "0209aef0e36c73b017063cbea4661f76ac0d24bd51631e11e1f41b9dae0cc2a5",
+      "frame_index": 73,
+      "open_attempts": 1,
+      "opens": 1,
+      "source_id": "ESM1",
+      "split": "TRAIN",
+      "status": "READ_ONCE_VERIFIED",
+      "verified": true
+    },
+    {
+      "bytes_read": 1951506,
+      "bytes_read_sha256": "eccb91c1d66f500d892dfe1c204c494cfc0d1d3542174d5ae1efd921bff034e0",
+      "expected_bytes": 1951506,
+      "expected_sha256": "eccb91c1d66f500d892dfe1c204c494cfc0d1d3542174d5ae1efd921bff034e0",
+      "frame_index": 146,
+      "open_attempts": 1,
+      "opens": 1,
+      "source_id": "ESM1",
+      "split": "TRAIN",
+      "status": "READ_ONCE_VERIFIED",
+      "verified": true
+    },
+    {
+      "bytes_read": 1951506,
+      "bytes_read_sha256": "eb22ec185b465b11abbd6ecbf38d558a9dd5ef8d19f256e42429d70b566f10bd",
+      "expected_bytes": 1951506,
+      "expected_sha256": "eb22ec185b465b11abbd6ecbf38d558a9dd5ef8d19f256e42429d70b566f10bd",
+      "frame_index": 219,
+      "open_attempts": 1,
+      "opens": 1,
+      "source_id": "ESM1",
+      "split": "DEVELOPMENT",
+      "status": "READ_ONCE_VERIFIED",
+      "verified": true
+    },
+    {
+      "bytes_read": 0,
+      "bytes_read_sha256": null,
+      "expected_bytes": 1951506,
+      "expected_sha256": "384a0297024fda34b6b2a5a87945297315e27efffdde47c9a3a67a6483fc1e13",
+      "frame_index": 293,
+      "open_attempts": 0,
+      "opens": 0,
+      "source_id": "ESM1",
+      "split": "FINAL_TEST",
+      "status": "NOT_OPENED",
+      "verified": false
+    },
+    {
+      "bytes_read": 1940004,
+      "bytes_read_sha256": "8e9ab504657f44d5f7252ff8a681a4c0007a4f0643f11cc26b171e989be75cc9",
+      "expected_bytes": 1940004,
+      "expected_sha256": "8e9ab504657f44d5f7252ff8a681a4c0007a4f0643f11cc26b171e989be75cc9",
+      "frame_index": 98,
+      "open_attempts": 1,
+      "opens": 1,
+      "source_id": "ESM4",
+      "split": "TRAIN",
+      "status": "READ_ONCE_VERIFIED",
+      "verified": true
+    },
+    {
+      "bytes_read": 1940004,
+      "bytes_read_sha256": "0446ff48d035f3f548d93253fbd9eac14536de0aeb477485b87b17dd647e8a57",
+      "expected_bytes": 1940004,
+      "expected_sha256": "0446ff48d035f3f548d93253fbd9eac14536de0aeb477485b87b17dd647e8a57",
+      "frame_index": 197,
+      "open_attempts": 1,
+      "opens": 1,
+      "source_id": "ESM4",
+      "split": "DEVELOPMENT",
+      "status": "READ_ONCE_VERIFIED",
+      "verified": true
+    },
+    {
+      "bytes_read": 0,
+      "bytes_read_sha256": null,
+      "expected_bytes": 1940004,
+      "expected_sha256": "ac3b9df34450e8c0f801eb90d2c329c90737f4abda4202d81638395fb5519f2a",
+      "frame_index": 295,
+      "open_attempts": 0,
+      "opens": 0,
+      "source_id": "ESM4",
+      "split": "FINAL_TEST",
+      "status": "NOT_OPENED",
+      "verified": false
+    }
+  ],
+  "experimental_bytes": 9734526,
+  "experimental_opens": 5,
+  "failed": false,
+  "final_test_bytes": 0,
+  "final_test_opens": 0,
+  "patches": [
+    {
+      "center_x": 102,
+      "center_y": 676,
+      "frame_index": 73,
+      "input_opened": true,
+      "input_sha256": "0209aef0e36c73b017063cbea4661f76ac0d24bd51631e11e1f41b9dae0cc2a5",
+      "patch_radius_px": 32,
+      "patch_sha256": "34f10987698118f17456cfc0e458862c1cfb9d4daae31fdccb496f84c39ffe4e",
+      "patch_side_px": 65,
+      "sample_id": "background|ESM1|73|102|676",
+      "source_id": "ESM1",
+      "split": "TRAIN",
+      "support_guard": {
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM1|73|102|676",
+          "background|ESM1|73|167|286",
+          "positive|ESM3:annotation-site:4b88c441ae9c6696",
+          "positive|ESM3:annotation-site:4c41286cef74d212",
+          "positive|ESM3:annotation-site:4e3f86cfe00b170b",
+          "positive|ESM3:annotation-site:921edb3b46971a2c",
+          "positive|ESM3:annotation-site:95a85828fc0c1117",
+          "positive|ESM3:annotation-site:b6b216ac7f401b9a",
+          "positive|ESM3:annotation-site:c0913343ab666a5f",
+          "positive|ESM3:annotation-site:e8c88192a10fa74d",
+          "positive|ESM3:annotation-site:edefb8faa424fa0f"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "center_x": 167,
+      "center_y": 286,
+      "frame_index": 73,
+      "input_opened": true,
+      "input_sha256": "0209aef0e36c73b017063cbea4661f76ac0d24bd51631e11e1f41b9dae0cc2a5",
+      "patch_radius_px": 32,
+      "patch_sha256": "217dad857a6594ee89ca1920f35de7447cfa4b520afa2158f3aea8be53ebf955",
+      "patch_side_px": 65,
+      "sample_id": "background|ESM1|73|167|286",
+      "source_id": "ESM1",
+      "split": "TRAIN",
+      "support_guard": {
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM1|73|102|676",
+          "background|ESM1|73|167|286",
+          "positive|ESM3:annotation-site:4b88c441ae9c6696",
+          "positive|ESM3:annotation-site:4c41286cef74d212",
+          "positive|ESM3:annotation-site:4e3f86cfe00b170b",
+          "positive|ESM3:annotation-site:921edb3b46971a2c",
+          "positive|ESM3:annotation-site:95a85828fc0c1117",
+          "positive|ESM3:annotation-site:b6b216ac7f401b9a",
+          "positive|ESM3:annotation-site:c0913343ab666a5f",
+          "positive|ESM3:annotation-site:e8c88192a10fa74d",
+          "positive|ESM3:annotation-site:edefb8faa424fa0f"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "center_x": 364,
+      "center_y": 696,
+      "frame_index": 73,
+      "input_opened": true,
+      "input_sha256": "0209aef0e36c73b017063cbea4661f76ac0d24bd51631e11e1f41b9dae0cc2a5",
+      "patch_radius_px": 32,
+      "patch_sha256": "c2bab13217a12e46dea5a4ce4af55e304bdc597ac0d852ef53807ec5de05f579",
+      "patch_side_px": 65,
+      "sample_id": "positive|ESM3:annotation-site:4b88c441ae9c6696",
+      "source_id": "ESM1",
+      "split": "TRAIN",
+      "support_guard": {
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM1|73|102|676",
+          "background|ESM1|73|167|286",
+          "positive|ESM3:annotation-site:4b88c441ae9c6696",
+          "positive|ESM3:annotation-site:4c41286cef74d212",
+          "positive|ESM3:annotation-site:4e3f86cfe00b170b",
+          "positive|ESM3:annotation-site:921edb3b46971a2c",
+          "positive|ESM3:annotation-site:95a85828fc0c1117",
+          "positive|ESM3:annotation-site:b6b216ac7f401b9a",
+          "positive|ESM3:annotation-site:c0913343ab666a5f",
+          "positive|ESM3:annotation-site:e8c88192a10fa74d",
+          "positive|ESM3:annotation-site:edefb8faa424fa0f"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "center_x": 1020,
+      "center_y": 528,
+      "frame_index": 73,
+      "input_opened": true,
+      "input_sha256": "0209aef0e36c73b017063cbea4661f76ac0d24bd51631e11e1f41b9dae0cc2a5",
+      "patch_radius_px": 32,
+      "patch_sha256": "9133e8efd5083169a6b839cd8d131b6d08f4a77c4137801bc13538a2f373f47f",
+      "patch_side_px": 65,
+      "sample_id": "positive|ESM3:annotation-site:4c41286cef74d212",
+      "source_id": "ESM1",
+      "split": "TRAIN",
+      "support_guard": {
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM1|73|102|676",
+          "background|ESM1|73|167|286",
+          "positive|ESM3:annotation-site:4b88c441ae9c6696",
+          "positive|ESM3:annotation-site:4c41286cef74d212",
+          "positive|ESM3:annotation-site:4e3f86cfe00b170b",
+          "positive|ESM3:annotation-site:921edb3b46971a2c",
+          "positive|ESM3:annotation-site:95a85828fc0c1117",
+          "positive|ESM3:annotation-site:b6b216ac7f401b9a",
+          "positive|ESM3:annotation-site:c0913343ab666a5f",
+          "positive|ESM3:annotation-site:e8c88192a10fa74d",
+          "positive|ESM3:annotation-site:edefb8faa424fa0f"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "center_x": 59,
+      "center_y": 474,
+      "frame_index": 73,
+      "input_opened": true,
+      "input_sha256": "0209aef0e36c73b017063cbea4661f76ac0d24bd51631e11e1f41b9dae0cc2a5",
+      "patch_radius_px": 32,
+      "patch_sha256": "d60493a34751cd7d2e0355b1e0ea4c150511d37744781ab27f14d08a2624e399",
+      "patch_side_px": 65,
+      "sample_id": "positive|ESM3:annotation-site:4e3f86cfe00b170b",
+      "source_id": "ESM1",
+      "split": "TRAIN",
+      "support_guard": {
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM1|73|102|676",
+          "background|ESM1|73|167|286",
+          "positive|ESM3:annotation-site:4b88c441ae9c6696",
+          "positive|ESM3:annotation-site:4c41286cef74d212",
+          "positive|ESM3:annotation-site:4e3f86cfe00b170b",
+          "positive|ESM3:annotation-site:921edb3b46971a2c",
+          "positive|ESM3:annotation-site:95a85828fc0c1117",
+          "positive|ESM3:annotation-site:b6b216ac7f401b9a",
+          "positive|ESM3:annotation-site:c0913343ab666a5f",
+          "positive|ESM3:annotation-site:e8c88192a10fa74d",
+          "positive|ESM3:annotation-site:edefb8faa424fa0f"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "center_x": 170,
+      "center_y": 200,
+      "frame_index": 73,
+      "input_opened": true,
+      "input_sha256": "0209aef0e36c73b017063cbea4661f76ac0d24bd51631e11e1f41b9dae0cc2a5",
+      "patch_radius_px": 32,
+      "patch_sha256": "3d405cf403e8e35ca3d5ea1b5cd9ab921a63a8c470b7e49a300c7baccb565b6f",
+      "patch_side_px": 65,
+      "sample_id": "positive|ESM3:annotation-site:921edb3b46971a2c",
+      "source_id": "ESM1",
+      "split": "TRAIN",
+      "support_guard": {
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM1|73|102|676",
+          "background|ESM1|73|167|286",
+          "positive|ESM3:annotation-site:4b88c441ae9c6696",
+          "positive|ESM3:annotation-site:4c41286cef74d212",
+          "positive|ESM3:annotation-site:4e3f86cfe00b170b",
+          "positive|ESM3:annotation-site:921edb3b46971a2c",
+          "positive|ESM3:annotation-site:95a85828fc0c1117",
+          "positive|ESM3:annotation-site:b6b216ac7f401b9a",
+          "positive|ESM3:annotation-site:c0913343ab666a5f",
+          "positive|ESM3:annotation-site:e8c88192a10fa74d",
+          "positive|ESM3:annotation-site:edefb8faa424fa0f"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "center_x": 419,
+      "center_y": 257,
+      "frame_index": 73,
+      "input_opened": true,
+      "input_sha256": "0209aef0e36c73b017063cbea4661f76ac0d24bd51631e11e1f41b9dae0cc2a5",
+      "patch_radius_px": 32,
+      "patch_sha256": "e34f53710a3f2d6f89bd4d52d483a70a84702ca8882a14eef546dde23dcf4695",
+      "patch_side_px": 65,
+      "sample_id": "positive|ESM3:annotation-site:95a85828fc0c1117",
+      "source_id": "ESM1",
+      "split": "TRAIN",
+      "support_guard": {
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM1|73|102|676",
+          "background|ESM1|73|167|286",
+          "positive|ESM3:annotation-site:4b88c441ae9c6696",
+          "positive|ESM3:annotation-site:4c41286cef74d212",
+          "positive|ESM3:annotation-site:4e3f86cfe00b170b",
+          "positive|ESM3:annotation-site:921edb3b46971a2c",
+          "positive|ESM3:annotation-site:95a85828fc0c1117",
+          "positive|ESM3:annotation-site:b6b216ac7f401b9a",
+          "positive|ESM3:annotation-site:c0913343ab666a5f",
+          "positive|ESM3:annotation-site:e8c88192a10fa74d",
+          "positive|ESM3:annotation-site:edefb8faa424fa0f"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "center_x": 839,
+      "center_y": 585,
+      "frame_index": 73,
+      "input_opened": true,
+      "input_sha256": "0209aef0e36c73b017063cbea4661f76ac0d24bd51631e11e1f41b9dae0cc2a5",
+      "patch_radius_px": 32,
+      "patch_sha256": "ab5fabbdbdc27c6ee4fb32b34ceadf93f6594e2dbb7bdf5e6fc788e71b7d2d1a",
+      "patch_side_px": 65,
+      "sample_id": "positive|ESM3:annotation-site:b6b216ac7f401b9a",
+      "source_id": "ESM1",
+      "split": "TRAIN",
+      "support_guard": {
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM1|73|102|676",
+          "background|ESM1|73|167|286",
+          "positive|ESM3:annotation-site:4b88c441ae9c6696",
+          "positive|ESM3:annotation-site:4c41286cef74d212",
+          "positive|ESM3:annotation-site:4e3f86cfe00b170b",
+          "positive|ESM3:annotation-site:921edb3b46971a2c",
+          "positive|ESM3:annotation-site:95a85828fc0c1117",
+          "positive|ESM3:annotation-site:b6b216ac7f401b9a",
+          "positive|ESM3:annotation-site:c0913343ab666a5f",
+          "positive|ESM3:annotation-site:e8c88192a10fa74d",
+          "positive|ESM3:annotation-site:edefb8faa424fa0f"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "center_x": 440,
+      "center_y": 576,
+      "frame_index": 73,
+      "input_opened": true,
+      "input_sha256": "0209aef0e36c73b017063cbea4661f76ac0d24bd51631e11e1f41b9dae0cc2a5",
+      "patch_radius_px": 32,
+      "patch_sha256": "876afe8f366fa0c9626e963dc1c9bf0a269179b5084a56cff9aecea5ed1f4016",
+      "patch_side_px": 65,
+      "sample_id": "positive|ESM3:annotation-site:c0913343ab666a5f",
+      "source_id": "ESM1",
+      "split": "TRAIN",
+      "support_guard": {
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM1|73|102|676",
+          "background|ESM1|73|167|286",
+          "positive|ESM3:annotation-site:4b88c441ae9c6696",
+          "positive|ESM3:annotation-site:4c41286cef74d212",
+          "positive|ESM3:annotation-site:4e3f86cfe00b170b",
+          "positive|ESM3:annotation-site:921edb3b46971a2c",
+          "positive|ESM3:annotation-site:95a85828fc0c1117",
+          "positive|ESM3:annotation-site:b6b216ac7f401b9a",
+          "positive|ESM3:annotation-site:c0913343ab666a5f",
+          "positive|ESM3:annotation-site:e8c88192a10fa74d",
+          "positive|ESM3:annotation-site:edefb8faa424fa0f"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "center_x": 629,
+      "center_y": 697,
+      "frame_index": 73,
+      "input_opened": true,
+      "input_sha256": "0209aef0e36c73b017063cbea4661f76ac0d24bd51631e11e1f41b9dae0cc2a5",
+      "patch_radius_px": 32,
+      "patch_sha256": "76544faa9068b1212e2224df2253b2824e2a3b9bec669b4e06fe73a2c53a4103",
+      "patch_side_px": 65,
+      "sample_id": "positive|ESM3:annotation-site:e8c88192a10fa74d",
+      "source_id": "ESM1",
+      "split": "TRAIN",
+      "support_guard": {
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM1|73|102|676",
+          "background|ESM1|73|167|286",
+          "positive|ESM3:annotation-site:4b88c441ae9c6696",
+          "positive|ESM3:annotation-site:4c41286cef74d212",
+          "positive|ESM3:annotation-site:4e3f86cfe00b170b",
+          "positive|ESM3:annotation-site:921edb3b46971a2c",
+          "positive|ESM3:annotation-site:95a85828fc0c1117",
+          "positive|ESM3:annotation-site:b6b216ac7f401b9a",
+          "positive|ESM3:annotation-site:c0913343ab666a5f",
+          "positive|ESM3:annotation-site:e8c88192a10fa74d",
+          "positive|ESM3:annotation-site:edefb8faa424fa0f"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "center_x": 999,
+      "center_y": 550,
+      "frame_index": 73,
+      "input_opened": true,
+      "input_sha256": "0209aef0e36c73b017063cbea4661f76ac0d24bd51631e11e1f41b9dae0cc2a5",
+      "patch_radius_px": 32,
+      "patch_sha256": "2bef2a1851ca35cd36766f2e3d1c942f1996beed30e0fb89e08d3e3ad51f3cec",
+      "patch_side_px": 65,
+      "sample_id": "positive|ESM3:annotation-site:edefb8faa424fa0f",
+      "source_id": "ESM1",
+      "split": "TRAIN",
+      "support_guard": {
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM1|73|102|676",
+          "background|ESM1|73|167|286",
+          "positive|ESM3:annotation-site:4b88c441ae9c6696",
+          "positive|ESM3:annotation-site:4c41286cef74d212",
+          "positive|ESM3:annotation-site:4e3f86cfe00b170b",
+          "positive|ESM3:annotation-site:921edb3b46971a2c",
+          "positive|ESM3:annotation-site:95a85828fc0c1117",
+          "positive|ESM3:annotation-site:b6b216ac7f401b9a",
+          "positive|ESM3:annotation-site:c0913343ab666a5f",
+          "positive|ESM3:annotation-site:e8c88192a10fa74d",
+          "positive|ESM3:annotation-site:edefb8faa424fa0f"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "center_x": 167,
+      "center_y": 611,
+      "frame_index": 146,
+      "input_opened": true,
+      "input_sha256": "eccb91c1d66f500d892dfe1c204c494cfc0d1d3542174d5ae1efd921bff034e0",
+      "patch_radius_px": 32,
+      "patch_sha256": "6a0ede69cf9883ad09cc9d358ce05294f80b11b68f80e65f7012189a8afc8cc1",
+      "patch_side_px": 65,
+      "sample_id": "background|ESM1|146|167|611",
+      "source_id": "ESM1",
+      "split": "TRAIN",
+      "support_guard": {
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM1|146|167|611",
+          "background|ESM1|146|37|546",
+          "background|ESM1|146|817|481",
+          "background|ESM1|146|947|676",
+          "positive|ESM3:annotation-site:5e9a4c2b4df0a4dd",
+          "positive|ESM3:annotation-site:73e02d077c181e27",
+          "positive|ESM3:annotation-site:7bb50a0b75f78145",
+          "positive|ESM3:annotation-site:ab91a579d35b7a8c",
+          "positive|ESM3:annotation-site:aea18fa3b37ada51",
+          "positive|ESM3:annotation-site:dc8e4cc74e0dc7a3",
+          "positive|ESM3:annotation-site:e83161571f674407"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "center_x": 37,
+      "center_y": 546,
+      "frame_index": 146,
+      "input_opened": true,
+      "input_sha256": "eccb91c1d66f500d892dfe1c204c494cfc0d1d3542174d5ae1efd921bff034e0",
+      "patch_radius_px": 32,
+      "patch_sha256": "e54188eae09e21562e93b0db7895716203f5b7994d1c7808f9f80da4d342b46b",
+      "patch_side_px": 65,
+      "sample_id": "background|ESM1|146|37|546",
+      "source_id": "ESM1",
+      "split": "TRAIN",
+      "support_guard": {
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM1|146|167|611",
+          "background|ESM1|146|37|546",
+          "background|ESM1|146|817|481",
+          "background|ESM1|146|947|676",
+          "positive|ESM3:annotation-site:5e9a4c2b4df0a4dd",
+          "positive|ESM3:annotation-site:73e02d077c181e27",
+          "positive|ESM3:annotation-site:7bb50a0b75f78145",
+          "positive|ESM3:annotation-site:ab91a579d35b7a8c",
+          "positive|ESM3:annotation-site:aea18fa3b37ada51",
+          "positive|ESM3:annotation-site:dc8e4cc74e0dc7a3",
+          "positive|ESM3:annotation-site:e83161571f674407"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "center_x": 817,
+      "center_y": 481,
+      "frame_index": 146,
+      "input_opened": true,
+      "input_sha256": "eccb91c1d66f500d892dfe1c204c494cfc0d1d3542174d5ae1efd921bff034e0",
+      "patch_radius_px": 32,
+      "patch_sha256": "1b233662cd82470e78aa9f2db8ee1f6f7e27869bc080bc81661cc5bd0a40995a",
+      "patch_side_px": 65,
+      "sample_id": "background|ESM1|146|817|481",
+      "source_id": "ESM1",
+      "split": "TRAIN",
+      "support_guard": {
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM1|146|167|611",
+          "background|ESM1|146|37|546",
+          "background|ESM1|146|817|481",
+          "background|ESM1|146|947|676",
+          "positive|ESM3:annotation-site:5e9a4c2b4df0a4dd",
+          "positive|ESM3:annotation-site:73e02d077c181e27",
+          "positive|ESM3:annotation-site:7bb50a0b75f78145",
+          "positive|ESM3:annotation-site:ab91a579d35b7a8c",
+          "positive|ESM3:annotation-site:aea18fa3b37ada51",
+          "positive|ESM3:annotation-site:dc8e4cc74e0dc7a3",
+          "positive|ESM3:annotation-site:e83161571f674407"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "center_x": 947,
+      "center_y": 676,
+      "frame_index": 146,
+      "input_opened": true,
+      "input_sha256": "eccb91c1d66f500d892dfe1c204c494cfc0d1d3542174d5ae1efd921bff034e0",
+      "patch_radius_px": 32,
+      "patch_sha256": "8d3a4a03b724d00f3b189668dbfd009043bbe9aa0203ed0c07297f17477a6338",
+      "patch_side_px": 65,
+      "sample_id": "background|ESM1|146|947|676",
+      "source_id": "ESM1",
+      "split": "TRAIN",
+      "support_guard": {
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM1|146|167|611",
+          "background|ESM1|146|37|546",
+          "background|ESM1|146|817|481",
+          "background|ESM1|146|947|676",
+          "positive|ESM3:annotation-site:5e9a4c2b4df0a4dd",
+          "positive|ESM3:annotation-site:73e02d077c181e27",
+          "positive|ESM3:annotation-site:7bb50a0b75f78145",
+          "positive|ESM3:annotation-site:ab91a579d35b7a8c",
+          "positive|ESM3:annotation-site:aea18fa3b37ada51",
+          "positive|ESM3:annotation-site:dc8e4cc74e0dc7a3",
+          "positive|ESM3:annotation-site:e83161571f674407"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "center_x": 1142,
+      "center_y": 400,
+      "frame_index": 146,
+      "input_opened": true,
+      "input_sha256": "eccb91c1d66f500d892dfe1c204c494cfc0d1d3542174d5ae1efd921bff034e0",
+      "patch_radius_px": 32,
+      "patch_sha256": "5af4462ab2abb61a6ea87ab5835180a4f2e92d5ec79b9c73d042dace5dfb74ae",
+      "patch_side_px": 65,
+      "sample_id": "positive|ESM3:annotation-site:5e9a4c2b4df0a4dd",
+      "source_id": "ESM1",
+      "split": "TRAIN",
+      "support_guard": {
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM1|146|167|611",
+          "background|ESM1|146|37|546",
+          "background|ESM1|146|817|481",
+          "background|ESM1|146|947|676",
+          "positive|ESM3:annotation-site:5e9a4c2b4df0a4dd",
+          "positive|ESM3:annotation-site:73e02d077c181e27",
+          "positive|ESM3:annotation-site:7bb50a0b75f78145",
+          "positive|ESM3:annotation-site:ab91a579d35b7a8c",
+          "positive|ESM3:annotation-site:aea18fa3b37ada51",
+          "positive|ESM3:annotation-site:dc8e4cc74e0dc7a3",
+          "positive|ESM3:annotation-site:e83161571f674407"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "center_x": 1100,
+      "center_y": 228,
+      "frame_index": 146,
+      "input_opened": true,
+      "input_sha256": "eccb91c1d66f500d892dfe1c204c494cfc0d1d3542174d5ae1efd921bff034e0",
+      "patch_radius_px": 32,
+      "patch_sha256": "a94237ffe9cb8b9f035244e75e2756bf10c47c3ad21a0add084dd3517589bdf6",
+      "patch_side_px": 65,
+      "sample_id": "positive|ESM3:annotation-site:73e02d077c181e27",
+      "source_id": "ESM1",
+      "split": "TRAIN",
+      "support_guard": {
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM1|146|167|611",
+          "background|ESM1|146|37|546",
+          "background|ESM1|146|817|481",
+          "background|ESM1|146|947|676",
+          "positive|ESM3:annotation-site:5e9a4c2b4df0a4dd",
+          "positive|ESM3:annotation-site:73e02d077c181e27",
+          "positive|ESM3:annotation-site:7bb50a0b75f78145",
+          "positive|ESM3:annotation-site:ab91a579d35b7a8c",
+          "positive|ESM3:annotation-site:aea18fa3b37ada51",
+          "positive|ESM3:annotation-site:dc8e4cc74e0dc7a3",
+          "positive|ESM3:annotation-site:e83161571f674407"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "center_x": 1110,
+      "center_y": 789,
+      "frame_index": 146,
+      "input_opened": true,
+      "input_sha256": "eccb91c1d66f500d892dfe1c204c494cfc0d1d3542174d5ae1efd921bff034e0",
+      "patch_radius_px": 32,
+      "patch_sha256": "8409f10f4ab31cbc5722481d846f053c4a615e931f7160711b6ec9a42b931e3b",
+      "patch_side_px": 65,
+      "sample_id": "positive|ESM3:annotation-site:7bb50a0b75f78145",
+      "source_id": "ESM1",
+      "split": "TRAIN",
+      "support_guard": {
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM1|146|167|611",
+          "background|ESM1|146|37|546",
+          "background|ESM1|146|817|481",
+          "background|ESM1|146|947|676",
+          "positive|ESM3:annotation-site:5e9a4c2b4df0a4dd",
+          "positive|ESM3:annotation-site:73e02d077c181e27",
+          "positive|ESM3:annotation-site:7bb50a0b75f78145",
+          "positive|ESM3:annotation-site:ab91a579d35b7a8c",
+          "positive|ESM3:annotation-site:aea18fa3b37ada51",
+          "positive|ESM3:annotation-site:dc8e4cc74e0dc7a3",
+          "positive|ESM3:annotation-site:e83161571f674407"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "center_x": 1169,
+      "center_y": 387,
+      "frame_index": 146,
+      "input_opened": true,
+      "input_sha256": "eccb91c1d66f500d892dfe1c204c494cfc0d1d3542174d5ae1efd921bff034e0",
+      "patch_radius_px": 32,
+      "patch_sha256": "bf6330e123b26d97ad9947849e42c210873a62cf055caeede3135102b9621e3e",
+      "patch_side_px": 65,
+      "sample_id": "positive|ESM3:annotation-site:ab91a579d35b7a8c",
+      "source_id": "ESM1",
+      "split": "TRAIN",
+      "support_guard": {
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM1|146|167|611",
+          "background|ESM1|146|37|546",
+          "background|ESM1|146|817|481",
+          "background|ESM1|146|947|676",
+          "positive|ESM3:annotation-site:5e9a4c2b4df0a4dd",
+          "positive|ESM3:annotation-site:73e02d077c181e27",
+          "positive|ESM3:annotation-site:7bb50a0b75f78145",
+          "positive|ESM3:annotation-site:ab91a579d35b7a8c",
+          "positive|ESM3:annotation-site:aea18fa3b37ada51",
+          "positive|ESM3:annotation-site:dc8e4cc74e0dc7a3",
+          "positive|ESM3:annotation-site:e83161571f674407"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "center_x": 1238,
+      "center_y": 655,
+      "frame_index": 146,
+      "input_opened": true,
+      "input_sha256": "eccb91c1d66f500d892dfe1c204c494cfc0d1d3542174d5ae1efd921bff034e0",
+      "patch_radius_px": 32,
+      "patch_sha256": "dd110f72e67e69f98d9647ba3349a165903f8731c684d2e8f1afaf65342610d7",
+      "patch_side_px": 65,
+      "sample_id": "positive|ESM3:annotation-site:aea18fa3b37ada51",
+      "source_id": "ESM1",
+      "split": "TRAIN",
+      "support_guard": {
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM1|146|167|611",
+          "background|ESM1|146|37|546",
+          "background|ESM1|146|817|481",
+          "background|ESM1|146|947|676",
+          "positive|ESM3:annotation-site:5e9a4c2b4df0a4dd",
+          "positive|ESM3:annotation-site:73e02d077c181e27",
+          "positive|ESM3:annotation-site:7bb50a0b75f78145",
+          "positive|ESM3:annotation-site:ab91a579d35b7a8c",
+          "positive|ESM3:annotation-site:aea18fa3b37ada51",
+          "positive|ESM3:annotation-site:dc8e4cc74e0dc7a3",
+          "positive|ESM3:annotation-site:e83161571f674407"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "center_x": 354,
+      "center_y": 809,
+      "frame_index": 146,
+      "input_opened": true,
+      "input_sha256": "eccb91c1d66f500d892dfe1c204c494cfc0d1d3542174d5ae1efd921bff034e0",
+      "patch_radius_px": 32,
+      "patch_sha256": "600b5d901d78c7ec931587d4b49e5ccf182da0c4206d629d7a8c586db74a9fd9",
+      "patch_side_px": 65,
+      "sample_id": "positive|ESM3:annotation-site:dc8e4cc74e0dc7a3",
+      "source_id": "ESM1",
+      "split": "TRAIN",
+      "support_guard": {
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM1|146|167|611",
+          "background|ESM1|146|37|546",
+          "background|ESM1|146|817|481",
+          "background|ESM1|146|947|676",
+          "positive|ESM3:annotation-site:5e9a4c2b4df0a4dd",
+          "positive|ESM3:annotation-site:73e02d077c181e27",
+          "positive|ESM3:annotation-site:7bb50a0b75f78145",
+          "positive|ESM3:annotation-site:ab91a579d35b7a8c",
+          "positive|ESM3:annotation-site:aea18fa3b37ada51",
+          "positive|ESM3:annotation-site:dc8e4cc74e0dc7a3",
+          "positive|ESM3:annotation-site:e83161571f674407"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "center_x": 1077,
+      "center_y": 340,
+      "frame_index": 146,
+      "input_opened": true,
+      "input_sha256": "eccb91c1d66f500d892dfe1c204c494cfc0d1d3542174d5ae1efd921bff034e0",
+      "patch_radius_px": 32,
+      "patch_sha256": "9ef6732ebed6e6786ed6dea7656e790f4ec10a05def419371fa66af5636a6644",
+      "patch_side_px": 65,
+      "sample_id": "positive|ESM3:annotation-site:e83161571f674407",
+      "source_id": "ESM1",
+      "split": "TRAIN",
+      "support_guard": {
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM1|146|167|611",
+          "background|ESM1|146|37|546",
+          "background|ESM1|146|817|481",
+          "background|ESM1|146|947|676",
+          "positive|ESM3:annotation-site:5e9a4c2b4df0a4dd",
+          "positive|ESM3:annotation-site:73e02d077c181e27",
+          "positive|ESM3:annotation-site:7bb50a0b75f78145",
+          "positive|ESM3:annotation-site:ab91a579d35b7a8c",
+          "positive|ESM3:annotation-site:aea18fa3b37ada51",
+          "positive|ESM3:annotation-site:dc8e4cc74e0dc7a3",
+          "positive|ESM3:annotation-site:e83161571f674407"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "center_x": 1012,
+      "center_y": 675,
+      "frame_index": 98,
+      "input_opened": true,
+      "input_sha256": "8e9ab504657f44d5f7252ff8a681a4c0007a4f0643f11cc26b171e989be75cc9",
+      "patch_radius_px": 32,
+      "patch_sha256": "04692e7c2ab36385c635c05ad38f388ce7ba5d6ba6d24d56d0a117ed5b337da7",
+      "patch_side_px": 65,
+      "sample_id": "background|ESM4|98|1012|675",
+      "source_id": "ESM4",
+      "split": "TRAIN",
+      "support_guard": {
+        "sample_count": 12,
+        "samples_checked": [
+          "background|ESM4|98|1012|675",
+          "background|ESM4|98|1142|610",
+          "background|ESM4|98|297|610",
+          "background|ESM4|98|37|285",
+          "background|ESM4|98|492|480",
+          "background|ESM4|98|622|610",
+          "background|ESM4|98|687|155",
+          "background|ESM4|98|752|675",
+          "background|ESM4|98|882|415",
+          "background|ESM4|98|882|610",
+          "background|ESM4|98|882|805",
+          "positive|ESM6:annotation-site:63498902ef491c68"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "center_x": 1142,
+      "center_y": 610,
+      "frame_index": 98,
+      "input_opened": true,
+      "input_sha256": "8e9ab504657f44d5f7252ff8a681a4c0007a4f0643f11cc26b171e989be75cc9",
+      "patch_radius_px": 32,
+      "patch_sha256": "856002ac46efc2f97bd89c896b5b22aae6251088bd29db20eaedf31ee2eeaca1",
+      "patch_side_px": 65,
+      "sample_id": "background|ESM4|98|1142|610",
+      "source_id": "ESM4",
+      "split": "TRAIN",
+      "support_guard": {
+        "sample_count": 12,
+        "samples_checked": [
+          "background|ESM4|98|1012|675",
+          "background|ESM4|98|1142|610",
+          "background|ESM4|98|297|610",
+          "background|ESM4|98|37|285",
+          "background|ESM4|98|492|480",
+          "background|ESM4|98|622|610",
+          "background|ESM4|98|687|155",
+          "background|ESM4|98|752|675",
+          "background|ESM4|98|882|415",
+          "background|ESM4|98|882|610",
+          "background|ESM4|98|882|805",
+          "positive|ESM6:annotation-site:63498902ef491c68"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "center_x": 297,
+      "center_y": 610,
+      "frame_index": 98,
+      "input_opened": true,
+      "input_sha256": "8e9ab504657f44d5f7252ff8a681a4c0007a4f0643f11cc26b171e989be75cc9",
+      "patch_radius_px": 32,
+      "patch_sha256": "d4e76c0ac2414b7b512988d087456adae6a3dfe62e738dc6cecdc39fde6756d5",
+      "patch_side_px": 65,
+      "sample_id": "background|ESM4|98|297|610",
+      "source_id": "ESM4",
+      "split": "TRAIN",
+      "support_guard": {
+        "sample_count": 12,
+        "samples_checked": [
+          "background|ESM4|98|1012|675",
+          "background|ESM4|98|1142|610",
+          "background|ESM4|98|297|610",
+          "background|ESM4|98|37|285",
+          "background|ESM4|98|492|480",
+          "background|ESM4|98|622|610",
+          "background|ESM4|98|687|155",
+          "background|ESM4|98|752|675",
+          "background|ESM4|98|882|415",
+          "background|ESM4|98|882|610",
+          "background|ESM4|98|882|805",
+          "positive|ESM6:annotation-site:63498902ef491c68"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "center_x": 37,
+      "center_y": 285,
+      "frame_index": 98,
+      "input_opened": true,
+      "input_sha256": "8e9ab504657f44d5f7252ff8a681a4c0007a4f0643f11cc26b171e989be75cc9",
+      "patch_radius_px": 32,
+      "patch_sha256": "c47a6961c210d5ce419269cc0c72316dfa02d6d4e194ff19524afc15be122d66",
+      "patch_side_px": 65,
+      "sample_id": "background|ESM4|98|37|285",
+      "source_id": "ESM4",
+      "split": "TRAIN",
+      "support_guard": {
+        "sample_count": 12,
+        "samples_checked": [
+          "background|ESM4|98|1012|675",
+          "background|ESM4|98|1142|610",
+          "background|ESM4|98|297|610",
+          "background|ESM4|98|37|285",
+          "background|ESM4|98|492|480",
+          "background|ESM4|98|622|610",
+          "background|ESM4|98|687|155",
+          "background|ESM4|98|752|675",
+          "background|ESM4|98|882|415",
+          "background|ESM4|98|882|610",
+          "background|ESM4|98|882|805",
+          "positive|ESM6:annotation-site:63498902ef491c68"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "center_x": 492,
+      "center_y": 480,
+      "frame_index": 98,
+      "input_opened": true,
+      "input_sha256": "8e9ab504657f44d5f7252ff8a681a4c0007a4f0643f11cc26b171e989be75cc9",
+      "patch_radius_px": 32,
+      "patch_sha256": "2c74dc3dbfdd9069ea79f205646e2957e5503bbfe7fdee6c89e451593857a5a9",
+      "patch_side_px": 65,
+      "sample_id": "background|ESM4|98|492|480",
+      "source_id": "ESM4",
+      "split": "TRAIN",
+      "support_guard": {
+        "sample_count": 12,
+        "samples_checked": [
+          "background|ESM4|98|1012|675",
+          "background|ESM4|98|1142|610",
+          "background|ESM4|98|297|610",
+          "background|ESM4|98|37|285",
+          "background|ESM4|98|492|480",
+          "background|ESM4|98|622|610",
+          "background|ESM4|98|687|155",
+          "background|ESM4|98|752|675",
+          "background|ESM4|98|882|415",
+          "background|ESM4|98|882|610",
+          "background|ESM4|98|882|805",
+          "positive|ESM6:annotation-site:63498902ef491c68"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "center_x": 622,
+      "center_y": 610,
+      "frame_index": 98,
+      "input_opened": true,
+      "input_sha256": "8e9ab504657f44d5f7252ff8a681a4c0007a4f0643f11cc26b171e989be75cc9",
+      "patch_radius_px": 32,
+      "patch_sha256": "c0b94bade1ac5156cdb78e7346d38b2aebb6fb46a399f3a59105ec1d0652ce9b",
+      "patch_side_px": 65,
+      "sample_id": "background|ESM4|98|622|610",
+      "source_id": "ESM4",
+      "split": "TRAIN",
+      "support_guard": {
+        "sample_count": 12,
+        "samples_checked": [
+          "background|ESM4|98|1012|675",
+          "background|ESM4|98|1142|610",
+          "background|ESM4|98|297|610",
+          "background|ESM4|98|37|285",
+          "background|ESM4|98|492|480",
+          "background|ESM4|98|622|610",
+          "background|ESM4|98|687|155",
+          "background|ESM4|98|752|675",
+          "background|ESM4|98|882|415",
+          "background|ESM4|98|882|610",
+          "background|ESM4|98|882|805",
+          "positive|ESM6:annotation-site:63498902ef491c68"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "center_x": 687,
+      "center_y": 155,
+      "frame_index": 98,
+      "input_opened": true,
+      "input_sha256": "8e9ab504657f44d5f7252ff8a681a4c0007a4f0643f11cc26b171e989be75cc9",
+      "patch_radius_px": 32,
+      "patch_sha256": "ec10b23f799507ba04bdf0a5ce5b2be1a040a9d872f5a5a21f430b0912a2c3b8",
+      "patch_side_px": 65,
+      "sample_id": "background|ESM4|98|687|155",
+      "source_id": "ESM4",
+      "split": "TRAIN",
+      "support_guard": {
+        "sample_count": 12,
+        "samples_checked": [
+          "background|ESM4|98|1012|675",
+          "background|ESM4|98|1142|610",
+          "background|ESM4|98|297|610",
+          "background|ESM4|98|37|285",
+          "background|ESM4|98|492|480",
+          "background|ESM4|98|622|610",
+          "background|ESM4|98|687|155",
+          "background|ESM4|98|752|675",
+          "background|ESM4|98|882|415",
+          "background|ESM4|98|882|610",
+          "background|ESM4|98|882|805",
+          "positive|ESM6:annotation-site:63498902ef491c68"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "center_x": 752,
+      "center_y": 675,
+      "frame_index": 98,
+      "input_opened": true,
+      "input_sha256": "8e9ab504657f44d5f7252ff8a681a4c0007a4f0643f11cc26b171e989be75cc9",
+      "patch_radius_px": 32,
+      "patch_sha256": "a8040dffd1ac7f5bccf710a5e94179279498b17114c71275387c010c83dc5e51",
+      "patch_side_px": 65,
+      "sample_id": "background|ESM4|98|752|675",
+      "source_id": "ESM4",
+      "split": "TRAIN",
+      "support_guard": {
+        "sample_count": 12,
+        "samples_checked": [
+          "background|ESM4|98|1012|675",
+          "background|ESM4|98|1142|610",
+          "background|ESM4|98|297|610",
+          "background|ESM4|98|37|285",
+          "background|ESM4|98|492|480",
+          "background|ESM4|98|622|610",
+          "background|ESM4|98|687|155",
+          "background|ESM4|98|752|675",
+          "background|ESM4|98|882|415",
+          "background|ESM4|98|882|610",
+          "background|ESM4|98|882|805",
+          "positive|ESM6:annotation-site:63498902ef491c68"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "center_x": 882,
+      "center_y": 415,
+      "frame_index": 98,
+      "input_opened": true,
+      "input_sha256": "8e9ab504657f44d5f7252ff8a681a4c0007a4f0643f11cc26b171e989be75cc9",
+      "patch_radius_px": 32,
+      "patch_sha256": "3110d0708d313b72d88553fa19b56f369319da0601752b0500d84c3e2fc4e3da",
+      "patch_side_px": 65,
+      "sample_id": "background|ESM4|98|882|415",
+      "source_id": "ESM4",
+      "split": "TRAIN",
+      "support_guard": {
+        "sample_count": 12,
+        "samples_checked": [
+          "background|ESM4|98|1012|675",
+          "background|ESM4|98|1142|610",
+          "background|ESM4|98|297|610",
+          "background|ESM4|98|37|285",
+          "background|ESM4|98|492|480",
+          "background|ESM4|98|622|610",
+          "background|ESM4|98|687|155",
+          "background|ESM4|98|752|675",
+          "background|ESM4|98|882|415",
+          "background|ESM4|98|882|610",
+          "background|ESM4|98|882|805",
+          "positive|ESM6:annotation-site:63498902ef491c68"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "center_x": 882,
+      "center_y": 610,
+      "frame_index": 98,
+      "input_opened": true,
+      "input_sha256": "8e9ab504657f44d5f7252ff8a681a4c0007a4f0643f11cc26b171e989be75cc9",
+      "patch_radius_px": 32,
+      "patch_sha256": "ea5f905258dfc8d53a60aa41a4c9f637d0d2122fd9c72c068c5c00bd23407c87",
+      "patch_side_px": 65,
+      "sample_id": "background|ESM4|98|882|610",
+      "source_id": "ESM4",
+      "split": "TRAIN",
+      "support_guard": {
+        "sample_count": 12,
+        "samples_checked": [
+          "background|ESM4|98|1012|675",
+          "background|ESM4|98|1142|610",
+          "background|ESM4|98|297|610",
+          "background|ESM4|98|37|285",
+          "background|ESM4|98|492|480",
+          "background|ESM4|98|622|610",
+          "background|ESM4|98|687|155",
+          "background|ESM4|98|752|675",
+          "background|ESM4|98|882|415",
+          "background|ESM4|98|882|610",
+          "background|ESM4|98|882|805",
+          "positive|ESM6:annotation-site:63498902ef491c68"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "center_x": 882,
+      "center_y": 805,
+      "frame_index": 98,
+      "input_opened": true,
+      "input_sha256": "8e9ab504657f44d5f7252ff8a681a4c0007a4f0643f11cc26b171e989be75cc9",
+      "patch_radius_px": 32,
+      "patch_sha256": "25495361fca9df0e28ed2c31ad94058b42d6ea49fb256c85d086564673e84ba4",
+      "patch_side_px": 65,
+      "sample_id": "background|ESM4|98|882|805",
+      "source_id": "ESM4",
+      "split": "TRAIN",
+      "support_guard": {
+        "sample_count": 12,
+        "samples_checked": [
+          "background|ESM4|98|1012|675",
+          "background|ESM4|98|1142|610",
+          "background|ESM4|98|297|610",
+          "background|ESM4|98|37|285",
+          "background|ESM4|98|492|480",
+          "background|ESM4|98|622|610",
+          "background|ESM4|98|687|155",
+          "background|ESM4|98|752|675",
+          "background|ESM4|98|882|415",
+          "background|ESM4|98|882|610",
+          "background|ESM4|98|882|805",
+          "positive|ESM6:annotation-site:63498902ef491c68"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "center_x": 574,
+      "center_y": 415,
+      "frame_index": 98,
+      "input_opened": true,
+      "input_sha256": "8e9ab504657f44d5f7252ff8a681a4c0007a4f0643f11cc26b171e989be75cc9",
+      "patch_radius_px": 32,
+      "patch_sha256": "eb31f451af77100caedad5241d37576ac76aa05af912922b758c97cb0d311f5e",
+      "patch_side_px": 65,
+      "sample_id": "positive|ESM6:annotation-site:63498902ef491c68",
+      "source_id": "ESM4",
+      "split": "TRAIN",
+      "support_guard": {
+        "sample_count": 12,
+        "samples_checked": [
+          "background|ESM4|98|1012|675",
+          "background|ESM4|98|1142|610",
+          "background|ESM4|98|297|610",
+          "background|ESM4|98|37|285",
+          "background|ESM4|98|492|480",
+          "background|ESM4|98|622|610",
+          "background|ESM4|98|687|155",
+          "background|ESM4|98|752|675",
+          "background|ESM4|98|882|415",
+          "background|ESM4|98|882|610",
+          "background|ESM4|98|882|805",
+          "positive|ESM6:annotation-site:63498902ef491c68"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "center_x": 102,
+      "center_y": 221,
+      "frame_index": 219,
+      "input_opened": true,
+      "input_sha256": "eb22ec185b465b11abbd6ecbf38d558a9dd5ef8d19f256e42429d70b566f10bd",
+      "patch_radius_px": 32,
+      "patch_sha256": "7efa42ec3bf12131c1e66bd2af71d752cebb4a5242c837fc410400bea1dc0de6",
+      "patch_side_px": 65,
+      "sample_id": "background|ESM1|219|102|221",
+      "source_id": "ESM1",
+      "split": "DEVELOPMENT",
+      "support_guard": {
+        "sample_count": 5,
+        "samples_checked": [
+          "background|ESM1|219|102|221",
+          "background|ESM1|219|752|221",
+          "positive|ESM3:annotation-site:3eeab8e9efcb0d21",
+          "positive|ESM3:annotation-site:8e517d7ffab44a8d",
+          "positive|ESM3:annotation-site:c726fa8942e518df"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "center_x": 752,
+      "center_y": 221,
+      "frame_index": 219,
+      "input_opened": true,
+      "input_sha256": "eb22ec185b465b11abbd6ecbf38d558a9dd5ef8d19f256e42429d70b566f10bd",
+      "patch_radius_px": 32,
+      "patch_sha256": "11b4a51bc4a316c9831e4053ba076839291b036b4391b281d7152064dc70925b",
+      "patch_side_px": 65,
+      "sample_id": "background|ESM1|219|752|221",
+      "source_id": "ESM1",
+      "split": "DEVELOPMENT",
+      "support_guard": {
+        "sample_count": 5,
+        "samples_checked": [
+          "background|ESM1|219|102|221",
+          "background|ESM1|219|752|221",
+          "positive|ESM3:annotation-site:3eeab8e9efcb0d21",
+          "positive|ESM3:annotation-site:8e517d7ffab44a8d",
+          "positive|ESM3:annotation-site:c726fa8942e518df"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "center_x": 352,
+      "center_y": 174,
+      "frame_index": 219,
+      "input_opened": true,
+      "input_sha256": "eb22ec185b465b11abbd6ecbf38d558a9dd5ef8d19f256e42429d70b566f10bd",
+      "patch_radius_px": 32,
+      "patch_sha256": "4c3607476d12084145ee459d3457c520a5650c55810c85350458d31b1ac469af",
+      "patch_side_px": 65,
+      "sample_id": "positive|ESM3:annotation-site:3eeab8e9efcb0d21",
+      "source_id": "ESM1",
+      "split": "DEVELOPMENT",
+      "support_guard": {
+        "sample_count": 5,
+        "samples_checked": [
+          "background|ESM1|219|102|221",
+          "background|ESM1|219|752|221",
+          "positive|ESM3:annotation-site:3eeab8e9efcb0d21",
+          "positive|ESM3:annotation-site:8e517d7ffab44a8d",
+          "positive|ESM3:annotation-site:c726fa8942e518df"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "center_x": 56,
+      "center_y": 300,
+      "frame_index": 219,
+      "input_opened": true,
+      "input_sha256": "eb22ec185b465b11abbd6ecbf38d558a9dd5ef8d19f256e42429d70b566f10bd",
+      "patch_radius_px": 32,
+      "patch_sha256": "9ebb616a5c16c64cfef6fde5957647296f6f22e7aaeb0cd4481d90bc6c28d3aa",
+      "patch_side_px": 65,
+      "sample_id": "positive|ESM3:annotation-site:8e517d7ffab44a8d",
+      "source_id": "ESM1",
+      "split": "DEVELOPMENT",
+      "support_guard": {
+        "sample_count": 5,
+        "samples_checked": [
+          "background|ESM1|219|102|221",
+          "background|ESM1|219|752|221",
+          "positive|ESM3:annotation-site:3eeab8e9efcb0d21",
+          "positive|ESM3:annotation-site:8e517d7ffab44a8d",
+          "positive|ESM3:annotation-site:c726fa8942e518df"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "center_x": 555,
+      "center_y": 422,
+      "frame_index": 219,
+      "input_opened": true,
+      "input_sha256": "eb22ec185b465b11abbd6ecbf38d558a9dd5ef8d19f256e42429d70b566f10bd",
+      "patch_radius_px": 32,
+      "patch_sha256": "173a0418933aaba262688b5db5443ba6302a1479d4ea825df41a4da2ac215d53",
+      "patch_side_px": 65,
+      "sample_id": "positive|ESM3:annotation-site:c726fa8942e518df",
+      "source_id": "ESM1",
+      "split": "DEVELOPMENT",
+      "support_guard": {
+        "sample_count": 5,
+        "samples_checked": [
+          "background|ESM1|219|102|221",
+          "background|ESM1|219|752|221",
+          "positive|ESM3:annotation-site:3eeab8e9efcb0d21",
+          "positive|ESM3:annotation-site:8e517d7ffab44a8d",
+          "positive|ESM3:annotation-site:c726fa8942e518df"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "center_x": 1077,
+      "center_y": 805,
+      "frame_index": 197,
+      "input_opened": true,
+      "input_sha256": "0446ff48d035f3f548d93253fbd9eac14536de0aeb477485b87b17dd647e8a57",
+      "patch_radius_px": 32,
+      "patch_sha256": "52b85ad4024607925830f549e1d87447f858918f10a870fd8a41a9820b40dd40",
+      "patch_side_px": 65,
+      "sample_id": "background|ESM4|197|1077|805",
+      "source_id": "ESM4",
+      "split": "DEVELOPMENT",
+      "support_guard": {
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM4|197|1077|805",
+          "background|ESM4|197|362|155",
+          "background|ESM4|197|427|350",
+          "background|ESM4|197|492|415",
+          "background|ESM4|197|492|805",
+          "background|ESM4|197|752|545",
+          "positive|ESM6:annotation-site:33c1dc5c4466a022",
+          "positive|ESM6:annotation-site:610a877237d31a5d",
+          "positive|ESM6:annotation-site:7c58fc05ae40787e",
+          "positive|ESM6:annotation-site:8a86a50873360dcf",
+          "positive|ESM6:annotation-site:8acca343f57b1314"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "center_x": 362,
+      "center_y": 155,
+      "frame_index": 197,
+      "input_opened": true,
+      "input_sha256": "0446ff48d035f3f548d93253fbd9eac14536de0aeb477485b87b17dd647e8a57",
+      "patch_radius_px": 32,
+      "patch_sha256": "866844444326271464d5a3f8bd648250421aeeb18dde2b99b0de84cdc50342bc",
+      "patch_side_px": 65,
+      "sample_id": "background|ESM4|197|362|155",
+      "source_id": "ESM4",
+      "split": "DEVELOPMENT",
+      "support_guard": {
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM4|197|1077|805",
+          "background|ESM4|197|362|155",
+          "background|ESM4|197|427|350",
+          "background|ESM4|197|492|415",
+          "background|ESM4|197|492|805",
+          "background|ESM4|197|752|545",
+          "positive|ESM6:annotation-site:33c1dc5c4466a022",
+          "positive|ESM6:annotation-site:610a877237d31a5d",
+          "positive|ESM6:annotation-site:7c58fc05ae40787e",
+          "positive|ESM6:annotation-site:8a86a50873360dcf",
+          "positive|ESM6:annotation-site:8acca343f57b1314"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "center_x": 427,
+      "center_y": 350,
+      "frame_index": 197,
+      "input_opened": true,
+      "input_sha256": "0446ff48d035f3f548d93253fbd9eac14536de0aeb477485b87b17dd647e8a57",
+      "patch_radius_px": 32,
+      "patch_sha256": "212c5b311f569a9479a7416d7ff3da17e6a2c78bd23414d525391b759c612667",
+      "patch_side_px": 65,
+      "sample_id": "background|ESM4|197|427|350",
+      "source_id": "ESM4",
+      "split": "DEVELOPMENT",
+      "support_guard": {
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM4|197|1077|805",
+          "background|ESM4|197|362|155",
+          "background|ESM4|197|427|350",
+          "background|ESM4|197|492|415",
+          "background|ESM4|197|492|805",
+          "background|ESM4|197|752|545",
+          "positive|ESM6:annotation-site:33c1dc5c4466a022",
+          "positive|ESM6:annotation-site:610a877237d31a5d",
+          "positive|ESM6:annotation-site:7c58fc05ae40787e",
+          "positive|ESM6:annotation-site:8a86a50873360dcf",
+          "positive|ESM6:annotation-site:8acca343f57b1314"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "center_x": 492,
+      "center_y": 415,
+      "frame_index": 197,
+      "input_opened": true,
+      "input_sha256": "0446ff48d035f3f548d93253fbd9eac14536de0aeb477485b87b17dd647e8a57",
+      "patch_radius_px": 32,
+      "patch_sha256": "c6e3dee5ce3f7660ae60a5870fbefbe100bdba05ad6ef66f8228da0f71459880",
+      "patch_side_px": 65,
+      "sample_id": "background|ESM4|197|492|415",
+      "source_id": "ESM4",
+      "split": "DEVELOPMENT",
+      "support_guard": {
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM4|197|1077|805",
+          "background|ESM4|197|362|155",
+          "background|ESM4|197|427|350",
+          "background|ESM4|197|492|415",
+          "background|ESM4|197|492|805",
+          "background|ESM4|197|752|545",
+          "positive|ESM6:annotation-site:33c1dc5c4466a022",
+          "positive|ESM6:annotation-site:610a877237d31a5d",
+          "positive|ESM6:annotation-site:7c58fc05ae40787e",
+          "positive|ESM6:annotation-site:8a86a50873360dcf",
+          "positive|ESM6:annotation-site:8acca343f57b1314"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "center_x": 492,
+      "center_y": 805,
+      "frame_index": 197,
+      "input_opened": true,
+      "input_sha256": "0446ff48d035f3f548d93253fbd9eac14536de0aeb477485b87b17dd647e8a57",
+      "patch_radius_px": 32,
+      "patch_sha256": "7b0579e1361b5e5d2010b36f4062dbea52f34333ac15bbfaa2cc4602b841d29c",
+      "patch_side_px": 65,
+      "sample_id": "background|ESM4|197|492|805",
+      "source_id": "ESM4",
+      "split": "DEVELOPMENT",
+      "support_guard": {
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM4|197|1077|805",
+          "background|ESM4|197|362|155",
+          "background|ESM4|197|427|350",
+          "background|ESM4|197|492|415",
+          "background|ESM4|197|492|805",
+          "background|ESM4|197|752|545",
+          "positive|ESM6:annotation-site:33c1dc5c4466a022",
+          "positive|ESM6:annotation-site:610a877237d31a5d",
+          "positive|ESM6:annotation-site:7c58fc05ae40787e",
+          "positive|ESM6:annotation-site:8a86a50873360dcf",
+          "positive|ESM6:annotation-site:8acca343f57b1314"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "center_x": 752,
+      "center_y": 545,
+      "frame_index": 197,
+      "input_opened": true,
+      "input_sha256": "0446ff48d035f3f548d93253fbd9eac14536de0aeb477485b87b17dd647e8a57",
+      "patch_radius_px": 32,
+      "patch_sha256": "2dc98f806537c68c281e83d9364e6a8f6e1a246bcf7a48f88ea3144740175fb6",
+      "patch_side_px": 65,
+      "sample_id": "background|ESM4|197|752|545",
+      "source_id": "ESM4",
+      "split": "DEVELOPMENT",
+      "support_guard": {
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM4|197|1077|805",
+          "background|ESM4|197|362|155",
+          "background|ESM4|197|427|350",
+          "background|ESM4|197|492|415",
+          "background|ESM4|197|492|805",
+          "background|ESM4|197|752|545",
+          "positive|ESM6:annotation-site:33c1dc5c4466a022",
+          "positive|ESM6:annotation-site:610a877237d31a5d",
+          "positive|ESM6:annotation-site:7c58fc05ae40787e",
+          "positive|ESM6:annotation-site:8a86a50873360dcf",
+          "positive|ESM6:annotation-site:8acca343f57b1314"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "center_x": 457,
+      "center_y": 692,
+      "frame_index": 197,
+      "input_opened": true,
+      "input_sha256": "0446ff48d035f3f548d93253fbd9eac14536de0aeb477485b87b17dd647e8a57",
+      "patch_radius_px": 32,
+      "patch_sha256": "197d2751826c434f712f23f8c597b17e0d03b8399784c882bc9e7c11aaf99237",
+      "patch_side_px": 65,
+      "sample_id": "positive|ESM6:annotation-site:33c1dc5c4466a022",
+      "source_id": "ESM4",
+      "split": "DEVELOPMENT",
+      "support_guard": {
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM4|197|1077|805",
+          "background|ESM4|197|362|155",
+          "background|ESM4|197|427|350",
+          "background|ESM4|197|492|415",
+          "background|ESM4|197|492|805",
+          "background|ESM4|197|752|545",
+          "positive|ESM6:annotation-site:33c1dc5c4466a022",
+          "positive|ESM6:annotation-site:610a877237d31a5d",
+          "positive|ESM6:annotation-site:7c58fc05ae40787e",
+          "positive|ESM6:annotation-site:8a86a50873360dcf",
+          "positive|ESM6:annotation-site:8acca343f57b1314"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "center_x": 96,
+      "center_y": 636,
+      "frame_index": 197,
+      "input_opened": true,
+      "input_sha256": "0446ff48d035f3f548d93253fbd9eac14536de0aeb477485b87b17dd647e8a57",
+      "patch_radius_px": 32,
+      "patch_sha256": "a3f0646c3bd6f548adbc4945eae1a99195f8210e2ac109221ad72e94562ae3a0",
+      "patch_side_px": 65,
+      "sample_id": "positive|ESM6:annotation-site:610a877237d31a5d",
+      "source_id": "ESM4",
+      "split": "DEVELOPMENT",
+      "support_guard": {
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM4|197|1077|805",
+          "background|ESM4|197|362|155",
+          "background|ESM4|197|427|350",
+          "background|ESM4|197|492|415",
+          "background|ESM4|197|492|805",
+          "background|ESM4|197|752|545",
+          "positive|ESM6:annotation-site:33c1dc5c4466a022",
+          "positive|ESM6:annotation-site:610a877237d31a5d",
+          "positive|ESM6:annotation-site:7c58fc05ae40787e",
+          "positive|ESM6:annotation-site:8a86a50873360dcf",
+          "positive|ESM6:annotation-site:8acca343f57b1314"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "center_x": 898,
+      "center_y": 294,
+      "frame_index": 197,
+      "input_opened": true,
+      "input_sha256": "0446ff48d035f3f548d93253fbd9eac14536de0aeb477485b87b17dd647e8a57",
+      "patch_radius_px": 32,
+      "patch_sha256": "198cfe665d7e59dee9113b524afa1627e1ec1b047bfb82eebe24704edb1572d8",
+      "patch_side_px": 65,
+      "sample_id": "positive|ESM6:annotation-site:7c58fc05ae40787e",
+      "source_id": "ESM4",
+      "split": "DEVELOPMENT",
+      "support_guard": {
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM4|197|1077|805",
+          "background|ESM4|197|362|155",
+          "background|ESM4|197|427|350",
+          "background|ESM4|197|492|415",
+          "background|ESM4|197|492|805",
+          "background|ESM4|197|752|545",
+          "positive|ESM6:annotation-site:33c1dc5c4466a022",
+          "positive|ESM6:annotation-site:610a877237d31a5d",
+          "positive|ESM6:annotation-site:7c58fc05ae40787e",
+          "positive|ESM6:annotation-site:8a86a50873360dcf",
+          "positive|ESM6:annotation-site:8acca343f57b1314"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "center_x": 495,
+      "center_y": 599,
+      "frame_index": 197,
+      "input_opened": true,
+      "input_sha256": "0446ff48d035f3f548d93253fbd9eac14536de0aeb477485b87b17dd647e8a57",
+      "patch_radius_px": 32,
+      "patch_sha256": "ed5b2524bbc258fd97760cda767cd8a2f91b3e91ecbe24a697a45e85666866f8",
+      "patch_side_px": 65,
+      "sample_id": "positive|ESM6:annotation-site:8a86a50873360dcf",
+      "source_id": "ESM4",
+      "split": "DEVELOPMENT",
+      "support_guard": {
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM4|197|1077|805",
+          "background|ESM4|197|362|155",
+          "background|ESM4|197|427|350",
+          "background|ESM4|197|492|415",
+          "background|ESM4|197|492|805",
+          "background|ESM4|197|752|545",
+          "positive|ESM6:annotation-site:33c1dc5c4466a022",
+          "positive|ESM6:annotation-site:610a877237d31a5d",
+          "positive|ESM6:annotation-site:7c58fc05ae40787e",
+          "positive|ESM6:annotation-site:8a86a50873360dcf",
+          "positive|ESM6:annotation-site:8acca343f57b1314"
+        ],
+        "status": "PASS"
+      }
+    },
+    {
+      "center_x": 722,
+      "center_y": 800,
+      "frame_index": 197,
+      "input_opened": true,
+      "input_sha256": "0446ff48d035f3f548d93253fbd9eac14536de0aeb477485b87b17dd647e8a57",
+      "patch_radius_px": 32,
+      "patch_sha256": "4dffee94c4d316e70cb226ddb1e48defabe1859b2e16748fe3a8fdb68f954a4c",
+      "patch_side_px": 65,
+      "sample_id": "positive|ESM6:annotation-site:8acca343f57b1314",
+      "source_id": "ESM4",
+      "split": "DEVELOPMENT",
+      "support_guard": {
+        "sample_count": 11,
+        "samples_checked": [
+          "background|ESM4|197|1077|805",
+          "background|ESM4|197|362|155",
+          "background|ESM4|197|427|350",
+          "background|ESM4|197|492|415",
+          "background|ESM4|197|492|805",
+          "background|ESM4|197|752|545",
+          "positive|ESM6:annotation-site:33c1dc5c4466a022",
+          "positive|ESM6:annotation-site:610a877237d31a5d",
+          "positive|ESM6:annotation-site:7c58fc05ae40787e",
+          "positive|ESM6:annotation-site:8a86a50873360dcf",
+          "positive|ESM6:annotation-site:8acca343f57b1314"
+        ],
+        "status": "PASS"
+      }
+    }
+  ],
+  "receipt_invocations": 1,
+  "schema": "TI3-NATIVE-IO-AUDIT-1",
+  "scientific_baseline_calls_started": 1,
+  "source_open_attempts": 5,
+  "successful_scientific_baselines": 1
+}

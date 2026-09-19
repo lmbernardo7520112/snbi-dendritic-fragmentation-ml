@@ -1,0 +1,86 @@
+{
+  "ci_required_jobs": "ALL_SUCCESS_AT_EXACT_C1",
+  "data_guard": {
+    "audit": "tracked_repository_data_guard",
+    "content_bytes_read": 0,
+    "examined_entry_count": 424,
+    "status": "PASS",
+    "violations": []
+  },
+  "experimental_bytes": 0,
+  "experimental_opens": 0,
+  "head": "e6090121471faa8902f68ddd045ab8b54a2e77fc",
+  "manifest_sha256": "c8e82b72ff5dc51d188a764c577c11d514474b14d90aea6292c1439e776fb487",
+  "receipt_created": false,
+  "scientific_invocations": 0,
+  "source_inventory_admitted": [
+    {
+      "frame_index": 73,
+      "source_id": "ESM1",
+      "split": "TRAIN"
+    },
+    {
+      "frame_index": 146,
+      "source_id": "ESM1",
+      "split": "TRAIN"
+    },
+    {
+      "frame_index": 98,
+      "source_id": "ESM4",
+      "split": "TRAIN"
+    },
+    {
+      "frame_index": 219,
+      "source_id": "ESM1",
+      "split": "DEVELOPMENT"
+    },
+    {
+      "frame_index": 197,
+      "source_id": "ESM4",
+      "split": "DEVELOPMENT"
+    }
+  ],
+  "split_counts": {
+    "DEVELOPMENT": {
+      "background_deficit": 0,
+      "backgrounds_by_frame": {
+        "ESM1:219": 2,
+        "ESM4:197": 6
+      },
+      "excluded_positives": 10,
+      "geometrically_available_backgrounds": 213,
+      "materializable_samples": 16,
+      "positive_candidates": 18,
+      "selected_backgrounds": 8,
+      "valid_positives": 8
+    },
+    "FINAL_TEST": {
+      "background_deficit": 0,
+      "backgrounds_by_frame": {
+        "ESM1:293": 1,
+        "ESM4:295": 2
+      },
+      "excluded_positives": 5,
+      "geometrically_available_backgrounds": 213,
+      "materializable_samples": 6,
+      "positive_candidates": 8,
+      "selected_backgrounds": 3,
+      "valid_positives": 3
+    },
+    "TRAIN": {
+      "background_deficit": 0,
+      "backgrounds_by_frame": {
+        "ESM1:146": 4,
+        "ESM1:73": 2,
+        "ESM4:98": 11
+      },
+      "excluded_positives": 9,
+      "geometrically_available_backgrounds": 262,
+      "materializable_samples": 34,
+      "positive_candidates": 26,
+      "selected_backgrounds": 17,
+      "valid_positives": 17
+    }
+  },
+  "status": "PASS_PREPIXEL_ACTUAL_C1"
+}

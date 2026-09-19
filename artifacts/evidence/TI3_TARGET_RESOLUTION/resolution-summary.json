@@ -1,0 +1,258 @@
+{
+  "component_count": 491,
+  "positive_observation_count": 108,
+  "ignore_component_count": 383,
+  "annotation_site_count": 52,
+  "singleton_site_count": 19,
+  "repeated_site_count": 33,
+  "observed_frame_count": 10,
+  "positive_distinct_frame_count": 8,
+  "observed_frame_indices": [
+    0,
+    73,
+    98,
+    146,
+    197,
+    219,
+    293,
+    295,
+    394
+  ],
+  "site_multiplicity_distribution": {
+    "1": 19,
+    "2": 16,
+    "3": 11,
+    "4": 6
+  },
+  "by_source": {
+    "ESM3": {
+      "component_count": 428,
+      "positive_observation_count": 71,
+      "ignore_component_count": 357,
+      "annotation_site_count": 38,
+      "singleton_site_count": 18,
+      "repeated_site_count": 20,
+      "observed_frame_count": 5,
+      "positive_distinct_frame_count": 4,
+      "observed_frame_indices": [
+        0,
+        73,
+        146,
+        219,
+        293
+      ],
+      "site_multiplicity_distribution": {
+        "1": 18,
+        "2": 11,
+        "3": 5,
+        "4": 4
+      }
+    },
+    "ESM6": {
+      "component_count": 63,
+      "positive_observation_count": 37,
+      "ignore_component_count": 26,
+      "annotation_site_count": 14,
+      "singleton_site_count": 1,
+      "repeated_site_count": 13,
+      "observed_frame_count": 5,
+      "positive_distinct_frame_count": 4,
+      "observed_frame_indices": [
+        0,
+        98,
+        197,
+        295,
+        394
+      ],
+      "site_multiplicity_distribution": {
+        "1": 1,
+        "2": 5,
+        "3": 6,
+        "4": 2
+      }
+    }
+  },
+  "by_acquisition": {
+    "bottom_up_anti_parallel": {
+      "component_count": 428,
+      "positive_observation_count": 71,
+      "ignore_component_count": 357,
+      "annotation_site_count": 38,
+      "singleton_site_count": 18,
+      "repeated_site_count": 20,
+      "observed_frame_count": 5,
+      "positive_distinct_frame_count": 4,
+      "observed_frame_indices": [
+        0,
+        73,
+        146,
+        219,
+        293
+      ],
+      "site_multiplicity_distribution": {
+        "1": 18,
+        "2": 11,
+        "3": 5,
+        "4": 4
+      }
+    },
+    "top_down_parallel": {
+      "component_count": 63,
+      "positive_observation_count": 37,
+      "ignore_component_count": 26,
+      "annotation_site_count": 14,
+      "singleton_site_count": 1,
+      "repeated_site_count": 13,
+      "observed_frame_count": 5,
+      "positive_distinct_frame_count": 4,
+      "observed_frame_indices": [
+        0,
+        98,
+        197,
+        295,
+        394
+      ],
+      "site_multiplicity_distribution": {
+        "1": 1,
+        "2": 5,
+        "3": 6,
+        "4": 2
+      }
+    }
+  },
+  "by_observed_frame": [
+    {
+      "asset_id": "ESM3:0",
+      "source_id": "ESM3",
+      "acquisition_id": "bottom_up_anti_parallel",
+      "frame_index": 0,
+      "experimental_time_s": -25.96,
+      "component_count": 0,
+      "positive_observation_count": 0,
+      "ignore_component_count": 0,
+      "annotation_site_count": 0,
+      "first_confident_site_count": 0
+    },
+    {
+      "asset_id": "ESM3:73",
+      "source_id": "ESM3",
+      "acquisition_id": "bottom_up_anti_parallel",
+      "frame_index": 73,
+      "experimental_time_s": 60.18,
+      "component_count": 91,
+      "positive_observation_count": 14,
+      "ignore_component_count": 77,
+      "annotation_site_count": 14,
+      "first_confident_site_count": 14
+    },
+    {
+      "asset_id": "ESM3:146",
+      "source_id": "ESM3",
+      "acquisition_id": "bottom_up_anti_parallel",
+      "frame_index": 146,
+      "experimental_time_s": 146.32,
+      "component_count": 112,
+      "positive_observation_count": 18,
+      "ignore_component_count": 94,
+      "annotation_site_count": 18,
+      "first_confident_site_count": 10
+    },
+    {
+      "asset_id": "ESM3:219",
+      "source_id": "ESM3",
+      "acquisition_id": "bottom_up_anti_parallel",
+      "frame_index": 219,
+      "experimental_time_s": 232.46,
+      "component_count": 112,
+      "positive_observation_count": 19,
+      "ignore_component_count": 93,
+      "annotation_site_count": 19,
+      "first_confident_site_count": 8
+    },
+    {
+      "asset_id": "ESM3:293",
+      "source_id": "ESM3",
+      "acquisition_id": "bottom_up_anti_parallel",
+      "frame_index": 293,
+      "experimental_time_s": 319.78,
+      "component_count": 113,
+      "positive_observation_count": 20,
+      "ignore_component_count": 93,
+      "annotation_site_count": 20,
+      "first_confident_site_count": 6
+    },
+    {
+      "asset_id": "ESM6:0",
+      "source_id": "ESM6",
+      "acquisition_id": "top_down_parallel",
+      "frame_index": 0,
+      "experimental_time_s": -34.22,
+      "component_count": 0,
+      "positive_observation_count": 0,
+      "ignore_component_count": 0,
+      "annotation_site_count": 0,
+      "first_confident_site_count": 0
+    },
+    {
+      "asset_id": "ESM6:98",
+      "source_id": "ESM6",
+      "acquisition_id": "top_down_parallel",
+      "frame_index": 98,
+      "experimental_time_s": 81.42,
+      "component_count": 9,
+      "positive_observation_count": 2,
+      "ignore_component_count": 7,
+      "annotation_site_count": 2,
+      "first_confident_site_count": 2
+    },
+    {
+      "asset_id": "ESM6:197",
+      "source_id": "ESM6",
+      "acquisition_id": "top_down_parallel",
+      "frame_index": 197,
+      "experimental_time_s": 198.24,
+      "component_count": 18,
+      "positive_observation_count": 12,
+      "ignore_component_count": 6,
+      "annotation_site_count": 12,
+      "first_confident_site_count": 10
+    },
+    {
+      "asset_id": "ESM6:295",
+      "source_id": "ESM6",
+      "acquisition_id": "top_down_parallel",
+      "frame_index": 295,
+      "experimental_time_s": 313.88,
+      "component_count": 18,
+      "positive_observation_count": 12,
+      "ignore_component_count": 6,
+      "annotation_site_count": 12,
+      "first_confident_site_count": 2
+    },
+    {
+      "asset_id": "ESM6:394",
+      "source_id": "ESM6",
+      "acquisition_id": "top_down_parallel",
+      "frame_index": 394,
+      "experimental_time_s": 430.7,
+      "component_count": 18,
+      "positive_observation_count": 11,
+      "ignore_component_count": 7,
+      "annotation_site_count": 11,
+      "first_confident_site_count": 0
+    }
+  ],
+  "structural_gate": {
+    "minimum_sites_for_three_nonempty_partitions": 3,
+    "pass": true,
+    "meaning": "NECESSARY_COUNT_CONDITION_ONLY_NOT_A_SPLIT_OR_STATISTICAL_POWER_CLAIM"
+  },
+  "within_acquisition_stratification": {
+    "annotation_site_counts": {
+      "bottom_up_anti_parallel": 38,
+      "top_down_parallel": 14
+    },
+    "pass": true,
+    "meaning": "THREE_NONEMPTY_PARTITIONS_POSSIBLE_BY_COUNT_IN_EACH_OBSERVED_ACQUISITION_ONLY"
+  }
+}

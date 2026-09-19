@@ -1,0 +1,404 @@
+{
+  "scope": "ROOT_SESSION_AND_DECLARED_DELEGATED_COMMANDS_NOT_UNIVERSAL_SYSCALL_AUDIT",
+  "root_commands": [
+    {
+      "sequence": 1,
+      "command": "cat <explicit PREFLIGHT RECOVERY attachment; private path omitted>",
+      "boundary": "default_sandbox",
+      "exit_code": 0
+    },
+    {
+      "sequence": 2,
+      "command": "git status --short --untracked-files=all",
+      "boundary": "default_sandbox",
+      "exit_code": 0
+    },
+    {
+      "sequence": 3,
+      "command": "git rev-parse HEAD",
+      "boundary": "default_sandbox",
+      "exit_code": 0
+    },
+    {
+      "sequence": 4,
+      "command": "git branch --show-current",
+      "boundary": "default_sandbox",
+      "exit_code": 0
+    },
+    {
+      "sequence": 5,
+      "command": "/usr/bin/python3 -B - <<'PY'\nimport os,stat,json,hashlib,subprocess,importlib.util,sys\nfrom pathlib import Path\nroot=Path('artifacts/evidence/TI3_TARGET_RESOLUTION')\nv=json.loads((root/'verification.json').read_text())\nexpected=set(v['output_text_hashes'])|{str(root/'verification.json'),str(root/'commands.json')}\nnames=subprocess.check_output(['git','diff','--cached','--name-only'],text=True).splitlines()\nassert set(names)==expected and len(names)==19\nhashes={}\nfor name in sorted(expected):\n    p=Path(name)\n    for q in (p,*p.parents):assert not stat.S_ISLNK(q.lstat().st_mode)\n    b=p.read_bytes();b.decode('utf-8')\n    h=hashlib.sha256(b).hexdigest()\n    assert hashlib.sha256(subprocess.check_output(['git','show',':'+name])).hexdigest()==h\n    if name in v['output_text_hashes']:assert h==v['output_text_hashes'][name]['sha256']\n    hashes[name]={'sha256':h,'bytes':len(b)}\nassert subprocess.check_output(['git','diff','--name-only'])==b''\nvenv=Path('.venv')\npresent=os.path.lexists(venv)\nif present:assert stat.S_ISDIR(venv.lstat().st_mode)\nprint(json.dumps({'status':'PASS_RECOVERY_START','files':hashes,'python':sys.version.split()[0],'venv_exists':present,'venv_module':importlib.util.find_spec('venv') is not None,'ensurepip_module':importlib.util.find_spec('ensurepip') is not None},indent=2))\nPY",
+      "boundary": "default_sandbox_read_only_preflight",
+      "exit_code": 0
+    },
+    {
+      "sequence": 6,
+      "command": "git rm --cached -- artifacts/evidence/TI3_TARGET_RESOLUTION/resolve.py artifacts/evidence/TI3_TARGET_RESOLUTION/run_resolution.py artifacts/evidence/TI3_TARGET_RESOLUTION/test_resolution.py",
+      "boundary": "targeted_git_index_only_approval",
+      "exit_code": 0
+    },
+    {
+      "sequence": 7,
+      "command": "/usr/bin/python3 -B - <<'PY'\nimport os,stat,hashlib,json,subprocess\nfrom pathlib import Path\nbase=Path('artifacts/evidence/TI3_TARGET_RESOLUTION')\nfor q in (base,*base.parents):assert not stat.S_ISLNK(q.lstat().st_mode)\ncodes=['resolve.py','run_resolution.py','test_resolution.py']\nstaged=subprocess.check_output(['git','diff','--cached','--name-only'],text=True).splitlines()\nassert len(staged)==16 and not any(x.endswith('.py') for x in staged)\nmanifest=['original_local_path\\tsnapshot_tracked_path\\tsha256\\tbyte_count']\nrows=[]\nfor name in codes:\n    p=base/name\n    assert stat.S_ISREG(p.lstat().st_mode)\n    b=p.read_bytes()\n    snap=base/(name+'.snapshot.txt')\n    with snap.open('xb') as f:f.write(b)\n    assert snap.read_bytes()==b\n    h=hashlib.sha256(b).hexdigest()\n    manifest.append(f'{p}\\t{snap}\\t{h}\\t{len(b)}')\n    rows.append({'original_local_path':str(p),'snapshot_tracked_path':str(snap),'sha256':h,'byte_count':len(b),'byte_identity':True})\nwith (base/'script-snapshots.sha256').open('x',encoding='utf-8') as f:f.write('\\n'.join(manifest)+'\\n')\nignored=subprocess.check_output(['git','check-ignore','--',*[str(base/n) for n in codes]],text=True).splitlines()\nassert set(ignored)=={str(base/n) for n in codes}\nprint(json.dumps({'status':'PASS_SNAPSHOT_PRESERVATION','originals_local_and_ignored':True,'ordinary_texts_still_staged':len(staged),'snapshots':rows},indent=2))\nPY",
+      "boundary": "default_sandbox_exact_snapshot_creation",
+      "exit_code": 0
+    },
+    {
+      "sequence": 8,
+      "command": "git add -- artifacts/evidence/TI3_TARGET_RESOLUTION/resolve.py.snapshot.txt artifacts/evidence/TI3_TARGET_RESOLUTION/run_resolution.py.snapshot.txt artifacts/evidence/TI3_TARGET_RESOLUTION/test_resolution.py.snapshot.txt artifacts/evidence/TI3_TARGET_RESOLUTION/script-snapshots.sha256",
+      "boundary": "targeted_git_approval",
+      "exit_code": 0
+    },
+    {
+      "sequence": 9,
+      "command": "/usr/bin/python3 -B - <<'PY'\nimport json,hashlib,subprocess\nfrom pathlib import Path\nexpected=json.loads(\"[\\\"artifacts/evidence/TI3_TARGET_RESOLUTION/CLAIM_SCOPE.md\\\",\\\"artifacts/evidence/TI3_TARGET_RESOLUTION/COURSE_ALIGNMENT.md\\\",\\\"artifacts/evidence/TI3_TARGET_RESOLUTION/DATASET_FEASIBILITY.md\\\",\\\"artifacts/evidence/TI3_TARGET_RESOLUTION/RESOLUTION_PROTOCOL.md\\\",\\\"artifacts/evidence/TI3_TARGET_RESOLUTION/SITE_DEDUPLICATION.json\\\",\\\"artifacts/evidence/TI3_TARGET_RESOLUTION/SPLIT_CONTRACT.md\\\",\\\"artifacts/evidence/TI3_TARGET_RESOLUTION/TARGET_CONTRACT.md\\\",\\\"artifacts/evidence/TI3_TARGET_RESOLUTION/WEAK_LABEL_LEDGER.json\\\",\\\"artifacts/evidence/TI3_TARGET_RESOLUTION/authorization.md\\\",\\\"artifacts/evidence/TI3_TARGET_RESOLUTION/commands.json\\\",\\\"artifacts/evidence/TI3_TARGET_RESOLUTION/execution-report.md\\\",\\\"artifacts/evidence/TI3_TARGET_RESOLUTION/method-freeze.json\\\",\\\"artifacts/evidence/TI3_TARGET_RESOLUTION/resolution-receipt.json\\\",\\\"artifacts/evidence/TI3_TARGET_RESOLUTION/resolution-summary.json\\\",\\\"artifacts/evidence/TI3_TARGET_RESOLUTION/results.json\\\",\\\"artifacts/evidence/TI3_TARGET_RESOLUTION/verification.json\\\",\\\"artifacts/evidence/TI3_TARGET_RESOLUTION/resolve.py.snapshot.txt\\\",\\\"artifacts/evidence/TI3_TARGET_RESOLUTION/run_resolution.py.snapshot.txt\\\",\\\"artifacts/evidence/TI3_TARGET_RESOLUTION/test_resolution.py.snapshot.txt\\\",\\\"artifacts/evidence/TI3_TARGET_RESOLUTION/script-snapshots.sha256\\\"]\")\nassert set(subprocess.check_output(['git','diff','--cached','--name-only'],text=True).splitlines())==set(expected)\nfor name in expected:\n    p=Path(name);assert not p.is_symlink()\n    assert subprocess.check_output(['git','show',':'+name])==p.read_bytes()\nfor name in ('resolve.py','run_resolution.py','test_resolution.py'):\n    p=Path('artifacts/evidence/TI3_TARGET_RESOLUTION')/name\n    assert p.read_bytes()==Path(str(p)+'.snapshot.txt').read_bytes()\nprint('PASS: exact 20 staged textual paths, matching worktree bytes and three originals.')\nPY",
+      "boundary": "default_sandbox_staged_verification",
+      "exit_code": 0
+    },
+    {
+      "sequence": 10,
+      "command": "/usr/bin/python3 -B scripts/check_repository_data.py",
+      "boundary": "default_sandbox_staged_verification",
+      "exit_code": 0
+    },
+    {
+      "sequence": 11,
+      "command": "git diff --cached --check",
+      "boundary": "default_sandbox_staged_verification",
+      "exit_code": 0
+    },
+    {
+      "sequence": 12,
+      "command": "git diff --cached --stat",
+      "boundary": "default_sandbox_staged_verification",
+      "exit_code": 0
+    },
+    {
+      "sequence": 13,
+      "command": "git commit -m 'docs(ti3): freeze fragmentation target resolution'",
+      "boundary": "targeted_git_approval",
+      "exit_code": 0
+    },
+    {
+      "sequence": 14,
+      "command": "apply_patch: create exact four top-level pins",
+      "boundary": "default_sandbox",
+      "exit_code": null,
+      "paths": [
+        "requirements-ti3-ml.txt"
+      ]
+    },
+    {
+      "sequence": 15,
+      "command": "git rev-parse HEAD HEAD^",
+      "boundary": "default_sandbox_read_only",
+      "exit_code": 0
+    },
+    {
+      "sequence": 16,
+      "command": "git diff --cached --name-only",
+      "boundary": "default_sandbox_read_only",
+      "exit_code": 0
+    },
+    {
+      "sequence": 17,
+      "command": "cat scripts/check_ti3_ml_environment.py",
+      "boundary": "default_sandbox_read_only",
+      "exit_code": 0
+    },
+    {
+      "sequence": 18,
+      "command": "git check-ignore -v -- .venv .bootstrap-test-tmp",
+      "boundary": "default_sandbox_read_only",
+      "exit_code": 0
+    },
+    {
+      "sequence": 19,
+      "command": "rg -n 'venv|env|bootstrap' .gitignore",
+      "boundary": "default_sandbox_ignore_rule_verification",
+      "exit_code": 0
+    },
+    {
+      "sequence": 20,
+      "command": "git check-ignore -v -- .venv/ .venv/bin/python",
+      "boundary": "default_sandbox_ignore_rule_verification",
+      "exit_code": 0
+    },
+    {
+      "sequence": 21,
+      "command": "/usr/bin/python3 -B - <<'PY'\nimport os,stat\nfrom pathlib import Path\nbase=Path('.bootstrap-test-tmp')\nassert stat.S_ISDIR(base.lstat().st_mode)\np=base/'ti3-preflight-recovery'\np.mkdir(exist_ok=False)\nassert not os.path.lexists('.venv')\nprint('PASS: fresh repository-local temporary directory, no pre-existing .venv')\nPY",
+      "boundary": "default_sandbox_create_local_temp",
+      "exit_code": 0
+    },
+    {
+      "sequence": 22,
+      "command": "TMPDIR=.bootstrap-test-tmp/ti3-preflight-recovery /usr/bin/python3 -B -m venv --copies .venv",
+      "boundary": "default_sandbox_venv_only",
+      "exit_code": 0,
+      "session_id": 69476
+    },
+    {
+      "sequence": 23,
+      "command": ".venv/bin/python -B -c 'import sys,json; from pathlib import Path; assert sys.prefix != sys.base_prefix; assert Path(sys.prefix).absolute() == Path(\".venv\").absolute(); assert sys.version_info[:2] == (3,12); print(json.dumps({\"python\":sys.version.split()[0],\"venv\":\"repository/.venv\",\"isolated_from_system\":True}))'",
+      "boundary": "default_sandbox_venv_verification",
+      "exit_code": 0
+    },
+    {
+      "sequence": 24,
+      "command": "TMPDIR=.bootstrap-test-tmp/ti3-preflight-recovery .venv/bin/python -B -m pip --isolated install --disable-pip-version-check --no-cache-dir --only-binary=:all: -r requirements-ti3-ml.txt",
+      "boundary": "default_sandbox_venv_pinned_install",
+      "exit_code": 1,
+      "session_id": 3475
+    },
+    {
+      "sequence": 25,
+      "command": "TMPDIR=.bootstrap-test-tmp/ti3-preflight-recovery .venv/bin/python -B -m pip --isolated install --disable-pip-version-check --no-cache-dir --only-binary=:all: -r requirements-ti3-ml.txt",
+      "boundary": "targeted_network_approval_repository_venv_only",
+      "exit_code": 0,
+      "session_id": 2869
+    },
+    {
+      "sequence": 26,
+      "command": "TMPDIR=.bootstrap-test-tmp/ti3-preflight-recovery .venv/bin/python -B scripts/check_ti3_ml_environment.py",
+      "boundary": "default_sandbox_synthetic_only",
+      "exit_code": 0
+    },
+    {
+      "sequence": 27,
+      "command": "rg -n 'mask|text_top|text_bottom|native_border|reference_mask' src/snbi_fragmentation/ti2r_frag_direct.py",
+      "boundary": "default_sandbox_text_only",
+      "exit_code": 2
+    },
+    {
+      "sequence": 28,
+      "command": "cat scripts/check_ti3_ml_environment.py",
+      "boundary": "default_sandbox_text_only",
+      "exit_code": 0
+    },
+    {
+      "sequence": 29,
+      "command": "git status --short",
+      "boundary": "default_sandbox_text_only",
+      "exit_code": 0
+    },
+    {
+      "sequence": 30,
+      "command": "rg -n -A 30 -B 8 'text_top_fraction|text_bottom_fraction|native_border_px' src/snbi_fragmentation/ti2r_frag_direct_registration.py",
+      "boundary": "default_sandbox_text_only",
+      "exit_code": 0
+    },
+    {
+      "sequence": 31,
+      "command": "cat .github/workflows/ti3-synthetic.yml",
+      "boundary": "default_sandbox_text_only",
+      "exit_code": 0
+    },
+    {
+      "sequence": 32,
+      "command": "cat scripts/check_repository_data.py",
+      "boundary": "default_sandbox_text_only",
+      "exit_code": 0
+    },
+    {
+      "sequence": 33,
+      "command": "sed -n '1,260p' src/snbi_fragmentation/ti3_dataset.py",
+      "boundary": "default_sandbox_static_review",
+      "exit_code": 0
+    },
+    {
+      "sequence": 34,
+      "command": "/usr/bin/python3 -B - <<'PY'\nimport json\nfrom pathlib import Path\np=Path('artifacts/evidence/TI3_A0/verification.json')\nassert not p.is_symlink()\nx=json.loads(p.read_text())\nprint(list(x))\ny=x.get('g2_frozen_texts')\nprint(type(y).__name__)\nif isinstance(y,dict):print(len(y),next(iter(y.items())))\nPY",
+      "boundary": "default_sandbox_text_only",
+      "exit_code": 0
+    },
+    {
+      "sequence": 35,
+      "command": "/usr/bin/python3 -B - <<'PY'\nimport json,hashlib,stat,subprocess\nfrom pathlib import Path\nv=json.loads(Path('artifacts/evidence/TI3_A0/verification.json').read_text())\nfor name,want in v['g2_frozen_texts'].items():\n p=Path(name)\n assert str(p).startswith(('artifacts/evidence/','configs/','src/','scripts/','tests/','.github/workflows/','docs/'))\n for q in (p,*p.parents): assert not stat.S_ISLNK(q.lstat().st_mode)\n b=p.read_bytes();b.decode('utf-8')\n assert hashlib.sha256(b).hexdigest()==want,name\nprint(json.dumps({'g2_frozen_texts':len(v['g2_frozen_texts']),'status':'PASS','experimental_opens':0,'experimental_bytes':0,'tracked_worktree_diff':subprocess.check_output(['git','diff','--name-only'],text=True).splitlines(),'index_diff':subprocess.check_output(['git','diff','--cached','--name-only'],text=True).splitlines()}))\nPY",
+      "boundary": "default_sandbox_textual_g2_integrity",
+      "exit_code": 1
+    },
+    {
+      "sequence": 36,
+      "command": "/usr/bin/python3 -B - <<'PY'\nimport json,hashlib,stat,subprocess\nfrom pathlib import Path\nv=json.loads(Path('artifacts/evidence/TI3_A0/verification.json').read_text())\nfor name,want in v['g2_frozen_texts'].items():\n p=Path(name)\n assert name=='pyproject.toml' or str(p).startswith(('artifacts/evidence/','artifacts/metadata/','configs/','src/','scripts/','tests/','.github/workflows/','docs/'))\n assert not p.is_absolute() and '..' not in p.parts\n for q in (p,*p.parents): assert not stat.S_ISLNK(q.lstat().st_mode)\n b=p.read_bytes();b.decode('utf-8')\n assert hashlib.sha256(b).hexdigest()==want,name\nprint(json.dumps({'g2_frozen_texts':len(v['g2_frozen_texts']),'status':'PASS','experimental_opens':0,'experimental_bytes':0,'tracked_worktree_diff':subprocess.check_output(['git','diff','--name-only'],text=True).splitlines(),'index_diff':subprocess.check_output(['git','diff','--cached','--name-only'],text=True).splitlines()}))\nPY",
+      "boundary": "default_sandbox_textual_g2_integrity",
+      "exit_code": 0,
+      "note": "Preceding read-only helper omitted artifacts/metadata from path allowlist; no hash divergence or mutation occurred. Corrected read allowlist also includes explicit pyproject.toml."
+    },
+    {
+      "sequence": 37,
+      "command": "cat src/snbi_fragmentation/ti3_baseline.py",
+      "boundary": "default_sandbox_static_review",
+      "exit_code": 0
+    },
+    {
+      "sequence": 38,
+      "command": "sed -n '270,560p' src/snbi_fragmentation/ti3_dataset.py",
+      "boundary": "default_sandbox_static_review",
+      "exit_code": 0
+    },
+    {
+      "sequence": 39,
+      "command": "/usr/bin/python3 -B - <<'PY'\nimport ast,hashlib,json,os,stat,subprocess\nfrom datetime import datetime,timezone\nfrom pathlib import Path\nbase=Path('artifacts/evidence/TI3_A_RESUME')\npaths=['artifacts/evidence/TI3_TARGET_RESOLUTION/SITE_DEDUPLICATION.json','artifacts/evidence/TI3_TARGET_RESOLUTION/WEAK_LABEL_LEDGER.json','artifacts/metadata/ti2-pilot-manifest.json','src/snbi_fragmentation/ti3_dataset.py','tests/test_ti3_dataset.py','scripts/build_ti3_manifest.py','configs/registration/ti2r-frag-direct-method.json']+[str(base/n) for n in ['authorization.md','DATASET_SPEC.md','SPLIT_PROTOCOL.md','BACKGROUND_PROTOCOL.md','LEAKAGE_THREAT_MODEL.md','BASELINE_SPEC.md','COURSE_ALIGNMENT.md','CLAIM_SCOPE.md']]\nhead=subprocess.check_output(['git','--no-optional-locks','rev-parse','HEAD'],text=True).strip()\nassert head=='41d523e038e844588ee7724e07b00f75bdf29fdc'\nassert subprocess.check_output(['git','diff','--name-only'])==b''\nassert subprocess.check_output(['git','diff','--cached','--name-only'])==b''\nhashes={}\nfor name in paths:\n p=Path(name)\n for part in (p,*p.parents):assert not stat.S_ISLNK(part.lstat().st_mode)\n raw=p.read_bytes();raw.decode('utf-8')\n if p.suffix=='.py':compile(ast.parse(raw,filename=name),name,'exec')\n hashes[name]=hashlib.sha256(raw).hexdigest()\nfreeze={'scope':'DOCUMENTARY_GEOMETRY_ONLY_NOT_SCIENTIFIC_C1','head':head,'timestamp_utc':datetime.now(timezone.utc).isoformat(),'text_sha256':hashes,'prior_synthetic_tests':{'dataset':18,'baseline_core':13,'failures':0,'errors':0,'skips':0},'experimental_opens':0,'scientific_ml_runs':0}\np=base/'metadata-preflight-freeze.json'\nfd=os.open(p,os.O_WRONLY|os.O_CREAT|os.O_EXCL|os.O_NOFOLLOW,0o644)\nwith os.fdopen(fd,'w') as f:json.dump(freeze,f,indent=2,sort_keys=True);f.write('\\n');f.flush();os.fsync(f.fileno())\nprint(json.dumps({'status':'PASS_FROZEN_BEFORE_GEOMETRY','texts':len(hashes),'head':head,'freeze_sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'experimental_opens':0}))\nPY",
+      "boundary": "default_sandbox_text_freeze_before_metadata_planner",
+      "exit_code": 0
+    },
+    {
+      "sequence": 40,
+      "command": "PYTHONPATH=src /usr/bin/python3 -B scripts/build_ti3_manifest.py",
+      "boundary": "default_sandbox_single_documentary_geometry_application",
+      "exit_code": 0
+    },
+    {
+      "sequence": 41,
+      "command": "rg -n -A 30 -B 8 'def.*mask|chroma|halo|binary_dilation|valid_mask' scripts/run_ti2r_frag_direct.py src/snbi_fragmentation/ti2r_frag_direct_registration.py",
+      "boundary": "default_sandbox_static_overlay_guard_review",
+      "exit_code": 0
+    },
+    {
+      "sequence": 42,
+      "command": "/usr/bin/python3 -B - <<'PY'\nfrom pathlib import Path\nimport hashlib,json,os,stat\nbase=Path('artifacts/evidence/TI3_A_RESUME')\np=base/'metadata-preflight-result.json'\nassert not p.is_symlink()\nraw=p.read_bytes()\nassert hashlib.sha256(raw).hexdigest()=='c8e82b72ff5dc51d188a764c577c11d514474b14d90aea6292c1439e776fb487'\nx=json.loads(raw)\nassert x['state']=='PASS'\nwith (base/'dataset_manifest.json').open('xb') as f:f.write(raw)\nfinal={'status':'SEALED_WITH_HISTORICAL_NON_ML_EXPOSURE','input_opened':False,'sample_count':sum(s['split']=='FINAL_TEST' for s in x['samples']),'samples':[s for s in x['samples'] if s['split']=='FINAL_TEST'],'planning_manifest_sha256':hashlib.sha256(raw).hexdigest()}\nwith (base/'final-test-manifest.json').open('x') as f:json.dump(final,f,indent=2,sort_keys=True);f.write('\\n')\nprint(json.dumps({'manifest_sha256':hashlib.sha256(raw).hexdigest(),'final_manifest_sha256':hashlib.sha256((base/'final-test-manifest.json').read_bytes()).hexdigest(),'total_samples':len(x['samples']),'final_samples':final['sample_count'],'experimental_opens':0}))\nPY",
+      "boundary": "default_sandbox_copy_frozen_metadata_no_reselection",
+      "exit_code": 0
+    },
+    {
+      "sequence": 43,
+      "command": "cat scripts/check_ti2_scope.py",
+      "boundary": "default_sandbox_read_only",
+      "exit_code": 0
+    },
+    {
+      "sequence": 44,
+      "command": "cat src/snbi_fragmentation/ti3_support.py",
+      "boundary": "default_sandbox_read_only",
+      "exit_code": 0
+    },
+    {
+      "sequence": 45,
+      "command": "gh --version",
+      "boundary": "default_sandbox_read_only",
+      "exit_code": 0
+    },
+    {
+      "sequence": 46,
+      "command": "cat tests/test_scope_guard.py scripts/check_ti2_checksums.py",
+      "boundary": "default_sandbox_static_ci_compatibility_review",
+      "exit_code": 0
+    },
+    {
+      "sequence": 47,
+      "command": "cat .github/workflows/ci.yml",
+      "boundary": "default_sandbox_static_ci_compatibility_review",
+      "exit_code": 0
+    },
+    {
+      "sequence": 48,
+      "command": "rg -n 'check_ti2_scope|workflows/ci.yml|test_scope_guard|check_local_bootstrap' artifacts/evidence/TI2/checksums.sha256",
+      "boundary": "default_sandbox_immutable_checksum_membership_review",
+      "exit_code": 0
+    },
+    {
+      "sequence": 49,
+      "command": "PYTHONPATH=src /usr/bin/python3 -B - <<'PY'\nimport json,subprocess\nfrom scripts.check_repository_data import tracked_entries,audit_entries\nfrom scripts.check_ti2_scope import audit\nentries=tracked_entries()\ntracked={p for _,p in entries}\nnew=subprocess.check_output(['git','ls-files','--others','--exclude-standard'],text=True).splitlines()\nprospective=entries+[('100644',p) for p in new if p not in tracked]\nguard=audit_entries(prospective)\nassert guard['status']=='PASS'\nreport=audit(entries=prospective)\nprint(json.dumps({'scope':'LOCAL_PROSPECTIVE_CI_COMPATIBILITY_NO_STAGING','tracked_data_guard':guard,'legacy_ti2_scope':report,'new_untracked_paths':new,'experimental_opens':0,'scientific_ml_runs':0},indent=2,sort_keys=True))\nraise SystemExit(0 if report['status']=='PASS' else 1)\nPY",
+      "boundary": "default_sandbox_prospective_static_ci_audit_no_staging",
+      "exit_code": 1
+    }
+  ],
+  "additional_root_read_only_operations": [
+    "Read complete current and original authorization text from session store; no new shell command.",
+    "Textual schema reads of SITE_DEDUPLICATION.json, WEAK_LABEL_LEDGER.json and pilot manifest; exit 0.",
+    "Read target/split contracts and FRAG_DIRECT method JSON; exit 0.",
+    "rg --files restricted to src/tests/scripts followed by name filter; exit 0.",
+    "Read G2 frozen text path list after helper allowlist assertion; exit 0.",
+    "Read test_ti3_dataset.py and its test-function list; exit 0.",
+    "Final evidence writes and final read-only verification recorded in terminal verification/report; no additional scientific run."
+  ],
+  "patch_operations": [
+    "Exact requirements pins; checker created by dependency-smoke delegate.",
+    "New workflow, four modules and four test modules; only synthetic checks before pixels.",
+    "New TI3_A_RESUME protocols/evidence and build_ti3_manifest.py.",
+    "New conditional authority, execution guards and run_ti3_baseline.py; no invocation.",
+    "Workflow configured for 68 cases; experimental runner remained unexecuted.",
+    "On local scope BLOCKED, close only new TI3 authority and emit terminal evidence."
+  ],
+  "delegated_summary": [
+    {
+      "agent": "ti3_dependency_smoke",
+      "writes": [
+        "scripts/check_ti3_ml_environment.py"
+      ],
+      "scope": "read-only review plus checker creation and in-memory compilation",
+      "experimental_opens": 0
+    },
+    {
+      "agent": "ti3_recovery_ci",
+      "phases": [
+        "new workflow",
+        "baseline core",
+        "one-shot I/O guards"
+      ],
+      "commands": [
+        "Textual reads of repository instructions, existing workflows, source and tests; bounded rg searches; exit 0.",
+        "AST and in-memory compilation for each new code/test pair; exit 0.",
+        "PYTHONPATH=src:tests TMPDIR=.bootstrap-test-tmp/ti3-preflight-recovery .venv/bin/python -B -m unittest test_ti3_baseline -v; exit 0,13 tests",
+        "PYTHONPATH=src:tests TMPDIR=.bootstrap-test-tmp/ti3-preflight-recovery .venv/bin/python -B -m unittest test_ti3_execution -v; exit 0,13 tests"
+      ],
+      "experimental_opens": 0,
+      "scientific_ml_runs": 0
+    },
+    {
+      "agent": "ti3_manifest_code",
+      "commands": [
+        "Initial rg referenced absent ti2r_frag_direct.py; exit 2; corrected name found by bounded rg --files, exit 0.",
+        "cat/sed/rg only designated JSON/protocol/G2 source texts; exit 0.",
+        "TMPDIR=.bootstrap-test-tmp/ti3-preflight-recovery PYTHONPATH=src /usr/bin/python3 -B -m unittest discover -s tests -p test_ti3_dataset.py -v; exit 0,18 tests",
+        "One .venv unittest invocation for test_ti3_support using generated bytes; exit 0,6 tests; exact invocation not duplicated by root."
+      ],
+      "real_planner_invocations": 0,
+      "experimental_opens": 0
+    },
+    {
+      "agent": "ti3_geometry_preflight",
+      "phases": [
+        "Initial 18 documentary commands;17 exit0, one exit2 for absent nominal module path.",
+        "Two static code/protocol reads;exit0.",
+        "Three textual result audits/reads;exit0; no builder invoked.",
+        "Six governance/checksum/CI reads/searches;exit0."
+      ],
+      "writes": 0,
+      "experimental_opens": 0
+    }
+  ],
+  "operational_failures": [
+    {
+      "operation": "initial pinned venv install",
+      "exit_code": 1,
+      "reason": "DNS_NAME_OR_SERVICE_NOT_KNOWN",
+      "resolution": "same command after targeted network approval",
+      "retry_exit_code": 0
+    },
+    {
+      "operation": "read-only G2 checksum helper",
+      "exit_code": 1,
+      "reason": "local path prefix allowlist omitted artifacts/metadata",
+      "resolution": "corrected text-only helper;25 hashes PASS;no artifact mutation"
+    },
+    {
+      "operation": "prospective global TI2 scope preflight",
+      "exit_code": 1,
+      "reason": "eight TI3 path/import violations",
+      "resolution": "STOP_WITHOUT_GUARD_OR_HISTORICAL_CHECKSUM_CHANGES"
+    }
+  ],
+  "scientific_counters": {
+    "metadata_planner_invocations": 1,
+    "scientific_ml_runs": 0,
+    "experimental_opens": 0,
+    "experimental_bytes": 0
+  },
+  "limits": [
+    "Auxiliary reads are aggregated where not retained verbatim.",
+    "No claim of a complete OS syscall ledger.",
+    "Agent summaries substantiate synthetic-test counts; raw delegated stdout not recreated.",
+    "Terminal verification commands occur after this file and are described in verification.json and final response."
+  ]
+}
