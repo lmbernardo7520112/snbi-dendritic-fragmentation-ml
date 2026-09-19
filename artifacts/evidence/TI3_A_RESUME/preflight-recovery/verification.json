@@ -1,0 +1,154 @@
+{
+  "scope": "OPERATIONAL_RECOVERY_BEFORE_PIXELS",
+  "initial_head": "0f1284e86052e505e8ccfc9ceaecb58cb41065f2",
+  "checkpoint": "41d523e038e844588ee7724e07b00f75bdf29fdc",
+  "initial_hashes": {
+    "artifacts/evidence/TI3_TARGET_RESOLUTION/CLAIM_SCOPE.md": {
+      "sha256": "e78ea2542888c9b0f8c8ff42f8565ec4a017c192331b985d2dbe344335fbdd8a",
+      "bytes": 1990
+    },
+    "artifacts/evidence/TI3_TARGET_RESOLUTION/COURSE_ALIGNMENT.md": {
+      "sha256": "1a6d40a761f6c522318d385c3b0f85f940f29ebf4674debb93f9c4ec5f886e07",
+      "bytes": 1230
+    },
+    "artifacts/evidence/TI3_TARGET_RESOLUTION/DATASET_FEASIBILITY.md": {
+      "sha256": "1056d14d54ecffc5238eda54caf34c622708426edae89b0df9baadd333e7cfda",
+      "bytes": 3354
+    },
+    "artifacts/evidence/TI3_TARGET_RESOLUTION/RESOLUTION_PROTOCOL.md": {
+      "sha256": "f5c83516fa5deb6b22ea9506ca2f3c2549a315a188b835fd8242bb467e90d347",
+      "bytes": 4150
+    },
+    "artifacts/evidence/TI3_TARGET_RESOLUTION/SITE_DEDUPLICATION.json": {
+      "sha256": "6e85dc2446b5f672a21ef86e0095a297bf4452e2160970f22c09a2f32c5f39ad",
+      "bytes": 134623
+    },
+    "artifacts/evidence/TI3_TARGET_RESOLUTION/SPLIT_CONTRACT.md": {
+      "sha256": "bb940b9162661018e8df76d2c9c9a5a62a1fccc95287f7f616b33ed5009e18b5",
+      "bytes": 3068
+    },
+    "artifacts/evidence/TI3_TARGET_RESOLUTION/TARGET_CONTRACT.md": {
+      "sha256": "89a7855dc0b4b3da41861c0f6677f3a9255922274b4108ea18f74137308e5e6a",
+      "bytes": 4332
+    },
+    "artifacts/evidence/TI3_TARGET_RESOLUTION/WEAK_LABEL_LEDGER.json": {
+      "sha256": "e94954e64cbf354ae9a9be53a216ce8f93be53876cbc1907b578d869482203bd",
+      "bytes": 481028
+    },
+    "artifacts/evidence/TI3_TARGET_RESOLUTION/authorization.md": {
+      "sha256": "638292dacf43d8bb19246b62b8cb4afc2fc7712e11390cb72faf4422c2256cf4",
+      "bytes": 29325
+    },
+    "artifacts/evidence/TI3_TARGET_RESOLUTION/commands.json": {
+      "sha256": "bc5b272309ec4bd709df566b09243d59d5d5616b738b7ba69ddc9b49eb00e5ce",
+      "bytes": 33265
+    },
+    "artifacts/evidence/TI3_TARGET_RESOLUTION/execution-report.md": {
+      "sha256": "1641e8f078bb27f286b3527646a877a96928b571add81c9d73d433a7a68efd52",
+      "bytes": 8141
+    },
+    "artifacts/evidence/TI3_TARGET_RESOLUTION/method-freeze.json": {
+      "sha256": "9415f164d39e6f60c6e7727cc504a2886fe23e99981039ea7a3b429eb505a88b",
+      "bytes": 2153
+    },
+    "artifacts/evidence/TI3_TARGET_RESOLUTION/resolution-receipt.json": {
+      "sha256": "366de53fb3c8b5ec9e0402d8884a0b6568a3d27412c862249c3f24b86692e0e1",
+      "bytes": 631
+    },
+    "artifacts/evidence/TI3_TARGET_RESOLUTION/resolution-summary.json": {
+      "sha256": "94732874b5a236011d9c23ef7ba8413b3bdecde9c1ffb83c7e78e265863dd810",
+      "bytes": 6673
+    },
+    "artifacts/evidence/TI3_TARGET_RESOLUTION/resolve.py": {
+      "sha256": "f2c78ec49edd3751973b72b22db19f992897410a8a3df3729ebec4623dcb6519",
+      "bytes": 15204
+    },
+    "artifacts/evidence/TI3_TARGET_RESOLUTION/results.json": {
+      "sha256": "b9e3a53e75c24847aa046e1f89cc0fe96c9624a5c665da3ddff487234f255654",
+      "bytes": 4498
+    },
+    "artifacts/evidence/TI3_TARGET_RESOLUTION/run_resolution.py": {
+      "sha256": "c76ab1f2909865e5f714e981217c21289f94eaf54af25f716089c511d9663f50",
+      "bytes": 4961
+    },
+    "artifacts/evidence/TI3_TARGET_RESOLUTION/test_resolution.py": {
+      "sha256": "1987618e654f8159fd3f65787da0c688079826cff870062217560973806be197",
+      "bytes": 10440
+    },
+    "artifacts/evidence/TI3_TARGET_RESOLUTION/verification.json": {
+      "sha256": "409354f04c1f16feb86bb41836507d0f92fe7029407751576051c4e7358d1e68",
+      "bytes": 9760
+    }
+  },
+  "snapshots": [
+    {
+      "original_local_path": "artifacts/evidence/TI3_TARGET_RESOLUTION/resolve.py",
+      "snapshot_tracked_path": "artifacts/evidence/TI3_TARGET_RESOLUTION/resolve.py.snapshot.txt",
+      "sha256": "f2c78ec49edd3751973b72b22db19f992897410a8a3df3729ebec4623dcb6519",
+      "byte_count": 15204,
+      "byte_identity": true
+    },
+    {
+      "original_local_path": "artifacts/evidence/TI3_TARGET_RESOLUTION/run_resolution.py",
+      "snapshot_tracked_path": "artifacts/evidence/TI3_TARGET_RESOLUTION/run_resolution.py.snapshot.txt",
+      "sha256": "c76ab1f2909865e5f714e981217c21289f94eaf54af25f716089c511d9663f50",
+      "byte_count": 4961,
+      "byte_identity": true
+    },
+    {
+      "original_local_path": "artifacts/evidence/TI3_TARGET_RESOLUTION/test_resolution.py",
+      "snapshot_tracked_path": "artifacts/evidence/TI3_TARGET_RESOLUTION/test_resolution.py.snapshot.txt",
+      "sha256": "1987618e654f8159fd3f65787da0c688079826cff870062217560973806be197",
+      "byte_count": 10440,
+      "byte_identity": true
+    }
+  ],
+  "checkpoint_paths": [
+    "artifacts/evidence/TI3_TARGET_RESOLUTION/CLAIM_SCOPE.md",
+    "artifacts/evidence/TI3_TARGET_RESOLUTION/COURSE_ALIGNMENT.md",
+    "artifacts/evidence/TI3_TARGET_RESOLUTION/DATASET_FEASIBILITY.md",
+    "artifacts/evidence/TI3_TARGET_RESOLUTION/RESOLUTION_PROTOCOL.md",
+    "artifacts/evidence/TI3_TARGET_RESOLUTION/SITE_DEDUPLICATION.json",
+    "artifacts/evidence/TI3_TARGET_RESOLUTION/SPLIT_CONTRACT.md",
+    "artifacts/evidence/TI3_TARGET_RESOLUTION/TARGET_CONTRACT.md",
+    "artifacts/evidence/TI3_TARGET_RESOLUTION/WEAK_LABEL_LEDGER.json",
+    "artifacts/evidence/TI3_TARGET_RESOLUTION/authorization.md",
+    "artifacts/evidence/TI3_TARGET_RESOLUTION/commands.json",
+    "artifacts/evidence/TI3_TARGET_RESOLUTION/execution-report.md",
+    "artifacts/evidence/TI3_TARGET_RESOLUTION/method-freeze.json",
+    "artifacts/evidence/TI3_TARGET_RESOLUTION/resolution-receipt.json",
+    "artifacts/evidence/TI3_TARGET_RESOLUTION/resolution-summary.json",
+    "artifacts/evidence/TI3_TARGET_RESOLUTION/results.json",
+    "artifacts/evidence/TI3_TARGET_RESOLUTION/verification.json",
+    "artifacts/evidence/TI3_TARGET_RESOLUTION/resolve.py.snapshot.txt",
+    "artifacts/evidence/TI3_TARGET_RESOLUTION/run_resolution.py.snapshot.txt",
+    "artifacts/evidence/TI3_TARGET_RESOLUTION/test_resolution.py.snapshot.txt",
+    "artifacts/evidence/TI3_TARGET_RESOLUTION/script-snapshots.sha256"
+  ],
+  "staged_data_guard": {
+    "status": "PASS",
+    "examined_entry_count": 329,
+    "content_bytes_read": 0
+  },
+  "staged_diff_check": "PASS",
+  "git_operations": {
+    "index_only_remove": 1,
+    "exact_snapshot_staging": 1,
+    "checkpoint_commit": 1
+  },
+  "environment_fingerprint_sha256": "4629f874e0104bb9edec803c986c786764c9837fa2bc5634223f4a1141923979",
+  "experimental_opens": 0,
+  "experimental_bytes": 0,
+  "scientific_ml_runs": 0,
+  "dependency_smoke_invocations": 1,
+  "synthetic_rf_fit_calls": 2,
+  "network_install": {
+    "default_sandbox_exit": 1,
+    "reason": "DNS_NAME_OR_SERVICE_NOT_KNOWN",
+    "targeted_approved_repository_venv_install_exit": 0
+  },
+  "ci": "NOT_RUN_BEFORE_C1",
+  "ci_workflow": "NEW_LOCAL_TI3_SYNTHETIC_WORKFLOW_HISTORICAL_CI_UNCHANGED",
+  "next_gate": "DOCUMENTARY_DATASET_AND_SPLIT_PREREGISTRATION",
+  "local_recovery_prerequisites": "PASS"
+}

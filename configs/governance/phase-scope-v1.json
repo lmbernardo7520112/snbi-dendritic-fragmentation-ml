@@ -493,7 +493,7 @@
         "classification": "TI3_ACTIVE",
         "git_mode": "100644",
         "path": "scripts/build_ti3_manifest.py",
-        "state": "PLANNED"
+        "state": "TRACKED"
       },
       {
         "blob_sha": "dd7a8062fb7c7bec3864c338d6aa8ef0f793be99",
@@ -507,7 +507,7 @@
         "classification": "TI3_ACTIVE",
         "git_mode": "100644",
         "path": "scripts/check_ti3_ml_environment.py",
-        "state": "PLANNED"
+        "state": "TRACKED"
       },
       {
         "blob_sha": "c0aa3e3a406abac4d3f62a6107993ddf333566e6",
@@ -517,39 +517,39 @@
         "state": "TRACKED"
       },
       {
-        "blob_sha": "483fb0e2ba158fa12772ff0e2411727d909edc02",
+        "blob_sha": "bd4982d52540d98ea5ef9ff1a292f1ef3548fe28",
         "classification": "TI3_ACTIVE",
         "git_mode": "100644",
         "path": "scripts/run_ti3_baseline.py",
-        "state": "PLANNED"
+        "state": "TRACKED"
       },
       {
         "blob_sha": "2ca8989a74ebc4aadbf140e82e089c6e09b60488",
         "classification": "TI3_ACTIVE",
         "git_mode": "100644",
         "path": "src/snbi_fragmentation/ti3_baseline.py",
-        "state": "PLANNED"
+        "state": "TRACKED"
       },
       {
         "blob_sha": "ca4819d3072cbef0e35e5d0cdfe10a6b697885bc",
         "classification": "TI3_ACTIVE",
         "git_mode": "100644",
         "path": "src/snbi_fragmentation/ti3_dataset.py",
-        "state": "PLANNED"
+        "state": "TRACKED"
       },
       {
-        "blob_sha": "2f74f578fa90a5d47e36a91c3c79111224f766b4",
+        "blob_sha": "864840ba53beb04fe31d3081c17cb4e5cf1ad7f8",
         "classification": "TI3_ACTIVE",
         "git_mode": "100644",
         "path": "src/snbi_fragmentation/ti3_execution.py",
-        "state": "PLANNED"
+        "state": "TRACKED"
       },
       {
         "blob_sha": "227d93d795124233d7de94fbf1e53921f2f16c1d",
         "classification": "TI3_ACTIVE",
         "git_mode": "100644",
         "path": "src/snbi_fragmentation/ti3_support.py",
-        "state": "PLANNED"
+        "state": "TRACKED"
       },
       {
         "blob_sha": "af0243223b2ddb799cf9bfa1dd75e0e1abff10f9",
@@ -563,21 +563,21 @@
         "classification": "TI3_ACTIVE",
         "git_mode": "100644",
         "path": "tests/test_ti3_baseline.py",
-        "state": "PLANNED"
+        "state": "TRACKED"
       },
       {
         "blob_sha": "cffc47b3abd1bda1ab26506dfedca3751eb188a9",
         "classification": "TI3_ACTIVE",
         "git_mode": "100644",
         "path": "tests/test_ti3_dataset.py",
-        "state": "PLANNED"
+        "state": "TRACKED"
       },
       {
         "blob_sha": "481493ce696dd43cadac56827203b1d47df5cdff",
         "classification": "TI3_ACTIVE",
         "git_mode": "100644",
         "path": "tests/test_ti3_execution.py",
-        "state": "PLANNED"
+        "state": "TRACKED"
       },
       {
         "blob_sha": "922e996b5f1acd5e63819ee5d023cc91cf26a1dc",
@@ -591,7 +591,7 @@
         "classification": "TI3_ACTIVE",
         "git_mode": "100644",
         "path": "tests/test_ti3_support.py",
-        "state": "PLANNED"
+        "state": "TRACKED"
       }
     ]
   },

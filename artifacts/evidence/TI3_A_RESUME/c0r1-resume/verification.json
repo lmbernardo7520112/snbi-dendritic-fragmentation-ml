@@ -1,0 +1,373 @@
+{
+  "control_preflight_cases": 7,
+  "exact_c1_paths": [
+    "artifacts/evidence/TI3_A_RESUME/BACKGROUND_PROTOCOL.md",
+    "artifacts/evidence/TI3_A_RESUME/BASELINE_SPEC.md",
+    "artifacts/evidence/TI3_A_RESUME/CLAIM_SCOPE.md",
+    "artifacts/evidence/TI3_A_RESUME/COURSE_ALIGNMENT.md",
+    "artifacts/evidence/TI3_A_RESUME/DATASET_SPEC.md",
+    "artifacts/evidence/TI3_A_RESUME/EXECUTION_GUARDS.md",
+    "artifacts/evidence/TI3_A_RESUME/LEAKAGE_THREAT_MODEL.md",
+    "artifacts/evidence/TI3_A_RESUME/SPLIT_PROTOCOL.md",
+    "artifacts/evidence/TI3_A_RESUME/authorization.md",
+    "artifacts/evidence/TI3_A_RESUME/c0r1-resume/CLAIM_SCOPE.md",
+    "artifacts/evidence/TI3_A_RESUME/c0r1-resume/OPERATIONAL_BINDINGS.md",
+    "artifacts/evidence/TI3_A_RESUME/c0r1-resume/ci-profile-local.json",
+    "artifacts/evidence/TI3_A_RESUME/c0r1-resume/commands-preparation.json",
+    "artifacts/evidence/TI3_A_RESUME/c0r1-resume/control-preflight-tests.json",
+    "artifacts/evidence/TI3_A_RESUME/c0r1-resume/method-freeze.json",
+    "artifacts/evidence/TI3_A_RESUME/c0r1-resume/operational-changes.json",
+    "artifacts/evidence/TI3_A_RESUME/c0r1-resume/preparation-report.md",
+    "artifacts/evidence/TI3_A_RESUME/c0r1-resume/prepared-execution.py.snapshot.txt",
+    "artifacts/evidence/TI3_A_RESUME/c0r1-resume/prepared-runner.py.snapshot.txt",
+    "artifacts/evidence/TI3_A_RESUME/c0r1-resume/stdlib-tests.json",
+    "artifacts/evidence/TI3_A_RESUME/c0r1-resume/verification.json",
+    "artifacts/evidence/TI3_A_RESUME/commands.json",
+    "artifacts/evidence/TI3_A_RESUME/dataset_manifest.json",
+    "artifacts/evidence/TI3_A_RESUME/environment.json",
+    "artifacts/evidence/TI3_A_RESUME/execution-report.md",
+    "artifacts/evidence/TI3_A_RESUME/final-test-manifest.json",
+    "artifacts/evidence/TI3_A_RESUME/io-audit.json",
+    "artifacts/evidence/TI3_A_RESUME/local-scope-preflight.json",
+    "artifacts/evidence/TI3_A_RESUME/metadata-preflight-freeze.json",
+    "artifacts/evidence/TI3_A_RESUME/metadata-preflight-receipt.json",
+    "artifacts/evidence/TI3_A_RESUME/metadata-preflight-result.json",
+    "artifacts/evidence/TI3_A_RESUME/preflight-recovery/authorization.md",
+    "artifacts/evidence/TI3_A_RESUME/preflight-recovery/commands.json",
+    "artifacts/evidence/TI3_A_RESUME/preflight-recovery/environment.json",
+    "artifacts/evidence/TI3_A_RESUME/preflight-recovery/execution-report.md",
+    "artifacts/evidence/TI3_A_RESUME/preflight-recovery/verification.json",
+    "artifacts/evidence/TI3_A_RESUME/results.json",
+    "artifacts/evidence/TI3_A_RESUME/synthetic-verification.json",
+    "artifacts/evidence/TI3_A_RESUME/verification.json",
+    "artifacts/evidence/TI3_GOV_COMPAT/c0r1/remote-ci.json",
+    "artifacts/evidence/TI3_GOV_COMPAT/c0r1/resume-preflight.json",
+    "configs/authority/ti3-a-c0r1-resume.json",
+    "configs/authority/ti3-a-resume.json",
+    "configs/governance/phase-scope-v1.json",
+    "scripts/build_ti3_manifest.py",
+    "scripts/check_ti3_ml_environment.py",
+    "scripts/run_ti3_baseline.py",
+    "src/snbi_fragmentation/ti3_baseline.py",
+    "src/snbi_fragmentation/ti3_dataset.py",
+    "src/snbi_fragmentation/ti3_execution.py",
+    "src/snbi_fragmentation/ti3_support.py",
+    "tests/test_ti3_baseline.py",
+    "tests/test_ti3_dataset.py",
+    "tests/test_ti3_execution.py",
+    "tests/test_ti3_support.py"
+  ],
+  "experimental_bytes": 0,
+  "experimental_opens": 0,
+  "frozen_texts": 45,
+  "operational_modified_paths": [
+    "scripts/run_ti3_baseline.py",
+    "src/snbi_fragmentation/ti3_execution.py"
+  ],
+  "prior_documentary_inputs_preserved": true,
+  "scientific_ml_runs": 0,
+  "scientific_test_skips": 0,
+  "scientific_tests": 109,
+  "scope_report": {
+    "a0_frozen_scope": {
+      "examined_file_count": 4,
+      "status": "PASS",
+      "violations": []
+    },
+    "active_custody": {
+      "examined_file_count": 15,
+      "status": "PASS",
+      "violations": []
+    },
+    "audit": "composed_phase_scope",
+    "authorized_scientific_phases": [],
+    "data_guard": {
+      "audit": "tracked_repository_data_guard",
+      "content_bytes_read": 0,
+      "examined_entry_count": 424,
+      "status": "PASS",
+      "violations": []
+    },
+    "experimental_content_bytes_read": 0,
+    "legacy_custody": {
+      "examined_file_count": 75,
+      "status": "PASS",
+      "violations": []
+    },
+    "legacy_scope": {
+      "authorized_phase": null,
+      "authorized_scientific_phases": [],
+      "blocked_phases": [
+        "TI-2",
+        "TI-2R",
+        "TI-3",
+        "TI-4",
+        "TI-5",
+        "TI-6",
+        "TI-7",
+        "TI-8"
+      ],
+      "codex_local_write_readiness": "BLOCKED_AWAITING_AUTHOR_DECISION",
+      "current_authorized_activity": "NONE_AWAITING_AUTHOR_DECISION",
+      "current_gate_documents": {
+        "document_count": 2,
+        "status": "PASS",
+        "violations": []
+      },
+      "experimental_content_bytes_read": 0,
+      "merge_authorized": false,
+      "scientific_readiness": "BLOCKED",
+      "status": "PASS",
+      "ti2_execution_authorized": false,
+      "ti2r_authorized": false,
+      "ti3_plus_authorized": false,
+      "violations": []
+    },
+    "merge_authorized": false,
+    "partition": {
+      "a0_frozen_file_count": 4,
+      "active_planned_count": 0,
+      "active_tracked_count": 15,
+      "duplicate_classification_paths": [],
+      "legacy_file_count": 75,
+      "missing_paths": [],
+      "relevant_tracked_count": 94,
+      "status": "PASS",
+      "unclassified_paths": [],
+      "violations": []
+    },
+    "scientific_readiness": "BLOCKED",
+    "status": "PASS",
+    "ti2_execution_authorized": false,
+    "ti3_plus_authorized": false,
+    "ti3_scope": {
+      "examined_entry_count": 15,
+      "experimental_content_bytes_read": 0,
+      "status": "PASS",
+      "violations": []
+    },
+    "violations": []
+  },
+  "stage_boundary": "PROSPECTIVE_IN_MEMORY; actual index to be verified after exact staging",
+  "status": "PASS_C1_PROSPECTIVE",
+  "stdlib_optional_skips": 107,
+  "stdlib_tests": 535,
+  "text_hashes_excluding_this_file": {
+    "artifacts/evidence/TI3_A_RESUME/BACKGROUND_PROTOCOL.md": {
+      "bytes": 1792,
+      "sha256": "0101f7a37156830b1dbf6a4d012aac94ecc3f284b6ebf7269a21185dbd9a6055"
+    },
+    "artifacts/evidence/TI3_A_RESUME/BASELINE_SPEC.md": {
+      "bytes": 1178,
+      "sha256": "3fc5404b78fc563dc488847f942da8c7542b089ebfb37ee231e0df56a03afdf8"
+    },
+    "artifacts/evidence/TI3_A_RESUME/CLAIM_SCOPE.md": {
+      "bytes": 605,
+      "sha256": "b10a67ccfbd0fe2a5f0fd801c4d5d2f56c59ee4ede4854c2ed36356ced499d95"
+    },
+    "artifacts/evidence/TI3_A_RESUME/COURSE_ALIGNMENT.md": {
+      "bytes": 739,
+      "sha256": "5a397edac0b821caa04cfd41e6ae8f2eb49a2d21cdb976700aa3248b9714a20d"
+    },
+    "artifacts/evidence/TI3_A_RESUME/DATASET_SPEC.md": {
+      "bytes": 1512,
+      "sha256": "9c92c29d77df52a20cc087442a309d93391fb9cbd58c68471819419c9a7d8d7d"
+    },
+    "artifacts/evidence/TI3_A_RESUME/EXECUTION_GUARDS.md": {
+      "bytes": 2471,
+      "sha256": "c4890c97304b13e141904d9531763eb3dc17cb097addbb976b615570f91b3af4"
+    },
+    "artifacts/evidence/TI3_A_RESUME/LEAKAGE_THREAT_MODEL.md": {
+      "bytes": 1122,
+      "sha256": "3b01f77b0cab5dabcde036e3f767d481b94317ebf67adb7fa57f396f09a56e87"
+    },
+    "artifacts/evidence/TI3_A_RESUME/SPLIT_PROTOCOL.md": {
+      "bytes": 1641,
+      "sha256": "d07aa104ac1cafc505a99b45644b220d48fa5ff8895658f6c1fc1f71ed9f9c44"
+    },
+    "artifacts/evidence/TI3_A_RESUME/authorization.md": {
+      "bytes": 22078,
+      "sha256": "da898073ad9921eb58e48a0be5b409a70226ae39e159639ce006bdf8821f655d"
+    },
+    "artifacts/evidence/TI3_A_RESUME/c0r1-resume/CLAIM_SCOPE.md": {
+      "bytes": 1713,
+      "sha256": "f2208d67ee31f4ee3cde9eb2aa3659c08e75e4884007e9da3e46a106a1dae9a7"
+    },
+    "artifacts/evidence/TI3_A_RESUME/c0r1-resume/OPERATIONAL_BINDINGS.md": {
+      "bytes": 2144,
+      "sha256": "6248a508c47a15bbbb030d91ced7530a61fb0f677f27326d00df4e9054613ac2"
+    },
+    "artifacts/evidence/TI3_A_RESUME/c0r1-resume/ci-profile-local.json": {
+      "bytes": 20200,
+      "sha256": "4e723206696fe603c887a80d13f9743ea58b2b5803da5ac1a9c63617e2106865"
+    },
+    "artifacts/evidence/TI3_A_RESUME/c0r1-resume/commands-preparation.json": {
+      "bytes": 12280,
+      "sha256": "a00c40b9b4862f9ce5170c56cec81f3d37e025340c169b185eb446aac99fdab4"
+    },
+    "artifacts/evidence/TI3_A_RESUME/c0r1-resume/control-preflight-tests.json": {
+      "bytes": 1073,
+      "sha256": "2e7c14873ca2069441a86807f714d3457ada79bd182997679895050e13c6a4d4"
+    },
+    "artifacts/evidence/TI3_A_RESUME/c0r1-resume/method-freeze.json": {
+      "bytes": 5884,
+      "sha256": "905ed85210a0fab5503183b68b83b6a600590345da14f345b2359ceba0cd4bfd"
+    },
+    "artifacts/evidence/TI3_A_RESUME/c0r1-resume/operational-changes.json": {
+      "bytes": 2697,
+      "sha256": "dc790af7a6b4390db0ee7365e84f129a88f9787551e45a9f6be629e8769aef98"
+    },
+    "artifacts/evidence/TI3_A_RESUME/c0r1-resume/preparation-report.md": {
+      "bytes": 3122,
+      "sha256": "432a760fa84d2f6d1b60eb03e6d1006fade0d87c3c97b38515521431c68b872b"
+    },
+    "artifacts/evidence/TI3_A_RESUME/c0r1-resume/prepared-execution.py.snapshot.txt": {
+      "bytes": 13539,
+      "sha256": "e5edd08b229b5418d129fec03a43e72514d79bb72d85fd15bb3697f5d332c7b3"
+    },
+    "artifacts/evidence/TI3_A_RESUME/c0r1-resume/prepared-runner.py.snapshot.txt": {
+      "bytes": 11841,
+      "sha256": "05c3adfa51f6f57a2a6728c38eb97123c38155f8fbf2785379fe2254c42f663b"
+    },
+    "artifacts/evidence/TI3_A_RESUME/c0r1-resume/stdlib-tests.json": {
+      "bytes": 94740,
+      "sha256": "dbe16a7b9ae4555db343c1daf525eba68cf9aa05c6e4c988f163403c96e8df54"
+    },
+    "artifacts/evidence/TI3_A_RESUME/commands.json": {
+      "bytes": 25493,
+      "sha256": "c468d01444539970f42b5b650a71bc966ef1a77c70b5578be1b399c8297622ef"
+    },
+    "artifacts/evidence/TI3_A_RESUME/dataset_manifest.json": {
+      "bytes": 2112095,
+      "sha256": "c8e82b72ff5dc51d188a764c577c11d514474b14d90aea6292c1439e776fb487"
+    },
+    "artifacts/evidence/TI3_A_RESUME/environment.json": {
+      "bytes": 2992,
+      "sha256": "0ad1882ceeeef6a91ada9d335fe79ae31a832923e3b8ce9b15115729ed1d3f07"
+    },
+    "artifacts/evidence/TI3_A_RESUME/execution-report.md": {
+      "bytes": 10671,
+      "sha256": "65e515dd840153b0a250c202775e378013bf1fef140e3bc07a122003d8621f44"
+    },
+    "artifacts/evidence/TI3_A_RESUME/final-test-manifest.json": {
+      "bytes": 12975,
+      "sha256": "985af14d0d6a74298bbc0380767f900d264f544303e46ecd8ed4dc0eb1ab649f"
+    },
+    "artifacts/evidence/TI3_A_RESUME/io-audit.json": {
+      "bytes": 772,
+      "sha256": "767b68d1135ca9ccb2ee0354af434bc7326209ddca42c5dca0ef3c3f14b55781"
+    },
+    "artifacts/evidence/TI3_A_RESUME/local-scope-preflight.json": {
+      "bytes": 3481,
+      "sha256": "c423219d176fd82446f647b868f55d74b0dd29bd6ad09648179cc7f1b1478273"
+    },
+    "artifacts/evidence/TI3_A_RESUME/metadata-preflight-freeze.json": {
+      "bytes": 2223,
+      "sha256": "de0ec9fee4499ed5411e23739642f95940739ee0d04cecea96c4edd0f1b6a530"
+    },
+    "artifacts/evidence/TI3_A_RESUME/metadata-preflight-receipt.json": {
+      "bytes": 2085,
+      "sha256": "e75a4ee3f955f413609dcecf07461c4ceccbeb265d761db68f16517e50ae5423"
+    },
+    "artifacts/evidence/TI3_A_RESUME/metadata-preflight-result.json": {
+      "bytes": 2112095,
+      "sha256": "c8e82b72ff5dc51d188a764c577c11d514474b14d90aea6292c1439e776fb487"
+    },
+    "artifacts/evidence/TI3_A_RESUME/preflight-recovery/authorization.md": {
+      "bytes": 13000,
+      "sha256": "2ff7adc9e4b7f1a28d187220068b8d22c04a0e22589cf873d499fa0d90549403"
+    },
+    "artifacts/evidence/TI3_A_RESUME/preflight-recovery/commands.json": {
+      "bytes": 25493,
+      "sha256": "c468d01444539970f42b5b650a71bc966ef1a77c70b5578be1b399c8297622ef"
+    },
+    "artifacts/evidence/TI3_A_RESUME/preflight-recovery/environment.json": {
+      "bytes": 2992,
+      "sha256": "0ad1882ceeeef6a91ada9d335fe79ae31a832923e3b8ce9b15115729ed1d3f07"
+    },
+    "artifacts/evidence/TI3_A_RESUME/preflight-recovery/execution-report.md": {
+      "bytes": 3516,
+      "sha256": "174a420e241eb54c0d288f04785e5d9338e79610cb65e177a42263c3b6105bc3"
+    },
+    "artifacts/evidence/TI3_A_RESUME/preflight-recovery/verification.json": {
+      "bytes": 6982,
+      "sha256": "36487885042e20da055cdfad5166a3e2c4bc157ffce94f5409e5b122aaeae7db"
+    },
+    "artifacts/evidence/TI3_A_RESUME/results.json": {
+      "bytes": 2597,
+      "sha256": "d5f5757e678a4e36e7b7925b6830f2f33525e64f9ac0a792ce9fe2af53391e62"
+    },
+    "artifacts/evidence/TI3_A_RESUME/synthetic-verification.json": {
+      "bytes": 1816,
+      "sha256": "3ef966fe2a3eb0a1ca472687239923467fe994a3a088b0af46b13e60ba68e1b3"
+    },
+    "artifacts/evidence/TI3_A_RESUME/verification.json": {
+      "bytes": 11641,
+      "sha256": "e297a6ab9c7c63664a99bb34b0df49b6ab0e41fa938e8d2004fe0c8dbfbdb71e"
+    },
+    "artifacts/evidence/TI3_GOV_COMPAT/c0r1/remote-ci.json": {
+      "bytes": 9380,
+      "sha256": "0f1319634522da5ec074a875e5f07865f63d9ff870bdecadead48a352188f01a"
+    },
+    "artifacts/evidence/TI3_GOV_COMPAT/c0r1/resume-preflight.json": {
+      "bytes": 8892,
+      "sha256": "d8c18942fb0aa8c7ba9c95d3dbe6d76ef60ecea99dfe65139ffed4ca1d24e6b5"
+    },
+    "configs/authority/ti3-a-c0r1-resume.json": {
+      "bytes": 994,
+      "sha256": "791a2adf0dfb974e929a4b9e97183e0a76e58dd529eecb08482bd9c910af062b"
+    },
+    "configs/authority/ti3-a-resume.json": {
+      "bytes": 897,
+      "sha256": "42fba307ec32cf5ccfb65150a2e505effcbb5b48f0d13f80f68ef1cc17ee19cc"
+    },
+    "configs/governance/phase-scope-v1.json": {
+      "bytes": 20075,
+      "sha256": "38564ddf7de6cd29e3b48e3950fa1c39fd996457c825d0a7ab991a5e71091f1d"
+    },
+    "scripts/build_ti3_manifest.py": {
+      "bytes": 4540,
+      "sha256": "e96d666963b3296766b042617ab08b1504c3c4de054806515aa0fac26991cd26"
+    },
+    "scripts/check_ti3_ml_environment.py": {
+      "bytes": 7422,
+      "sha256": "9b5fc3ba2d5841c0cd47490ab9ecb74ff0d58ac6021b6cf3ff2cba048c9a4689"
+    },
+    "scripts/run_ti3_baseline.py": {
+      "bytes": 11889,
+      "sha256": "ed85b02f2d5275ba5f12af1415b84fb9b1488b45e19eeb3b7addfc0232b5067d"
+    },
+    "src/snbi_fragmentation/ti3_baseline.py": {
+      "bytes": 9325,
+      "sha256": "eed99860986f680b3e724d87a2ae6bf9b464ccc88be810a16f280aeecdfb812c"
+    },
+    "src/snbi_fragmentation/ti3_dataset.py": {
+      "bytes": 28293,
+      "sha256": "c64e5045d6f8edb111544267bbc62f5b22e47d30217036d8bdb0d4940374c47f"
+    },
+    "src/snbi_fragmentation/ti3_execution.py": {
+      "bytes": 13563,
+      "sha256": "573321e4ca83d372d15dc971e4fde3b3987c19ee8a4c201432fff1bda979f80f"
+    },
+    "src/snbi_fragmentation/ti3_support.py": {
+      "bytes": 6135,
+      "sha256": "d60cfa9f3a9a43eefad489e62c13bb1a7b08f67d34ac8fc33cbf0b94b0743a0e"
+    },
+    "tests/test_ti3_baseline.py": {
+      "bytes": 10003,
+      "sha256": "8dcddcde94196041e199e503e4a899acfea3d81ad1cf8ef058b3c5965d261a1d"
+    },
+    "tests/test_ti3_dataset.py": {
+      "bytes": 13500,
+      "sha256": "9b1ca08332ae081077466752b90bb48236fcea1c0a08f64418d68eaca6109782"
+    },
+    "tests/test_ti3_execution.py": {
+      "bytes": 12316,
+      "sha256": "730e1556fd7bdd252c63e64d7ceb524b029d178cd196f7cc9abafe95302a9103"
+    },
+    "tests/test_ti3_support.py": {
+      "bytes": 6535,
+      "sha256": "4838b8e3036d882b20a78b908148a3dfb3b693b5552deefe704d20a263fb3f41"
+    }
+  }
+}

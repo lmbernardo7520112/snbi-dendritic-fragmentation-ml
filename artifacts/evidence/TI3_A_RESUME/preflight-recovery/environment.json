@@ -1,0 +1,115 @@
+{
+  "checks": {
+    "exact_dependency_versions": true,
+    "imported_versions_match_metadata": true,
+    "lbp_histogram_ten_finite_bins": true,
+    "lbp_histogram_unit_sum": true,
+    "lbp_shape": true,
+    "rf_fixed_estimators_and_seed": true,
+    "rf_fixed_seed_prediction_determinism": true,
+    "rf_fixed_seed_probability_determinism": true,
+    "rf_output_shapes_and_classes": true,
+    "rf_probabilities_finite_and_normalized": true,
+    "synthetic_image_uint8_65_by_65": true,
+    "synthetic_rf_matrix_balanced": true
+  },
+  "counters": {
+    "experimental_bytes": 0,
+    "experimental_opens": 0,
+    "scientific_ml_runs": 0,
+    "synthetic_fit_calls": 2,
+    "technical_smoke_invocations": 1
+  },
+  "environment": {
+    "package_versions": {
+      "cloudpickle": "3.1.2",
+      "imageio": "2.37.4",
+      "joblib": "1.6.0",
+      "lazy-loader": "0.5",
+      "networkx": "3.6.1",
+      "numpy": "1.26.4",
+      "packaging": "26.3",
+      "pillow": "12.3.0",
+      "pip": "24.0",
+      "scikit-image": "0.24.0",
+      "scikit-learn": "1.5.2",
+      "scipy": "1.11.4",
+      "threadpoolctl": "3.7.0",
+      "tifffile": "2026.3.3"
+    },
+    "python_version": "3.12.3"
+  },
+  "environment_fingerprint_sha256": "4629f874e0104bb9edec803c986c786764c9837fa2bc5634223f4a1141923979",
+  "imported_versions": {
+    "numpy": "1.26.4",
+    "scikit-image": "0.24.0",
+    "scikit-learn": "1.5.2",
+    "scipy": "1.11.4"
+  },
+  "lbp": {
+    "P": 8,
+    "R": 1,
+    "density": true,
+    "histogram": [
+      0.03076923076923077,
+      0.02816568047337278,
+      0.055857988165680474,
+      0.05775147928994083,
+      0.6345562130177514,
+      0.04686390532544379,
+      0.045207100591715975,
+      0.01349112426035503,
+      0.02863905325443787,
+      0.058698224852071004
+    ],
+    "histogram_bins": 10,
+    "histogram_range": [
+      0,
+      10
+    ],
+    "image_recipe": "(7*r + 11*c + 60*((r//8)%2)) % 256",
+    "method": "uniform"
+  },
+  "random_forest": {
+    "class_counts": [
+      12,
+      12
+    ],
+    "feature_recipe": "((r*(c+3)+c*c)%29)/28 + (r%2)*0.25",
+    "parameters": {
+      "bootstrap": true,
+      "ccp_alpha": 0,
+      "class_weight": null,
+      "criterion": "gini",
+      "max_depth": null,
+      "max_features": "sqrt",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0,
+      "min_samples_leaf": 1,
+      "min_samples_split": 2,
+      "min_weight_fraction_leaf": 0,
+      "monotonic_cst": null,
+      "n_estimators": 100,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "performance_evaluation": "NOT_PERFORMED",
+    "purpose": "fit/predict/probability API and fixed-seed determinism",
+    "synthetic_matrix_shape": [
+      24,
+      10
+    ]
+  },
+  "required_versions": {
+    "numpy": "1.26.4",
+    "scikit-image": "0.24.0",
+    "scikit-learn": "1.5.2",
+    "scipy": "1.11.4"
+  },
+  "scope": "SYNTHETIC_ENVIRONMENT_SMOKE_ONLY",
+  "status": "PASS"
+}

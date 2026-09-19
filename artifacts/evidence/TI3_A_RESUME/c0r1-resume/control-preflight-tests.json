@@ -1,0 +1,45 @@
+{
+  "boundary": "PREPARATORY_CONTROL_PLANE_WITH_SYNTHETIC_GIT_AND_CI_ONLY",
+  "cases": [
+    {
+      "case": "valid_conditional_preflight",
+      "expected_denial": null,
+      "status": "PASS"
+    },
+    {
+      "case": "wrong_parent",
+      "expected_denial": "C1_OR_BRANCH_DIVERGENCE",
+      "status": "PASS"
+    },
+    {
+      "case": "dirty_index_or_worktree",
+      "expected_denial": "TRACKED_WORKTREE_OR_INDEX_DIRTY",
+      "status": "PASS"
+    },
+    {
+      "case": "closed_authority",
+      "expected_denial": "CANONICAL_TI3_AUTHORITY_DIVERGENCE",
+      "status": "PASS"
+    },
+    {
+      "case": "wrong_ci_head",
+      "expected_denial": "CI_HEAD_DIVERGENCE",
+      "status": "PASS"
+    },
+    {
+      "case": "failed_job",
+      "expected_denial": "CI_JOB_NOT_GREEN",
+      "status": "PASS"
+    },
+    {
+      "case": "missing_job",
+      "expected_denial": "CI_REQUIRED_JOB_MISSING",
+      "status": "PASS"
+    }
+  ],
+  "experimental_opens": 0,
+  "method_freeze_texts": 45,
+  "receipt_created": false,
+  "scientific_cli_invocations": 0,
+  "status": "PASS"
+}
