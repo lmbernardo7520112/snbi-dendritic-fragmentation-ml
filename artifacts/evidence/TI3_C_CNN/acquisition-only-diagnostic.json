@@ -1,0 +1,96 @@
+{
+  "FN": 5,
+  "FP": 2,
+  "TN": 6,
+  "TP": 3,
+  "accuracy": 0.5625,
+  "balanced_accuracy": 0.5625,
+  "claim": "METADATA_ONLY_CONFOUNDING_DIAGNOSTIC_NOT_MODEL_SELECTION",
+  "confusion_matrix": [
+    [
+      6,
+      2
+    ],
+    [
+      5,
+      3
+    ]
+  ],
+  "confusion_order": "rows=true, columns=predicted; labels=[0,1]",
+  "diagnostic": "TRAIN_ACQUISITION_MAJORITY_PREDICTS_DEVELOPMENT",
+  "experimental_bytes": 0,
+  "experimental_opens": 0,
+  "f1": 0.46153846153846156,
+  "majority_class_by_acquisition": {
+    "bottom_up_anti_parallel": 1,
+    "top_down_parallel": 0
+  },
+  "ml_training_calls": 0,
+  "precision": 0.6,
+  "predicted_labels": [
+    1,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "recall": 0.375,
+  "sample_count": 16,
+  "sample_order": [
+    "positive|ESM3:annotation-site:3eeab8e9efcb0d21",
+    "positive|ESM3:annotation-site:8e517d7ffab44a8d",
+    "positive|ESM3:annotation-site:c726fa8942e518df",
+    "positive|ESM6:annotation-site:33c1dc5c4466a022",
+    "positive|ESM6:annotation-site:610a877237d31a5d",
+    "positive|ESM6:annotation-site:7c58fc05ae40787e",
+    "positive|ESM6:annotation-site:8a86a50873360dcf",
+    "positive|ESM6:annotation-site:8acca343f57b1314",
+    "background|ESM4|197|492|415",
+    "background|ESM1|219|752|221",
+    "background|ESM1|219|102|221",
+    "background|ESM4|197|362|155",
+    "background|ESM4|197|752|545",
+    "background|ESM4|197|1077|805",
+    "background|ESM4|197|492|805",
+    "background|ESM4|197|427|350"
+  ],
+  "training_class_counts_0_1": {
+    "bottom_up_anti_parallel": [
+      6,
+      16
+    ],
+    "top_down_parallel": [
+      11,
+      1
+    ]
+  },
+  "true_labels": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ]
+}

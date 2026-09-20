@@ -25,9 +25,32 @@ REQUIREMENTS = (
 )
 ALLOWED_ML = frozenset({"numpy", "scipy", "skimage", "sklearn"})
 BLOCKED_ML = frozenset({
-    "torch", "torchvision", "tensorflow", "keras", "xgboost", "lightgbm",
+    "torch", "torchvision", "torchaudio", "tensorflow", "keras", "xgboost", "lightgbm",
     "catboost", "transformers", "fastai",
 })
+TORCH_PATHS = frozenset({
+    "src/snbi_fragmentation/ti3c_cnn.py", "tests/test_ti3c_cnn.py",
+})
+CNN_REQUIREMENTS = (
+    "-r requirements-ti3-ml.txt", "-c constraints-ti3c-cnn.txt",
+    "torch==2.4.1+cpu",
+)
+CNN_CONSTRAINTS = (
+    *REQUIREMENTS,
+    "joblib==1.6.0", "threadpoolctl==3.7.0", "cloudpickle==3.1.2",
+    "imageio==2.37.4", "lazy-loader==0.5", "networkx==3.6.1",
+    "packaging==26.3", "pillow==12.3.0", "tifffile==2026.3.3",
+    "torch==2.4.1+cpu", "typing-extensions==4.16.0", "filelock==4.0.1",
+    "fsspec==2026.9.0", "jinja2==3.1.6", "setuptools==84.0.0",
+    "sympy==1.14.0", "markupsafe==3.0.3", "mpmath==1.3.0",
+)
+
+
+def cnn_constraint_violations(source: str) -> list[str]:
+    """Require the resolved 22-pin CPU lock, including Torch's setuptools dependency."""
+    if source.splitlines() != list(CNN_CONSTRAINTS):
+        return ["TI3-C constraints must contain exactly the 22 ordered frozen CPU/runtime pins"]
+    return []
 
 
 def read_text(root: Path, relative: str) -> str:
@@ -70,6 +93,8 @@ def source_violations(source: str, relative: str, local_modules=()) -> list[str]
                     imports.add(node.args[0].value.split(".")[0])
     allowed = set(sys.stdlib_module_names) | ALLOWED_ML | set(local_modules) | {"snbi_fragmentation", "scripts"}
     for name in sorted(imports):
+        if name == "torch" and relative in TORCH_PATHS:
+            continue
         if name in BLOCKED_ML or name not in allowed:
             violations.append(f"unapproved import {name}: {relative}")
     return violations
@@ -98,6 +123,10 @@ def audit(*, entries, root=ROOT, manifest) -> dict:
         requirements = read_text(root, "requirements-ti3-ml.txt").splitlines()
         if requirements != list(REQUIREMENTS):
             violations.append("TI3 requirements must contain exactly the four ordered frozen pins")
+        if any(item["path"] in TORCH_PATHS for item in records):
+            if read_text(root, "requirements-ti3c-cnn.txt").splitlines() != list(CNN_REQUIREMENTS):
+                violations.append("TI3-C requirements differ from the exact CPU dependency contract")
+            violations.extend(cnn_constraint_violations(read_text(root, "constraints-ti3c-cnn.txt")))
         project = tomllib.loads(read_text(root, "pyproject.toml")).get("project", {})
         if project.get("dependencies", []) or any(project.get("optional-dependencies", {}).values()):
             violations.append("legacy project dependencies must remain empty")

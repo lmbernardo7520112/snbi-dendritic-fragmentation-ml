@@ -1,0 +1,193 @@
+{
+  "C1_CNN": "b2d8839ca2b6c6e5ddd2be1de3ff9589ada9a93c",
+  "counters": {
+    "actual_scientific_CLI": 1,
+    "experimental_bytes": 19469052,
+    "experimental_opens": 10,
+    "explicit_actual_preflight_only_calls": 1,
+    "final_bytes": 0,
+    "final_opens": 0,
+    "internal_preflight_in_scientific_runner": 1,
+    "remote_synthetic_tests": "Separate CI verification, never experimental execution.",
+    "scientific_completed": 1,
+    "scientific_invocations": 1,
+    "scientific_retry": 0,
+    "synthetic_cnn_train_calls_local_total": 4,
+    "synthetic_rf_fits_local_total": 4,
+    "tuning": 0
+  },
+  "coverage": "Bounded grouped inventory; exact scientific command and Git path lists retained. Read-only helper bodies summarized; not universal syscall monitoring. Final evidence staging/commit/publication and resulting SHA are reported in Git history and terminal operator return, avoiding self-reference.",
+  "delegated_custody": {
+    "after_C1_custody": {
+      "exit_codes": [
+        0,
+        0
+      ],
+      "freeze": 98,
+      "internal_git_queries": 109,
+      "shell_commands": 2
+    },
+    "before_C1_metadata": {
+      "exit_codes": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "internal_git_queries": 71,
+      "shell_commands": 5
+    },
+    "post_science": {
+      "exit_one": 1,
+      "exit_zero": 6,
+      "experimental_access": 0,
+      "internal_git_queries": 173,
+      "operational_error": "Auditor in-memory allowlist initially used constraints-ti3c-runtime.txt instead of actual constraints-ti3c-cnn.txt; corrected only in memory, no repository defect or scientific retry.",
+      "scientific_imports": 0,
+      "shell_commands": 7,
+      "status": "PASS",
+      "writes": 0
+    }
+  },
+  "entries": [
+    {
+      "boundary": "default sandbox",
+      "commands": [
+        "text-only exact24 allowlist and frozen98 audit; git diff --check; git diff --stat"
+      ],
+      "exit": 0,
+      "not_real_index": true,
+      "prospective_guard_entries": 486
+    },
+    {
+      "boundary": "targeted Git approval",
+      "command": "git add -- <exact staging_paths below>",
+      "exit": 0,
+      "staging_paths": [
+        ".github/workflows/ti3c-synthetic.yml",
+        "artifacts/evidence/TI3_C_CNN/PROTOCOL.md",
+        "artifacts/evidence/TI3_C_CNN/acquisition-only-diagnostic.json",
+        "artifacts/evidence/TI3_C_CNN/authorization.md",
+        "artifacts/evidence/TI3_C_CNN/dependency-resolution.json",
+        "artifacts/evidence/TI3_C_CNN/environment.json",
+        "artifacts/evidence/TI3_C_CNN/integration-audit.json",
+        "artifacts/evidence/TI3_C_CNN/io-plan.json",
+        "artifacts/evidence/TI3_C_CNN/method-freeze.json",
+        "artifacts/evidence/TI3_C_CNN/preparation-commands.json",
+        "artifacts/evidence/TI3_C_CNN/preparation-verification.json",
+        "artifacts/evidence/TI3_C_CNN/write-allowlist.json",
+        "configs/authority/ti3c-minimal-cnn.json",
+        "configs/governance/phase-scope-v1.json",
+        "configs/ti3/minimal-cnn.json",
+        "constraints-ti3c-cnn.txt",
+        "requirements-ti3c-cnn.txt",
+        "scripts/check_ti3_scope.py",
+        "scripts/run_ti3c_cnn.py",
+        "src/snbi_fragmentation/ti3c_cnn.py",
+        "src/snbi_fragmentation/ti3c_execution.py",
+        "tests/test_ti3c_cnn.py",
+        "tests/test_ti3c_execution.py",
+        "tests/test_ti3c_scope.py"
+      ]
+    },
+    {
+      "boundary": "default sandbox",
+      "commands": [
+        "python3 -B scripts/check_repository_data.py",
+        "python3 -B scripts/check_phase_scope.py",
+        "git diff --cached --check",
+        "git diff --cached --stat",
+        "compare24stagedpaths/bytes and98frozen stagedhashes"
+      ],
+      "exit": 0,
+      "real_index_entries": 486
+    },
+    {
+      "boundary": "targeted Git approval",
+      "command": "git commit -m feat(ti3c): freeze minimal multimodal cnn protocol",
+      "exit": 0,
+      "sha": "b2d8839ca2b6c6e5ddd2be1de3ff9589ada9a93c"
+    },
+    {
+      "boundary": "default sandbox",
+      "commands": [
+        "git rev-parse HEAD HEAD^",
+        "git status --short"
+      ],
+      "exit": 0
+    },
+    {
+      "boundary": "targeted Git/network approval",
+      "command": "git push -u origin feat/ti3c-minimal-multimodal-cnn:feat/ti3c-minimal-multimodal-cnn",
+      "exit": 0,
+      "force": false
+    },
+    {
+      "all_jobs_steps": "SUCCESS",
+      "boundary": "targeted GitHub read-only approvals",
+      "commands": [
+        "gh run list --repo lmbernardo7520112/snbi-dendritic-fragmentation-ml --commit b2d8839ca2b6c6e5ddd2be1de3ff9589ada9a93c --json databaseId,headSha,status,conclusion,workflowName,url",
+        "gh run view <each run> --repo lmbernardo7520112/snbi-dendritic-fragmentation-ml --json databaseId,headSha,status,conclusion,jobs,url"
+      ],
+      "exit": 0,
+      "reruns": 0,
+      "runs": [
+        35471095523,
+        35471095595,
+        35471095533,
+        35471095570
+      ]
+    },
+    {
+      "boundary": "default sandbox",
+      "commands": [
+        "write verified remote CI proof",
+        "git status --short",
+        "git rev-parse HEAD origin/feat/ti3c-minimal-multimodal-cnn",
+        "verify22metadata pins and invoke actual _preflight() without arm_execution; write actual-preflight.json"
+      ],
+      "exit": 0,
+      "experimental_opens": 0,
+      "receipt_created": false,
+      "scientific_runs": 0
+    },
+    {
+      "boundary": "default sandbox",
+      "command": "PYTHONPATH=src .venv/bin/python -B scripts/run_ti3c_cnn.py",
+      "development_evaluations": 1,
+      "environment_overrides": {
+        "TMPDIR": "repository/.bootstrap-test-tmp"
+      },
+      "epochs": 10,
+      "exit": 0,
+      "experimental_bytes": 19469052,
+      "experimental_opens": 10,
+      "final_bytes": 0,
+      "final_opens": 0,
+      "invocations": 1,
+      "result": "PASS_COMPLETED",
+      "retries": 0,
+      "training_calls": 1
+    },
+    {
+      "boundary": "default sandbox",
+      "commands": [
+        "read results/io-audit/receipt JSON only",
+        "write terminal-state.json and execution-report.md from existing text",
+        "python3 -B scripts/check_repository_data.py",
+        "python3 -B scripts/check_ti2_checksums.py",
+        "git diff --name-only",
+        "git diff --cached --name-only",
+        "git status --short",
+        "stdlib arithmetic of50predictions/logits/probabilities;50pairedpatchhashes;14I/O records;98frozen textual hashes"
+      ],
+      "data_guard_entries": 486,
+      "exit": 0,
+      "legacy_checksums": 95,
+      "new_experimental_opens": 0,
+      "scientific_imports_or_reruns": 0
+    }
+  ],
+  "schema": "TI3C-EXECUTION-COMMANDS-1"
+}

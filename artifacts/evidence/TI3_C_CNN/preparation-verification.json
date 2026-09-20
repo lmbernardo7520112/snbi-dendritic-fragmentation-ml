@@ -1,0 +1,96 @@
+{
+  "architecture": {
+    "deterministic_repeated_synthetic_training": "PASS",
+    "forward_shape": "PASS",
+    "parameter_count": 170
+  },
+  "checkpoint": "48da1af69ce48b3287f19b26bfbd24b79243d90e",
+  "cnn_synthetic_test_count": 68,
+  "combined_profile": {
+    "errors": 0,
+    "failures": 0,
+    "pass": 221,
+    "run": 221,
+    "skips": 0
+  },
+  "core_tests": 19,
+  "dependency_pins": 22,
+  "execution_tests": 27,
+  "experimental_bytes": 0,
+  "experimental_opens": 0,
+  "final_bytes": 0,
+  "final_opens": 0,
+  "historical_b_freeze": {
+    "anchored_in_merge": 67,
+    "changed_only": [
+      "scripts/check_ti3_scope.py",
+      "configs/governance/phase-scope-v1.json"
+    ],
+    "current_unchanged": 65,
+    "scientific_changes": 0
+  },
+  "independent_code_review": "PASS including partial invocation/completion counters before C1",
+  "legacy_checksums": {
+    "changed": 0,
+    "pass": 95
+  },
+  "limitations": [
+    "Synthetic controls are not experimental authority; actual C1 publication and complete green CI are required.",
+    "Preflight control uses mock Git/CI and never claims real remote evidence.",
+    "Historical I/O custody relies on application receipts and text, not universal syscall monitoring."
+  ],
+  "metadata_audit": {
+    "dev_count": 16,
+    "diagnostic_ba": 0.5625,
+    "diagnostic_confusion": [
+      [
+        6,
+        2
+      ],
+      [
+        5,
+        3
+      ]
+    ],
+    "final_count": 6,
+    "patch_records": 50,
+    "status": "PASS",
+    "train_count": 34
+  },
+  "preflight_control": {
+    "cases": 8,
+    "fits": 0,
+    "full_actual_serialized_preflight_calls": 1,
+    "git_ci": "IN_MEMORY_MOCKS_NOT_REMOTE_PROOF",
+    "native_opens": 0,
+    "negative_ci_or_exact_type_controls": 7,
+    "receipt": false
+  },
+  "prospective_scope": {
+    "a0": 4,
+    "active": 26,
+    "duplicates": 0,
+    "entries_at_check": 484,
+    "legacy": 75,
+    "not_real_index": true,
+    "status": "PASS",
+    "unclassified": 0
+  },
+  "scientific_ti3c_runs": 0,
+  "scope_tests": 22,
+  "status": "PASS_BEFORE_C1",
+  "stdlib_profile": {
+    "errors": 0,
+    "failures": 0,
+    "optional_skips": 128,
+    "pass": 519,
+    "run": 647
+  },
+  "synthetic_training_calls_local": {
+    "cnn": 4,
+    "cnn_accounting": "core isolated2 + combined2; stdlib0; mocks0",
+    "rf": 4,
+    "rf_accounting": "environment smoke2 + baseline1 + ablation1 in combined profile"
+  },
+  "yaml_inline_python": "PASS"
+}

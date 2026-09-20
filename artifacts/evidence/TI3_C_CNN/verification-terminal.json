@@ -1,0 +1,52 @@
+{
+  "C1_CNN": "b2d8839ca2b6c6e5ddd2be1de3ff9589ada9a93c",
+  "argmax_verified": 50,
+  "authority": "CLOSED_CONSUMED",
+  "ci": {
+    "all_success_at_C1": true,
+    "jobs": 5,
+    "latest_completion_utc": "2026-09-19T21:41:40Z",
+    "minimum_seconds_before_receipt": 154.05988,
+    "receipt_utc": "2026-09-19T21:44:14.059880+00:00",
+    "runs": 4,
+    "steps": 58
+  },
+  "dev_samples": 16,
+  "epochs": 10,
+  "experimental_bytes_reported": 19469052,
+  "experimental_opens_reported": 10,
+  "final_attempts_opens_bytes": 0,
+  "final_evaluation_authorized": false,
+  "final_samples_unmaterialized": 6,
+  "finite_epoch_losses": 10,
+  "frozen_texts_current_and_git": 98,
+  "independent_final_audit": "PASS_TEXT_ONLY",
+  "legacy_checksums_unchanged": 95,
+  "limitations": [
+    "I/O counters and temporal sequencing derive from application receipts, frozen control flow and execution records; not universal syscall monitoring.",
+    "No experimental bytes were reopened for this audit; only recorded hashes compared.",
+    "Audit recalculates arithmetic of textual predictions, never kernels or training.",
+    "Internal DEVELOPMENT and weak labels support only the preregistered development preference, not external or physical claims.",
+    "Current checkpoint/publication SHA and CI belong to the actual operator return and Git history, not this preregistered self-description."
+  ],
+  "merge_authorized": false,
+  "metrics_recomputed_from_predictions": 50,
+  "optimizer_steps": 50,
+  "paired_patch_records_preserved": 50,
+  "parameter_count": 170,
+  "postrun_checksum_paths": 109,
+  "probability_sum_max_abs_error": 8.940696716308594e-08,
+  "scientific_completed": 1,
+  "scientific_invocations": 1,
+  "selection": {
+    "cnn_dev_ba": 0.5,
+    "delta": -0.25,
+    "family": "MULTIMODAL_LBP_RF",
+    "rf_dev_ba": 0.75,
+    "rule_frozen_before_pixels": true
+  },
+  "softmax_max_abs_error_float32": 4.8862802692895e-08,
+  "status": "PASS",
+  "tracked_scientific_changes_after_C1": 0,
+  "train_samples": 34
+}
