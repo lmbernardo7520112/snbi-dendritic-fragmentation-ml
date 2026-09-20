@@ -1,0 +1,44 @@
+{
+  "evaluation": "PREDICTION_FIRST_FINAL_EVALUATION",
+  "fit_record_sha256": "2121642ec1fda8ceae6cad2f54d5ef88e079cfa5e6af369c0553f5e495e5aebf",
+  "logical_model_sha256": "7eb72a60bc72f8d72e0c5f77f67cfde4d456be5264d0d8c5bea68398b0c11894",
+  "predictions": [
+    {
+      "predicted_label": 0,
+      "probability_class_0": 0.54,
+      "probability_class_1": 0.46,
+      "sample_id": "background|ESM1|293|622|806"
+    },
+    {
+      "predicted_label": 1,
+      "probability_class_0": 0.1,
+      "probability_class_1": 0.9,
+      "sample_id": "positive|ESM3:annotation-site:2d8693eaf74b3e06"
+    },
+    {
+      "predicted_label": 0,
+      "probability_class_0": 0.64,
+      "probability_class_1": 0.36,
+      "sample_id": "positive|ESM3:annotation-site:f96050cb91a60afe"
+    },
+    {
+      "predicted_label": 0,
+      "probability_class_0": 0.83,
+      "probability_class_1": 0.17,
+      "sample_id": "background|ESM4|295|1142|545"
+    },
+    {
+      "predicted_label": 1,
+      "probability_class_0": 0.21,
+      "probability_class_1": 0.79,
+      "sample_id": "background|ESM4|295|817|350"
+    },
+    {
+      "predicted_label": 1,
+      "probability_class_0": 0.15,
+      "probability_class_1": 0.85,
+      "sample_id": "positive|ESM6:annotation-site:8c97cae8aaa8f4f3"
+    }
+  ],
+  "schema": "TI3D-PREDICTIONS-FIRST-1"
+}

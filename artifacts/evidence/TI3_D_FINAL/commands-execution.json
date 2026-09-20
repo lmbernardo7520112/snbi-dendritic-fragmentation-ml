@@ -1,0 +1,78 @@
+{
+  "experimental_native_bytes": 27252072,
+  "experimental_native_opens": 14,
+  "final_evaluations": 1,
+  "final_fit_calls": 1,
+  "final_native_bytes": 7783020,
+  "final_native_opens": 4,
+  "limits": "Sanitized bounded inventory; prepdetails inpreparation-commands.json. Read-onlytexthelpers aggregated; notuniversal syscallmonitor. Gitcommands forD2/finalCI belong effectiveoperatorreturn/Git toavoidselfreference.",
+  "local_post_final_modeling_runs": 0,
+  "local_synthetic_rf_fits_before_D1": 2,
+  "new_local_synthetic_case_count": 59,
+  "records": [
+    {
+      "boundary": "default_sandbox",
+      "operation": "Fullserialized_preflight beforeD1 withreal133textpaths butexplicitmock Git/CI responses;145actualtextreads;armmockassertedunused",
+      "result": "PASS50/6;0experimentalopens;no receipt;notremoteCIproof"
+    },
+    {
+      "boundary": "targeted_Git_approval",
+      "exit_code": 0,
+      "operation": "git add -- exact26paths inwrite-allowlist.json"
+    },
+    {
+      "boundary": "default_sandbox",
+      "operation": "Review exact26stagedbytes and133indexhashes;data/phase/checksumguards;diffcached--check",
+      "result": "PASS522entries/0contentbytes,75+4+33scope,95checksums;noadditionalpaths"
+    },
+    {
+      "D1": "b7687575d391f642d2c80274f1bc984c45dbba1b",
+      "boundary": "targeted_Git_approval",
+      "command": "git commit -m feat(ti3d): freeze final evaluation protocol",
+      "exit_code": 0
+    },
+    {
+      "boundary": "targeted_Git_approval",
+      "command": "git push origin HEAD:feat/ti3d-final-evaluation",
+      "exit_code": 0,
+      "result": "CreatedremoteDbranch preservingallhistory"
+    },
+    {
+      "boundary": "targeted_GitHub_approvals",
+      "operation": "gh run list/views35520647191/35520647070/35520647107/35520647083/35520647168 andexactDbranchAPI;lastworkflowrecheckedwhilepending",
+      "result": "5workflows6jobsallstepsSUCCESS atD1;no rerun"
+    },
+    {
+      "boundary": "default_sandbox",
+      "operation": "WriteactualCIproof;call _preflight once withactualD1Gitblobs/remoteCIproof;verify22pre-existing packagepins;writeactual-preflight.json",
+      "result": "PASS;0opens/bytes;no receipt"
+    },
+    {
+      "boundary": "default_sandbox",
+      "cli_invocations": 1,
+      "command": "PYTHONPATH=src TMPDIR=<repository>/.bootstrap-test-tmp .venv/bin/python -B scripts/run_ti3d_final.py",
+      "exit_code": 0,
+      "result": "PASS;1fit;1FINALevaluation;14opens27252072bytes;FINAL4opens7783020bytes;CONSUMED",
+      "scientific_invocations": 1
+    },
+    {
+      "boundary": "tool_process_poll",
+      "exit_code": 0,
+      "operation": "write_stdin empty toexisting scientificprocess; notanotherCLIlaunch"
+    },
+    {
+      "boundary": "default_sandbox",
+      "operation": "Readresult/I/O/receipt/predictionJSON;textarithmetic/hashandGitcustodychecks;writeonlyterminalreports",
+      "result": "No experimentalreopen,kernel,fit,featureextraction,testtrainingorcodechange"
+    },
+    {
+      "boundary": "independent_agent_read_only",
+      "operation": "D1custodyverifiedbeforepixels; postsciencereviewusesJSONarithmetic/textchecksums only",
+      "result": "D1PASS26paths133freeze105previousPythonpreserved;terminalauditdetailsinverification-terminal.json"
+    }
+  ],
+  "retries": 0,
+  "schema": "TI3D-EXECUTION-AND-CLOSEOUT-COMMANDS-1",
+  "scientific_cli_invocations": 1,
+  "scientific_final_runs": 1
+}

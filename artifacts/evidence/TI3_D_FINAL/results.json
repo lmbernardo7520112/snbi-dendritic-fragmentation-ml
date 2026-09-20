@@ -1,0 +1,614 @@
+{
+  "CAUSALITY_CLAIM_AUTHORIZED": false,
+  "CURRENT_AUTHORIZED_ACTIVITY": "NONE_AWAITING_AUTHOR_DECISION",
+  "D1": "b7687575d391f642d2c80274f1bc984c45dbba1b",
+  "EXTERNAL_GENERALIZATION_CLAIM": false,
+  "FINAL_EVALUATIONS": 1,
+  "FINAL_EVALUATION_AUTHORIZED": false,
+  "FINAL_FIT_CALLS": 1,
+  "FINAL_REPORT_READY_FOR_AUTHOR_DECISION": true,
+  "FINAL_RESULT_SCOPE": "SMALL_INTERNAL_TEMPORAL_CONFIRMATION",
+  "FINAL_TEST_SAMPLES": 6,
+  "FINAL_TRAINING_SAMPLES": 50,
+  "FORECASTING_AUTHORIZED": false,
+  "MERGE_AUTHORIZED": false,
+  "ML_FINAL_TEST": "CONSUMED",
+  "ML_FINAL_TEST_EXECUTED": true,
+  "MODEL_FAMILY": "MULTIMODAL_LBP_RF",
+  "MODEL_SELECTION_REOPENED": false,
+  "SCIENTIFIC_FINAL_COMPLETED_RUNS": 1,
+  "SCIENTIFIC_FINAL_RUNS": 1,
+  "SCIENTIFIC_MODELING_COMPLETE": true,
+  "STATE": "CLOSED_CONSUMED",
+  "TI3_D_EXECUTION_AUTHORIZED": false,
+  "TI3_D_FINAL": "PASS",
+  "dependency_versions": {
+    "numpy": "1.26.4",
+    "scikit-image": "0.24.0",
+    "scikit-learn": "1.5.2",
+    "scipy": "1.11.4"
+  },
+  "final_evaluation": {
+    "FN": 1,
+    "FP": 1,
+    "TN": 2,
+    "TP": 2,
+    "accuracy": 0.6666666666666666,
+    "background_semantics": "BACKGROUND_CANDIDATE_NOT_PHYSICAL_ABSENCE",
+    "balanced_accuracy": 0.6666666666666666,
+    "confusion_matrix": [
+      [
+        2,
+        1
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "confusion_order": "rows=true, columns=predicted; labels=[0,1]",
+    "evaluation": "PREDICTION_FIRST_FINAL_EVALUATION",
+    "f1": 0.6666666666666666,
+    "model_selection_reopened": false,
+    "positive_semantics": "PUBLISHED_FRAGMENTATION_LOCATION_PRESENT",
+    "precision": 0.6666666666666666,
+    "predicted_labels": [
+      0,
+      1,
+      0,
+      0,
+      1,
+      1
+    ],
+    "prediction_record_sha256": "3b6ea70adfecf85658627e8f2688dcd7ada369f14110465a51c9030000be797b",
+    "primary_metric": "balanced_accuracy",
+    "probabilities_class_order_0_1": [
+      [
+        0.54,
+        0.46
+      ],
+      [
+        0.1,
+        0.9
+      ],
+      [
+        0.64,
+        0.36
+      ],
+      [
+        0.83,
+        0.17
+      ],
+      [
+        0.21,
+        0.79
+      ],
+      [
+        0.15,
+        0.85
+      ]
+    ],
+    "recall": 0.6666666666666666,
+    "result_scope": "SMALL_INTERNAL_TEMPORAL_CONFIRMATION",
+    "sample_count": 6,
+    "sample_ids": [
+      "background|ESM1|293|622|806",
+      "positive|ESM3:annotation-site:2d8693eaf74b3e06",
+      "positive|ESM3:annotation-site:f96050cb91a60afe",
+      "background|ESM4|295|1142|545",
+      "background|ESM4|295|817|350",
+      "positive|ESM6:annotation-site:8c97cae8aaa8f4f3"
+    ],
+    "true_labels": [
+      0,
+      1,
+      1,
+      0,
+      0,
+      1
+    ]
+  },
+  "fit": {
+    "dependency_versions": {
+      "numpy": "1.26.4",
+      "scikit-image": "0.24.0",
+      "scikit-learn": "1.5.2",
+      "scipy": "1.11.4"
+    },
+    "descriptive_resubstitution": {
+      "FN": 0,
+      "FP": 0,
+      "TN": 25,
+      "TP": 25,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "confusion_matrix": [
+        [
+          25,
+          0
+        ],
+        [
+          0,
+          25
+        ]
+      ],
+      "confusion_order": "rows=true, columns=predicted; labels=[0,1]",
+      "f1": 1.0,
+      "precision": 1.0,
+      "predicted_labels": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "probabilities_class_order_0_1": [
+        [
+          0.9,
+          0.1
+        ],
+        [
+          0.85,
+          0.15
+        ],
+        [
+          0.1,
+          0.9
+        ],
+        [
+          0.37,
+          0.63
+        ],
+        [
+          0.23,
+          0.77
+        ],
+        [
+          0.15,
+          0.85
+        ],
+        [
+          0.14,
+          0.86
+        ],
+        [
+          0.09,
+          0.91
+        ],
+        [
+          0.06,
+          0.94
+        ],
+        [
+          0.05,
+          0.95
+        ],
+        [
+          0.07,
+          0.93
+        ],
+        [
+          0.9,
+          0.1
+        ],
+        [
+          0.92,
+          0.08
+        ],
+        [
+          0.81,
+          0.19
+        ],
+        [
+          0.8,
+          0.2
+        ],
+        [
+          0.32,
+          0.68
+        ],
+        [
+          0.38,
+          0.62
+        ],
+        [
+          0.11,
+          0.89
+        ],
+        [
+          0.18,
+          0.82
+        ],
+        [
+          0.11,
+          0.89
+        ],
+        [
+          0.08,
+          0.92
+        ],
+        [
+          0.34,
+          0.66
+        ],
+        [
+          0.88,
+          0.12
+        ],
+        [
+          0.91,
+          0.09
+        ],
+        [
+          0.86,
+          0.14
+        ],
+        [
+          0.83,
+          0.17
+        ],
+        [
+          0.95,
+          0.05
+        ],
+        [
+          0.91,
+          0.09
+        ],
+        [
+          0.83,
+          0.17
+        ],
+        [
+          0.88,
+          0.12
+        ],
+        [
+          0.83,
+          0.17
+        ],
+        [
+          0.68,
+          0.32
+        ],
+        [
+          0.83,
+          0.17
+        ],
+        [
+          0.13,
+          0.87
+        ],
+        [
+          0.78,
+          0.22
+        ],
+        [
+          0.91,
+          0.09
+        ],
+        [
+          0.05,
+          0.95
+        ],
+        [
+          0.11,
+          0.89
+        ],
+        [
+          0.02,
+          0.98
+        ],
+        [
+          0.84,
+          0.16
+        ],
+        [
+          0.74,
+          0.26
+        ],
+        [
+          0.97,
+          0.03
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.73,
+          0.27
+        ],
+        [
+          0.76,
+          0.24
+        ],
+        [
+          0.18,
+          0.82
+        ],
+        [
+          0.04,
+          0.96
+        ],
+        [
+          0.12,
+          0.88
+        ],
+        [
+          0.12,
+          0.88
+        ],
+        [
+          0.1,
+          0.9
+        ]
+      ],
+      "recall": 1.0,
+      "sample_count": 50,
+      "scope": "RESUBSTITUTION_ONLY_NO_DECISION_NO_GENERALIZATION_ESTIMATE",
+      "true_labels": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "feature_dimension": 20,
+    "feature_order": [
+      "STRUCTURAL_LBP_10",
+      "SOLUTAL_LBP_10"
+    ],
+    "final_fit_calls": 1,
+    "logical_hash_schema": "TI3D-RF-LOGICAL-STATE-SHA256-1",
+    "logical_model_sha256": "7eb72a60bc72f8d72e0c5f77f67cfde4d456be5264d0d8c5bea68398b0c11894",
+    "model_family": "MULTIMODAL_LBP_RF",
+    "model_selection_reopened": false,
+    "parameters": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "class_weight": null,
+      "criterion": "gini",
+      "max_depth": null,
+      "max_features": "sqrt",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 1,
+      "min_samples_split": 2,
+      "min_weight_fraction_leaf": 0.0,
+      "monotonic_cst": null,
+      "n_estimators": 100,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "schema": "TI3D-FINAL-FIT-1",
+    "training_class_counts": {
+      "0": 25,
+      "1": 25
+    },
+    "training_composition": {
+      "bottom_up_anti_parallel": {
+        "BACKGROUND_CANDIDATE": 8,
+        "POSITIVE": 19
+      },
+      "top_down_parallel": {
+        "BACKGROUND_CANDIDATE": 17,
+        "POSITIVE": 6
+      }
+    },
+    "training_sample_count": 50,
+    "training_sample_ids": [
+      "background|ESM1|73|102|676",
+      "background|ESM1|73|167|286",
+      "positive|ESM3:annotation-site:4b88c441ae9c6696",
+      "positive|ESM3:annotation-site:4c41286cef74d212",
+      "positive|ESM3:annotation-site:4e3f86cfe00b170b",
+      "positive|ESM3:annotation-site:921edb3b46971a2c",
+      "positive|ESM3:annotation-site:95a85828fc0c1117",
+      "positive|ESM3:annotation-site:b6b216ac7f401b9a",
+      "positive|ESM3:annotation-site:c0913343ab666a5f",
+      "positive|ESM3:annotation-site:e8c88192a10fa74d",
+      "positive|ESM3:annotation-site:edefb8faa424fa0f",
+      "background|ESM1|146|167|611",
+      "background|ESM1|146|37|546",
+      "background|ESM1|146|817|481",
+      "background|ESM1|146|947|676",
+      "positive|ESM3:annotation-site:5e9a4c2b4df0a4dd",
+      "positive|ESM3:annotation-site:73e02d077c181e27",
+      "positive|ESM3:annotation-site:7bb50a0b75f78145",
+      "positive|ESM3:annotation-site:ab91a579d35b7a8c",
+      "positive|ESM3:annotation-site:aea18fa3b37ada51",
+      "positive|ESM3:annotation-site:dc8e4cc74e0dc7a3",
+      "positive|ESM3:annotation-site:e83161571f674407",
+      "background|ESM4|98|1012|675",
+      "background|ESM4|98|1142|610",
+      "background|ESM4|98|297|610",
+      "background|ESM4|98|37|285",
+      "background|ESM4|98|492|480",
+      "background|ESM4|98|622|610",
+      "background|ESM4|98|687|155",
+      "background|ESM4|98|752|675",
+      "background|ESM4|98|882|415",
+      "background|ESM4|98|882|610",
+      "background|ESM4|98|882|805",
+      "positive|ESM6:annotation-site:63498902ef491c68",
+      "background|ESM1|219|102|221",
+      "background|ESM1|219|752|221",
+      "positive|ESM3:annotation-site:3eeab8e9efcb0d21",
+      "positive|ESM3:annotation-site:8e517d7ffab44a8d",
+      "positive|ESM3:annotation-site:c726fa8942e518df",
+      "background|ESM4|197|1077|805",
+      "background|ESM4|197|362|155",
+      "background|ESM4|197|427|350",
+      "background|ESM4|197|492|415",
+      "background|ESM4|197|492|805",
+      "background|ESM4|197|752|545",
+      "positive|ESM6:annotation-site:33c1dc5c4466a022",
+      "positive|ESM6:annotation-site:610a877237d31a5d",
+      "positive|ESM6:annotation-site:7c58fc05ae40787e",
+      "positive|ESM6:annotation-site:8a86a50873360dcf",
+      "positive|ESM6:annotation-site:8acca343f57b1314"
+    ]
+  },
+  "fit_freeze_sha256": "2121642ec1fda8ceae6cad2f54d5ef88e079cfa5e6af369c0553f5e495e5aebf",
+  "predictions_sha256": "3b6ea70adfecf85658627e8f2688dcd7ada369f14110465a51c9030000be797b",
+  "retries": 0,
+  "sample_order": {
+    "FINAL_TEST": [
+      "background|ESM1|293|622|806",
+      "positive|ESM3:annotation-site:2d8693eaf74b3e06",
+      "positive|ESM3:annotation-site:f96050cb91a60afe",
+      "background|ESM4|295|1142|545",
+      "background|ESM4|295|817|350",
+      "positive|ESM6:annotation-site:8c97cae8aaa8f4f3"
+    ],
+    "FINAL_TRAINING": [
+      "background|ESM1|73|102|676",
+      "background|ESM1|73|167|286",
+      "positive|ESM3:annotation-site:4b88c441ae9c6696",
+      "positive|ESM3:annotation-site:4c41286cef74d212",
+      "positive|ESM3:annotation-site:4e3f86cfe00b170b",
+      "positive|ESM3:annotation-site:921edb3b46971a2c",
+      "positive|ESM3:annotation-site:95a85828fc0c1117",
+      "positive|ESM3:annotation-site:b6b216ac7f401b9a",
+      "positive|ESM3:annotation-site:c0913343ab666a5f",
+      "positive|ESM3:annotation-site:e8c88192a10fa74d",
+      "positive|ESM3:annotation-site:edefb8faa424fa0f",
+      "background|ESM1|146|167|611",
+      "background|ESM1|146|37|546",
+      "background|ESM1|146|817|481",
+      "background|ESM1|146|947|676",
+      "positive|ESM3:annotation-site:5e9a4c2b4df0a4dd",
+      "positive|ESM3:annotation-site:73e02d077c181e27",
+      "positive|ESM3:annotation-site:7bb50a0b75f78145",
+      "positive|ESM3:annotation-site:ab91a579d35b7a8c",
+      "positive|ESM3:annotation-site:aea18fa3b37ada51",
+      "positive|ESM3:annotation-site:dc8e4cc74e0dc7a3",
+      "positive|ESM3:annotation-site:e83161571f674407",
+      "background|ESM4|98|1012|675",
+      "background|ESM4|98|1142|610",
+      "background|ESM4|98|297|610",
+      "background|ESM4|98|37|285",
+      "background|ESM4|98|492|480",
+      "background|ESM4|98|622|610",
+      "background|ESM4|98|687|155",
+      "background|ESM4|98|752|675",
+      "background|ESM4|98|882|415",
+      "background|ESM4|98|882|610",
+      "background|ESM4|98|882|805",
+      "positive|ESM6:annotation-site:63498902ef491c68",
+      "background|ESM1|219|102|221",
+      "background|ESM1|219|752|221",
+      "positive|ESM3:annotation-site:3eeab8e9efcb0d21",
+      "positive|ESM3:annotation-site:8e517d7ffab44a8d",
+      "positive|ESM3:annotation-site:c726fa8942e518df",
+      "background|ESM4|197|1077|805",
+      "background|ESM4|197|362|155",
+      "background|ESM4|197|427|350",
+      "background|ESM4|197|492|415",
+      "background|ESM4|197|492|805",
+      "background|ESM4|197|752|545",
+      "positive|ESM6:annotation-site:33c1dc5c4466a022",
+      "positive|ESM6:annotation-site:610a877237d31a5d",
+      "positive|ESM6:annotation-site:7c58fc05ae40787e",
+      "positive|ESM6:annotation-site:8a86a50873360dcf",
+      "positive|ESM6:annotation-site:8acca343f57b1314"
+    ]
+  },
+  "tuning_runs": 0
+}

@@ -1,0 +1,437 @@
+{
+  "dependency_versions": {
+    "numpy": "1.26.4",
+    "scikit-image": "0.24.0",
+    "scikit-learn": "1.5.2",
+    "scipy": "1.11.4"
+  },
+  "descriptive_resubstitution": {
+    "FN": 0,
+    "FP": 0,
+    "TN": 25,
+    "TP": 25,
+    "accuracy": 1.0,
+    "balanced_accuracy": 1.0,
+    "confusion_matrix": [
+      [
+        25,
+        0
+      ],
+      [
+        0,
+        25
+      ]
+    ],
+    "confusion_order": "rows=true, columns=predicted; labels=[0,1]",
+    "f1": 1.0,
+    "precision": 1.0,
+    "predicted_labels": [
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "probabilities_class_order_0_1": [
+      [
+        0.9,
+        0.1
+      ],
+      [
+        0.85,
+        0.15
+      ],
+      [
+        0.1,
+        0.9
+      ],
+      [
+        0.37,
+        0.63
+      ],
+      [
+        0.23,
+        0.77
+      ],
+      [
+        0.15,
+        0.85
+      ],
+      [
+        0.14,
+        0.86
+      ],
+      [
+        0.09,
+        0.91
+      ],
+      [
+        0.06,
+        0.94
+      ],
+      [
+        0.05,
+        0.95
+      ],
+      [
+        0.07,
+        0.93
+      ],
+      [
+        0.9,
+        0.1
+      ],
+      [
+        0.92,
+        0.08
+      ],
+      [
+        0.81,
+        0.19
+      ],
+      [
+        0.8,
+        0.2
+      ],
+      [
+        0.32,
+        0.68
+      ],
+      [
+        0.38,
+        0.62
+      ],
+      [
+        0.11,
+        0.89
+      ],
+      [
+        0.18,
+        0.82
+      ],
+      [
+        0.11,
+        0.89
+      ],
+      [
+        0.08,
+        0.92
+      ],
+      [
+        0.34,
+        0.66
+      ],
+      [
+        0.88,
+        0.12
+      ],
+      [
+        0.91,
+        0.09
+      ],
+      [
+        0.86,
+        0.14
+      ],
+      [
+        0.83,
+        0.17
+      ],
+      [
+        0.95,
+        0.05
+      ],
+      [
+        0.91,
+        0.09
+      ],
+      [
+        0.83,
+        0.17
+      ],
+      [
+        0.88,
+        0.12
+      ],
+      [
+        0.83,
+        0.17
+      ],
+      [
+        0.68,
+        0.32
+      ],
+      [
+        0.83,
+        0.17
+      ],
+      [
+        0.13,
+        0.87
+      ],
+      [
+        0.78,
+        0.22
+      ],
+      [
+        0.91,
+        0.09
+      ],
+      [
+        0.05,
+        0.95
+      ],
+      [
+        0.11,
+        0.89
+      ],
+      [
+        0.02,
+        0.98
+      ],
+      [
+        0.84,
+        0.16
+      ],
+      [
+        0.74,
+        0.26
+      ],
+      [
+        0.97,
+        0.03
+      ],
+      [
+        1.0,
+        0.0
+      ],
+      [
+        0.73,
+        0.27
+      ],
+      [
+        0.76,
+        0.24
+      ],
+      [
+        0.18,
+        0.82
+      ],
+      [
+        0.04,
+        0.96
+      ],
+      [
+        0.12,
+        0.88
+      ],
+      [
+        0.12,
+        0.88
+      ],
+      [
+        0.1,
+        0.9
+      ]
+    ],
+    "recall": 1.0,
+    "sample_count": 50,
+    "scope": "RESUBSTITUTION_ONLY_NO_DECISION_NO_GENERALIZATION_ESTIMATE",
+    "true_labels": [
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  "feature_dimension": 20,
+  "feature_order": [
+    "STRUCTURAL_LBP_10",
+    "SOLUTAL_LBP_10"
+  ],
+  "final_fit_calls": 1,
+  "logical_hash_schema": "TI3D-RF-LOGICAL-STATE-SHA256-1",
+  "logical_model_sha256": "7eb72a60bc72f8d72e0c5f77f67cfde4d456be5264d0d8c5bea68398b0c11894",
+  "model_family": "MULTIMODAL_LBP_RF",
+  "model_selection_reopened": false,
+  "parameters": {
+    "bootstrap": true,
+    "ccp_alpha": 0.0,
+    "class_weight": null,
+    "criterion": "gini",
+    "max_depth": null,
+    "max_features": "sqrt",
+    "max_leaf_nodes": null,
+    "max_samples": null,
+    "min_impurity_decrease": 0.0,
+    "min_samples_leaf": 1,
+    "min_samples_split": 2,
+    "min_weight_fraction_leaf": 0.0,
+    "monotonic_cst": null,
+    "n_estimators": 100,
+    "n_jobs": null,
+    "oob_score": false,
+    "random_state": 42,
+    "verbose": 0,
+    "warm_start": false
+  },
+  "schema": "TI3D-FINAL-FIT-1",
+  "training_class_counts": {
+    "0": 25,
+    "1": 25
+  },
+  "training_composition": {
+    "bottom_up_anti_parallel": {
+      "BACKGROUND_CANDIDATE": 8,
+      "POSITIVE": 19
+    },
+    "top_down_parallel": {
+      "BACKGROUND_CANDIDATE": 17,
+      "POSITIVE": 6
+    }
+  },
+  "training_sample_count": 50,
+  "training_sample_ids": [
+    "background|ESM1|73|102|676",
+    "background|ESM1|73|167|286",
+    "positive|ESM3:annotation-site:4b88c441ae9c6696",
+    "positive|ESM3:annotation-site:4c41286cef74d212",
+    "positive|ESM3:annotation-site:4e3f86cfe00b170b",
+    "positive|ESM3:annotation-site:921edb3b46971a2c",
+    "positive|ESM3:annotation-site:95a85828fc0c1117",
+    "positive|ESM3:annotation-site:b6b216ac7f401b9a",
+    "positive|ESM3:annotation-site:c0913343ab666a5f",
+    "positive|ESM3:annotation-site:e8c88192a10fa74d",
+    "positive|ESM3:annotation-site:edefb8faa424fa0f",
+    "background|ESM1|146|167|611",
+    "background|ESM1|146|37|546",
+    "background|ESM1|146|817|481",
+    "background|ESM1|146|947|676",
+    "positive|ESM3:annotation-site:5e9a4c2b4df0a4dd",
+    "positive|ESM3:annotation-site:73e02d077c181e27",
+    "positive|ESM3:annotation-site:7bb50a0b75f78145",
+    "positive|ESM3:annotation-site:ab91a579d35b7a8c",
+    "positive|ESM3:annotation-site:aea18fa3b37ada51",
+    "positive|ESM3:annotation-site:dc8e4cc74e0dc7a3",
+    "positive|ESM3:annotation-site:e83161571f674407",
+    "background|ESM4|98|1012|675",
+    "background|ESM4|98|1142|610",
+    "background|ESM4|98|297|610",
+    "background|ESM4|98|37|285",
+    "background|ESM4|98|492|480",
+    "background|ESM4|98|622|610",
+    "background|ESM4|98|687|155",
+    "background|ESM4|98|752|675",
+    "background|ESM4|98|882|415",
+    "background|ESM4|98|882|610",
+    "background|ESM4|98|882|805",
+    "positive|ESM6:annotation-site:63498902ef491c68",
+    "background|ESM1|219|102|221",
+    "background|ESM1|219|752|221",
+    "positive|ESM3:annotation-site:3eeab8e9efcb0d21",
+    "positive|ESM3:annotation-site:8e517d7ffab44a8d",
+    "positive|ESM3:annotation-site:c726fa8942e518df",
+    "background|ESM4|197|1077|805",
+    "background|ESM4|197|362|155",
+    "background|ESM4|197|427|350",
+    "background|ESM4|197|492|415",
+    "background|ESM4|197|492|805",
+    "background|ESM4|197|752|545",
+    "positive|ESM6:annotation-site:33c1dc5c4466a022",
+    "positive|ESM6:annotation-site:610a877237d31a5d",
+    "positive|ESM6:annotation-site:7c58fc05ae40787e",
+    "positive|ESM6:annotation-site:8a86a50873360dcf",
+    "positive|ESM6:annotation-site:8acca343f57b1314"
+  ]
+}

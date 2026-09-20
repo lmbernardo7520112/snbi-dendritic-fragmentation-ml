@@ -1,0 +1,83 @@
+{
+  "D1": "b7687575d391f642d2c80274f1bc984c45dbba1b",
+  "d2_exact_paths": [
+    "artifacts/evidence/TI3_D_FINAL/actual-preflight.json",
+    "artifacts/evidence/TI3_D_FINAL/ci-proof.json",
+    "artifacts/evidence/TI3_D_FINAL/commands-execution.json",
+    "artifacts/evidence/TI3_D_FINAL/execution-receipt.json",
+    "artifacts/evidence/TI3_D_FINAL/execution-report.md",
+    "artifacts/evidence/TI3_D_FINAL/final-access-receipt.json",
+    "artifacts/evidence/TI3_D_FINAL/fit-freeze.json",
+    "artifacts/evidence/TI3_D_FINAL/io-audit.json",
+    "artifacts/evidence/TI3_D_FINAL/materialization-manifest.json",
+    "artifacts/evidence/TI3_D_FINAL/post-run-hashes.sha256",
+    "artifacts/evidence/TI3_D_FINAL/predictions.json",
+    "artifacts/evidence/TI3_D_FINAL/results.json",
+    "artifacts/evidence/TI3_D_FINAL/terminal-state.json",
+    "artifacts/evidence/TI3_D_FINAL/verification-terminal.json"
+  ],
+  "final_evaluations": 1,
+  "fit_calls": 1,
+  "freeze_verified": 133,
+  "historical_checksums_verified": 95,
+  "independent_audit": {
+    "ci_all_success": true,
+    "ci_before_receipt_seconds": 56.376641,
+    "ci_jobs": 6,
+    "ci_runs": 5,
+    "ci_steps": 68,
+    "final_access_after_global_receipt_seconds": 0.410167,
+    "final_bytes": 7783020,
+    "final_confusion_matrix": [
+      [
+        2,
+        1
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "final_metric_fraction": "2/3 for balanced_accuracy,accuracy,precision,recall,f1",
+    "final_opens": 4,
+    "final_records_with_new_hashes": 6,
+    "io_bytes": 27252072,
+    "io_opens": 14,
+    "receipt_sha256": "78b31370d39e8e81a4eea5de2ab83ea7f498afe7c307bc92b156069bb9a60f4c",
+    "status": "PASS_TEXT_ONLY",
+    "support_patch_pairs": 56,
+    "ti3b_equal_feature_hashes": 50,
+    "ti3b_equal_solutal_patch_hashes": 50,
+    "ti3b_equal_structural_patch_hashes": 50,
+    "training_bytes": 19469052,
+    "training_opens": 10,
+    "training_resubstitution_confusion": [
+      [
+        25,
+        0
+      ],
+      [
+        0,
+        25
+      ]
+    ]
+  },
+  "limits": [
+    "PostexecutionverificationusesonlytextJSONarithmetic,hashesandGit;no arraysor kernelsrecomputed.",
+    "Prediction-firstorderissupportedbyfrozencontrolflow,durablefilehashlinksandtests;notuniversalsyscallobservation.",
+    "D2SHA/finalCI/cleanlocalremote equality belong subsequent Git andeffectiveoperatorreturn;notanticipatedhere."
+  ],
+  "model_selection_reopened": false,
+  "post_run_code_changes": 0,
+  "post_run_experimental_opens": 0,
+  "post_run_kernel_invocations": 0,
+  "previous_python_files_preserved": 105,
+  "prior_authorities_reactivated": false,
+  "retry": 0,
+  "root_prediction_and_fit_file_hashes": "PASS",
+  "schema": "TI3D-TERMINAL-VERIFICATION-1",
+  "scientific_cli_invocations": 1,
+  "scientific_runs": 1,
+  "status": "PASS_TEXT_ONLY",
+  "tuning": 0
+}
