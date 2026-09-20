@@ -669,6 +669,55 @@
         "git_mode": "100644",
         "path": "tests/test_ti3c_scope.py",
         "state": "TRACKED"
+      },
+      {
+        "blob_sha": "81068e44ae52d7f8e4084293d52c07636f06061c",
+        "classification": "TI3_ACTIVE",
+        "git_mode": "100644",
+        "path": "scripts/run_ti3d_final.py",
+        "state": "TRACKED"
+      },
+      {
+        "blob_sha": "05ef3d63e2366efb71197826ac5e46ac3f76944f",
+        "classification": "TI3_ACTIVE",
+        "git_mode": "100644",
+        "path": "src/snbi_fragmentation/ti3d_execution.py",
+        "state": "TRACKED"
+      },
+      {
+        "blob_sha": "266b316e1fd7fdf823a64b62957a128e8c6b1871",
+        "classification": "TI3_ACTIVE",
+        "git_mode": "100644",
+        "path": "src/snbi_fragmentation/ti3d_final.py",
+        "state": "TRACKED"
+      },
+      {
+        "blob_sha": "cd3629c7a243384d56da1882b7bda95d3f300401",
+        "classification": "TI3_ACTIVE",
+        "git_mode": "100644",
+        "path": "src/snbi_fragmentation/ti3d_support.py",
+        "state": "TRACKED"
+      },
+      {
+        "blob_sha": "ca0ffd4c8f1d03ce4375bf84dd32bc1c39eaba02",
+        "classification": "TI3_ACTIVE",
+        "git_mode": "100644",
+        "path": "tests/test_ti3d_execution.py",
+        "state": "TRACKED"
+      },
+      {
+        "blob_sha": "bc6342cbdae31902dfbae589bbf6b8c55d3ee01a",
+        "classification": "TI3_ACTIVE",
+        "git_mode": "100644",
+        "path": "tests/test_ti3d_final.py",
+        "state": "TRACKED"
+      },
+      {
+        "blob_sha": "effbaca7c6dcc259916f05b01ff50c53fbde8acc",
+        "classification": "TI3_ACTIVE",
+        "git_mode": "100644",
+        "path": "tests/test_ti3d_support.py",
+        "state": "TRACKED"
       }
     ]
   },

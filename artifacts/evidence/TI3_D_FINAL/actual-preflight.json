@@ -1,0 +1,18 @@
+{
+  "D1": "b7687575d391f642d2c80274f1bc984c45dbba1b",
+  "dependency_pins_verified": 22,
+  "experimental_bytes": 0,
+  "experimental_opens": 0,
+  "final_samples": 6,
+  "frozen_text_count": 133,
+  "git_and_ci": "ACTUAL_D1_COMMITTED_BLOBS_AND_OBSERVED_REMOTE_CI",
+  "historical_reference_records": 50,
+  "inventory_records": 14,
+  "manifest_sha256": "c8e82b72ff5dc51d188a764c577c11d514474b14d90aea6292c1439e776fb487",
+  "method_freeze_sha256": "ac25234ff68b7803c4bc51459bbf79ca756450bec125c4864977815ab10522dd",
+  "receipt_created": false,
+  "scientific_final_runs": 0,
+  "status": "PASS",
+  "timestamp_utc": "2026-09-20T15:49:09.368377+00:00",
+  "training_samples": 50
+}

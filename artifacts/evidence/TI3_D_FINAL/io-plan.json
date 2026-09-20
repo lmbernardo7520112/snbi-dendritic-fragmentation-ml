@@ -1,0 +1,436 @@
+{
+  "entries": [
+    {
+      "acquisition_id": "bottom_up_anti_parallel",
+      "bit_depth": 8,
+      "context_group": "bottom_up_anti_parallel|ESM1|73",
+      "experimental_time_s": 60.18,
+      "frame_bytes": 1951506,
+      "frame_index": 73,
+      "height": 1018,
+      "image_sha256": "0209aef0e36c73b017063cbea4661f76ac0d24bd51631e11e1f41b9dae0cc2a5",
+      "input_opened": false,
+      "path": "data/derived/ti2-pilot/ESM1-0073.raw",
+      "pixel_format": "yuv420p",
+      "plane": "Y",
+      "source_id": "ESM1",
+      "split": "TRAIN",
+      "support_xyxy": [
+        5,
+        124,
+        1273,
+        864
+      ],
+      "width": 1278,
+      "y_plane": {
+        "bytes": 1301004,
+        "height": 1018,
+        "name": "Y",
+        "offset": 0,
+        "width": 1278
+      }
+    },
+    {
+      "acquisition_id": "bottom_up_anti_parallel",
+      "bit_depth": 8,
+      "context_group": "bottom_up_anti_parallel|ESM1|73",
+      "experimental_time_s": 60.18,
+      "frame_bytes": 1951506,
+      "frame_index": 73,
+      "height": 1018,
+      "image_sha256": "c5518bf031ae0e18541ce2c72206a8d1e5a53e060ee990dccaeb0cbb5024874f",
+      "input_opened": false,
+      "path": "data/derived/ti2-pilot/ESM2-0073.raw",
+      "pixel_format": "yuv420p",
+      "plane": "Y",
+      "source_id": "ESM2",
+      "split": "TRAIN",
+      "support_xyxy": [
+        5,
+        124,
+        1273,
+        864
+      ],
+      "width": 1278,
+      "y_plane": {
+        "bytes": 1301004,
+        "height": 1018,
+        "name": "Y",
+        "offset": 0,
+        "width": 1278
+      }
+    },
+    {
+      "acquisition_id": "bottom_up_anti_parallel",
+      "bit_depth": 8,
+      "context_group": "bottom_up_anti_parallel|ESM1|146",
+      "experimental_time_s": 146.32,
+      "frame_bytes": 1951506,
+      "frame_index": 146,
+      "height": 1018,
+      "image_sha256": "eccb91c1d66f500d892dfe1c204c494cfc0d1d3542174d5ae1efd921bff034e0",
+      "input_opened": false,
+      "path": "data/derived/ti2-pilot/ESM1-0146.raw",
+      "pixel_format": "yuv420p",
+      "plane": "Y",
+      "source_id": "ESM1",
+      "split": "TRAIN",
+      "support_xyxy": [
+        5,
+        124,
+        1273,
+        864
+      ],
+      "width": 1278,
+      "y_plane": {
+        "bytes": 1301004,
+        "height": 1018,
+        "name": "Y",
+        "offset": 0,
+        "width": 1278
+      }
+    },
+    {
+      "acquisition_id": "bottom_up_anti_parallel",
+      "bit_depth": 8,
+      "context_group": "bottom_up_anti_parallel|ESM1|146",
+      "experimental_time_s": 146.32,
+      "frame_bytes": 1951506,
+      "frame_index": 146,
+      "height": 1018,
+      "image_sha256": "e581aee31e1084567151d42539cb1995d2ec789db30efd44af9200374f020908",
+      "input_opened": false,
+      "path": "data/derived/ti2-pilot/ESM2-0146.raw",
+      "pixel_format": "yuv420p",
+      "plane": "Y",
+      "source_id": "ESM2",
+      "split": "TRAIN",
+      "support_xyxy": [
+        5,
+        124,
+        1273,
+        864
+      ],
+      "width": 1278,
+      "y_plane": {
+        "bytes": 1301004,
+        "height": 1018,
+        "name": "Y",
+        "offset": 0,
+        "width": 1278
+      }
+    },
+    {
+      "acquisition_id": "top_down_parallel",
+      "bit_depth": 8,
+      "context_group": "top_down_parallel|ESM4|98",
+      "experimental_time_s": 81.42,
+      "frame_bytes": 1940004,
+      "frame_index": 98,
+      "height": 1012,
+      "image_sha256": "8e9ab504657f44d5f7252ff8a681a4c0007a4f0643f11cc26b171e989be75cc9",
+      "input_opened": false,
+      "path": "data/derived/ti2-pilot/ESM4-0098.raw",
+      "pixel_format": "yuv420p",
+      "plane": "Y",
+      "source_id": "ESM4",
+      "split": "TRAIN",
+      "support_xyxy": [
+        5,
+        123,
+        1273,
+        859
+      ],
+      "width": 1278,
+      "y_plane": {
+        "bytes": 1293336,
+        "height": 1012,
+        "name": "Y",
+        "offset": 0,
+        "width": 1278
+      }
+    },
+    {
+      "acquisition_id": "top_down_parallel",
+      "bit_depth": 8,
+      "context_group": "top_down_parallel|ESM4|98",
+      "experimental_time_s": 81.42,
+      "frame_bytes": 1940004,
+      "frame_index": 98,
+      "height": 1012,
+      "image_sha256": "e4d51cf146c418faa9c5c97867a8cde76237e6a5086525b3db56ed0c68fa3c07",
+      "input_opened": false,
+      "path": "data/derived/ti2-pilot/ESM5-0098.raw",
+      "pixel_format": "yuv420p",
+      "plane": "Y",
+      "source_id": "ESM5",
+      "split": "TRAIN",
+      "support_xyxy": [
+        5,
+        123,
+        1273,
+        859
+      ],
+      "width": 1278,
+      "y_plane": {
+        "bytes": 1293336,
+        "height": 1012,
+        "name": "Y",
+        "offset": 0,
+        "width": 1278
+      }
+    },
+    {
+      "acquisition_id": "bottom_up_anti_parallel",
+      "bit_depth": 8,
+      "context_group": "bottom_up_anti_parallel|ESM1|219",
+      "experimental_time_s": 232.46,
+      "frame_bytes": 1951506,
+      "frame_index": 219,
+      "height": 1018,
+      "image_sha256": "eb22ec185b465b11abbd6ecbf38d558a9dd5ef8d19f256e42429d70b566f10bd",
+      "input_opened": false,
+      "path": "data/derived/ti2-pilot/ESM1-0219.raw",
+      "pixel_format": "yuv420p",
+      "plane": "Y",
+      "source_id": "ESM1",
+      "split": "DEVELOPMENT",
+      "support_xyxy": [
+        5,
+        124,
+        1273,
+        864
+      ],
+      "width": 1278,
+      "y_plane": {
+        "bytes": 1301004,
+        "height": 1018,
+        "name": "Y",
+        "offset": 0,
+        "width": 1278
+      }
+    },
+    {
+      "acquisition_id": "bottom_up_anti_parallel",
+      "bit_depth": 8,
+      "context_group": "bottom_up_anti_parallel|ESM1|219",
+      "experimental_time_s": 232.46,
+      "frame_bytes": 1951506,
+      "frame_index": 219,
+      "height": 1018,
+      "image_sha256": "b50f56a6332e33bfb3e32a8c94694a39e6cce936370f4b5232d257d8e7d0d228",
+      "input_opened": false,
+      "path": "data/derived/ti2-pilot/ESM2-0219.raw",
+      "pixel_format": "yuv420p",
+      "plane": "Y",
+      "source_id": "ESM2",
+      "split": "DEVELOPMENT",
+      "support_xyxy": [
+        5,
+        124,
+        1273,
+        864
+      ],
+      "width": 1278,
+      "y_plane": {
+        "bytes": 1301004,
+        "height": 1018,
+        "name": "Y",
+        "offset": 0,
+        "width": 1278
+      }
+    },
+    {
+      "acquisition_id": "top_down_parallel",
+      "bit_depth": 8,
+      "context_group": "top_down_parallel|ESM4|197",
+      "experimental_time_s": 198.24,
+      "frame_bytes": 1940004,
+      "frame_index": 197,
+      "height": 1012,
+      "image_sha256": "0446ff48d035f3f548d93253fbd9eac14536de0aeb477485b87b17dd647e8a57",
+      "input_opened": false,
+      "path": "data/derived/ti2-pilot/ESM4-0197.raw",
+      "pixel_format": "yuv420p",
+      "plane": "Y",
+      "source_id": "ESM4",
+      "split": "DEVELOPMENT",
+      "support_xyxy": [
+        5,
+        123,
+        1273,
+        859
+      ],
+      "width": 1278,
+      "y_plane": {
+        "bytes": 1293336,
+        "height": 1012,
+        "name": "Y",
+        "offset": 0,
+        "width": 1278
+      }
+    },
+    {
+      "acquisition_id": "top_down_parallel",
+      "bit_depth": 8,
+      "context_group": "top_down_parallel|ESM4|197",
+      "experimental_time_s": 198.24,
+      "frame_bytes": 1940004,
+      "frame_index": 197,
+      "height": 1012,
+      "image_sha256": "d1a57d8f41dbe5b7de62ec7b8a4356cab1c0a67087aad9cbcfeded8a1c8b643f",
+      "input_opened": false,
+      "path": "data/derived/ti2-pilot/ESM5-0197.raw",
+      "pixel_format": "yuv420p",
+      "plane": "Y",
+      "source_id": "ESM5",
+      "split": "DEVELOPMENT",
+      "support_xyxy": [
+        5,
+        123,
+        1273,
+        859
+      ],
+      "width": 1278,
+      "y_plane": {
+        "bytes": 1293336,
+        "height": 1012,
+        "name": "Y",
+        "offset": 0,
+        "width": 1278
+      }
+    },
+    {
+      "acquisition_id": "bottom_up_anti_parallel",
+      "bit_depth": 8,
+      "context_group": "bottom_up_anti_parallel|ESM1|293",
+      "experimental_time_s": 319.78,
+      "frame_bytes": 1951506,
+      "frame_index": 293,
+      "height": 1018,
+      "image_sha256": "384a0297024fda34b6b2a5a87945297315e27efffdde47c9a3a67a6483fc1e13",
+      "input_opened": false,
+      "path": "data/derived/ti2-pilot/ESM1-0293.raw",
+      "pixel_format": "yuv420p",
+      "plane": "Y",
+      "source_id": "ESM1",
+      "split": "FINAL_TEST",
+      "support_xyxy": [
+        5,
+        124,
+        1273,
+        864
+      ],
+      "width": 1278,
+      "y_plane": {
+        "bytes": 1301004,
+        "height": 1018,
+        "name": "Y",
+        "offset": 0,
+        "width": 1278
+      }
+    },
+    {
+      "acquisition_id": "bottom_up_anti_parallel",
+      "bit_depth": 8,
+      "context_group": "bottom_up_anti_parallel|ESM1|293",
+      "experimental_time_s": 319.78,
+      "frame_bytes": 1951506,
+      "frame_index": 293,
+      "height": 1018,
+      "image_sha256": "3e5812419532f01c54ed10327b8a21547dc64415ca829a2e999f9e65efee0771",
+      "input_opened": false,
+      "path": "data/derived/ti2-pilot/ESM2-0293.raw",
+      "pixel_format": "yuv420p",
+      "plane": "Y",
+      "source_id": "ESM2",
+      "split": "FINAL_TEST",
+      "support_xyxy": [
+        5,
+        124,
+        1273,
+        864
+      ],
+      "width": 1278,
+      "y_plane": {
+        "bytes": 1301004,
+        "height": 1018,
+        "name": "Y",
+        "offset": 0,
+        "width": 1278
+      }
+    },
+    {
+      "acquisition_id": "top_down_parallel",
+      "bit_depth": 8,
+      "context_group": "top_down_parallel|ESM4|295",
+      "experimental_time_s": 313.88,
+      "frame_bytes": 1940004,
+      "frame_index": 295,
+      "height": 1012,
+      "image_sha256": "ac3b9df34450e8c0f801eb90d2c329c90737f4abda4202d81638395fb5519f2a",
+      "input_opened": false,
+      "path": "data/derived/ti2-pilot/ESM4-0295.raw",
+      "pixel_format": "yuv420p",
+      "plane": "Y",
+      "source_id": "ESM4",
+      "split": "FINAL_TEST",
+      "support_xyxy": [
+        5,
+        123,
+        1273,
+        859
+      ],
+      "width": 1278,
+      "y_plane": {
+        "bytes": 1293336,
+        "height": 1012,
+        "name": "Y",
+        "offset": 0,
+        "width": 1278
+      }
+    },
+    {
+      "acquisition_id": "top_down_parallel",
+      "bit_depth": 8,
+      "context_group": "top_down_parallel|ESM4|295",
+      "experimental_time_s": 313.88,
+      "frame_bytes": 1940004,
+      "frame_index": 295,
+      "height": 1012,
+      "image_sha256": "689719f8ecf7a0b18112d6f6042c11a1edeeb141f545be7fb983ef92b7dfecc6",
+      "input_opened": false,
+      "path": "data/derived/ti2-pilot/ESM5-0295.raw",
+      "pixel_format": "yuv420p",
+      "plane": "Y",
+      "source_id": "ESM5",
+      "split": "FINAL_TEST",
+      "support_xyxy": [
+        5,
+        123,
+        1273,
+        859
+      ],
+      "width": 1278,
+      "y_plane": {
+        "bytes": 1293336,
+        "height": 1012,
+        "name": "Y",
+        "offset": 0,
+        "width": 1278
+      }
+    }
+  ],
+  "final_admission": "ONLY_AFTER_DURABLE_FIT_FREEZE",
+  "final_bytes": 7783020,
+  "final_consumption": "FIRST_SUCCESSFUL_FINAL_OPEN_CONSERVATIVE_EVEN_ZERO_BYTES",
+  "final_opens": 4,
+  "metadata_only": true,
+  "no_retry": true,
+  "schema": "TI3D-IO-PLAN-1",
+  "state_before_receipt": "NO_EXPERIMENTAL_ACCESS",
+  "total_bytes": 27252072,
+  "total_opens": 14,
+  "training_bytes": 19469052,
+  "training_opens": 10
+}

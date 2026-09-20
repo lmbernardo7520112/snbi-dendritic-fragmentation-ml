@@ -1,0 +1,200 @@
+{
+  "experimental_bytes": 0,
+  "experimental_opens": 0,
+  "installation_performed": false,
+  "inventory_scope": "Bounded sanitized grouped inventory, not universal syscall monitoring. Large textual helper bodies summarized; exact Git scientific invocation is recorded separately when it actually occurs. Failed helper queries do not count as science.",
+  "records": [
+    {
+      "boundary": "default_sandbox",
+      "experimental_opens": 0,
+      "operation": "Read current attachment and governed textual instructions; pwd/status/branch/HEAD/origin/log/diff; inspect tracked metadata and historical JSON only",
+      "result": "PASS"
+    },
+    {
+      "boundary": "default_sandbox",
+      "command": "/usr/bin/python3 -B scripts/check_data_policy.py",
+      "exit_code": 2,
+      "result": "Operational filename error: nonexistent script; no guard or science ran. Correct script located using rg."
+    },
+    {
+      "boundary": "default_sandbox",
+      "command": "/usr/bin/python3 -B scripts/check_repository_data.py",
+      "exit_code": 0,
+      "result": "PASS;497 tracked entries;content_bytes_read=0"
+    },
+    {
+      "boundary": "default_sandbox",
+      "exit_code": 1,
+      "operation": "Initial gh PR/CI read-only queries",
+      "result": "Sandbox GitHub connectivity failure; only exact GitHub operations subsequently requested targeted approval."
+    },
+    {
+      "boundary": "targeted_GitHub_approvals",
+      "operation": "gh pr list by exact TI3-C head; gh run list at a0364a2; branches/main and TI3-C API; repository merge policy; run view35471750317/321/327/407",
+      "result": "No PR;local/remote SHA equal;all5 jobs/allsteps success;merge_commit allowed;branch auto deletionfalse"
+    },
+    {
+      "boundary": "default_sandbox",
+      "operation": "Write exclusive ignored .bootstrap-test-tmp/ti3c-integration-pr-body.md",
+      "result": "Only PR body; no tracked edit"
+    },
+    {
+      "boundary": "targeted_GitHub_approval",
+      "command": "gh pr create --repo lmbernardo7520112/snbi-dendritic-fragmentation-ml --base main --head feat/ti3c-minimal-multimodal-cnn --draft --title TI3-C-integration --body-file .bootstrap-test-tmp/ti3c-integration-pr-body.md",
+      "command_representation": "Title abbreviated in this sanitized inventory; effective full title is in PR13",
+      "exit_code": 0,
+      "result": "PR13 created"
+    },
+    {
+      "boundary": "targeted_GitHub_approvals",
+      "operation": "PR13 metadata, CI run list and run views35518329967/994/948/941; last run queried again while pending",
+      "result": "All5 jobs/allsteps success before Ready"
+    },
+    {
+      "boundary": "targeted_GitHub_approval",
+      "command": "gh pr ready 13 --repo lmbernardo7520112/snbi-dendritic-fragmentation-ml",
+      "exit_code": 0
+    },
+    {
+      "boundary": "targeted_GitHub_approval",
+      "exit_code": 1,
+      "operation": "PR13 immediate premerge metadata and gh pr checks with --json",
+      "result": "Metadata clean, exactSHA/base; gh local lacks --json on pr checks; no mutation by failed query"
+    },
+    {
+      "boundary": "targeted_GitHub_approval",
+      "command": "gh pr checks 13 --repo lmbernardo7520112/snbi-dendritic-fragmentation-ml",
+      "exit_code": 0,
+      "result": "All checks pass including GitGuardian"
+    },
+    {
+      "boundary": "targeted_GitHub_approval",
+      "command": "gh pr merge 13 --repo lmbernardo7520112/snbi-dendritic-fragmentation-ml --merge --match-head-commit a0364a25694d149cb9e5dcb217de2b241fac0702",
+      "exit_code": 0,
+      "result": "Merge a8227901506c3de6fe4a5a4bd19021be3f39b2e8;branch preserved"
+    },
+    {
+      "boundary": "targeted_GitHub_approvals",
+      "operation": "PR/branch/merge-tree API and postmerge run views35518508717/733/712/757",
+      "result": "Parents and tree match;all5 jobs/allsteps success"
+    },
+    {
+      "boundary": "targeted_Git_approval",
+      "command": "git fetch --no-tags origin refs/heads/main:refs/remotes/origin/main",
+      "exit_code": 0
+    },
+    {
+      "boundary": "default_sandbox",
+      "exit_code": 0,
+      "operation": "git status --short; git merge-base --is-ancestor a0364a25694d149cb9e5dcb217de2b241fac0702 origin/main; git rev-parse origin/main",
+      "result": "Clean and auditedSHA ancestor"
+    },
+    {
+      "boundary": "targeted_Git_approval",
+      "command": "git switch main",
+      "exit_code": 0
+    },
+    {
+      "boundary": "targeted_Git_approval",
+      "command": "git merge --ff-only origin/main",
+      "exit_code": 0
+    },
+    {
+      "boundary": "targeted_Git_approval",
+      "command": "git switch -c feat/ti3d-final-evaluation a8227901506c3de6fe4a5a4bd19021be3f39b2e8",
+      "exit_code": 0
+    },
+    {
+      "boundary": "default_sandbox",
+      "operation": "Read priorA/B/C code and manifests; metadata joins/schemas/counts; create newDprotocol/code/tests/config/workflow within exactallowlist",
+      "result": "Preparation only; no scientific runner or pixels"
+    },
+    {
+      "boundary": "default_sandbox",
+      "operation": "Text read helpers attempted configs/ti3/solutal-ablation.json (wrong historical filename) and new ti3d_final.py before agent created it",
+      "result": "Read errors only; no scientific invocation or data change"
+    },
+    {
+      "boundary": "default_sandbox",
+      "operation": "importlib.metadata versions in existing .venv; PyYAML parse newworkflow; compile inlinePython without executing",
+      "result": "22 constraints match; no install;YAML andPython syntaxPASS"
+    },
+    {
+      "boundary": "default_sandbox",
+      "command": "/usr/bin/python3 -B scripts/check_ti2_checksums.py",
+      "exit_code": 0,
+      "result": "95/95 historical active text checksumsPASS"
+    },
+    {
+      "boundary": "independent_agent_read_only",
+      "operation": "C2audit and Dsamplefeasibility; text/hash/Git only",
+      "result": "98/98 freeze,109/109 posthash,95/95 checksums;50train25/25,6FINAL3/3. Helper first omitted Makefile from textallowlist; corrected helper passed without filechange. FINAL ordering inconsistency in unfinishedconfig identified beforefreeze."
+    },
+    {
+      "boundary": "default_sandbox",
+      "operation": "Create exact D1 write-allowlist26paths; serialize EXPECTED_CONFIG/AUTHORITY using Pythonjson with recursive exactroundtrip; build14record textual IOplan",
+      "result": "PASS;zeroexperimentalopens;no science invoked"
+    },
+    {
+      "boundary": "default_sandbox",
+      "operation": "Call metadata-only _validate_reference, _validate_cnn, _validate_policy on actual historicalJSON and serializedtrainingplan/config",
+      "result": "PASS;50training,6FINAL,50TI3Bpatch/feature records;no reader or receipt"
+    },
+    {
+      "boundary": "pre_freeze_static_review",
+      "operation": "Root and independent reviewer inspect runner/core integration",
+      "result": "Detected labels-list/ndarray interface mismatch beforefreeze; corrected to integerarray onlyafterpredictionfreeze. Actualfit/evaluation counters distinguishedfromstageentry. No scientificattempt occurred."
+    },
+    {
+      "boundary": "agent_default_sandbox",
+      "command": "PYTHONPATH=src TMPDIR=\"$PWD/.bootstrap-test-tmp\" .venv/bin/python -B -m unittest discover -s tests -p test_ti3d_final.py -v",
+      "exit_code": 0,
+      "result": "14PASS0skips;1realRFsyntheticfit,1mockfitraising;agentreportedstdout"
+    },
+    {
+      "boundary": "agent_default_sandbox",
+      "command": "PYTHONPATH=src TMPDIR=\"$PWD/.bootstrap-test-tmp\" .venv/bin/python -B -m unittest discover -s tests -p test_ti3d_support.py -v",
+      "exit_code": 0,
+      "result": "9PASS0skips;0fits;agentreportedstdout"
+    },
+    {
+      "boundary": "pre_freeze_independent_review",
+      "operation": "Review permanentconsumption refusal reporting and exactpredicates",
+      "result": "Core/support numericpredicates approved. Identified second-invocation refusedstdout could implySEALED despiteoldconsumedresult; correction requiredbeforeD1. No second scientificCLI actuallyinvoked."
+    },
+    {
+      "boundary": "agent_default_sandbox",
+      "operation": "TI3-D execution tests: two invocations, initial35PASS then36PASS after consumed-refusal reporting fix",
+      "result": "0skips/failures/errors;0RFfits;synthetic fixtures/mocks only"
+    },
+    {
+      "boundary": "default_sandbox",
+      "operation": "Prospective phase/data/custody/legacy/TI3 guards using exactnew7Python files andexplicitD1allowlist; no staging",
+      "result": "PASS;75legacy4A0+33active;112Python;522dataentries;0contentbytes"
+    },
+    {
+      "boundary": "default_sandbox",
+      "command": "PYTHONPATH=src:tests:. TMPDIR=<repository>/.bootstrap-test-tmp .venv/bin/python -B (unittest profile: test_ti3d_final,test_ti3d_support,test_ti3d_execution)",
+      "exit_code": 0,
+      "result": "59tests59PASS0skips/failures/errors;1RFsyntheticfit;0scientificruns"
+    },
+    {
+      "boundary": "default_sandbox",
+      "command": "PYTHONPATH=src:tests:. TMPDIR=<repository>/.bootstrap-test-tmp /usr/bin/python3 -S -B (unittest discover tests)",
+      "exit_code": 0,
+      "result": "706tests567PASS139optionaldependency skips;0failures/errors"
+    },
+    {
+      "boundary": "independent_agent_read_only",
+      "operation": "Finalpreparatoryreview of7code/testpaths,6contracts,plan,config,workflow",
+      "result": "PASS;no findingspending;no tests/science/experimentalIO byreviewer"
+    },
+    {
+      "boundary": "pre_D1_diff_review",
+      "operation": "Narrow scope manifestdiff to append7rows; preserveoriginalorder of26previousactiverows",
+      "result": "An initialsort reorderedoldrows withoutchangingcontent; orderpreservedbeforeD1;no science/parameters changed."
+    }
+  ],
+  "schema": "TI3D-PREPARATION-COMMANDS-1",
+  "scientific_final_runs": 0
+}
