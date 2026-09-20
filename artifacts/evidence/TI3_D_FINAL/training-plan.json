@@ -1,0 +1,1089 @@
+{
+  "experimental_bytes": 0,
+  "experimental_opens": 0,
+  "final_order": [
+    "background|ESM1|293|622|806",
+    "positive|ESM3:annotation-site:2d8693eaf74b3e06",
+    "positive|ESM3:annotation-site:f96050cb91a60afe",
+    "background|ESM4|295|1142|545",
+    "background|ESM4|295|817|350",
+    "positive|ESM6:annotation-site:8c97cae8aaa8f4f3"
+  ],
+  "final_samples": [
+    {
+      "acquisition_id": "bottom_up_anti_parallel",
+      "baseline_label": 0,
+      "center_x": 622,
+      "center_y": 806,
+      "context_group": "bottom_up_anti_parallel|ESM1|293",
+      "frame_index": 293,
+      "patch_side_px": 65,
+      "patch_xyxy": [
+        590,
+        774,
+        655,
+        839
+      ],
+      "sample_id": "background|ESM1|293|622|806",
+      "source_id": "ESM1",
+      "split": "FINAL_TEST"
+    },
+    {
+      "acquisition_id": "bottom_up_anti_parallel",
+      "baseline_label": 1,
+      "center_x": 561,
+      "center_y": 666,
+      "context_group": "bottom_up_anti_parallel|ESM1|293",
+      "frame_index": 293,
+      "patch_side_px": 65,
+      "patch_xyxy": [
+        529,
+        634,
+        594,
+        699
+      ],
+      "sample_id": "positive|ESM3:annotation-site:2d8693eaf74b3e06",
+      "source_id": "ESM1",
+      "split": "FINAL_TEST"
+    },
+    {
+      "acquisition_id": "bottom_up_anti_parallel",
+      "baseline_label": 1,
+      "center_x": 608,
+      "center_y": 489,
+      "context_group": "bottom_up_anti_parallel|ESM1|293",
+      "frame_index": 293,
+      "patch_side_px": 65,
+      "patch_xyxy": [
+        576,
+        457,
+        641,
+        522
+      ],
+      "sample_id": "positive|ESM3:annotation-site:f96050cb91a60afe",
+      "source_id": "ESM1",
+      "split": "FINAL_TEST"
+    },
+    {
+      "acquisition_id": "top_down_parallel",
+      "baseline_label": 0,
+      "center_x": 1142,
+      "center_y": 545,
+      "context_group": "top_down_parallel|ESM4|295",
+      "frame_index": 295,
+      "patch_side_px": 65,
+      "patch_xyxy": [
+        1110,
+        513,
+        1175,
+        578
+      ],
+      "sample_id": "background|ESM4|295|1142|545",
+      "source_id": "ESM4",
+      "split": "FINAL_TEST"
+    },
+    {
+      "acquisition_id": "top_down_parallel",
+      "baseline_label": 0,
+      "center_x": 817,
+      "center_y": 350,
+      "context_group": "top_down_parallel|ESM4|295",
+      "frame_index": 295,
+      "patch_side_px": 65,
+      "patch_xyxy": [
+        785,
+        318,
+        850,
+        383
+      ],
+      "sample_id": "background|ESM4|295|817|350",
+      "source_id": "ESM4",
+      "split": "FINAL_TEST"
+    },
+    {
+      "acquisition_id": "top_down_parallel",
+      "baseline_label": 1,
+      "center_x": 223,
+      "center_y": 764,
+      "context_group": "top_down_parallel|ESM4|295",
+      "frame_index": 295,
+      "patch_side_px": 65,
+      "patch_xyxy": [
+        191,
+        732,
+        256,
+        797
+      ],
+      "sample_id": "positive|ESM6:annotation-site:8c97cae8aaa8f4f3",
+      "source_id": "ESM4",
+      "split": "FINAL_TEST"
+    }
+  ],
+  "final_training_composition": {
+    "bottom_up_anti_parallel": {
+      "background": 8,
+      "positive": 19
+    },
+    "top_down_parallel": {
+      "background": 17,
+      "positive": 6
+    }
+  },
+  "metadata_only": true,
+  "planning_manifest_sha256": "c8e82b72ff5dc51d188a764c577c11d514474b14d90aea6292c1439e776fb487",
+  "schema": "TI3D-FINAL-TRAINING-POLICY-1",
+  "training_order": [
+    "background|ESM1|73|102|676",
+    "background|ESM1|73|167|286",
+    "positive|ESM3:annotation-site:4b88c441ae9c6696",
+    "positive|ESM3:annotation-site:4c41286cef74d212",
+    "positive|ESM3:annotation-site:4e3f86cfe00b170b",
+    "positive|ESM3:annotation-site:921edb3b46971a2c",
+    "positive|ESM3:annotation-site:95a85828fc0c1117",
+    "positive|ESM3:annotation-site:b6b216ac7f401b9a",
+    "positive|ESM3:annotation-site:c0913343ab666a5f",
+    "positive|ESM3:annotation-site:e8c88192a10fa74d",
+    "positive|ESM3:annotation-site:edefb8faa424fa0f",
+    "background|ESM1|146|167|611",
+    "background|ESM1|146|37|546",
+    "background|ESM1|146|817|481",
+    "background|ESM1|146|947|676",
+    "positive|ESM3:annotation-site:5e9a4c2b4df0a4dd",
+    "positive|ESM3:annotation-site:73e02d077c181e27",
+    "positive|ESM3:annotation-site:7bb50a0b75f78145",
+    "positive|ESM3:annotation-site:ab91a579d35b7a8c",
+    "positive|ESM3:annotation-site:aea18fa3b37ada51",
+    "positive|ESM3:annotation-site:dc8e4cc74e0dc7a3",
+    "positive|ESM3:annotation-site:e83161571f674407",
+    "background|ESM4|98|1012|675",
+    "background|ESM4|98|1142|610",
+    "background|ESM4|98|297|610",
+    "background|ESM4|98|37|285",
+    "background|ESM4|98|492|480",
+    "background|ESM4|98|622|610",
+    "background|ESM4|98|687|155",
+    "background|ESM4|98|752|675",
+    "background|ESM4|98|882|415",
+    "background|ESM4|98|882|610",
+    "background|ESM4|98|882|805",
+    "positive|ESM6:annotation-site:63498902ef491c68",
+    "background|ESM1|219|102|221",
+    "background|ESM1|219|752|221",
+    "positive|ESM3:annotation-site:3eeab8e9efcb0d21",
+    "positive|ESM3:annotation-site:8e517d7ffab44a8d",
+    "positive|ESM3:annotation-site:c726fa8942e518df",
+    "background|ESM4|197|1077|805",
+    "background|ESM4|197|362|155",
+    "background|ESM4|197|427|350",
+    "background|ESM4|197|492|415",
+    "background|ESM4|197|492|805",
+    "background|ESM4|197|752|545",
+    "positive|ESM6:annotation-site:33c1dc5c4466a022",
+    "positive|ESM6:annotation-site:610a877237d31a5d",
+    "positive|ESM6:annotation-site:7c58fc05ae40787e",
+    "positive|ESM6:annotation-site:8a86a50873360dcf",
+    "positive|ESM6:annotation-site:8acca343f57b1314"
+  ],
+  "training_samples": [
+    {
+      "acquisition_id": "bottom_up_anti_parallel",
+      "baseline_label": 0,
+      "center_x": 102,
+      "center_y": 676,
+      "context_group": "bottom_up_anti_parallel|ESM1|73",
+      "frame_index": 73,
+      "patch_side_px": 65,
+      "patch_xyxy": [
+        70,
+        644,
+        135,
+        709
+      ],
+      "sample_id": "background|ESM1|73|102|676",
+      "source_id": "ESM1",
+      "split": "TRAIN"
+    },
+    {
+      "acquisition_id": "bottom_up_anti_parallel",
+      "baseline_label": 0,
+      "center_x": 167,
+      "center_y": 286,
+      "context_group": "bottom_up_anti_parallel|ESM1|73",
+      "frame_index": 73,
+      "patch_side_px": 65,
+      "patch_xyxy": [
+        135,
+        254,
+        200,
+        319
+      ],
+      "sample_id": "background|ESM1|73|167|286",
+      "source_id": "ESM1",
+      "split": "TRAIN"
+    },
+    {
+      "acquisition_id": "bottom_up_anti_parallel",
+      "baseline_label": 1,
+      "center_x": 364,
+      "center_y": 696,
+      "context_group": "bottom_up_anti_parallel|ESM1|73",
+      "frame_index": 73,
+      "patch_side_px": 65,
+      "patch_xyxy": [
+        332,
+        664,
+        397,
+        729
+      ],
+      "sample_id": "positive|ESM3:annotation-site:4b88c441ae9c6696",
+      "source_id": "ESM1",
+      "split": "TRAIN"
+    },
+    {
+      "acquisition_id": "bottom_up_anti_parallel",
+      "baseline_label": 1,
+      "center_x": 1020,
+      "center_y": 528,
+      "context_group": "bottom_up_anti_parallel|ESM1|73",
+      "frame_index": 73,
+      "patch_side_px": 65,
+      "patch_xyxy": [
+        988,
+        496,
+        1053,
+        561
+      ],
+      "sample_id": "positive|ESM3:annotation-site:4c41286cef74d212",
+      "source_id": "ESM1",
+      "split": "TRAIN"
+    },
+    {
+      "acquisition_id": "bottom_up_anti_parallel",
+      "baseline_label": 1,
+      "center_x": 59,
+      "center_y": 474,
+      "context_group": "bottom_up_anti_parallel|ESM1|73",
+      "frame_index": 73,
+      "patch_side_px": 65,
+      "patch_xyxy": [
+        27,
+        442,
+        92,
+        507
+      ],
+      "sample_id": "positive|ESM3:annotation-site:4e3f86cfe00b170b",
+      "source_id": "ESM1",
+      "split": "TRAIN"
+    },
+    {
+      "acquisition_id": "bottom_up_anti_parallel",
+      "baseline_label": 1,
+      "center_x": 170,
+      "center_y": 200,
+      "context_group": "bottom_up_anti_parallel|ESM1|73",
+      "frame_index": 73,
+      "patch_side_px": 65,
+      "patch_xyxy": [
+        138,
+        168,
+        203,
+        233
+      ],
+      "sample_id": "positive|ESM3:annotation-site:921edb3b46971a2c",
+      "source_id": "ESM1",
+      "split": "TRAIN"
+    },
+    {
+      "acquisition_id": "bottom_up_anti_parallel",
+      "baseline_label": 1,
+      "center_x": 419,
+      "center_y": 257,
+      "context_group": "bottom_up_anti_parallel|ESM1|73",
+      "frame_index": 73,
+      "patch_side_px": 65,
+      "patch_xyxy": [
+        387,
+        225,
+        452,
+        290
+      ],
+      "sample_id": "positive|ESM3:annotation-site:95a85828fc0c1117",
+      "source_id": "ESM1",
+      "split": "TRAIN"
+    },
+    {
+      "acquisition_id": "bottom_up_anti_parallel",
+      "baseline_label": 1,
+      "center_x": 839,
+      "center_y": 585,
+      "context_group": "bottom_up_anti_parallel|ESM1|73",
+      "frame_index": 73,
+      "patch_side_px": 65,
+      "patch_xyxy": [
+        807,
+        553,
+        872,
+        618
+      ],
+      "sample_id": "positive|ESM3:annotation-site:b6b216ac7f401b9a",
+      "source_id": "ESM1",
+      "split": "TRAIN"
+    },
+    {
+      "acquisition_id": "bottom_up_anti_parallel",
+      "baseline_label": 1,
+      "center_x": 440,
+      "center_y": 576,
+      "context_group": "bottom_up_anti_parallel|ESM1|73",
+      "frame_index": 73,
+      "patch_side_px": 65,
+      "patch_xyxy": [
+        408,
+        544,
+        473,
+        609
+      ],
+      "sample_id": "positive|ESM3:annotation-site:c0913343ab666a5f",
+      "source_id": "ESM1",
+      "split": "TRAIN"
+    },
+    {
+      "acquisition_id": "bottom_up_anti_parallel",
+      "baseline_label": 1,
+      "center_x": 629,
+      "center_y": 697,
+      "context_group": "bottom_up_anti_parallel|ESM1|73",
+      "frame_index": 73,
+      "patch_side_px": 65,
+      "patch_xyxy": [
+        597,
+        665,
+        662,
+        730
+      ],
+      "sample_id": "positive|ESM3:annotation-site:e8c88192a10fa74d",
+      "source_id": "ESM1",
+      "split": "TRAIN"
+    },
+    {
+      "acquisition_id": "bottom_up_anti_parallel",
+      "baseline_label": 1,
+      "center_x": 999,
+      "center_y": 550,
+      "context_group": "bottom_up_anti_parallel|ESM1|73",
+      "frame_index": 73,
+      "patch_side_px": 65,
+      "patch_xyxy": [
+        967,
+        518,
+        1032,
+        583
+      ],
+      "sample_id": "positive|ESM3:annotation-site:edefb8faa424fa0f",
+      "source_id": "ESM1",
+      "split": "TRAIN"
+    },
+    {
+      "acquisition_id": "bottom_up_anti_parallel",
+      "baseline_label": 0,
+      "center_x": 167,
+      "center_y": 611,
+      "context_group": "bottom_up_anti_parallel|ESM1|146",
+      "frame_index": 146,
+      "patch_side_px": 65,
+      "patch_xyxy": [
+        135,
+        579,
+        200,
+        644
+      ],
+      "sample_id": "background|ESM1|146|167|611",
+      "source_id": "ESM1",
+      "split": "TRAIN"
+    },
+    {
+      "acquisition_id": "bottom_up_anti_parallel",
+      "baseline_label": 0,
+      "center_x": 37,
+      "center_y": 546,
+      "context_group": "bottom_up_anti_parallel|ESM1|146",
+      "frame_index": 146,
+      "patch_side_px": 65,
+      "patch_xyxy": [
+        5,
+        514,
+        70,
+        579
+      ],
+      "sample_id": "background|ESM1|146|37|546",
+      "source_id": "ESM1",
+      "split": "TRAIN"
+    },
+    {
+      "acquisition_id": "bottom_up_anti_parallel",
+      "baseline_label": 0,
+      "center_x": 817,
+      "center_y": 481,
+      "context_group": "bottom_up_anti_parallel|ESM1|146",
+      "frame_index": 146,
+      "patch_side_px": 65,
+      "patch_xyxy": [
+        785,
+        449,
+        850,
+        514
+      ],
+      "sample_id": "background|ESM1|146|817|481",
+      "source_id": "ESM1",
+      "split": "TRAIN"
+    },
+    {
+      "acquisition_id": "bottom_up_anti_parallel",
+      "baseline_label": 0,
+      "center_x": 947,
+      "center_y": 676,
+      "context_group": "bottom_up_anti_parallel|ESM1|146",
+      "frame_index": 146,
+      "patch_side_px": 65,
+      "patch_xyxy": [
+        915,
+        644,
+        980,
+        709
+      ],
+      "sample_id": "background|ESM1|146|947|676",
+      "source_id": "ESM1",
+      "split": "TRAIN"
+    },
+    {
+      "acquisition_id": "bottom_up_anti_parallel",
+      "baseline_label": 1,
+      "center_x": 1142,
+      "center_y": 400,
+      "context_group": "bottom_up_anti_parallel|ESM1|146",
+      "frame_index": 146,
+      "patch_side_px": 65,
+      "patch_xyxy": [
+        1110,
+        368,
+        1175,
+        433
+      ],
+      "sample_id": "positive|ESM3:annotation-site:5e9a4c2b4df0a4dd",
+      "source_id": "ESM1",
+      "split": "TRAIN"
+    },
+    {
+      "acquisition_id": "bottom_up_anti_parallel",
+      "baseline_label": 1,
+      "center_x": 1100,
+      "center_y": 228,
+      "context_group": "bottom_up_anti_parallel|ESM1|146",
+      "frame_index": 146,
+      "patch_side_px": 65,
+      "patch_xyxy": [
+        1068,
+        196,
+        1133,
+        261
+      ],
+      "sample_id": "positive|ESM3:annotation-site:73e02d077c181e27",
+      "source_id": "ESM1",
+      "split": "TRAIN"
+    },
+    {
+      "acquisition_id": "bottom_up_anti_parallel",
+      "baseline_label": 1,
+      "center_x": 1110,
+      "center_y": 789,
+      "context_group": "bottom_up_anti_parallel|ESM1|146",
+      "frame_index": 146,
+      "patch_side_px": 65,
+      "patch_xyxy": [
+        1078,
+        757,
+        1143,
+        822
+      ],
+      "sample_id": "positive|ESM3:annotation-site:7bb50a0b75f78145",
+      "source_id": "ESM1",
+      "split": "TRAIN"
+    },
+    {
+      "acquisition_id": "bottom_up_anti_parallel",
+      "baseline_label": 1,
+      "center_x": 1169,
+      "center_y": 387,
+      "context_group": "bottom_up_anti_parallel|ESM1|146",
+      "frame_index": 146,
+      "patch_side_px": 65,
+      "patch_xyxy": [
+        1137,
+        355,
+        1202,
+        420
+      ],
+      "sample_id": "positive|ESM3:annotation-site:ab91a579d35b7a8c",
+      "source_id": "ESM1",
+      "split": "TRAIN"
+    },
+    {
+      "acquisition_id": "bottom_up_anti_parallel",
+      "baseline_label": 1,
+      "center_x": 1238,
+      "center_y": 655,
+      "context_group": "bottom_up_anti_parallel|ESM1|146",
+      "frame_index": 146,
+      "patch_side_px": 65,
+      "patch_xyxy": [
+        1206,
+        623,
+        1271,
+        688
+      ],
+      "sample_id": "positive|ESM3:annotation-site:aea18fa3b37ada51",
+      "source_id": "ESM1",
+      "split": "TRAIN"
+    },
+    {
+      "acquisition_id": "bottom_up_anti_parallel",
+      "baseline_label": 1,
+      "center_x": 354,
+      "center_y": 809,
+      "context_group": "bottom_up_anti_parallel|ESM1|146",
+      "frame_index": 146,
+      "patch_side_px": 65,
+      "patch_xyxy": [
+        322,
+        777,
+        387,
+        842
+      ],
+      "sample_id": "positive|ESM3:annotation-site:dc8e4cc74e0dc7a3",
+      "source_id": "ESM1",
+      "split": "TRAIN"
+    },
+    {
+      "acquisition_id": "bottom_up_anti_parallel",
+      "baseline_label": 1,
+      "center_x": 1077,
+      "center_y": 340,
+      "context_group": "bottom_up_anti_parallel|ESM1|146",
+      "frame_index": 146,
+      "patch_side_px": 65,
+      "patch_xyxy": [
+        1045,
+        308,
+        1110,
+        373
+      ],
+      "sample_id": "positive|ESM3:annotation-site:e83161571f674407",
+      "source_id": "ESM1",
+      "split": "TRAIN"
+    },
+    {
+      "acquisition_id": "top_down_parallel",
+      "baseline_label": 0,
+      "center_x": 1012,
+      "center_y": 675,
+      "context_group": "top_down_parallel|ESM4|98",
+      "frame_index": 98,
+      "patch_side_px": 65,
+      "patch_xyxy": [
+        980,
+        643,
+        1045,
+        708
+      ],
+      "sample_id": "background|ESM4|98|1012|675",
+      "source_id": "ESM4",
+      "split": "TRAIN"
+    },
+    {
+      "acquisition_id": "top_down_parallel",
+      "baseline_label": 0,
+      "center_x": 1142,
+      "center_y": 610,
+      "context_group": "top_down_parallel|ESM4|98",
+      "frame_index": 98,
+      "patch_side_px": 65,
+      "patch_xyxy": [
+        1110,
+        578,
+        1175,
+        643
+      ],
+      "sample_id": "background|ESM4|98|1142|610",
+      "source_id": "ESM4",
+      "split": "TRAIN"
+    },
+    {
+      "acquisition_id": "top_down_parallel",
+      "baseline_label": 0,
+      "center_x": 297,
+      "center_y": 610,
+      "context_group": "top_down_parallel|ESM4|98",
+      "frame_index": 98,
+      "patch_side_px": 65,
+      "patch_xyxy": [
+        265,
+        578,
+        330,
+        643
+      ],
+      "sample_id": "background|ESM4|98|297|610",
+      "source_id": "ESM4",
+      "split": "TRAIN"
+    },
+    {
+      "acquisition_id": "top_down_parallel",
+      "baseline_label": 0,
+      "center_x": 37,
+      "center_y": 285,
+      "context_group": "top_down_parallel|ESM4|98",
+      "frame_index": 98,
+      "patch_side_px": 65,
+      "patch_xyxy": [
+        5,
+        253,
+        70,
+        318
+      ],
+      "sample_id": "background|ESM4|98|37|285",
+      "source_id": "ESM4",
+      "split": "TRAIN"
+    },
+    {
+      "acquisition_id": "top_down_parallel",
+      "baseline_label": 0,
+      "center_x": 492,
+      "center_y": 480,
+      "context_group": "top_down_parallel|ESM4|98",
+      "frame_index": 98,
+      "patch_side_px": 65,
+      "patch_xyxy": [
+        460,
+        448,
+        525,
+        513
+      ],
+      "sample_id": "background|ESM4|98|492|480",
+      "source_id": "ESM4",
+      "split": "TRAIN"
+    },
+    {
+      "acquisition_id": "top_down_parallel",
+      "baseline_label": 0,
+      "center_x": 622,
+      "center_y": 610,
+      "context_group": "top_down_parallel|ESM4|98",
+      "frame_index": 98,
+      "patch_side_px": 65,
+      "patch_xyxy": [
+        590,
+        578,
+        655,
+        643
+      ],
+      "sample_id": "background|ESM4|98|622|610",
+      "source_id": "ESM4",
+      "split": "TRAIN"
+    },
+    {
+      "acquisition_id": "top_down_parallel",
+      "baseline_label": 0,
+      "center_x": 687,
+      "center_y": 155,
+      "context_group": "top_down_parallel|ESM4|98",
+      "frame_index": 98,
+      "patch_side_px": 65,
+      "patch_xyxy": [
+        655,
+        123,
+        720,
+        188
+      ],
+      "sample_id": "background|ESM4|98|687|155",
+      "source_id": "ESM4",
+      "split": "TRAIN"
+    },
+    {
+      "acquisition_id": "top_down_parallel",
+      "baseline_label": 0,
+      "center_x": 752,
+      "center_y": 675,
+      "context_group": "top_down_parallel|ESM4|98",
+      "frame_index": 98,
+      "patch_side_px": 65,
+      "patch_xyxy": [
+        720,
+        643,
+        785,
+        708
+      ],
+      "sample_id": "background|ESM4|98|752|675",
+      "source_id": "ESM4",
+      "split": "TRAIN"
+    },
+    {
+      "acquisition_id": "top_down_parallel",
+      "baseline_label": 0,
+      "center_x": 882,
+      "center_y": 415,
+      "context_group": "top_down_parallel|ESM4|98",
+      "frame_index": 98,
+      "patch_side_px": 65,
+      "patch_xyxy": [
+        850,
+        383,
+        915,
+        448
+      ],
+      "sample_id": "background|ESM4|98|882|415",
+      "source_id": "ESM4",
+      "split": "TRAIN"
+    },
+    {
+      "acquisition_id": "top_down_parallel",
+      "baseline_label": 0,
+      "center_x": 882,
+      "center_y": 610,
+      "context_group": "top_down_parallel|ESM4|98",
+      "frame_index": 98,
+      "patch_side_px": 65,
+      "patch_xyxy": [
+        850,
+        578,
+        915,
+        643
+      ],
+      "sample_id": "background|ESM4|98|882|610",
+      "source_id": "ESM4",
+      "split": "TRAIN"
+    },
+    {
+      "acquisition_id": "top_down_parallel",
+      "baseline_label": 0,
+      "center_x": 882,
+      "center_y": 805,
+      "context_group": "top_down_parallel|ESM4|98",
+      "frame_index": 98,
+      "patch_side_px": 65,
+      "patch_xyxy": [
+        850,
+        773,
+        915,
+        838
+      ],
+      "sample_id": "background|ESM4|98|882|805",
+      "source_id": "ESM4",
+      "split": "TRAIN"
+    },
+    {
+      "acquisition_id": "top_down_parallel",
+      "baseline_label": 1,
+      "center_x": 574,
+      "center_y": 415,
+      "context_group": "top_down_parallel|ESM4|98",
+      "frame_index": 98,
+      "patch_side_px": 65,
+      "patch_xyxy": [
+        542,
+        383,
+        607,
+        448
+      ],
+      "sample_id": "positive|ESM6:annotation-site:63498902ef491c68",
+      "source_id": "ESM4",
+      "split": "TRAIN"
+    },
+    {
+      "acquisition_id": "bottom_up_anti_parallel",
+      "baseline_label": 0,
+      "center_x": 102,
+      "center_y": 221,
+      "context_group": "bottom_up_anti_parallel|ESM1|219",
+      "frame_index": 219,
+      "patch_side_px": 65,
+      "patch_xyxy": [
+        70,
+        189,
+        135,
+        254
+      ],
+      "sample_id": "background|ESM1|219|102|221",
+      "source_id": "ESM1",
+      "split": "DEVELOPMENT"
+    },
+    {
+      "acquisition_id": "bottom_up_anti_parallel",
+      "baseline_label": 0,
+      "center_x": 752,
+      "center_y": 221,
+      "context_group": "bottom_up_anti_parallel|ESM1|219",
+      "frame_index": 219,
+      "patch_side_px": 65,
+      "patch_xyxy": [
+        720,
+        189,
+        785,
+        254
+      ],
+      "sample_id": "background|ESM1|219|752|221",
+      "source_id": "ESM1",
+      "split": "DEVELOPMENT"
+    },
+    {
+      "acquisition_id": "bottom_up_anti_parallel",
+      "baseline_label": 1,
+      "center_x": 352,
+      "center_y": 174,
+      "context_group": "bottom_up_anti_parallel|ESM1|219",
+      "frame_index": 219,
+      "patch_side_px": 65,
+      "patch_xyxy": [
+        320,
+        142,
+        385,
+        207
+      ],
+      "sample_id": "positive|ESM3:annotation-site:3eeab8e9efcb0d21",
+      "source_id": "ESM1",
+      "split": "DEVELOPMENT"
+    },
+    {
+      "acquisition_id": "bottom_up_anti_parallel",
+      "baseline_label": 1,
+      "center_x": 56,
+      "center_y": 300,
+      "context_group": "bottom_up_anti_parallel|ESM1|219",
+      "frame_index": 219,
+      "patch_side_px": 65,
+      "patch_xyxy": [
+        24,
+        268,
+        89,
+        333
+      ],
+      "sample_id": "positive|ESM3:annotation-site:8e517d7ffab44a8d",
+      "source_id": "ESM1",
+      "split": "DEVELOPMENT"
+    },
+    {
+      "acquisition_id": "bottom_up_anti_parallel",
+      "baseline_label": 1,
+      "center_x": 555,
+      "center_y": 422,
+      "context_group": "bottom_up_anti_parallel|ESM1|219",
+      "frame_index": 219,
+      "patch_side_px": 65,
+      "patch_xyxy": [
+        523,
+        390,
+        588,
+        455
+      ],
+      "sample_id": "positive|ESM3:annotation-site:c726fa8942e518df",
+      "source_id": "ESM1",
+      "split": "DEVELOPMENT"
+    },
+    {
+      "acquisition_id": "top_down_parallel",
+      "baseline_label": 0,
+      "center_x": 1077,
+      "center_y": 805,
+      "context_group": "top_down_parallel|ESM4|197",
+      "frame_index": 197,
+      "patch_side_px": 65,
+      "patch_xyxy": [
+        1045,
+        773,
+        1110,
+        838
+      ],
+      "sample_id": "background|ESM4|197|1077|805",
+      "source_id": "ESM4",
+      "split": "DEVELOPMENT"
+    },
+    {
+      "acquisition_id": "top_down_parallel",
+      "baseline_label": 0,
+      "center_x": 362,
+      "center_y": 155,
+      "context_group": "top_down_parallel|ESM4|197",
+      "frame_index": 197,
+      "patch_side_px": 65,
+      "patch_xyxy": [
+        330,
+        123,
+        395,
+        188
+      ],
+      "sample_id": "background|ESM4|197|362|155",
+      "source_id": "ESM4",
+      "split": "DEVELOPMENT"
+    },
+    {
+      "acquisition_id": "top_down_parallel",
+      "baseline_label": 0,
+      "center_x": 427,
+      "center_y": 350,
+      "context_group": "top_down_parallel|ESM4|197",
+      "frame_index": 197,
+      "patch_side_px": 65,
+      "patch_xyxy": [
+        395,
+        318,
+        460,
+        383
+      ],
+      "sample_id": "background|ESM4|197|427|350",
+      "source_id": "ESM4",
+      "split": "DEVELOPMENT"
+    },
+    {
+      "acquisition_id": "top_down_parallel",
+      "baseline_label": 0,
+      "center_x": 492,
+      "center_y": 415,
+      "context_group": "top_down_parallel|ESM4|197",
+      "frame_index": 197,
+      "patch_side_px": 65,
+      "patch_xyxy": [
+        460,
+        383,
+        525,
+        448
+      ],
+      "sample_id": "background|ESM4|197|492|415",
+      "source_id": "ESM4",
+      "split": "DEVELOPMENT"
+    },
+    {
+      "acquisition_id": "top_down_parallel",
+      "baseline_label": 0,
+      "center_x": 492,
+      "center_y": 805,
+      "context_group": "top_down_parallel|ESM4|197",
+      "frame_index": 197,
+      "patch_side_px": 65,
+      "patch_xyxy": [
+        460,
+        773,
+        525,
+        838
+      ],
+      "sample_id": "background|ESM4|197|492|805",
+      "source_id": "ESM4",
+      "split": "DEVELOPMENT"
+    },
+    {
+      "acquisition_id": "top_down_parallel",
+      "baseline_label": 0,
+      "center_x": 752,
+      "center_y": 545,
+      "context_group": "top_down_parallel|ESM4|197",
+      "frame_index": 197,
+      "patch_side_px": 65,
+      "patch_xyxy": [
+        720,
+        513,
+        785,
+        578
+      ],
+      "sample_id": "background|ESM4|197|752|545",
+      "source_id": "ESM4",
+      "split": "DEVELOPMENT"
+    },
+    {
+      "acquisition_id": "top_down_parallel",
+      "baseline_label": 1,
+      "center_x": 457,
+      "center_y": 692,
+      "context_group": "top_down_parallel|ESM4|197",
+      "frame_index": 197,
+      "patch_side_px": 65,
+      "patch_xyxy": [
+        425,
+        660,
+        490,
+        725
+      ],
+      "sample_id": "positive|ESM6:annotation-site:33c1dc5c4466a022",
+      "source_id": "ESM4",
+      "split": "DEVELOPMENT"
+    },
+    {
+      "acquisition_id": "top_down_parallel",
+      "baseline_label": 1,
+      "center_x": 96,
+      "center_y": 636,
+      "context_group": "top_down_parallel|ESM4|197",
+      "frame_index": 197,
+      "patch_side_px": 65,
+      "patch_xyxy": [
+        64,
+        604,
+        129,
+        669
+      ],
+      "sample_id": "positive|ESM6:annotation-site:610a877237d31a5d",
+      "source_id": "ESM4",
+      "split": "DEVELOPMENT"
+    },
+    {
+      "acquisition_id": "top_down_parallel",
+      "baseline_label": 1,
+      "center_x": 898,
+      "center_y": 294,
+      "context_group": "top_down_parallel|ESM4|197",
+      "frame_index": 197,
+      "patch_side_px": 65,
+      "patch_xyxy": [
+        866,
+        262,
+        931,
+        327
+      ],
+      "sample_id": "positive|ESM6:annotation-site:7c58fc05ae40787e",
+      "source_id": "ESM4",
+      "split": "DEVELOPMENT"
+    },
+    {
+      "acquisition_id": "top_down_parallel",
+      "baseline_label": 1,
+      "center_x": 495,
+      "center_y": 599,
+      "context_group": "top_down_parallel|ESM4|197",
+      "frame_index": 197,
+      "patch_side_px": 65,
+      "patch_xyxy": [
+        463,
+        567,
+        528,
+        632
+      ],
+      "sample_id": "positive|ESM6:annotation-site:8a86a50873360dcf",
+      "source_id": "ESM4",
+      "split": "DEVELOPMENT"
+    },
+    {
+      "acquisition_id": "top_down_parallel",
+      "baseline_label": 1,
+      "center_x": 722,
+      "center_y": 800,
+      "context_group": "top_down_parallel|ESM4|197",
+      "frame_index": 197,
+      "patch_side_px": 65,
+      "patch_xyxy": [
+        690,
+        768,
+        755,
+        833
+      ],
+      "sample_id": "positive|ESM6:annotation-site:8acca343f57b1314",
+      "source_id": "ESM4",
+      "split": "DEVELOPMENT"
+    }
+  ]
+}

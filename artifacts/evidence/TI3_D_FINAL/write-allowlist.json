@@ -1,0 +1,41 @@
+{
+  "d1_paths": [
+    ".github/workflows/ti3d-final-synthetic.yml",
+    "artifacts/evidence/TI3_D_FINAL/FINAL_CLAIM_SCOPE.md",
+    "artifacts/evidence/TI3_D_FINAL/FINAL_EVALUATION_PROTOCOL.md",
+    "artifacts/evidence/TI3_D_FINAL/FINAL_IO_CONTRACT.md",
+    "artifacts/evidence/TI3_D_FINAL/FINAL_METRIC_CONTRACT.md",
+    "artifacts/evidence/TI3_D_FINAL/FINAL_MODEL_SPEC.md",
+    "artifacts/evidence/TI3_D_FINAL/FINAL_TRAINING_POLICY.md",
+    "artifacts/evidence/TI3_D_FINAL/authorization.md",
+    "artifacts/evidence/TI3_D_FINAL/environment.json",
+    "artifacts/evidence/TI3_D_FINAL/integration-audit.json",
+    "artifacts/evidence/TI3_D_FINAL/io-plan.json",
+    "artifacts/evidence/TI3_D_FINAL/method-freeze.json",
+    "artifacts/evidence/TI3_D_FINAL/preparation-commands.json",
+    "artifacts/evidence/TI3_D_FINAL/preparation-verification.json",
+    "artifacts/evidence/TI3_D_FINAL/training-plan.json",
+    "artifacts/evidence/TI3_D_FINAL/write-allowlist.json",
+    "configs/authority/ti3d-final.json",
+    "configs/governance/phase-scope-v1.json",
+    "configs/ti3/final-evaluation.json",
+    "scripts/run_ti3d_final.py",
+    "src/snbi_fragmentation/ti3d_execution.py",
+    "src/snbi_fragmentation/ti3d_final.py",
+    "src/snbi_fragmentation/ti3d_support.py",
+    "tests/test_ti3d_execution.py",
+    "tests/test_ti3d_final.py",
+    "tests/test_ti3d_support.py"
+  ],
+  "d2_evidence_namespace": "artifacts/evidence/TI3_D_FINAL",
+  "existing_change_scope": "Append seven TI3-D paths with exact blobs; preserve every prior entry and all checkers.",
+  "existing_changes": [
+    "configs/governance/phase-scope-v1.json"
+  ],
+  "experimental_files_written": false,
+  "local_ignored_preparation_only": [
+    ".bootstrap-test-tmp/ti3c-integration-pr-body.md",
+    ".bootstrap-test-tmp/ti3d-*"
+  ],
+  "schema": "TI3D-WRITE-ALLOWLIST-1"
+}

@@ -1,0 +1,32 @@
+{
+  "branch": "feat/ti3d-final-evaluation",
+  "checkpoint": "a8227901506c3de6fe4a5a4bd19021be3f39b2e8",
+  "ci_jobs_required": [
+    "deterministic-contracts",
+    "scientific-synthetic-contracts",
+    "ti3-synthetic-contracts",
+    "ti3b-synthetic-contracts",
+    "ti3c-synthetic-contracts",
+    "ti3d-final-synthetic-contracts"
+  ],
+  "cnn_authorized": false,
+  "final_evaluation_limit": 1,
+  "final_fit_limit": 1,
+  "final_only_after_fit_freeze": true,
+  "final_test_execution_authorized": true,
+  "input_sources": [
+    "ESM1",
+    "ESM2",
+    "ESM4",
+    "ESM5"
+  ],
+  "merge_authorized": false,
+  "model_selection_authorized": false,
+  "receipt_path": "artifacts/evidence/TI3_D_FINAL/execution-receipt.json",
+  "repository": "lmbernardo7520112/snbi-dendritic-fragmentation-ml",
+  "results_path": "artifacts/evidence/TI3_D_FINAL/results.json",
+  "schema": "TI3D-ONE-SHOT-1",
+  "scientific_invocation_limit": 1,
+  "state": "CONDITIONAL_ON_D1_AND_GREEN_CI",
+  "structural_only_fit_authorized": false
+}

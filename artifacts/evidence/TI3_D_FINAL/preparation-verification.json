@@ -1,0 +1,115 @@
+{
+  "agent_isolated_tests": {
+    "all_pass_no_skips": true,
+    "core": 14,
+    "execution_final": 36,
+    "execution_first": 35,
+    "support": 9
+  },
+  "experimental_bytes": 0,
+  "experimental_opens": 0,
+  "final_synthetic_test_count": 59,
+  "historical_checksums_verified": 95,
+  "independent_static_review": "PASS_NO_OPEN_FINDINGS",
+  "limits": [
+    "Tests and audits are synthetic/textual; they do not consume science or certify FINAL support.",
+    "RemoteD1CI and actualD1preflight remain mandatory.",
+    "Isolated agent stdout summarized byagents; combinedrootlogs localignored.",
+    "Invocation counts oftests are distinctfromuniquetestcases; inventorynotuniversalsyscallmonitor."
+  ],
+  "local_real_synthetic_rf_fits": 2,
+  "metadata_contracts_actual_json": "PASS_50_TRAINING_6_FINAL_50_REFERENCE_PATCH_AND_FEATURE_RECORDS",
+  "new_profile": {
+    "errors": 0,
+    "failures": 0,
+    "passes": 59,
+    "skips": 0,
+    "tests": 59
+  },
+  "new_python_sha256": {
+    "scripts/run_ti3d_final.py": "e1c949fd8b110006fd2781027a910139ec992129d0e1a8c0ad5b62eba54623e8",
+    "src/snbi_fragmentation/ti3d_execution.py": "8aebefaa19374c01b93bff6e3a2d492aa3dc3c2413ad8469a61448cab4b90d00",
+    "src/snbi_fragmentation/ti3d_final.py": "3c315eee41ebf9931959d88932f777665bdb65137e8015ef29adf4ff2f1282ca",
+    "src/snbi_fragmentation/ti3d_support.py": "1e38371b2537e47472e92552a8d32465affd701214fe7459a8c2971b6664e9a0",
+    "tests/test_ti3d_execution.py": "36d4f03876b38efefa0515d9a19e70daff2d16316fdd4e21ab97b4820eddd764",
+    "tests/test_ti3d_final.py": "0f4a0143e72c329e77ffb01b9ee4a068dc5101dc9f038086e91884b73c2622f5",
+    "tests/test_ti3d_support.py": "ec9fdc8863d15a760ec967022491d6a05016ef7116a284d215b867e5c8e7aaba"
+  },
+  "parent_sha": "a8227901506c3de6fe4a5a4bd19021be3f39b2e8",
+  "prospective_guards": {
+    "custody": {
+      "examined_file_count": 112,
+      "status": "PASS",
+      "violations": []
+    },
+    "data": {
+      "audit": "tracked_repository_data_guard",
+      "content_bytes_read": 0,
+      "examined_entry_count": 522,
+      "status": "PASS",
+      "violations": []
+    },
+    "kind": "PROSPECTIVE_INDEX_NOT_STAGED",
+    "legacy": {
+      "authorized_phase": null,
+      "authorized_scientific_phases": [],
+      "blocked_phases": [
+        "TI-2",
+        "TI-2R",
+        "TI-3",
+        "TI-4",
+        "TI-5",
+        "TI-6",
+        "TI-7",
+        "TI-8"
+      ],
+      "codex_local_write_readiness": "BLOCKED_AWAITING_AUTHOR_DECISION",
+      "current_authorized_activity": "NONE_AWAITING_AUTHOR_DECISION",
+      "current_gate_documents": {
+        "document_count": 2,
+        "status": "PASS",
+        "violations": []
+      },
+      "experimental_content_bytes_read": 0,
+      "merge_authorized": false,
+      "scientific_readiness": "BLOCKED",
+      "status": "PASS",
+      "ti2_execution_authorized": false,
+      "ti2r_authorized": false,
+      "ti3_plus_authorized": false,
+      "violations": []
+    },
+    "partition": {
+      "a0_frozen_file_count": 4,
+      "active_planned_count": 0,
+      "active_tracked_count": 33,
+      "duplicate_classification_paths": [],
+      "legacy_file_count": 75,
+      "missing_paths": [],
+      "relevant_tracked_count": 112,
+      "status": "PASS",
+      "unclassified_paths": [],
+      "violations": []
+    },
+    "ti3": {
+      "examined_entry_count": 33,
+      "experimental_content_bytes_read": 0,
+      "status": "PASS",
+      "violations": []
+    }
+  },
+  "schema": "TI3D-PREPARATION-VERIFICATION-1",
+  "scientific_final_runs": 0,
+  "serialized_configuration_types": "PASS_RECURSIVE_EXACT_PYTHON_ROUNDTRIP",
+  "status": "PASS",
+  "stdlib_log_sha256": "2dcf03802c6a0c25f450908ea47c1bf4d4de426d8b8a26a8d28d13f4d896067b",
+  "stdlib_regression": {
+    "errors": 0,
+    "failures": 0,
+    "passes": 567,
+    "skips": 139,
+    "tests": 706
+  },
+  "synthetic_log_sha256": "69222ccb57df644d9c70f7e4771b6cb3e9d89dccb34206010b14501f8dd3db1e",
+  "workflow_validation": "PyYAML6.0.1parsePASS_inlinePythoncompilePASS_notGitHubadmissionproof"
+}
