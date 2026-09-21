@@ -1,0 +1,537 @@
+study2d-synthetic-contracts	Set up job	﻿2026-09-21T20:56:52.6828885Z Current runner version: '2.337.0'
+study2d-synthetic-contracts	Set up job	2026-09-21T20:56:52.6868859Z ##[group]Runner Image Provisioner
+study2d-synthetic-contracts	Set up job	2026-09-21T20:56:52.6870432Z Hosted Compute Agent
+study2d-synthetic-contracts	Set up job	2026-09-21T20:56:52.6871781Z Version: 20260828.587
+study2d-synthetic-contracts	Set up job	2026-09-21T20:56:52.6873121Z Commit: abac92662cab4cc7352de4f9f9d2e2419aad9c29
+study2d-synthetic-contracts	Set up job	2026-09-21T20:56:52.6875008Z Build Date: 2026-08-28T16:44:25Z
+study2d-synthetic-contracts	Set up job	2026-09-21T20:56:52.6876393Z Worker ID: {b6738f1e-612e-4666-b113-0dce21fee633}
+study2d-synthetic-contracts	Set up job	2026-09-21T20:56:52.6878243Z Azure Region: eastus2
+study2d-synthetic-contracts	Set up job	2026-09-21T20:56:52.6879538Z ##[endgroup]
+study2d-synthetic-contracts	Set up job	2026-09-21T20:56:52.6882084Z ##[group]Operating System
+study2d-synthetic-contracts	Set up job	2026-09-21T20:56:52.6883346Z Ubuntu
+study2d-synthetic-contracts	Set up job	2026-09-21T20:56:52.6884520Z 24.04.5
+study2d-synthetic-contracts	Set up job	2026-09-21T20:56:52.6885575Z LTS
+study2d-synthetic-contracts	Set up job	2026-09-21T20:56:52.6886502Z ##[endgroup]
+study2d-synthetic-contracts	Set up job	2026-09-21T20:56:52.6887411Z ##[group]Runner Image
+study2d-synthetic-contracts	Set up job	2026-09-21T20:56:52.6888495Z Image: ubuntu-24.04
+study2d-synthetic-contracts	Set up job	2026-09-21T20:56:52.6889445Z Version: 20260907.300.1
+study2d-synthetic-contracts	Set up job	2026-09-21T20:56:52.6891485Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260907.300/images/ubuntu/Ubuntu2404-Readme.md
+study2d-synthetic-contracts	Set up job	2026-09-21T20:56:52.6895073Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260907.300
+study2d-synthetic-contracts	Set up job	2026-09-21T20:56:52.6896899Z ##[endgroup]
+study2d-synthetic-contracts	Set up job	2026-09-21T20:56:52.6898973Z ##[group]GITHUB_TOKEN Permissions
+study2d-synthetic-contracts	Set up job	2026-09-21T20:56:52.6902058Z Contents: read
+study2d-synthetic-contracts	Set up job	2026-09-21T20:56:52.6903106Z Metadata: read
+study2d-synthetic-contracts	Set up job	2026-09-21T20:56:52.6904637Z ##[endgroup]
+study2d-synthetic-contracts	Set up job	2026-09-21T20:56:52.6907941Z Secret source: Actions
+study2d-synthetic-contracts	Set up job	2026-09-21T20:56:52.6909651Z Cache mode: write
+study2d-synthetic-contracts	Set up job	2026-09-21T20:56:52.6911113Z Prepare workflow directory
+study2d-synthetic-contracts	Set up job	2026-09-21T20:56:52.7509582Z Prepare all required actions
+study2d-synthetic-contracts	Set up job	2026-09-21T20:56:52.7583137Z Getting action download info
+study2d-synthetic-contracts	Set up job	2026-09-21T20:56:52.9741314Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+study2d-synthetic-contracts	Set up job	2026-09-21T20:56:53.0766098Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+study2d-synthetic-contracts	Set up job	2026-09-21T20:56:53.2709990Z Complete job name: study2d-synthetic-contracts
+study2d-synthetic-contracts	Run actions/checkout@v4	﻿2026-09-21T20:56:53.3531264Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:53.3540771Z ##[group]Run actions/checkout@v4
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:53.3541571Z with:
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:53.3542053Z   persist-credentials: false
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:53.3542585Z   fetch-depth: 0
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:53.3543186Z   repository: lmbernardo7520112/snbi-dendritic-fragmentation-ml
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:53.3547350Z   token: ***
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:53.3547844Z   ssh-strict: true
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:53.3548304Z   ssh-user: git
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:53.3548765Z   clean: true
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:53.3549222Z   sparse-checkout-cone-mode: true
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:53.3549762Z   fetch-tags: false
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:53.3550218Z   show-progress: true
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:53.3550702Z   lfs: false
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:53.3551192Z   submodules: false
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:53.3551677Z   set-safe-directory: true
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:53.3552199Z   allow-unsafe-pr-checkout: false
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:53.3553054Z env:
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:53.3553495Z   PYTHONPATH: src:tests:.
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:53.3554018Z   PYTHONDONTWRITEBYTECODE: 1
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:53.3554769Z ##[endgroup]
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:53.4608554Z Syncing repository: lmbernardo7520112/snbi-dendritic-fragmentation-ml
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:53.4610961Z ##[group]Getting Git version info
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:53.4612066Z Working directory is '/home/runner/work/snbi-dendritic-fragmentation-ml/snbi-dendritic-fragmentation-ml'
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:53.4613516Z [command]/usr/bin/git version
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:53.4692769Z git version 2.55.0
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:53.4719298Z ##[endgroup]
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:53.4741621Z Temporarily overriding HOME='/home/runner/work/_temp/972f4da5-5794-4826-9415-57f8f11ebc26' before making global git config changes
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:53.4744483Z Adding repository directory to the temporary git global config as a safe directory
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:53.4749407Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/snbi-dendritic-fragmentation-ml/snbi-dendritic-fragmentation-ml
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:53.4806000Z Deleting the contents of '/home/runner/work/snbi-dendritic-fragmentation-ml/snbi-dendritic-fragmentation-ml'
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:53.4809538Z ##[group]Initializing the repository
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:53.4814148Z [command]/usr/bin/git init /home/runner/work/snbi-dendritic-fragmentation-ml/snbi-dendritic-fragmentation-ml
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:53.4933111Z hint: Using 'master' as the name for the initial branch. This default branch name
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:53.4935670Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:53.4937543Z hint: to use in all of your new repositories, which will suppress this warning,
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:53.4938987Z hint: call:
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:53.4940021Z hint:
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:53.4940979Z hint: 	git config --global init.defaultBranch <name>
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:53.4942197Z hint:
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:53.4943372Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:53.4945422Z hint: 'development'. The just-created branch can be renamed via this command:
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:53.4946252Z hint:
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:53.4946708Z hint: 	git branch -m <name>
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:53.4947230Z hint:
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:53.4947885Z hint: Disable this message with "git config set advice.defaultBranchName false"
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:53.4949247Z Initialized empty Git repository in /home/runner/work/snbi-dendritic-fragmentation-ml/snbi-dendritic-fragmentation-ml/.git/
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:53.4953737Z [command]/usr/bin/git remote add origin https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:53.5009292Z ##[endgroup]
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:53.5010651Z ##[group]Disabling automatic garbage collection
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:53.5014781Z [command]/usr/bin/git config --local gc.auto 0
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:53.5055062Z ##[endgroup]
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:53.5056847Z ##[group]Setting up auth
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:53.5062623Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:53.5103766Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:53.5495047Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:53.5534912Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:53.5771928Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:53.5813027Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:53.6056736Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:53.6101868Z ##[endgroup]
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:53.6103096Z ##[group]Fetching the repository
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:53.6113820Z [command]/usr/bin/git -c protocol.version=2 fetch --prune --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/*
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:55.9693312Z From https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:55.9699789Z  * [new branch]      chore/local-vscode-bootstrap -> origin/chore/local-vscode-bootstrap
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:55.9701921Z  * [new branch]      docs/post-lb0-readonly-diagnostic -> origin/docs/post-lb0-readonly-diagnostic
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:55.9703713Z  * [new branch]      docs/ti3-final-closeout -> origin/docs/ti3-final-closeout
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:55.9705913Z  * [new branch]      feat/study2a-dense-annotation-ledger -> origin/feat/study2a-dense-annotation-ledger
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:55.9708816Z  * [new branch]      feat/study2b-dense-multimodal-corpus -> origin/feat/study2b-dense-multimodal-corpus
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:55.9711588Z  * [new branch]      feat/study2c-group-aware-benchmark -> origin/feat/study2c-group-aware-benchmark
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:55.9713980Z  * [new branch]      feat/study2d-data-centric-bridge -> origin/feat/study2d-data-centric-bridge
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:55.9717388Z  * [new branch]      feat/ti0-bootstrap      -> origin/feat/ti0-bootstrap
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:55.9719904Z  * [new branch]      feat/ti1-deterministic-audit -> origin/feat/ti1-deterministic-audit
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:55.9722369Z  * [new branch]      feat/ti2-registration-calibration -> origin/feat/ti2-registration-calibration
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:55.9725120Z  * [new branch]      feat/ti2r-frag-direct-mapping -> origin/feat/ti2r-frag-direct-mapping
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:55.9727472Z  * [new branch]      feat/ti2r-frag-registration -> origin/feat/ti2r-frag-registration
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:55.9729981Z  * [new branch]      feat/ti2r-solute-direct-mapping -> origin/feat/ti2r-solute-direct-mapping
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:55.9732813Z  * [new branch]      feat/ti2r-solute-v2-calibration -> origin/feat/ti2r-solute-v2-calibration
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:55.9736009Z  * [new branch]      feat/ti3-canonical-dataset-baseline -> origin/feat/ti3-canonical-dataset-baseline
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:55.9738689Z  * [new branch]      feat/ti3b-solutal-ablation -> origin/feat/ti3b-solutal-ablation
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:55.9741929Z  * [new branch]      feat/ti3c-minimal-multimodal-cnn -> origin/feat/ti3c-minimal-multimodal-cnn
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:55.9745195Z  * [new branch]      feat/ti3d-final-evaluation -> origin/feat/ti3d-final-evaluation
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:55.9747290Z  * [new branch]      main                    -> origin/main
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:55.9749629Z  * [new branch]      plan/ti2-registration-calibration -> origin/plan/ti2-registration-calibration
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:55.9755734Z [command]/usr/bin/git branch --list --remote origin/feat/study2d-data-centric-bridge
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:55.9758010Z   origin/feat/study2d-data-centric-bridge
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:55.9762145Z [command]/usr/bin/git rev-parse refs/remotes/origin/feat/study2d-data-centric-bridge
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:55.9781948Z 8c6221da3d03a498158d812be5c08848c37c2247
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:55.9787768Z ##[endgroup]
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:55.9789884Z ##[group]Determining the checkout info
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:55.9792107Z ##[endgroup]
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:55.9828856Z [command]/usr/bin/git sparse-checkout disable
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:55.9882020Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:55.9921482Z ##[group]Checking out the ref
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:55.9926017Z [command]/usr/bin/git checkout --progress --force -B feat/study2d-data-centric-bridge refs/remotes/origin/feat/study2d-data-centric-bridge
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:56.3918010Z Switched to a new branch 'feat/study2d-data-centric-bridge'
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:56.3922710Z branch 'feat/study2d-data-centric-bridge' set up to track 'origin/feat/study2d-data-centric-bridge'.
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:56.3939588Z ##[endgroup]
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:56.3992682Z [command]/usr/bin/git log -1 --format=%H
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:56.4027097Z 8c6221da3d03a498158d812be5c08848c37c2247
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:56.4037918Z ##[group]Removing auth
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:56.4042709Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:56.4081752Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:56.4327789Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:56.4360185Z http.https://github.com/.extraheader
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:56.4371684Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:56.4409593Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:56.4649900Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:56.4688931Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+study2d-synthetic-contracts	Run actions/checkout@v4	2026-09-21T20:56:56.4919469Z ##[endgroup]
+study2d-synthetic-contracts	Enforce tracked-data guard	﻿2026-09-21T20:56:56.5129338Z ##[group]Run python3 -B scripts/check_repository_data.py
+study2d-synthetic-contracts	Enforce tracked-data guard	2026-09-21T20:56:56.5129913Z [36;1mpython3 -B scripts/check_repository_data.py[0m
+study2d-synthetic-contracts	Enforce tracked-data guard	2026-09-21T20:56:56.5171761Z shell: /usr/bin/bash -e {0}
+study2d-synthetic-contracts	Enforce tracked-data guard	2026-09-21T20:56:56.5172104Z env:
+study2d-synthetic-contracts	Enforce tracked-data guard	2026-09-21T20:56:56.5172355Z   PYTHONPATH: src:tests:.
+study2d-synthetic-contracts	Enforce tracked-data guard	2026-09-21T20:56:56.5172667Z   PYTHONDONTWRITEBYTECODE: 1
+study2d-synthetic-contracts	Enforce tracked-data guard	2026-09-21T20:56:56.5172966Z ##[endgroup]
+study2d-synthetic-contracts	Enforce tracked-data guard	2026-09-21T20:56:56.5740625Z {
+study2d-synthetic-contracts	Enforce tracked-data guard	2026-09-21T20:56:56.5741249Z   "audit": "tracked_repository_data_guard",
+study2d-synthetic-contracts	Enforce tracked-data guard	2026-09-21T20:56:56.5741732Z   "content_bytes_read": 0,
+study2d-synthetic-contracts	Enforce tracked-data guard	2026-09-21T20:56:56.5742117Z   "examined_entry_count": 776,
+study2d-synthetic-contracts	Enforce tracked-data guard	2026-09-21T20:56:56.5742562Z   "status": "PASS",
+study2d-synthetic-contracts	Enforce tracked-data guard	2026-09-21T20:56:56.5742966Z   "violations": []
+study2d-synthetic-contracts	Enforce tracked-data guard	2026-09-21T20:56:56.5743273Z }
+study2d-synthetic-contracts	Run actions/setup-python@v5	﻿2026-09-21T20:56:56.5985469Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+study2d-synthetic-contracts	Run actions/setup-python@v5	2026-09-21T20:56:56.5987831Z ##[group]Run actions/setup-python@v5
+study2d-synthetic-contracts	Run actions/setup-python@v5	2026-09-21T20:56:56.5988201Z with:
+study2d-synthetic-contracts	Run actions/setup-python@v5	2026-09-21T20:56:56.5988457Z   python-version: 3.12
+study2d-synthetic-contracts	Run actions/setup-python@v5	2026-09-21T20:56:56.5988738Z   check-latest: false
+study2d-synthetic-contracts	Run actions/setup-python@v5	2026-09-21T20:56:56.5991413Z   token: ***
+study2d-synthetic-contracts	Run actions/setup-python@v5	2026-09-21T20:56:56.5991686Z   update-environment: true
+study2d-synthetic-contracts	Run actions/setup-python@v5	2026-09-21T20:56:56.5991992Z   allow-prereleases: false
+study2d-synthetic-contracts	Run actions/setup-python@v5	2026-09-21T20:56:56.5992280Z   freethreaded: false
+study2d-synthetic-contracts	Run actions/setup-python@v5	2026-09-21T20:56:56.5992538Z env:
+study2d-synthetic-contracts	Run actions/setup-python@v5	2026-09-21T20:56:56.5992774Z   PYTHONPATH: src:tests:.
+study2d-synthetic-contracts	Run actions/setup-python@v5	2026-09-21T20:56:56.5993072Z   PYTHONDONTWRITEBYTECODE: 1
+study2d-synthetic-contracts	Run actions/setup-python@v5	2026-09-21T20:56:56.5993358Z ##[endgroup]
+study2d-synthetic-contracts	Run actions/setup-python@v5	2026-09-21T20:56:56.7413979Z ##[group]Installed versions
+study2d-synthetic-contracts	Run actions/setup-python@v5	2026-09-21T20:56:56.7524721Z (node:2354) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+study2d-synthetic-contracts	Run actions/setup-python@v5	2026-09-21T20:56:56.7525848Z (Use `node --trace-deprecation ...` to show where the warning was created)
+study2d-synthetic-contracts	Run actions/setup-python@v5	2026-09-21T20:56:56.7526729Z Successfully set up CPython (3.12.14)
+study2d-synthetic-contracts	Run actions/setup-python@v5	2026-09-21T20:56:56.7527513Z ##[endgroup]
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	﻿2026-09-21T20:56:56.7665922Z ##[group]Run python -B -m pip --isolated install --disable-pip-version-check --no-cache-dir --only-binary=:all: --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-ti3c-cnn.txt
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:56:56.7667594Z [36;1mpython -B -m pip --isolated install --disable-pip-version-check --no-cache-dir --only-binary=:all: --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-ti3c-cnn.txt[0m
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:56:56.7719766Z shell: /usr/bin/bash -e {0}
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:56:56.7720111Z env:
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:56:56.7720376Z   PYTHONPATH: src:tests:.
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:56:56.7720708Z   PYTHONDONTWRITEBYTECODE: 1
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:56:56.7721086Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:56:56.7721628Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:56:56.7722130Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:56:56.7722584Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:56:56.7723049Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:56:56.7723559Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:56:56.7723944Z ##[endgroup]
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:56:57.4687049Z Looking in indexes: https://pypi.org/simple, https://download.pytorch.org/whl/cpu
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:56:58.2257308Z Collecting numpy==1.26.4 (from -r /home/runner/work/snbi-dendritic-fragmentation-ml/snbi-dendritic-fragmentation-ml/requirements-ti3-ml.txt (line 1))
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:56:58.3116610Z   Downloading numpy-1.26.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (61 kB)
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:56:58.4874956Z Collecting scipy==1.11.4 (from -r /home/runner/work/snbi-dendritic-fragmentation-ml/snbi-dendritic-fragmentation-ml/requirements-ti3-ml.txt (line 2))
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:56:58.4964599Z   Downloading scipy-1.11.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (60 kB)
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:56:58.5942354Z Collecting scikit-image==0.24.0 (from -r /home/runner/work/snbi-dendritic-fragmentation-ml/snbi-dendritic-fragmentation-ml/requirements-ti3-ml.txt (line 3))
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:56:58.6043211Z   Downloading scikit_image-0.24.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (14 kB)
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:56:58.7195034Z Collecting scikit-learn==1.5.2 (from -r /home/runner/work/snbi-dendritic-fragmentation-ml/snbi-dendritic-fragmentation-ml/requirements-ti3-ml.txt (line 4))
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:56:58.7283485Z   Downloading scikit_learn-1.5.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (13 kB)
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:56:58.8750151Z Collecting torch==2.4.1+cpu (from -r requirements-ti3c-cnn.txt (line 3))
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:56:58.9533400Z   Downloading torch-2.4.1%2Bcpu-cp312-cp312-linux_x86_64.whl (194.8 MB)
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:57:00.0099226Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 194.8/194.8 MB 187.4 MB/s  0:00:01
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:57:00.2736647Z Collecting networkx>=2.8 (from scikit-image==0.24.0->-r /home/runner/work/snbi-dendritic-fragmentation-ml/snbi-dendritic-fragmentation-ml/requirements-ti3-ml.txt (line 3))
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:57:00.2912005Z   Downloading networkx-3.6.1-py3-none-any.whl.metadata (6.8 kB)
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:57:00.7014781Z Collecting pillow>=9.1 (from scikit-image==0.24.0->-r /home/runner/work/snbi-dendritic-fragmentation-ml/snbi-dendritic-fragmentation-ml/requirements-ti3-ml.txt (line 3))
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:57:00.7096435Z   Downloading pillow-12.3.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.1 kB)
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:57:00.7495063Z Collecting imageio>=2.33 (from scikit-image==0.24.0->-r /home/runner/work/snbi-dendritic-fragmentation-ml/snbi-dendritic-fragmentation-ml/requirements-ti3-ml.txt (line 3))
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:57:00.7571118Z   Downloading imageio-2.37.4-py3-none-any.whl.metadata (9.6 kB)
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:57:00.8300068Z Collecting tifffile>=2022.8.12 (from scikit-image==0.24.0->-r /home/runner/work/snbi-dendritic-fragmentation-ml/snbi-dendritic-fragmentation-ml/requirements-ti3-ml.txt (line 3))
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:57:00.8379820Z   Downloading tifffile-2026.3.3-py3-none-any.whl.metadata (31 kB)
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:57:00.8681757Z Collecting packaging>=21 (from scikit-image==0.24.0->-r /home/runner/work/snbi-dendritic-fragmentation-ml/snbi-dendritic-fragmentation-ml/requirements-ti3-ml.txt (line 3))
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:57:00.8758526Z   Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:57:00.9188777Z Collecting lazy-loader>=0.4 (from scikit-image==0.24.0->-r /home/runner/work/snbi-dendritic-fragmentation-ml/snbi-dendritic-fragmentation-ml/requirements-ti3-ml.txt (line 3))
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:57:00.9267285Z   Downloading lazy_loader-0.5-py3-none-any.whl.metadata (5.9 kB)
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:57:00.9714947Z Collecting joblib>=1.2.0 (from scikit-learn==1.5.2->-r /home/runner/work/snbi-dendritic-fragmentation-ml/snbi-dendritic-fragmentation-ml/requirements-ti3-ml.txt (line 4))
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:57:00.9792020Z   Downloading joblib-1.6.0-py3-none-any.whl.metadata (6.5 kB)
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:57:01.0130277Z Collecting threadpoolctl>=3.1.0 (from scikit-learn==1.5.2->-r /home/runner/work/snbi-dendritic-fragmentation-ml/snbi-dendritic-fragmentation-ml/requirements-ti3-ml.txt (line 4))
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:57:01.0217481Z   Downloading threadpoolctl-3.7.0-py3-none-any.whl.metadata (24 kB)
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:57:01.0625945Z Collecting filelock (from torch==2.4.1+cpu->-r requirements-ti3c-cnn.txt (line 3))
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:57:01.0704072Z   Downloading filelock-4.0.1-py3-none-any.whl.metadata (2.0 kB)
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:57:01.1023146Z Collecting typing-extensions>=4.8.0 (from torch==2.4.1+cpu->-r requirements-ti3c-cnn.txt (line 3))
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:57:01.1136410Z   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:57:01.1438948Z Collecting sympy (from torch==2.4.1+cpu->-r requirements-ti3c-cnn.txt (line 3))
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:57:01.1517554Z   Downloading sympy-1.14.0-py3-none-any.whl.metadata (12 kB)
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:57:01.1768302Z Collecting jinja2 (from torch==2.4.1+cpu->-r requirements-ti3c-cnn.txt (line 3))
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:57:01.1850767Z   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:57:01.2472555Z Collecting fsspec (from torch==2.4.1+cpu->-r requirements-ti3c-cnn.txt (line 3))
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:57:01.2548114Z   Downloading fsspec-2026.9.0-py3-none-any.whl.metadata (10 kB)
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:57:01.3471443Z Collecting setuptools (from torch==2.4.1+cpu->-r requirements-ti3c-cnn.txt (line 3))
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:57:01.3546739Z   Downloading setuptools-84.0.0-py3-none-any.whl.metadata (6.6 kB)
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:57:01.3952190Z Collecting cloudpickle>=3.0 (from joblib>=1.2.0->scikit-learn==1.5.2->-r /home/runner/work/snbi-dendritic-fragmentation-ml/snbi-dendritic-fragmentation-ml/requirements-ti3-ml.txt (line 4))
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:57:01.4030539Z   Downloading cloudpickle-3.1.2-py3-none-any.whl.metadata (7.1 kB)
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:57:01.4770927Z Collecting MarkupSafe>=2.0 (from jinja2->torch==2.4.1+cpu->-r requirements-ti3c-cnn.txt (line 3))
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:57:01.4871757Z   Downloading markupsafe-3.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:57:01.5137319Z Collecting mpmath<1.4,>=1.1.0 (from sympy->torch==2.4.1+cpu->-r requirements-ti3c-cnn.txt (line 3))
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:57:01.5218127Z   Downloading mpmath-1.3.0-py3-none-any.whl.metadata (8.6 kB)
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:57:01.5329907Z Downloading numpy-1.26.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (18.0 MB)
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:57:01.8391467Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 18.0/18.0 MB 62.6 MB/s  0:00:00
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:57:01.8505555Z Downloading scipy-1.11.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (35.8 MB)
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:57:02.0579594Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.8/35.8 MB 173.5 MB/s  0:00:00
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:57:02.0690878Z Downloading scikit_image-0.24.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (15.0 MB)
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:57:02.1517827Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 15.0/15.0 MB 187.1 MB/s  0:00:00
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:57:02.1624026Z Downloading scikit_learn-1.5.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.9 MB)
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:57:02.2484756Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.9/12.9 MB 152.1 MB/s  0:00:00
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:57:02.2563503Z Downloading imageio-2.37.4-py3-none-any.whl (318 kB)
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:57:02.2787308Z Downloading joblib-1.6.0-py3-none-any.whl (306 kB)
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:57:02.2931476Z Downloading cloudpickle-3.1.2-py3-none-any.whl (22 kB)
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:57:02.3010234Z Downloading lazy_loader-0.5-py3-none-any.whl (8.0 kB)
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:57:02.3083471Z Downloading networkx-3.6.1-py3-none-any.whl (2.1 MB)
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:57:02.3140896Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 551.5 MB/s  0:00:00
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:57:02.3216321Z Downloading packaging-26.3-py3-none-any.whl (129 kB)
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:57:02.3292905Z Downloading pillow-12.3.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (6.9 MB)
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:57:02.3471434Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.9/6.9 MB 435.4 MB/s  0:00:00
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:57:02.3545084Z Downloading threadpoolctl-3.7.0-py3-none-any.whl (26 kB)
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:57:02.3618960Z Downloading tifffile-2026.3.3-py3-none-any.whl (243 kB)
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:57:02.3703791Z Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:57:02.3778863Z Downloading filelock-4.0.1-py3-none-any.whl (106 kB)
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:57:02.3854516Z Downloading fsspec-2026.9.0-py3-none-any.whl (221 kB)
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:57:02.3950132Z Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:57:02.4031375Z Downloading markupsafe-3.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:57:02.4114290Z Downloading setuptools-84.0.0-py3-none-any.whl (818 kB)
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:57:02.4161091Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 818.2/818.2 kB 483.7 MB/s  0:00:00
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:57:02.4241933Z Downloading sympy-1.14.0-py3-none-any.whl (6.3 MB)
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:57:02.4395412Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.3/6.3 MB 485.6 MB/s  0:00:00
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:57:02.4468384Z Downloading mpmath-1.3.0-py3-none-any.whl (536 kB)
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:57:02.4494549Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 536.2/536.2 kB 750.5 MB/s  0:00:00
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:57:02.8142900Z Installing collected packages: mpmath, typing-extensions, threadpoolctl, sympy, setuptools, pillow, packaging, numpy, networkx, MarkupSafe, fsspec, filelock, cloudpickle, tifffile, scipy, lazy-loader, joblib, jinja2, imageio, torch, scikit-learn, scikit-image
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:57:28.9053625Z 
+study2d-synthetic-contracts	Install unchanged exact CPU dependency pins	2026-09-21T20:57:28.9079998Z Successfully installed MarkupSafe-3.0.3 cloudpickle-3.1.2 filelock-4.0.1 fsspec-2026.9.0 imageio-2.37.4 jinja2-3.1.6 joblib-1.6.0 lazy-loader-0.5 mpmath-1.3.0 networkx-3.6.1 numpy-1.26.4 packaging-26.3 pillow-12.3.0 scikit-image-0.24.0 scikit-learn-1.5.2 scipy-1.11.4 setuptools-84.0.0 sympy-1.14.0 threadpoolctl-3.7.0 tifffile-2026.3.3 torch-2.4.1+cpu typing-extensions-4.16.0
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	﻿2026-09-21T20:57:29.0253327Z ##[group]Run python -B scripts/check_phase_scope.py
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.0253748Z [36;1mpython -B scripts/check_phase_scope.py[0m
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.0292465Z shell: /usr/bin/bash -e {0}
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.0292716Z env:
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.0292914Z   PYTHONPATH: src:tests:.
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.0293164Z   PYTHONDONTWRITEBYTECODE: 1
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.0293470Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.0293897Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.0294617Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.0295007Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.0295391Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.0295779Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.0296094Z ##[endgroup]
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7610715Z {
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7611439Z   "a0_frozen_scope": {
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7612076Z     "examined_file_count": 4,
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7612568Z     "status": "PASS",
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7612984Z     "violations": []
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7613373Z   },
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7613722Z   "active_custody": {
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7614169Z     "examined_file_count": 67,
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7614920Z     "status": "PASS",
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7615199Z     "violations": []
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7615444Z   },
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7615680Z   "audit": "composed_phase_scope",
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7616012Z   "authorized_scientific_phases": [],
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7616324Z   "data_guard": {
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7616611Z     "audit": "tracked_repository_data_guard",
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7616969Z     "content_bytes_read": 0,
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7617282Z     "examined_entry_count": 776,
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7617577Z     "status": "PASS",
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7617833Z     "violations": []
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7618073Z   },
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7618307Z   "experimental_content_bytes_read": 0,
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7618637Z   "legacy_custody": {
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7618901Z     "examined_file_count": 75,
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7619185Z     "status": "PASS",
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7619432Z     "violations": []
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7619668Z   },
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7619874Z   "legacy_scope": {
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7620127Z     "authorized_phase": null,
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7620453Z     "authorized_scientific_phases": [],
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7620802Z     "blocked_phases": [
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7621045Z       "TI-2",
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7621233Z       "TI-2R",
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7621418Z       "TI-3",
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7621600Z       "TI-4",
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7621783Z       "TI-5",
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7621969Z       "TI-6",
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7622514Z       "TI-7",
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7622700Z       "TI-8"
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7622880Z     ],
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7623169Z     "codex_local_write_readiness": "BLOCKED_AWAITING_AUTHOR_DECISION",
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7623644Z     "current_authorized_activity": "NONE_AWAITING_AUTHOR_DECISION",
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7624024Z     "current_gate_documents": {
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7624408Z       "document_count": 2,
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7624644Z       "status": "PASS",
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7624863Z       "violations": []
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7625069Z     },
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7625272Z     "experimental_content_bytes_read": 0,
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7625565Z     "merge_authorized": false,
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7625821Z     "scientific_readiness": "BLOCKED",
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7626090Z     "status": "PASS",
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7626317Z     "ti2_execution_authorized": false,
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7626591Z     "ti2r_authorized": false,
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7626844Z     "ti3_plus_authorized": false,
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7627098Z     "violations": []
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7627307Z   },
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7627495Z   "merge_authorized": false,
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7627736Z   "partition": {
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7627948Z     "a0_frozen_file_count": 4,
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7628202Z     "active_planned_count": 0,
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7628664Z     "active_tracked_count": 67,
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7628931Z     "duplicate_classification_paths": [],
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7629217Z     "legacy_file_count": 75,
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7629460Z     "missing_paths": [],
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7629699Z     "relevant_tracked_count": 146,
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7629957Z     "status": "PASS",
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7630209Z     "unclassified_paths": [],
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7630536Z     "violations": []
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7630741Z   },
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7630934Z   "scientific_readiness": "BLOCKED",
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7631195Z   "status": "PASS",
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7631405Z   "ti2_execution_authorized": false,
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7631659Z   "ti3_plus_authorized": false,
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7631894Z   "ti3_scope": {
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7632092Z     "examined_entry_count": 67,
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7632340Z     "experimental_content_bytes_read": 0,
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7632606Z     "status": "PASS",
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7632815Z     "violations": []
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7633007Z   },
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7633175Z   "violations": []
+study2d-synthetic-contracts	Enforce composed scope and unchanged historical custody	2026-09-21T20:57:29.7633360Z }
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	﻿2026-09-21T20:57:29.7722004Z ##[group]Run python -B - <<'PY'
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:29.7722336Z [36;1mpython -B - <<'PY'[0m
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:29.7722562Z [36;1mimport json[0m
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:29.7722770Z [36;1mimport unittest[0m
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:29.7723028Z [36;1mfrom importlib.metadata import version[0m
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:29.7723332Z [36;1mfrom pathlib import Path[0m
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:29.7723566Z [36;1m[0m
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:29.7723873Z [36;1mfor line in Path("constraints-ti3c-cnn.txt").read_text().splitlines():[0m
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:29.7724562Z [36;1m    name, expected = line.split("==")[0m
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:29.7724913Z [36;1m    if version(name) != expected:[0m
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:29.7725272Z [36;1m        raise SystemExit("Dependency pin divergence: " + name)[0m
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:29.7725845Z [36;1mproof = json.loads(Path("artifacts/evidence/STUDY2_D_ATTRIBUTION/SYNTHETIC_TESTS.json").read_text())[0m
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:29.7726359Z [36;1mexpected = proof["unique_test_count"][0m
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:29.7726688Z [36;1mif type(expected) is not int or expected <= 0:[0m
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:29.7727126Z [36;1m    raise SystemExit("Explicit frozen synthetic count required")[0m
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:29.7727503Z [36;1mloader = unittest.TestLoader()[0m
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:29.7727857Z [36;1msuite = loader.discover("tests", pattern="test_study2d*.py")[0m
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:29.7728228Z [36;1mif loader.errors:[0m
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:29.7728521Z [36;1m    raise SystemExit("Synthetic discovery failed")[0m
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:29.7728914Z [36;1mresult = unittest.TextTestRunner(verbosity=2).run(suite)[0m
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:29.7729256Z [36;1mpassed = ([0m
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:29.7729709Z [36;1m    result.testsRun == expected and result.wasSuccessful()[0m
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:29.7730124Z [36;1m    and not result.skipped and not result.expectedFailures[0m
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:29.7730483Z [36;1m    and not result.unexpectedSuccesses[0m
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:29.7730761Z [36;1m)[0m
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:29.7730970Z [36;1mraise SystemExit(0 if passed else 1)[0m
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:29.7731241Z [36;1mPY[0m
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:29.7768273Z shell: /usr/bin/bash -e {0}
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:29.7768528Z env:
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:29.7768724Z   PYTHONPATH: src:tests:.
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:29.7768971Z   PYTHONDONTWRITEBYTECODE: 1
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:29.7769276Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:29.7769714Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:29.7770135Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:29.7770505Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:29.7770889Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:29.7771271Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:29.7771587Z ##[endgroup]
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:31.3346753Z test_density_and_weighting_comparisons_have_identical_groups_and_full_rows (test_study2d_design.FrozenAttributionDesignTests.test_density_and_weighting_comparisons_have_identical_groups_and_full_rows) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:31.3349202Z test_descriptive_standard_deviation_ddof_zero_and_summary_median (test_study2d_design.FrozenAttributionDesignTests.test_descriptive_standard_deviation_ddof_zero_and_summary_median) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:32.1850038Z test_descriptors_apply_exact_preregistered_thresholds (test_study2d_design.FrozenAttributionDesignTests.test_descriptors_apply_exact_preregistered_thresholds) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:32.1852352Z test_exact_fit_budget_and_reuse_are_separate (test_study2d_design.FrozenAttributionDesignTests.test_exact_fit_budget_and_reuse_are_separate) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:32.5840839Z test_exact_train_rows_groups_folds_and_json_contract (test_study2d_design.FrozenAttributionDesignTests.test_exact_train_rows_groups_folds_and_json_contract) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:32.6147229Z test_group_quotas_and_validation_never_change_within_fold (test_study2d_design.FrozenAttributionDesignTests.test_group_quotas_and_validation_never_change_within_fold) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:33.1452736Z test_hash_count_and_group_identity_fail_closed (test_study2d_design.FrozenAttributionDesignTests.test_hash_count_and_group_identity_fail_closed) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:33.9032632Z test_only_original_train_gold_and_background_enter_despite_other_metadata (test_study2d_design.FrozenAttributionDesignTests.test_only_original_train_gold_and_background_enter_despite_other_metadata) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:33.9035376Z test_part_a_exactly_one_row_per_selected_group (test_study2d_design.FrozenAttributionDesignTests.test_part_a_exactly_one_row_per_selected_group) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:33.9037882Z test_per_acquisition_statistics_secondary_metrics_and_descriptive_limits (test_study2d_design.FrozenAttributionDesignTests.test_per_acquisition_statistics_secondary_metrics_and_descriptive_limits) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:33.9044936Z test_replicate_salts_hash_formula_and_nested_subsets (test_study2d_design.FrozenAttributionDesignTests.test_replicate_salts_hash_formula_and_nested_subsets) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:34.5858805Z test_result_binding_and_exact_fit_count_required (test_study2d_design.FrozenAttributionDesignTests.test_result_binding_and_exact_fit_count_required) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:34.5860483Z test_summary_primary_contrasts_and_reused_pair_counts (test_study2d_design.FrozenAttributionDesignTests.test_summary_primary_contrasts_and_reused_pair_counts) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:36.5428901Z test_tampered_hash_binding_order_and_reuse_refused (test_study2d_design.FrozenAttributionDesignTests.test_tampered_hash_binding_order_and_reuse_refused) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:36.8791796Z test_validator_does_not_rebuild_or_read_science (test_study2d_design.FrozenAttributionDesignTests.test_validator_does_not_rebuild_or_read_science) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:36.8835471Z test_densities_are_nested_and_endpoints_are_fixed (test_study2d_design.TemporalSamplingTests.test_densities_are_nested_and_endpoints_are_fixed) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:36.8837235Z test_lower_median_odd_even_and_order_independence (test_study2d_design.TemporalSamplingTests.test_lower_median_odd_even_and_order_independence) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:36.8838885Z test_quantile_half_ties_choose_lower_with_no_duplicate_rows (test_study2d_design.TemporalSamplingTests.test_quantile_half_ties_choose_lower_with_no_duplicate_rows) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:36.8840811Z test_short_groups_use_all_available_without_padding (test_study2d_design.TemporalSamplingTests.test_short_groups_use_all_available_without_padding) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:36.8842263Z test_temporal_selector_rejects_crossing_duplicates_and_nontrain (test_study2d_design.TemporalSamplingTests.test_temporal_selector_rejects_crossing_duplicates_and_nontrain) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:36.8852287Z test_authority_declares_no_DEV_TEST_silver_source_or_selection (test_study2d_execution.BoundaryTests.test_authority_declares_no_DEV_TEST_silver_source_or_selection) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:36.8859831Z test_budget_exactly_100_plus_eight_references (test_study2d_execution.BoundaryTests.test_budget_exactly_100_plus_eight_references) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:36.8867680Z test_ci_all_ten_exact_jobs (test_study2d_execution.BoundaryTests.test_ci_all_ten_exact_jobs) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:36.8876494Z test_ci_duplicate_or_missing_job_blocks (test_study2d_execution.BoundaryTests.test_ci_duplicate_or_missing_job_blocks) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:36.8884182Z test_ci_pending_or_failure_blocks (test_study2d_execution.BoundaryTests.test_ci_pending_or_failure_blocks) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:36.8891983Z test_ci_skipped_step_is_not_success (test_study2d_execution.BoundaryTests.test_ci_skipped_step_is_not_success) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:36.8899710Z test_ci_wrong_head (test_study2d_execution.BoundaryTests.test_ci_wrong_head) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:36.8927776Z test_emit_exclusive_preserves_original (test_study2d_execution.BoundaryTests.test_emit_exclusive_preserves_original) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:36.8938144Z test_exact_distinguishes_boolean_integer_and_nested_type (test_study2d_execution.BoundaryTests.test_exact_distinguishes_boolean_integer_and_nested_type) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:36.8948313Z test_read_text_rejects_DEV_TEST_predictions_before_open (test_study2d_execution.BoundaryTests.test_read_text_rejects_DEV_TEST_predictions_before_open) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:36.8958331Z test_read_text_rejects_experimental_path_before_open (test_study2d_execution.BoundaryTests.test_read_text_rejects_experimental_path_before_open) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:36.8970215Z test_safe_path_rejects_symlink (test_study2d_execution.BoundaryTests.test_safe_path_rejects_symlink) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:36.8979972Z test_safe_path_rejects_traversal_and_absolute (test_study2d_execution.BoundaryTests.test_safe_path_rejects_traversal_and_absolute) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:36.8989660Z test_DEV_TEST_silver_rejected_even_if_constructor_receives_it (test_study2d_execution.GrantTests.test_DEV_TEST_silver_rejected_even_if_constructor_receives_it) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:36.8993045Z test_exact_grant_once (test_study2d_execution.GrantTests.test_exact_grant_once) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:36.8996261Z test_modified_row_type_denied (test_study2d_execution.GrantTests.test_modified_row_type_denied) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:36.8998886Z test_reordered_or_omitted_row_denied (test_study2d_execution.GrantTests.test_reordered_or_omitted_row_denied) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:36.9001401Z test_snapshot_does_not_follow_mutation (test_study2d_execution.GrantTests.test_snapshot_does_not_follow_mutation) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:36.9003602Z test_unknown_action_denied (test_study2d_execution.GrantTests.test_unknown_action_denied) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:36.9018426Z test_existing_terminal_blocks_before_authority (test_study2d_execution.PreflightTests.test_existing_terminal_blocks_before_authority) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:36.9064637Z test_frozen_byte_divergence_blocks (test_study2d_execution.PreflightTests.test_frozen_byte_divergence_blocks) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:36.9076432Z test_preexisting_receipt_blocks_before_authority (test_study2d_execution.PreflightTests.test_preexisting_receipt_blocks_before_authority) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:36.9128602Z test_preflight_uses_text_and_creates_no_receipt (test_study2d_execution.PreflightTests.test_preflight_uses_text_and_creates_no_receipt) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:36.9141197Z test_exact_single_repair_chain_accepted (test_study2d_execution.RepairAncestryTests.test_exact_single_repair_chain_accepted) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:36.9146526Z test_head_directly_on_base_rejected (test_study2d_execution.RepairAncestryTests.test_head_directly_on_base_rejected) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:36.9152153Z test_longer_ancestry_rejected (test_study2d_execution.RepairAncestryTests.test_longer_ancestry_rejected) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:36.9159592Z test_original_scientific_hash_preserved (test_study2d_execution.RepairAncestryTests.test_original_scientific_hash_preserved) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:36.9166470Z test_repair_diff_rejects_scientific_path (test_study2d_execution.RepairAncestryTests.test_repair_diff_rejects_scientific_path) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:36.9170852Z test_second_repair_child_rejected (test_study2d_execution.RepairAncestryTests.test_second_repair_child_rejected) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:36.9177217Z test_unexpected_merge_rejected (test_study2d_execution.RepairAncestryTests.test_unexpected_merge_rejected) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:36.9181601Z test_wrong_grandparent_rejected (test_study2d_execution.RepairAncestryTests.test_wrong_grandparent_rejected) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:36.9187456Z test_wrong_parent_rejected (test_study2d_execution.RepairAncestryTests.test_wrong_parent_rejected) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:36.9396086Z test_101st_fit_denied (test_study2d_execution.RunTests.test_101st_fit_denied) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:36.9610421Z test_complete_100_fits_order_and_eight_reuses (test_study2d_execution.RunTests.test_complete_100_fits_order_and_eight_reuses) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:36.9709746Z test_duplicate_fit_spec_never_refits (test_study2d_execution.RunTests.test_duplicate_fit_spec_never_refits) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:36.9787859Z test_duplicate_fit_start_is_rejected (test_study2d_execution.RunTests.test_duplicate_fit_start_is_rejected) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:36.9864925Z test_feature_failure_is_not_fit (test_study2d_execution.RunTests.test_feature_failure_is_not_fit) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:36.9939640Z test_firewall_nonzero_denies_before_features (test_study2d_execution.RunTests.test_firewall_nonzero_denies_before_features) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:37.0016630Z test_io_failure_closes_consumed_before_features_or_fits (test_study2d_execution.RunTests.test_io_failure_closes_consumed_before_features_or_fits) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:37.0211890Z test_missing_reuse_reference_blocks_without_extra_fit (test_study2d_execution.RunTests.test_missing_reuse_reference_blocks_without_extra_fit) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:37.0293696Z test_partial_fit_preserves_one_started_zero_completed (test_study2d_execution.RunTests.test_partial_fit_preserves_one_started_zero_completed) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:37.0374036Z test_prediction_failure_keeps_completed_fit_counter (test_study2d_execution.RunTests.test_prediction_failure_keeps_completed_fit_counter) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:37.0402847Z test_preflight_failure_reads_nothing_and_creates_no_receipt (test_study2d_execution.RunTests.test_preflight_failure_reads_nothing_and_creates_no_receipt) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:37.0506666Z test_results_emit_failure_closes_with_fallback_terminal (test_study2d_execution.RunTests.test_results_emit_failure_closes_with_fallback_terminal) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:37.0726782Z test_retry_keeps_existing_terminal_and_receipt (test_study2d_execution.RunTests.test_retry_keeps_existing_terminal_and_receipt) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:37.0901949Z test_summary_failure_does_not_erase_100_completed_fits (test_study2d_execution.RunTests.test_summary_failure_does_not_erase_100_completed_fits) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:37.0998515Z test_validation_before_fit_does_not_increment_actual_fit (test_study2d_execution.RunTests.test_validation_before_fit_does_not_increment_actual_fit) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:37.0999826Z test_bad_offset_denied (test_study2d_io.TrainIOTests.test_bad_offset_denied) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:37.1000770Z test_bad_shape_denied (test_study2d_io.TrainIOTests.test_bad_shape_denied) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:37.1001658Z test_bool_index_denied (test_study2d_io.TrainIOTests.test_bool_index_denied) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:37.1002847Z test_conflicting_group_denied (test_study2d_io.TrainIOTests.test_conflicting_group_denied) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:37.1003931Z test_dev_denied (test_study2d_io.TrainIOTests.test_dev_denied) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:37.1004819Z test_duplicate_id_denied (test_study2d_io.TrainIOTests.test_duplicate_id_denied) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:37.1010532Z test_exact_directed_reads_and_hashes (test_study2d_io.TrainIOTests.test_exact_directed_reads_and_hashes) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:37.1012507Z test_false_grant_before_path (test_study2d_io.TrainIOTests.test_false_grant_before_path) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:37.1023427Z test_fingerprint_change_denied (test_study2d_io.TrainIOTests.test_fingerprint_change_denied) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:37.1032052Z test_hash_mismatch_closes (test_study2d_io.TrainIOTests.test_hash_mismatch_closes) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:37.1034931Z test_inert_constructor (test_study2d_io.TrainIOTests.test_inert_constructor) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:37.1036698Z test_input_copy_immutable (test_study2d_io.TrainIOTests.test_input_copy_immutable) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:37.1038665Z test_invalid_receipt_before_path (test_study2d_io.TrainIOTests.test_invalid_receipt_before_path) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:37.1040098Z test_missing_grant_before_path (test_study2d_io.TrainIOTests.test_missing_grant_before_path) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:37.1043551Z test_missing_hash_denied (test_study2d_io.TrainIOTests.test_missing_hash_denied) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:37.1053622Z test_mp4_denied (test_study2d_io.TrainIOTests.test_mp4_denied) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:37.1089498Z test_no_decoder_or_bulk_reader_in_module (test_study2d_io.TrainIOTests.test_no_decoder_or_bulk_reader_in_module) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:37.1092926Z test_positive_locator_denied (test_study2d_io.TrainIOTests.test_positive_locator_denied) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:37.1096523Z test_row_out_of_extent_denied (test_study2d_io.TrainIOTests.test_row_out_of_extent_denied) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:37.1104567Z test_short_read_closes (test_study2d_io.TrainIOTests.test_short_read_closes) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:37.1109068Z test_silver_denied (test_study2d_io.TrainIOTests.test_silver_denied) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:37.1114220Z test_symlink_directory_denied (test_study2d_io.TrainIOTests.test_symlink_directory_denied) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:37.1121717Z test_symlink_file_denied (test_study2d_io.TrainIOTests.test_symlink_file_denied) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:37.1125546Z test_test_cache_denied (test_study2d_io.TrainIOTests.test_test_cache_denied) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:37.1128798Z test_test_denied (test_study2d_io.TrainIOTests.test_test_denied) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:37.1131020Z test_truthy_nonboolean_grant_denied (test_study2d_io.TrainIOTests.test_truthy_nonboolean_grant_denied) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:37.1134350Z test_unknown_acquisition_denied (test_study2d_io.TrainIOTests.test_unknown_acquisition_denied) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:37.1137581Z test_unlabeled_denied (test_study2d_io.TrainIOTests.test_unlabeled_denied) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:37.1140859Z test_wrong_kind_denied (test_study2d_io.TrainIOTests.test_wrong_kind_denied) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:37.1143002Z test_all_nineteen_historical_parameters_and_types_are_identical (test_study2d_models.FrozenReferenceContractTests.test_all_nineteen_historical_parameters_and_types_are_identical) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:37.1144805Z test_boolean_integer_coercion_and_parameter_changes_fail_closed (test_study2d_models.FrozenReferenceContractTests.test_boolean_integer_coercion_and_parameter_changes_fail_closed) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:37.1147874Z test_contract_is_json_safe_defensively_copied_and_has_no_search (test_study2d_models.FrozenReferenceContractTests.test_contract_is_json_safe_defensively_copied_and_has_no_search) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:37.1150916Z test_dev_test_silver_unknown_tier_and_nonexact_labels_denied (test_study2d_models.FrozenReferenceContractTests.test_dev_test_silver_unknown_tier_and_nonexact_labels_denied) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:37.1153723Z test_duplicate_ids_empty_ids_and_group_crossing_refused (test_study2d_models.FrozenReferenceContractTests.test_duplicate_ids_empty_ids_and_group_crossing_refused) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:37.1155728Z test_group_weighting_preserves_unit_group_weight_and_equal_class_totals (test_study2d_models.FrozenReferenceContractTests.test_group_weighting_preserves_unit_group_weight_and_equal_class_totals) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:37.1157358Z test_observation_equal_all_ones_changes_aggregate_class_weight (test_study2d_models.FrozenReferenceContractTests.test_observation_equal_all_ones_changes_aggregate_class_weight) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:37.1158825Z test_one_class_and_unknown_weighting_denied (test_study2d_models.FrozenReferenceContractTests.test_one_class_and_unknown_weighting_denied) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:37.1161306Z test_prediction_has_no_labels_and_lbp_is_exact_historical_function (test_study2d_models.FrozenReferenceContractTests.test_prediction_has_no_labels_and_lbp_is_exact_historical_function) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:37.1946633Z test_constant_synthetic_lbp_features_preserve_channel_histograms (test_study2d_models.ReferenceRefusalTests.test_constant_synthetic_lbp_features_preserve_channel_histograms) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:37.6503116Z test_exact_estimator_parameter_divergence_prevents_fit (test_study2d_models.ReferenceRefusalTests.test_exact_estimator_parameter_divergence_prevents_fit) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:37.6509554Z test_failed_fit_reports_started_only_without_retry (test_study2d_models.ReferenceRefusalTests.test_failed_fit_reports_started_only_without_retry) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:37.6517187Z test_noncanonical_features_denied_before_fit_and_events (test_study2d_models.ReferenceRefusalTests.test_noncanonical_features_denied_before_fit_and_events) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:37.6519954Z test_row_denial_precedes_library_fit (test_study2d_models.ReferenceRefusalTests.test_row_denial_precedes_library_fit) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:37.6527520Z test_start_callback_denial_prevents_actual_fit (test_study2d_models.ReferenceRefusalTests.test_start_callback_denial_prevents_actual_fit) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:37.8353772Z test_both_weightings_use_same_features_rows_and_differ_only_in_weights (test_study2d_models.TwoSyntheticReferenceFitsTests.test_both_weightings_use_same_features_rows_and_differ_only_in_weights) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:37.8356869Z test_callbacks_record_only_actual_started_and_returned_fits (test_study2d_models.TwoSyntheticReferenceFitsTests.test_callbacks_record_only_actual_started_and_returned_fits) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:37.8419092Z test_prediction_rejects_model_parameter_mutation (test_study2d_models.TwoSyntheticReferenceFitsTests.test_prediction_rejects_model_parameter_mutation) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:37.8693405Z test_predictions_are_actual_library_probabilities_without_label_input (test_study2d_models.TwoSyntheticReferenceFitsTests.test_predictions_are_actual_library_probabilities_without_label_input) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:37.8697054Z test_two_completed_fits_exact_parameters_and_runtime_metadata (test_study2d_models.TwoSyntheticReferenceFitsTests.test_two_completed_fits_exact_parameters_and_runtime_metadata) ... ok
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:37.8698447Z 
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:37.8698772Z ----------------------------------------------------------------------
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:37.8699314Z Ran 116 tests in 7.681s
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:37.8699548Z 
+study2d-synthetic-contracts	Require fixed RF and TRAIN-only attribution contracts	2026-09-21T20:57:37.8699654Z OK
+study2d-synthetic-contracts	Post Run actions/setup-python@v5	﻿2026-09-21T20:57:37.9708543Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+study2d-synthetic-contracts	Post Run actions/setup-python@v5	2026-09-21T20:57:37.9709996Z Post job cleanup.
+study2d-synthetic-contracts	Post Run actions/setup-python@v5	2026-09-21T20:57:38.0921871Z (node:2414) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+study2d-synthetic-contracts	Post Run actions/setup-python@v5	2026-09-21T20:57:38.0922819Z (Use `node --trace-deprecation ...` to show where the warning was created)
+study2d-synthetic-contracts	Post Run actions/checkout@v4	﻿2026-09-21T20:57:38.1103430Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+study2d-synthetic-contracts	Post Run actions/checkout@v4	2026-09-21T20:57:38.1105022Z Post job cleanup.
+study2d-synthetic-contracts	Post Run actions/checkout@v4	2026-09-21T20:57:38.1999870Z [command]/usr/bin/git version
+study2d-synthetic-contracts	Post Run actions/checkout@v4	2026-09-21T20:57:38.2046534Z git version 2.55.0
+study2d-synthetic-contracts	Post Run actions/checkout@v4	2026-09-21T20:57:38.2086534Z Temporarily overriding HOME='/home/runner/work/_temp/52d75c3f-998e-49f7-b4ad-c845f91803de' before making global git config changes
+study2d-synthetic-contracts	Post Run actions/checkout@v4	2026-09-21T20:57:38.2087987Z Adding repository directory to the temporary git global config as a safe directory
+study2d-synthetic-contracts	Post Run actions/checkout@v4	2026-09-21T20:57:38.2092109Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/snbi-dendritic-fragmentation-ml/snbi-dendritic-fragmentation-ml
+study2d-synthetic-contracts	Post Run actions/checkout@v4	2026-09-21T20:57:38.2137418Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+study2d-synthetic-contracts	Post Run actions/checkout@v4	2026-09-21T20:57:38.2176943Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+study2d-synthetic-contracts	Post Run actions/checkout@v4	2026-09-21T20:57:38.2441615Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+study2d-synthetic-contracts	Post Run actions/checkout@v4	2026-09-21T20:57:38.2478602Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+study2d-synthetic-contracts	Post Run actions/checkout@v4	2026-09-21T20:57:38.2763171Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+study2d-synthetic-contracts	Post Run actions/checkout@v4	2026-09-21T20:57:38.2819173Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+study2d-synthetic-contracts	Complete job	﻿2026-09-21T20:57:38.3347558Z Cleaning up orphan processes
+study2d-synthetic-contracts	Complete job	2026-09-21T20:57:38.3632854Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

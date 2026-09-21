@@ -1,0 +1,540 @@
+{
+  "status": "PASS",
+  "review_kind": "INDEPENDENT_AI_ASSISTED_TEXTUAL_CLAIM_AND_REPORT_REVIEW",
+  "created_at_utc": "2026-09-21T21:09:07.931835+00:00",
+  "reviewer": "independent Codex subagent study2d_claim_review",
+  "human_review": false,
+  "human_or_institutional_certification": false,
+  "scope": "Read-only review of the complete Study2-D execution report against its frozen protocol, claim scope, result aggregates and existing post-run textual audits. New CLAIM_REVIEW.json only.",
+  "report_path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/EXECUTION_REPORT.md",
+  "report_sha256": "fe40af2c3221fbd8d49a8cf6e16b576fdab24e4cde8ca153b93eba8a0ffcb143",
+  "documentary_inputs": [
+    {
+      "path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/AUTHORIZATION.md",
+      "bytes": 29362,
+      "sha256": "5b28d77ffdb964d4f421bec1378e2b0e35feb70afb79225ad6fe08273fe4ab93"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/STUDY2_D_PROTOCOL.md",
+      "bytes": 6763,
+      "sha256": "fb6d659fb6a171e042ad482d42e00b808b105fd8a0ec655f593e609ef7709aa5"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/STUDY2_D_CLAIM_SCOPE.md",
+      "bytes": 2087,
+      "sha256": "d74f0fe21904627ab3fd76708b29514ad73290c0ac430de144c13978fa4f9779"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/MODEL_CONTRACT.json",
+      "bytes": 1451,
+      "sha256": "18429f2545393957c6430c677c1b6144a6416ed3e5dd1a244322051e04428e22"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/GROUP_DIVERSITY_RESULTS.json",
+      "bytes": 78214,
+      "sha256": "5491289f910a51039ac6fd17cea610b1b7297eb099a8a78fbd074733d3a73d3d"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/TEMPORAL_DENSITY_RESULTS.json",
+      "bytes": 30603,
+      "sha256": "00617321936cb46f73e12d92d2cce2d76d72eb7074ac9ece6e3e255c694a8e96"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/GROUP_WEIGHTING_RESULTS.json",
+      "bytes": 10898,
+      "sha256": "3f905d8d971d419bace9022c571d20c25a94f00550d4069da475ef0dfcf35e93"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/ATTRIBUTION_SUMMARY.json",
+      "bytes": 693,
+      "sha256": "68785e0491008067823401a693f2758bff1690f8d29d1ddffc7d23b5b755067a"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/RESULTS_TABLES.md",
+      "bytes": 1217,
+      "sha256": "267f7ab08ddaf8f8493a532d8fba44670fb40c9bdcdbf2522cdb4d46235bef6c"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/results.json",
+      "bytes": 2106,
+      "sha256": "3830980f3a9519e648b1c6260c71969bcb2361a46117f7bf0ec7d0cc30c5370c"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/terminal-state.json",
+      "bytes": 1349,
+      "sha256": "80f81bbf42f2993f509448468b2e4940bb39a8256dcbc10b9861e71a1732aab5"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/EXECUTION_REPORT.md",
+      "bytes": 29945,
+      "sha256": "fe40af2c3221fbd8d49a8cf6e16b576fdab24e4cde8ca153b93eba8a0ffcb143"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/POST_RUN_METRIC_AUDIT.json",
+      "bytes": 77820,
+      "sha256": "bda840f3ebdee97654d2657f12a60637d1cc13e592e11b23a788c15a94a1c447"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/POST_RUN_CUSTODY_AUDIT.json",
+      "bytes": 4141,
+      "sha256": "24a15412b1ed9dc1e48f27553dc2de35313f68ca07c44bb131c6cbcf47c5b450"
+    }
+  ],
+  "literal_table_and_terminal_checks": [
+    {
+      "check": "group_statistics_4_global",
+      "status": "PASS"
+    },
+    {
+      "check": "group_statistics_4_bottom_up_anti_parallel",
+      "status": "PASS"
+    },
+    {
+      "check": "group_statistics_4_top_down_parallel",
+      "status": "PASS"
+    },
+    {
+      "check": "group_statistics_8_global",
+      "status": "PASS"
+    },
+    {
+      "check": "group_statistics_8_bottom_up_anti_parallel",
+      "status": "PASS"
+    },
+    {
+      "check": "group_statistics_8_top_down_parallel",
+      "status": "PASS"
+    },
+    {
+      "check": "group_statistics_12_global",
+      "status": "PASS"
+    },
+    {
+      "check": "group_statistics_12_bottom_up_anti_parallel",
+      "status": "PASS"
+    },
+    {
+      "check": "group_statistics_12_top_down_parallel",
+      "status": "PASS"
+    },
+    {
+      "check": "group_statistics_17_global",
+      "status": "PASS"
+    },
+    {
+      "check": "group_statistics_17_bottom_up_anti_parallel",
+      "status": "PASS"
+    },
+    {
+      "check": "group_statistics_17_top_down_parallel",
+      "status": "PASS"
+    },
+    {
+      "check": "group_statistics_24_global",
+      "status": "PASS"
+    },
+    {
+      "check": "group_statistics_24_bottom_up_anti_parallel",
+      "status": "PASS"
+    },
+    {
+      "check": "group_statistics_24_top_down_parallel",
+      "status": "PASS"
+    },
+    {
+      "check": "density_D1",
+      "status": "PASS"
+    },
+    {
+      "check": "density_D3",
+      "status": "PASS"
+    },
+    {
+      "check": "density_D5",
+      "status": "PASS"
+    },
+    {
+      "check": "density_DALL",
+      "status": "PASS"
+    },
+    {
+      "check": "weighting_GROUP_EQUAL",
+      "status": "PASS"
+    },
+    {
+      "check": "weighting_OBSERVATION_EQUAL",
+      "status": "PASS"
+    },
+    {
+      "check": "global_K24_MINUS_K4",
+      "status": "PASS"
+    },
+    {
+      "check": "global_K24_MINUS_K8",
+      "status": "PASS"
+    },
+    {
+      "check": "global_K24_MINUS_K12",
+      "status": "PASS"
+    },
+    {
+      "check": "global_K24_MINUS_K17",
+      "status": "PASS"
+    },
+    {
+      "check": "global_D3_MINUS_D1",
+      "status": "PASS"
+    },
+    {
+      "check": "global_D5_MINUS_D1",
+      "status": "PASS"
+    },
+    {
+      "check": "global_DALL_MINUS_D1",
+      "status": "PASS"
+    },
+    {
+      "check": "global_DALL_MINUS_D5",
+      "status": "PASS"
+    },
+    {
+      "check": "global_GROUP_EQUAL−OBSERVATION_EQUAL",
+      "status": "PASS"
+    },
+    {
+      "check": "secondary_K4/D1/GE",
+      "status": "PASS"
+    },
+    {
+      "check": "acquisition_mean_K4/D1/GE",
+      "status": "PASS"
+    },
+    {
+      "check": "secondary_K8/D1/GE",
+      "status": "PASS"
+    },
+    {
+      "check": "acquisition_mean_K8/D1/GE",
+      "status": "PASS"
+    },
+    {
+      "check": "secondary_K12/D1/GE",
+      "status": "PASS"
+    },
+    {
+      "check": "acquisition_mean_K12/D1/GE",
+      "status": "PASS"
+    },
+    {
+      "check": "secondary_K17/D1/GE",
+      "status": "PASS"
+    },
+    {
+      "check": "acquisition_mean_K17/D1/GE",
+      "status": "PASS"
+    },
+    {
+      "check": "secondary_K24/D1/GE",
+      "status": "PASS"
+    },
+    {
+      "check": "acquisition_mean_K24/D1/GE",
+      "status": "PASS"
+    },
+    {
+      "check": "secondary_K24/D3/GE",
+      "status": "PASS"
+    },
+    {
+      "check": "acquisition_mean_K24/D3/GE",
+      "status": "PASS"
+    },
+    {
+      "check": "secondary_K24/D5/GE",
+      "status": "PASS"
+    },
+    {
+      "check": "acquisition_mean_K24/D5/GE",
+      "status": "PASS"
+    },
+    {
+      "check": "secondary_K24/DALL/GE",
+      "status": "PASS"
+    },
+    {
+      "check": "acquisition_mean_K24/DALL/GE",
+      "status": "PASS"
+    },
+    {
+      "check": "secondary_K24/DALL/OE",
+      "status": "PASS"
+    },
+    {
+      "check": "acquisition_mean_K24/DALL/OE",
+      "status": "PASS"
+    },
+    {
+      "check": "acquisition_contrast_K24−K17_bottom_up_anti_parallel",
+      "status": "PASS"
+    },
+    {
+      "check": "acquisition_contrast_K24−K17_top_down_parallel",
+      "status": "PASS"
+    },
+    {
+      "check": "acquisition_contrast_K24−K4_bottom_up_anti_parallel",
+      "status": "PASS"
+    },
+    {
+      "check": "acquisition_contrast_K24−K4_top_down_parallel",
+      "status": "PASS"
+    },
+    {
+      "check": "acquisition_contrast_DALL−D1_bottom_up_anti_parallel",
+      "status": "PASS"
+    },
+    {
+      "check": "acquisition_contrast_DALL−D1_top_down_parallel",
+      "status": "PASS"
+    },
+    {
+      "check": "acquisition_contrast_DALL−D5_bottom_up_anti_parallel",
+      "status": "PASS"
+    },
+    {
+      "check": "acquisition_contrast_DALL−D5_top_down_parallel",
+      "status": "PASS"
+    },
+    {
+      "check": "acquisition_contrast_GROUP_EQUAL−OBSERVATION_EQUAL_bottom_up_anti_parallel",
+      "status": "PASS"
+    },
+    {
+      "check": "acquisition_contrast_GROUP_EQUAL−OBSERVATION_EQUAL_top_down_parallel",
+      "status": "PASS"
+    },
+    {
+      "check": "author_return_items_1_through_38",
+      "status": "PASS"
+    },
+    {
+      "check": "eight_interpretive_responses",
+      "status": "PASS"
+    },
+    {
+      "check": "rf_full_parameter_dictionary",
+      "status": "PASS"
+    },
+    {
+      "check": "terminal_STUDY2_D",
+      "status": "PASS"
+    },
+    {
+      "check": "terminal_STUDY2_D_METHOD",
+      "status": "PASS"
+    },
+    {
+      "check": "terminal_SCIENTIFIC_STUDY2D_RUNS",
+      "status": "PASS"
+    },
+    {
+      "check": "terminal_RF_MODEL",
+      "status": "PASS"
+    },
+    {
+      "check": "terminal_FEATURES",
+      "status": "PASS"
+    },
+    {
+      "check": "terminal_TRAIN_POSITIVE_GROUPS_AVAILABLE",
+      "status": "PASS"
+    },
+    {
+      "check": "terminal_TRAIN_BACKGROUND_GROUPS_AVAILABLE",
+      "status": "PASS"
+    },
+    {
+      "check": "terminal_CV_FOLDS",
+      "status": "PASS"
+    },
+    {
+      "check": "terminal_DISTINCT_RF_FITS",
+      "status": "PASS"
+    },
+    {
+      "check": "terminal_DEV_GROUPS_READ",
+      "status": "PASS"
+    },
+    {
+      "check": "terminal_TEST_GROUPS_READ",
+      "status": "PASS"
+    },
+    {
+      "check": "terminal_DEV_ROWS_READ",
+      "status": "PASS"
+    },
+    {
+      "check": "terminal_TEST_ROWS_READ",
+      "status": "PASS"
+    },
+    {
+      "check": "terminal_TEST_CACHE_ROWS_READ",
+      "status": "PASS"
+    },
+    {
+      "check": "terminal_TEST_FEATURES_COMPUTED",
+      "status": "PASS"
+    },
+    {
+      "check": "terminal_EXPERIMENTAL_SOURCE_OPENS",
+      "status": "PASS"
+    },
+    {
+      "check": "terminal_FFMPEG_RUNS",
+      "status": "PASS"
+    },
+    {
+      "check": "terminal_TEST_STATE",
+      "status": "PASS"
+    },
+    {
+      "check": "terminal_NEW_MODEL_SEARCH",
+      "status": "PASS"
+    },
+    {
+      "check": "terminal_MODEL_SELECTION_REOPENED",
+      "status": "PASS"
+    },
+    {
+      "check": "terminal_STUDY2_ATTRIBUTION_ANALYSIS_COMPLETE",
+      "status": "PASS"
+    },
+    {
+      "check": "terminal_SCIENTIFIC_PROGRAM_READY_FOR_FINAL_CLOSEOUT",
+      "status": "PASS"
+    },
+    {
+      "check": "terminal_STATE",
+      "status": "PASS"
+    },
+    {
+      "check": "terminal_MERGE_AUTHORIZED",
+      "status": "PASS"
+    },
+    {
+      "check": "terminal_CURRENT_AUTHORIZED_ACTIVITY",
+      "status": "PASS"
+    },
+    {
+      "check": "terminal_ESM1_OPENS",
+      "status": "PASS"
+    },
+    {
+      "check": "terminal_ESM2_OPENS",
+      "status": "PASS"
+    },
+    {
+      "check": "terminal_ESM3_OPENS",
+      "status": "PASS"
+    },
+    {
+      "check": "terminal_ESM4_OPENS",
+      "status": "PASS"
+    },
+    {
+      "check": "terminal_ESM5_OPENS",
+      "status": "PASS"
+    },
+    {
+      "check": "terminal_ESM6_OPENS",
+      "status": "PASS"
+    },
+    {
+      "check": "terminal_GROUP_DIVERSITY_DESCRIPTOR",
+      "status": "PASS"
+    },
+    {
+      "check": "terminal_GROUP_DIVERSITY_DELTA_K24_K17",
+      "status": "PASS"
+    },
+    {
+      "check": "terminal_GROUP_DIVERSITY_DELTA_K24_K4",
+      "status": "PASS"
+    },
+    {
+      "check": "terminal_TEMPORAL_DENSITY_DESCRIPTOR",
+      "status": "PASS"
+    },
+    {
+      "check": "terminal_TEMPORAL_DENSITY_DELTA_ALL_1",
+      "status": "PASS"
+    },
+    {
+      "check": "terminal_GROUP_WEIGHTING_DESCRIPTOR",
+      "status": "PASS"
+    },
+    {
+      "check": "terminal_GROUP_WEIGHTING_DELTA",
+      "status": "PASS"
+    }
+  ],
+  "semantic_checks": {
+    "pass_means_protocol_compliance_not_positive_effect": "PASS",
+    "all_38_author_items_and_8_interpretive_questions_addressed": "PASS",
+    "group_curve_nonmonotonic_and_mixed_primary_descriptor": "PASS",
+    "k17_numerical_bridge_not_experiment1_replication": "PASS",
+    "density_global_negative_four_folds_distinguished_from_acquisition_two_two": "PASS",
+    "d5_three_positive_folds_but_negative_mean_disclosed": "PASS",
+    "no_saturation_or_optimal_density_claim": "PASS",
+    "weighting_four_global_negative_folds_does_not_change_final_pipeline": "PASS",
+    "most_consistent_patterns_do_not_imply_significance_or_positive_total_attribution": "PASS",
+    "group_count_also_changes_total_rows_disclosed": "PASS",
+    "weighting_also_changes_class_totals_and_bootstrap_limits_disclosed": "PASS",
+    "conditional_nonadditive_effects_no_causal_percentage_decomposition": "PASS",
+    "two_acquisitions_correlated_folds_replicates_and_weak_labels_disclosed": "PASS",
+    "relative_solute_not_absolute_bismuth": "PASS",
+    "historical_test_and_silver_are_textual_context_not_conditions": "PASS",
+    "no_physical_causality_external_generalization_forecasting_or_exhaustive_physical_recall_claim": "PASS",
+    "payload_custody_and_post_run_documentary_audit_boundaries_explicit": "PASS",
+    "failed_original_ci_and_repair_history_not_rewritten": "PASS",
+    "future_evidence_sha_and_ci_success_not_anticipated": "PASS"
+  },
+  "primary_findings": {
+    "group_diversity": {
+      "contrast": "K24_MINUS_K17",
+      "mean_delta": 0.0039043309111838507,
+      "positive_pairs": 11,
+      "negative_pairs": 9,
+      "descriptor": "MIXED_POSITIVE"
+    },
+    "temporal_density": {
+      "contrast": "DALL_MINUS_D1",
+      "mean_delta": -0.059699310144642304,
+      "positive_folds": 0,
+      "negative_folds": 4,
+      "descriptor": "NON_POSITIVE"
+    },
+    "group_weighting": {
+      "contrast": "GROUP_EQUAL_MINUS_OBSERVATION_EQUAL",
+      "mean_delta": -0.014586902176019961,
+      "positive_folds": 0,
+      "negative_folds": 4,
+      "descriptor": "NO_GROUP_EQUAL_BENEFIT"
+    }
+  },
+  "material_issues": [],
+  "report_changes_made": false,
+  "scientific_runs_in_this_review": 0,
+  "fits_in_this_review": 0,
+  "feature_extractions_in_this_review": 0,
+  "experimental_source_opens_in_this_review": 0,
+  "cache_or_test_index_opens_in_this_review": 0,
+  "scientific_imports_in_this_review": 0,
+  "limits": [
+    "AI-assisted documentary review; no human or institutional certification.",
+    "This review checked report semantics and reproduced formatted aggregate tables and terminal declarations from existing text. It did not rerun scientific metric functions or inspect pixels.",
+    "The separate POST_RUN_METRIC_AUDIT.json provides per-prediction arithmetic verification. This review did not independently reopen FIT_RESULTS.json or the design manifest.",
+    "Operational CI, ancestry and material access claims were compared with the supplied textual custody audit; no fresh remote query or material cache authentication was performed here.",
+    "No claim of universal syscall monitoring, kernel readahead exclusion, independent experimental replicates, statistical significance or full attribution of the historical improvement is made."
+  ]
+}

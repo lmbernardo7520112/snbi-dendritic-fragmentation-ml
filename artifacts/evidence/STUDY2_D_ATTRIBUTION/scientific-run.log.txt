@@ -1,0 +1,340 @@
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 8, "weighting": "GROUP_EQUAL", "fit_id": "A-f0-K4-r1", "part": "A", "fold": 0}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.04205982700023014, "weighting": "GROUP_EQUAL", "fit_id": "A-f0-K4-r1", "part": "A", "fold": 0}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f0-K4-r1", "primary_gmba": 0.7009957112240114}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 8, "weighting": "GROUP_EQUAL", "fit_id": "A-f0-K4-r2", "part": "A", "fold": 0}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.04104654200000368, "weighting": "GROUP_EQUAL", "fit_id": "A-f0-K4-r2", "part": "A", "fold": 0}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f0-K4-r2", "primary_gmba": 0.7255540000575285}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 8, "weighting": "GROUP_EQUAL", "fit_id": "A-f0-K4-r3", "part": "A", "fold": 0}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.040680509000139864, "weighting": "GROUP_EQUAL", "fit_id": "A-f0-K4-r3", "part": "A", "fold": 0}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f0-K4-r3", "primary_gmba": 0.741882015537078}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 8, "weighting": "GROUP_EQUAL", "fit_id": "A-f0-K4-r4", "part": "A", "fold": 0}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.0410497459997714, "weighting": "GROUP_EQUAL", "fit_id": "A-f0-K4-r4", "part": "A", "fold": 0}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f0-K4-r4", "primary_gmba": 0.7070970424849926}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 8, "weighting": "GROUP_EQUAL", "fit_id": "A-f0-K4-r5", "part": "A", "fold": 0}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.04053194100015389, "weighting": "GROUP_EQUAL", "fit_id": "A-f0-K4-r5", "part": "A", "fold": 0}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f0-K4-r5", "primary_gmba": 0.7689294626400351}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 16, "weighting": "GROUP_EQUAL", "fit_id": "A-f0-K8-r1", "part": "A", "fold": 0}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.0411302729999079, "weighting": "GROUP_EQUAL", "fit_id": "A-f0-K8-r1", "part": "A", "fold": 0}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f0-K8-r1", "primary_gmba": 0.7143925012065846}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 16, "weighting": "GROUP_EQUAL", "fit_id": "A-f0-K8-r2", "part": "A", "fold": 0}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.04150230200002625, "weighting": "GROUP_EQUAL", "fit_id": "A-f0-K8-r2", "part": "A", "fold": 0}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f0-K8-r2", "primary_gmba": 0.6962321244827205}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 16, "weighting": "GROUP_EQUAL", "fit_id": "A-f0-K8-r3", "part": "A", "fold": 0}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.047138874999745894, "weighting": "GROUP_EQUAL", "fit_id": "A-f0-K8-r3", "part": "A", "fold": 0}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f0-K8-r3", "primary_gmba": 0.7421130949497626}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 16, "weighting": "GROUP_EQUAL", "fit_id": "A-f0-K8-r4", "part": "A", "fold": 0}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.041382573999726446, "weighting": "GROUP_EQUAL", "fit_id": "A-f0-K8-r4", "part": "A", "fold": 0}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f0-K8-r4", "primary_gmba": 0.6996449340757582}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 16, "weighting": "GROUP_EQUAL", "fit_id": "A-f0-K8-r5", "part": "A", "fold": 0}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.041571502999886434, "weighting": "GROUP_EQUAL", "fit_id": "A-f0-K8-r5", "part": "A", "fold": 0}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f0-K8-r5", "primary_gmba": 0.7168443792368301}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 24, "weighting": "GROUP_EQUAL", "fit_id": "A-f0-K12-r1", "part": "A", "fold": 0}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.042089790999852994, "weighting": "GROUP_EQUAL", "fit_id": "A-f0-K12-r1", "part": "A", "fold": 0}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f0-K12-r1", "primary_gmba": 0.7200972883674666}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 24, "weighting": "GROUP_EQUAL", "fit_id": "A-f0-K12-r2", "part": "A", "fold": 0}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.041393615000288264, "weighting": "GROUP_EQUAL", "fit_id": "A-f0-K12-r2", "part": "A", "fold": 0}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f0-K12-r2", "primary_gmba": 0.694158209673497}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 24, "weighting": "GROUP_EQUAL", "fit_id": "A-f0-K12-r3", "part": "A", "fold": 0}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.041973068000061176, "weighting": "GROUP_EQUAL", "fit_id": "A-f0-K12-r3", "part": "A", "fold": 0}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f0-K12-r3", "primary_gmba": 0.7251466142330303}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 24, "weighting": "GROUP_EQUAL", "fit_id": "A-f0-K12-r4", "part": "A", "fold": 0}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.042251527000189526, "weighting": "GROUP_EQUAL", "fit_id": "A-f0-K12-r4", "part": "A", "fold": 0}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f0-K12-r4", "primary_gmba": 0.6934679350361928}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 24, "weighting": "GROUP_EQUAL", "fit_id": "A-f0-K12-r5", "part": "A", "fold": 0}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.04199502499977825, "weighting": "GROUP_EQUAL", "fit_id": "A-f0-K12-r5", "part": "A", "fold": 0}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f0-K12-r5", "primary_gmba": 0.7051640544083009}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 34, "weighting": "GROUP_EQUAL", "fit_id": "A-f0-K17-r1", "part": "A", "fold": 0}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.043131978000019444, "weighting": "GROUP_EQUAL", "fit_id": "A-f0-K17-r1", "part": "A", "fold": 0}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f0-K17-r1", "primary_gmba": 0.691942552541948}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 34, "weighting": "GROUP_EQUAL", "fit_id": "A-f0-K17-r2", "part": "A", "fold": 0}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.04294128599985925, "weighting": "GROUP_EQUAL", "fit_id": "A-f0-K17-r2", "part": "A", "fold": 0}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f0-K17-r2", "primary_gmba": 0.6922664060721027}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 34, "weighting": "GROUP_EQUAL", "fit_id": "A-f0-K17-r3", "part": "A", "fold": 0}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.04303882700014583, "weighting": "GROUP_EQUAL", "fit_id": "A-f0-K17-r3", "part": "A", "fold": 0}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f0-K17-r3", "primary_gmba": 0.7123206793928452}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 34, "weighting": "GROUP_EQUAL", "fit_id": "A-f0-K17-r4", "part": "A", "fold": 0}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.04374562099974355, "weighting": "GROUP_EQUAL", "fit_id": "A-f0-K17-r4", "part": "A", "fold": 0}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f0-K17-r4", "primary_gmba": 0.696388776498271}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 34, "weighting": "GROUP_EQUAL", "fit_id": "A-f0-K17-r5", "part": "A", "fold": 0}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.0434253529997477, "weighting": "GROUP_EQUAL", "fit_id": "A-f0-K17-r5", "part": "A", "fold": 0}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f0-K17-r5", "primary_gmba": 0.6973763828616653}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 48, "weighting": "GROUP_EQUAL", "fit_id": "A-f0-K24-all", "part": "A", "fold": 0}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.04466998599991712, "weighting": "GROUP_EQUAL", "fit_id": "A-f0-K24-all", "part": "A", "fold": 0}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f0-K24-all", "primary_gmba": 0.7012354167597799}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 8, "weighting": "GROUP_EQUAL", "fit_id": "A-f1-K4-r1", "part": "A", "fold": 1}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.040942669000287424, "weighting": "GROUP_EQUAL", "fit_id": "A-f1-K4-r1", "part": "A", "fold": 1}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f1-K4-r1", "primary_gmba": 0.8116874504640658}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 8, "weighting": "GROUP_EQUAL", "fit_id": "A-f1-K4-r2", "part": "A", "fold": 1}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.040904020000198216, "weighting": "GROUP_EQUAL", "fit_id": "A-f1-K4-r2", "part": "A", "fold": 1}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f1-K4-r2", "primary_gmba": 0.7637550642418776}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 8, "weighting": "GROUP_EQUAL", "fit_id": "A-f1-K4-r3", "part": "A", "fold": 1}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.04089503099976355, "weighting": "GROUP_EQUAL", "fit_id": "A-f1-K4-r3", "part": "A", "fold": 1}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f1-K4-r3", "primary_gmba": 0.8154311662151541}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 8, "weighting": "GROUP_EQUAL", "fit_id": "A-f1-K4-r4", "part": "A", "fold": 1}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.041366866000316804, "weighting": "GROUP_EQUAL", "fit_id": "A-f1-K4-r4", "part": "A", "fold": 1}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f1-K4-r4", "primary_gmba": 0.778805562295316}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 8, "weighting": "GROUP_EQUAL", "fit_id": "A-f1-K4-r5", "part": "A", "fold": 1}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.041843294999580394, "weighting": "GROUP_EQUAL", "fit_id": "A-f1-K4-r5", "part": "A", "fold": 1}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f1-K4-r5", "primary_gmba": 0.7368974837392258}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 16, "weighting": "GROUP_EQUAL", "fit_id": "A-f1-K8-r1", "part": "A", "fold": 1}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.04192368099984378, "weighting": "GROUP_EQUAL", "fit_id": "A-f1-K8-r1", "part": "A", "fold": 1}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f1-K8-r1", "primary_gmba": 0.813449417851428}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 16, "weighting": "GROUP_EQUAL", "fit_id": "A-f1-K8-r2", "part": "A", "fold": 1}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.04140593500005707, "weighting": "GROUP_EQUAL", "fit_id": "A-f1-K8-r2", "part": "A", "fold": 1}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f1-K8-r2", "primary_gmba": 0.7607449567387866}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 16, "weighting": "GROUP_EQUAL", "fit_id": "A-f1-K8-r3", "part": "A", "fold": 1}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.04104213199980222, "weighting": "GROUP_EQUAL", "fit_id": "A-f1-K8-r3", "part": "A", "fold": 1}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f1-K8-r3", "primary_gmba": 0.8019390076205328}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 16, "weighting": "GROUP_EQUAL", "fit_id": "A-f1-K8-r4", "part": "A", "fold": 1}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.041554306000307406, "weighting": "GROUP_EQUAL", "fit_id": "A-f1-K8-r4", "part": "A", "fold": 1}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f1-K8-r4", "primary_gmba": 0.8206887782831822}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 16, "weighting": "GROUP_EQUAL", "fit_id": "A-f1-K8-r5", "part": "A", "fold": 1}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.04170618199987075, "weighting": "GROUP_EQUAL", "fit_id": "A-f1-K8-r5", "part": "A", "fold": 1}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f1-K8-r5", "primary_gmba": 0.7843486017945385}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 24, "weighting": "GROUP_EQUAL", "fit_id": "A-f1-K12-r1", "part": "A", "fold": 1}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.04240953400039871, "weighting": "GROUP_EQUAL", "fit_id": "A-f1-K12-r1", "part": "A", "fold": 1}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f1-K12-r1", "primary_gmba": 0.8115395954765176}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 24, "weighting": "GROUP_EQUAL", "fit_id": "A-f1-K12-r2", "part": "A", "fold": 1}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.04177427499962505, "weighting": "GROUP_EQUAL", "fit_id": "A-f1-K12-r2", "part": "A", "fold": 1}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f1-K12-r2", "primary_gmba": 0.7925627333293757}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 24, "weighting": "GROUP_EQUAL", "fit_id": "A-f1-K12-r3", "part": "A", "fold": 1}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.04192090299966367, "weighting": "GROUP_EQUAL", "fit_id": "A-f1-K12-r3", "part": "A", "fold": 1}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f1-K12-r3", "primary_gmba": 0.8049227623958926}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 24, "weighting": "GROUP_EQUAL", "fit_id": "A-f1-K12-r4", "part": "A", "fold": 1}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.041640433999873494, "weighting": "GROUP_EQUAL", "fit_id": "A-f1-K12-r4", "part": "A", "fold": 1}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f1-K12-r4", "primary_gmba": 0.815768929662232}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 24, "weighting": "GROUP_EQUAL", "fit_id": "A-f1-K12-r5", "part": "A", "fold": 1}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.04144753900027354, "weighting": "GROUP_EQUAL", "fit_id": "A-f1-K12-r5", "part": "A", "fold": 1}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f1-K12-r5", "primary_gmba": 0.8076652126796946}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 34, "weighting": "GROUP_EQUAL", "fit_id": "A-f1-K17-r1", "part": "A", "fold": 1}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.04307207500005461, "weighting": "GROUP_EQUAL", "fit_id": "A-f1-K17-r1", "part": "A", "fold": 1}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f1-K17-r1", "primary_gmba": 0.8159254151197788}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 34, "weighting": "GROUP_EQUAL", "fit_id": "A-f1-K17-r2", "part": "A", "fold": 1}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.04306218300007458, "weighting": "GROUP_EQUAL", "fit_id": "A-f1-K17-r2", "part": "A", "fold": 1}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f1-K17-r2", "primary_gmba": 0.7893762626959853}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 34, "weighting": "GROUP_EQUAL", "fit_id": "A-f1-K17-r3", "part": "A", "fold": 1}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.04294426500018744, "weighting": "GROUP_EQUAL", "fit_id": "A-f1-K17-r3", "part": "A", "fold": 1}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f1-K17-r3", "primary_gmba": 0.810344956011793}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 34, "weighting": "GROUP_EQUAL", "fit_id": "A-f1-K17-r4", "part": "A", "fold": 1}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.04346264200012229, "weighting": "GROUP_EQUAL", "fit_id": "A-f1-K17-r4", "part": "A", "fold": 1}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f1-K17-r4", "primary_gmba": 0.8020692170469632}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 34, "weighting": "GROUP_EQUAL", "fit_id": "A-f1-K17-r5", "part": "A", "fold": 1}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.04280216300003303, "weighting": "GROUP_EQUAL", "fit_id": "A-f1-K17-r5", "part": "A", "fold": 1}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f1-K17-r5", "primary_gmba": 0.8093338913328814}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 48, "weighting": "GROUP_EQUAL", "fit_id": "A-f1-K24-all", "part": "A", "fold": 1}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.043593059000158974, "weighting": "GROUP_EQUAL", "fit_id": "A-f1-K24-all", "part": "A", "fold": 1}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f1-K24-all", "primary_gmba": 0.8031510330302143}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 8, "weighting": "GROUP_EQUAL", "fit_id": "A-f2-K4-r1", "part": "A", "fold": 2}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.040829756000221096, "weighting": "GROUP_EQUAL", "fit_id": "A-f2-K4-r1", "part": "A", "fold": 2}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f2-K4-r1", "primary_gmba": 0.809091088530222}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 8, "weighting": "GROUP_EQUAL", "fit_id": "A-f2-K4-r2", "part": "A", "fold": 2}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.04065305499989336, "weighting": "GROUP_EQUAL", "fit_id": "A-f2-K4-r2", "part": "A", "fold": 2}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f2-K4-r2", "primary_gmba": 0.7513271926744691}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 8, "weighting": "GROUP_EQUAL", "fit_id": "A-f2-K4-r3", "part": "A", "fold": 2}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.041031071999896085, "weighting": "GROUP_EQUAL", "fit_id": "A-f2-K4-r3", "part": "A", "fold": 2}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f2-K4-r3", "primary_gmba": 0.70900182992051}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 8, "weighting": "GROUP_EQUAL", "fit_id": "A-f2-K4-r4", "part": "A", "fold": 2}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.041041452000172285, "weighting": "GROUP_EQUAL", "fit_id": "A-f2-K4-r4", "part": "A", "fold": 2}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f2-K4-r4", "primary_gmba": 0.7909945265465949}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 8, "weighting": "GROUP_EQUAL", "fit_id": "A-f2-K4-r5", "part": "A", "fold": 2}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.0412333550002586, "weighting": "GROUP_EQUAL", "fit_id": "A-f2-K4-r5", "part": "A", "fold": 2}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f2-K4-r5", "primary_gmba": 0.767644076039529}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 16, "weighting": "GROUP_EQUAL", "fit_id": "A-f2-K8-r1", "part": "A", "fold": 2}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.04213296399984756, "weighting": "GROUP_EQUAL", "fit_id": "A-f2-K8-r1", "part": "A", "fold": 2}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f2-K8-r1", "primary_gmba": 0.7435408830413462}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 16, "weighting": "GROUP_EQUAL", "fit_id": "A-f2-K8-r2", "part": "A", "fold": 2}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.04106671599993206, "weighting": "GROUP_EQUAL", "fit_id": "A-f2-K8-r2", "part": "A", "fold": 2}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f2-K8-r2", "primary_gmba": 0.760421483068868}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 16, "weighting": "GROUP_EQUAL", "fit_id": "A-f2-K8-r3", "part": "A", "fold": 2}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.04065947799972491, "weighting": "GROUP_EQUAL", "fit_id": "A-f2-K8-r3", "part": "A", "fold": 2}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f2-K8-r3", "primary_gmba": 0.7340342681728128}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 16, "weighting": "GROUP_EQUAL", "fit_id": "A-f2-K8-r4", "part": "A", "fold": 2}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.040892117000112194, "weighting": "GROUP_EQUAL", "fit_id": "A-f2-K8-r4", "part": "A", "fold": 2}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f2-K8-r4", "primary_gmba": 0.7352117690271631}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 16, "weighting": "GROUP_EQUAL", "fit_id": "A-f2-K8-r5", "part": "A", "fold": 2}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.04127867400029572, "weighting": "GROUP_EQUAL", "fit_id": "A-f2-K8-r5", "part": "A", "fold": 2}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f2-K8-r5", "primary_gmba": 0.8033365205073808}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 24, "weighting": "GROUP_EQUAL", "fit_id": "A-f2-K12-r1", "part": "A", "fold": 2}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.04288367200024368, "weighting": "GROUP_EQUAL", "fit_id": "A-f2-K12-r1", "part": "A", "fold": 2}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f2-K12-r1", "primary_gmba": 0.7733962597254148}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 24, "weighting": "GROUP_EQUAL", "fit_id": "A-f2-K12-r2", "part": "A", "fold": 2}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.04251431600005162, "weighting": "GROUP_EQUAL", "fit_id": "A-f2-K12-r2", "part": "A", "fold": 2}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f2-K12-r2", "primary_gmba": 0.778407740255777}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 24, "weighting": "GROUP_EQUAL", "fit_id": "A-f2-K12-r3", "part": "A", "fold": 2}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.0426405939997494, "weighting": "GROUP_EQUAL", "fit_id": "A-f2-K12-r3", "part": "A", "fold": 2}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f2-K12-r3", "primary_gmba": 0.767100674155819}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 24, "weighting": "GROUP_EQUAL", "fit_id": "A-f2-K12-r4", "part": "A", "fold": 2}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.042133940999974584, "weighting": "GROUP_EQUAL", "fit_id": "A-f2-K12-r4", "part": "A", "fold": 2}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f2-K12-r4", "primary_gmba": 0.717186006455769}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 24, "weighting": "GROUP_EQUAL", "fit_id": "A-f2-K12-r5", "part": "A", "fold": 2}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.04209867400004441, "weighting": "GROUP_EQUAL", "fit_id": "A-f2-K12-r5", "part": "A", "fold": 2}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f2-K12-r5", "primary_gmba": 0.7981747856158544}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 34, "weighting": "GROUP_EQUAL", "fit_id": "A-f2-K17-r1", "part": "A", "fold": 2}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.04317628600028911, "weighting": "GROUP_EQUAL", "fit_id": "A-f2-K17-r1", "part": "A", "fold": 2}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f2-K17-r1", "primary_gmba": 0.7694108399947585}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 34, "weighting": "GROUP_EQUAL", "fit_id": "A-f2-K17-r2", "part": "A", "fold": 2}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.04352093600027729, "weighting": "GROUP_EQUAL", "fit_id": "A-f2-K17-r2", "part": "A", "fold": 2}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f2-K17-r2", "primary_gmba": 0.7717761820964062}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 34, "weighting": "GROUP_EQUAL", "fit_id": "A-f2-K17-r3", "part": "A", "fold": 2}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.043596430999969016, "weighting": "GROUP_EQUAL", "fit_id": "A-f2-K17-r3", "part": "A", "fold": 2}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f2-K17-r3", "primary_gmba": 0.7784356268979855}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 34, "weighting": "GROUP_EQUAL", "fit_id": "A-f2-K17-r4", "part": "A", "fold": 2}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.04303302599964809, "weighting": "GROUP_EQUAL", "fit_id": "A-f2-K17-r4", "part": "A", "fold": 2}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f2-K17-r4", "primary_gmba": 0.7892061898819345}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 34, "weighting": "GROUP_EQUAL", "fit_id": "A-f2-K17-r5", "part": "A", "fold": 2}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.04272012100000211, "weighting": "GROUP_EQUAL", "fit_id": "A-f2-K17-r5", "part": "A", "fold": 2}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f2-K17-r5", "primary_gmba": 0.7904626288411898}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 48, "weighting": "GROUP_EQUAL", "fit_id": "A-f2-K24-all", "part": "A", "fold": 2}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.044416059000013774, "weighting": "GROUP_EQUAL", "fit_id": "A-f2-K24-all", "part": "A", "fold": 2}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f2-K24-all", "primary_gmba": 0.781246459599346}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 8, "weighting": "GROUP_EQUAL", "fit_id": "A-f3-K4-r1", "part": "A", "fold": 3}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.0425210190001053, "weighting": "GROUP_EQUAL", "fit_id": "A-f3-K4-r1", "part": "A", "fold": 3}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f3-K4-r1", "primary_gmba": 0.8108186127779914}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 8, "weighting": "GROUP_EQUAL", "fit_id": "A-f3-K4-r2", "part": "A", "fold": 3}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.04151773499961564, "weighting": "GROUP_EQUAL", "fit_id": "A-f3-K4-r2", "part": "A", "fold": 3}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f3-K4-r2", "primary_gmba": 0.8232852085137524}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 8, "weighting": "GROUP_EQUAL", "fit_id": "A-f3-K4-r3", "part": "A", "fold": 3}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.04133996200016554, "weighting": "GROUP_EQUAL", "fit_id": "A-f3-K4-r3", "part": "A", "fold": 3}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f3-K4-r3", "primary_gmba": 0.8140116660411808}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 8, "weighting": "GROUP_EQUAL", "fit_id": "A-f3-K4-r4", "part": "A", "fold": 3}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.041803422999691975, "weighting": "GROUP_EQUAL", "fit_id": "A-f3-K4-r4", "part": "A", "fold": 3}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f3-K4-r4", "primary_gmba": 0.8275625393292929}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 8, "weighting": "GROUP_EQUAL", "fit_id": "A-f3-K4-r5", "part": "A", "fold": 3}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.041125120999822684, "weighting": "GROUP_EQUAL", "fit_id": "A-f3-K4-r5", "part": "A", "fold": 3}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f3-K4-r5", "primary_gmba": 0.8470964741885518}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 16, "weighting": "GROUP_EQUAL", "fit_id": "A-f3-K8-r1", "part": "A", "fold": 3}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.04165077600009681, "weighting": "GROUP_EQUAL", "fit_id": "A-f3-K8-r1", "part": "A", "fold": 3}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f3-K8-r1", "primary_gmba": 0.8276040092618637}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 16, "weighting": "GROUP_EQUAL", "fit_id": "A-f3-K8-r2", "part": "A", "fold": 3}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.04205652300015572, "weighting": "GROUP_EQUAL", "fit_id": "A-f3-K8-r2", "part": "A", "fold": 3}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f3-K8-r2", "primary_gmba": 0.7609025462747583}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 16, "weighting": "GROUP_EQUAL", "fit_id": "A-f3-K8-r3", "part": "A", "fold": 3}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.04179467699987072, "weighting": "GROUP_EQUAL", "fit_id": "A-f3-K8-r3", "part": "A", "fold": 3}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f3-K8-r3", "primary_gmba": 0.7742282537489482}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 16, "weighting": "GROUP_EQUAL", "fit_id": "A-f3-K8-r4", "part": "A", "fold": 3}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.041162145000271266, "weighting": "GROUP_EQUAL", "fit_id": "A-f3-K8-r4", "part": "A", "fold": 3}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f3-K8-r4", "primary_gmba": 0.8569734489978911}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 16, "weighting": "GROUP_EQUAL", "fit_id": "A-f3-K8-r5", "part": "A", "fold": 3}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.04210001399997054, "weighting": "GROUP_EQUAL", "fit_id": "A-f3-K8-r5", "part": "A", "fold": 3}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f3-K8-r5", "primary_gmba": 0.8312979909710011}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 24, "weighting": "GROUP_EQUAL", "fit_id": "A-f3-K12-r1", "part": "A", "fold": 3}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.04325820699978067, "weighting": "GROUP_EQUAL", "fit_id": "A-f3-K12-r1", "part": "A", "fold": 3}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f3-K12-r1", "primary_gmba": 0.846219076989327}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 24, "weighting": "GROUP_EQUAL", "fit_id": "A-f3-K12-r2", "part": "A", "fold": 3}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.04250101499974335, "weighting": "GROUP_EQUAL", "fit_id": "A-f3-K12-r2", "part": "A", "fold": 3}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f3-K12-r2", "primary_gmba": 0.8376381976525762}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 24, "weighting": "GROUP_EQUAL", "fit_id": "A-f3-K12-r3", "part": "A", "fold": 3}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.042853254999954515, "weighting": "GROUP_EQUAL", "fit_id": "A-f3-K12-r3", "part": "A", "fold": 3}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f3-K12-r3", "primary_gmba": 0.8088243678308966}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 24, "weighting": "GROUP_EQUAL", "fit_id": "A-f3-K12-r4", "part": "A", "fold": 3}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.042706951999662124, "weighting": "GROUP_EQUAL", "fit_id": "A-f3-K12-r4", "part": "A", "fold": 3}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f3-K12-r4", "primary_gmba": 0.8302160897670796}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 24, "weighting": "GROUP_EQUAL", "fit_id": "A-f3-K12-r5", "part": "A", "fold": 3}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.042461169000034715, "weighting": "GROUP_EQUAL", "fit_id": "A-f3-K12-r5", "part": "A", "fold": 3}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f3-K12-r5", "primary_gmba": 0.8422671890356548}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 34, "weighting": "GROUP_EQUAL", "fit_id": "A-f3-K17-r1", "part": "A", "fold": 3}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.04435923000028197, "weighting": "GROUP_EQUAL", "fit_id": "A-f3-K17-r1", "part": "A", "fold": 3}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f3-K17-r1", "primary_gmba": 0.8237733591134817}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 34, "weighting": "GROUP_EQUAL", "fit_id": "A-f3-K17-r2", "part": "A", "fold": 3}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.043655999999828055, "weighting": "GROUP_EQUAL", "fit_id": "A-f3-K17-r2", "part": "A", "fold": 3}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f3-K17-r2", "primary_gmba": 0.850423905571014}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 34, "weighting": "GROUP_EQUAL", "fit_id": "A-f3-K17-r3", "part": "A", "fold": 3}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.04418636099990181, "weighting": "GROUP_EQUAL", "fit_id": "A-f3-K17-r3", "part": "A", "fold": 3}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f3-K17-r3", "primary_gmba": 0.7381615271933686}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 34, "weighting": "GROUP_EQUAL", "fit_id": "A-f3-K17-r4", "part": "A", "fold": 3}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.04278604000000996, "weighting": "GROUP_EQUAL", "fit_id": "A-f3-K17-r4", "part": "A", "fold": 3}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f3-K17-r4", "primary_gmba": 0.8369239886820009}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 34, "weighting": "GROUP_EQUAL", "fit_id": "A-f3-K17-r5", "part": "A", "fold": 3}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.043025123000006715, "weighting": "GROUP_EQUAL", "fit_id": "A-f3-K17-r5", "part": "A", "fold": 3}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f3-K17-r5", "primary_gmba": 0.8293787676815279}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 48, "weighting": "GROUP_EQUAL", "fit_id": "A-f3-K24-all", "part": "A", "fold": 3}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.04487578399994163, "weighting": "GROUP_EQUAL", "fit_id": "A-f3-K24-all", "part": "A", "fold": 3}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "A-f3-K24-all", "primary_gmba": 0.8290439253609755}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 143, "weighting": "GROUP_EQUAL", "fit_id": "B-f0-D3", "part": "B", "fold": 0}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.05404655399979674, "weighting": "GROUP_EQUAL", "fit_id": "B-f0-D3", "part": "B", "fold": 0}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "B-f0-D3", "primary_gmba": 0.7131877501513129}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 239, "weighting": "GROUP_EQUAL", "fit_id": "B-f0-D5", "part": "B", "fold": 0}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.06539037900029143, "weighting": "GROUP_EQUAL", "fit_id": "B-f0-D5", "part": "B", "fold": 0}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "B-f0-D5", "primary_gmba": 0.7102066306979774}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 7776, "weighting": "GROUP_EQUAL", "fit_id": "B-f0-DALL", "part": "B", "fold": 0}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 1.0893321970002035, "weighting": "GROUP_EQUAL", "fit_id": "B-f0-DALL", "part": "B", "fold": 0}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "B-f0-DALL", "primary_gmba": 0.6994263987014959}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 140, "weighting": "GROUP_EQUAL", "fit_id": "B-f1-D3", "part": "B", "fold": 1}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.05430587499995454, "weighting": "GROUP_EQUAL", "fit_id": "B-f1-D3", "part": "B", "fold": 1}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "B-f1-D3", "primary_gmba": 0.7929757038429295}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 231, "weighting": "GROUP_EQUAL", "fit_id": "B-f1-D5", "part": "B", "fold": 1}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.06810557499966308, "weighting": "GROUP_EQUAL", "fit_id": "B-f1-D5", "part": "B", "fold": 1}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "B-f1-D5", "primary_gmba": 0.81360871128381}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 7981, "weighting": "GROUP_EQUAL", "fit_id": "B-f1-DALL", "part": "B", "fold": 1}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 1.151037917999929, "weighting": "GROUP_EQUAL", "fit_id": "B-f1-DALL", "part": "B", "fold": 1}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "B-f1-DALL", "primary_gmba": 0.6802306464581779}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 139, "weighting": "GROUP_EQUAL", "fit_id": "B-f2-D3", "part": "B", "fold": 2}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.05391082999994978, "weighting": "GROUP_EQUAL", "fit_id": "B-f2-D3", "part": "B", "fold": 2}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "B-f2-D3", "primary_gmba": 0.7413966410916037}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 230, "weighting": "GROUP_EQUAL", "fit_id": "B-f2-D5", "part": "B", "fold": 2}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.06448911799998314, "weighting": "GROUP_EQUAL", "fit_id": "B-f2-D5", "part": "B", "fold": 2}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "B-f2-D5", "primary_gmba": 0.7306933024617631}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 8478, "weighting": "GROUP_EQUAL", "fit_id": "B-f2-DALL", "part": "B", "fold": 2}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 1.192616308000197, "weighting": "GROUP_EQUAL", "fit_id": "B-f2-DALL", "part": "B", "fold": 2}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "B-f2-DALL", "primary_gmba": 0.7758009452614929}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 139, "weighting": "GROUP_EQUAL", "fit_id": "B-f3-D3", "part": "B", "fold": 3}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.054952332000084425, "weighting": "GROUP_EQUAL", "fit_id": "B-f3-D3", "part": "B", "fold": 3}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "B-f3-D3", "primary_gmba": 0.8312896875085292}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 230, "weighting": "GROUP_EQUAL", "fit_id": "B-f3-D5", "part": "B", "fold": 3}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 0.06569776700007424, "weighting": "GROUP_EQUAL", "fit_id": "B-f3-D5", "part": "B", "fold": 3}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "B-f3-D5", "primary_gmba": 0.8397107301725558}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 8486, "weighting": "GROUP_EQUAL", "fit_id": "B-f3-DALL", "part": "B", "fold": 3}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 1.2427128019999145, "weighting": "GROUP_EQUAL", "fit_id": "B-f3-DALL", "part": "B", "fold": 3}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "B-f3-DALL", "primary_gmba": 0.7204216037505797}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 7776, "weighting": "OBSERVATION_EQUAL", "fit_id": "C-f0-OBSERVATION_EQUAL", "part": "C", "fold": 0}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 1.0295242480001434, "weighting": "OBSERVATION_EQUAL", "fit_id": "C-f0-OBSERVATION_EQUAL", "part": "C", "fold": 0}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "C-f0-OBSERVATION_EQUAL", "primary_gmba": 0.7026828288058362}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 7981, "weighting": "OBSERVATION_EQUAL", "fit_id": "C-f1-OBSERVATION_EQUAL", "part": "C", "fold": 1}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 1.0920265990002918, "weighting": "OBSERVATION_EQUAL", "fit_id": "C-f1-OBSERVATION_EQUAL", "part": "C", "fold": 1}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "C-f1-OBSERVATION_EQUAL", "primary_gmba": 0.6842569833739632}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 8478, "weighting": "OBSERVATION_EQUAL", "fit_id": "C-f2-OBSERVATION_EQUAL", "part": "C", "fold": 2}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 1.1259686200000942, "weighting": "OBSERVATION_EQUAL", "fit_id": "C-f2-OBSERVATION_EQUAL", "part": "C", "fold": 2}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "C-f2-OBSERVATION_EQUAL", "primary_gmba": 0.7768704781861382}}
+{"progress": {"event": "RF_FIT_START", "family": "RF_REFERENCE", "training_rows": 8486, "weighting": "OBSERVATION_EQUAL", "fit_id": "C-f3-OBSERVATION_EQUAL", "part": "C", "fold": 3}}
+{"progress": {"event": "RF_FIT_COMPLETE", "family": "RF_REFERENCE", "runtime_seconds": 1.1604465710001932, "weighting": "OBSERVATION_EQUAL", "fit_id": "C-f3-OBSERVATION_EQUAL", "part": "C", "fold": 3}}
+{"progress": {"event": "VALIDATION_COMPLETE", "fit_id": "C-f3-OBSERVATION_EQUAL", "primary_gmba": 0.7704169125098886}}
+{
+  "STUDY2_D": "PASS",
+  "STUDY2_D_METHOD": "CONTROLLED_DATA_CENTRIC_BRIDGE_ATTRIBUTION",
+  "SCIENTIFIC_STUDY2D_RUNS": 1,
+  "RF_MODEL": "RF_REFERENCE",
+  "FEATURES": "LBP20_MULTIMODAL",
+  "TRAIN_POSITIVE_GROUPS_AVAILABLE": 32,
+  "TRAIN_BACKGROUND_GROUPS_AVAILABLE": 32,
+  "CV_FOLDS": 4,
+  "DISTINCT_RF_FITS": 100,
+  "DEV_GROUPS_READ": 0,
+  "TEST_GROUPS_READ": 0,
+  "DEV_ROWS_READ": 0,
+  "TEST_ROWS_READ": 0,
+  "TEST_CACHE_ROWS_READ": 0,
+  "TEST_FEATURES_COMPUTED": 0,
+  "EXPERIMENTAL_SOURCE_OPENS": 0,
+  "FFMPEG_RUNS": 0,
+  "TEST_STATE": "UNCHANGED_CONSUMED",
+  "NEW_MODEL_SEARCH": false,
+  "MODEL_SELECTION_REOPENED": false,
+  "STUDY2_ATTRIBUTION_ANALYSIS_COMPLETE": true,
+  "SCIENTIFIC_PROGRAM_READY_FOR_FINAL_CLOSEOUT": true,
+  "STATE": "CLOSED_CONSUMED",
+  "MERGE_AUTHORIZED": false,
+  "CURRENT_AUTHORIZED_ACTIVITY": "NONE_AWAITING_AUTHOR_DECISION",
+  "ESM1_OPENS": 0,
+  "ESM2_OPENS": 0,
+  "ESM3_OPENS": 0,
+  "ESM4_OPENS": 0,
+  "ESM5_OPENS": 0,
+  "ESM6_OPENS": 0,
+  "GROUP_DIVERSITY_DESCRIPTOR": "MIXED_POSITIVE",
+  "GROUP_DIVERSITY_DELTA_K24_K17": 0.0039043309111838507,
+  "GROUP_DIVERSITY_DELTA_K24_K4": 0.0035758000145099554,
+  "TEMPORAL_DENSITY_DESCRIPTOR": "NON_POSITIVE",
+  "TEMPORAL_DENSITY_DELTA_ALL_1": -0.059699310144642304,
+  "GROUP_WEIGHTING_DESCRIPTOR": "NO_GROUP_EQUAL_BENEFIT",
+  "GROUP_WEIGHTING_DELTA": -0.014586902176019961
+}

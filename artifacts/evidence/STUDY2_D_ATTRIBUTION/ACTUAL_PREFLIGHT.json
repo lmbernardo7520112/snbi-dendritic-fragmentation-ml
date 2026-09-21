@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "head_sha": "8c6221da3d03a498158d812be5c08848c37c2247",
+  "freeze_text_count": 72,
+  "ci_jobs": [
+    "study2b-synthetic-contracts",
+    "study2a-synthetic-contracts",
+    "ti3d-final-synthetic-contracts",
+    "study2d-synthetic-contracts",
+    "study2c-synthetic-contracts",
+    "ti3c-synthetic-contracts",
+    "ti3b-synthetic-contracts",
+    "scientific-synthetic-contracts",
+    "deterministic-contracts",
+    "ti3-synthetic-contracts"
+  ],
+  "experimental_opens": 0,
+  "receipt_created": false,
+  "allowed_rows": 10907,
+  "distinct_fits": 100,
+  "repair": {
+    "status": "PASS",
+    "parent_method_freeze_sha": "21400de67d21901aeb8e5abac528689fc39169fa",
+    "grandparent_sha": "ec97cb5041ef35d4f6c9a79b54d756d6fbee674f",
+    "original_hashes_verified": 52,
+    "repair_paths": 27,
+    "scientific_method_changed": false
+  },
+  "method_freeze_original": "21400de67d21901aeb8e5abac528689fc39169fa",
+  "ci_repair_sha": "8c6221da3d03a498158d812be5c08848c37c2247"
+}

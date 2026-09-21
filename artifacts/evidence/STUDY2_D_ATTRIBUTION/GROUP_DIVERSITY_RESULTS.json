@@ -1,0 +1,2484 @@
+{
+  "levels": {
+    "4": {
+      "fit_ids": [
+        "A-f0-K4-r1",
+        "A-f0-K4-r2",
+        "A-f0-K4-r3",
+        "A-f0-K4-r4",
+        "A-f0-K4-r5",
+        "A-f1-K4-r1",
+        "A-f1-K4-r2",
+        "A-f1-K4-r3",
+        "A-f1-K4-r4",
+        "A-f1-K4-r5",
+        "A-f2-K4-r1",
+        "A-f2-K4-r2",
+        "A-f2-K4-r3",
+        "A-f2-K4-r4",
+        "A-f2-K4-r5",
+        "A-f3-K4-r1",
+        "A-f3-K4-r2",
+        "A-f3-K4-r3",
+        "A-f3-K4-r4",
+        "A-f3-K4-r5"
+      ],
+      "global": {
+        "mean": 0.775093408673069,
+        "median": 0.7738675124676755,
+        "standard_deviation": 0.04343073545917512,
+        "std_ddof": 0,
+        "min": 0.7009957112240114,
+        "max": 0.8470964741885518,
+        "n_fits": 20
+      },
+      "per_acquisition": {
+        "bottom_up_anti_parallel": {
+          "mean": 0.7985091622338174,
+          "median": 0.7963914814499664,
+          "standard_deviation": 0.04658627795923208,
+          "std_ddof": 0,
+          "min": 0.7089947407174222,
+          "max": 0.874551399315803,
+          "n_fits": 20
+        },
+        "top_down_parallel": {
+          "mean": 0.7048461479908239,
+          "median": 0.7003168487868145,
+          "standard_deviation": 0.07345119068958982,
+          "std_ddof": 0,
+          "min": 0.5727848101265822,
+          "max": 0.8215189873417721,
+          "n_fits": 20
+        }
+      },
+      "secondary_statistics": {
+        "observation_balanced_accuracy": {
+          "mean": 0.7296691644313831,
+          "median": 0.7346523817677879,
+          "standard_deviation": 0.051224376513165554,
+          "std_ddof": 0,
+          "min": 0.6434678352296856,
+          "max": 0.8158567774936061,
+          "n_fits": 20
+        },
+        "observation_accuracy": {
+          "mean": 0.6830050370596878,
+          "median": 0.6844814173226892,
+          "standard_deviation": 0.08406255826540031,
+          "std_ddof": 0,
+          "min": 0.5311402107952731,
+          "max": 0.7966507177033493,
+          "n_fits": 20
+        },
+        "observation_precision": {
+          "mean": 0.543855498898212,
+          "median": 0.5618639535513249,
+          "standard_deviation": 0.07790296656908813,
+          "std_ddof": 0,
+          "min": 0.4204500592183182,
+          "max": 0.6808367071524967,
+          "n_fits": 20
+        },
+        "observation_recall": {
+          "mean": 0.912338160902433,
+          "median": 0.9213128059344985,
+          "standard_deviation": 0.07583975303855754,
+          "std_ddof": 0,
+          "min": 0.7430972388955582,
+          "max": 1.0,
+          "n_fits": 20
+        },
+        "observation_f1": {
+          "mean": 0.6750360607285988,
+          "median": 0.6647890226496056,
+          "standard_deviation": 0.05506188474092176,
+          "std_ddof": 0,
+          "min": 0.5919955530850473,
+          "max": 0.7888975762314308,
+          "n_fits": 20
+        },
+        "positive_group_macro_recall": {
+          "mean": 0.8822886773896512,
+          "median": 0.9004929075552335,
+          "standard_deviation": 0.10094906034198906,
+          "std_ddof": 0,
+          "min": 0.640457328625442,
+          "max": 1.0,
+          "n_fits": 20
+        },
+        "negative_group_macro_specificity": {
+          "mean": 0.6678981399564867,
+          "median": 0.6856923127173173,
+          "standard_deviation": 0.1330859152618565,
+          "std_ddof": 0,
+          "min": 0.40199142244802283,
+          "max": 0.8672933413871878,
+          "n_fits": 20
+        }
+      }
+    },
+    "8": {
+      "fit_ids": [
+        "A-f0-K8-r1",
+        "A-f0-K8-r2",
+        "A-f0-K8-r3",
+        "A-f0-K8-r4",
+        "A-f0-K8-r5",
+        "A-f1-K8-r1",
+        "A-f1-K8-r2",
+        "A-f1-K8-r3",
+        "A-f1-K8-r4",
+        "A-f1-K8-r5",
+        "A-f2-K8-r1",
+        "A-f2-K8-r2",
+        "A-f2-K8-r3",
+        "A-f2-K8-r4",
+        "A-f2-K8-r5",
+        "A-f3-K8-r1",
+        "A-f3-K8-r2",
+        "A-f3-K8-r3",
+        "A-f3-K8-r4",
+        "A-f3-K8-r5"
+      ],
+      "global": {
+        "mean": 0.7688974484656079,
+        "median": 0.7608237515067724,
+        "standard_deviation": 0.045814330661687906,
+        "std_ddof": 0,
+        "min": 0.6962321244827205,
+        "max": 0.8569734489978911,
+        "n_fits": 20
+      },
+      "per_acquisition": {
+        "bottom_up_anti_parallel": {
+          "mean": 0.7829317268278901,
+          "median": 0.7845774534917598,
+          "standard_deviation": 0.05244488722331653,
+          "std_ddof": 0,
+          "min": 0.6878431898332654,
+          "max": 0.8715125156815828,
+          "n_fits": 20
+        },
+        "top_down_parallel": {
+          "mean": 0.7267946133787611,
+          "median": 0.7190074814642474,
+          "standard_deviation": 0.05367698157926943,
+          "std_ddof": 0,
+          "min": 0.6263325152065543,
+          "max": 0.8262892639474919,
+          "n_fits": 20
+        }
+      },
+      "secondary_statistics": {
+        "observation_balanced_accuracy": {
+          "mean": 0.73730036497741,
+          "median": 0.7321115839078867,
+          "standard_deviation": 0.0458030379891515,
+          "std_ddof": 0,
+          "min": 0.6683837130560062,
+          "max": 0.8165875045670442,
+          "n_fits": 20
+        },
+        "observation_accuracy": {
+          "mean": 0.7006083398671832,
+          "median": 0.6913126796550624,
+          "standard_deviation": 0.06394500591035775,
+          "std_ddof": 0,
+          "min": 0.5825442568958419,
+          "max": 0.8099794941900205,
+          "n_fits": 20
+        },
+        "observation_precision": {
+          "mean": 0.5567219108215762,
+          "median": 0.5292566600509367,
+          "standard_deviation": 0.07014290482503283,
+          "std_ddof": 0,
+          "min": 0.4654255319148936,
+          "max": 0.6880669923237962,
+          "n_fits": 20
+        },
+        "observation_recall": {
+          "mean": 0.8749038394149945,
+          "median": 0.8900612289525476,
+          "standard_deviation": 0.06540068216398108,
+          "std_ddof": 0,
+          "min": 0.7574349442379182,
+          "max": 0.9898190045248869,
+          "n_fits": 20
+        },
+        "observation_f1": {
+          "mean": 0.6763163046081514,
+          "median": 0.6670993523785402,
+          "standard_deviation": 0.05072969594929227,
+          "std_ddof": 0,
+          "min": 0.5914396887159533,
+          "max": 0.7859705061777601,
+          "n_fits": 20
+        },
+        "positive_group_macro_recall": {
+          "mean": 0.8347476189806688,
+          "median": 0.812517073122185,
+          "standard_deviation": 0.07102268144996239,
+          "std_ddof": 0,
+          "min": 0.7171018677260254,
+          "max": 0.9841207446193667,
+          "n_fits": 20
+        },
+        "negative_group_macro_specificity": {
+          "mean": 0.703047277950547,
+          "median": 0.7010979867008884,
+          "standard_deviation": 0.09325666498717633,
+          "std_ddof": 0,
+          "min": 0.5367222215183693,
+          "max": 0.8579178506845776,
+          "n_fits": 20
+        }
+      }
+    },
+    "12": {
+      "fit_ids": [
+        "A-f0-K12-r1",
+        "A-f0-K12-r2",
+        "A-f0-K12-r3",
+        "A-f0-K12-r4",
+        "A-f0-K12-r5",
+        "A-f1-K12-r1",
+        "A-f1-K12-r2",
+        "A-f1-K12-r3",
+        "A-f1-K12-r4",
+        "A-f1-K12-r5",
+        "A-f2-K12-r1",
+        "A-f2-K12-r2",
+        "A-f2-K12-r3",
+        "A-f2-K12-r4",
+        "A-f2-K12-r5",
+        "A-f3-K12-r1",
+        "A-f3-K12-r2",
+        "A-f3-K12-r3",
+        "A-f3-K12-r4",
+        "A-f3-K12-r5"
+      ],
+      "global": {
+        "mean": 0.7784961861373184,
+        "median": 0.7953687594726151,
+        "standard_deviation": 0.05012624611063986,
+        "std_ddof": 0,
+        "min": 0.6934679350361928,
+        "max": 0.846219076989327,
+        "n_fits": 20
+      },
+      "per_acquisition": {
+        "bottom_up_anti_parallel": {
+          "mean": 0.7920570823988783,
+          "median": 0.8155740594529017,
+          "standard_deviation": 0.06166233294963301,
+          "std_ddof": 0,
+          "min": 0.6806912205850878,
+          "max": 0.859893337190403,
+          "n_fits": 20
+        },
+        "top_down_parallel": {
+          "mean": 0.7378134973526389,
+          "median": 0.7436488590412462,
+          "standard_deviation": 0.049373146847625074,
+          "std_ddof": 0,
+          "min": 0.6362688023950982,
+          "max": 0.822867938662569,
+          "n_fits": 20
+        }
+      },
+      "secondary_statistics": {
+        "observation_balanced_accuracy": {
+          "mean": 0.7510671869918475,
+          "median": 0.7584124152557289,
+          "standard_deviation": 0.041262435303437275,
+          "std_ddof": 0,
+          "min": 0.68125613202712,
+          "max": 0.8155395937639269,
+          "n_fits": 20
+        },
+        "observation_accuracy": {
+          "mean": 0.7190260256927056,
+          "median": 0.7300914808409353,
+          "standard_deviation": 0.05890242164351161,
+          "std_ddof": 0,
+          "min": 0.6055990119390696,
+          "max": 0.8038277511961722,
+          "n_fits": 20
+        },
+        "observation_precision": {
+          "mean": 0.573375457809082,
+          "median": 0.5712564543889844,
+          "standard_deviation": 0.06357131162404096,
+          "std_ddof": 0,
+          "min": 0.47909604519774013,
+          "max": 0.6788866259334692,
+          "n_fits": 20
+        },
+        "observation_recall": {
+          "mean": 0.8759512388489773,
+          "median": 0.8646255614055744,
+          "standard_deviation": 0.05701745568584131,
+          "std_ddof": 0,
+          "min": 0.7690140845070422,
+          "max": 0.9864253393665159,
+          "n_fits": 20
+        },
+        "observation_f1": {
+          "mean": 0.6899647397859197,
+          "median": 0.6818360410113715,
+          "standard_deviation": 0.04714961982221021,
+          "std_ddof": 0,
+          "min": 0.6249523082792827,
+          "max": 0.7846214201647705,
+          "n_fits": 20
+        },
+        "positive_group_macro_recall": {
+          "mean": 0.8342705727857045,
+          "median": 0.8094843376895445,
+          "standard_deviation": 0.07766279160977846,
+          "std_ddof": 0,
+          "min": 0.7182129505169951,
+          "max": 0.9910179640718563,
+          "n_fits": 20
+        },
+        "negative_group_macro_specificity": {
+          "mean": 0.7227217994889324,
+          "median": 0.7528818497321279,
+          "standard_deviation": 0.08267935187693462,
+          "std_ddof": 0,
+          "min": 0.5602304735412426,
+          "max": 0.8473079738224404,
+          "n_fits": 20
+        }
+      }
+    },
+    "17": {
+      "fit_ids": [
+        "A-f0-K17-r1",
+        "A-f0-K17-r2",
+        "A-f0-K17-r3",
+        "A-f0-K17-r4",
+        "A-f0-K17-r5",
+        "A-f1-K17-r1",
+        "A-f1-K17-r2",
+        "A-f1-K17-r3",
+        "A-f1-K17-r4",
+        "A-f1-K17-r5",
+        "A-f2-K17-r1",
+        "A-f2-K17-r2",
+        "A-f2-K17-r3",
+        "A-f2-K17-r4",
+        "A-f2-K17-r5",
+        "A-f3-K17-r1",
+        "A-f3-K17-r2",
+        "A-f3-K17-r3",
+        "A-f3-K17-r4",
+        "A-f3-K17-r5"
+      ],
+      "global": {
+        "mean": 0.7747648777763951,
+        "median": 0.7892912262889599,
+        "standard_deviation": 0.0508080574612241,
+        "std_ddof": 0,
+        "min": 0.691942552541948,
+        "max": 0.850423905571014,
+        "n_fits": 20
+      },
+      "per_acquisition": {
+        "bottom_up_anti_parallel": {
+          "mean": 0.7876662220021273,
+          "median": 0.811225779618866,
+          "standard_deviation": 0.061500498357234305,
+          "std_ddof": 0,
+          "min": 0.6807040432717588,
+          "max": 0.8616226374423837,
+          "n_fits": 20
+        },
+        "top_down_parallel": {
+          "mean": 0.7360608450991981,
+          "median": 0.7377519734300781,
+          "standard_deviation": 0.046315510233376954,
+          "std_ddof": 0,
+          "min": 0.6347833485992863,
+          "max": 0.816827709956905,
+          "n_fits": 20
+        }
+      },
+      "secondary_statistics": {
+        "observation_balanced_accuracy": {
+          "mean": 0.7495500867416068,
+          "median": 0.7494947873788749,
+          "standard_deviation": 0.042075557900245315,
+          "std_ddof": 0,
+          "min": 0.65,
+          "max": 0.8162502459177652,
+          "n_fits": 20
+        },
+        "observation_accuracy": {
+          "mean": 0.7219600626948186,
+          "median": 0.715179116286109,
+          "standard_deviation": 0.050807732849749175,
+          "std_ddof": 0,
+          "min": 0.6319473034170441,
+          "max": 0.8058783321941216,
+          "n_fits": 20
+        },
+        "observation_precision": {
+          "mean": 0.5756083565395541,
+          "median": 0.5670274346744935,
+          "standard_deviation": 0.05516688024906762,
+          "std_ddof": 0,
+          "min": 0.49713302752293576,
+          "max": 0.6815286624203821,
+          "n_fits": 20
+        },
+        "observation_recall": {
+          "mean": 0.857429090615492,
+          "median": 0.8559423769507803,
+          "standard_deviation": 0.06684164047952428,
+          "std_ddof": 0,
+          "min": 0.671003717472119,
+          "max": 0.9807692307692307,
+          "n_fits": 20
+        },
+        "observation_f1": {
+          "mean": 0.6865290734797943,
+          "median": 0.6859854970350332,
+          "standard_deviation": 0.04731882446181511,
+          "std_ddof": 0,
+          "min": 0.6221060492905153,
+          "max": 0.7887323943661971,
+          "n_fits": 20
+        },
+        "positive_group_macro_recall": {
+          "mean": 0.8137355020355181,
+          "median": 0.7927231714977205,
+          "standard_deviation": 0.07706321098014307,
+          "std_ddof": 0,
+          "min": 0.7146236954637705,
+          "max": 0.9781327206672709,
+          "n_fits": 20
+        },
+        "negative_group_macro_specificity": {
+          "mean": 0.7357942535172719,
+          "median": 0.7409150897603177,
+          "standard_deviation": 0.06989082679344207,
+          "std_ddof": 0,
+          "min": 0.6027925370151088,
+          "max": 0.8515790493412555,
+          "n_fits": 20
+        }
+      }
+    },
+    "24": {
+      "fit_ids": [
+        "A-f0-K24-all",
+        "A-f1-K24-all",
+        "A-f2-K24-all",
+        "A-f3-K24-all"
+      ],
+      "global": {
+        "mean": 0.7786692086875789,
+        "median": 0.7921987463147802,
+        "standard_deviation": 0.04780064371336571,
+        "std_ddof": 0,
+        "min": 0.7012354167597799,
+        "max": 0.8290439253609755,
+        "n_fits": 4
+      },
+      "per_acquisition": {
+        "bottom_up_anti_parallel": {
+          "mean": 0.7948649927268563,
+          "median": 0.8150164986931678,
+          "standard_deviation": 0.058106947177657714,
+          "std_ddof": 0,
+          "min": 0.6976441361774344,
+          "max": 0.8517828373436551,
+          "n_fits": 4
+        },
+        "top_down_parallel": {
+          "mean": 0.7300818565697469,
+          "median": 0.7364182239598767,
+          "standard_deviation": 0.03423098126907633,
+          "std_ddof": 0,
+          "min": 0.6829113924050633,
+          "max": 0.7645795859541712,
+          "n_fits": 4
+        }
+      },
+      "secondary_statistics": {
+        "observation_balanced_accuracy": {
+          "mean": 0.742991812579692,
+          "median": 0.7365414441567106,
+          "standard_deviation": 0.0369376705566565,
+          "std_ddof": 0,
+          "min": 0.6996998052394968,
+          "max": 0.7991845567658502,
+          "n_fits": 4
+        },
+        "observation_accuracy": {
+          "mean": 0.7056720128156831,
+          "median": 0.7079893263340005,
+          "standard_deviation": 0.05662406726859922,
+          "std_ddof": 0,
+          "min": 0.6278303828736106,
+          "max": 0.778879015721121,
+          "n_fits": 4
+        },
+        "observation_precision": {
+          "mean": 0.5590914954576882,
+          "median": 0.5476933924254633,
+          "standard_deviation": 0.05865220157696423,
+          "std_ddof": 0,
+          "min": 0.494199535962877,
+          "max": 0.6467796610169492,
+          "n_fits": 4
+        },
+        "observation_recall": {
+          "mean": 0.8878041586650005,
+          "median": 0.8705385971342304,
+          "standard_deviation": 0.04639002889714275,
+          "std_ddof": 0,
+          "min": 0.8463385354141657,
+          "max": 0.9638009049773756,
+          "n_fits": 4
+        },
+        "observation_f1": {
+          "mean": 0.6832144680770291,
+          "median": 0.6694192507404017,
+          "standard_deviation": 0.040200482738985424,
+          "std_ddof": 0,
+          "min": 0.6460773872914448,
+          "max": 0.7479419835358683,
+          "n_fits": 4
+        },
+        "positive_group_macro_recall": {
+          "mean": 0.8543041565921643,
+          "median": 0.8494738816366119,
+          "standard_deviation": 0.08100355149614587,
+          "std_ddof": 0,
+          "min": 0.7600467541831839,
+          "max": 0.9582221089122495,
+          "n_fits": 4
+        },
+        "negative_group_macro_specificity": {
+          "mean": 0.7030342607829936,
+          "median": 0.6969790531518878,
+          "standard_deviation": 0.08377507785315795,
+          "std_ddof": 0,
+          "min": 0.6042708102864427,
+          "max": 0.8139081265417559,
+          "n_fits": 4
+        }
+      }
+    }
+  },
+  "contrasts": {
+    "K24_MINUS_K4": {
+      "global": {
+        "mean": 0.0035758000145099554,
+        "median": 0.0008605457837255193,
+        "standard_deviation": 0.03275047057985742,
+        "std_ddof": 0,
+        "min": -0.0676940458802553,
+        "max": 0.07224462967883605,
+        "n_fits": 20,
+        "mean_paired_delta": 0.0035758000145099554,
+        "median_paired_delta": 0.0008605457837255193,
+        "positive_delta_count": 11,
+        "zero_delta_count": 0,
+        "negative_delta_count": 9,
+        "paired_deltas": [
+          {
+            "fold": 0,
+            "replicate": 1,
+            "reference_fit_id": "A-f0-K24-all",
+            "comparison_fit_id": "A-f0-K4-r1",
+            "delta": 0.0002397055357684641
+          },
+          {
+            "fold": 0,
+            "replicate": 2,
+            "reference_fit_id": "A-f0-K24-all",
+            "comparison_fit_id": "A-f0-K4-r2",
+            "delta": -0.02431858329774861
+          },
+          {
+            "fold": 0,
+            "replicate": 3,
+            "reference_fit_id": "A-f0-K24-all",
+            "comparison_fit_id": "A-f0-K4-r3",
+            "delta": -0.04064659877729815
+          },
+          {
+            "fold": 0,
+            "replicate": 4,
+            "reference_fit_id": "A-f0-K24-all",
+            "comparison_fit_id": "A-f0-K4-r4",
+            "delta": -0.00586162572521276
+          },
+          {
+            "fold": 0,
+            "replicate": 5,
+            "reference_fit_id": "A-f0-K24-all",
+            "comparison_fit_id": "A-f0-K4-r5",
+            "delta": -0.0676940458802553
+          },
+          {
+            "fold": 1,
+            "replicate": 1,
+            "reference_fit_id": "A-f1-K24-all",
+            "comparison_fit_id": "A-f1-K4-r1",
+            "delta": -0.008536417433851473
+          },
+          {
+            "fold": 1,
+            "replicate": 2,
+            "reference_fit_id": "A-f1-K24-all",
+            "comparison_fit_id": "A-f1-K4-r2",
+            "delta": 0.03939596878833673
+          },
+          {
+            "fold": 1,
+            "replicate": 3,
+            "reference_fit_id": "A-f1-K24-all",
+            "comparison_fit_id": "A-f1-K4-r3",
+            "delta": -0.012280133184939812
+          },
+          {
+            "fold": 1,
+            "replicate": 4,
+            "reference_fit_id": "A-f1-K24-all",
+            "comparison_fit_id": "A-f1-K4-r4",
+            "delta": 0.024345470734898345
+          },
+          {
+            "fold": 1,
+            "replicate": 5,
+            "reference_fit_id": "A-f1-K24-all",
+            "comparison_fit_id": "A-f1-K4-r5",
+            "delta": 0.06625354929098848
+          },
+          {
+            "fold": 2,
+            "replicate": 1,
+            "reference_fit_id": "A-f2-K24-all",
+            "comparison_fit_id": "A-f2-K4-r1",
+            "delta": -0.027844628930876025
+          },
+          {
+            "fold": 2,
+            "replicate": 2,
+            "reference_fit_id": "A-f2-K24-all",
+            "comparison_fit_id": "A-f2-K4-r2",
+            "delta": 0.029919266924876897
+          },
+          {
+            "fold": 2,
+            "replicate": 3,
+            "reference_fit_id": "A-f2-K24-all",
+            "comparison_fit_id": "A-f2-K4-r3",
+            "delta": 0.07224462967883605
+          },
+          {
+            "fold": 2,
+            "replicate": 4,
+            "reference_fit_id": "A-f2-K24-all",
+            "comparison_fit_id": "A-f2-K4-r4",
+            "delta": -0.009748066947248835
+          },
+          {
+            "fold": 2,
+            "replicate": 5,
+            "reference_fit_id": "A-f2-K24-all",
+            "comparison_fit_id": "A-f2-K4-r5",
+            "delta": 0.013602383559817022
+          },
+          {
+            "fold": 3,
+            "replicate": 1,
+            "reference_fit_id": "A-f3-K24-all",
+            "comparison_fit_id": "A-f3-K4-r1",
+            "delta": 0.0182253125829841
+          },
+          {
+            "fold": 3,
+            "replicate": 2,
+            "reference_fit_id": "A-f3-K24-all",
+            "comparison_fit_id": "A-f3-K4-r2",
+            "delta": 0.0057587168472230665
+          },
+          {
+            "fold": 3,
+            "replicate": 3,
+            "reference_fit_id": "A-f3-K24-all",
+            "comparison_fit_id": "A-f3-K4-r3",
+            "delta": 0.015032259319794683
+          },
+          {
+            "fold": 3,
+            "replicate": 4,
+            "reference_fit_id": "A-f3-K24-all",
+            "comparison_fit_id": "A-f3-K4-r4",
+            "delta": 0.0014813860316825744
+          },
+          {
+            "fold": 3,
+            "replicate": 5,
+            "reference_fit_id": "A-f3-K24-all",
+            "comparison_fit_id": "A-f3-K4-r5",
+            "delta": -0.018052548827576342
+          }
+        ],
+        "n_pairs": 20
+      },
+      "per_acquisition": {
+        "bottom_up_anti_parallel": {
+          "mean": -0.0036441695069610093,
+          "median": -0.004712405929946206,
+          "standard_deviation": 0.04307943782152284,
+          "std_ddof": 0,
+          "min": -0.09017879284700836,
+          "max": 0.07565106741988281,
+          "n_fits": 20,
+          "mean_paired_delta": -0.0036441695069610093,
+          "median_paired_delta": -0.004712405929946206,
+          "positive_delta_count": 9,
+          "zero_delta_count": 0,
+          "negative_delta_count": 11,
+          "paired_deltas": [
+            {
+              "fold": 0,
+              "replicate": 1,
+              "reference_fit_id": "A-f0-K24-all",
+              "comparison_fit_id": "A-f0-K4-r1",
+              "delta": -0.04608854207905344
+            },
+            {
+              "fold": 0,
+              "replicate": 2,
+              "reference_fit_id": "A-f0-K24-all",
+              "comparison_fit_id": "A-f0-K4-r2",
+              "delta": -0.011350604539987819
+            },
+            {
+              "fold": 0,
+              "replicate": 3,
+              "reference_fit_id": "A-f0-K24-all",
+              "comparison_fit_id": "A-f0-K4-r3",
+              "delta": -0.09017879284700836
+            },
+            {
+              "fold": 0,
+              "replicate": 4,
+              "reference_fit_id": "A-f0-K24-all",
+              "comparison_fit_id": "A-f0-K4-r4",
+              "delta": -0.03755698376036165
+            },
+            {
+              "fold": 0,
+              "replicate": 5,
+              "reference_fit_id": "A-f0-K24-all",
+              "comparison_fit_id": "A-f0-K4-r5",
+              "delta": -0.0873903446398554
+            },
+            {
+              "fold": 1,
+              "replicate": 1,
+              "reference_fit_id": "A-f1-K24-all",
+              "comparison_fit_id": "A-f1-K4-r1",
+              "delta": -0.005585346066069086
+            },
+            {
+              "fold": 1,
+              "replicate": 2,
+              "reference_fit_id": "A-f1-K24-all",
+              "comparison_fit_id": "A-f1-K4-r2",
+              "delta": 0.04313462881246011
+            },
+            {
+              "fold": 1,
+              "replicate": 3,
+              "reference_fit_id": "A-f1-K24-all",
+              "comparison_fit_id": "A-f1-K4-r3",
+              "delta": -0.011960223249842583
+            },
+            {
+              "fold": 1,
+              "replicate": 4,
+              "reference_fit_id": "A-f1-K24-all",
+              "comparison_fit_id": "A-f1-K4-r4",
+              "delta": 0.042802936379678025
+            },
+            {
+              "fold": 1,
+              "replicate": 5,
+              "reference_fit_id": "A-f1-K24-all",
+              "comparison_fit_id": "A-f1-K4-r5",
+              "delta": 0.06621296501535223
+            },
+            {
+              "fold": 2,
+              "replicate": 1,
+              "reference_fit_id": "A-f2-K24-all",
+              "comparison_fit_id": "A-f2-K4-r1",
+              "delta": -0.03342186934231062
+            },
+            {
+              "fold": 2,
+              "replicate": 2,
+              "reference_fit_id": "A-f2-K24-all",
+              "comparison_fit_id": "A-f2-K4-r2",
+              "delta": 0.036516828473675766
+            },
+            {
+              "fold": 2,
+              "replicate": 3,
+              "reference_fit_id": "A-f2-K24-all",
+              "comparison_fit_id": "A-f2-K4-r3",
+              "delta": 0.07565106741988281
+            },
+            {
+              "fold": 2,
+              "replicate": 4,
+              "reference_fit_id": "A-f2-K24-all",
+              "comparison_fit_id": "A-f2-K4-r4",
+              "delta": -0.023472029144115614
+            },
+            {
+              "fold": 2,
+              "replicate": 5,
+              "reference_fit_id": "A-f2-K24-all",
+              "comparison_fit_id": "A-f2-K4-r5",
+              "delta": 0.009064781455283666
+            },
+            {
+              "fold": 3,
+              "replicate": 1,
+              "reference_fit_id": "A-f3-K24-all",
+              "comparison_fit_id": "A-f3-K4-r1",
+              "delta": -0.022768561972147827
+            },
+            {
+              "fold": 3,
+              "replicate": 2,
+              "reference_fit_id": "A-f3-K24-all",
+              "comparison_fit_id": "A-f3-K4-r2",
+              "delta": 0.013424057346306029
+            },
+            {
+              "fold": 3,
+              "replicate": 3,
+              "reference_fit_id": "A-f3-K24-all",
+              "comparison_fit_id": "A-f3-K4-r3",
+              "delta": 0.0005770872011993111
+            },
+            {
+              "fold": 3,
+              "replicate": 4,
+              "reference_fit_id": "A-f3-K24-all",
+              "comparison_fit_id": "A-f3-K4-r4",
+              "delta": 0.013345021191517592
+            },
+            {
+              "fold": 3,
+              "replicate": 5,
+              "reference_fit_id": "A-f3-K24-all",
+              "comparison_fit_id": "A-f3-K4-r5",
+              "delta": -0.0038394657938233268
+            }
+          ],
+          "n_pairs": 20
+        },
+        "top_down_parallel": {
+          "mean": 0.02523570857892307,
+          "median": 0.018670886075949356,
+          "standard_deviation": 0.05969388767385163,
+          "std_ddof": 0,
+          "min": -0.06322251957103098,
+          "max": 0.14120693624837966,
+          "n_fits": 20,
+          "mean_paired_delta": 0.02523570857892307,
+          "median_paired_delta": 0.018670886075949356,
+          "positive_delta_count": 11,
+          "zero_delta_count": 0,
+          "negative_delta_count": 9,
+          "paired_deltas": [
+            {
+              "fold": 0,
+              "replicate": 1,
+              "reference_fit_id": "A-f0-K24-all",
+              "comparison_fit_id": "A-f0-K4-r1",
+              "delta": 0.1392244483802345
+            },
+            {
+              "fold": 0,
+              "replicate": 2,
+              "reference_fit_id": "A-f0-K24-all",
+              "comparison_fit_id": "A-f0-K4-r2",
+              "delta": -0.06322251957103098
+            },
+            {
+              "fold": 0,
+              "replicate": 3,
+              "reference_fit_id": "A-f0-K24-all",
+              "comparison_fit_id": "A-f0-K4-r3",
+              "delta": 0.10794998343183326
+            },
+            {
+              "fold": 0,
+              "replicate": 4,
+              "reference_fit_id": "A-f0-K24-all",
+              "comparison_fit_id": "A-f0-K4-r4",
+              "delta": 0.08922444838023447
+            },
+            {
+              "fold": 0,
+              "replicate": 5,
+              "reference_fit_id": "A-f0-K24-all",
+              "comparison_fit_id": "A-f0-K4-r5",
+              "delta": -0.008605149601454865
+            },
+            {
+              "fold": 1,
+              "replicate": 1,
+              "reference_fit_id": "A-f1-K24-all",
+              "comparison_fit_id": "A-f1-K4-r1",
+              "delta": -0.017389631537198302
+            },
+            {
+              "fold": 1,
+              "replicate": 2,
+              "reference_fit_id": "A-f1-K24-all",
+              "comparison_fit_id": "A-f1-K4-r2",
+              "delta": 0.028179988715966275
+            },
+            {
+              "fold": 1,
+              "replicate": 3,
+              "reference_fit_id": "A-f1-K24-all",
+              "comparison_fit_id": "A-f1-K4-r3",
+              "delta": -0.01323986299023161
+            },
+            {
+              "fold": 1,
+              "replicate": 4,
+              "reference_fit_id": "A-f1-K24-all",
+              "comparison_fit_id": "A-f1-K4-r4",
+              "delta": -0.031026926199440585
+            },
+            {
+              "fold": 1,
+              "replicate": 5,
+              "reference_fit_id": "A-f1-K24-all",
+              "comparison_fit_id": "A-f1-K4-r5",
+              "delta": 0.06637530211789766
+            },
+            {
+              "fold": 2,
+              "replicate": 1,
+              "reference_fit_id": "A-f2-K24-all",
+              "comparison_fit_id": "A-f2-K4-r1",
+              "delta": -0.011112907696572027
+            },
+            {
+              "fold": 2,
+              "replicate": 2,
+              "reference_fit_id": "A-f2-K24-all",
+              "comparison_fit_id": "A-f2-K4-r2",
+              "delta": 0.010126582278480956
+            },
+            {
+              "fold": 2,
+              "replicate": 3,
+              "reference_fit_id": "A-f2-K24-all",
+              "comparison_fit_id": "A-f2-K4-r3",
+              "delta": 0.0620253164556962
+            },
+            {
+              "fold": 2,
+              "replicate": 4,
+              "reference_fit_id": "A-f2-K24-all",
+              "comparison_fit_id": "A-f2-K4-r4",
+              "delta": 0.03142381964335217
+            },
+            {
+              "fold": 2,
+              "replicate": 5,
+              "reference_fit_id": "A-f2-K24-all",
+              "comparison_fit_id": "A-f2-K4-r5",
+              "delta": 0.027215189873417756
+            },
+            {
+              "fold": 3,
+              "replicate": 1,
+              "reference_fit_id": "A-f3-K24-all",
+              "comparison_fit_id": "A-f3-K4-r1",
+              "delta": 0.14120693624837966
+            },
+            {
+              "fold": 3,
+              "replicate": 2,
+              "reference_fit_id": "A-f3-K24-all",
+              "comparison_fit_id": "A-f3-K4-r2",
+              "delta": -0.01723730465002582
+            },
+            {
+              "fold": 3,
+              "replicate": 3,
+              "reference_fit_id": "A-f3-K24-all",
+              "comparison_fit_id": "A-f3-K4-r3",
+              "delta": 0.05839777567558113
+            },
+            {
+              "fold": 3,
+              "replicate": 4,
+              "reference_fit_id": "A-f3-K24-all",
+              "comparison_fit_id": "A-f3-K4-r4",
+              "delta": -0.03410951944782292
+            },
+            {
+              "fold": 3,
+              "replicate": 5,
+              "reference_fit_id": "A-f3-K24-all",
+              "comparison_fit_id": "A-f3-K4-r5",
+              "delta": -0.0606917979288355
+            }
+          ],
+          "n_pairs": 20
+        }
+      }
+    },
+    "K24_MINUS_K8": {
+      "global": {
+        "mean": 0.009771760221971033,
+        "median": 0.0015151993915666906,
+        "standard_deviation": 0.02991589652178447,
+        "std_ddof": 0,
+        "min": -0.04087767818998278,
+        "max": 0.0681413790862172,
+        "n_fits": 20,
+        "mean_paired_delta": 0.009771760221971033,
+        "median_paired_delta": 0.0015151993915666906,
+        "positive_delta_count": 12,
+        "zero_delta_count": 0,
+        "negative_delta_count": 8,
+        "paired_deltas": [
+          {
+            "fold": 0,
+            "replicate": 1,
+            "reference_fit_id": "A-f0-K24-all",
+            "comparison_fit_id": "A-f0-K8-r1",
+            "delta": -0.013157084446804745
+          },
+          {
+            "fold": 0,
+            "replicate": 2,
+            "reference_fit_id": "A-f0-K24-all",
+            "comparison_fit_id": "A-f0-K8-r2",
+            "delta": 0.0050032922770593125
+          },
+          {
+            "fold": 0,
+            "replicate": 3,
+            "reference_fit_id": "A-f0-K24-all",
+            "comparison_fit_id": "A-f0-K8-r3",
+            "delta": -0.04087767818998278
+          },
+          {
+            "fold": 0,
+            "replicate": 4,
+            "reference_fit_id": "A-f0-K24-all",
+            "comparison_fit_id": "A-f0-K8-r4",
+            "delta": 0.0015904826840216213
+          },
+          {
+            "fold": 0,
+            "replicate": 5,
+            "reference_fit_id": "A-f0-K24-all",
+            "comparison_fit_id": "A-f0-K8-r5",
+            "delta": -0.015608962477050237
+          },
+          {
+            "fold": 1,
+            "replicate": 1,
+            "reference_fit_id": "A-f1-K24-all",
+            "comparison_fit_id": "A-f1-K8-r1",
+            "delta": -0.010298384821213702
+          },
+          {
+            "fold": 1,
+            "replicate": 2,
+            "reference_fit_id": "A-f1-K24-all",
+            "comparison_fit_id": "A-f1-K8-r2",
+            "delta": 0.042406076291427675
+          },
+          {
+            "fold": 1,
+            "replicate": 3,
+            "reference_fit_id": "A-f1-K24-all",
+            "comparison_fit_id": "A-f1-K8-r3",
+            "delta": 0.0012120254096814609
+          },
+          {
+            "fold": 1,
+            "replicate": 4,
+            "reference_fit_id": "A-f1-K24-all",
+            "comparison_fit_id": "A-f1-K8-r4",
+            "delta": -0.017537745252967918
+          },
+          {
+            "fold": 1,
+            "replicate": 5,
+            "reference_fit_id": "A-f1-K24-all",
+            "comparison_fit_id": "A-f1-K8-r5",
+            "delta": 0.01880243123567582
+          },
+          {
+            "fold": 2,
+            "replicate": 1,
+            "reference_fit_id": "A-f2-K24-all",
+            "comparison_fit_id": "A-f2-K8-r1",
+            "delta": 0.037705576557999776
+          },
+          {
+            "fold": 2,
+            "replicate": 2,
+            "reference_fit_id": "A-f2-K24-all",
+            "comparison_fit_id": "A-f2-K8-r2",
+            "delta": 0.02082497653047799
+          },
+          {
+            "fold": 2,
+            "replicate": 3,
+            "reference_fit_id": "A-f2-K24-all",
+            "comparison_fit_id": "A-f2-K8-r3",
+            "delta": 0.04721219142653321
+          },
+          {
+            "fold": 2,
+            "replicate": 4,
+            "reference_fit_id": "A-f2-K24-all",
+            "comparison_fit_id": "A-f2-K8-r4",
+            "delta": 0.0460346905721829
+          },
+          {
+            "fold": 2,
+            "replicate": 5,
+            "reference_fit_id": "A-f2-K24-all",
+            "comparison_fit_id": "A-f2-K8-r5",
+            "delta": -0.02209006090803478
+          },
+          {
+            "fold": 3,
+            "replicate": 1,
+            "reference_fit_id": "A-f3-K24-all",
+            "comparison_fit_id": "A-f3-K8-r1",
+            "delta": 0.0014399160991117599
+          },
+          {
+            "fold": 3,
+            "replicate": 2,
+            "reference_fit_id": "A-f3-K24-all",
+            "comparison_fit_id": "A-f3-K8-r2",
+            "delta": 0.0681413790862172
+          },
+          {
+            "fold": 3,
+            "replicate": 3,
+            "reference_fit_id": "A-f3-K24-all",
+            "comparison_fit_id": "A-f3-K8-r3",
+            "delta": 0.05481567161202727
+          },
+          {
+            "fold": 3,
+            "replicate": 4,
+            "reference_fit_id": "A-f3-K24-all",
+            "comparison_fit_id": "A-f3-K8-r4",
+            "delta": -0.027929523636915587
+          },
+          {
+            "fold": 3,
+            "replicate": 5,
+            "reference_fit_id": "A-f3-K24-all",
+            "comparison_fit_id": "A-f3-K8-r5",
+            "delta": -0.002254065610025613
+          }
+        ],
+        "n_pairs": 20
+      },
+      "per_acquisition": {
+        "bottom_up_anti_parallel": {
+          "mean": 0.01193326589896615,
+          "median": 0.007797024590992463,
+          "standard_deviation": 0.03537013245297885,
+          "std_ddof": 0,
+          "min": -0.05296797892311267,
+          "max": 0.09199807478157607,
+          "n_fits": 20,
+          "mean_paired_delta": 0.01193326589896615,
+          "median_paired_delta": 0.007797024590992463,
+          "positive_delta_count": 13,
+          "zero_delta_count": 0,
+          "negative_delta_count": 7,
+          "paired_deltas": [
+            {
+              "fold": 0,
+              "replicate": 1,
+              "reference_fit_id": "A-f0-K24-all",
+              "comparison_fit_id": "A-f0-K8-r1",
+              "delta": -0.006164270679427708
+            },
+            {
+              "fold": 0,
+              "replicate": 2,
+              "reference_fit_id": "A-f0-K24-all",
+              "comparison_fit_id": "A-f0-K8-r2",
+              "delta": 0.009800946344168948
+            },
+            {
+              "fold": 0,
+              "replicate": 3,
+              "reference_fit_id": "A-f0-K24-all",
+              "comparison_fit_id": "A-f0-K8-r3",
+              "delta": -0.05296797892311267
+            },
+            {
+              "fold": 0,
+              "replicate": 4,
+              "reference_fit_id": "A-f0-K24-all",
+              "comparison_fit_id": "A-f0-K8-r4",
+              "delta": 0.0019150257641871171
+            },
+            {
+              "fold": 0,
+              "replicate": 5,
+              "reference_fit_id": "A-f0-K24-all",
+              "comparison_fit_id": "A-f0-K8-r5",
+              "delta": -0.025251612589822447
+            },
+            {
+              "fold": 1,
+              "replicate": 1,
+              "reference_fit_id": "A-f1-K24-all",
+              "comparison_fit_id": "A-f1-K8-r1",
+              "delta": -0.011544991344325073
+            },
+            {
+              "fold": 1,
+              "replicate": 2,
+              "reference_fit_id": "A-f1-K24-all",
+              "comparison_fit_id": "A-f1-K8-r2",
+              "delta": 0.04365997823559642
+            },
+            {
+              "fold": 1,
+              "replicate": 3,
+              "reference_fit_id": "A-f1-K24-all",
+              "comparison_fit_id": "A-f1-K8-r3",
+              "delta": 0.00516154335555663
+            },
+            {
+              "fold": 1,
+              "replicate": 4,
+              "reference_fit_id": "A-f1-K24-all",
+              "comparison_fit_id": "A-f1-K8-r4",
+              "delta": -0.018893229421272695
+            },
+            {
+              "fold": 1,
+              "replicate": 5,
+              "reference_fit_id": "A-f1-K24-all",
+              "comparison_fit_id": "A-f1-K8-r5",
+              "delta": 0.005793102837815978
+            },
+            {
+              "fold": 2,
+              "replicate": 1,
+              "reference_fit_id": "A-f2-K24-all",
+              "comparison_fit_id": "A-f2-K8-r1",
+              "delta": 0.046898574651172864
+            },
+            {
+              "fold": 2,
+              "replicate": 2,
+              "reference_fit_id": "A-f2-K24-all",
+              "comparison_fit_id": "A-f2-K8-r2",
+              "delta": 0.0172181121672198
+            },
+            {
+              "fold": 2,
+              "replicate": 3,
+              "reference_fit_id": "A-f2-K24-all",
+              "comparison_fit_id": "A-f2-K8-r3",
+              "delta": 0.06702741727098804
+            },
+            {
+              "fold": 2,
+              "replicate": 4,
+              "reference_fit_id": "A-f2-K24-all",
+              "comparison_fit_id": "A-f2-K8-r4",
+              "delta": 0.042519961696741104
+            },
+            {
+              "fold": 2,
+              "replicate": 5,
+              "reference_fit_id": "A-f2-K24-all",
+              "comparison_fit_id": "A-f2-K8-r5",
+              "delta": -0.03725932171704205
+            },
+            {
+              "fold": 3,
+              "replicate": 1,
+              "reference_fit_id": "A-f3-K24-all",
+              "comparison_fit_id": "A-f3-K8-r1",
+              "delta": 0.011675541122857624
+            },
+            {
+              "fold": 3,
+              "replicate": 2,
+              "reference_fit_id": "A-f3-K24-all",
+              "comparison_fit_id": "A-f3-K8-r2",
+              "delta": 0.09199807478157607
+            },
+            {
+              "fold": 3,
+              "replicate": 3,
+              "reference_fit_id": "A-f3-K24-all",
+              "comparison_fit_id": "A-f3-K8-r3",
+              "delta": 0.047992852066221836
+            },
+            {
+              "fold": 3,
+              "replicate": 4,
+              "reference_fit_id": "A-f3-K24-all",
+              "comparison_fit_id": "A-f3-K8-r4",
+              "delta": -0.019729678337927714
+            },
+            {
+              "fold": 3,
+              "replicate": 5,
+              "reference_fit_id": "A-f3-K24-all",
+              "comparison_fit_id": "A-f3-K8-r5",
+              "delta": 0.01881527069815092
+            }
+          ],
+          "n_pairs": 20
+        },
+        "top_down_parallel": {
+          "mean": 0.0032872431909859333,
+          "median": -0.004017741995226254,
+          "standard_deviation": 0.03535212378021582,
+          "std_ddof": 0,
+          "min": -0.06546207453455533,
+          "max": 0.07528413024944403,
+          "n_fits": 20,
+          "mean_paired_delta": 0.0032872431909859333,
+          "median_paired_delta": -0.004017741995226254,
+          "positive_delta_count": 9,
+          "zero_delta_count": 0,
+          "negative_delta_count": 11,
+          "paired_deltas": [
+            {
+              "fold": 0,
+              "replicate": 1,
+              "reference_fit_id": "A-f0-K24-all",
+              "comparison_fit_id": "A-f0-K8-r1",
+              "delta": -0.03413552574893486
+            },
+            {
+              "fold": 0,
+              "replicate": 2,
+              "reference_fit_id": "A-f0-K24-all",
+              "comparison_fit_id": "A-f0-K8-r2",
+              "delta": -0.009389669924268707
+            },
+            {
+              "fold": 0,
+              "replicate": 3,
+              "reference_fit_id": "A-f0-K24-all",
+              "comparison_fit_id": "A-f0-K8-r3",
+              "delta": -0.004606775990592671
+            },
+            {
+              "fold": 0,
+              "replicate": 4,
+              "reference_fit_id": "A-f0-K24-all",
+              "comparison_fit_id": "A-f0-K8-r4",
+              "delta": 0.0006168534435255779
+            },
+            {
+              "fold": 0,
+              "replicate": 5,
+              "reference_fit_id": "A-f0-K24-all",
+              "comparison_fit_id": "A-f0-K8-r5",
+              "delta": 0.013318987861266729
+            },
+            {
+              "fold": 1,
+              "replicate": 1,
+              "reference_fit_id": "A-f1-K24-all",
+              "comparison_fit_id": "A-f1-K8-r1",
+              "delta": -0.0065585652518797
+            },
+            {
+              "fold": 1,
+              "replicate": 2,
+              "reference_fit_id": "A-f1-K24-all",
+              "comparison_fit_id": "A-f1-K8-r2",
+              "delta": 0.03864437045892133
+            },
+            {
+              "fold": 1,
+              "replicate": 3,
+              "reference_fit_id": "A-f1-K24-all",
+              "comparison_fit_id": "A-f1-K8-r3",
+              "delta": -0.01063652842794427
+            },
+            {
+              "fold": 1,
+              "replicate": 4,
+              "reference_fit_id": "A-f1-K24-all",
+              "comparison_fit_id": "A-f1-K8-r4",
+              "delta": -0.013471292748053254
+            },
+            {
+              "fold": 1,
+              "replicate": 5,
+              "reference_fit_id": "A-f1-K24-all",
+              "comparison_fit_id": "A-f1-K8-r5",
+              "delta": 0.05783041642925513
+            },
+            {
+              "fold": 2,
+              "replicate": 1,
+              "reference_fit_id": "A-f2-K24-all",
+              "comparison_fit_id": "A-f2-K8-r1",
+              "delta": 0.010126582278480956
+            },
+            {
+              "fold": 2,
+              "replicate": 2,
+              "reference_fit_id": "A-f2-K24-all",
+              "comparison_fit_id": "A-f2-K8-r2",
+              "delta": 0.03164556962025311
+            },
+            {
+              "fold": 2,
+              "replicate": 3,
+              "reference_fit_id": "A-f2-K24-all",
+              "comparison_fit_id": "A-f2-K8-r3",
+              "delta": -0.012233486106830727
+            },
+            {
+              "fold": 2,
+              "replicate": 4,
+              "reference_fit_id": "A-f2-K24-all",
+              "comparison_fit_id": "A-f2-K8-r4",
+              "delta": 0.05657887719850896
+            },
+            {
+              "fold": 2,
+              "replicate": 5,
+              "reference_fit_id": "A-f2-K24-all",
+              "comparison_fit_id": "A-f2-K8-r5",
+              "delta": 0.023417721518987356
+            },
+            {
+              "fold": 3,
+              "replicate": 1,
+              "reference_fit_id": "A-f3-K24-all",
+              "comparison_fit_id": "A-f3-K8-r1",
+              "delta": -0.029266958972125723
+            },
+            {
+              "fold": 3,
+              "replicate": 2,
+              "reference_fit_id": "A-f3-K24-all",
+              "comparison_fit_id": "A-f3-K8-r2",
+              "delta": -0.003428707999859837
+            },
+            {
+              "fold": 3,
+              "replicate": 3,
+              "reference_fit_id": "A-f3-K24-all",
+              "comparison_fit_id": "A-f3-K8-r3",
+              "delta": 0.07528413024944403
+            },
+            {
+              "fold": 3,
+              "replicate": 4,
+              "reference_fit_id": "A-f3-K24-all",
+              "comparison_fit_id": "A-f3-K8-r4",
+              "delta": -0.05252905953387943
+            },
+            {
+              "fold": 3,
+              "replicate": 5,
+              "reference_fit_id": "A-f3-K24-all",
+              "comparison_fit_id": "A-f3-K8-r5",
+              "delta": -0.06546207453455533
+            }
+          ],
+          "n_pairs": 20
+        }
+      }
+    },
+    "K24_MINUS_K12": {
+      "global": {
+        "mean": 0.0001730225502605043,
+        "median": -0.002850183507099646,
+        "standard_deviation": 0.018750977977344808,
+        "std_ddof": 0,
+        "min": -0.023911197473250434,
+        "max": 0.064060453143577,
+        "n_fits": 20,
+        "mean_paired_delta": 0.0001730225502605043,
+        "median_paired_delta": -0.002850183507099646,
+        "positive_delta_count": 8,
+        "zero_delta_count": 0,
+        "negative_delta_count": 12,
+        "paired_deltas": [
+          {
+            "fold": 0,
+            "replicate": 1,
+            "reference_fit_id": "A-f0-K24-all",
+            "comparison_fit_id": "A-f0-K12-r1",
+            "delta": -0.01886187160768671
+          },
+          {
+            "fold": 0,
+            "replicate": 2,
+            "reference_fit_id": "A-f0-K24-all",
+            "comparison_fit_id": "A-f0-K12-r2",
+            "delta": 0.0070772070862828995
+          },
+          {
+            "fold": 0,
+            "replicate": 3,
+            "reference_fit_id": "A-f0-K24-all",
+            "comparison_fit_id": "A-f0-K12-r3",
+            "delta": -0.023911197473250434
+          },
+          {
+            "fold": 0,
+            "replicate": 4,
+            "reference_fit_id": "A-f0-K24-all",
+            "comparison_fit_id": "A-f0-K12-r4",
+            "delta": 0.0077674817235871
+          },
+          {
+            "fold": 0,
+            "replicate": 5,
+            "reference_fit_id": "A-f0-K24-all",
+            "comparison_fit_id": "A-f0-K12-r5",
+            "delta": -0.003928637648521027
+          },
+          {
+            "fold": 1,
+            "replicate": 1,
+            "reference_fit_id": "A-f1-K24-all",
+            "comparison_fit_id": "A-f1-K12-r1",
+            "delta": -0.00838856244630326
+          },
+          {
+            "fold": 1,
+            "replicate": 2,
+            "reference_fit_id": "A-f1-K24-all",
+            "comparison_fit_id": "A-f1-K12-r2",
+            "delta": 0.010588299700838633
+          },
+          {
+            "fold": 1,
+            "replicate": 3,
+            "reference_fit_id": "A-f1-K24-all",
+            "comparison_fit_id": "A-f1-K12-r3",
+            "delta": -0.0017717293656782651
+          },
+          {
+            "fold": 1,
+            "replicate": 4,
+            "reference_fit_id": "A-f1-K24-all",
+            "comparison_fit_id": "A-f1-K12-r4",
+            "delta": -0.012617896632017733
+          },
+          {
+            "fold": 1,
+            "replicate": 5,
+            "reference_fit_id": "A-f1-K24-all",
+            "comparison_fit_id": "A-f1-K12-r5",
+            "delta": -0.00451417964948031
+          },
+          {
+            "fold": 2,
+            "replicate": 1,
+            "reference_fit_id": "A-f2-K24-all",
+            "comparison_fit_id": "A-f2-K12-r1",
+            "delta": 0.007850199873931207
+          },
+          {
+            "fold": 2,
+            "replicate": 2,
+            "reference_fit_id": "A-f2-K24-all",
+            "comparison_fit_id": "A-f2-K12-r2",
+            "delta": 0.0028387193435690516
+          },
+          {
+            "fold": 2,
+            "replicate": 3,
+            "reference_fit_id": "A-f2-K24-all",
+            "comparison_fit_id": "A-f2-K12-r3",
+            "delta": 0.01414578544352707
+          },
+          {
+            "fold": 2,
+            "replicate": 4,
+            "reference_fit_id": "A-f2-K24-all",
+            "comparison_fit_id": "A-f2-K12-r4",
+            "delta": 0.064060453143577
+          },
+          {
+            "fold": 2,
+            "replicate": 5,
+            "reference_fit_id": "A-f2-K24-all",
+            "comparison_fit_id": "A-f2-K12-r5",
+            "delta": -0.0169283260165084
+          },
+          {
+            "fold": 3,
+            "replicate": 1,
+            "reference_fit_id": "A-f3-K24-all",
+            "comparison_fit_id": "A-f3-K12-r1",
+            "delta": -0.01717515162835148
+          },
+          {
+            "fold": 3,
+            "replicate": 2,
+            "reference_fit_id": "A-f3-K24-all",
+            "comparison_fit_id": "A-f3-K12-r2",
+            "delta": -0.008594272291600702
+          },
+          {
+            "fold": 3,
+            "replicate": 3,
+            "reference_fit_id": "A-f3-K24-all",
+            "comparison_fit_id": "A-f3-K12-r3",
+            "delta": 0.02021955753007887
+          },
+          {
+            "fold": 3,
+            "replicate": 4,
+            "reference_fit_id": "A-f3-K24-all",
+            "comparison_fit_id": "A-f3-K12-r4",
+            "delta": -0.0011721644061041259
+          },
+          {
+            "fold": 3,
+            "replicate": 5,
+            "reference_fit_id": "A-f3-K24-all",
+            "comparison_fit_id": "A-f3-K12-r5",
+            "delta": -0.013223263674679298
+          }
+        ],
+        "n_pairs": 20
+      },
+      "per_acquisition": {
+        "bottom_up_anti_parallel": {
+          "mean": 0.0028079103279780694,
+          "median": -0.0021750280193021387,
+          "standard_deviation": 0.01991567861113773,
+          "std_ddof": 0,
+          "min": -0.03248671316969043,
+          "max": 0.0698664075214478,
+          "n_fits": 20,
+          "mean_paired_delta": 0.0028079103279780694,
+          "median_paired_delta": -0.0021750280193021387,
+          "positive_delta_count": 8,
+          "zero_delta_count": 0,
+          "negative_delta_count": 12,
+          "paired_deltas": [
+            {
+              "fold": 0,
+              "replicate": 1,
+              "reference_fit_id": "A-f0-K24-all",
+              "comparison_fit_id": "A-f0-K12-r1",
+              "delta": -0.0035326706146217024
+            },
+            {
+              "fold": 0,
+              "replicate": 2,
+              "reference_fit_id": "A-f0-K24-all",
+              "comparison_fit_id": "A-f0-K12-r2",
+              "delta": 0.014726669880811949
+            },
+            {
+              "fold": 0,
+              "replicate": 3,
+              "reference_fit_id": "A-f0-K24-all",
+              "comparison_fit_id": "A-f0-K12-r3",
+              "delta": -0.007168737989560414
+            },
+            {
+              "fold": 0,
+              "replicate": 4,
+              "reference_fit_id": "A-f0-K24-all",
+              "comparison_fit_id": "A-f0-K12-r4",
+              "delta": 0.016952915592346574
+            },
+            {
+              "fold": 0,
+              "replicate": 5,
+              "reference_fit_id": "A-f0-K24-all",
+              "comparison_fit_id": "A-f0-K12-r5",
+              "delta": -0.011847778151178545
+            },
+            {
+              "fold": 1,
+              "replicate": 1,
+              "reference_fit_id": "A-f1-K24-all",
+              "comparison_fit_id": "A-f1-K12-r1",
+              "delta": -0.003979680306289035
+            },
+            {
+              "fold": 1,
+              "replicate": 2,
+              "reference_fit_id": "A-f1-K24-all",
+              "comparison_fit_id": "A-f1-K12-r2",
+              "delta": 0.0028946737199642136
+            },
+            {
+              "fold": 1,
+              "replicate": 3,
+              "reference_fit_id": "A-f1-K24-all",
+              "comparison_fit_id": "A-f1-K12-r3",
+              "delta": -0.0015245532180663268
+            },
+            {
+              "fold": 1,
+              "replicate": 4,
+              "reference_fit_id": "A-f1-K24-all",
+              "comparison_fit_id": "A-f1-K12-r4",
+              "delta": -0.012277422294847407
+            },
+            {
+              "fold": 1,
+              "replicate": 5,
+              "reference_fit_id": "A-f1-K24-all",
+              "comparison_fit_id": "A-f1-K12-r5",
+              "delta": -0.009045554953035828
+            },
+            {
+              "fold": 2,
+              "replicate": 1,
+              "reference_fit_id": "A-f2-K24-all",
+              "comparison_fit_id": "A-f2-K12-r1",
+              "delta": 0.01162033586365463
+            },
+            {
+              "fold": 2,
+              "replicate": 2,
+              "reference_fit_id": "A-f2-K24-all",
+              "comparison_fit_id": "A-f2-K12-r2",
+              "delta": 0.000409431698598528
+            },
+            {
+              "fold": 2,
+              "replicate": 3,
+              "reference_fit_id": "A-f2-K24-all",
+              "comparison_fit_id": "A-f2-K12-r3",
+              "delta": 0.028379357030434593
+            },
+            {
+              "fold": 2,
+              "replicate": 4,
+              "reference_fit_id": "A-f2-K24-all",
+              "comparison_fit_id": "A-f2-K12-r4",
+              "delta": 0.0698664075214478
+            },
+            {
+              "fold": 2,
+              "replicate": 5,
+              "reference_fit_id": "A-f2-K24-all",
+              "comparison_fit_id": "A-f2-K12-r5",
+              "delta": -0.03248671316969043
+            },
+            {
+              "fold": 3,
+              "replicate": 1,
+              "reference_fit_id": "A-f3-K24-all",
+              "comparison_fit_id": "A-f3-K12-r1",
+              "delta": -0.0022199524212578314
+            },
+            {
+              "fold": 3,
+              "replicate": 2,
+              "reference_fit_id": "A-f3-K24-all",
+              "comparison_fit_id": "A-f3-K12-r2",
+              "delta": -0.005969237333532718
+            },
+            {
+              "fold": 3,
+              "replicate": 3,
+              "reference_fit_id": "A-f3-K24-all",
+              "comparison_fit_id": "A-f3-K12-r3",
+              "delta": 0.01160131916847762
+            },
+            {
+              "fold": 3,
+              "replicate": 4,
+              "reference_fit_id": "A-f3-K24-all",
+              "comparison_fit_id": "A-f3-K12-r4",
+              "delta": -0.002130103617346446
+            },
+            {
+              "fold": 3,
+              "replicate": 5,
+              "reference_fit_id": "A-f3-K24-all",
+              "comparison_fit_id": "A-f3-K12-r5",
+              "delta": -0.008110499846747832
+            }
+          ],
+          "n_pairs": 20
+        },
+        "top_down_parallel": {
+          "mean": -0.0077316407828919905,
+          "median": -0.008549763869383664,
+          "standard_deviation": 0.033519259612045535,
+          "std_ddof": 0,
+          "min": -0.07413857592431994,
+          "max": 0.04664259000996507,
+          "n_fits": 20,
+          "mean_paired_delta": -0.0077316407828919905,
+          "median_paired_delta": -0.008549763869383664,
+          "positive_delta_count": 8,
+          "zero_delta_count": 0,
+          "negative_delta_count": 12,
+          "paired_deltas": [
+            {
+              "fold": 0,
+              "replicate": 1,
+              "reference_fit_id": "A-f0-K24-all",
+              "comparison_fit_id": "A-f0-K12-r1",
+              "delta": -0.06484947458688117
+            },
+            {
+              "fold": 0,
+              "replicate": 2,
+              "reference_fit_id": "A-f0-K24-all",
+              "comparison_fit_id": "A-f0-K12-r2",
+              "delta": -0.015871181297304138
+            },
+            {
+              "fold": 0,
+              "replicate": 3,
+              "reference_fit_id": "A-f0-K24-all",
+              "comparison_fit_id": "A-f0-K12-r3",
+              "delta": -0.07413857592431994
+            },
+            {
+              "fold": 0,
+              "replicate": 4,
+              "reference_fit_id": "A-f0-K24-all",
+              "comparison_fit_id": "A-f0-K12-r4",
+              "delta": -0.019788819882690656
+            },
+            {
+              "fold": 0,
+              "replicate": 5,
+              "reference_fit_id": "A-f0-K24-all",
+              "comparison_fit_id": "A-f0-K12-r5",
+              "delta": 0.019828783859451526
+            },
+            {
+              "fold": 1,
+              "replicate": 1,
+              "reference_fit_id": "A-f1-K24-all",
+              "comparison_fit_id": "A-f1-K12-r1",
+              "delta": -0.021615208866345603
+            },
+            {
+              "fold": 1,
+              "replicate": 2,
+              "reference_fit_id": "A-f1-K24-all",
+              "comparison_fit_id": "A-f1-K12-r2",
+              "delta": 0.03366917764346178
+            },
+            {
+              "fold": 1,
+              "replicate": 3,
+              "reference_fit_id": "A-f1-K24-all",
+              "comparison_fit_id": "A-f1-K12-r3",
+              "delta": -0.002513257808513969
+            },
+            {
+              "fold": 1,
+              "replicate": 4,
+              "reference_fit_id": "A-f1-K24-all",
+              "comparison_fit_id": "A-f1-K12-r4",
+              "delta": -0.013639319643528824
+            },
+            {
+              "fold": 1,
+              "replicate": 5,
+              "reference_fit_id": "A-f1-K24-all",
+              "comparison_fit_id": "A-f1-K12-r5",
+              "delta": 0.009079946261186245
+            },
+            {
+              "fold": 2,
+              "replicate": 1,
+              "reference_fit_id": "A-f2-K24-all",
+              "comparison_fit_id": "A-f2-K12-r1",
+              "delta": -0.003460208095238504
+            },
+            {
+              "fold": 2,
+              "replicate": 2,
+              "reference_fit_id": "A-f2-K24-all",
+              "comparison_fit_id": "A-f2-K12-r2",
+              "delta": 0.010126582278480956
+            },
+            {
+              "fold": 2,
+              "replicate": 3,
+              "reference_fit_id": "A-f2-K24-all",
+              "comparison_fit_id": "A-f2-K12-r3",
+              "delta": -0.028554929317194944
+            },
+            {
+              "fold": 2,
+              "replicate": 4,
+              "reference_fit_id": "A-f2-K24-all",
+              "comparison_fit_id": "A-f2-K12-r4",
+              "delta": 0.04664259000996507
+            },
+            {
+              "fold": 2,
+              "replicate": 5,
+              "reference_fit_id": "A-f2-K24-all",
+              "comparison_fit_id": "A-f2-K12-r5",
+              "delta": 0.029746835443038022
+            },
+            {
+              "fold": 3,
+              "replicate": 1,
+              "reference_fit_id": "A-f3-K24-all",
+              "comparison_fit_id": "A-f3-K12-r1",
+              "delta": -0.06204074924963243
+            },
+            {
+              "fold": 3,
+              "replicate": 2,
+              "reference_fit_id": "A-f3-K24-all",
+              "comparison_fit_id": "A-f3-K12-r2",
+              "delta": -0.016469377165804877
+            },
+            {
+              "fold": 3,
+              "replicate": 3,
+              "reference_fit_id": "A-f3-K24-all",
+              "comparison_fit_id": "A-f3-K12-r3",
+              "delta": 0.046074272614882616
+            },
+            {
+              "fold": 3,
+              "replicate": 4,
+              "reference_fit_id": "A-f3-K24-all",
+              "comparison_fit_id": "A-f3-K12-r4",
+              "delta": 0.0017016532276229457
+            },
+            {
+              "fold": 3,
+              "replicate": 5,
+              "reference_fit_id": "A-f3-K24-all",
+              "comparison_fit_id": "A-f3-K12-r5",
+              "delta": -0.028561555158473917
+            }
+          ],
+          "n_pairs": 20
+        }
+      }
+    },
+    "K24_MINUS_K17": {
+      "global": {
+        "mean": 0.0039043309111838507,
+        "median": 0.001946324342305794,
+        "standard_deviation": 0.021977185289325855,
+        "std_ddof": 0,
+        "min": -0.021379980210038507,
+        "max": 0.0908823981676069,
+        "n_fits": 20,
+        "mean_paired_delta": 0.0039043309111838507,
+        "median_paired_delta": 0.001946324342305794,
+        "positive_delta_count": 11,
+        "zero_delta_count": 0,
+        "negative_delta_count": 9,
+        "paired_deltas": [
+          {
+            "fold": 0,
+            "replicate": 1,
+            "reference_fit_id": "A-f0-K24-all",
+            "comparison_fit_id": "A-f0-K17-r1",
+            "delta": 0.00929286421783182
+          },
+          {
+            "fold": 0,
+            "replicate": 2,
+            "reference_fit_id": "A-f0-K24-all",
+            "comparison_fit_id": "A-f0-K17-r2",
+            "delta": 0.008969010687677192
+          },
+          {
+            "fold": 0,
+            "replicate": 3,
+            "reference_fit_id": "A-f0-K24-all",
+            "comparison_fit_id": "A-f0-K17-r3",
+            "delta": -0.011085262633065307
+          },
+          {
+            "fold": 0,
+            "replicate": 4,
+            "reference_fit_id": "A-f0-K24-all",
+            "comparison_fit_id": "A-f0-K17-r4",
+            "delta": 0.004846640261508828
+          },
+          {
+            "fold": 0,
+            "replicate": 5,
+            "reference_fit_id": "A-f0-K24-all",
+            "comparison_fit_id": "A-f0-K17-r5",
+            "delta": 0.0038590338981145944
+          },
+          {
+            "fold": 1,
+            "replicate": 1,
+            "reference_fit_id": "A-f1-K24-all",
+            "comparison_fit_id": "A-f1-K17-r1",
+            "delta": -0.012774382089564496
+          },
+          {
+            "fold": 1,
+            "replicate": 2,
+            "reference_fit_id": "A-f1-K24-all",
+            "comparison_fit_id": "A-f1-K17-r2",
+            "delta": 0.013774770334229025
+          },
+          {
+            "fold": 1,
+            "replicate": 3,
+            "reference_fit_id": "A-f1-K24-all",
+            "comparison_fit_id": "A-f1-K17-r3",
+            "delta": -0.0071939229815787264
+          },
+          {
+            "fold": 1,
+            "replicate": 4,
+            "reference_fit_id": "A-f1-K24-all",
+            "comparison_fit_id": "A-f1-K17-r4",
+            "delta": 0.0010818159832510776
+          },
+          {
+            "fold": 1,
+            "replicate": 5,
+            "reference_fit_id": "A-f1-K24-all",
+            "comparison_fit_id": "A-f1-K17-r5",
+            "delta": -0.006182858302667071
+          },
+          {
+            "fold": 2,
+            "replicate": 1,
+            "reference_fit_id": "A-f2-K24-all",
+            "comparison_fit_id": "A-f2-K17-r1",
+            "delta": 0.011835619604587566
+          },
+          {
+            "fold": 2,
+            "replicate": 2,
+            "reference_fit_id": "A-f2-K24-all",
+            "comparison_fit_id": "A-f2-K17-r2",
+            "delta": 0.009470277502939828
+          },
+          {
+            "fold": 2,
+            "replicate": 3,
+            "reference_fit_id": "A-f2-K24-all",
+            "comparison_fit_id": "A-f2-K17-r3",
+            "delta": 0.0028108327013605106
+          },
+          {
+            "fold": 2,
+            "replicate": 4,
+            "reference_fit_id": "A-f2-K24-all",
+            "comparison_fit_id": "A-f2-K17-r4",
+            "delta": -0.00795973028258845
+          },
+          {
+            "fold": 2,
+            "replicate": 5,
+            "reference_fit_id": "A-f2-K24-all",
+            "comparison_fit_id": "A-f2-K17-r5",
+            "delta": -0.009216169241843764
+          },
+          {
+            "fold": 3,
+            "replicate": 1,
+            "reference_fit_id": "A-f3-K24-all",
+            "comparison_fit_id": "A-f3-K17-r1",
+            "delta": 0.00527056624749378
+          },
+          {
+            "fold": 3,
+            "replicate": 2,
+            "reference_fit_id": "A-f3-K24-all",
+            "comparison_fit_id": "A-f3-K17-r2",
+            "delta": -0.021379980210038507
+          },
+          {
+            "fold": 3,
+            "replicate": 3,
+            "reference_fit_id": "A-f3-K24-all",
+            "comparison_fit_id": "A-f3-K17-r3",
+            "delta": 0.0908823981676069
+          },
+          {
+            "fold": 3,
+            "replicate": 4,
+            "reference_fit_id": "A-f3-K24-all",
+            "comparison_fit_id": "A-f3-K17-r4",
+            "delta": -0.007880063321025421
+          },
+          {
+            "fold": 3,
+            "replicate": 5,
+            "reference_fit_id": "A-f3-K24-all",
+            "comparison_fit_id": "A-f3-K17-r5",
+            "delta": -0.0003348423205523643
+          }
+        ],
+        "n_pairs": 20
+      },
+      "per_acquisition": {
+        "bottom_up_anti_parallel": {
+          "mean": 0.007198770724728948,
+          "median": 0.003750974180303901,
+          "standard_deviation": 0.020988661005386804,
+          "std_ddof": 0,
+          "min": -0.017773457723302077,
+          "max": 0.07916191728559241,
+          "n_fits": 20,
+          "mean_paired_delta": 0.007198770724728948,
+          "median_paired_delta": 0.003750974180303901,
+          "positive_delta_count": 13,
+          "zero_delta_count": 0,
+          "negative_delta_count": 7,
+          "paired_deltas": [
+            {
+              "fold": 0,
+              "replicate": 1,
+              "reference_fit_id": "A-f0-K24-all",
+              "comparison_fit_id": "A-f0-K17-r1",
+              "delta": 0.0030103552281597334
+            },
+            {
+              "fold": 0,
+              "replicate": 2,
+              "reference_fit_id": "A-f0-K24-all",
+              "comparison_fit_id": "A-f0-K17-r2",
+              "delta": 0.016940092905675552
+            },
+            {
+              "fold": 0,
+              "replicate": 3,
+              "reference_fit_id": "A-f0-K24-all",
+              "comparison_fit_id": "A-f0-K17-r3",
+              "delta": 4.363825219821926e-05
+            },
+            {
+              "fold": 0,
+              "replicate": 4,
+              "reference_fit_id": "A-f0-K24-all",
+              "comparison_fit_id": "A-f0-K17-r4",
+              "delta": 0.013699371300238017
+            },
+            {
+              "fold": 0,
+              "replicate": 5,
+              "reference_fit_id": "A-f0-K24-all",
+              "comparison_fit_id": "A-f0-K17-r5",
+              "delta": 0.015070004194767672
+            },
+            {
+              "fold": 1,
+              "replicate": 1,
+              "reference_fit_id": "A-f1-K24-all",
+              "comparison_fit_id": "A-f1-K17-r1",
+              "delta": -0.014042054330062004
+            },
+            {
+              "fold": 1,
+              "replicate": 2,
+              "reference_fit_id": "A-f1-K24-all",
+              "comparison_fit_id": "A-f1-K17-r2",
+              "delta": 0.005073211740944106
+            },
+            {
+              "fold": 1,
+              "replicate": 3,
+              "reference_fit_id": "A-f1-K24-all",
+              "comparison_fit_id": "A-f1-K17-r3",
+              "delta": -0.006785808585729303
+            },
+            {
+              "fold": 1,
+              "replicate": 4,
+              "reference_fit_id": "A-f1-K24-all",
+              "comparison_fit_id": "A-f1-K17-r4",
+              "delta": 0.0044915931324480685
+            },
+            {
+              "fold": 1,
+              "replicate": 5,
+              "reference_fit_id": "A-f1-K24-all",
+              "comparison_fit_id": "A-f1-K17-r5",
+              "delta": -0.01545980472931574
+            },
+            {
+              "fold": 2,
+              "replicate": 1,
+              "reference_fit_id": "A-f2-K24-all",
+              "comparison_fit_id": "A-f2-K17-r1",
+              "delta": 0.030573397515224143
+            },
+            {
+              "fold": 2,
+              "replicate": 2,
+              "reference_fit_id": "A-f2-K24-all",
+              "comparison_fit_id": "A-f2-K17-r2",
+              "delta": 0.01391749834171907
+            },
+            {
+              "fold": 2,
+              "replicate": 3,
+              "reference_fit_id": "A-f2-K24-all",
+              "comparison_fit_id": "A-f2-K17-r3",
+              "delta": 0.016646714507196125
+            },
+            {
+              "fold": 2,
+              "replicate": 4,
+              "reference_fit_id": "A-f2-K24-all",
+              "comparison_fit_id": "A-f2-K17-r4",
+              "delta": -0.00924860054757004
+            },
+            {
+              "fold": 2,
+              "replicate": 5,
+              "reference_fit_id": "A-f2-K24-all",
+              "comparison_fit_id": "A-f2-K17-r5",
+              "delta": -0.017773457723302077
+            },
+            {
+              "fold": 3,
+              "replicate": 1,
+              "reference_fit_id": "A-f3-K24-all",
+              "comparison_fit_id": "A-f3-K17-r1",
+              "delta": 0.020166846807044614
+            },
+            {
+              "fold": 3,
+              "replicate": 2,
+              "reference_fit_id": "A-f3-K24-all",
+              "comparison_fit_id": "A-f3-K17-r2",
+              "delta": -0.009839800098728535
+            },
+            {
+              "fold": 3,
+              "replicate": 3,
+              "reference_fit_id": "A-f3-K24-all",
+              "comparison_fit_id": "A-f3-K17-r3",
+              "delta": 0.07916191728559241
+            },
+            {
+              "fold": 3,
+              "replicate": 4,
+              "reference_fit_id": "A-f3-K24-all",
+              "comparison_fit_id": "A-f3-K17-r4",
+              "delta": 0.00300375627438898
+            },
+            {
+              "fold": 3,
+              "replicate": 5,
+              "reference_fit_id": "A-f3-K24-all",
+              "comparison_fit_id": "A-f3-K17-r5",
+              "delta": -0.004673456976310053
+            }
+          ],
+          "n_pairs": 20
+        },
+        "top_down_parallel": {
+          "mean": -0.005978988529451157,
+          "median": -0.009059440416205766,
+          "standard_deviation": 0.040049836636640954,
+          "std_ddof": 0,
+          "min": -0.056000520543968424,
+          "max": 0.12604384081365028,
+          "n_fits": 20,
+          "mean_paired_delta": -0.005978988529451157,
+          "median_paired_delta": -0.009059440416205766,
+          "positive_delta_count": 6,
+          "zero_delta_count": 0,
+          "negative_delta_count": 14,
+          "paired_deltas": [
+            {
+              "fold": 0,
+              "replicate": 1,
+              "reference_fit_id": "A-f0-K24-all",
+              "comparison_fit_id": "A-f0-K17-r1",
+              "delta": 0.028140391186848523
+            },
+            {
+              "fold": 0,
+              "replicate": 2,
+              "reference_fit_id": "A-f0-K24-all",
+              "comparison_fit_id": "A-f0-K17-r2",
+              "delta": -0.014944235966317443
+            },
+            {
+              "fold": 0,
+              "replicate": 3,
+              "reference_fit_id": "A-f0-K24-all",
+              "comparison_fit_id": "A-f0-K17-r3",
+              "delta": -0.044471965288855664
+            },
+            {
+              "fold": 0,
+              "replicate": 4,
+              "reference_fit_id": "A-f0-K24-all",
+              "comparison_fit_id": "A-f0-K17-r4",
+              "delta": -0.021711552854678406
+            },
+            {
+              "fold": 0,
+              "replicate": 5,
+              "reference_fit_id": "A-f0-K24-all",
+              "comparison_fit_id": "A-f0-K17-r5",
+              "delta": -0.029773876991844306
+            },
+            {
+              "fold": 1,
+              "replicate": 1,
+              "reference_fit_id": "A-f1-K24-all",
+              "comparison_fit_id": "A-f1-K17-r1",
+              "delta": -0.008971365368071749
+            },
+            {
+              "fold": 1,
+              "replicate": 2,
+              "reference_fit_id": "A-f1-K24-all",
+              "comparison_fit_id": "A-f1-K17-r2",
+              "delta": 0.03987944611408423
+            },
+            {
+              "fold": 1,
+              "replicate": 3,
+              "reference_fit_id": "A-f1-K24-all",
+              "comparison_fit_id": "A-f1-K17-r3",
+              "delta": -0.008418266169126443
+            },
+            {
+              "fold": 1,
+              "replicate": 4,
+              "reference_fit_id": "A-f1-K24-all",
+              "comparison_fit_id": "A-f1-K17-r4",
+              "delta": -0.009147515464339784
+            },
+            {
+              "fold": 1,
+              "replicate": 5,
+              "reference_fit_id": "A-f1-K24-all",
+              "comparison_fit_id": "A-f1-K17-r5",
+              "delta": 0.02164798097727927
+            },
+            {
+              "fold": 2,
+              "replicate": 1,
+              "reference_fit_id": "A-f2-K24-all",
+              "comparison_fit_id": "A-f2-K17-r1",
+              "delta": -0.0443777141273215
+            },
+            {
+              "fold": 2,
+              "replicate": 2,
+              "reference_fit_id": "A-f2-K24-all",
+              "comparison_fit_id": "A-f2-K17-r2",
+              "delta": -0.0038713850133974548
+            },
+            {
+              "fold": 2,
+              "replicate": 3,
+              "reference_fit_id": "A-f2-K24-all",
+              "comparison_fit_id": "A-f2-K17-r3",
+              "delta": -0.03869681271614578
+            },
+            {
+              "fold": 2,
+              "replicate": 4,
+              "reference_fit_id": "A-f2-K24-all",
+              "comparison_fit_id": "A-f2-K17-r4",
+              "delta": -0.004093119487643571
+            },
+            {
+              "fold": 2,
+              "replicate": 5,
+              "reference_fit_id": "A-f2-K24-all",
+              "comparison_fit_id": "A-f2-K17-r5",
+              "delta": 0.016455696202531622
+            },
+            {
+              "fold": 3,
+              "replicate": 1,
+              "reference_fit_id": "A-f3-K24-all",
+              "comparison_fit_id": "A-f3-K17-r1",
+              "delta": -0.039418275431158833
+            },
+            {
+              "fold": 3,
+              "replicate": 2,
+              "reference_fit_id": "A-f3-K24-all",
+              "comparison_fit_id": "A-f3-K17-r2",
+              "delta": -0.056000520543968424
+            },
+            {
+              "fold": 3,
+              "replicate": 3,
+              "reference_fit_id": "A-f3-K24-all",
+              "comparison_fit_id": "A-f3-K17-r3",
+              "delta": 0.12604384081365028
+            },
+            {
+              "fold": 3,
+              "replicate": 4,
+              "reference_fit_id": "A-f3-K24-all",
+              "comparison_fit_id": "A-f3-K17-r4",
+              "delta": -0.040531522107268625
+            },
+            {
+              "fold": 3,
+              "replicate": 5,
+              "reference_fit_id": "A-f3-K24-all",
+              "comparison_fit_id": "A-f3-K17-r5",
+              "delta": 0.012681001646720924
+            }
+          ],
+          "n_pairs": 20
+        }
+      }
+    }
+  },
+  "distinct_fits": 84,
+  "descriptor": "MIXED_POSITIVE",
+  "descriptor_contrast": "K24_MINUS_K17",
+  "dependence_note": "Each fold's K24 baseline is reused for five replicate contrasts; twenty pairs are not independent experiments."
+}
