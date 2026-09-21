@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "head_sha": "8c38384915807a15062782a4a189601f7c83c8c3",
+  "freeze_text_count": 37,
+  "ci_jobs": ["ti3-synthetic-contracts", "study2a-synthetic-contracts", "study2c-synthetic-contracts", "deterministic-contracts", "scientific-synthetic-contracts", "ti3c-synthetic-contracts", "ti3d-final-synthetic-contracts", "study2b-synthetic-contracts", "ti3b-synthetic-contracts"],
+  "source_opens": 0,
+  "receipt_created": false,
+  "free_disk_bytes": 666190200832,
+  "command": "PYTHONPATH=src .venv/bin/python -B scripts/run_study2c.py preflight",
+  "exit_code": 0,
+  "proof_semantics": "Actual frozen Git blobs, local pinned versions and live CI proof; no simulation. Recorded from returned stdout."
+}

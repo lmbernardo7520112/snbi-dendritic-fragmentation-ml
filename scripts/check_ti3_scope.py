@@ -30,6 +30,7 @@ BLOCKED_ML = frozenset({
 })
 TORCH_PATHS = frozenset({
     "src/snbi_fragmentation/ti3c_cnn.py", "tests/test_ti3c_cnn.py",
+    "src/snbi_fragmentation/study2c_cnn.py", "tests/test_study2c_cnn.py",
 })
 CNN_REQUIREMENTS = (
     "-r requirements-ti3-ml.txt", "-c constraints-ti3c-cnn.txt",

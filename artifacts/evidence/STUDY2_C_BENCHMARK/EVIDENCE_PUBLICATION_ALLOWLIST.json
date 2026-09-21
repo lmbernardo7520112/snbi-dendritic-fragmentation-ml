@@ -1,0 +1,226 @@
+{
+  "purpose": "Single evidence-only checkpoint after consumed Study2-C run",
+  "parent_sha": "8c38384915807a15062782a4a189601f7c83c8c3",
+  "records": [
+    {
+      "path": "artifacts/evidence/STUDY2_C_BENCHMARK/ACTUAL_PREFLIGHT.json",
+      "bytes": 716,
+      "sha256": "acb455fc0b49ae31641e2a9dbcacee6bd3255b142a0315e0b113e79efaa8c69c"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_C_BENCHMARK/BACKGROUND_ARTIFACTS.json",
+      "bytes": 23032615,
+      "sha256": "e3cfd0f566228e35db17e6d9ba61a2f9df9e434c1fe507300fc688f907749ab2"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_C_BENCHMARK/CI_PROOF.json",
+      "bytes": 25747,
+      "sha256": "956b94152af8e962af5b566dcd17c7a3bee7b3b4358ca1d59ab360a6f684f167"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_C_BENCHMARK/CLASSICAL_TEXT_AUDIT.json",
+      "bytes": 51504,
+      "sha256": "ca20df6490782797f3894192babc5c362cbca18c5a57508bddc819bbf6e8f584"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_C_BENCHMARK/CNN_V2_DEVELOPMENT.json",
+      "bytes": 3168527,
+      "sha256": "8bd06965732dd05ebae00085a44e2c1bc67372058c806a293b06eb182ebbf259"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_C_BENCHMARK/COMMANDS_EXECUTION.json",
+      "bytes": 3276,
+      "sha256": "989f7fc7f709c4b90794a0c68fc3ebd64a6fc1e240ddd2b554e9f2b99387674f"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_C_BENCHMARK/DEVELOPMENT_MATERIALIZATION.json",
+      "bytes": 17959150,
+      "sha256": "77e810afcf7e8a20a80b398469762395ab73ab53fd51e850538d52d78a903f7c"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_C_BENCHMARK/EXECUTION_RECEIPT.json",
+      "bytes": 853,
+      "sha256": "dbe116ef9773caf31ca8dc84b77b4c953dd9da4c677cc5dbb80044b100568a18"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_C_BENCHMARK/FAMILY_SELECTION.json",
+      "bytes": 723,
+      "sha256": "6f3c6507552b680bcd4489c26509b2d3a9f08a69e04884484827864f7e44f58d"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_C_BENCHMARK/FINAL_FIT_FREEZE.json",
+      "bytes": 8237,
+      "sha256": "0ee683a3029c3fc1e9e299bf9fdf9fc461d7ffad240f447760d13160997c4c4c"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_C_BENCHMARK/FINAL_PIPELINE.json",
+      "bytes": 455,
+      "sha256": "a5e5ad86e9789147849dfd72f84fbf38065bf385e1c09b00779fba2133d49e5c"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_C_BENCHMARK/FINAL_TEXT_AUDIT.json",
+      "bytes": 32916,
+      "sha256": "3f0d237875dfbc3b003b0f432e7b72f5ad3420d83fca928e4585a82afe552134"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_C_BENCHMARK/IO_ACCOUNTING.json",
+      "bytes": 3262,
+      "sha256": "662cfc06c0fe76f44ba70bbf84b4383b018fde0bde4d7006790fd7b5d6630281"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_C_BENCHMARK/IO_AUDIT.json",
+      "bytes": 466032,
+      "sha256": "eaf47532d572e4e0b7e424ddb16554557199f6afbde44f26c32f7079de2ff51b"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_C_BENCHMARK/IO_CUSTODY_AUDIT.json",
+      "bytes": 28120,
+      "sha256": "c2d937d1f0cc6ed45cb0215e62bf7e2c6ad1dc19aac6c82942e883f117d52c70"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_C_BENCHMARK/LOGISTIC_REGRESSION_CV.json",
+      "bytes": 90264,
+      "sha256": "2aa7356fd440b59b9ddf609de726aea1507a73c41072b789f308d61ae209a49d"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_C_BENCHMARK/LOGISTIC_REGRESSION_DEVELOPMENT.json",
+      "bytes": 2293021,
+      "sha256": "1ecace0e7fd95d6ce7f5d89c4dcd8e439d96ea4d24e74205cae7821c30c5a64b"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_C_BENCHMARK/REPORT_REVIEW.json",
+      "bytes": 9475,
+      "sha256": "65da93c1148e033ee7629753f86c3a6d19b58642f9aa5b7ac47ee0de1a87ee6e"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_C_BENCHMARK/RESULTS_SUMMARY.json",
+      "bytes": 604681,
+      "sha256": "dde6ff49ac30dd9fb20a0e682090952ff304862a7ad80e8e5db9bc9810a242de"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_C_BENCHMARK/RF_REFERENCE_DEVELOPMENT.json",
+      "bytes": 1808912,
+      "sha256": "92b0a57098cf970b24082ff07c9af8b41b2a0bde31b8126927e7a4f493007467"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_C_BENCHMARK/RF_TUNED_CV.json",
+      "bytes": 243500,
+      "sha256": "26c9bcbe8ce33e324d57812e7a22fe658ec7aa20a2254b12c6ab4387a4eb59bc"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_C_BENCHMARK/RF_TUNED_DEVELOPMENT.json",
+      "bytes": 2383609,
+      "sha256": "8b72fbcc225c4f2fed9a5c8bbeca353ca12b81893a452efc3cff093b0d42c3a5"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_C_BENCHMARK/SILVER_ABLATION.json",
+      "bytes": 339425,
+      "sha256": "df76a4ca6ab88940482801b319020d50d116301cf5b5b2e30504418405cf537c"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_C_BENCHMARK/STAGED_FREEZE_VERIFICATION.json",
+      "bytes": 3089,
+      "sha256": "5fa1e92ae017858795cb782a0194fd900b9d2965132ac0907eb03ffbd8106e48"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_C_BENCHMARK/SVM_RBF_CV.json",
+      "bytes": 273602,
+      "sha256": "e6b4c418675db5419af44069cd0e1e794f1e742abadde08b5a5ee1c639960afe"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_C_BENCHMARK/SVM_RBF_DEVELOPMENT.json",
+      "bytes": 1871927,
+      "sha256": "c60cc417eff64a957fbaf7de948a4c2c40ab91ac213f4a28a2f0023a5fb3b32c"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_C_BENCHMARK/TEST_ACCESS_RECEIPT.json",
+      "bytes": 327,
+      "sha256": "381c600f159f0097c6b49382213d2519ab8a105c707cf531f7ab786dc01b9d44"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_C_BENCHMARK/TEST_METRICS.json",
+      "bytes": 271846,
+      "sha256": "cbb4f519bf1a3fb7955fa4546fbbd7ab315e9c1e30aabc4bc28f540da2b2ac38"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_C_BENCHMARK/TEST_PREDICTIONS.json",
+      "bytes": 363986,
+      "sha256": "1534fa28050480a005395599b4e0a4ae6dd17dcb984a80dac4520890f4068539"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_C_BENCHMARK/VERIFICATION_TERMINAL.json",
+      "bytes": 1197,
+      "sha256": "73d9dc5619e9049380bda842102f9262097a0e9b64cf561b03b1caf3ed2176e7"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_C_BENCHMARK/execution-report.md",
+      "bytes": 23278,
+      "sha256": "fc693175ea9c3e98e64df409b0a2690195eb5c7f3058d20647d4061336f417f7"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_C_BENCHMARK/post-run-hashes.sha256",
+      "bytes": 8496,
+      "sha256": "3ace970b311fb5d8e1080bc7789d29275afbf256249fd6ab3d30774ccf0f81d6"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_C_BENCHMARK/results.json",
+      "bytes": 1655,
+      "sha256": "774deede6066547610b6608616138488a2d98bbcba399b8d048d85532ed40d02"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_C_BENCHMARK/scientific-run.log.txt",
+      "bytes": 36115,
+      "sha256": "05bc409d3fdcc7d3f6e5185f165729d7109f426cd25645cfe1a88a18dbaef65d"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_C_BENCHMARK/terminal-state.json",
+      "bytes": 914,
+      "sha256": "87f549d79154c3d8d8ec5a64f3936fd9a849541f243c0df9ef22db8530e75025"
+    }
+  ],
+  "self_path": "artifacts/evidence/STUDY2_C_BENCHMARK/EVIDENCE_PUBLICATION_ALLOWLIST.json",
+  "self_hash_policy": "Not self-referential; verified against staged blob before commit",
+  "exact_paths": [
+    "artifacts/evidence/STUDY2_C_BENCHMARK/ACTUAL_PREFLIGHT.json",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/BACKGROUND_ARTIFACTS.json",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/CI_PROOF.json",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/CLASSICAL_TEXT_AUDIT.json",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/CNN_V2_DEVELOPMENT.json",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/COMMANDS_EXECUTION.json",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/DEVELOPMENT_MATERIALIZATION.json",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/EVIDENCE_PUBLICATION_ALLOWLIST.json",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/EXECUTION_RECEIPT.json",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/FAMILY_SELECTION.json",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/FINAL_FIT_FREEZE.json",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/FINAL_PIPELINE.json",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/FINAL_TEXT_AUDIT.json",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/IO_ACCOUNTING.json",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/IO_AUDIT.json",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/IO_CUSTODY_AUDIT.json",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/LOGISTIC_REGRESSION_CV.json",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/LOGISTIC_REGRESSION_DEVELOPMENT.json",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/REPORT_REVIEW.json",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/RESULTS_SUMMARY.json",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/RF_REFERENCE_DEVELOPMENT.json",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/RF_TUNED_CV.json",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/RF_TUNED_DEVELOPMENT.json",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/SILVER_ABLATION.json",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/STAGED_FREEZE_VERIFICATION.json",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/SVM_RBF_CV.json",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/SVM_RBF_DEVELOPMENT.json",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/TEST_ACCESS_RECEIPT.json",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/TEST_METRICS.json",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/TEST_PREDICTIONS.json",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/VERIFICATION_TERMINAL.json",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/execution-report.md",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/post-run-hashes.sha256",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/results.json",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/scientific-run.log.txt",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/terminal-state.json"
+  ],
+  "post_run_hash_entries": 72,
+  "existing_tracked_edits": 0,
+  "scientific_authority": "CLOSED_CONSUMED",
+  "test_state": "CONSUMED",
+  "publication_ci": "To be verified at actual new SHA; not asserted by this document"
+}

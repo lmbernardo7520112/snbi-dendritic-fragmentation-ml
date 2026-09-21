@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "parser": "PyYAML 6.0.1",
+  "python_blocks_ast": "PASS",
+  "workflow_sha256": "98d438b7375dd358be621101f24601c1163c0eeb4494668c73ea22478355b0d7",
+  "remote_admission_certified": false
+}

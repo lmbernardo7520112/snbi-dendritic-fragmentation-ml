@@ -1,0 +1,46 @@
+test_all_frozen_imports_pass (test_ti3_scope.TI3ScopeTests.test_all_frozen_imports_pass) ... ok
+test_changed_pin_fails (test_ti3_scope.TI3ScopeTests.test_changed_pin_fails) ... ok
+test_duplicate_inventory_fails (test_ti3_scope.TI3ScopeTests.test_duplicate_inventory_fails) ... ok
+test_extra_requirement_fails (test_ti3_scope.TI3ScopeTests.test_extra_requirement_fails) ... ok
+test_legacy_dependency_fails (test_ti3_scope.TI3ScopeTests.test_legacy_dependency_fails) ... ok
+test_literal_and_unresolved_dynamic_import_fail (test_ti3_scope.TI3ScopeTests.test_literal_and_unresolved_dynamic_import_fail) ... ok
+test_nonregular_entry_fails_before_read (test_ti3_scope.TI3ScopeTests.test_nonregular_entry_fails_before_read) ... ok
+test_other_third_party_fails (test_ti3_scope.TI3ScopeTests.test_other_third_party_fails) ... ok
+test_planned_entry_cannot_be_audited_as_tracked (test_ti3_scope.TI3ScopeTests.test_planned_entry_cannot_be_audited_as_tracked) ... ok
+test_sklearn_active_passes (test_ti3_scope.TI3ScopeTests.test_sklearn_active_passes) ... ok
+test_sklearn_legacy_fails (test_ti3_scope.TI3ScopeTests.test_sklearn_legacy_fails) ... ok
+test_syntax_error_fails (test_ti3_scope.TI3ScopeTests.test_syntax_error_fails) ... ok
+test_torch_active_fails (test_ti3_scope.TI3ScopeTests.test_torch_active_fails) ... ok
+test_unlisted_path_denied_before_text (test_ti3_scope.TI3ScopeTests.test_unlisted_path_denied_before_text) ... ok
+test_worktree_symlink_fails (test_ti3_scope.TI3ScopeTests.test_worktree_symlink_fails) ... ok
+test_a0_worktree_manifest_and_index_coedit_cannot_replace_git_anchor (test_phase_scope.PhaseScopeTests.test_a0_worktree_manifest_and_index_coedit_cannot_replace_git_anchor) ... ok
+test_a_one_byte_a0_change_blocks_before_active_audit (test_phase_scope.PhaseScopeTests.test_a_one_byte_a0_change_blocks_before_active_audit) ... ok
+test_active_checker_failure_propagates (test_phase_scope.PhaseScopeTests.test_active_checker_failure_propagates) ... ok
+test_b_renamed_a0_blocks (test_phase_scope.PhaseScopeTests.test_b_renamed_a0_blocks) ... ok
+test_c_fifth_a0_declaration_blocks (test_phase_scope.PhaseScopeTests.test_c_fifth_a0_declaration_blocks) ... ok
+test_case_variant_python_is_relevant_and_unclassified (test_phase_scope.PhaseScopeTests.test_case_variant_python_is_relevant_and_unclassified) ... ok
+test_changed_baseline_id_is_rejected (test_phase_scope.PhaseScopeTests.test_changed_baseline_id_is_rejected) ... ok
+test_d_a0_also_in_legacy_blocks (test_phase_scope.PhaseScopeTests.test_d_a0_also_in_legacy_blocks) ... ok
+test_duplicate_index_or_unmerged_stage_is_blocking (test_phase_scope.PhaseScopeTests.test_duplicate_index_or_unmerged_stage_is_blocking) ... ok
+test_e_unclassified_path_blocks (test_phase_scope.PhaseScopeTests.test_e_unclassified_path_blocks) ... ok
+test_exact_partition_passes_and_dispatches_disjoint_domains (test_phase_scope.PhaseScopeTests.test_exact_partition_passes_and_dispatches_disjoint_domains) ... ok
+test_f_active_also_in_legacy_blocks (test_phase_scope.PhaseScopeTests.test_f_active_also_in_legacy_blocks) ... ok
+test_fourth_domain_is_rejected (test_phase_scope.PhaseScopeTests.test_fourth_domain_is_rejected) ... ok
+test_j_unknown_annotations_is_not_silently_classified (test_phase_scope.PhaseScopeTests.test_j_unknown_annotations_is_not_silently_classified) ... ok
+test_k_data_guard_blocks_before_manifest_or_any_source_read (test_phase_scope.PhaseScopeTests.test_k_data_guard_blocks_before_manifest_or_any_source_read) ... ok
+test_l_tracked_symlink_blocks_without_open (test_phase_scope.PhaseScopeTests.test_l_tracked_symlink_blocks_without_open) ... ok
+test_legacy_checker_failure_propagates_without_active_dispatch (test_phase_scope.PhaseScopeTests.test_legacy_checker_failure_propagates_without_active_dispatch) ... ok
+test_legacy_worktree_byte_change_blocks_before_legacy_checker (test_phase_scope.PhaseScopeTests.test_legacy_worktree_byte_change_blocks_before_legacy_checker) ... ok
+test_legacy_worktree_manifest_and_index_coedit_cannot_replace_git_anchor (test_phase_scope.PhaseScopeTests.test_legacy_worktree_manifest_and_index_coedit_cannot_replace_git_anchor) ... ok
+test_missing_a0_path_blocks_partition (test_phase_scope.PhaseScopeTests.test_missing_a0_path_blocks_partition) ... ok
+test_missing_legacy_path_blocks_partition (test_phase_scope.PhaseScopeTests.test_missing_legacy_path_blocks_partition) ... ok
+test_mode_change_blocks (test_phase_scope.PhaseScopeTests.test_mode_change_blocks) ... ok
+test_planned_absent_from_index_is_not_read_or_dispatched (test_phase_scope.PhaseScopeTests.test_planned_absent_from_index_is_not_read_or_dispatched) ... ok
+test_planned_but_tracked_is_inconsistent (test_phase_scope.PhaseScopeTests.test_planned_but_tracked_is_inconsistent) ... ok
+test_tracked_but_absent_active_is_inconsistent (test_phase_scope.PhaseScopeTests.test_tracked_but_absent_active_is_inconsistent) ... ok
+test_worktree_symlink_refusal_propagates_as_custody_block (test_phase_scope.PhaseScopeTests.test_worktree_symlink_refusal_propagates_as_custody_block) ... ok
+
+----------------------------------------------------------------------
+Ran 41 tests in 0.201s
+
+OK

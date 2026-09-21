@@ -1,0 +1,885 @@
+{
+  "schema_version": 1,
+  "status": "PASS_FINAL_TEXT_AUDIT",
+  "created_utc": "2026-09-21T17:45:39.059523+00:00",
+  "method_freeze_sha": "8c38384915807a15062782a4a189601f7c83c8c3",
+  "scope": "Complementary independent textual audit after scientific completion: CNN TRAIN/DEV, selected-family SILVER ablation, final fit membership and TEST predictions/metrics, durable receipt/hash links, progress counters and terminal state.",
+  "source_sha256": {
+    "artifacts/evidence/STUDY2_C_BENCHMARK/SPLIT_MANIFEST.json": "74adb4eb7acad1e6aa67c4302d9db30d0c22f21fb51bc72aa89f701956d14ec7",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/MODEL_CONTRACT.json": "2f0d73280fe09fdf6b8bb25ba84cb075c9c725e44d6f41cae94d95bb392659df",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/CLASSICAL_TEXT_AUDIT.json": "ca20df6490782797f3894192babc5c362cbca18c5a57508bddc819bbf6e8f584",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/FAMILY_SELECTION.json": "6f3c6507552b680bcd4489c26509b2d3a9f08a69e04884484827864f7e44f58d",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/SILVER_ABLATION.json": "df76a4ca6ab88940482801b319020d50d116301cf5b5b2e30504418405cf537c",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/FINAL_PIPELINE.json": "a5e5ad86e9789147849dfd72f84fbf38065bf385e1c09b00779fba2133d49e5c",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/FINAL_FIT_FREEZE.json": "0ee683a3029c3fc1e9e299bf9fdf9fc461d7ffad240f447760d13160997c4c4c",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/TEST_ACCESS_RECEIPT.json": "381c600f159f0097c6b49382213d2519ab8a105c707cf531f7ab786dc01b9d44",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/TEST_PREDICTIONS.json": "1534fa28050480a005395599b4e0a4ae6dd17dcb984a80dac4520890f4068539",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/TEST_METRICS.json": "cbb4f519bf1a3fb7955fa4546fbbd7ab315e9c1e30aabc4bc28f540da2b2ac38",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/EXECUTION_RECEIPT.json": "dbe116ef9773caf31ca8dc84b77b4c953dd9da4c677cc5dbb80044b100568a18",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/IO_AUDIT.json": "eaf47532d572e4e0b7e424ddb16554557199f6afbde44f26c32f7079de2ff51b",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/results.json": "774deede6066547610b6608616138488a2d98bbcba399b8d048d85532ed40d02",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/terminal-state.json": "87f549d79154c3d8d8ec5a64f3936fd9a849541f243c0df9ef22db8530e75025",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/METHOD_FREEZE.json": "b5d7a9c48735711f28b30ea0711a148c46ca0d714167d465ffe0d782863e5bf8",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/CI_PROOF.json": "956b94152af8e962af5b566dcd17c7a3bee7b3b4358ca1d59ab360a6f684f167",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/LOGISTIC_REGRESSION_DEVELOPMENT.json": "1ecace0e7fd95d6ce7f5d89c4dcd8e439d96ea4d24e74205cae7821c30c5a64b",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/SVM_RBF_DEVELOPMENT.json": "c60cc417eff64a957fbaf7de948a4c2c40ab91ac213f4a28a2f0023a5fb3b32c",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/RF_REFERENCE_DEVELOPMENT.json": "92b0a57098cf970b24082ff07c9af8b41b2a0bde31b8126927e7a4f493007467",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/RF_TUNED_DEVELOPMENT.json": "8b72fbcc225c4f2fed9a5c8bbeca353ca12b81893a452efc3cff093b0d42c3a5",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/CNN_V2_DEVELOPMENT.json": "8bd06965732dd05ebae00085a44e2c1bc67372058c806a293b06eb182ebbf259",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/LOGISTIC_REGRESSION_CV.json": "2aa7356fd440b59b9ddf609de726aea1507a73c41072b789f308d61ae209a49d",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/SVM_RBF_CV.json": "e6b4c418675db5419af44069cd0e1e794f1e742abadde08b5a5ee1c639960afe",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/RF_TUNED_CV.json": "26c9bcbe8ce33e324d57812e7a22fe658ec7aa20a2254b12c6ab4387a4eb59bc",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/scientific-run.log.txt": "05bc409d3fdcc7d3f6e5185f165729d7109f426cd25645cfe1a88a18dbaef65d",
+    "src/snbi_fragmentation/study2c_execution.py": "ff1b4863dbdcc406de2ed5ca0c79391afb3aa0803336fc84544392631c633cd0"
+  },
+  "source_size_bytes": {
+    "artifacts/evidence/STUDY2_C_BENCHMARK/SPLIT_MANIFEST.json": 33725407,
+    "artifacts/evidence/STUDY2_C_BENCHMARK/MODEL_CONTRACT.json": 5961,
+    "artifacts/evidence/STUDY2_C_BENCHMARK/CLASSICAL_TEXT_AUDIT.json": 51504,
+    "artifacts/evidence/STUDY2_C_BENCHMARK/FAMILY_SELECTION.json": 723,
+    "artifacts/evidence/STUDY2_C_BENCHMARK/SILVER_ABLATION.json": 339425,
+    "artifacts/evidence/STUDY2_C_BENCHMARK/FINAL_PIPELINE.json": 455,
+    "artifacts/evidence/STUDY2_C_BENCHMARK/FINAL_FIT_FREEZE.json": 8237,
+    "artifacts/evidence/STUDY2_C_BENCHMARK/TEST_ACCESS_RECEIPT.json": 327,
+    "artifacts/evidence/STUDY2_C_BENCHMARK/TEST_PREDICTIONS.json": 363986,
+    "artifacts/evidence/STUDY2_C_BENCHMARK/TEST_METRICS.json": 271846,
+    "artifacts/evidence/STUDY2_C_BENCHMARK/EXECUTION_RECEIPT.json": 853,
+    "artifacts/evidence/STUDY2_C_BENCHMARK/IO_AUDIT.json": 466032,
+    "artifacts/evidence/STUDY2_C_BENCHMARK/results.json": 1655,
+    "artifacts/evidence/STUDY2_C_BENCHMARK/terminal-state.json": 914,
+    "artifacts/evidence/STUDY2_C_BENCHMARK/METHOD_FREEZE.json": 4990,
+    "artifacts/evidence/STUDY2_C_BENCHMARK/CI_PROOF.json": 25747,
+    "artifacts/evidence/STUDY2_C_BENCHMARK/LOGISTIC_REGRESSION_DEVELOPMENT.json": 2293021,
+    "artifacts/evidence/STUDY2_C_BENCHMARK/SVM_RBF_DEVELOPMENT.json": 1871927,
+    "artifacts/evidence/STUDY2_C_BENCHMARK/RF_REFERENCE_DEVELOPMENT.json": 1808912,
+    "artifacts/evidence/STUDY2_C_BENCHMARK/RF_TUNED_DEVELOPMENT.json": 2383609,
+    "artifacts/evidence/STUDY2_C_BENCHMARK/CNN_V2_DEVELOPMENT.json": 3168527,
+    "artifacts/evidence/STUDY2_C_BENCHMARK/LOGISTIC_REGRESSION_CV.json": 90264,
+    "artifacts/evidence/STUDY2_C_BENCHMARK/SVM_RBF_CV.json": 273602,
+    "artifacts/evidence/STUDY2_C_BENCHMARK/RF_TUNED_CV.json": 243500,
+    "artifacts/evidence/STUDY2_C_BENCHMARK/scientific-run.log.txt": 36115,
+    "src/snbi_fragmentation/study2c_execution.py": 27849
+  },
+  "prior_classical_audit": {
+    "path": "artifacts/evidence/STUDY2_C_BENCHMARK/CLASSICAL_TEXT_AUDIT.json",
+    "sha256": "ca20df6490782797f3894192babc5c362cbca18c5a57508bddc819bbf6e8f584",
+    "all_nine_inputs_still_identical": true,
+    "predictions_previously_checked": 52772,
+    "cv_fit_records_previously_checked": 80
+  },
+  "arithmetic": {
+    "implementation": "inline Python standard library Counter/Fraction arithmetic; no scientific imports, project scorer calls or models",
+    "metric_absolute_comparison_tolerance": 1e-12,
+    "maximum_metric_float_difference": 1.1102230246251565e-16,
+    "new_predictions_checked": 18736,
+    "metric_bundles_with_acquisition_strata": 12,
+    "family_and_regime_selection_use_exact_recorded_float_comparisons": true,
+    "CNN_probability_sum_tolerance": 2e-07,
+    "CNN_probability_note": "Tolerance covers stored float32 normalization only; no decision threshold or selection criterion is relaxed."
+  },
+  "cnn": {
+    "metrics": {
+      "train": {
+        "primary_gmba_recorded": 0.7702839453879093,
+        "primary_gmba_recomputed_rational": 0.7702839453879093,
+        "counts": {
+          "observations": 10907,
+          "positive_groups": 32,
+          "background_groups": 32,
+          "positive_observations": 3858,
+          "background_observations": 7049
+        },
+        "observation": {
+          "balanced_accuracy": 0.7416668266222939,
+          "accuracy": 0.7739983496836894,
+          "precision": 0.7003163646821973,
+          "recall": 0.6311560393986522,
+          "specificity": 0.8521776138459356,
+          "f1": 0.6639400136332652,
+          "confusion_matrix": [
+            [
+              6007,
+              1042
+            ],
+            [
+              1423,
+              2435
+            ]
+          ],
+          "tn": 6007,
+          "fp": 1042,
+          "fn": 1423,
+          "tp": 2435,
+          "class_order": [
+            0,
+            1
+          ]
+        },
+        "majority_vote_group_balanced_accuracy": 0.765625,
+        "per_acquisition": {
+          "bottom_up_anti_parallel": {
+            "primary_gmba": 0.8054792713311735,
+            "primary": 0.8054792713311735,
+            "gmba": 0.8054792713311735,
+            "positive_group_macro_recall": 0.7014878281496632,
+            "negative_group_macro_specificity": 0.9094707145126837,
+            "majority_vote_group_balanced_accuracy": 0.8125,
+            "majority_vote_tie_rule": "PREDICT_CLASS_0",
+            "observation": {
+              "balanced_accuracy": 0.8097718302025819,
+              "accuracy": 0.8349564325986674,
+              "precision": 0.7651434643995749,
+              "recall": 0.7331975560081466,
+              "specificity": 0.8863461043970172,
+              "f1": 0.748829953198128,
+              "confusion_matrix": [
+                [
+                  3447,
+                  442
+                ],
+                [
+                  524,
+                  1440
+                ]
+              ],
+              "tn": 3447,
+              "fp": 442,
+              "fn": 524,
+              "tp": 1440,
+              "class_order": [
+                0,
+                1
+              ]
+            },
+            "counts": {
+              "observations": 5853,
+              "positive_groups": 24,
+              "background_groups": 24,
+              "positive_observations": 1964,
+              "background_observations": 3889
+            }
+          },
+          "top_down_parallel": {
+            "primary_gmba": 0.6646979675581173,
+            "primary": 0.6646979675581173,
+            "gmba": 0.6646979675581173,
+            "positive_group_macro_recall": 0.5192693528377534,
+            "negative_group_macro_specificity": 0.810126582278481,
+            "majority_vote_group_balanced_accuracy": 0.625,
+            "majority_vote_tie_rule": "PREDICT_CLASS_0",
+            "observation": {
+              "balanced_accuracy": 0.6677348856482163,
+              "accuracy": 0.7034032449544915,
+              "precision": 0.6238244514106583,
+              "recall": 0.5253431890179514,
+              "specificity": 0.810126582278481,
+              "f1": 0.5703640011464604,
+              "confusion_matrix": [
+                [
+                  2560,
+                  600
+                ],
+                [
+                  899,
+                  995
+                ]
+              ],
+              "tn": 2560,
+              "fp": 600,
+              "fn": 899,
+              "tp": 995,
+              "class_order": [
+                0,
+                1
+              ]
+            },
+            "counts": {
+              "observations": 5054,
+              "positive_groups": 8,
+              "background_groups": 8,
+              "positive_observations": 1894,
+              "background_observations": 3160
+            }
+          }
+        },
+        "sample_order": "EXACT_FROZEN_MANIFEST_ORDER",
+        "maximum_probability_sum_error": 8.940696716308594e-08,
+        "probability_sum_tolerance": 2e-07
+      },
+      "development": {
+        "primary_gmba_recorded": 0.7051343531341349,
+        "primary_gmba_recomputed_rational": 0.7051343531341349,
+        "counts": {
+          "observations": 2286,
+          "positive_groups": 10,
+          "background_groups": 10,
+          "positive_observations": 598,
+          "background_observations": 1688
+        },
+        "observation": {
+          "balanced_accuracy": 0.7679557846851274,
+          "accuracy": 0.8670166229221348,
+          "precision": 0.8909574468085106,
+          "recall": 0.560200668896321,
+          "specificity": 0.9757109004739336,
+          "f1": 0.6878850102669405,
+          "confusion_matrix": [
+            [
+              1647,
+              41
+            ],
+            [
+              263,
+              335
+            ]
+          ],
+          "tn": 1647,
+          "fp": 41,
+          "fn": 263,
+          "tp": 335,
+          "class_order": [
+            0,
+            1
+          ]
+        },
+        "majority_vote_group_balanced_accuracy": 0.75,
+        "per_acquisition": {
+          "bottom_up_anti_parallel": {
+            "primary_gmba": 0.7597407262277952,
+            "primary": 0.7597407262277952,
+            "gmba": 0.7597407262277952,
+            "positive_group_macro_recall": 0.5676136363636364,
+            "negative_group_macro_specificity": 0.951867816091954,
+            "majority_vote_group_balanced_accuracy": 0.8125,
+            "majority_vote_tie_rule": "PREDICT_CLASS_0",
+            "observation": {
+              "balanced_accuracy": 0.7842786046201042,
+              "accuracy": 0.8279863481228669,
+              "precision": 0.9436619718309859,
+              "recall": 0.5908289241622575,
+              "specificity": 0.977728285077951,
+              "f1": 0.7266811279826464,
+              "confusion_matrix": [
+                [
+                  878,
+                  20
+                ],
+                [
+                  232,
+                  335
+                ]
+              ],
+              "tn": 878,
+              "fp": 20,
+              "fn": 232,
+              "tp": 335,
+              "class_order": [
+                0,
+                1
+              ]
+            },
+            "counts": {
+              "observations": 1465,
+              "positive_groups": 8,
+              "background_groups": 8,
+              "positive_observations": 567,
+              "background_observations": 898
+            }
+          },
+          "top_down_parallel": {
+            "primary_gmba": 0.48670886075949366,
+            "primary": 0.48670886075949366,
+            "gmba": 0.48670886075949366,
+            "positive_group_macro_recall": 0.0,
+            "negative_group_macro_specificity": 0.9734177215189873,
+            "majority_vote_group_balanced_accuracy": 0.5,
+            "majority_vote_tie_rule": "PREDICT_CLASS_0",
+            "observation": {
+              "balanced_accuracy": 0.48670886075949366,
+              "accuracy": 0.9366626065773447,
+              "precision": 0.0,
+              "recall": 0.0,
+              "specificity": 0.9734177215189873,
+              "f1": 0.0,
+              "confusion_matrix": [
+                [
+                  769,
+                  21
+                ],
+                [
+                  31,
+                  0
+                ]
+              ],
+              "tn": 769,
+              "fp": 21,
+              "fn": 31,
+              "tp": 0,
+              "class_order": [
+                0,
+                1
+              ]
+            },
+            "counts": {
+              "observations": 821,
+              "positive_groups": 2,
+              "background_groups": 2,
+              "positive_observations": 31,
+              "background_observations": 790
+            }
+          }
+        },
+        "sample_order": "EXACT_FROZEN_MANIFEST_ORDER",
+        "maximum_probability_sum_error": 8.940696716308594e-08,
+        "probability_sum_tolerance": 2e-07
+      }
+    },
+    "fit_membership": {
+      "training_rows": 10907,
+      "training_group_count": 64,
+      "group_counts_by_class": {
+        "0": 32,
+        "1": 32
+      },
+      "sample_counts_by_class": {
+        "0": 7049,
+        "1": 3858
+      },
+      "weight_sum_by_class": {
+        "0": 32.0,
+        "1": 32.0
+      },
+      "training_tier_counts": {
+        "BACKGROUND": 7049,
+        "GOLD": 3858
+      },
+      "training_splits": [
+        "TRAIN"
+      ],
+      "weights": "1/number_of_actual_training_rows_in_group; no class_weight or global rescaling",
+      "fit_calls": 1
+    },
+    "parameter_count_recomputed": 5010,
+    "epochs": 20,
+    "epoch_losses": [
+      0.6224969378550511,
+      0.5727601167064051,
+      0.5480573522566207,
+      0.5330546932051874,
+      0.5355446387070801,
+      0.5152419581470047,
+      0.49553827679794865,
+      0.4808697981704214,
+      0.4865551078498344,
+      0.46959452135205293,
+      0.4629216599800025,
+      0.4482426260990411,
+      0.44550792845336556,
+      0.44751168352370335,
+      0.43534860975087586,
+      0.4302653661414177,
+      0.4327642840848629,
+      0.4072799996599555,
+      0.414365819009274,
+      0.40243536810728336
+    ],
+    "optimizer_steps": 6820,
+    "steps_per_epoch": 341,
+    "log_losses_equal_recorded_losses": true,
+    "losses_recomputed_from_inputs": false
+  },
+  "family_selection": {
+    "development_scores": {
+      "LOGISTIC_REGRESSION": {
+        "gmba": 0.8452998367828002,
+        "observation_ba": 0.80224167445989
+      },
+      "SVM_RBF": {
+        "gmba": 0.7871878893835613,
+        "observation_ba": 0.6801136093455278
+      },
+      "RF_REFERENCE": {
+        "gmba": 0.8759021928689068,
+        "observation_ba": 0.8407725594002124
+      },
+      "RF_TUNED": {
+        "gmba": 0.8748982163467482,
+        "observation_ba": 0.8328452662112255
+      },
+      "CNN_V2": {
+        "gmba": 0.7051343531341349,
+        "observation_ba": 0.7679557846851273
+      }
+    },
+    "descending_order": [
+      "RF_REFERENCE",
+      "RF_TUNED",
+      "LOGISTIC_REGRESSION",
+      "SVM_RBF",
+      "CNN_V2"
+    ],
+    "selected_model_family": "RF_REFERENCE",
+    "maximum_primary_tie_families": [
+      "RF_REFERENCE"
+    ],
+    "rule": "maximum DEV GMBA, then observation BA, then earliest frozen family order",
+    "TEST_used_for_selection": false
+  },
+  "silver_ablation": {
+    "fit_membership": {
+      "training_rows": 12844,
+      "training_group_count": 64,
+      "group_counts_by_class": {
+        "0": 32,
+        "1": 32
+      },
+      "sample_counts_by_class": {
+        "0": 7049,
+        "1": 5795
+      },
+      "weight_sum_by_class": {
+        "0": 32.0,
+        "1": 32.0
+      },
+      "training_tier_counts": {
+        "BACKGROUND": 7049,
+        "GOLD": 3858,
+        "SILVER": 1937
+      },
+      "training_splits": [
+        "TRAIN"
+      ],
+      "weights": "1/number_of_actual_training_rows_in_group; no class_weight or global rescaling",
+      "fit_calls": 1
+    },
+    "metrics": {
+      "primary_gmba_recorded": 0.8775115148991031,
+      "primary_gmba_recomputed_rational": 0.8775115148991032,
+      "counts": {
+        "observations": 2286,
+        "positive_groups": 10,
+        "background_groups": 10,
+        "positive_observations": 598,
+        "background_observations": 1688
+      },
+      "observation": {
+        "balanced_accuracy": 0.8468760401971818,
+        "accuracy": 0.8280839895013123,
+        "precision": 0.6198830409356725,
+        "recall": 0.8862876254180602,
+        "specificity": 0.8074644549763034,
+        "f1": 0.729525120440468,
+        "confusion_matrix": [
+          [
+            1363,
+            325
+          ],
+          [
+            68,
+            530
+          ]
+        ],
+        "tn": 1363,
+        "fp": 325,
+        "fn": 68,
+        "tp": 530,
+        "class_order": [
+          0,
+          1
+        ]
+      },
+      "majority_vote_group_balanced_accuracy": 0.9,
+      "per_acquisition": {
+        "bottom_up_anti_parallel": {
+          "primary_gmba": 0.8929336974213473,
+          "primary": 0.8929336974213473,
+          "gmba": 0.8929336974213473,
+          "positive_group_macro_recall": 0.8032727462754636,
+          "negative_group_macro_specificity": 0.9825946485672309,
+          "majority_vote_group_balanced_accuracy": 0.9375,
+          "majority_vote_tie_rule": "PREDICT_CLASS_0",
+          "observation": {
+            "balanced_accuracy": 0.9211043156848651,
+            "accuracy": 0.9303754266211605,
+            "precision": 0.9362101313320825,
+            "recall": 0.8800705467372134,
+            "specificity": 0.9621380846325167,
+            "f1": 0.9072727272727272,
+            "confusion_matrix": [
+              [
+                864,
+                34
+              ],
+              [
+                68,
+                499
+              ]
+            ],
+            "tn": 864,
+            "fp": 34,
+            "fn": 68,
+            "tp": 499,
+            "class_order": [
+              0,
+              1
+            ]
+          },
+          "counts": {
+            "observations": 1465,
+            "positive_groups": 8,
+            "background_groups": 8,
+            "positive_observations": 567,
+            "background_observations": 898
+          }
+        },
+        "top_down_parallel": {
+          "primary_gmba": 0.8158227848101266,
+          "primary": 0.8158227848101266,
+          "gmba": 0.8158227848101266,
+          "positive_group_macro_recall": 1.0,
+          "negative_group_macro_specificity": 0.6316455696202532,
+          "majority_vote_group_balanced_accuracy": 0.75,
+          "majority_vote_tie_rule": "PREDICT_CLASS_0",
+          "observation": {
+            "balanced_accuracy": 0.8158227848101266,
+            "accuracy": 0.6455542021924482,
+            "precision": 0.09627329192546584,
+            "recall": 1.0,
+            "specificity": 0.6316455696202532,
+            "f1": 0.17563739376770537,
+            "confusion_matrix": [
+              [
+                499,
+                291
+              ],
+              [
+                0,
+                31
+              ]
+            ],
+            "tn": 499,
+            "fp": 291,
+            "fn": 0,
+            "tp": 31,
+            "class_order": [
+              0,
+              1
+            ]
+          },
+          "counts": {
+            "observations": 821,
+            "positive_groups": 2,
+            "background_groups": 2,
+            "positive_observations": 31,
+            "background_observations": 790
+          }
+        }
+      },
+      "sample_order": "EXACT_FROZEN_MANIFEST_ORDER",
+      "maximum_probability_sum_error": 0.0,
+      "probability_sum_tolerance": 1e-12
+    },
+    "gold_reference_gmba": 0.8759021928689068,
+    "gold_plus_silver_gmba": 0.8775115148991031,
+    "delta_gmba": 0.0016093220301962585,
+    "selected_supervision_regime": "GOLD_PLUS_SILVER",
+    "strict_rule_verified": true,
+    "gold_reference_reexecuted": false
+  },
+  "final_fit": {
+    "membership": {
+      "training_rows": 15949,
+      "training_group_count": 84,
+      "group_counts_by_class": {
+        "0": 42,
+        "1": 42
+      },
+      "sample_counts_by_class": {
+        "0": 8737,
+        "1": 7212
+      },
+      "weight_sum_by_class": {
+        "0": 42.0,
+        "1": 42.0
+      },
+      "training_tier_counts": {
+        "BACKGROUND": 8737,
+        "GOLD": 4456,
+        "SILVER": 2756
+      },
+      "training_splits": [
+        "DEVELOPMENT",
+        "TRAIN"
+      ],
+      "weights": "1/number_of_actual_training_rows_in_group; no class_weight or global rescaling",
+      "fit_calls": 1
+    },
+    "pipeline_sha256": "a5e5ad86e9789147849dfd72f84fbf38065bf385e1c09b00779fba2133d49e5c",
+    "durable_fit_record_sha256": "0ee683a3029c3fc1e9e299bf9fdf9fc461d7ffad240f447760d13160997c4c4c",
+    "rf_parameters_equal_frozen_reference": true,
+    "TEST_groups_disjoint": true,
+    "fit_state_hash_scope": "Durable completion/configuration record only. No serialized model or logical digest of learned tree state is present in this record."
+  },
+  "TEST": {
+    "metrics": {
+      "primary_gmba_recorded": 0.8449139278495638,
+      "primary_gmba_recomputed_rational": 0.8449139278495639,
+      "counts": {
+        "observations": 3257,
+        "positive_groups": 10,
+        "background_groups": 10,
+        "positive_observations": 762,
+        "background_observations": 2495
+      },
+      "observation": {
+        "balanced_accuracy": 0.8525933757278337,
+        "accuracy": 0.8621430764507215,
+        "precision": 0.6631908237747653,
+        "recall": 0.8346456692913385,
+        "specificity": 0.8705410821643287,
+        "f1": 0.7391051714119697,
+        "confusion_matrix": [
+          [
+            2172,
+            323
+          ],
+          [
+            126,
+            636
+          ]
+        ],
+        "tn": 2172,
+        "fp": 323,
+        "fn": 126,
+        "tp": 636,
+        "class_order": [
+          0,
+          1
+        ]
+      },
+      "majority_vote_group_balanced_accuracy": 0.95,
+      "per_acquisition": {
+        "bottom_up_anti_parallel": {
+          "primary_gmba": 0.8575480543482503,
+          "primary": 0.8575480543482503,
+          "gmba": 0.8575480543482503,
+          "positive_group_macro_recall": 0.7567962533212796,
+          "negative_group_macro_specificity": 0.958299855375221,
+          "majority_vote_group_balanced_accuracy": 0.9375,
+          "majority_vote_tie_rule": "PREDICT_CLASS_0",
+          "observation": {
+            "balanced_accuracy": 0.8912333909654494,
+            "accuracy": 0.9297110823630875,
+            "precision": 0.9152854511970534,
+            "recall": 0.8094462540716613,
+            "specificity": 0.9730205278592375,
+            "f1": 0.8591184096802075,
+            "confusion_matrix": [
+              [
+                1659,
+                46
+              ],
+              [
+                117,
+                497
+              ]
+            ],
+            "tn": 1659,
+            "fp": 46,
+            "fn": 117,
+            "tp": 497,
+            "class_order": [
+              0,
+              1
+            ]
+          },
+          "counts": {
+            "observations": 2319,
+            "positive_groups": 8,
+            "background_groups": 8,
+            "positive_observations": 614,
+            "background_observations": 1705
+          }
+        },
+        "top_down_parallel": {
+          "primary_gmba": 0.7943774218548179,
+          "primary": 0.7943774218548179,
+          "gmba": 0.7943774218548179,
+          "positive_group_macro_recall": 0.9393877551020409,
+          "negative_group_macro_specificity": 0.649367088607595,
+          "majority_vote_group_balanced_accuracy": 1.0,
+          "majority_vote_tie_rule": "PREDICT_CLASS_0",
+          "observation": {
+            "balanced_accuracy": 0.794278138898392,
+            "accuracy": 0.6950959488272921,
+            "precision": 0.33413461538461536,
+            "recall": 0.9391891891891891,
+            "specificity": 0.649367088607595,
+            "f1": 0.4929078014184397,
+            "confusion_matrix": [
+              [
+                513,
+                277
+              ],
+              [
+                9,
+                139
+              ]
+            ],
+            "tn": 513,
+            "fp": 277,
+            "fn": 9,
+            "tp": 139,
+            "class_order": [
+              0,
+              1
+            ]
+          },
+          "counts": {
+            "observations": 938,
+            "positive_groups": 2,
+            "background_groups": 2,
+            "positive_observations": 148,
+            "background_observations": 790
+          }
+        }
+      },
+      "sample_order": "EXACT_FROZEN_MANIFEST_ORDER",
+      "maximum_probability_sum_error": 0.0,
+      "probability_sum_tolerance": 1e-12
+    },
+    "all_3257_labels_and_prediction_ID_order_match_manifest": true,
+    "group_count": 20,
+    "GOLD_positive_rows": 762,
+    "background_rows": 2495,
+    "SILVER_rows": 0,
+    "hashes": {
+      "EXECUTION_RECEIPT.json": "dbe116ef9773caf31ca8dc84b77b4c953dd9da4c677cc5dbb80044b100568a18",
+      "FINAL_PIPELINE.json": "a5e5ad86e9789147849dfd72f84fbf38065bf385e1c09b00779fba2133d49e5c",
+      "FINAL_FIT_FREEZE.json": "0ee683a3029c3fc1e9e299bf9fdf9fc461d7ffad240f447760d13160997c4c4c",
+      "TEST_ACCESS_RECEIPT.json": "381c600f159f0097c6b49382213d2519ab8a105c707cf531f7ab786dc01b9d44",
+      "TEST_PREDICTIONS.json": "1534fa28050480a005395599b4e0a4ae6dd17dcb984a80dac4520890f4068539",
+      "TEST_METRICS.json": "cbb4f519bf1a3fb7955fa4546fbbd7ab315e9c1e30aabc4bc28f540da2b2ac38"
+    },
+    "state": "CONSUMED",
+    "evaluations": 1
+  },
+  "chronology": {
+    "explicit_timestamps": {
+      "execution_receipt": "2026-09-21T17:25:12.806460+00:00",
+      "pipeline": "2026-09-21T17:38:31.756131+00:00",
+      "final_fit_freeze": "2026-09-21T17:38:39.265439+00:00",
+      "TEST_access": "2026-09-21T17:38:39.276162+00:00"
+    },
+    "latest_CI_job_completion": "2026-09-21T17:23:58Z",
+    "CI_jobs": 9,
+    "CI_steps": 100,
+    "all_CI_success_before_execution_receipt": true,
+    "strict_receipt_pipeline_fit_TEST_timestamp_order": true,
+    "prediction_first": "Frozen controller emits exclusive/fsynced TEST_PREDICTIONS before calling scoring; TEST_METRICS links exact prediction file hash. Prediction record links exact final fit freeze. The controller worktree is byte-identical to HEAD and frozen SHA256.",
+    "prediction_record_timestamp": "NOT_PRESENT",
+    "metric_record_timestamp": "NOT_PRESENT",
+    "timestamp_limit": "No independent timestamp or syscall trace is claimed for prediction write versus scoring. The supported evidence is frozen control flow, exclusive durable emitter and matching hash links.",
+    "prediction_record_has_explicit_true_labels": false,
+    "human_blinding_claim": false
+  },
+  "recorded_counts_verified": {
+    "scientific_invocations": 1,
+    "cv_fits_started": 80,
+    "cv_fits_completed": 80,
+    "development_fits_started": 5,
+    "development_fits_completed": 5,
+    "silver_fits_started": 1,
+    "silver_fits_completed": 1,
+    "final_fits_started": 1,
+    "final_fits_completed": 1,
+    "development_evaluations": 5,
+    "silver_development_evaluations": 1,
+    "test_prediction_calls": 1,
+    "test_evaluations": 1,
+    "retries": 0
+  },
+  "log_reconciliation": {
+    "CV_starts": 80,
+    "CV_completions": 80,
+    "CV_fold_completion_scores": 80,
+    "development_fits": 5,
+    "silver_fits": 1,
+    "final_fits": 1,
+    "CNN_epoch_completions": 20,
+    "fit_metadata_total_including_prior_classical_audit": 87,
+    "all_log_CV_scores_match_standalone_JSON": true,
+    "log_terminal_matches_JSON": true
+  },
+  "IO_metadata_links": {
+    "positive_phase_rows": {
+      "TRAIN": 3858,
+      "DEVELOPMENT": 598,
+      "TRAIN_SILVER": 1937,
+      "FINAL_TRAIN": 819,
+      "TEST": 762
+    },
+    "positive_selected_rows_read": 7974,
+    "positive_selected_row_bytes": 67380300,
+    "background_train_dev_pairs": 8737,
+    "background_TEST_pairs": 2495,
+    "background_cache_bytes": 94910400,
+    "TEST_authorization_links_to_durable_final_fit": true,
+    "scope": "Application metadata only; source/container/cache bytes were not read by this audit."
+  },
+  "terminal": {
+    "STUDY2_C": "PASS",
+    "STUDY2_C_METHOD": "GROUP_AWARE_MULTIMODAL_BENCHMARK",
+    "VALID_SUPPORT_SITES": 52,
+    "VALID_SUPPORT_SITE_DOMAIN_ONLY": true,
+    "SELECTED_BACKGROUND_TRACKS": 52,
+    "TRAIN_POSITIVE_GROUPS": 32,
+    "TRAIN_BACKGROUND_GROUPS": 32,
+    "DEV_POSITIVE_GROUPS": 10,
+    "DEV_BACKGROUND_GROUPS": 10,
+    "TEST_POSITIVE_GROUPS": 10,
+    "TEST_BACKGROUND_GROUPS": 10,
+    "MODELS_EVALUATED": 5,
+    "SELECTED_MODEL_FAMILY": "RF_REFERENCE",
+    "SELECTED_SUPERVISION_REGIME": "GOLD_PLUS_SILVER",
+    "FINAL_STUDY2_PIPELINE": {
+      "family": "RF_REFERENCE",
+      "supervision": "GOLD_PLUS_SILVER"
+    },
+    "TEST_STATE": "CONSUMED",
+    "SCIENTIFIC_TEST_EVALUATIONS": 1,
+    "HUMAN_REVIEW_USED": false,
+    "AUGMENTATION_USED": false,
+    "EXTERNAL_GENERALIZATION_CLAIM": false,
+    "STUDY2_CLOSED": true,
+    "STATE": "CLOSED_CONSUMED",
+    "MERGE_AUTHORIZED": false,
+    "CURRENT_AUTHORIZED_ACTIVITY": "NONE_AWAITING_AUTHOR_DECISION"
+  },
+  "assertions": 113344,
+  "discrepancies": 0,
+  "issues": [],
+  "limitations": [
+    "CV fold predictions are absent from prior CV JSON; their scalar scores were not independently recomputed. Means, parameter selection and recorded memberships were checked by the prior audit, and all progress score entries reconcile here.",
+    "CNN epoch losses and fit weight metadata are reconciled with frozen configuration and logs, not recomputed from tensors, gradients or library internals. Equal dataset group weights do not imply equal effective normalized minibatch SGD updates.",
+    "No learned model binary or logical tree-state digest is available to authenticate the estimator itself. The final freeze proves recorded completion/configuration and orders subsequent access through frozen controller logic.",
+    "Prediction metadata lacks independent write/scoring timestamps; no universal syscall monitoring or human label blindness is asserted.",
+    "TEST is an internal grouped weak-label assessment within two historically exposed acquisitions; it does not establish external generalization, independent replication, exhaustive physical fragmentation or causality.",
+    "No final-training resubstitution predictions are stored by this controller; the audit checks fit metadata and final TEST, without inventing final-training metrics."
+  ],
+  "audit_activity": {
+    "scientific_calls": 0,
+    "project_scorer_calls": 0,
+    "scientific_imports": 0,
+    "decoder_calls": 0,
+    "experimental_content_opens": 0,
+    "tests_or_training_runs": 0,
+    "git_mutations": 0,
+    "new_evidence_files": 1,
+    "read_only_git_commands": [
+      "git --no-optional-locks rev-parse HEAD",
+      "git --no-optional-locks show HEAD:src/snbi_fragmentation/study2c_execution.py",
+      "git --no-optional-locks show HEAD:artifacts/evidence/STUDY2_C_BENCHMARK/METHOD_FREEZE.json"
+    ]
+  }
+}

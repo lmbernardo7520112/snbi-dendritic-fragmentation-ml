@@ -1,0 +1,12 @@
+{
+  "created_at_utc": "2026-09-21T17:38:31.756131+00:00",
+  "method_freeze_sha": "8c38384915807a15062782a4a189601f7c83c8c3",
+  "selected_model_family": "RF_REFERENCE",
+  "selected_supervision_regime": "GOLD_PLUS_SILVER",
+  "hyperparameters": {},
+  "training_ids_sha256": "27dc62880e3cf075ebd471d82aa23622b12619331382f75bff400c10175e1a80",
+  "sample_count": 15949,
+  "group_count": 84,
+  "test_state": "LOGICALLY_SEALED_TEST",
+  "selection_closed": true
+}

@@ -1,0 +1,37 @@
+{
+  "freeze_sha": "8c38384915807a15062782a4a189601f7c83c8c3",
+  "parent_sha": "de7670bb8491d2ef01809b33aa326aa3a264324c",
+  "path_count": 40,
+  "checks": [
+    {
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "ecb452",
+        "wall_time_seconds": 0.876594912,
+        "exit_code": 0,
+        "original_token_count": 494,
+        "output": "{\n  \"a0_frozen_scope\": {\n    \"examined_file_count\": 4,\n    \"status\": \"PASS\",\n    \"violations\": []\n  },\n  \"active_custody\": {\n    \"examined_file_count\": 58,\n    \"status\": \"PASS\",\n    \"violations\": []\n  },\n  \"audit\": \"composed_phase_scope\",\n  \"authorized_scientific_phases\": [],\n  \"data_guard\": {\n    \"audit\": \"tracked_repository_data_guard\",\n    \"content_bytes_read\": 0,\n    \"examined_entry_count\": 674,\n    \"status\": \"PASS\",\n    \"violations\": []\n  },\n  \"experimental_content_bytes_read\": 0,\n  \"legacy_custody\": {\n    \"examined_file_count\": 75,\n    \"status\": \"PASS\",\n    \"violations\": []\n  },\n  \"legacy_scope\": {\n    \"authorized_phase\": null,\n    \"authorized_scientific_phases\": [],\n    \"blocked_phases\": [\n      \"TI-2\",\n      \"TI-2R\",\n      \"TI-3\",\n      \"TI-4\",\n      \"TI-5\",\n      \"TI-6\",\n      \"TI-7\",\n      \"TI-8\"\n    ],\n    \"codex_local_write_readiness\": \"BLOCKED_AWAITING_AUTHOR_DECISION\",\n    \"current_authorized_activity\": \"NONE_AWAITING_AUTHOR_DECISION\",\n    \"current_gate_documents\": {\n      \"document_count\": 2,\n      \"status\": \"PASS\",\n      \"violations\": []\n    },\n    \"experimental_content_bytes_read\": 0,\n    \"merge_authorized\": false,\n    \"scientific_readiness\": \"BLOCKED\",\n    \"status\": \"PASS\",\n    \"ti2_execution_authorized\": false,\n    \"ti2r_authorized\": false,\n    \"ti3_plus_authorized\": false,\n    \"violations\": []\n  },\n  \"merge_authorized\": false,\n  \"partition\": {\n    \"a0_frozen_file_count\": 4,\n    \"active_planned_count\": 0,\n    \"active_tracked_count\": 58,\n    \"duplicate_classification_paths\": [],\n    \"legacy_file_count\": 75,\n    \"missing_paths\": [],\n    \"relevant_tracked_count\": 137,\n    \"status\": \"PASS\",\n    \"unclassified_paths\": [],\n    \"violations\": []\n  },\n  \"scientific_readiness\": \"BLOCKED\",\n  \"status\": \"PASS\",\n  \"ti2_execution_authorized\": false,\n  \"ti3_plus_authorized\": false,\n  \"ti3_scope\": {\n    \"examined_entry_count\": 58,\n    \"experimental_content_bytes_read\": 0,\n    \"status\": \"PASS\",\n    \"violations\": []\n  },\n  \"violations\": []\n}\n"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "1444ed",
+        "wall_time_seconds": 0.267104911,
+        "exit_code": 0,
+        "original_token_count": 0,
+        "output": ""
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "c29400",
+        "wall_time_seconds": 0.384092504,
+        "exit_code": 0,
+        "original_token_count": 11,
+        "output": "Staged40 paths exact; hashes and bytes PASS\n"
+      }
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "profile": "PRE_METADATA_DESIGN_AND_COMPONENTS_ONLY",
+  "unique_test_count": 96,
+  "tests_by_module": {
+    "design": 30,
+    "io": 31,
+    "models": 25,
+    "cnn": 10
+  },
+  "skips": 0,
+  "failures": 0,
+  "errors": 0,
+  "full_controller_profile": "NOT_YET_RUN",
+  "execution_authority_granted": false,
+  "actual_scientific_fits": 0,
+  "source_pixel_reads": 0
+}

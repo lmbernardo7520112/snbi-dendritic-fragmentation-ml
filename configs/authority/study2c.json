@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "phase": "STUDY2_C",
+  "base_sha": "de7670bb8491d2ef01809b33aa326aa3a264324c",
+  "branch": "feat/study2c-group-aware-benchmark",
+  "authority_sha256": "59405ea29a29039246e090e6fa5f72a580a7c183af0dbd1d324d341eb8b05450",
+  "scientific_invocations_limit": 1,
+  "cv_fits_limit": 80,
+  "development_model_fits": 5,
+  "silver_fits": 1,
+  "final_fits": 1,
+  "test_evaluations": 1,
+  "human_review": false,
+  "augmentation": false,
+  "valid_support_sites": 52,
+  "background_tracks": 52,
+  "terminal_closes_authority": true
+}

@@ -1,0 +1,304 @@
+{"progress": {"event": "CV_FIT_START", "family": "LOGISTIC_REGRESSION", "candidate_index": 0, "fold": 0, "fit_ordinal": 1}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "LOGISTIC_REGRESSION", "candidate_index": 0, "fold": 0, "fit_ordinal": 1}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "LOGISTIC_REGRESSION", "candidate_index": 0, "fold": 0, "fit_ordinal": 1, "primary_gmba": 0.7014247948293821}}
+{"progress": {"event": "CV_FIT_START", "family": "LOGISTIC_REGRESSION", "candidate_index": 0, "fold": 1, "fit_ordinal": 2}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "LOGISTIC_REGRESSION", "candidate_index": 0, "fold": 1, "fit_ordinal": 2}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "LOGISTIC_REGRESSION", "candidate_index": 0, "fold": 1, "fit_ordinal": 2, "primary_gmba": 0.836662860379507}}
+{"progress": {"event": "CV_FIT_START", "family": "LOGISTIC_REGRESSION", "candidate_index": 0, "fold": 2, "fit_ordinal": 3}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "LOGISTIC_REGRESSION", "candidate_index": 0, "fold": 2, "fit_ordinal": 3}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "LOGISTIC_REGRESSION", "candidate_index": 0, "fold": 2, "fit_ordinal": 3, "primary_gmba": 0.7089115668354776}}
+{"progress": {"event": "CV_FIT_START", "family": "LOGISTIC_REGRESSION", "candidate_index": 0, "fold": 3, "fit_ordinal": 4}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "LOGISTIC_REGRESSION", "candidate_index": 0, "fold": 3, "fit_ordinal": 4}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "LOGISTIC_REGRESSION", "candidate_index": 0, "fold": 3, "fit_ordinal": 4, "primary_gmba": 0.8661776350455265}}
+{"progress": {"event": "CV_FIT_START", "family": "LOGISTIC_REGRESSION", "candidate_index": 1, "fold": 0, "fit_ordinal": 5}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "LOGISTIC_REGRESSION", "candidate_index": 1, "fold": 0, "fit_ordinal": 5}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "LOGISTIC_REGRESSION", "candidate_index": 1, "fold": 0, "fit_ordinal": 5, "primary_gmba": 0.6969060145805701}}
+{"progress": {"event": "CV_FIT_START", "family": "LOGISTIC_REGRESSION", "candidate_index": 1, "fold": 1, "fit_ordinal": 6}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "LOGISTIC_REGRESSION", "candidate_index": 1, "fold": 1, "fit_ordinal": 6}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "LOGISTIC_REGRESSION", "candidate_index": 1, "fold": 1, "fit_ordinal": 6, "primary_gmba": 0.8250225077833099}}
+{"progress": {"event": "CV_FIT_START", "family": "LOGISTIC_REGRESSION", "candidate_index": 1, "fold": 2, "fit_ordinal": 7}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "LOGISTIC_REGRESSION", "candidate_index": 1, "fold": 2, "fit_ordinal": 7}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "LOGISTIC_REGRESSION", "candidate_index": 1, "fold": 2, "fit_ordinal": 7, "primary_gmba": 0.7316686678330433}}
+{"progress": {"event": "CV_FIT_START", "family": "LOGISTIC_REGRESSION", "candidate_index": 1, "fold": 3, "fit_ordinal": 8}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "LOGISTIC_REGRESSION", "candidate_index": 1, "fold": 3, "fit_ordinal": 8}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "LOGISTIC_REGRESSION", "candidate_index": 1, "fold": 3, "fit_ordinal": 8, "primary_gmba": 0.8669988143745859}}
+{"progress": {"event": "CV_FIT_START", "family": "LOGISTIC_REGRESSION", "candidate_index": 2, "fold": 0, "fit_ordinal": 9}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "LOGISTIC_REGRESSION", "candidate_index": 2, "fold": 0, "fit_ordinal": 9}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "LOGISTIC_REGRESSION", "candidate_index": 2, "fold": 0, "fit_ordinal": 9, "primary_gmba": 0.6987990924169525}}
+{"progress": {"event": "CV_FIT_START", "family": "LOGISTIC_REGRESSION", "candidate_index": 2, "fold": 1, "fit_ordinal": 10}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "LOGISTIC_REGRESSION", "candidate_index": 2, "fold": 1, "fit_ordinal": 10}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "LOGISTIC_REGRESSION", "candidate_index": 2, "fold": 1, "fit_ordinal": 10, "primary_gmba": 0.786531679785557}}
+{"progress": {"event": "CV_FIT_START", "family": "LOGISTIC_REGRESSION", "candidate_index": 2, "fold": 2, "fit_ordinal": 11}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "LOGISTIC_REGRESSION", "candidate_index": 2, "fold": 2, "fit_ordinal": 11}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "LOGISTIC_REGRESSION", "candidate_index": 2, "fold": 2, "fit_ordinal": 11, "primary_gmba": 0.7530920868031659}}
+{"progress": {"event": "CV_FIT_START", "family": "LOGISTIC_REGRESSION", "candidate_index": 2, "fold": 3, "fit_ordinal": 12}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "LOGISTIC_REGRESSION", "candidate_index": 2, "fold": 3, "fit_ordinal": 12}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "LOGISTIC_REGRESSION", "candidate_index": 2, "fold": 3, "fit_ordinal": 12, "primary_gmba": 0.8596039704938414}}
+{"progress": {"stage": "development", "family": "LOGISTIC_REGRESSION", "event": "fit_start", "samples": 10907}}
+{"progress": {"stage": "development", "family": "LOGISTIC_REGRESSION", "event": "fit_complete"}}
+{"progress": {"event": "CV_FIT_START", "family": "SVM_RBF", "candidate_index": 0, "fold": 0, "fit_ordinal": 1}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "SVM_RBF", "candidate_index": 0, "fold": 0, "fit_ordinal": 1}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "SVM_RBF", "candidate_index": 0, "fold": 0, "fit_ordinal": 1, "primary_gmba": 0.7065083909794578}}
+{"progress": {"event": "CV_FIT_START", "family": "SVM_RBF", "candidate_index": 0, "fold": 1, "fit_ordinal": 2}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "SVM_RBF", "candidate_index": 0, "fold": 1, "fit_ordinal": 2}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "SVM_RBF", "candidate_index": 0, "fold": 1, "fit_ordinal": 2, "primary_gmba": 0.8230568226238695}}
+{"progress": {"event": "CV_FIT_START", "family": "SVM_RBF", "candidate_index": 0, "fold": 2, "fit_ordinal": 3}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "SVM_RBF", "candidate_index": 0, "fold": 2, "fit_ordinal": 3}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "SVM_RBF", "candidate_index": 0, "fold": 2, "fit_ordinal": 3, "primary_gmba": 0.6829575094179101}}
+{"progress": {"event": "CV_FIT_START", "family": "SVM_RBF", "candidate_index": 0, "fold": 3, "fit_ordinal": 4}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "SVM_RBF", "candidate_index": 0, "fold": 3, "fit_ordinal": 4}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "SVM_RBF", "candidate_index": 0, "fold": 3, "fit_ordinal": 4, "primary_gmba": 0.8127589943178115}}
+{"progress": {"event": "CV_FIT_START", "family": "SVM_RBF", "candidate_index": 1, "fold": 0, "fit_ordinal": 5}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "SVM_RBF", "candidate_index": 1, "fold": 0, "fit_ordinal": 5}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "SVM_RBF", "candidate_index": 1, "fold": 0, "fit_ordinal": 5, "primary_gmba": 0.5969057275267473}}
+{"progress": {"event": "CV_FIT_START", "family": "SVM_RBF", "candidate_index": 1, "fold": 1, "fit_ordinal": 6}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "SVM_RBF", "candidate_index": 1, "fold": 1, "fit_ordinal": 6}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "SVM_RBF", "candidate_index": 1, "fold": 1, "fit_ordinal": 6, "primary_gmba": 0.8284348653786924}}
+{"progress": {"event": "CV_FIT_START", "family": "SVM_RBF", "candidate_index": 1, "fold": 2, "fit_ordinal": 7}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "SVM_RBF", "candidate_index": 1, "fold": 2, "fit_ordinal": 7}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "SVM_RBF", "candidate_index": 1, "fold": 2, "fit_ordinal": 7, "primary_gmba": 0.7383925707702265}}
+{"progress": {"event": "CV_FIT_START", "family": "SVM_RBF", "candidate_index": 1, "fold": 3, "fit_ordinal": 8}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "SVM_RBF", "candidate_index": 1, "fold": 3, "fit_ordinal": 8}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "SVM_RBF", "candidate_index": 1, "fold": 3, "fit_ordinal": 8, "primary_gmba": 0.8140312114848236}}
+{"progress": {"event": "CV_FIT_START", "family": "SVM_RBF", "candidate_index": 2, "fold": 0, "fit_ordinal": 9}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "SVM_RBF", "candidate_index": 2, "fold": 0, "fit_ordinal": 9}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "SVM_RBF", "candidate_index": 2, "fold": 0, "fit_ordinal": 9, "primary_gmba": 0.7297919071690673}}
+{"progress": {"event": "CV_FIT_START", "family": "SVM_RBF", "candidate_index": 2, "fold": 1, "fit_ordinal": 10}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "SVM_RBF", "candidate_index": 2, "fold": 1, "fit_ordinal": 10}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "SVM_RBF", "candidate_index": 2, "fold": 1, "fit_ordinal": 10, "primary_gmba": 0.8342118774703287}}
+{"progress": {"event": "CV_FIT_START", "family": "SVM_RBF", "candidate_index": 2, "fold": 2, "fit_ordinal": 11}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "SVM_RBF", "candidate_index": 2, "fold": 2, "fit_ordinal": 11}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "SVM_RBF", "candidate_index": 2, "fold": 2, "fit_ordinal": 11, "primary_gmba": 0.7199376669145268}}
+{"progress": {"event": "CV_FIT_START", "family": "SVM_RBF", "candidate_index": 2, "fold": 3, "fit_ordinal": 12}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "SVM_RBF", "candidate_index": 2, "fold": 3, "fit_ordinal": 12}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "SVM_RBF", "candidate_index": 2, "fold": 3, "fit_ordinal": 12, "primary_gmba": 0.8609280987611334}}
+{"progress": {"event": "CV_FIT_START", "family": "SVM_RBF", "candidate_index": 3, "fold": 0, "fit_ordinal": 13}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "SVM_RBF", "candidate_index": 3, "fold": 0, "fit_ordinal": 13}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "SVM_RBF", "candidate_index": 3, "fold": 0, "fit_ordinal": 13, "primary_gmba": 0.6986076278802471}}
+{"progress": {"event": "CV_FIT_START", "family": "SVM_RBF", "candidate_index": 3, "fold": 1, "fit_ordinal": 14}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "SVM_RBF", "candidate_index": 3, "fold": 1, "fit_ordinal": 14}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "SVM_RBF", "candidate_index": 3, "fold": 1, "fit_ordinal": 14, "primary_gmba": 0.8349387335205771}}
+{"progress": {"event": "CV_FIT_START", "family": "SVM_RBF", "candidate_index": 3, "fold": 2, "fit_ordinal": 15}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "SVM_RBF", "candidate_index": 3, "fold": 2, "fit_ordinal": 15}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "SVM_RBF", "candidate_index": 3, "fold": 2, "fit_ordinal": 15, "primary_gmba": 0.6933928723357794}}
+{"progress": {"event": "CV_FIT_START", "family": "SVM_RBF", "candidate_index": 3, "fold": 3, "fit_ordinal": 16}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "SVM_RBF", "candidate_index": 3, "fold": 3, "fit_ordinal": 16}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "SVM_RBF", "candidate_index": 3, "fold": 3, "fit_ordinal": 16, "primary_gmba": 0.865307968997289}}
+{"progress": {"event": "CV_FIT_START", "family": "SVM_RBF", "candidate_index": 4, "fold": 0, "fit_ordinal": 17}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "SVM_RBF", "candidate_index": 4, "fold": 0, "fit_ordinal": 17}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "SVM_RBF", "candidate_index": 4, "fold": 0, "fit_ordinal": 17, "primary_gmba": 0.7242740023375899}}
+{"progress": {"event": "CV_FIT_START", "family": "SVM_RBF", "candidate_index": 4, "fold": 1, "fit_ordinal": 18}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "SVM_RBF", "candidate_index": 4, "fold": 1, "fit_ordinal": 18}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "SVM_RBF", "candidate_index": 4, "fold": 1, "fit_ordinal": 18, "primary_gmba": 0.7496442779850283}}
+{"progress": {"event": "CV_FIT_START", "family": "SVM_RBF", "candidate_index": 4, "fold": 2, "fit_ordinal": 19}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "SVM_RBF", "candidate_index": 4, "fold": 2, "fit_ordinal": 19}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "SVM_RBF", "candidate_index": 4, "fold": 2, "fit_ordinal": 19, "primary_gmba": 0.7220315746521491}}
+{"progress": {"event": "CV_FIT_START", "family": "SVM_RBF", "candidate_index": 4, "fold": 3, "fit_ordinal": 20}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "SVM_RBF", "candidate_index": 4, "fold": 3, "fit_ordinal": 20}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "SVM_RBF", "candidate_index": 4, "fold": 3, "fit_ordinal": 20, "primary_gmba": 0.8461860232168738}}
+{"progress": {"event": "CV_FIT_START", "family": "SVM_RBF", "candidate_index": 5, "fold": 0, "fit_ordinal": 21}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "SVM_RBF", "candidate_index": 5, "fold": 0, "fit_ordinal": 21}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "SVM_RBF", "candidate_index": 5, "fold": 0, "fit_ordinal": 21, "primary_gmba": 0.7036731350368013}}
+{"progress": {"event": "CV_FIT_START", "family": "SVM_RBF", "candidate_index": 5, "fold": 1, "fit_ordinal": 22}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "SVM_RBF", "candidate_index": 5, "fold": 1, "fit_ordinal": 22}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "SVM_RBF", "candidate_index": 5, "fold": 1, "fit_ordinal": 22, "primary_gmba": 0.8354352739228084}}
+{"progress": {"event": "CV_FIT_START", "family": "SVM_RBF", "candidate_index": 5, "fold": 2, "fit_ordinal": 23}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "SVM_RBF", "candidate_index": 5, "fold": 2, "fit_ordinal": 23}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "SVM_RBF", "candidate_index": 5, "fold": 2, "fit_ordinal": 23, "primary_gmba": 0.704409456624904}}
+{"progress": {"event": "CV_FIT_START", "family": "SVM_RBF", "candidate_index": 5, "fold": 3, "fit_ordinal": 24}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "SVM_RBF", "candidate_index": 5, "fold": 3, "fit_ordinal": 24}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "SVM_RBF", "candidate_index": 5, "fold": 3, "fit_ordinal": 24, "primary_gmba": 0.8686923637943833}}
+{"progress": {"event": "CV_FIT_START", "family": "SVM_RBF", "candidate_index": 6, "fold": 0, "fit_ordinal": 25}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "SVM_RBF", "candidate_index": 6, "fold": 0, "fit_ordinal": 25}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "SVM_RBF", "candidate_index": 6, "fold": 0, "fit_ordinal": 25, "primary_gmba": 0.7058947952524655}}
+{"progress": {"event": "CV_FIT_START", "family": "SVM_RBF", "candidate_index": 6, "fold": 1, "fit_ordinal": 26}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "SVM_RBF", "candidate_index": 6, "fold": 1, "fit_ordinal": 26}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "SVM_RBF", "candidate_index": 6, "fold": 1, "fit_ordinal": 26, "primary_gmba": 0.8255185641905652}}
+{"progress": {"event": "CV_FIT_START", "family": "SVM_RBF", "candidate_index": 6, "fold": 2, "fit_ordinal": 27}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "SVM_RBF", "candidate_index": 6, "fold": 2, "fit_ordinal": 27}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "SVM_RBF", "candidate_index": 6, "fold": 2, "fit_ordinal": 27, "primary_gmba": 0.7084787109088961}}
+{"progress": {"event": "CV_FIT_START", "family": "SVM_RBF", "candidate_index": 6, "fold": 3, "fit_ordinal": 28}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "SVM_RBF", "candidate_index": 6, "fold": 3, "fit_ordinal": 28}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "SVM_RBF", "candidate_index": 6, "fold": 3, "fit_ordinal": 28, "primary_gmba": 0.8655481105752796}}
+{"progress": {"event": "CV_FIT_START", "family": "SVM_RBF", "candidate_index": 7, "fold": 0, "fit_ordinal": 29}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "SVM_RBF", "candidate_index": 7, "fold": 0, "fit_ordinal": 29}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "SVM_RBF", "candidate_index": 7, "fold": 0, "fit_ordinal": 29, "primary_gmba": 0.7033820918387941}}
+{"progress": {"event": "CV_FIT_START", "family": "SVM_RBF", "candidate_index": 7, "fold": 1, "fit_ordinal": 30}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "SVM_RBF", "candidate_index": 7, "fold": 1, "fit_ordinal": 30}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "SVM_RBF", "candidate_index": 7, "fold": 1, "fit_ordinal": 30, "primary_gmba": 0.832509475309111}}
+{"progress": {"event": "CV_FIT_START", "family": "SVM_RBF", "candidate_index": 7, "fold": 2, "fit_ordinal": 31}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "SVM_RBF", "candidate_index": 7, "fold": 2, "fit_ordinal": 31}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "SVM_RBF", "candidate_index": 7, "fold": 2, "fit_ordinal": 31, "primary_gmba": 0.7046561607351438}}
+{"progress": {"event": "CV_FIT_START", "family": "SVM_RBF", "candidate_index": 7, "fold": 3, "fit_ordinal": 32}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "SVM_RBF", "candidate_index": 7, "fold": 3, "fit_ordinal": 32}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "SVM_RBF", "candidate_index": 7, "fold": 3, "fit_ordinal": 32, "primary_gmba": 0.865839431582323}}
+{"progress": {"event": "CV_FIT_START", "family": "SVM_RBF", "candidate_index": 8, "fold": 0, "fit_ordinal": 33}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "SVM_RBF", "candidate_index": 8, "fold": 0, "fit_ordinal": 33}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "SVM_RBF", "candidate_index": 8, "fold": 0, "fit_ordinal": 33, "primary_gmba": 0.7039360450061061}}
+{"progress": {"event": "CV_FIT_START", "family": "SVM_RBF", "candidate_index": 8, "fold": 1, "fit_ordinal": 34}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "SVM_RBF", "candidate_index": 8, "fold": 1, "fit_ordinal": 34}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "SVM_RBF", "candidate_index": 8, "fold": 1, "fit_ordinal": 34, "primary_gmba": 0.8151507140984733}}
+{"progress": {"event": "CV_FIT_START", "family": "SVM_RBF", "candidate_index": 8, "fold": 2, "fit_ordinal": 35}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "SVM_RBF", "candidate_index": 8, "fold": 2, "fit_ordinal": 35}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "SVM_RBF", "candidate_index": 8, "fold": 2, "fit_ordinal": 35, "primary_gmba": 0.7194552025247771}}
+{"progress": {"event": "CV_FIT_START", "family": "SVM_RBF", "candidate_index": 8, "fold": 3, "fit_ordinal": 36}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "SVM_RBF", "candidate_index": 8, "fold": 3, "fit_ordinal": 36}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "SVM_RBF", "candidate_index": 8, "fold": 3, "fit_ordinal": 36, "primary_gmba": 0.8627677762431587}}
+{"progress": {"stage": "development", "family": "SVM_RBF", "event": "fit_start", "samples": 10907}}
+{"progress": {"stage": "development", "family": "SVM_RBF", "event": "fit_complete"}}
+{"progress": {"stage": "development", "family": "RF_REFERENCE", "event": "fit_start", "samples": 10907}}
+{"progress": {"stage": "development", "family": "RF_REFERENCE", "event": "fit_complete"}}
+{"progress": {"event": "CV_FIT_START", "family": "RF_TUNED", "candidate_index": 0, "fold": 0, "fit_ordinal": 1}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "RF_TUNED", "candidate_index": 0, "fold": 0, "fit_ordinal": 1}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "RF_TUNED", "candidate_index": 0, "fold": 0, "fit_ordinal": 1, "primary_gmba": 0.7149610942727219}}
+{"progress": {"event": "CV_FIT_START", "family": "RF_TUNED", "candidate_index": 0, "fold": 1, "fit_ordinal": 2}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "RF_TUNED", "candidate_index": 0, "fold": 1, "fit_ordinal": 2}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "RF_TUNED", "candidate_index": 0, "fold": 1, "fit_ordinal": 2, "primary_gmba": 0.7210835409867945}}
+{"progress": {"event": "CV_FIT_START", "family": "RF_TUNED", "candidate_index": 0, "fold": 2, "fit_ordinal": 3}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "RF_TUNED", "candidate_index": 0, "fold": 2, "fit_ordinal": 3}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "RF_TUNED", "candidate_index": 0, "fold": 2, "fit_ordinal": 3, "primary_gmba": 0.7686496637037568}}
+{"progress": {"event": "CV_FIT_START", "family": "RF_TUNED", "candidate_index": 0, "fold": 3, "fit_ordinal": 4}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "RF_TUNED", "candidate_index": 0, "fold": 3, "fit_ordinal": 4}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "RF_TUNED", "candidate_index": 0, "fold": 3, "fit_ordinal": 4, "primary_gmba": 0.8360143596705266}}
+{"progress": {"event": "CV_FIT_START", "family": "RF_TUNED", "candidate_index": 1, "fold": 0, "fit_ordinal": 5}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "RF_TUNED", "candidate_index": 1, "fold": 0, "fit_ordinal": 5}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "RF_TUNED", "candidate_index": 1, "fold": 0, "fit_ordinal": 5, "primary_gmba": 0.7175590404368797}}
+{"progress": {"event": "CV_FIT_START", "family": "RF_TUNED", "candidate_index": 1, "fold": 1, "fit_ordinal": 6}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "RF_TUNED", "candidate_index": 1, "fold": 1, "fit_ordinal": 6}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "RF_TUNED", "candidate_index": 1, "fold": 1, "fit_ordinal": 6, "primary_gmba": 0.7390839881805087}}
+{"progress": {"event": "CV_FIT_START", "family": "RF_TUNED", "candidate_index": 1, "fold": 2, "fit_ordinal": 7}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "RF_TUNED", "candidate_index": 1, "fold": 2, "fit_ordinal": 7}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "RF_TUNED", "candidate_index": 1, "fold": 2, "fit_ordinal": 7, "primary_gmba": 0.7699009118262101}}
+{"progress": {"event": "CV_FIT_START", "family": "RF_TUNED", "candidate_index": 1, "fold": 3, "fit_ordinal": 8}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "RF_TUNED", "candidate_index": 1, "fold": 3, "fit_ordinal": 8}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "RF_TUNED", "candidate_index": 1, "fold": 3, "fit_ordinal": 8, "primary_gmba": 0.8360055583011377}}
+{"progress": {"event": "CV_FIT_START", "family": "RF_TUNED", "candidate_index": 2, "fold": 0, "fit_ordinal": 9}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "RF_TUNED", "candidate_index": 2, "fold": 0, "fit_ordinal": 9}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "RF_TUNED", "candidate_index": 2, "fold": 0, "fit_ordinal": 9, "primary_gmba": 0.7024539610559212}}
+{"progress": {"event": "CV_FIT_START", "family": "RF_TUNED", "candidate_index": 2, "fold": 1, "fit_ordinal": 10}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "RF_TUNED", "candidate_index": 2, "fold": 1, "fit_ordinal": 10}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "RF_TUNED", "candidate_index": 2, "fold": 1, "fit_ordinal": 10, "primary_gmba": 0.6930258400934375}}
+{"progress": {"event": "CV_FIT_START", "family": "RF_TUNED", "candidate_index": 2, "fold": 2, "fit_ordinal": 11}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "RF_TUNED", "candidate_index": 2, "fold": 2, "fit_ordinal": 11}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "RF_TUNED", "candidate_index": 2, "fold": 2, "fit_ordinal": 11, "primary_gmba": 0.7865828496531608}}
+{"progress": {"event": "CV_FIT_START", "family": "RF_TUNED", "candidate_index": 2, "fold": 3, "fit_ordinal": 12}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "RF_TUNED", "candidate_index": 2, "fold": 3, "fit_ordinal": 12}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "RF_TUNED", "candidate_index": 2, "fold": 3, "fit_ordinal": 12, "primary_gmba": 0.7709046887707236}}
+{"progress": {"event": "CV_FIT_START", "family": "RF_TUNED", "candidate_index": 3, "fold": 0, "fit_ordinal": 13}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "RF_TUNED", "candidate_index": 3, "fold": 0, "fit_ordinal": 13}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "RF_TUNED", "candidate_index": 3, "fold": 0, "fit_ordinal": 13, "primary_gmba": 0.6994263987014959}}
+{"progress": {"event": "CV_FIT_START", "family": "RF_TUNED", "candidate_index": 3, "fold": 1, "fit_ordinal": 14}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "RF_TUNED", "candidate_index": 3, "fold": 1, "fit_ordinal": 14}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "RF_TUNED", "candidate_index": 3, "fold": 1, "fit_ordinal": 14, "primary_gmba": 0.6802306464581779}}
+{"progress": {"event": "CV_FIT_START", "family": "RF_TUNED", "candidate_index": 3, "fold": 2, "fit_ordinal": 15}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "RF_TUNED", "candidate_index": 3, "fold": 2, "fit_ordinal": 15}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "RF_TUNED", "candidate_index": 3, "fold": 2, "fit_ordinal": 15, "primary_gmba": 0.7758009452614929}}
+{"progress": {"event": "CV_FIT_START", "family": "RF_TUNED", "candidate_index": 3, "fold": 3, "fit_ordinal": 16}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "RF_TUNED", "candidate_index": 3, "fold": 3, "fit_ordinal": 16}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "RF_TUNED", "candidate_index": 3, "fold": 3, "fit_ordinal": 16, "primary_gmba": 0.7204216037505797}}
+{"progress": {"event": "CV_FIT_START", "family": "RF_TUNED", "candidate_index": 4, "fold": 0, "fit_ordinal": 17}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "RF_TUNED", "candidate_index": 4, "fold": 0, "fit_ordinal": 17}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "RF_TUNED", "candidate_index": 4, "fold": 0, "fit_ordinal": 17, "primary_gmba": 0.7144656473212454}}
+{"progress": {"event": "CV_FIT_START", "family": "RF_TUNED", "candidate_index": 4, "fold": 1, "fit_ordinal": 18}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "RF_TUNED", "candidate_index": 4, "fold": 1, "fit_ordinal": 18}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "RF_TUNED", "candidate_index": 4, "fold": 1, "fit_ordinal": 18, "primary_gmba": 0.725415276886207}}
+{"progress": {"event": "CV_FIT_START", "family": "RF_TUNED", "candidate_index": 4, "fold": 2, "fit_ordinal": 19}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "RF_TUNED", "candidate_index": 4, "fold": 2, "fit_ordinal": 19}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "RF_TUNED", "candidate_index": 4, "fold": 2, "fit_ordinal": 19, "primary_gmba": 0.7653813629731332}}
+{"progress": {"event": "CV_FIT_START", "family": "RF_TUNED", "candidate_index": 4, "fold": 3, "fit_ordinal": 20}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "RF_TUNED", "candidate_index": 4, "fold": 3, "fit_ordinal": 20}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "RF_TUNED", "candidate_index": 4, "fold": 3, "fit_ordinal": 20, "primary_gmba": 0.8336258917752382}}
+{"progress": {"event": "CV_FIT_START", "family": "RF_TUNED", "candidate_index": 5, "fold": 0, "fit_ordinal": 21}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "RF_TUNED", "candidate_index": 5, "fold": 0, "fit_ordinal": 21}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "RF_TUNED", "candidate_index": 5, "fold": 0, "fit_ordinal": 21, "primary_gmba": 0.7148829203824238}}
+{"progress": {"event": "CV_FIT_START", "family": "RF_TUNED", "candidate_index": 5, "fold": 1, "fit_ordinal": 22}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "RF_TUNED", "candidate_index": 5, "fold": 1, "fit_ordinal": 22}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "RF_TUNED", "candidate_index": 5, "fold": 1, "fit_ordinal": 22, "primary_gmba": 0.7291716248373327}}
+{"progress": {"event": "CV_FIT_START", "family": "RF_TUNED", "candidate_index": 5, "fold": 2, "fit_ordinal": 23}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "RF_TUNED", "candidate_index": 5, "fold": 2, "fit_ordinal": 23}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "RF_TUNED", "candidate_index": 5, "fold": 2, "fit_ordinal": 23, "primary_gmba": 0.766539330519388}}
+{"progress": {"event": "CV_FIT_START", "family": "RF_TUNED", "candidate_index": 5, "fold": 3, "fit_ordinal": 24}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "RF_TUNED", "candidate_index": 5, "fold": 3, "fit_ordinal": 24}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "RF_TUNED", "candidate_index": 5, "fold": 3, "fit_ordinal": 24, "primary_gmba": 0.8319795686890417}}
+{"progress": {"event": "CV_FIT_START", "family": "RF_TUNED", "candidate_index": 6, "fold": 0, "fit_ordinal": 25}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "RF_TUNED", "candidate_index": 6, "fold": 0, "fit_ordinal": 25}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "RF_TUNED", "candidate_index": 6, "fold": 0, "fit_ordinal": 25, "primary_gmba": 0.7042847020680767}}
+{"progress": {"event": "CV_FIT_START", "family": "RF_TUNED", "candidate_index": 6, "fold": 1, "fit_ordinal": 26}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "RF_TUNED", "candidate_index": 6, "fold": 1, "fit_ordinal": 26}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "RF_TUNED", "candidate_index": 6, "fold": 1, "fit_ordinal": 26, "primary_gmba": 0.6957942041774847}}
+{"progress": {"event": "CV_FIT_START", "family": "RF_TUNED", "candidate_index": 6, "fold": 2, "fit_ordinal": 27}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "RF_TUNED", "candidate_index": 6, "fold": 2, "fit_ordinal": 27}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "RF_TUNED", "candidate_index": 6, "fold": 2, "fit_ordinal": 27, "primary_gmba": 0.785889355520198}}
+{"progress": {"event": "CV_FIT_START", "family": "RF_TUNED", "candidate_index": 6, "fold": 3, "fit_ordinal": 28}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "RF_TUNED", "candidate_index": 6, "fold": 3, "fit_ordinal": 28}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "RF_TUNED", "candidate_index": 6, "fold": 3, "fit_ordinal": 28, "primary_gmba": 0.7700154605187877}}
+{"progress": {"event": "CV_FIT_START", "family": "RF_TUNED", "candidate_index": 7, "fold": 0, "fit_ordinal": 29}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "RF_TUNED", "candidate_index": 7, "fold": 0, "fit_ordinal": 29}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "RF_TUNED", "candidate_index": 7, "fold": 0, "fit_ordinal": 29, "primary_gmba": 0.7041529762380917}}
+{"progress": {"event": "CV_FIT_START", "family": "RF_TUNED", "candidate_index": 7, "fold": 1, "fit_ordinal": 30}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "RF_TUNED", "candidate_index": 7, "fold": 1, "fit_ordinal": 30}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "RF_TUNED", "candidate_index": 7, "fold": 1, "fit_ordinal": 30, "primary_gmba": 0.6812126059124761}}
+{"progress": {"event": "CV_FIT_START", "family": "RF_TUNED", "candidate_index": 7, "fold": 2, "fit_ordinal": 31}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "RF_TUNED", "candidate_index": 7, "fold": 2, "fit_ordinal": 31}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "RF_TUNED", "candidate_index": 7, "fold": 2, "fit_ordinal": 31, "primary_gmba": 0.7755168588462966}}
+{"progress": {"event": "CV_FIT_START", "family": "RF_TUNED", "candidate_index": 7, "fold": 3, "fit_ordinal": 32}}
+{"progress": {"event": "CV_FIT_COMPLETE", "family": "RF_TUNED", "candidate_index": 7, "fold": 3, "fit_ordinal": 32}}
+{"progress": {"event": "CV_FOLD_COMPLETE", "family": "RF_TUNED", "candidate_index": 7, "fold": 3, "fit_ordinal": 32, "primary_gmba": 0.7319923940026793}}
+{"progress": {"stage": "development", "family": "RF_TUNED", "event": "fit_start", "samples": 10907}}
+{"progress": {"stage": "development", "family": "RF_TUNED", "event": "fit_complete"}}
+{"progress": {"stage": "development", "family": "CNN_V2", "event": "fit_start", "samples": 10907}}
+{"progress": {"event": "CNN_TRAIN_START", "epochs": 20, "parameter_count": 5010}}
+{"progress": {"event": "CNN_EPOCH_COMPLETE", "epoch": 1, "epoch_loss": 0.6224969378550511, "optimizer_updates": 341, "rows_seen": 10907}}
+{"progress": {"event": "CNN_EPOCH_COMPLETE", "epoch": 2, "epoch_loss": 0.5727601167064051, "optimizer_updates": 682, "rows_seen": 10907}}
+{"progress": {"event": "CNN_EPOCH_COMPLETE", "epoch": 3, "epoch_loss": 0.5480573522566207, "optimizer_updates": 1023, "rows_seen": 10907}}
+{"progress": {"event": "CNN_EPOCH_COMPLETE", "epoch": 4, "epoch_loss": 0.5330546932051874, "optimizer_updates": 1364, "rows_seen": 10907}}
+{"progress": {"event": "CNN_EPOCH_COMPLETE", "epoch": 5, "epoch_loss": 0.5355446387070801, "optimizer_updates": 1705, "rows_seen": 10907}}
+{"progress": {"event": "CNN_EPOCH_COMPLETE", "epoch": 6, "epoch_loss": 0.5152419581470047, "optimizer_updates": 2046, "rows_seen": 10907}}
+{"progress": {"event": "CNN_EPOCH_COMPLETE", "epoch": 7, "epoch_loss": 0.49553827679794865, "optimizer_updates": 2387, "rows_seen": 10907}}
+{"progress": {"event": "CNN_EPOCH_COMPLETE", "epoch": 8, "epoch_loss": 0.4808697981704214, "optimizer_updates": 2728, "rows_seen": 10907}}
+{"progress": {"event": "CNN_EPOCH_COMPLETE", "epoch": 9, "epoch_loss": 0.4865551078498344, "optimizer_updates": 3069, "rows_seen": 10907}}
+{"progress": {"event": "CNN_EPOCH_COMPLETE", "epoch": 10, "epoch_loss": 0.46959452135205293, "optimizer_updates": 3410, "rows_seen": 10907}}
+{"progress": {"event": "CNN_EPOCH_COMPLETE", "epoch": 11, "epoch_loss": 0.4629216599800025, "optimizer_updates": 3751, "rows_seen": 10907}}
+{"progress": {"event": "CNN_EPOCH_COMPLETE", "epoch": 12, "epoch_loss": 0.4482426260990411, "optimizer_updates": 4092, "rows_seen": 10907}}
+{"progress": {"event": "CNN_EPOCH_COMPLETE", "epoch": 13, "epoch_loss": 0.44550792845336556, "optimizer_updates": 4433, "rows_seen": 10907}}
+{"progress": {"event": "CNN_EPOCH_COMPLETE", "epoch": 14, "epoch_loss": 0.44751168352370335, "optimizer_updates": 4774, "rows_seen": 10907}}
+{"progress": {"event": "CNN_EPOCH_COMPLETE", "epoch": 15, "epoch_loss": 0.43534860975087586, "optimizer_updates": 5115, "rows_seen": 10907}}
+{"progress": {"event": "CNN_EPOCH_COMPLETE", "epoch": 16, "epoch_loss": 0.4302653661414177, "optimizer_updates": 5456, "rows_seen": 10907}}
+{"progress": {"event": "CNN_EPOCH_COMPLETE", "epoch": 17, "epoch_loss": 0.4327642840848629, "optimizer_updates": 5797, "rows_seen": 10907}}
+{"progress": {"event": "CNN_EPOCH_COMPLETE", "epoch": 18, "epoch_loss": 0.4072799996599555, "optimizer_updates": 6138, "rows_seen": 10907}}
+{"progress": {"event": "CNN_EPOCH_COMPLETE", "epoch": 19, "epoch_loss": 0.414365819009274, "optimizer_updates": 6479, "rows_seen": 10907}}
+{"progress": {"event": "CNN_EPOCH_COMPLETE", "epoch": 20, "epoch_loss": 0.40243536810728336, "optimizer_updates": 6820, "rows_seen": 10907}}
+{"progress": {"stage": "development", "family": "CNN_V2", "event": "fit_complete"}}
+{"progress": {"stage": "silver", "family": "RF_REFERENCE", "event": "fit_start", "samples": 12844}}
+{"progress": {"stage": "silver", "family": "RF_REFERENCE", "event": "fit_complete"}}
+{"progress": {"stage": "final", "family": "RF_REFERENCE", "event": "fit_start", "samples": 15949}}
+{"progress": {"stage": "final", "family": "RF_REFERENCE", "event": "fit_complete"}}
+{
+  "STUDY2_C": "PASS",
+  "STUDY2_C_METHOD": "GROUP_AWARE_MULTIMODAL_BENCHMARK",
+  "VALID_SUPPORT_SITES": 52,
+  "VALID_SUPPORT_SITE_DOMAIN_ONLY": true,
+  "SELECTED_BACKGROUND_TRACKS": 52,
+  "TRAIN_POSITIVE_GROUPS": 32,
+  "TRAIN_BACKGROUND_GROUPS": 32,
+  "DEV_POSITIVE_GROUPS": 10,
+  "DEV_BACKGROUND_GROUPS": 10,
+  "TEST_POSITIVE_GROUPS": 10,
+  "TEST_BACKGROUND_GROUPS": 10,
+  "MODELS_EVALUATED": 5,
+  "SELECTED_MODEL_FAMILY": "RF_REFERENCE",
+  "SELECTED_SUPERVISION_REGIME": "GOLD_PLUS_SILVER",
+  "FINAL_STUDY2_PIPELINE": {
+    "family": "RF_REFERENCE",
+    "supervision": "GOLD_PLUS_SILVER"
+  },
+  "TEST_STATE": "CONSUMED",
+  "SCIENTIFIC_TEST_EVALUATIONS": 1,
+  "HUMAN_REVIEW_USED": false,
+  "AUGMENTATION_USED": false,
+  "EXTERNAL_GENERALIZATION_CLAIM": false,
+  "STUDY2_CLOSED": true,
+  "STATE": "CLOSED_CONSUMED",
+  "MERGE_AUTHORIZED": false,
+  "CURRENT_AUTHORIZED_ACTIVITY": "NONE_AWAITING_AUTHOR_DECISION"
+}

@@ -1,0 +1,104 @@
+{
+  "phase": "STUDY2_C_EXECUTION_AND_CLOSEOUT",
+  "command_journal_scope": "Bounded commands and observed exits, not universal syscalls",
+  "freeze_sha": "8c38384915807a15062782a4a189601f7c83c8c3",
+  "operations": [
+    {
+      "boundary": "Git",
+      "command": "exact-path git add40 paths from PUBLICATION_ALLOWLIST.json",
+      "exit": 0,
+      "targeted_approval": true
+    },
+    {
+      "boundary": "index review",
+      "command": "check_phase_scope.py + cached diff --check + exact staged byte/hash comparison",
+      "exit": 0,
+      "data_guard_entries": 674,
+      "classified_python": 137,
+      "evidence": "STAGED_FREEZE_VERIFICATION.json"
+    },
+    {
+      "boundary": "Git",
+      "command": "git commit -m feat(study2c): freeze group-aware benchmark protocol",
+      "exit": 0,
+      "targeted_approval": true
+    },
+    {
+      "boundary": "remote",
+      "command": "git push -u origin feat/study2c-group-aware-benchmark",
+      "exit": 0,
+      "targeted_approval": true,
+      "force": false
+    },
+    {
+      "boundary": "remote",
+      "command": "gh run list (sandbox)",
+      "exit": 1,
+      "reason": "API connection unavailable; same read-only command succeeded after targeted escalation"
+    },
+    {
+      "boundary": "remote",
+      "command": "gh run list/view for exact freeze SHA",
+      "exit": 0,
+      "jobs": 9,
+      "steps": 100,
+      "all_success": true,
+      "proof": "CI_PROOF.json"
+    },
+    {
+      "boundary": "preflight",
+      "command": "PYTHONPATH=src .venv/bin/python -B scripts/run_study2c.py preflight",
+      "exit": 0,
+      "receipt_created": false,
+      "proof": "ACTUAL_PREFLIGHT.json"
+    },
+    {
+      "boundary": "scientific",
+      "command": "PYTHONPATH=src TMPDIR=<repository>/.bootstrap-test-tmp/study2c-runtime .venv/bin/python -B scripts/run_study2c.py run",
+      "stdout_stderr": "scientific-run.log.txt",
+      "exit": 0,
+      "invocations": 1,
+      "retry": 0,
+      "counts": {
+        "scientific_invocations": 1,
+        "cv_fits_started": 80,
+        "cv_fits_completed": 80,
+        "development_fits_started": 5,
+        "development_fits_completed": 5,
+        "silver_fits_started": 1,
+        "silver_fits_completed": 1,
+        "final_fits_started": 1,
+        "final_fits_completed": 1,
+        "development_evaluations": 5,
+        "silver_development_evaluations": 1,
+        "test_prediction_calls": 1,
+        "test_evaluations": 1,
+        "retries": 0
+      }
+    },
+    {
+      "boundary": "post-run text",
+      "command": "independent stdlib arithmetic and custody audits",
+      "exit": 0,
+      "reports": [
+        "CLASSICAL_TEXT_AUDIT.json",
+        "FINAL_TEXT_AUDIT.json",
+        "IO_CUSTODY_AUDIT.json"
+      ],
+      "new_model_fits": 0,
+      "new_decoder_runs": 0,
+      "binary_cache_opens": 0
+    },
+    {
+      "boundary": "reporting",
+      "command": "select JSON results for summary",
+      "exit": 0,
+      "note": "First display accidentally included frame-hash lists and was output-truncated; subsequent display selected scalar fields. Source records unchanged."
+    }
+  ],
+  "closed_scientific_authority": true,
+  "publication_still_pending_for_this_document": true,
+  "local_installations": 0,
+  "os_changes": 0,
+  "historical_runners_called": false
+}

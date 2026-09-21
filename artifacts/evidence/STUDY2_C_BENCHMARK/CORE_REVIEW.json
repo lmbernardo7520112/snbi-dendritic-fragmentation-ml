@@ -1,0 +1,146 @@
+{
+  "status": "PASS",
+  "review_kind": "BOUNDED_STATIC_CORE_AND_CONTRACT_REVIEW",
+  "created_at_utc": "2026-09-21T17:16:29.732887+00:00",
+  "scope": [
+    "artifacts/evidence/STUDY2_C_BENCHMARK/MODEL_CONTRACT.json",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/STUDY2_C_PROTOCOL.md",
+    "src/snbi_fragmentation/study2c_models.py",
+    "src/snbi_fragmentation/study2c_cnn.py",
+    "src/snbi_fragmentation/study2c_design.py",
+    "src/snbi_fragmentation/study2c_execution.py"
+  ],
+  "source_sha256_at_review": {
+    "artifacts/evidence/STUDY2_C_BENCHMARK/MODEL_CONTRACT.json": "2f0d73280fe09fdf6b8bb25ba84cb075c9c725e44d6f41cae94d95bb392659df",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/STUDY2_C_PROTOCOL.md": "342124317971843b31427680ef2e5aa961a5d6da888dc988654090838b8253c2",
+    "src/snbi_fragmentation/study2c_models.py": "e0a9f9c822e1f22e1c09fd91634e2ed6cd93133fb1a9ee6c45d81412c427903b",
+    "src/snbi_fragmentation/study2c_cnn.py": "19731a717f8974940ab4b5c1763fc621019353ba40c8e4200bc4944b50406002",
+    "src/snbi_fragmentation/study2c_design.py": "a9b839762a6bc11df95e1344b41fdf10731688c02905629dbfed98136c1db851",
+    "src/snbi_fragmentation/study2c_execution.py": "ff1b4863dbdcc406de2ed5ca0c79391afb3aa0803336fc84544392631c633cd0"
+  },
+  "serialized_constant_checks": {
+    "features": true,
+    "cv_fits": true,
+    "cv_folds": true,
+    "cv_tie_rules": true,
+    "logistic_defaults": true,
+    "svm_defaults": true,
+    "rf_defaults": true,
+    "scaler_defaults": true,
+    "families": true,
+    "cnn": true,
+    "cnn_architecture": true,
+    "grids_declared_literal_order": true,
+    "cv_fits_total": true
+  },
+  "checks": [
+    {
+      "name": "classical_representation",
+      "status": "PASS",
+      "evidence": "extract_lbp20 accepts only uint8 N,2,65,65; exact P8/R1/uniform and 10 bins range(0,10) density=True separately; structural first and relative-solute second; no fitted feature transform."
+    },
+    {
+      "name": "group_weight_denominators",
+      "status": "PASS",
+      "evidence": "group_equal_weights counts actual rows in each supplied training group. CV recalculates after partition; fit validation checks reciprocal counts and preserves class/acquisition/split identity. No arbitrary SILVER factor, additional class_weight or global scaling."
+    },
+    {
+      "name": "gold_silver_and_unlabeled",
+      "status": "PASS",
+      "evidence": "Design maps DIRECT_VALID to GOLD and temporal-supported ambiguous to SILVER. Initial CV and all five benchmark fits use GOLD/background. Unlabeled rows are excluded, never negatives. Additional selected-family fit pools TRAIN GOLD+SILVER under one group denominator. Final selected regime may pool TRAIN+DEVELOPMENT SILVER; TEST evaluation remains GOLD/background."
+    },
+    {
+      "name": "four_fold_groups",
+      "status": "PASS",
+      "evidence": "Design assigns entire TRAIN groups using acquisition/class rank modulo four. CV demands exact group coverage, int folds 0..3 and feasible stratum representation; held fold is excluded from fit. Neither DEVELOPMENT nor TEST enters CV/scaler."
+    },
+    {
+      "name": "cv_selection",
+      "status": "PASS",
+      "evidence": "Twelve LR, thirty-six SVM and thirty-two RF_TUNED fits; selection is exact mean of four primary GMBA values, stable first candidate for exact ties. RF_REFERENCE and CNN have no CV. No refit occurs inside cv_search."
+    },
+    {
+      "name": "scaler_phase_semantics",
+      "status": "PASS_AFTER_DOCUMENTARY_CLARIFICATION",
+      "evidence": "Pipeline.fit routes the same actual training weights to StandardScaler and LR/SVC. CV/comparison scaler receives TRAIN only; final fit may receive TRAIN+DEVELOPMENT. TEST is denied in fit validation. Protocol now states this distinction explicitly."
+    },
+    {
+      "name": "rf_reference_and_tuned_defaults",
+      "status": "PASS",
+      "evidence": "All nineteen historical RF defaults preserved for reference; tuned changes exactly tree count, depth and min_samples_leaf within frozen grid. class_weight and n_jobs remain null."
+    },
+    {
+      "name": "svm_scores_and_convergence",
+      "status": "PASS",
+      "evidence": "probability=False; signed decision_function retained as scores, never relabeled probabilities. ConvergenceWarning or nonzero SVC fit_status fails without retry. LR max_iter=10000, lbfgs and tol=1e-4 are frozen."
+    },
+    {
+      "name": "cnn_architecture_budget",
+      "status": "PASS",
+      "evidence": "Architecture is 304+4640+66=5010 parameters. Native uint8 normalized float32/255 per minibatch; CPU one thread, all stated seeds42 and deterministic algorithms; batch32, shuffle, workers0, Adam0.001, twenty epochs, no DEV selection/augmentation/scheduler/early-stop."
+    },
+    {
+      "name": "cnn_weighted_objective",
+      "status": "PASS_WITH_DECLARED_LIMIT",
+      "evidence": "Each minibatch uses sum(loss_i*w_i)/sum(w_i). Epoch metadata reports aggregated weighted sample forward losses at successive model states. Dataset group-total weights are one, but minibatch-normalized SGD does not prove equal effective gradients/updates across groups; protocol explicitly states this."
+    },
+    {
+      "name": "primary_metric",
+      "status": "PASS",
+      "evidence": "metric_bundle computes correct fraction separately for each positive site and background track, averages within class, then averages the two class means. Temporal row counts do not weight groups in primary GMBA. Observation metrics and majority-vote group BA are separate secondary outputs."
+    },
+    {
+      "name": "metric_tiers_and_acquisitions",
+      "status": "PASS",
+      "evidence": "Default metric_bundle admits GOLD/BACKGROUND only. SILVER is permitted only by explicit training-resubstitution flag and never for TEST. Per-acquisition GMBA is reported, not used to reopen model selection. Majority-vote ties choose class0 as preregistered."
+    },
+    {
+      "name": "family_and_silver_decisions",
+      "status": "PASS",
+      "evidence": "Controller selects family by DEV GMBA, then observation BA, then frozen family order. Selected-family GOLD+SILVER comparison reuses prior GOLD result; only strictly higher DEV GMBA changes regime. No second family search."
+    },
+    {
+      "name": "final_sequence",
+      "status": "PASS_STATIC",
+      "evidence": "Controller emits final pipeline before final fit, then durable fit-completion record before TEST materialization; predictions receive no labels and are emitted before metric scoring. Fit record is accurately described as completion/configuration evidence, not serialized learned model state."
+    },
+    {
+      "name": "partial_fit_counters",
+      "status": "PASS_STATIC",
+      "evidence": "CV_FIT_START precedes fit_classical; CV_FIT_COMPLETE follows its successful return and precedes prediction/metrics; CV_FOLD_COMPLETE follows GMBA. Controller counts actual START/COMPLETE events and does not preassign eighty completed fits."
+    }
+  ],
+  "resolved_findings": [
+    {
+      "id": "SCALER_DEVELOPMENT_SCOPE",
+      "severity": "DOCUMENTARY_PHASE_AMBIGUITY",
+      "original_claim": "Nenhuma estatística DEV/TEST no scaler.",
+      "problem": "Absolute wording conflicted with authorized final TRAIN+DEVELOPMENT scaler fit.",
+      "resolution": "Parent clarified phase-specific scaler training in protocol before freeze; code already implemented authorized behavior.",
+      "code_change_required": false,
+      "verified_resolved": true
+    }
+  ],
+  "unresolved_material_findings": [],
+  "limits": [
+    "Reviewer authored the models/CNN core; this is explicit self-review with cross-module static inspection, not an independent human certification.",
+    "Only named text files and AST literal constants were read; model modules were not imported or executed during this review.",
+    "No new fits, feature extraction, inference, metrics execution, tests, corpus/ledger/container/video access or pixel reading occurred in this review.",
+    "Previously reported 35 synthetic test passes are separate execution evidence and were not repeated.",
+    "Review does not certify real-source I/O, runtime convergence, empirical model performance, CI or future execution success.",
+    "Input group weights sum one mathematically, subject to floating arithmetic; RF bootstrap and CNN minibatch updates do not guarantee identical effective per-group training influence.",
+    "Group split does not establish external acquisition independence or prohibit all shared spatial context; only 52 valid-support sites are in the benchmark domain."
+  ],
+  "review_counters": {
+    "scientific_fits": 0,
+    "synthetic_fits": 0,
+    "feature_extractions": 0,
+    "inference_calls": 0,
+    "tests_invoked": 0,
+    "experimental_source_opens": 0,
+    "pixel_bytes_read": 0
+  },
+  "review_outputs": [
+    "artifacts/evidence/STUDY2_C_BENCHMARK/CORE_REVIEW.json"
+  ]
+}
