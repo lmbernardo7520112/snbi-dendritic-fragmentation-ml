@@ -1,0 +1,20 @@
+{
+  "artifacts": [
+    {
+      "path": "data/derived/study2/OBSERVATION_LEDGER.jsonl",
+      "size_bytes": 17786087,
+      "sha256": "3cb444271839b1fca18c3228f91e961e9566173e3036696db3dadf537234bfcc",
+      "record_count": 27396,
+      "git_status": "LOCAL_IGNORED",
+      "complete": true
+    },
+    {
+      "path": "data/derived/study2/candidate-components.jsonl",
+      "size_bytes": 49636870,
+      "sha256": "b9e4ce16c967e4ffc6f6f2b1e86e21727971a444c20a38667cc1b53ae9ceb19c",
+      "record_count": 32479,
+      "git_status": "LOCAL_IGNORED",
+      "complete": true
+    }
+  ]
+}

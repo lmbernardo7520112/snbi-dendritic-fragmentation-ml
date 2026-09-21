@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "mode": "full",
+  "head_sha": "7d89329bf005f6a85ddc67d51d88b9e362878478",
+  "historical_tracked_paths_preserved": 542,
+  "experimental_source_opens": 0,
+  "experimental_bytes": 0,
+  "receipt_created": false,
+  "free_disk_bytes": 666623430656,
+  "ci_jobs": [
+    "deterministic-contracts",
+    "scientific-synthetic-contracts",
+    "study2a-synthetic-contracts",
+    "ti3-synthetic-contracts",
+    "ti3b-synthetic-contracts",
+    "ti3c-synthetic-contracts",
+    "ti3d-final-synthetic-contracts"
+  ],
+  "frozen_text_count": 35
+}

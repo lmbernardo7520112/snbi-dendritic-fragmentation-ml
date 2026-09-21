@@ -1,0 +1,476 @@
+{
+  "expected": 52,
+  "mapped": 52,
+  "unmapped": 0,
+  "status": "PASS",
+  "sites": [
+    {
+      "legacy_site_id": "ESM3:annotation-site:0e1e69b05a93e8c0",
+      "source_id": "ESM3",
+      "new_site_ids": [
+        "ESM3:study2a-site:aef9e7c4ec7c826b137f321f816cdfdb86b6a6f22a6733bd06be18513e8d238c"
+      ],
+      "unresolved_observation_ids": [],
+      "status": "MAPPED"
+    },
+    {
+      "legacy_site_id": "ESM3:annotation-site:154e3356f94c4c97",
+      "source_id": "ESM3",
+      "new_site_ids": [
+        "ESM3:study2a-site:69b9ab3233eca0dc2bce12088c5ea8f41cb2bf3b8191dbf0a7b354b660e1e974"
+      ],
+      "unresolved_observation_ids": [],
+      "status": "MAPPED"
+    },
+    {
+      "legacy_site_id": "ESM3:annotation-site:25e68d0e4b29a7aa",
+      "source_id": "ESM3",
+      "new_site_ids": [
+        "ESM3:study2a-site:e5fefdfa2fbfb539ff0ec3849579cf8b1951990d0e31db326a4782438daa7ab3"
+      ],
+      "unresolved_observation_ids": [],
+      "status": "MAPPED"
+    },
+    {
+      "legacy_site_id": "ESM3:annotation-site:2d8693eaf74b3e06",
+      "source_id": "ESM3",
+      "new_site_ids": [
+        "ESM3:study2a-site:0ac071dfadb4e8e4295727725b8e84901955a6b2d443a53d0ccb8105cbcfe42d"
+      ],
+      "unresolved_observation_ids": [],
+      "status": "MAPPED"
+    },
+    {
+      "legacy_site_id": "ESM3:annotation-site:3eeab8e9efcb0d21",
+      "source_id": "ESM3",
+      "new_site_ids": [
+        "ESM3:study2a-site:240055466c0f71fa3980d53b5613d9ae2e94a6fdbdeca6e24740d7dd381bd60f"
+      ],
+      "unresolved_observation_ids": [],
+      "status": "MAPPED"
+    },
+    {
+      "legacy_site_id": "ESM3:annotation-site:402568b092cf3023",
+      "source_id": "ESM3",
+      "new_site_ids": [
+        "ESM3:study2a-site:7718fb0f16c9a207b9416317cc9df46bbb4d18bc821929b0574cc0a98b2b3565"
+      ],
+      "unresolved_observation_ids": [],
+      "status": "MAPPED"
+    },
+    {
+      "legacy_site_id": "ESM3:annotation-site:4946e59e22391ce7",
+      "source_id": "ESM3",
+      "new_site_ids": [
+        "ESM3:study2a-site:0907081717fd583811685ce253aa2296063a3a5f566dd3bfddefce9d892d6064"
+      ],
+      "unresolved_observation_ids": [],
+      "status": "MAPPED"
+    },
+    {
+      "legacy_site_id": "ESM3:annotation-site:4b80618dde9397fd",
+      "source_id": "ESM3",
+      "new_site_ids": [
+        "ESM3:study2a-site:23d146d45343c286e4178895ce766d3319da87525f8d1e5592a493a5cda8a191"
+      ],
+      "unresolved_observation_ids": [],
+      "status": "MAPPED"
+    },
+    {
+      "legacy_site_id": "ESM3:annotation-site:4b88c441ae9c6696",
+      "source_id": "ESM3",
+      "new_site_ids": [
+        "ESM3:study2a-site:3b3ba1337cf11a7d652c9ac0616934f80fbd242a740bcb102fa22f823fdd178e"
+      ],
+      "unresolved_observation_ids": [],
+      "status": "MAPPED"
+    },
+    {
+      "legacy_site_id": "ESM3:annotation-site:4c41286cef74d212",
+      "source_id": "ESM3",
+      "new_site_ids": [
+        "ESM3:study2a-site:354d35c60f68a6b3b5b39c7f6f51334a0175d17ec55ff3f07fd0e5d77445a4da"
+      ],
+      "unresolved_observation_ids": [],
+      "status": "MAPPED"
+    },
+    {
+      "legacy_site_id": "ESM3:annotation-site:4ce252ca0ab4c2ff",
+      "source_id": "ESM3",
+      "new_site_ids": [
+        "ESM3:study2a-site:95f5913ca25dbad958d8db6c5cdda74ae9aa09c8f59af6142b34dae8b5009732"
+      ],
+      "unresolved_observation_ids": [],
+      "status": "MAPPED"
+    },
+    {
+      "legacy_site_id": "ESM3:annotation-site:4e3f86cfe00b170b",
+      "source_id": "ESM3",
+      "new_site_ids": [
+        "ESM3:study2a-site:1747a6f70b856c3baa10fba341f17f098d1a19b47ab42b4ad88fe58044ca9c7b"
+      ],
+      "unresolved_observation_ids": [],
+      "status": "MAPPED"
+    },
+    {
+      "legacy_site_id": "ESM3:annotation-site:5b418572d0664fed",
+      "source_id": "ESM3",
+      "new_site_ids": [
+        "ESM3:study2a-site:336da5e30a2dea7ca2d3252a3d7bcd945283ae3aba0c18921da1f445cb5707d8"
+      ],
+      "unresolved_observation_ids": [],
+      "status": "MAPPED"
+    },
+    {
+      "legacy_site_id": "ESM3:annotation-site:5e9a4c2b4df0a4dd",
+      "source_id": "ESM3",
+      "new_site_ids": [
+        "ESM3:study2a-site:5d033fd2c7b5315343fff669963587338302213d0f3445c5b06c03ffbe9cf051"
+      ],
+      "unresolved_observation_ids": [],
+      "status": "MAPPED"
+    },
+    {
+      "legacy_site_id": "ESM3:annotation-site:602422dbcb9a48ef",
+      "source_id": "ESM3",
+      "new_site_ids": [
+        "ESM3:study2a-site:21e250c9b77bda9c46a9402d2bc91b23e1e873f958a410707c94aa40859ddcf3"
+      ],
+      "unresolved_observation_ids": [],
+      "status": "MAPPED"
+    },
+    {
+      "legacy_site_id": "ESM3:annotation-site:73e02d077c181e27",
+      "source_id": "ESM3",
+      "new_site_ids": [
+        "ESM3:study2a-site:37e812df561c66791dd4f236a3bd75d12285245cc86086d70a2b3b0163c278cd"
+      ],
+      "unresolved_observation_ids": [],
+      "status": "MAPPED"
+    },
+    {
+      "legacy_site_id": "ESM3:annotation-site:7bb50a0b75f78145",
+      "source_id": "ESM3",
+      "new_site_ids": [
+        "ESM3:study2a-site:ef8625a65792f9f8c81f9c03cead573ae044f085e4b1317a8d8cafe114456bb3"
+      ],
+      "unresolved_observation_ids": [],
+      "status": "MAPPED"
+    },
+    {
+      "legacy_site_id": "ESM3:annotation-site:7ccbbb95eb40deda",
+      "source_id": "ESM3",
+      "new_site_ids": [
+        "ESM3:study2a-site:f78f0ec1a298bd2b533bb0309e1ccbe9e14ce587894582d0c66ee44b315f7b6a"
+      ],
+      "unresolved_observation_ids": [],
+      "status": "MAPPED"
+    },
+    {
+      "legacy_site_id": "ESM3:annotation-site:7e8e28c247047fc2",
+      "source_id": "ESM3",
+      "new_site_ids": [
+        "ESM3:study2a-site:21832daeb97c7e6fe1e5ca23df285dd1a70bbccf0f06e08008ddfcb1a4824cdf"
+      ],
+      "unresolved_observation_ids": [],
+      "status": "MAPPED"
+    },
+    {
+      "legacy_site_id": "ESM3:annotation-site:8e517d7ffab44a8d",
+      "source_id": "ESM3",
+      "new_site_ids": [
+        "ESM3:study2a-site:d44851c3a5260b4351be11cceb4874f90cd09fa8048140a0bb2817e6913adbe5"
+      ],
+      "unresolved_observation_ids": [],
+      "status": "MAPPED"
+    },
+    {
+      "legacy_site_id": "ESM3:annotation-site:921edb3b46971a2c",
+      "source_id": "ESM3",
+      "new_site_ids": [
+        "ESM3:study2a-site:e7a3aeff64ed8498574df2599c3c077cf5401dc8a7489b16a6aea6f112f70c5c"
+      ],
+      "unresolved_observation_ids": [],
+      "status": "MAPPED"
+    },
+    {
+      "legacy_site_id": "ESM3:annotation-site:943991148d21d7f8",
+      "source_id": "ESM3",
+      "new_site_ids": [
+        "ESM3:study2a-site:8123fc618b1c136bb34ddb85e9e9b0b2e67846f8a8d41f9cbb4d298cf6534789"
+      ],
+      "unresolved_observation_ids": [],
+      "status": "MAPPED"
+    },
+    {
+      "legacy_site_id": "ESM3:annotation-site:95a85828fc0c1117",
+      "source_id": "ESM3",
+      "new_site_ids": [
+        "ESM3:study2a-site:13254b6258e0deb4a2b7642dc1bc03fc3c2fd440a2a3a0ebec813b6befc010ab"
+      ],
+      "unresolved_observation_ids": [],
+      "status": "MAPPED"
+    },
+    {
+      "legacy_site_id": "ESM3:annotation-site:99310ef66db54339",
+      "source_id": "ESM3",
+      "new_site_ids": [
+        "ESM3:study2a-site:98744372b895f30803654a11d11e79117b99448ebfe03786bc625c0dde5ab82a"
+      ],
+      "unresolved_observation_ids": [],
+      "status": "MAPPED"
+    },
+    {
+      "legacy_site_id": "ESM3:annotation-site:a16a59de93164e59",
+      "source_id": "ESM3",
+      "new_site_ids": [
+        "ESM3:study2a-site:f8f862ad41de99b2376f334095c4c9a73b7bc40377feaa88075555cc59045554"
+      ],
+      "unresolved_observation_ids": [],
+      "status": "MAPPED"
+    },
+    {
+      "legacy_site_id": "ESM3:annotation-site:ab91a579d35b7a8c",
+      "source_id": "ESM3",
+      "new_site_ids": [
+        "ESM3:study2a-site:4f00d0b214477f013c4a2b1bea37939ed1cf82ffd890ce9cc4bedaa505a392fb"
+      ],
+      "unresolved_observation_ids": [],
+      "status": "MAPPED"
+    },
+    {
+      "legacy_site_id": "ESM3:annotation-site:aea18fa3b37ada51",
+      "source_id": "ESM3",
+      "new_site_ids": [
+        "ESM3:study2a-site:98ae552ae84fd0ade919a87427b1450965604b42653e9f1089a7153e46cd3f86"
+      ],
+      "unresolved_observation_ids": [],
+      "status": "MAPPED"
+    },
+    {
+      "legacy_site_id": "ESM3:annotation-site:b6b216ac7f401b9a",
+      "source_id": "ESM3",
+      "new_site_ids": [
+        "ESM3:study2a-site:bf1271b334f56de6d55a39e09663f876d2858a9af98f26fa7dfab3e2afe6fb24"
+      ],
+      "unresolved_observation_ids": [],
+      "status": "MAPPED"
+    },
+    {
+      "legacy_site_id": "ESM3:annotation-site:c0913343ab666a5f",
+      "source_id": "ESM3",
+      "new_site_ids": [
+        "ESM3:study2a-site:a7d76f8387ce232777fd1f0838aa3984b6fcae31ac965ecb04c93cea15c84093"
+      ],
+      "unresolved_observation_ids": [],
+      "status": "MAPPED"
+    },
+    {
+      "legacy_site_id": "ESM3:annotation-site:c726fa8942e518df",
+      "source_id": "ESM3",
+      "new_site_ids": [
+        "ESM3:study2a-site:2c7483396b20a6dbd6835c6fe6a0594828a7908f6cc3be7c319b6873109b4caf"
+      ],
+      "unresolved_observation_ids": [],
+      "status": "MAPPED"
+    },
+    {
+      "legacy_site_id": "ESM3:annotation-site:dc8e4cc74e0dc7a3",
+      "source_id": "ESM3",
+      "new_site_ids": [
+        "ESM3:study2a-site:df021de6aacd70f77c02cb29488aaafd66d0e93043bb0564ba96bc79979482c7"
+      ],
+      "unresolved_observation_ids": [],
+      "status": "MAPPED"
+    },
+    {
+      "legacy_site_id": "ESM3:annotation-site:e4e61d2e63ef0f49",
+      "source_id": "ESM3",
+      "new_site_ids": [
+        "ESM3:study2a-site:241f1a1ecdaa629df4ce49f226a13b825566ea39f60a3653770210ef9c41f03f"
+      ],
+      "unresolved_observation_ids": [],
+      "status": "MAPPED"
+    },
+    {
+      "legacy_site_id": "ESM3:annotation-site:e83161571f674407",
+      "source_id": "ESM3",
+      "new_site_ids": [
+        "ESM3:study2a-site:b47cd3409638d28212c8be1f5ddaff880ce1674bbc41831eff33bbd4ae60d1a3"
+      ],
+      "unresolved_observation_ids": [],
+      "status": "MAPPED"
+    },
+    {
+      "legacy_site_id": "ESM3:annotation-site:e8c88192a10fa74d",
+      "source_id": "ESM3",
+      "new_site_ids": [
+        "ESM3:study2a-site:0d40c739606b898717fb68667d1fcfc4479279955d67d73deacce445003ec556"
+      ],
+      "unresolved_observation_ids": [],
+      "status": "MAPPED"
+    },
+    {
+      "legacy_site_id": "ESM3:annotation-site:edefb8faa424fa0f",
+      "source_id": "ESM3",
+      "new_site_ids": [
+        "ESM3:study2a-site:17a5a7eb8ad3c6cb4e5736a60680df6e0600eda6a02e6632a46e53067199df72"
+      ],
+      "unresolved_observation_ids": [],
+      "status": "MAPPED"
+    },
+    {
+      "legacy_site_id": "ESM3:annotation-site:f96050cb91a60afe",
+      "source_id": "ESM3",
+      "new_site_ids": [
+        "ESM3:study2a-site:7339c831fb94b6f85db90ac46a685a457bb10bec8c5134d8f4c0fb6b67ba309a"
+      ],
+      "unresolved_observation_ids": [],
+      "status": "MAPPED"
+    },
+    {
+      "legacy_site_id": "ESM3:annotation-site:f9920f6617bd11b6",
+      "source_id": "ESM3",
+      "new_site_ids": [
+        "ESM3:study2a-site:b2792c24aea925e5d50342bf1d961981e6bf3ffc5ebdde516e4cf7c40d9e465b"
+      ],
+      "unresolved_observation_ids": [],
+      "status": "MAPPED"
+    },
+    {
+      "legacy_site_id": "ESM3:annotation-site:fa750a97def45a3f",
+      "source_id": "ESM3",
+      "new_site_ids": [
+        "ESM3:study2a-site:4a23ed202db89f3dea5e6cfc96f67e966f8c4a38aa51b041749406f3d860f562"
+      ],
+      "unresolved_observation_ids": [],
+      "status": "MAPPED"
+    },
+    {
+      "legacy_site_id": "ESM6:annotation-site:06c0d30a17e26499",
+      "source_id": "ESM6",
+      "new_site_ids": [
+        "ESM6:study2a-site:f08ea9b2d6fcc3183b71767dba15b89483066e1bf350de319457cee000d68e6e"
+      ],
+      "unresolved_observation_ids": [],
+      "status": "MAPPED"
+    },
+    {
+      "legacy_site_id": "ESM6:annotation-site:0f7c84350afec256",
+      "source_id": "ESM6",
+      "new_site_ids": [
+        "ESM6:study2a-site:a563e4340a8fe6f25eb8973471d03f10bf402c502baabd17c234c4fa17c1a4a8"
+      ],
+      "unresolved_observation_ids": [],
+      "status": "MAPPED"
+    },
+    {
+      "legacy_site_id": "ESM6:annotation-site:33c1dc5c4466a022",
+      "source_id": "ESM6",
+      "new_site_ids": [
+        "ESM6:study2a-site:31cd5a46630df791bb0e7508953813c0e1fa2489e9412cb2c4bac70e267606cd"
+      ],
+      "unresolved_observation_ids": [],
+      "status": "MAPPED"
+    },
+    {
+      "legacy_site_id": "ESM6:annotation-site:3f6362655a542a6c",
+      "source_id": "ESM6",
+      "new_site_ids": [
+        "ESM6:study2a-site:7fa792a06101f3dd14780c208f08d55186a0e8a1c6dfbac48c801360d79d5b60"
+      ],
+      "unresolved_observation_ids": [],
+      "status": "MAPPED"
+    },
+    {
+      "legacy_site_id": "ESM6:annotation-site:610a877237d31a5d",
+      "source_id": "ESM6",
+      "new_site_ids": [
+        "ESM6:study2a-site:855942f6a9c9e1843e376ef448cb3ffd37532d74a12840a8de3f1a88b7f5e6fd"
+      ],
+      "unresolved_observation_ids": [],
+      "status": "MAPPED"
+    },
+    {
+      "legacy_site_id": "ESM6:annotation-site:63498902ef491c68",
+      "source_id": "ESM6",
+      "new_site_ids": [
+        "ESM6:study2a-site:4cfa94bd555d2848f22902e5491735d8b034dabbe8a851ccba57b1732d92bec8"
+      ],
+      "unresolved_observation_ids": [],
+      "status": "MAPPED"
+    },
+    {
+      "legacy_site_id": "ESM6:annotation-site:66debc7da14ef231",
+      "source_id": "ESM6",
+      "new_site_ids": [
+        "ESM6:study2a-site:2b4173c40f15e4aeffa6a5ae524bde5c4864472d1d342bed8f1711dab4024888"
+      ],
+      "unresolved_observation_ids": [],
+      "status": "MAPPED"
+    },
+    {
+      "legacy_site_id": "ESM6:annotation-site:7c58fc05ae40787e",
+      "source_id": "ESM6",
+      "new_site_ids": [
+        "ESM6:study2a-site:39d193a5f8351d7db9a1bf6c8e1f8ea88cb9018f5be304fed0182d10caccf5b6"
+      ],
+      "unresolved_observation_ids": [],
+      "status": "MAPPED"
+    },
+    {
+      "legacy_site_id": "ESM6:annotation-site:8a86a50873360dcf",
+      "source_id": "ESM6",
+      "new_site_ids": [
+        "ESM6:study2a-site:45b5c8b5110100abd64d552cc01d44f03ee82f104dee83186e7c8986eacad37a"
+      ],
+      "unresolved_observation_ids": [],
+      "status": "MAPPED"
+    },
+    {
+      "legacy_site_id": "ESM6:annotation-site:8acca343f57b1314",
+      "source_id": "ESM6",
+      "new_site_ids": [
+        "ESM6:study2a-site:91dd5583b62d93cd08785ce38be0aed9b69642bd1e58a51c35e049bdab1f4b60"
+      ],
+      "unresolved_observation_ids": [],
+      "status": "MAPPED"
+    },
+    {
+      "legacy_site_id": "ESM6:annotation-site:8c97cae8aaa8f4f3",
+      "source_id": "ESM6",
+      "new_site_ids": [
+        "ESM6:study2a-site:5cb807490cc71649ec2c501fe975095f51f6eb04f218f56a01da7471b0bd26ca"
+      ],
+      "unresolved_observation_ids": [],
+      "status": "MAPPED"
+    },
+    {
+      "legacy_site_id": "ESM6:annotation-site:a1757a70e7f3865c",
+      "source_id": "ESM6",
+      "new_site_ids": [
+        "ESM6:study2a-site:f0ef71a50ef65d3a0b5027f6c4f291f9dab04fe036eea87b7d0fa58eb7c80d06"
+      ],
+      "unresolved_observation_ids": [],
+      "status": "MAPPED"
+    },
+    {
+      "legacy_site_id": "ESM6:annotation-site:cfa5e4ec79820b1e",
+      "source_id": "ESM6",
+      "new_site_ids": [
+        "ESM6:study2a-site:850d8247e5723296ee96cb3ea7c9cb69780e7c4e7ee73e08b095b41690fddab1"
+      ],
+      "unresolved_observation_ids": [],
+      "status": "MAPPED"
+    },
+    {
+      "legacy_site_id": "ESM6:annotation-site:fd001a3ce7ddabd8",
+      "source_id": "ESM6",
+      "new_site_ids": [
+        "ESM6:study2a-site:96bf0b8309365c3cc48cefea8295a08f42d7bd9db1874f3a1ecc3c21cedd11e5"
+      ],
+      "unresolved_observation_ids": [],
+      "status": "MAPPED"
+    }
+  ]
+}

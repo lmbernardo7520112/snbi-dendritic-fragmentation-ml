@@ -1,0 +1,44 @@
+{
+  "phase": "STUDY2_A",
+  "mode": "full",
+  "created_at_utc": "2026-09-21T14:40:11.859567+00:00",
+  "head_sha": "7d89329bf005f6a85ddc67d51d88b9e362878478",
+  "attempt": 1,
+  "authority_sha256": "eca6b3993a03d58d81d046ac490dc99b9f26e1f82f7d50bf4f0488cbaf3d87c4",
+  "sources": {
+    "ESM3": {
+      "width": 1280,
+      "height": 1024,
+      "frames": 294,
+      "acquisition": "bottom_up_anti_parallel",
+      "sha256": "d76a6466e50480a2116bc545a0ee2b8095cc14c54f861ecebee87de5b64e35be"
+    },
+    "ESM6": {
+      "width": 1280,
+      "height": 1012,
+      "frames": 395,
+      "acquisition": "top_down_parallel",
+      "sha256": "5b8747758afde34fb626f3c4ffbd0b49ba6ca6f6b49bfa81b8cf9ee8459280ea"
+    }
+  },
+  "preflight": {
+    "status": "PASS",
+    "mode": "full",
+    "head_sha": "7d89329bf005f6a85ddc67d51d88b9e362878478",
+    "historical_tracked_paths_preserved": 542,
+    "experimental_source_opens": 0,
+    "experimental_bytes": 0,
+    "receipt_created": false,
+    "free_disk_bytes": 666622267392,
+    "ci_jobs": [
+      "deterministic-contracts",
+      "scientific-synthetic-contracts",
+      "study2a-synthetic-contracts",
+      "ti3-synthetic-contracts",
+      "ti3b-synthetic-contracts",
+      "ti3c-synthetic-contracts",
+      "ti3d-final-synthetic-contracts"
+    ],
+    "frozen_text_count": 35
+  }
+}
