@@ -1,0 +1,88 @@
+{
+  "scope": "bounded operational journal, not universal syscall monitoring",
+  "legacy_command": {
+    "command": "PYTHONPATH=src .venv/bin/python -B scripts/run_study2a.py --legacy",
+    "invocations": 1,
+    "exit_code": 0,
+    "processed_frames": 10,
+    "counts": {
+      "VALID": 108,
+      "AMBIGUOUS": 380,
+      "SMALL": 3
+    },
+    "full_scientific_runs": 0
+  },
+  "freeze_commit": "7d89329bf005f6a85ddc67d51d88b9e362878478",
+  "freeze_git_operations": [
+    {
+      "command": "git add -- <28 individually enumerated paths>",
+      "result": "PASS exact approved paths; listed by freeze and commit",
+      "guards": "real staged data/phase PASS;35frozenhashes;95historicalchecksums;cached diff--check"
+    },
+    {
+      "command": "git commit -m feat(study2a): freeze dense annotation mining protocol",
+      "result": "PASS; direct parent canonical base"
+    },
+    {
+      "command": "git push -u origin feat/study2a-dense-annotation-ledger",
+      "result": "PASS; new remote branch, no force"
+    }
+  ],
+  "ci_queries": {
+    "initial_sandbox_api_query": "exit1 network/API unavailable",
+    "same_exact_query_after_targeted_approval": "PASS",
+    "runs": [
+      35613301780,
+      35613301986,
+      35613301302,
+      35613301801,
+      35613302381,
+      35613301627
+    ],
+    "all_seven_jobs_before_receipt": "SUCCESS",
+    "reruns": 0
+  },
+  "full_preflight": {
+    "call": "preflight(Path.cwd(), full)",
+    "result": "PASS exact Git and real CI; no receipt/sourceopens"
+  },
+  "scientific_command": {
+    "command": "PYTHONPATH=src .venv/bin/python -B scripts/run_study2a.py --run",
+    "invocations": 1,
+    "exit_code": 0,
+    "retries": 0,
+    "ml_runs": 0
+  },
+  "synthetic_history": {
+    "tracker": "29PASS initial;39PASS after material pre-pixel review corrections; combined94/98 profiles separate",
+    "streaming": "19 unique tests, two isolated invocations PASS",
+    "execution": "three initial18-case invocations: first two16PASS/2fixture failures; final18PASS; subsequent22-case invocation PASS after four concrete boundary additions",
+    "combined_profiles": [
+      {
+        "tests": 94,
+        "failures": 0,
+        "skips": 0
+      },
+      {
+        "tests": 98,
+        "failures": 0,
+        "skips": 0
+      }
+    ],
+    "stdlib": {
+      "tests": 782,
+      "passes": 638,
+      "optional_skips": 144,
+      "failures": 0,
+      "errors": 0
+    },
+    "synthetic_ml_fits": 0
+  },
+  "post_run": {
+    "operations": "Read only produced textual JSON/JSONLs, Git and hashes; original108legacyobservation membership checked; independent ledger/IO audits",
+    "experimental_reopens": 0,
+    "scientific_reruns": 0,
+    "new_outputs": "QUALITY_DETAILS.json; QUALITY_REPORT.md; execution-report.md; VERIFICATION_TERMINAL.json; this journal; post-run-hashes.sha256"
+  },
+  "publication_note": "Evidence checkpoint SHA, push and final CI recorded in effective operator return, never anticipated here. No PR/merge."
+}

@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "source": "LEGACY_IO_AUDIT.json, actual hash read before either decoder",
+  "sources": {
+    "ESM3": {
+      "source_path": "/home/leonardomaximinobernardo/Downloads/trabalho_Final_IfGoiano/videos_trabalho_Final_IfGoiano/11837_2015_1646_MOESM3_ESM.mp4",
+      "expected_source_bytes": 3356196,
+      "expected_sha256": "d76a6466e50480a2116bc545a0ee2b8095cc14c54f861ecebee87de5b64e35be",
+      "actual_sha256": "d76a6466e50480a2116bc545a0ee2b8095cc14c54f861ecebee87de5b64e35be",
+      "auth_bytes_read": 3356196,
+      "metadata_unchanged_after_decode": true
+    },
+    "ESM6": {
+      "source_path": "/home/leonardomaximinobernardo/Downloads/trabalho_Final_IfGoiano/videos_trabalho_Final_IfGoiano/11837_2015_1646_MOESM6_ESM.mp4",
+      "expected_source_bytes": 4353042,
+      "expected_sha256": "5b8747758afde34fb626f3c4ffbd0b49ba6ca6f6b49bfa81b8cf9ee8459280ea",
+      "actual_sha256": "5b8747758afde34fb626f3c4ffbd0b49ba6ca6f6b49bfa81b8cf9ee8459280ea",
+      "auth_bytes_read": 4353042,
+      "metadata_unchanged_after_decode": true
+    }
+  },
+  "source_auth_opens": 2,
+  "source_auth_bytes_read": 7709238,
+  "decoder_launches": 2,
+  "decoder_input_open_requests": 2,
+  "frames_delivered_to_detector": 10,
+  "native_bytes_emitted": 19545600,
+  "source_reopens_for_this_custody_record": 0,
+  "unobserved_decoder_internal_reads": "NOT_INSTRUMENTED",
+  "ESM1_OPENS": 0,
+  "ESM2_OPENS": 0,
+  "ESM4_OPENS": 0,
+  "ESM5_OPENS": 0
+}

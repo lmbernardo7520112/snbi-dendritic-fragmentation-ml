@@ -1,0 +1,48 @@
+{
+  "scope": "bounded grouped inventory; not universal syscall monitoring",
+  "initial_head": "ff97214451c1d05117b9c8369bf9af5e07af27bf",
+  "base_after_approved_fast_forward": "f36e43407f0e630d84f5e2d9306699b796b5ad2a",
+  "branch": "feat/study2a-dense-annotation-ledger",
+  "git_operations": [
+    {
+      "command": "git fetch origin refs/heads/main:refs/remotes/origin/main",
+      "first_attempt": "sandbox metadata denial",
+      "approved_exact_retry": "PASS"
+    },
+    {
+      "command": "git switch main",
+      "approved": true,
+      "result": "PASS"
+    },
+    {
+      "command": "git merge --ff-only f36e43407f0e630d84f5e2d9306699b796b5ad2a",
+      "approved": true,
+      "result": "PASS"
+    },
+    {
+      "command": "git switch -c feat/study2a-dense-annotation-ledger f36e43407f0e630d84f5e2d9306699b796b5ad2a",
+      "approved": true,
+      "result": "PASS"
+    }
+  ],
+  "read_only_operations": [
+    "User attachment and exact historical text/code/configuration reads; no source directory scan",
+    "Git status/history/tree reads; previous HEAD tree identical to canonical base",
+    "Data guard PASS 542 entries zero content bytes; historical checksums PASS 95/95",
+    "Legacy --preflight textual PASS, receipt_created=false",
+    "FFmpeg -version first-line only; installed Python/numpy/scipy version metadata"
+  ],
+  "preparation_occurrences": [
+    "Historical LOCAL documentation first looked up at nonexistent root paths, corrected to discovered repository paths; no data access",
+    "One independent legacy review reader assumed dictionary for list-shaped JSON; corrected before analysis",
+    "Synthetic execution fixture initially used zero-based component IDs, corrected to positive IDs before final suite",
+    "Independent static review rejected bbox-only silver support; complete anchor-footprint containment and globally blank documentary bounds implemented before any video access",
+    "Independent static review identified final disk-reserve and legacy post-receipt reporting gaps; corrected before gate"
+  ],
+  "test_records": "Final machine-readable summaries and complete local combined/stdlb logs are separate; agent isolated invocations summarized in final report",
+  "source_gate_executed_at_record_time": false,
+  "full_scientific_runs_at_record_time": 0,
+  "installations": 0,
+  "credentials_accessed": false,
+  "historical_science_executed": false
+}

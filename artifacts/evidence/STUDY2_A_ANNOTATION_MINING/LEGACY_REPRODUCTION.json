@@ -1,0 +1,133 @@
+{
+  "status": "PASS",
+  "processed_frames": 10,
+  "frames": [
+    {
+      "source_id": "ESM3",
+      "frame_index": 0,
+      "raw_sha256": "484389654c28d85969dc60830ea6be434b677d5fd9897434086f9f8ce9bb6ca8",
+      "raw_hash_match": true,
+      "VALID": 0,
+      "AMBIGUOUS": 0,
+      "SMALL": 0,
+      "maximum_valid_center_difference_px": 0.0,
+      "status": "PASS"
+    },
+    {
+      "source_id": "ESM3",
+      "frame_index": 73,
+      "raw_sha256": "61e793620b24d5375237da7c19c4e96af5fa0605fa789c23bfba9c1466426365",
+      "raw_hash_match": true,
+      "VALID": 14,
+      "AMBIGUOUS": 77,
+      "SMALL": 0,
+      "maximum_valid_center_difference_px": 1.1368683772161603e-13,
+      "status": "PASS"
+    },
+    {
+      "source_id": "ESM3",
+      "frame_index": 146,
+      "raw_sha256": "3d38b23a594b8d23c98fdc95351d3d435c92d6df6eb09ea3d8ac97f63baf50ee",
+      "raw_hash_match": true,
+      "VALID": 18,
+      "AMBIGUOUS": 93,
+      "SMALL": 1,
+      "maximum_valid_center_difference_px": 6.821210263296962e-13,
+      "status": "PASS"
+    },
+    {
+      "source_id": "ESM3",
+      "frame_index": 219,
+      "raw_sha256": "1d4e1e68456b3e21c06384655461ed8094b4259a853580ea0b1fa93741069c15",
+      "raw_hash_match": true,
+      "VALID": 19,
+      "AMBIGUOUS": 92,
+      "SMALL": 1,
+      "maximum_valid_center_difference_px": 1.1368683772161603e-13,
+      "status": "PASS"
+    },
+    {
+      "source_id": "ESM3",
+      "frame_index": 293,
+      "raw_sha256": "79e8666e527787c1baf1957152dbe21532bd36c26bf15475aa1bac7d9987df15",
+      "raw_hash_match": true,
+      "VALID": 20,
+      "AMBIGUOUS": 92,
+      "SMALL": 1,
+      "maximum_valid_center_difference_px": 1.1368683772161603e-13,
+      "status": "PASS"
+    },
+    {
+      "source_id": "ESM6",
+      "frame_index": 0,
+      "raw_sha256": "df7448b2d94b6e86e19daeb2349705e4bb204c3464294ecf2fcc17c607ec8813",
+      "raw_hash_match": true,
+      "VALID": 0,
+      "AMBIGUOUS": 0,
+      "SMALL": 0,
+      "maximum_valid_center_difference_px": 0.0,
+      "status": "PASS"
+    },
+    {
+      "source_id": "ESM6",
+      "frame_index": 98,
+      "raw_sha256": "76dea6e55b0f0434ee48d2a114be5b6d41acebedcb8d1bb3d5ee0bfc4fa4a311",
+      "raw_hash_match": true,
+      "VALID": 2,
+      "AMBIGUOUS": 7,
+      "SMALL": 0,
+      "maximum_valid_center_difference_px": 0.0,
+      "status": "PASS"
+    },
+    {
+      "source_id": "ESM6",
+      "frame_index": 197,
+      "raw_sha256": "eaaf9baa016cb829e3f4bf88101a32cd4d2a79fba78450294a2c904e2f45d2e3",
+      "raw_hash_match": true,
+      "VALID": 12,
+      "AMBIGUOUS": 6,
+      "SMALL": 0,
+      "maximum_valid_center_difference_px": 1.1368683772161603e-13,
+      "status": "PASS"
+    },
+    {
+      "source_id": "ESM6",
+      "frame_index": 295,
+      "raw_sha256": "fefdd388948f55ee511f012589427ae9a191b54dbe6695eaf0d08fd763acd24b",
+      "raw_hash_match": true,
+      "VALID": 12,
+      "AMBIGUOUS": 6,
+      "SMALL": 0,
+      "maximum_valid_center_difference_px": 2.1316282072803006e-14,
+      "status": "PASS"
+    },
+    {
+      "source_id": "ESM6",
+      "frame_index": 394,
+      "raw_sha256": "15ed13353647307ddeaba428e1bc5974ed7c02572a47ccae0b3d50a78dc140ad",
+      "raw_hash_match": true,
+      "VALID": 11,
+      "AMBIGUOUS": 7,
+      "SMALL": 0,
+      "maximum_valid_center_difference_px": 2.2737367544323206e-13,
+      "status": "PASS"
+    }
+  ],
+  "counts": {
+    "VALID": 108,
+    "AMBIGUOUS": 380,
+    "SMALL": 3
+  },
+  "failure": null,
+  "scientific_full_sequence_runs": 0,
+  "internal_decoder_intermediates": "AUTHORIZED_NOT_EXPOSED_TO_DETECTOR_OR_SAVED",
+  "implementation_hashes": {
+    "src/snbi_fragmentation/study2a_tracking.py": "f816ba2015b1f7d93565842638e9e771ecc0b46d24baa4cf55d291fb895a5666",
+    "src/snbi_fragmentation/study2a_streaming.py": "aacc83dfe338db90c80826c209f92d4b17ae7daaebd041c1f4efdc98a9ab9a90",
+    "src/snbi_fragmentation/study2a_execution.py": "264be64319197cf0dbafe6a6f2d3e431415b623a551985372d3ea5ed546d3f37",
+    "scripts/run_study2a.py": "30e0676c66978644762f0cca17e5c9e1b2c3753d9c8a3d1224bc165a58b653e6",
+    "src/snbi_fragmentation/ti3_a0_annotations.py": "89e4dd58cab51bcd4ed2c607e2abc14d11a2f44f5c5e827fa4e58917539619e7",
+    "configs/authority/study2a.json": "eca6b3993a03d58d81d046ac490dc99b9f26e1f82f7d50bf4f0488cbaf3d87c4"
+  },
+  "completed_at_utc": "2026-09-21T14:30:09.451807+00:00"
+}

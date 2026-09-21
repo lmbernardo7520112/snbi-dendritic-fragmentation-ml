@@ -1,0 +1,24 @@
+{
+  "profile": "Final Study2A + immutable historical A0",
+  "tests": 98,
+  "expected": 98,
+  "skips": 0,
+  "failures": 0,
+  "errors": 0,
+  "expected_failures": 0,
+  "unexpected_successes": 0,
+  "status": "PASS",
+  "experimental_opens": 0,
+  "ml_runs": 0,
+  "suites": {
+    "tracking": 39,
+    "streaming": 19,
+    "execution": 22,
+    "historical_a0": 18
+  },
+  "prior_combined_invocation": {
+    "tests": 94,
+    "status": "PASS",
+    "reason_for_final_invocation": "four new tests and concrete pre-gate code fixes"
+  }
+}

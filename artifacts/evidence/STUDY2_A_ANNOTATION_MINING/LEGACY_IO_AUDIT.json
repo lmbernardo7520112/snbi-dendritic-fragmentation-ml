@@ -1,0 +1,164 @@
+{
+  "mode": "legacy",
+  "state": "CLOSED_COMPLETE",
+  "sources": {
+    "ESM3": {
+      "source_id": "ESM3",
+      "source_path": "/home/leonardomaximinobernardo/Downloads/trabalho_Final_IfGoiano/videos_trabalho_Final_IfGoiano/11837_2015_1646_MOESM3_ESM.mp4",
+      "expected_source_bytes": 3356196,
+      "expected_sha256": "d76a6466e50480a2116bc545a0ee2b8095cc14c54f861ecebee87de5b64e35be",
+      "actual_sha256": "d76a6466e50480a2116bc545a0ee2b8095cc14c54f861ecebee87de5b64e35be",
+      "auth_bytes_read": 3356196,
+      "state": "COMPLETED",
+      "frames_emitted": 5,
+      "native_bytes_emitted": 9830400,
+      "native_bytes_received": 9830400,
+      "decoder_stderr_bytes": 0,
+      "decoder_exit_code": 0,
+      "frame_sha256": [
+        {
+          "frame_index": 0,
+          "sha256": "484389654c28d85969dc60830ea6be434b677d5fd9897434086f9f8ce9bb6ca8"
+        },
+        {
+          "frame_index": 73,
+          "sha256": "61e793620b24d5375237da7c19c4e96af5fa0605fa789c23bfba9c1466426365"
+        },
+        {
+          "frame_index": 146,
+          "sha256": "3d38b23a594b8d23c98fdc95351d3d435c92d6df6eb09ea3d8ac97f63baf50ee"
+        },
+        {
+          "frame_index": 219,
+          "sha256": "1d4e1e68456b3e21c06384655461ed8094b4259a853580ea0b1fa93741069c15"
+        },
+        {
+          "frame_index": 293,
+          "sha256": "79e8666e527787c1baf1957152dbe21532bd36c26bf15475aa1bac7d9987df15"
+        }
+      ],
+      "decoder_command": [
+        "/usr/bin/ffmpeg",
+        "-nostdin",
+        "-v",
+        "error",
+        "-threads",
+        "1",
+        "-noautorotate",
+        "-i",
+        "/proc/self/fd/3",
+        "-map",
+        "0:v:0",
+        "-an",
+        "-sn",
+        "-dn",
+        "-vf",
+        "select=eq(n\\,0)+eq(n\\,73)+eq(n\\,146)+eq(n\\,219)+eq(n\\,293)",
+        "-fps_mode",
+        "passthrough",
+        "-frames:v",
+        "5",
+        "-pix_fmt",
+        "yuv420p",
+        "-threads",
+        "1",
+        "-f",
+        "rawvideo",
+        "pipe:1"
+      ],
+      "trailing_partial_bytes": 0,
+      "decoder_stderr": "",
+      "decoder_stderr_truncated": false,
+      "metadata_unchanged_after_decode": true
+    },
+    "ESM6": {
+      "source_id": "ESM6",
+      "source_path": "/home/leonardomaximinobernardo/Downloads/trabalho_Final_IfGoiano/videos_trabalho_Final_IfGoiano/11837_2015_1646_MOESM6_ESM.mp4",
+      "expected_source_bytes": 4353042,
+      "expected_sha256": "5b8747758afde34fb626f3c4ffbd0b49ba6ca6f6b49bfa81b8cf9ee8459280ea",
+      "actual_sha256": "5b8747758afde34fb626f3c4ffbd0b49ba6ca6f6b49bfa81b8cf9ee8459280ea",
+      "auth_bytes_read": 4353042,
+      "state": "COMPLETED",
+      "frames_emitted": 5,
+      "native_bytes_emitted": 9715200,
+      "native_bytes_received": 9715200,
+      "decoder_stderr_bytes": 0,
+      "decoder_exit_code": 0,
+      "frame_sha256": [
+        {
+          "frame_index": 0,
+          "sha256": "df7448b2d94b6e86e19daeb2349705e4bb204c3464294ecf2fcc17c607ec8813"
+        },
+        {
+          "frame_index": 98,
+          "sha256": "76dea6e55b0f0434ee48d2a114be5b6d41acebedcb8d1bb3d5ee0bfc4fa4a311"
+        },
+        {
+          "frame_index": 197,
+          "sha256": "eaaf9baa016cb829e3f4bf88101a32cd4d2a79fba78450294a2c904e2f45d2e3"
+        },
+        {
+          "frame_index": 295,
+          "sha256": "fefdd388948f55ee511f012589427ae9a191b54dbe6695eaf0d08fd763acd24b"
+        },
+        {
+          "frame_index": 394,
+          "sha256": "15ed13353647307ddeaba428e1bc5974ed7c02572a47ccae0b3d50a78dc140ad"
+        }
+      ],
+      "decoder_command": [
+        "/usr/bin/ffmpeg",
+        "-nostdin",
+        "-v",
+        "error",
+        "-threads",
+        "1",
+        "-noautorotate",
+        "-i",
+        "/proc/self/fd/4",
+        "-map",
+        "0:v:0",
+        "-an",
+        "-sn",
+        "-dn",
+        "-vf",
+        "select=eq(n\\,0)+eq(n\\,98)+eq(n\\,197)+eq(n\\,295)+eq(n\\,394)",
+        "-fps_mode",
+        "passthrough",
+        "-frames:v",
+        "5",
+        "-pix_fmt",
+        "yuv420p",
+        "-threads",
+        "1",
+        "-f",
+        "rawvideo",
+        "pipe:1"
+      ],
+      "trailing_partial_bytes": 0,
+      "decoder_stderr": "",
+      "decoder_stderr_truncated": false,
+      "metadata_unchanged_after_decode": true
+    }
+  },
+  "source_auth_attempts": 2,
+  "source_auth_opens": 2,
+  "source_auth_bytes_read": 7709238,
+  "decoder_launch_attempts": 2,
+  "decoder_launches": 2,
+  "frames_emitted": 10,
+  "decoder_input_open_requests": 2,
+  "both_sources_authenticated": true,
+  "native_bytes_emitted": 19545600,
+  "source_path_reopens_by_python": 0,
+  "resident_application_frame_window": 3,
+  "frame_window_note": "Conservative three native payloads: mutable assembly, immutable copy and prior consumer frame; detector memory excluded.",
+  "decoder_compressed_bytes_read": null,
+  "internal_intermediate_decode_count": null,
+  "historical_intermediate_frames_delivered": 0,
+  "instrumentation_scope": "Application counters, not universal syscalls or decoder internal reads.",
+  "frames_written": 0,
+  "patches_written": 0,
+  "temporary_bytes_written": 0,
+  "source_fds_closed": true
+}
