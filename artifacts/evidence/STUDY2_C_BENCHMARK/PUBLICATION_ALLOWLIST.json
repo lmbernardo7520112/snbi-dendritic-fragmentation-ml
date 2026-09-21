@@ -1,0 +1,202 @@
+{
+  "purpose": "METHOD_FREEZE_C1",
+  "files": [
+    {
+      "path": ".github/workflows/study2c-synthetic.yml",
+      "sha256": "98d438b7375dd358be621101f24601c1163c0eeb4494668c73ea22478355b0d7",
+      "size_bytes": 2308
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_C_BENCHMARK/AUTHORIZATION.md",
+      "sha256": "59405ea29a29039246e090e6fa5f72a580a7c183af0dbd1d324d341eb8b05450",
+      "size_bytes": 23604
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_C_BENCHMARK/COMMANDS_PREPARATION.json",
+      "sha256": "fc4933ada2e50eb837885a29fe564f1829008daf796d04ec25c86a4d87a9ee57",
+      "size_bytes": 3852
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_C_BENCHMARK/CORE_REVIEW.json",
+      "sha256": "07a596488b88535043df7f77e1d5939dee5c516ba2f2f33e45e87c236c63df9c",
+      "size_bytes": 8855
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_C_BENCHMARK/ENVIRONMENT.json",
+      "sha256": "722ad5b35cb59764f22dfdf1ec457394f3a7a42fb205eb519eca1006ed15aa44",
+      "size_bytes": 751
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_C_BENCHMARK/HISTORICAL_CHECKSUMS.json",
+      "sha256": "d3935a8182d72c20345561c1ac3895ac8aa1bb0034119769a05a626890df2fe9",
+      "size_bytes": 114
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_C_BENCHMARK/INTEGRATION_AUDIT.json",
+      "sha256": "ba3c392deb92f4e18b2a56a0a33c37b75fe86f0235ad74fa237e144780a065fc",
+      "size_bytes": 75801
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_C_BENCHMARK/METHOD_FREEZE.json",
+      "sha256": "b5d7a9c48735711f28b30ea0711a148c46ca0d714167d465ffe0d782863e5bf8",
+      "size_bytes": 4990
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_C_BENCHMARK/MODEL_CONTRACT.json",
+      "sha256": "2f0d73280fe09fdf6b8bb25ba84cb075c9c725e44d6f41cae94d95bb392659df",
+      "size_bytes": 5961
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_C_BENCHMARK/PLAN_RECEIPT.json",
+      "sha256": "468dd2a81f6bca957ba786059aa4541cc8d993e4d2e2edb62d765c41fc88cf5e",
+      "size_bytes": 198
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_C_BENCHMARK/PREPARATORY_PREFLIGHT.json",
+      "sha256": "496a2223727dd01cabb28be8d99f9d92990c73bf419def399eeed9eed4b99689",
+      "size_bytes": 879
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_C_BENCHMARK/PRE_METADATA_SYNTHETIC_TESTS.json",
+      "sha256": "a28fbce99bab13feee729d2d2253f746754131382fa574edbc5a82b9fbbb7b24",
+      "size_bytes": 386
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_C_BENCHMARK/PROSPECTIVE_SCOPE.json",
+      "sha256": "3631dc9fed89e12013745ac6e3fcc77d376cd70d724b34c0360dbf98f24f2932",
+      "size_bytes": 2059
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_C_BENCHMARK/PROSPECTIVE_SCOPE_FINAL.json",
+      "sha256": "96ea5cdf82b0286742e5d490aef613fb4ac8150d1286654c428a4ef6836a2439",
+      "size_bytes": 2089
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_C_BENCHMARK/SPLIT_INDEPENDENT_AUDIT.json",
+      "sha256": "c27bcf2149871f6cd64830ab02b0665c63c73900e439ec88e95c4eef3da6b5ed",
+      "size_bytes": 7539
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_C_BENCHMARK/SPLIT_MANIFEST.json",
+      "sha256": "74adb4eb7acad1e6aa67c4302d9db30d0c22f21fb51bc72aa89f701956d14ec7",
+      "size_bytes": 33725407
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_C_BENCHMARK/STUDY2_C_PROTOCOL.md",
+      "sha256": "342124317971843b31427680ef2e5aa961a5d6da888dc988654090838b8253c2",
+      "size_bytes": 9087
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_C_BENCHMARK/SYNTHETIC_TESTS.json",
+      "sha256": "0baf47d119908fc8c38d514a8c437482a9cb8f53cea09136e68d41844948656f",
+      "size_bytes": 14922
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_C_BENCHMARK/WORKFLOW_PREFLIGHT.json",
+      "sha256": "0be2cdce8a1a14d45ccc47c47c0c92213b248d122ebe84eb2cb3e21f594ef903",
+      "size_bytes": 210
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_C_BENCHMARK/combined-synthetic.log.txt",
+      "sha256": "8f119e19e00f53bdb77bb751c4e87d28ce86c22cb9dee4bfe14d00459a1c0ae6",
+      "size_bytes": 22533
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_C_BENCHMARK/design-synthetic.log.txt",
+      "sha256": "3f99560a8e6c0bffded2472154ced5e6bd74d3e7645c450dda0d62488103c13c",
+      "size_bytes": 4921
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_C_BENCHMARK/execution-synthetic.log.txt",
+      "sha256": "36ad72a7301d8298c85cd99b6a1d795cd9673d2a72a9e62c259e665b5e48c36c",
+      "size_bytes": 7207
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_C_BENCHMARK/governance-synthetic.log.txt",
+      "sha256": "7c3fc6ceb7f93ebbcd1ef4c7dee807b195f6215bff2ce909daad4b32a279f856",
+      "size_bytes": 5139
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_C_BENCHMARK/io-synthetic.log.txt",
+      "sha256": "c7e2e730723ac340ccb541b17d030d8cf133c98277fe7f14a419b5cf94765d93",
+      "size_bytes": 5006
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_C_BENCHMARK/models-synthetic.log.txt",
+      "sha256": "7db44e6ab22f32b4a87e182553277aa8a83d197f281c8f2c4cb602b591158761",
+      "size_bytes": 5695
+    },
+    {
+      "path": "configs/authority/study2c.json",
+      "sha256": "2057eacc685b4561bd7b06ea9fa6164e2200305947547983c8316c32dfd0aa61",
+      "size_bytes": 545
+    },
+    {
+      "path": "configs/governance/phase-scope-v1.json",
+      "sha256": "3874514f48647709e1fb0a0c7aa631550d2c2c4350afa8a3ff2445551fe6cb36",
+      "size_bytes": 30369
+    },
+    {
+      "path": "scripts/check_ti3_scope.py",
+      "sha256": "4894a1790248b85159185427ac914707f4b857de56f6ec8149adaeb29832dbed",
+      "size_bytes": 6880
+    },
+    {
+      "path": "scripts/run_study2c.py",
+      "sha256": "714eaf60a97699a1ae30d824c6a288b5a761b11626e8a75a19d115a733846c57",
+      "size_bytes": 690
+    },
+    {
+      "path": "src/snbi_fragmentation/study2c_cnn.py",
+      "sha256": "19731a717f8974940ab4b5c1763fc621019353ba40c8e4200bc4944b50406002",
+      "size_bytes": 8081
+    },
+    {
+      "path": "src/snbi_fragmentation/study2c_design.py",
+      "sha256": "a9b839762a6bc11df95e1344b41fdf10731688c02905629dbfed98136c1db851",
+      "size_bytes": 20948
+    },
+    {
+      "path": "src/snbi_fragmentation/study2c_execution.py",
+      "sha256": "ff1b4863dbdcc406de2ed5ca0c79391afb3aa0803336fc84544392631c633cd0",
+      "size_bytes": 27849
+    },
+    {
+      "path": "src/snbi_fragmentation/study2c_io.py",
+      "sha256": "fb50738fa34559f65dd7474d55ecc6e591b2b7da2e9c31d3366afea2fb884fc5",
+      "size_bytes": 24088
+    },
+    {
+      "path": "src/snbi_fragmentation/study2c_models.py",
+      "sha256": "e0a9f9c822e1f22e1c09fd91634e2ed6cd93133fb1a9ee6c45d81412c427903b",
+      "size_bytes": 18526
+    },
+    {
+      "path": "tests/test_study2c_cnn.py",
+      "sha256": "3b0a24b3d620c0e82309c3314921c39bd2304363234d9976f2b37c0623e8d662",
+      "size_bytes": 6608
+    },
+    {
+      "path": "tests/test_study2c_design.py",
+      "sha256": "e14d6b332f768ffa9963e222b876b38e7ce8985bd2c20c84d14e89733a193d33",
+      "size_bytes": 20300
+    },
+    {
+      "path": "tests/test_study2c_execution.py",
+      "sha256": "75ed28876b4da4b09d2676f10c0ac42f7669e467ebbcee86a0759a7a232d1815",
+      "size_bytes": 33734
+    },
+    {
+      "path": "tests/test_study2c_io.py",
+      "sha256": "40c42e09e99ec8a512878074e3f5b009389b2d02b399f0361ffd2f885b789fc5",
+      "size_bytes": 25951
+    },
+    {
+      "path": "tests/test_study2c_models.py",
+      "sha256": "4c6b87c031cddd7ed4c2f2d6516ceee466315387bf17cc3394b63d66e5a925ac",
+      "size_bytes": 16594
+    }
+  ],
+  "authority": "artifacts/evidence/STUDY2_C_BENCHMARK/AUTHORIZATION.md",
+  "note": "This inventory is itself included in exact staging; no self hash."
+}

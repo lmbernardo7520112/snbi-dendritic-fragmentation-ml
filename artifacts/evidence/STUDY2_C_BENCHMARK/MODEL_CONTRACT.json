@@ -1,0 +1,293 @@
+{
+  "families": [
+    "LOGISTIC_REGRESSION",
+    "SVM_RBF",
+    "RF_REFERENCE",
+    "RF_TUNED",
+    "CNN_V2"
+  ],
+  "features": {
+    "channels": [
+      "STRUCTURAL_Y",
+      "RELATIVE_SOLUTE_FIELD_Y"
+    ],
+    "patch_shape": [
+      2,
+      65,
+      65
+    ],
+    "patch_dtype": "uint8",
+    "lbp_points": 8,
+    "lbp_radius": 1,
+    "lbp_method": "uniform",
+    "histogram_bins": 10,
+    "histogram_range": [
+      0,
+      10
+    ],
+    "histogram_density": true,
+    "feature_dimension": 20
+  },
+  "grids": {
+    "LOGISTIC_REGRESSION": [
+      {
+        "C": 0.1
+      },
+      {
+        "C": 1.0
+      },
+      {
+        "C": 10.0
+      }
+    ],
+    "SVM_RBF": [
+      {
+        "C": 0.1,
+        "gamma": "scale"
+      },
+      {
+        "C": 0.1,
+        "gamma": 0.01
+      },
+      {
+        "C": 0.1,
+        "gamma": 0.1
+      },
+      {
+        "C": 1.0,
+        "gamma": "scale"
+      },
+      {
+        "C": 1.0,
+        "gamma": 0.01
+      },
+      {
+        "C": 1.0,
+        "gamma": 0.1
+      },
+      {
+        "C": 10.0,
+        "gamma": "scale"
+      },
+      {
+        "C": 10.0,
+        "gamma": 0.01
+      },
+      {
+        "C": 10.0,
+        "gamma": 0.1
+      }
+    ],
+    "RF_TUNED": [
+      {
+        "n_estimators": 100,
+        "max_depth": 8,
+        "min_samples_leaf": 3
+      },
+      {
+        "n_estimators": 100,
+        "max_depth": 8,
+        "min_samples_leaf": 1
+      },
+      {
+        "n_estimators": 100,
+        "max_depth": null,
+        "min_samples_leaf": 3
+      },
+      {
+        "n_estimators": 100,
+        "max_depth": null,
+        "min_samples_leaf": 1
+      },
+      {
+        "n_estimators": 300,
+        "max_depth": 8,
+        "min_samples_leaf": 3
+      },
+      {
+        "n_estimators": 300,
+        "max_depth": 8,
+        "min_samples_leaf": 1
+      },
+      {
+        "n_estimators": 300,
+        "max_depth": null,
+        "min_samples_leaf": 3
+      },
+      {
+        "n_estimators": 300,
+        "max_depth": null,
+        "min_samples_leaf": 1
+      }
+    ]
+  },
+  "cv_folds": 4,
+  "cv_fits": {
+    "LOGISTIC_REGRESSION": 12,
+    "SVM_RBF": 36,
+    "RF_TUNED": 32
+  },
+  "cv_fits_total": 80,
+  "cv_tie_rules": {
+    "LOGISTIC_REGRESSION": "C ascending: 0.1,1,10",
+    "SVM_RBF": "C ascending, then declared gamma order: scale,0.01,0.1",
+    "RF_TUNED": "n_estimators ascending, depth 8 before None, leaf 3 before 1",
+    "score": "mean of four primary_gmba values; exact float tie, no tolerance",
+    "svm_gamma_note": "Declared tie ordering; scale is data-adaptive and is not claimed universally simpler."
+  },
+  "logistic_defaults": {
+    "penalty": "l2",
+    "dual": false,
+    "tol": 0.0001,
+    "C": 1.0,
+    "fit_intercept": true,
+    "intercept_scaling": 1,
+    "class_weight": null,
+    "random_state": 42,
+    "solver": "lbfgs",
+    "max_iter": 10000,
+    "multi_class": "deprecated",
+    "verbose": 0,
+    "warm_start": false,
+    "n_jobs": null,
+    "l1_ratio": null
+  },
+  "svm_defaults": {
+    "C": 1.0,
+    "kernel": "rbf",
+    "degree": 3,
+    "gamma": "scale",
+    "coef0": 0.0,
+    "shrinking": true,
+    "probability": false,
+    "tol": 0.001,
+    "cache_size": 200,
+    "class_weight": null,
+    "verbose": false,
+    "max_iter": -1,
+    "decision_function_shape": "ovr",
+    "break_ties": false,
+    "random_state": 42
+  },
+  "rf_defaults": {
+    "bootstrap": true,
+    "ccp_alpha": 0.0,
+    "class_weight": null,
+    "criterion": "gini",
+    "max_depth": null,
+    "max_features": "sqrt",
+    "max_leaf_nodes": null,
+    "max_samples": null,
+    "min_impurity_decrease": 0.0,
+    "min_samples_leaf": 1,
+    "min_samples_split": 2,
+    "min_weight_fraction_leaf": 0.0,
+    "monotonic_cst": null,
+    "n_estimators": 100,
+    "n_jobs": null,
+    "oob_score": false,
+    "random_state": 42,
+    "verbose": 0,
+    "warm_start": false
+  },
+  "scaler_defaults": {
+    "copy": true,
+    "with_mean": true,
+    "with_std": true
+  },
+  "scaler_fit_weighting": "same group-equal training weights as classifier; training rows only",
+  "cnn": {
+    "seed": 42,
+    "device": "cpu",
+    "threads": 1,
+    "num_workers": 0,
+    "batch_size": 32,
+    "epochs": 20,
+    "shuffle_training": true,
+    "input_shape": [
+      2,
+      65,
+      65
+    ],
+    "input_dtype": "uint8",
+    "normalization": "float32/255.0",
+    "parameter_count": 5010,
+    "optimizer": "Adam",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "amsgrad": false,
+    "foreach": null,
+    "maximize": false,
+    "capturable": false,
+    "differentiable": false,
+    "fused": null,
+    "loss": "CrossEntropyLoss(reduction=none)",
+    "batch_objective": "sum(loss_i*weight_i)/sum(weight_i)",
+    "deterministic_algorithms": true,
+    "augmentation": false,
+    "scheduler": false,
+    "early_stopping": false,
+    "dev_epoch_selection": false
+  },
+  "cnn_architecture": [
+    {
+      "layer": "Conv2d",
+      "in_channels": 2,
+      "out_channels": 16,
+      "kernel_size": 3,
+      "padding": 1
+    },
+    {
+      "layer": "ReLU"
+    },
+    {
+      "layer": "MaxPool2d",
+      "kernel_size": 2,
+      "stride": 2
+    },
+    {
+      "layer": "Conv2d",
+      "in_channels": 16,
+      "out_channels": 32,
+      "kernel_size": 3,
+      "padding": 1
+    },
+    {
+      "layer": "ReLU"
+    },
+    {
+      "layer": "MaxPool2d",
+      "kernel_size": 2,
+      "stride": 2
+    },
+    {
+      "layer": "AdaptiveAvgPool2d",
+      "output_size": [
+        1,
+        1
+      ]
+    },
+    {
+      "layer": "Flatten"
+    },
+    {
+      "layer": "Linear",
+      "in_features": 32,
+      "out_features": 2
+    }
+  ],
+  "weighting": "1/number_of_actual_training_rows_in_group; no class weights or global rescaling",
+  "model_family_tie_order": [
+    "LOGISTIC_REGRESSION",
+    "SVM_RBF",
+    "RF_REFERENCE",
+    "RF_TUNED",
+    "CNN_V2"
+  ],
+  "cnn_batch_weight_limit": "Minibatch-normalized SGD does not imply identical effective updates per group"
+}

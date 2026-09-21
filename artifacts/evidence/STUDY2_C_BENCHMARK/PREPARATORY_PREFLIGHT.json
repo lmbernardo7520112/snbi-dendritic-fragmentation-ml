@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "head_sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "freeze_text_count": 37,
+  "ci_jobs": [
+    "deterministic-contracts",
+    "scientific-synthetic-contracts",
+    "study2a-synthetic-contracts",
+    "study2b-synthetic-contracts",
+    "study2c-synthetic-contracts",
+    "ti3-synthetic-contracts",
+    "ti3b-synthetic-contracts",
+    "ti3c-synthetic-contracts",
+    "ti3d-final-synthetic-contracts"
+  ],
+  "source_opens": 0,
+  "receipt_created": false,
+  "free_disk_bytes": 666193358848,
+  "proof_semantics": "REAL_TEXTS_AND_SERIALIZED_CONFIG; simulated future Git HEAD/blobs and CI only, not remote CI evidence",
+  "real_row_schema_counts": {
+    "TRAIN": 3858,
+    "DEVELOPMENT": 598,
+    "TRAIN_SILVER": 1937,
+    "FINAL_TRAIN": 819,
+    "TEST": 762,
+    "BACKGROUND_TRAIN_DEVELOPMENT": 8737,
+    "BACKGROUND_TEST": 2495
+  },
+  "pixel_reads": 0
+}

@@ -1,0 +1,81 @@
+{
+  "audit": "composed_phase_scope",
+  "status": "PASS",
+  "violations": [],
+  "data_guard": {
+    "audit": "tracked_repository_data_guard",
+    "examined_entry_count": 646,
+    "status": "PASS",
+    "violations": [],
+    "content_bytes_read": 0
+  },
+  "partition": {
+    "status": "PASS",
+    "violations": [],
+    "unclassified_paths": [],
+    "duplicate_classification_paths": [],
+    "missing_paths": [],
+    "relevant_tracked_count": 136,
+    "legacy_file_count": 75,
+    "a0_frozen_file_count": 4,
+    "active_tracked_count": 57,
+    "active_planned_count": 0
+  },
+  "legacy_scope": {
+    "authorized_phase": null,
+    "authorized_scientific_phases": [],
+    "current_authorized_activity": "NONE_AWAITING_AUTHOR_DECISION",
+    "ti2_execution_authorized": false,
+    "ti2r_authorized": false,
+    "ti3_plus_authorized": false,
+    "scientific_readiness": "BLOCKED",
+    "blocked_phases": [
+      "TI-2",
+      "TI-2R",
+      "TI-3",
+      "TI-4",
+      "TI-5",
+      "TI-6",
+      "TI-7",
+      "TI-8"
+    ],
+    "codex_local_write_readiness": "BLOCKED_AWAITING_AUTHOR_DECISION",
+    "merge_authorized": false,
+    "current_gate_documents": {
+      "status": "PASS",
+      "document_count": 2,
+      "violations": []
+    },
+    "status": "PASS",
+    "violations": [],
+    "experimental_content_bytes_read": 0
+  },
+  "a0_frozen_scope": {
+    "status": "PASS",
+    "violations": [],
+    "examined_file_count": 4
+  },
+  "ti3_scope": {
+    "status": "PASS",
+    "violations": [],
+    "examined_entry_count": 57,
+    "experimental_content_bytes_read": 0
+  },
+  "experimental_content_bytes_read": 0,
+  "authorized_scientific_phases": [],
+  "scientific_readiness": "BLOCKED",
+  "ti2_execution_authorized": false,
+  "ti3_plus_authorized": false,
+  "merge_authorized": false,
+  "legacy_custody": {
+    "status": "PASS",
+    "violations": [],
+    "examined_file_count": 75
+  },
+  "active_custody": {
+    "status": "PASS",
+    "violations": [],
+    "examined_file_count": 57
+  },
+  "inventory_semantics": "PROSPECTIVE_EXPLICIT_CODE_PATHS; not actual index audit"
+}

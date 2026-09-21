@@ -1,0 +1,255 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "created_at_utc": "2026-09-21T17:19:28.940303+00:00",
+  "scope": "Independent text-only verification after the single metadata planner; no build_design invocation, no tests, no model or pixel access.",
+  "checks_evaluated": 161127,
+  "failures": [],
+  "inputs": [
+    {
+      "path": "artifacts/evidence/STUDY2_C_BENCHMARK/SPLIT_MANIFEST.json",
+      "bytes_read": 33725407,
+      "sha256": "74adb4eb7acad1e6aa67c4302d9db30d0c22f21fb51bc72aa89f701956d14ec7",
+      "kind": "EXISTING_TEXTUAL_METADATA"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_B_CORPUS/LOCAL_ARTIFACT_MANIFEST.json",
+      "bytes_read": 1243,
+      "sha256": "e9a3ed30771740d7f6a5ee4ff98bb448a46ea842cea1dd903ed1ab4d6b2bbe93",
+      "kind": "EXISTING_TEXTUAL_METADATA"
+    },
+    {
+      "path": "data/derived/study2b/corpus-index.jsonl",
+      "bytes_read": 69620377,
+      "sha256": "ae322dca1b81c93628d012898d152ca0bfe79f84d0f0284cf82ff22d09977edc",
+      "kind": "EXISTING_TEXTUAL_METADATA"
+    },
+    {
+      "path": "data/derived/study2b/background-pool.jsonl",
+      "bytes_read": 49990703,
+      "sha256": "7b92837a152415d10769a79a5224dee02ffb68331bfff8ced60463f8d1b52dd3",
+      "kind": "EXISTING_TEXTUAL_METADATA"
+    }
+  ],
+  "split_manifest_sha256": "74adb4eb7acad1e6aa67c4302d9db30d0c22f21fb51bc72aa89f701956d14ec7",
+  "semantic_hashes": {
+    "group_split_sha256": "0d7554fdb3c6583b508c681c6540e36c535641b25adc18f6f8cf07d5330b06ea",
+    "selected_background_tracks_sha256": "cd70198cc9a3b3c3a0ea442ca6dc286a1d02ce6021ab0f5f17d739f9d563a827",
+    "sample_manifest_sha256": "9bbd9a93ccc332584108474746019e2747dbae1cc8fd34f3b96ad09a488e50cf",
+    "cv_fold_by_group_sha256": "85edac3d7da06994d7b16c4fa50e2aeb806abd7743a1d471842f54fdcf049ef2"
+  },
+  "groups": 104,
+  "fold_counts": [
+    {
+      "fold": 0,
+      "validation_groups": 16,
+      "fit_groups": 48,
+      "strata": {
+        "bottom_up_anti_parallel|0": 6,
+        "bottom_up_anti_parallel|1": 6,
+        "top_down_parallel|0": 2,
+        "top_down_parallel|1": 2
+      }
+    },
+    {
+      "fold": 1,
+      "validation_groups": 16,
+      "fit_groups": 48,
+      "strata": {
+        "bottom_up_anti_parallel|0": 6,
+        "bottom_up_anti_parallel|1": 6,
+        "top_down_parallel|0": 2,
+        "top_down_parallel|1": 2
+      }
+    },
+    {
+      "fold": 2,
+      "validation_groups": 16,
+      "fit_groups": 48,
+      "strata": {
+        "bottom_up_anti_parallel|0": 6,
+        "bottom_up_anti_parallel|1": 6,
+        "top_down_parallel|0": 2,
+        "top_down_parallel|1": 2
+      }
+    },
+    {
+      "fold": 3,
+      "validation_groups": 16,
+      "fit_groups": 48,
+      "strata": {
+        "bottom_up_anti_parallel|0": 6,
+        "bottom_up_anti_parallel|1": 6,
+        "top_down_parallel|0": 2,
+        "top_down_parallel|1": 2
+      }
+    }
+  ],
+  "split_counts": {
+    "TRAIN": {
+      "sample_count": 12844,
+      "tier_counts": {
+        "BACKGROUND": 7049,
+        "GOLD": 3858,
+        "SILVER": 1937
+      },
+      "positive_groups": 32,
+      "background_groups": 32,
+      "by_acquisition": {
+        "bottom_up_anti_parallel": {
+          "positive_groups": 24,
+          "background_groups": 24
+        },
+        "top_down_parallel": {
+          "positive_groups": 8,
+          "background_groups": 8
+        }
+      }
+    },
+    "DEVELOPMENT": {
+      "sample_count": 3105,
+      "tier_counts": {
+        "BACKGROUND": 1688,
+        "GOLD": 598,
+        "SILVER": 819
+      },
+      "positive_groups": 10,
+      "background_groups": 10,
+      "by_acquisition": {
+        "bottom_up_anti_parallel": {
+          "positive_groups": 8,
+          "background_groups": 8
+        },
+        "top_down_parallel": {
+          "positive_groups": 2,
+          "background_groups": 2
+        }
+      }
+    },
+    "TEST": {
+      "sample_count": 4188,
+      "tier_counts": {
+        "BACKGROUND": 2495,
+        "GOLD": 762,
+        "SILVER": 931
+      },
+      "positive_groups": 10,
+      "background_groups": 10,
+      "by_acquisition": {
+        "bottom_up_anti_parallel": {
+          "positive_groups": 8,
+          "background_groups": 8
+        },
+        "top_down_parallel": {
+          "positive_groups": 2,
+          "background_groups": 2
+        }
+      }
+    }
+  },
+  "acquisition_tier_counts": [
+    {
+      "split": "TRAIN",
+      "acquisition_id": "bottom_up_anti_parallel",
+      "tiers": {
+        "BACKGROUND": 3889,
+        "GOLD": 1964,
+        "SILVER": 1661
+      }
+    },
+    {
+      "split": "TRAIN",
+      "acquisition_id": "top_down_parallel",
+      "tiers": {
+        "BACKGROUND": 3160,
+        "GOLD": 1894,
+        "SILVER": 276
+      }
+    },
+    {
+      "split": "DEVELOPMENT",
+      "acquisition_id": "bottom_up_anti_parallel",
+      "tiers": {
+        "BACKGROUND": 898,
+        "GOLD": 567,
+        "SILVER": 561
+      }
+    },
+    {
+      "split": "DEVELOPMENT",
+      "acquisition_id": "top_down_parallel",
+      "tiers": {
+        "BACKGROUND": 790,
+        "GOLD": 31,
+        "SILVER": 258
+      }
+    },
+    {
+      "split": "TEST",
+      "acquisition_id": "bottom_up_anti_parallel",
+      "tiers": {
+        "BACKGROUND": 1705,
+        "GOLD": 614,
+        "SILVER": 810
+      }
+    },
+    {
+      "split": "TEST",
+      "acquisition_id": "top_down_parallel",
+      "tiers": {
+        "BACKGROUND": 790,
+        "GOLD": 148,
+        "SILVER": 121
+      }
+    }
+  ],
+  "background_capacity": {
+    "bottom_up_anti_parallel": 75,
+    "top_down_parallel": 148
+  },
+  "selected_background_tracks": 52,
+  "unused_background_tracks": 171,
+  "background_train_development_rows": 8737,
+  "background_test_rows": 2495,
+  "supervised_positive_rows": 8905,
+  "total_manifest_rows": 20137,
+  "excluded_corpus_rows": {
+    "UNLABELED_PERSISTENCE": 2414,
+    "UNLABELED_PRE": 5181,
+    "invalid_support_or_decode": 10896
+  },
+  "membership_and_provenance_checks": {
+    "all_sample_ids_exact": true,
+    "no_group_crosses_splits": true,
+    "native_geometry_unchanged": true,
+    "positive_original_row_indices_and_hashes_preserved": true,
+    "background_original_exclusion_metadata_preserved": true,
+    "all_selected_track_candidates_retained": true,
+    "no_invalid_or_unlabeled_supervised_samples": true,
+    "cv_train_only_and_stratified": true,
+    "rank_tie_breaker": "group/track identifier"
+  },
+  "prior_static_review": {
+    "controller_io_models_interfaces": "COMPATIBLE",
+    "cv_partial_fit_accounting": "Root/model owner changed callbacks to count START/COMPLETE actual calls; no runtime claim from this audit.",
+    "non_cv_fit_start_placement": "Recommendation reported to owner to increment only after preparing inputs."
+  },
+  "access_counters": {
+    "textual_metadata_opens_this_audit_script": 4,
+    "textual_metadata_bytes_this_audit_script": 153337730,
+    "experimental_source_opens": 0,
+    "experimental_pixel_bytes": 0,
+    "container_opens": 0,
+    "frames_decoded": 0,
+    "scientific_runs": 0,
+    "model_fits": 0,
+    "planner_invocations": 0,
+    "tests_invoked": 0
+  },
+  "limits": [
+    "A preliminary read inspected the split manifest counts/schema before this audit script; the input counters above describe this script only.",
+    "Patch and native frame hashes were compared as immutable textual metadata; no binary was re-read or hashed.",
+    "This is an AI-assisted independent code/metadata audit, not a human or institutional certification.",
+    "Logical TEST membership is a group reservation with historical exposure, not global holdout virginity."
+  ]
+}
