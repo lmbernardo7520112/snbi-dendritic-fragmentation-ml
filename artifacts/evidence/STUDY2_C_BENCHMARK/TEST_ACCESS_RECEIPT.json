@@ -1,0 +1,8 @@
+{
+  "created_at_utc": "2026-09-21T17:38:39.276162+00:00",
+  "final_pipeline_sha256": "a5e5ad86e9789147849dfd72f84fbf38065bf385e1c09b00779fba2133d49e5c",
+  "final_fit_freeze_sha256": "0ee683a3029c3fc1e9e299bf9fdf9fc461d7ffad240f447760d13160997c4c4c",
+  "test_samples": 3257,
+  "positive_groups": 10,
+  "background_groups": 10
+}

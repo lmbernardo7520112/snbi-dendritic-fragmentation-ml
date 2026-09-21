@@ -1,0 +1,134 @@
+{
+  "schema_version": 1,
+  "status": "PASS_DOCUMENTARY_REPORT_REVIEW",
+  "created_at_utc": "2026-09-21T17:50:21.241234+00:00",
+  "report_path": "artifacts/evidence/STUDY2_C_BENCHMARK/execution-report.md",
+  "report_sha256": "fc693175ea9c3e98e64df409b0a2690195eb5c7f3058d20647d4061336f417f7",
+  "reviewed_text_sha256": {
+    "artifacts/evidence/STUDY2_C_BENCHMARK/execution-report.md": "fc693175ea9c3e98e64df409b0a2690195eb5c7f3058d20647d4061336f417f7",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/results.json": "774deede6066547610b6608616138488a2d98bbcba399b8d048d85532ed40d02",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/RESULTS_SUMMARY.json": "dde6ff49ac30dd9fb20a0e682090952ff304862a7ad80e8e5db9bc9810a242de",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/IO_ACCOUNTING.json": "662cfc06c0fe76f44ba70bbf84b4383b018fde0bde4d7006790fd7b5d6630281",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/CLASSICAL_TEXT_AUDIT.json": "ca20df6490782797f3894192babc5c362cbca18c5a57508bddc819bbf6e8f584",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/FINAL_TEXT_AUDIT.json": "3f0d237875dfbc3b003b0f432e7b72f5ad3420d83fca928e4585a82afe552134",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/IO_CUSTODY_AUDIT.json": "c2d937d1f0cc6ed45cb0215e62bf7e2c6ad1dc19aac6c82942e883f117d52c70",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/INTEGRATION_AUDIT.json": "ba3c392deb92f4e18b2a56a0a33c37b75fe86f0235ad74fa237e144780a065fc",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/SYNTHETIC_TESTS.json": "0baf47d119908fc8c38d514a8c437482a9cb8f53cea09136e68d41844948656f",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/SPLIT_INDEPENDENT_AUDIT.json": "c27bcf2149871f6cd64830ab02b0665c63c73900e439ec88e95c4eef3da6b5ed",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/CI_PROOF.json": "956b94152af8e962af5b566dcd17c7a3bee7b3b4358ca1d59ab360a6f684f167",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/LOGISTIC_REGRESSION_CV.json": "2aa7356fd440b59b9ddf609de726aea1507a73c41072b789f308d61ae209a49d",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/SVM_RBF_CV.json": "e6b4c418675db5419af44069cd0e1e794f1e742abadde08b5a5ee1c639960afe",
+    "artifacts/evidence/STUDY2_C_BENCHMARK/RF_TUNED_CV.json": "26c9bcbe8ce33e324d57812e7a22fe658ec7aa20a2254b12c6ab4387a4eb59bc"
+  },
+  "requested_items_present": 38,
+  "formatted_model_table_rows_checked": 15,
+  "checks": [
+    {
+      "name": "requested_report_items",
+      "status": "PASS",
+      "detail": "Exactly numbered items 1 through 38 are present. Evidence checkpoint SHA, final CI and final Git state are explicitly deferred to actual publication, not falsely claimed complete."
+    },
+    {
+      "name": "integration_and_pre_fit_ci",
+      "status": "PASS",
+      "detail": "PR17, merge de7670bb8491d2ef01809b33aa326aa3a264324c, preserved parents/tree and prior custody counts match INTEGRATION_AUDIT. CI_PROOF at method SHA records eight workflow runs, nine jobs and 100 successful steps before receipt."
+    },
+    {
+      "name": "group_split_and_rows",
+      "status": "PASS",
+      "detail": "Split audit matches 52 sites/52 tracks, per-class32/10/10, bottom_up24/8/8 and top_down8/2/2. GOLD/BG primary sizes10907/2286/3257; SILVER1937/819/931 is separately documented. All four CV folds have16 validation groups and48 training groups."
+    },
+    {
+      "name": "model_tables",
+      "status": "PASS",
+      "detail": "All15 six-decimal rows across TRAIN, DEV and DEV group/per-acquisition tables exactly match formatted stored result values. Hyperparameter choices and CV scores/runtime sums match three CV result files."
+    },
+    {
+      "name": "gmba_not_observation_balanced_accuracy",
+      "status": "PASS",
+      "detail": "Report consistently distinguishes group-macro GMBA, observation BA and raw accuracy. CNN has highest DEV accuracy, but RF_REFERENCE highest preregistered GMBA. No metric substitution or universal-superiority claim."
+    },
+    {
+      "name": "silver_tradeoff",
+      "status": "PASS",
+      "detail": "Tiny strict GMBA increase selected GOLD_PLUS_SILVER as frozen, while report explicitly discloses accuracy and F1 reductions and observation BA increase. Delta final digits now match arithmetic of the actual JSON floats; no results changed."
+    },
+    {
+      "name": "cnn_budget_and_losses",
+      "status": "PASS",
+      "detail": "Exactly5010 parameters,20 recorded losses,6820 optimizer updates and408.127945s match results/FINAL_TEXT_AUDIT. No loss recomputation, model rerun or inference occurred in this review."
+    },
+    {
+      "name": "fit_counts_and_final_membership",
+      "status": "PASS",
+      "detail": "80 CV+5 benchmark+1 SILVER+1 final=87 fits; one scientific invocation, one TEST evaluation, no retry. Final15949 rows/84 groups comprises4456 GOLD+2756 SILVER+8737 BG; TEST excluded."
+    },
+    {
+      "name": "final_test_metrics_and_small_acquisition_stratum",
+      "status": "PASS",
+      "detail": "TEST3257 rows/20 groups; GMBA0.8449139278495638, obs.BA0.8525933757278337 and[[2172,323],[126,636]] match stored evidence. Per-acquisition metrics and warning that top_down has only2 sites+2 tracks are accurate; majority BA1 is not claimed specificity1."
+    },
+    {
+      "name": "durability_and_chronology_limits",
+      "status": "PASS",
+      "detail": "Receipt, pipeline, final fit and TEST admission timestamps match FINAL_TEXT_AUDIT. Report accurately identifies final fit record as completion/configuration proof, not learned-state hash; prediction-first rests on frozen order and hash links without invented timestamps or human blinding."
+    },
+    {
+      "name": "opaque_hash_vs_test_semantic_access",
+      "status": "PASS",
+      "detail": "Whole-container opaque hash139425000B is separated from7974 selected-row reads67380300B and762 TEST tensor rows6438900B. Shared frame support reads before final stage are disclosed; no claim of globally unexposed TEST pixels. SILVER TEST931 never admitted as tensors/features."
+    },
+    {
+      "name": "decoder_vs_writer_and_storage",
+      "status": "PASS",
+      "detail": "Two streams total2756 native frame emissions/5360177376B, eight compressed authentications/216932096B, writer11232 pairs/22464 channel patches. Decoder patches_written=0 is not mistaken for zero cache writes. Cache94910400 pixel bytes+15723958 text bytes=110634358; Python RSS and timing limits accurately specified."
+    },
+    {
+      "name": "inherited_materialization_flag",
+      "status": "PASS_WITH_DISCLOSED_DOCUMENTARY_LIMIT",
+      "detail": "pixels_materialized=false is acknowledged as copied B provenance and stale for current C cache state. Report directs consumers to complete manifests/index/hash/writer evidence, states no fit/selection dependency and preserves consumed files. This review does not reinterpret false as current absence of pixels."
+    },
+    {
+      "name": "scientific_claim_scope",
+      "status": "PASS",
+      "detail": "Only52/87 valid-support sites;35 excluded sites are not classification errors. Same two acquisitions, possible spatial shared context, weak published labels, no physical absence proof. Study1 comparisons remain descriptive because corpus, split, weights and primary metric differ. No causal/external/significance/forecasting/onset/Bi-absolute claim."
+    },
+    {
+      "name": "closure_and_preservation",
+      "status": "PASS_DOCUMENTARY",
+      "detail": "Consumed authority, no new search/augmentation/self-supervised work or Study2-C PR/Ready/merge are correctly stated. Post-run hashes and terminal verification are to be assembled by publisher after this review; this report does not certify future publication."
+    }
+  ],
+  "corrected_editorial_precision": {
+    "status": "RESOLVED_BEFORE_REVIEW_FINALIZATION",
+    "values_from_recorded_floats": {
+      "rf_reference_minus_tuned_gmba": 0.0010039765221585562,
+      "silver_minus_gold_gmba": 0.0016093220301962585,
+      "silver_minus_gold_percentage_points": 0.16093220301962585
+    },
+    "impact": "Final-digit display differences of approximately 1e-19 only; no selection or scientific result impact. Parent changed only new report text."
+  },
+  "unresolved_material_findings": [],
+  "this_review": {
+    "scientific_module_imports": 0,
+    "project_scorer_calls": 0,
+    "model_fits": 0,
+    "inference_calls": 0,
+    "feature_extractions": 0,
+    "decoder_calls": 0,
+    "tests_invoked": 0,
+    "pixel_or_source_opens": 0,
+    "git_mutations": 0,
+    "new_output_files": [
+      "artifacts/evidence/STUDY2_C_BENCHMARK/REPORT_REVIEW.json"
+    ]
+  },
+  "limits": [
+    "This is an AI-assisted documentary review of named existing text records, not a human/institutional certification.",
+    "Reviewer authored models/CNN code earlier; metric arithmetic and custody evidence from separate auditors were confronted here, not reexecuted via any scientific module.",
+    "No cache, video, image, tensor or model bytes were read or hashed by this review; opaque/hash/access distinctions rely on the authenticated textual execution/custody evidence.",
+    "The first concatenated text inspection produced truncated stdout; subsequent bounded JSON projections supplied the reviewed fields. No experimental access occurred.",
+    "Numerical formatting and scalar differences were checked with Python standard library only. Raw scientific predictions were not regenerated and test/model selection was not reopened.",
+    "A documentary checkpoint SHA, final remote CI and final Git equality remain subsequent publication operations and are not certified by this review."
+  ]
+}

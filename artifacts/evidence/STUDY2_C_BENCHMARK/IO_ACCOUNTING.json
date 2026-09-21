@@ -1,0 +1,74 @@
+{
+  "status": "PASS_WITH_DOCUMENTED_METADATA_PROJECTION_LIMIT",
+  "scientific_source_boundaries": {
+    "source_auth_opens": 8,
+    "source_auth_bytes_read": 216932096,
+    "decoder_input_open_requests": 8,
+    "frames_emitted": 2756,
+    "native_bytes_emitted": 5360177376
+  },
+  "positive_container_opaque_auth_opens": 1,
+  "positive_container_opaque_auth_bytes": 139425000,
+  "positive_selected_rows": 7974,
+  "positive_selected_row_bytes": 67380300,
+  "positive_test_rows": 762,
+  "positive_test_row_bytes": 6438900,
+  "background_pairs_persisted": 11232,
+  "background_channel_patches_persisted": 22464,
+  "background_cache_bytes": 94910400,
+  "background_cache_metadata_bytes": 15723958,
+  "total_local_cache_bytes": 110634358,
+  "temporary_disk_bytes": 0,
+  "positive_pixels_persisted": 0,
+  "model_binaries_persisted": 0,
+  "feature_arrays_persisted": 0,
+  "artifacts": [
+    {
+      "path": "data/derived/study2c/cachetrain_dev.bin",
+      "size_bytes": 73827650,
+      "record_count": 8737,
+      "sha256": "6c64f8e07ba99d0c2ccd04080031b23fc79d9162db79b2e4560e0cc6c4a49b3d",
+      "complete": true,
+      "git_status": "LOCAL_IGNORED"
+    },
+    {
+      "path": "data/derived/study2c/cachetrain_dev.jsonl",
+      "size_bytes": 12255617,
+      "record_count": 8737,
+      "sha256": "8c20022890b19cab2d0c6aa7825809c575a520415227032de5c72549f863048a",
+      "complete": true,
+      "git_status": "LOCAL_IGNORED"
+    },
+    {
+      "path": "data/derived/study2c/cachetest.bin",
+      "size_bytes": 21082750,
+      "record_count": 2495,
+      "sha256": "051f8cebd628710b00f3c53ebfb18c691acc0df05dfb5a0f89d5d073e74f4576",
+      "complete": true,
+      "git_status": "LOCAL_IGNORED"
+    },
+    {
+      "path": "data/derived/study2c/cachetest.jsonl",
+      "size_bytes": 3468341,
+      "record_count": 2495,
+      "sha256": "bf597f9618b9554b1f58f1a509bda32e99b72c138e4e77755a8f45063a5d9d9d",
+      "complete": true,
+      "git_status": "LOCAL_IGNORED"
+    }
+  ],
+  "integration_custody_separate": {
+    "positive_container_opaque_opens": 1,
+    "positive_container_opaque_bytes": 139425000,
+    "two_original_jsonl_text_bytes": 119611080
+  },
+  "scope_notes": [
+    "Compressed source authentication bytes and decoder-native output bytes are distinct boundaries, not additive unique physical data volume.",
+    "source_auth_bytes_read/source_auth_compressed_bytes_read are aliases.",
+    "FFmpeg internal compressed reads and universal syscall opens are not instrumented.",
+    "streaming.patches_written=0 describes decoder export; writer persisted11232 pairs (22464 channel patches).",
+    "pixels_materialized=false in C background row metadata is copied from the B input pool and is a stale source-state projection. It is not current C cache state.",
+    "Canonical current materialization is proven by completed cache manifests, cache_path/cache_row_index, dtype/shape and incremental hashes; consumers must not use the inherited false flag as current state.",
+    "TEST tensor/features/model use began after durable final fit. Opaque whole-container hashing and native streaming of shared frames occurred earlier, so no global pixel virginity is claimed.",
+    "No post-run cache binary or MP4 reopening; binary sizes may be checked by stat only."
+  ]
+}

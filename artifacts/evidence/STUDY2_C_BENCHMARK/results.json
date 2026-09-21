@@ -1,0 +1,53 @@
+{
+  "status": "PASS",
+  "failure": null,
+  "terminal": {
+    "STUDY2_C": "PASS",
+    "STUDY2_C_METHOD": "GROUP_AWARE_MULTIMODAL_BENCHMARK",
+    "VALID_SUPPORT_SITES": 52,
+    "VALID_SUPPORT_SITE_DOMAIN_ONLY": true,
+    "SELECTED_BACKGROUND_TRACKS": 52,
+    "TRAIN_POSITIVE_GROUPS": 32,
+    "TRAIN_BACKGROUND_GROUPS": 32,
+    "DEV_POSITIVE_GROUPS": 10,
+    "DEV_BACKGROUND_GROUPS": 10,
+    "TEST_POSITIVE_GROUPS": 10,
+    "TEST_BACKGROUND_GROUPS": 10,
+    "MODELS_EVALUATED": 5,
+    "SELECTED_MODEL_FAMILY": "RF_REFERENCE",
+    "SELECTED_SUPERVISION_REGIME": "GOLD_PLUS_SILVER",
+    "FINAL_STUDY2_PIPELINE": {
+      "family": "RF_REFERENCE",
+      "supervision": "GOLD_PLUS_SILVER"
+    },
+    "TEST_STATE": "CONSUMED",
+    "SCIENTIFIC_TEST_EVALUATIONS": 1,
+    "HUMAN_REVIEW_USED": false,
+    "AUGMENTATION_USED": false,
+    "EXTERNAL_GENERALIZATION_CLAIM": false,
+    "STUDY2_CLOSED": true,
+    "STATE": "CLOSED_CONSUMED",
+    "MERGE_AUTHORIZED": false,
+    "CURRENT_AUTHORIZED_ACTIVITY": "NONE_AWAITING_AUTHOR_DECISION"
+  },
+  "counts": {
+    "scientific_invocations": 1,
+    "cv_fits_started": 80,
+    "cv_fits_completed": 80,
+    "development_fits_started": 5,
+    "development_fits_completed": 5,
+    "silver_fits_started": 1,
+    "silver_fits_completed": 1,
+    "final_fits_started": 1,
+    "final_fits_completed": 1,
+    "development_evaluations": 5,
+    "silver_development_evaluations": 1,
+    "test_prediction_calls": 1,
+    "test_evaluations": 1,
+    "retries": 0
+  },
+  "runtime_seconds": 859.8822232120001,
+  "peak_python_rss_kib": 815192,
+  "free_disk_after": 666018762752,
+  "method_freeze_sha": "8c38384915807a15062782a4a189601f7c83c8c3"
+}

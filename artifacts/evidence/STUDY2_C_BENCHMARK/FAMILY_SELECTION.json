@@ -1,0 +1,28 @@
+{
+  "selected_model_family": "RF_REFERENCE",
+  "method": "DEV_GMBA_then_observation_BA_then_frozen_family_order",
+  "development_scores": {
+    "LOGISTIC_REGRESSION": {
+      "gmba": 0.8452998367828002,
+      "observation_ba": 0.80224167445989
+    },
+    "SVM_RBF": {
+      "gmba": 0.7871878893835613,
+      "observation_ba": 0.6801136093455278
+    },
+    "RF_REFERENCE": {
+      "gmba": 0.8759021928689068,
+      "observation_ba": 0.8407725594002124
+    },
+    "RF_TUNED": {
+      "gmba": 0.8748982163467482,
+      "observation_ba": 0.8328452662112255
+    },
+    "CNN_V2": {
+      "gmba": 0.7051343531341349,
+      "observation_ba": 0.7679557846851273
+    }
+  },
+  "family_selection_closed": true,
+  "test_rows_read": 0
+}

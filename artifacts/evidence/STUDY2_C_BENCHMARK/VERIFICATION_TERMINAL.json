@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "freeze_sha": "8c38384915807a15062782a4a189601f7c83c8c3",
+  "freeze_hashes_verified": 37,
+  "historical_text_checksums": 95,
+  "tracked_changes_after_freeze": [],
+  "staged_paths_before_evidence_checkpoint": [],
+  "scientific_authority": "CLOSED_CONSUMED",
+  "test_state": "CONSUMED",
+  "audits": {
+    "CLASSICAL_TEXT_AUDIT.json": {
+      "sha256": "ca20df6490782797f3894192babc5c362cbca18c5a57508bddc819bbf6e8f584"
+    },
+    "FINAL_TEXT_AUDIT.json": {
+      "sha256": "3f0d237875dfbc3b003b0f432e7b72f5ad3420d83fca928e4585a82afe552134"
+    },
+    "IO_CUSTODY_AUDIT.json": {
+      "sha256": "c2d937d1f0cc6ed45cb0215e62bf7e2c6ad1dc19aac6c82942e883f117d52c70"
+    }
+  },
+  "new_scientific_operations_after_run": 0,
+  "postrun_content_scope": "Only text and Git. Binary cache sizes verified by independent audit stat only.",
+  "metadata_projection_limitation": "pixels_materialized=false copied from B pool does not represent completed C caches; IO_ACCOUNTING.json is additive and source outputs remain intact.",
+  "preexisting_academic_directory": "preserved outside task edits; untracked",
+  "final_git_remote_state": "checked after evidence checkpoint, not anticipated"
+}
