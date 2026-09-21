@@ -1,0 +1,133 @@
+{
+  "status": "PASS",
+  "review_kind": "STATIC_REPAIR_SOURCE_DIFF_REVIEW_BEFORE_OPERATIONAL_FREEZE",
+  "created_at_utc": "2026-09-21T20:33:13.482699+00:00",
+  "method_freeze_original": "21400de67d21901aeb8e5abac528689fc39169fa",
+  "study2_c_merge_base": "ec97cb5041ef35d4f6c9a79b54d756d6fbee674f",
+  "files": {
+    "src/snbi_fragmentation/study2d_execution.py": {
+      "original_sha256": "8a39dfc822e4d17cfb2bdc5973d2f96bc46a4d365dc87bec81ce5100f5b5e505",
+      "repaired_sha256": "0aac7db8d49f3dd77359341ed1c3baae32ecfebf45ec77259d7add7a93e4171d",
+      "original_bytes": 26122,
+      "repaired_bytes": 29679
+    },
+    "tests/test_study2d_execution.py": {
+      "original_sha256": "78ced74c885268918fe2329f1b5f6ed1081fbcd7312cfe5d93d1399be846de25",
+      "repaired_sha256": "512b6e5a8dd95092734a7e01623a296a81f88795fddfaca014dc03c900ad11fa",
+      "original_bytes": 23835,
+      "repaired_bytes": 28682
+    },
+    "tests/test_study2d_io.py": {
+      "original_sha256": "646643212450447b428d44f2649f710ddf040f7f1510e49b0124ff90214342bf",
+      "repaired_sha256": "7d861cd0a5d5d28ffba88e6b1ed501153cafd975f1b81f3a799a7aeb73d419df",
+      "original_bytes": 7946,
+      "repaired_bytes": 8529
+    }
+  },
+  "ast_comparison": {
+    "changed_original_controller_functions": [
+      "preflight"
+    ],
+    "new_controller_functions": [
+      "verify_repair"
+    ],
+    "io_tests_total": 29,
+    "exact_decorated_io_tests": [
+      "test_exact_directed_reads_and_hashes",
+      "test_fingerprint_change_denied",
+      "test_hash_mismatch_closes",
+      "test_short_read_closes"
+    ],
+    "io_test_bodies_changed": false
+  },
+  "checks": [
+    {
+      "id": "EXACT_NUMPY_TEST_REPAIR",
+      "status": "PASS",
+      "basis": "AST comparison confirms all29 original I/O tests remain; exactly four listed tests only gain skipUnless decorators; their bodies and other25tests are unchanged. One stdlib availability condition controls them."
+    },
+    {
+      "id": "OPERATIONAL_EXECUTION_DIFF_ONLY",
+      "status": "PASS",
+      "basis": "AST comparison: among original controller functions/classes only preflight changes; one verify_repair helper is added. Execution, receipt consumption, fits, scoring and I/O grant functions remain identical."
+    },
+    {
+      "id": "ANCESTRY_NO_INTERMEDIATE_MERGE",
+      "status": "PASS",
+      "basis": "verify_repair compares complete parent arrays of HEAD and original freeze, plus HEAD^ and HEAD^^; unexpected second parents, wrong parent/grandparent, old freeze, BASE or second corrective child cannot pass."
+    },
+    {
+      "id": "ORIGINAL_FREEZE_AUTHENTICATION",
+      "status": "PASS",
+      "basis": "Original METHOD_FREEZE.json is loaded from immutable Git original; every recorded original file hash is checked against its original Git blob."
+    },
+    {
+      "id": "SCIENTIFIC_HASH_PRESERVATION",
+      "status": "PASS",
+      "basis": "Every original frozen entry outside the six expressly allowed operational modifications must retain the same worktree and HEAD SHA256. This includes design, models, I/O science, input manifest, sampling plan, RF/LBP/budget/folds and original workflows."
+    },
+    {
+      "id": "EXACT_COMMITTED_REPAIR_DIFF",
+      "status": "PASS",
+      "basis": "Committed original-to-HEAD --no-renames statuses must exactly match the frozen allowed_changes declaration; modifications are exactly six fixed paths. New additions are textual evidence under the D namespace and must be explicitly declared. Deletions, renames, unrelated paths or non100644 blob modes fail."
+    },
+    {
+      "id": "ADDITIVE_REPAIR_AUTHORITY",
+      "status": "PASS",
+      "basis": "Complementary author text is checked against its dedicated hash; both diff and operational freeze must record original parent and scientific_method_changed=false. Repair authorization and diff must themselves be frozen."
+    },
+    {
+      "id": "EXISTING_PREFLIGHT_GATES_RETAINED",
+      "status": "PASS",
+      "basis": "After verify_repair, previous authority, dependency pins, baseline custody, HEAD/worktree freeze hashes, exact TRAIN rows/group count/fold, RF/LBP/budget and current-SHA CI checks remain in place."
+    },
+    {
+      "id": "ORIGINAL_VERSUS_OPERATIONAL_SHA",
+      "status": "PASS",
+      "basis": "Preflight retains head_sha for current operational CI/receipt and adds method_freeze_original and ci_repair_sha explicitly; the original scientific freeze is not relabeled."
+    },
+    {
+      "id": "SCIENTIFIC_RECEIPT_ABSENCE",
+      "status": "PASS",
+      "basis": "Unchanged preflight rejects existing execution receipt, scientific result/fit ledger or terminal before authorization; no alternate retry path is introduced."
+    },
+    {
+      "id": "REMOTE_ZERO_SKIP_GATE_NOT_WEAKENED",
+      "status": "PASS",
+      "basis": "Historical workflows are unchanged. Existing dedicated D workflow requires the frozen exact test count, successful tests and zero skipped/expected/unexpected outcomes; green dedicated step at repair SHA remains necessary."
+    },
+    {
+      "id": "ANCESTRY_TEST_BOUNDARIES",
+      "status": "PASS",
+      "basis": "Nine new synthetic tests cover accepted chain, wrong parent/grandparent, longer chain, unexpected merges, old direct BASE ancestry, second repair child, forbidden scientific diff and altered original scientific hash. Existing preflight fixture mocks only the new operational helper; scientific tests are not rewritten."
+    }
+  ],
+  "findings": [],
+  "nonblocking_fixture_note": {
+    "initial": "The BASE refusal fixture initially modeled only a HEAD with BASE parent.",
+    "status": "RESOLVED_BEFORE_FREEZE",
+    "resolution": "Root preserved that case and added an explicit verify_repair(..., execution.BASE) refusal assertion to the same test. The final source was reread; no tests were run by this reviewer."
+  },
+  "pending_external_gates": [
+    "Operational METHOD_FREEZE and exact CI_REPAIR_DIFF/proof path list were still being assembled; their final values and hashes require root verification.",
+    "This review does not claim repair commit, push, ten green remote jobs, dedicated remote zero skips, real preflight or scientific execution."
+  ],
+  "scope_limits": [
+    "Reviewed only textual attachment, source/test/workflow logic and Git metadata/blobs; no science module imported.",
+    "No planner, test, fit, decoder, feature extractor or scientific runner executed during this review.",
+    "No experimental source, binary container/cache, data cache index or C DEV/TEST prediction/metric file was opened.",
+    "This is a static AI review, not external certification or universal syscall monitoring."
+  ],
+  "this_review": {
+    "experimental_opens": 0,
+    "DEV_TEST_payload_rows_read": 0,
+    "tests_executed": 0,
+    "scientific_runs": 0,
+    "model_fits": 0,
+    "planner_invocations": 0,
+    "source_edits": 0,
+    "new_evidence_files": 1
+  },
+  "repair_class": "TEST_ENVIRONMENT_COMPATIBILITY_ONLY",
+  "scientific_method_changed": false
+}

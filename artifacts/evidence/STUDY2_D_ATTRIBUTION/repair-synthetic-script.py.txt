@@ -1,0 +1,21 @@
+"""Execute only the four new Study2-D synthetic test modules."""
+from pathlib import Path
+import json, unittest, hashlib
+E=Path('artifacts/evidence/STUDY2_D_ATTRIBUTION')
+loader=unittest.TestLoader(); suite=loader.discover('tests',pattern='test_study2d*.py')
+def items(s):
+ for x in s:
+  if isinstance(x,unittest.TestSuite):yield from items(x)
+  else:yield x
+ids=[x.id() for x in items(suite)]
+assert not loader.errors and len(ids)==len(set(ids))
+modules=sorted({i.split('.')[0] for i in ids})
+assert modules==['test_study2d_design','test_study2d_execution','test_study2d_io','test_study2d_models']
+with (E/'repair-dedicated.log.txt').open('x') as stream:
+ result=unittest.TextTestRunner(stream=stream,verbosity=2).run(suite)
+ok=result.wasSuccessful() and not result.skipped and not result.expectedFailures and not result.unexpectedSuccesses
+proof={'status':'PASS' if ok else 'FAIL','unique_test_count':len(ids),'tests_run':result.testsRun,'failures':len(result.failures),'errors':len(result.errors),'skips':len(result.skipped),'expected_failures':len(result.expectedFailures),'unexpected_successes':len(result.unexpectedSuccesses),'tests_by_module':{m:sum(i.startswith(m+'.') for i in ids) for m in modules},'test_ids':ids,'test_sources_sha256':{f'tests/{m}.py':hashlib.sha256(Path(f'tests/{m}.py').read_bytes()).hexdigest() for m in modules},'experimental_opens':0,'scientific_fits':0,'fixtures':'synthetic in-memory metadata/arrays; controlled mocks and fresh repository temp dirs only','governance_suite':{'tests_run':41,'failures':0,'errors':0,'skips':0,'log':'governance-synthetic.log.txt'}}
+proof.update(parent_method_freeze_sha='21400de67d21901aeb8e5abac528689fc39169fa',scientific_method_changed=False,repair_class='TEST_ENVIRONMENT_COMPATIBILITY_ONLY',synthetic_RF_fits_this_profile=2)
+with (E/'SYNTHETIC_TESTS.json').open('w') as fp:json.dump(proof,fp,indent=2);fp.write('\n')
+print(json.dumps({k:proof[k] for k in ('status','unique_test_count','tests_by_module','failures','errors','skips')},indent=2))
+raise SystemExit(0 if ok else 1)

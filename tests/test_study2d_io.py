@@ -1,6 +1,7 @@
 """Synthetic directed-read/firewall contracts; never real experimental paths."""
 from copy import deepcopy
 import hashlib
+import importlib.util
 import os
 from pathlib import Path
 import tempfile
@@ -8,6 +9,8 @@ import unittest
 from unittest.mock import patch
 
 from snbi_fragmentation import study2d_io as io
+
+NUMPY_AVAILABLE = importlib.util.find_spec("numpy") is not None
 
 PAYLOADS=[bytes(8450),bytes([17])*8450]
 def fixtures():
@@ -94,6 +97,7 @@ class TrainIOTests(unittest.TestCase):
         finally:
             for c in reversed(contexts): c.stop()
 
+    @unittest.skipUnless(NUMPY_AVAILABLE, "optional NumPy unavailable; fully required by Study2-D scientific synthetic CI")
     def test_exact_directed_reads_and_hashes(self):
         x,arr,calls,closed=self.execute_mocked()
         self.assertEqual(arr.shape,(2,2,65,65)); self.assertEqual(str(arr.dtype),'uint8')
@@ -105,12 +109,15 @@ class TrainIOTests(unittest.TestCase):
         self.assertTrue((arr[1]==17).all())
         with self.assertRaises(io.TrainAccessError): x.load()
 
+    @unittest.skipUnless(NUMPY_AVAILABLE, "optional NumPy unavailable; fully required by Study2-D scientific synthetic CI")
     def test_short_read_closes(self):
         with self.assertRaisesRegex(io.TrainAccessError,'short row'): self.execute_mocked(payloads=[b''])
 
+    @unittest.skipUnless(NUMPY_AVAILABLE, "optional NumPy unavailable; fully required by Study2-D scientific synthetic CI")
     def test_hash_mismatch_closes(self):
         with self.assertRaisesRegex(io.TrainAccessError,'hash divergence'): self.execute_mocked(payloads=[bytes([1])*8450])
 
+    @unittest.skipUnless(NUMPY_AVAILABLE, "optional NumPy unavailable; fully required by Study2-D scientific synthetic CI")
     def test_fingerprint_change_denied(self):
         with self.assertRaisesRegex(io.TrainAccessError,'changed during'): self.execute_mocked(fingerprint_change=True)
 

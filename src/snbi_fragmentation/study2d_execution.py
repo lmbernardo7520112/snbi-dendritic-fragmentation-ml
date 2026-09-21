@@ -20,6 +20,8 @@ E = "artifacts/evidence/STUDY2_D_ATTRIBUTION"
 C = "artifacts/evidence/STUDY2_C_BENCHMARK"
 AUTH = "configs/authority/study2d.json"
 AUTH_SHA = "5b28d77ffdb964d4f421bec1378e2b0e35feb70afb79225ad6fe08273fe4ab93"
+METHOD_FREEZE_ORIGINAL = "21400de67d21901aeb8e5abac528689fc39169fa"
+REPAIR_AUTH_SHA = "1b2b0eea52ea81c6b411f2b624abf3b8519d0d0753750a41f4334536e36bc10c"
 FOLD_SHA = "85edac3d7da06994d7b16c4fa50e2aeb806abd7743a1d471842f54fdcf049ef2"
 MAX_TEXT = 268435456
 MIN_FREE = 53687091200
@@ -255,6 +257,53 @@ def validate_inputs(design, manifest):
     return rows
 
 
+def verify_repair(root, head):
+    """Admit only the one authorized compatibility child; preserve original science."""
+    require(git(root, "rev-list", "--parents", "-n", "1", head).split()
+            == [head, METHOD_FREEZE_ORIGINAL]
+            and git(root, "rev-list", "--parents", "-n", "1", METHOD_FREEZE_ORIGINAL).split()
+            == [METHOD_FREEZE_ORIGINAL, BASE], "exact repair ancestry required; merges or further children forbidden")
+    require(git(root, "rev-parse", "HEAD^") == METHOD_FREEZE_ORIGINAL
+            and git(root, "rev-parse", "HEAD^^") == BASE, "repair parent/grandparent differ")
+    require(digest(read_text(root, E + "/CI_REPAIR_AUTHORIZATION.md")) == REPAIR_AUTH_SHA,
+            "repair authorization hash differs")
+    permitted_modifications = {"tests/test_study2d_io.py", "tests/test_study2d_execution.py",
+        "src/snbi_fragmentation/study2d_execution.py", "configs/governance/phase-scope-v1.json",
+        E + "/METHOD_FREEZE.json", E + "/SYNTHETIC_TESTS.json"}
+    proof = load(root, E + "/CI_REPAIR_DIFF.json")
+    declared = proof.get("allowed_changes", {})
+    require(proof.get("parent_method_freeze_sha") == METHOD_FREEZE_ORIGINAL
+            and proof.get("scientific_method_changed") is False, "repair diff declaration differs")
+    actual = {}
+    for line in git(root, "diff", "--name-status", "--no-renames", METHOD_FREEZE_ORIGINAL, head).splitlines():
+        status, name = line.split("\t")
+        require(name not in actual and (status == "M" and name in permitted_modifications
+                or status == "A" and name.startswith(E + "/") and PurePosixPath(name).suffix
+                in {".json", ".md", ".txt", ".sha256"}), "repair changed an unauthorized path")
+        actual[name] = status
+    require(exact(actual, declared) and {p for p, s in actual.items() if s == "M"}
+            == permitted_modifications, "repair diff differs from exact published allowlist")
+    for name in actual:
+        entry = git(root, "ls-tree", head, "--", name).split()
+        require(len(entry) == 4 and entry[0:2] == ["100644", "blob"], "repair mode/type changed")
+    original = json.loads(git_bytes(root, "show", METHOD_FREEZE_ORIGINAL + ":" + E + "/METHOD_FREEZE.json"))
+    for name, expected in original["files"].items():
+        require(digest(git_bytes(root, "show", METHOD_FREEZE_ORIGINAL + ":" + name)) == expected,
+                "original freeze blob differs")
+        if name not in permitted_modifications:
+            require(digest(read_text(root, name)) == expected
+                    and digest(git_bytes(root, "show", head + ":" + name)) == expected,
+                    "original scientific or historical contract changed: " + name)
+    operational = load(root, E + "/METHOD_FREEZE.json")
+    require(operational.get("parent_method_freeze_sha") == METHOD_FREEZE_ORIGINAL
+            and operational.get("scientific_method_changed") is False, "operational freeze provenance missing")
+    require({E + "/CI_REPAIR_AUTHORIZATION.md", E + "/CI_REPAIR_DIFF.json"}
+            <= set(operational["files"]), "repair proofs must be frozen")
+    return {"status": "PASS", "parent_method_freeze_sha": METHOD_FREEZE_ORIGINAL,
+            "grandparent_sha": BASE, "original_hashes_verified": len(original["files"]),
+            "repair_paths": len(actual), "scientific_method_changed": False}
+
+
 def preflight(root):
     """Textual checks only. Does not construct a corpus reader or create a receipt."""
     for name in ("EXECUTION_RECEIPT.json", "FIT_RESULTS.json", "results.json", "terminal-state.json"):
@@ -262,7 +311,7 @@ def preflight(root):
     authority(root)
     require(shutil.disk_usage(root).free >= MIN_FREE + MAX_TEXT, "disk reserve insufficient")
     head = git(root, "rev-parse", "HEAD")
-    require(git(root, "rev-parse", "HEAD^") == BASE, "method freeze must directly follow C merge")
+    repair = verify_repair(root, head)
     preserved_baseline(root)
     for line in read_text(root, "constraints-ti3c-cnn.txt").decode().splitlines():
         name, version = line.split("==")
@@ -298,7 +347,8 @@ def preflight(root):
     jobs = verify_ci(load(root, E + "/CI_PROOF.json"), head)
     return {"status": "PASS", "head_sha": head, "freeze_text_count": len(freeze["files"]),
             "ci_jobs": jobs, "experimental_opens": 0, "receipt_created": False,
-            "allowed_rows": len(expected_rows), "distinct_fits": 100}
+            "allowed_rows": len(expected_rows), "distinct_fits": 100, "repair": repair,
+            "method_freeze_original": METHOD_FREEZE_ORIGINAL, "ci_repair_sha": head}
 
 
 class TrainAccessState:

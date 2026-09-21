@@ -1,7 +1,7 @@
 {
   "status": "PASS",
-  "unique_test_count": 116,
-  "tests_run": 116,
+  "unique_test_count": 107,
+  "tests_run": 107,
   "failures": 0,
   "errors": 0,
   "skips": 0,
@@ -9,7 +9,7 @@
   "unexpected_successes": 0,
   "tests_by_module": {
     "test_study2d_design": 20,
-    "test_study2d_execution": 47,
+    "test_study2d_execution": 38,
     "test_study2d_io": 29,
     "test_study2d_models": 20
   },
@@ -57,15 +57,6 @@
     "test_study2d_execution.PreflightTests.test_frozen_byte_divergence_blocks",
     "test_study2d_execution.PreflightTests.test_preexisting_receipt_blocks_before_authority",
     "test_study2d_execution.PreflightTests.test_preflight_uses_text_and_creates_no_receipt",
-    "test_study2d_execution.RepairAncestryTests.test_exact_single_repair_chain_accepted",
-    "test_study2d_execution.RepairAncestryTests.test_head_directly_on_base_rejected",
-    "test_study2d_execution.RepairAncestryTests.test_longer_ancestry_rejected",
-    "test_study2d_execution.RepairAncestryTests.test_original_scientific_hash_preserved",
-    "test_study2d_execution.RepairAncestryTests.test_repair_diff_rejects_scientific_path",
-    "test_study2d_execution.RepairAncestryTests.test_second_repair_child_rejected",
-    "test_study2d_execution.RepairAncestryTests.test_unexpected_merge_rejected",
-    "test_study2d_execution.RepairAncestryTests.test_wrong_grandparent_rejected",
-    "test_study2d_execution.RepairAncestryTests.test_wrong_parent_rejected",
     "test_study2d_execution.RunTests.test_101st_fit_denied",
     "test_study2d_execution.RunTests.test_complete_100_fits_order_and_eight_reuses",
     "test_study2d_execution.RunTests.test_duplicate_fit_spec_never_refits",
@@ -133,8 +124,8 @@
   ],
   "test_sources_sha256": {
     "tests/test_study2d_design.py": "5ea083f31981b0703fcc0889587b2b6e1a682f10f9fc75fa113158419682c5a4",
-    "tests/test_study2d_execution.py": "512b6e5a8dd95092734a7e01623a296a81f88795fddfaca014dc03c900ad11fa",
-    "tests/test_study2d_io.py": "7d861cd0a5d5d28ffba88e6b1ed501153cafd975f1b81f3a799a7aeb73d419df",
+    "tests/test_study2d_execution.py": "78ced74c885268918fe2329f1b5f6ed1081fbcd7312cfe5d93d1399be846de25",
+    "tests/test_study2d_io.py": "646643212450447b428d44f2649f710ddf040f7f1510e49b0124ff90214342bf",
     "tests/test_study2d_models.py": "742a74e3e0454e691b742d919699dc00c7ddfe2dfc45ba331f38f20e9dcaf4bb"
   },
   "experimental_opens": 0,
@@ -146,9 +137,5 @@
     "errors": 0,
     "skips": 0,
     "log": "governance-synthetic.log.txt"
-  },
-  "parent_method_freeze_sha": "21400de67d21901aeb8e5abac528689fc39169fa",
-  "scientific_method_changed": false,
-  "repair_class": "TEST_ENVIRONMENT_COMPATIBILITY_ONLY",
-  "synthetic_RF_fits_this_profile": 2
+  }
 }

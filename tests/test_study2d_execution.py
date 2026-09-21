@@ -392,6 +392,7 @@ class PreflightTests(TemporaryRoot):
         stack=ExitStack();self.addCleanup(stack.close)
         stack.enter_context(mock.patch.object(execution,'authority'))
         stack.enter_context(mock.patch.object(execution,'preserved_baseline'))
+        stack.enter_context(mock.patch.object(execution,'verify_repair',return_value={'status':'PASS'}))
         stack.enter_context(mock.patch.object(execution,'read_text',side_effect=lambda root,n:blobs[n]))
         stack.enter_context(mock.patch.object(execution,'git',side_effect=git))
         stack.enter_context(mock.patch.object(execution,'git_bytes',side_effect=git_bytes))
@@ -425,6 +426,89 @@ class PreflightTests(TemporaryRoot):
         with mock.patch.object(execution,'authority') as authority,self.assertRaises(execution.Study2DError):
             execution.preflight(self.root)
         authority.assert_not_called()
+
+
+class RepairAncestryTests(unittest.TestCase):
+    """Only the expressly authorized single compatibility child is admitted."""
+    def setUp(self):
+        self.original=execution.METHOD_FREEZE_ORIGINAL
+        self.parents=[HEAD,self.original]
+        self.original_parents=[self.original,execution.BASE]
+        self.parent,self.grandparent=self.original,execution.BASE
+        self.changes={p:'M' for p in ('tests/test_study2d_io.py','tests/test_study2d_execution.py',
+            'src/snbi_fragmentation/study2d_execution.py','configs/governance/phase-scope-v1.json',
+            execution.E+'/METHOD_FREEZE.json',execution.E+'/SYNTHETIC_TESTS.json')}
+        self.changes.update({execution.E+'/CI_REPAIR_AUTHORIZATION.md':'A',execution.E+'/CI_REPAIR_DIFF.json':'A'})
+        stable=execution.CODE[0]
+        original={'files':{stable:execution.digest(b'unchanged scientific method')}}
+        self.old={execution.E+'/METHOD_FREEZE.json':encoded(original),stable:b'unchanged scientific method'}
+        self.current={stable:self.old[stable],execution.E+'/CI_REPAIR_AUTHORIZATION.md':b'synthetic repair decision',
+            execution.E+'/METHOD_FREEZE.json':encoded({'parent_method_freeze_sha':self.original,
+                'scientific_method_changed':False,'files':{execution.E+'/CI_REPAIR_AUTHORIZATION.md':'x',
+                    execution.E+'/CI_REPAIR_DIFF.json':'y'}}),
+            execution.E+'/CI_REPAIR_DIFF.json':encoded({'parent_method_freeze_sha':self.original,
+                'scientific_method_changed':False,'allowed_changes':self.changes})}
+        self.stack=ExitStack();self.addCleanup(self.stack.close)
+        self.stack.enter_context(mock.patch.object(execution,'git',side_effect=self.git))
+        self.stack.enter_context(mock.patch.object(execution,'git_bytes',side_effect=self.git_bytes))
+        self.stack.enter_context(mock.patch.object(execution,'read_text',side_effect=lambda root,n:self.current[n]))
+        self.stack.enter_context(mock.patch.object(execution,'REPAIR_AUTH_SHA',execution.digest(b'synthetic repair decision')))
+
+    def git(self,root,*args):
+        if args[:4]==('rev-list','--parents','-n','1'):
+            return ' '.join(self.original_parents if args[4]==self.original else self.parents)
+        if args==('rev-parse','HEAD^'):return self.parent
+        if args==('rev-parse','HEAD^^'):return self.grandparent
+        if args[0]=='diff':return '\n'.join(s+'\t'+p for p,s in self.changes.items())
+        if args[0]=='ls-tree':return '100644 blob '+'a'*40+'\t'+args[-1]
+        raise AssertionError(args)
+
+    def git_bytes(self,root,*args):
+        revision,name=args[1].split(':',1)
+        return (self.old if revision==self.original else self.current)[name]
+
+    def verify(self):return execution.verify_repair(Path('/synthetic'),HEAD)
+
+    def test_exact_single_repair_chain_accepted(self):
+        result=self.verify();self.assertEqual(result['status'],'PASS')
+        self.assertEqual(result['parent_method_freeze_sha'],self.original)
+        self.assertFalse(result['scientific_method_changed'])
+
+    def test_wrong_parent_rejected(self):
+        self.parents=[HEAD,'b'*40]
+        with self.assertRaises(execution.Study2DError):self.verify()
+
+    def test_wrong_grandparent_rejected(self):
+        self.original_parents=[self.original,'b'*40]
+        with self.assertRaises(execution.Study2DError):self.verify()
+
+    def test_longer_ancestry_rejected(self):
+        self.parent='b'*40;self.parents=[HEAD,self.parent]
+        with self.assertRaises(execution.Study2DError):self.verify()
+
+    def test_unexpected_merge_rejected(self):
+        for target in ('parents','original_parents'):
+            old=getattr(self,target);setattr(self,target,old+['b'*40])
+            with self.subTest(target=target),self.assertRaises(execution.Study2DError):self.verify()
+            setattr(self,target,old)
+
+    def test_head_directly_on_base_rejected(self):
+        self.parents=[HEAD,execution.BASE];self.parent=execution.BASE
+        with self.assertRaises(execution.Study2DError):self.verify()
+        with self.assertRaises(execution.Study2DError):
+            execution.verify_repair(Path('/synthetic'),execution.BASE)
+
+    def test_second_repair_child_rejected(self):
+        self.parents=[HEAD,'c'*40];self.parent='c'*40;self.grandparent=self.original
+        with self.assertRaises(execution.Study2DError):self.verify()
+
+    def test_repair_diff_rejects_scientific_path(self):
+        self.changes[execution.CODE[0]]='M'
+        with self.assertRaises(execution.Study2DError):self.verify()
+
+    def test_original_scientific_hash_preserved(self):
+        self.current[execution.CODE[0]]=b'changed science'
+        with self.assertRaises(execution.Study2DError):self.verify()
 
 
 if __name__=='__main__':

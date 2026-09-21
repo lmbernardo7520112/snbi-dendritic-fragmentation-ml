@@ -932,7 +932,7 @@
       {
         "path": "src/snbi_fragmentation/study2d_execution.py",
         "git_mode": "100644",
-        "blob_sha": "f6eb2d507ff6badbe1a5eb4121bc12af3c9cf71f",
+        "blob_sha": "1872a169d865adcc0b4a6fcf2b8ae6922e1f3eca",
         "classification": "TI3_ACTIVE",
         "origin_phase": "STUDY2_D",
         "state": "TRACKED"
@@ -964,7 +964,7 @@
       {
         "path": "tests/test_study2d_io.py",
         "git_mode": "100644",
-        "blob_sha": "6333c224da72b474b56feb09c17131e534538e52",
+        "blob_sha": "c0448e7864e9813262fe68f7d37d862230a97eed",
         "classification": "TI3_ACTIVE",
         "origin_phase": "STUDY2_D",
         "state": "TRACKED"
@@ -972,7 +972,7 @@
       {
         "path": "tests/test_study2d_execution.py",
         "git_mode": "100644",
-        "blob_sha": "bc76c9f814de54c6b94ad6ce0d59750c4b3a148b",
+        "blob_sha": "32a514e00134ff98f9ed806a0d565f8d2106e1a2",
         "classification": "TI3_ACTIVE",
         "origin_phase": "STUDY2_D",
         "state": "TRACKED"
