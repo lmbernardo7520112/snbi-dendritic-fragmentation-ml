@@ -1,0 +1,100 @@
+"""Integration custody only: exact pread for historical TRAIN GOLD/BG rows."""
+import hashlib
+import json
+import os
+from pathlib import Path
+import stat
+import subprocess
+from datetime import datetime, timezone
+
+BASE = Path('.bootstrap-test-tmp/study2d-integration')
+C = Path('artifacts/evidence/STUDY2_C_BENCHMARK')
+HEAD = 'c715df53d5dc08815235f010c07616deef7bbb4a'
+ROW_BYTES = 8450
+
+def sha(b):
+    return hashlib.sha256(b).hexdigest()
+
+def text(name):
+    p=Path(name)
+    assert not any(q.is_symlink() for q in (p,*p.parents))
+    b=p.read_bytes()
+    assert b == subprocess.check_output(['git','show',HEAD+':'+str(p)])
+    return json.loads(b)
+
+def main():
+    assert subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip()==HEAD
+    output=BASE/'TRAIN_CUSTODY.json'
+    assert not output.exists()
+    s=text(C/'SPLIT_MANIFEST.json')
+    bg=text(C/'BACKGROUND_ARTIFACTS.json')
+    train=[r for r in s['samples'] if r['split']=='TRAIN' and r['tier'] in {'GOLD','BACKGROUND'}]
+    assert len(train)==10907 and len({r['group_id'] for r in train})==64
+    assert sum(r['label']==1 for r in train)==3858
+    groups={g['group_id']:g for g in s['groups'] if g['split']=='TRAIN'}
+    bm=next(m for m in bg['manifests'] if m['artifacts'][0]['path']=='data/derived/study2c/cachetrain_dev.bin')
+    br={r['sample_id']:r for r in bm['rows'] if r['split']=='TRAIN'}
+    assert len(br)==7049
+    records=[]
+    for row in train:
+        assert groups[row['group_id']]['label']==row['label']
+        assert row['tier']==('GOLD' if row['label']==1 else 'BACKGROUND')
+        if row['label']==1:
+            source=row
+            path='data/derived/study2b/multimodal_patches_uint8.bin'
+            index=row['positive_row_index']; expected_size=139425000
+        else:
+            source=br[row['sample_id']]
+            assert all(source[k]==v for k,v in row.items())
+            assert source['shape']==[2,65,65] and source['dtype']=='uint8'
+            path=source['cache_path']; index=source['cache_row_index']; expected_size=73827650
+            assert path=='data/derived/study2c/cachetrain_dev.bin'
+        assert type(index) is int and index>=0 and (index+1)*ROW_BYTES<=expected_size
+        records.append({'sample_id':row['sample_id'],'group_id':row['group_id'],'split':'TRAIN',
+            'tier':row['tier'],'label':row['label'],'path':path,'row_index':index,'offset':index*ROW_BYTES,
+            'shape':[2,65,65],'dtype':'uint8','expected_size':expected_size,
+            **{k:source[k] for k in ('pair_sha256','structural_patch_sha256','solutal_patch_sha256')}})
+    assert len({(r['path'],r['row_index']) for r in records})==10907
+    # Receipt prevents silently repeating even an integration-only byte pass.
+    receipt=BASE/'TRAIN_CUSTODY_RECEIPT.json'
+    with receipt.open('x') as f:
+        json.dump({'created_at_utc':datetime.now(timezone.utc).isoformat(),'scope':'OPAQUE_TRAIN_ROWS_ONLY','head':HEAD},f)
+        f.flush(); os.fsync(f.fileno())
+    descriptors={}; counters={'container_opens':0,'pread_calls':0,'bytes_read':0,'rows_authenticated':0}
+    snapshots={}
+    try:
+        for row in records:
+            path=row['path']
+            if path not in descriptors:
+                p=Path(path)
+                assert not any(q.is_symlink() for q in (p,*p.parents))
+                fd=os.open(path,os.O_RDONLY|os.O_NOFOLLOW|os.O_NONBLOCK)
+                descriptors[path]=fd; counters['container_opens']+=1
+                st=os.fstat(fd)
+                assert stat.S_ISREG(st.st_mode) and st.st_size==row['expected_size']
+                snapshots[path]=(st.st_dev,st.st_ino,st.st_size,st.st_mtime_ns,st.st_ctime_ns)
+            counters['pread_calls']+=1
+            b=os.pread(descriptors[path],ROW_BYTES,row['offset']); counters['bytes_read']+=len(b)
+            assert len(b)==ROW_BYTES
+            assert sha(b)==row['pair_sha256']
+            assert sha(b[:4225])==row['structural_patch_sha256']
+            assert sha(b[4225:])==row['solutal_patch_sha256']
+            counters['rows_authenticated']+=1
+        for path,fd in descriptors.items():
+            st=os.fstat(fd)
+            assert snapshots[path]==(st.st_dev,st.st_ino,st.st_size,st.st_mtime_ns,st.st_ctime_ns)
+    finally:
+        for fd in descriptors.values(): os.close(fd)
+    restricted=[a for m in bg['manifests'] for a in m['artifacts']]
+    result={'status':'PASS','head':HEAD,'scope':'MATERIAL_TRAIN_ONLY_DOCUMENTARY_DEV_TEST',
+        'counters':counters,'TRAIN_GOLD_ROWS':3858,'TRAIN_BG_ROWS':7049,'TRAIN_GROUPS':64,
+        'DEV_ROWS_READ':0,'TEST_ROWS_READ':0,'TEST_CACHE_ROWS_READ':0,'TEST_FEATURES_COMPUTED':0,
+        'EXPERIMENTAL_SOURCE_OPENS':0,'FFMPEG_RUNS':0,'ML_RUNS':0,
+        'restricted_cache_historical_records':restricted,
+        'restricted_cache_current_bytes_authenticated':False,
+        'access_records':records,'no_full_container_scan':True,'features_or_arrays_materialized':False,
+        'limits':'Application-instrumented exact pread byte ranges; no universal syscall monitor. Non-TRAIN metadata was read from existing committed manifests; payload bytes only TRAIN.'}
+    with output.open('x') as f: json.dump(result,f,indent=2); f.write('\n')
+    print(json.dumps({k:v for k,v in result.items() if k not in {'access_records','restricted_cache_historical_records'}}))
+
+if __name__=='__main__': main()

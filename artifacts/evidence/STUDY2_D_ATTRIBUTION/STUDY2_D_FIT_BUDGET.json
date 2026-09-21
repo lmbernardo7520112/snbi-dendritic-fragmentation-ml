@@ -1,0 +1,10 @@
+{
+  "part_a_distinct_fits": 84,
+  "part_b_additional_distinct_fits": 12,
+  "part_c_additional_distinct_fits": 4,
+  "total_distinct_rf_fits": 100,
+  "conceptual_fit_reuses": 8,
+  "scientific_invocations": 1,
+  "retries": 0,
+  "evaluation_split": "HISTORICAL_TRAIN_CV_VALIDATION_ONLY"
+}

@@ -1,0 +1,351 @@
+{
+  "levels": {
+    "GROUP_EQUAL": {
+      "fit_ids": [
+        "B-f0-DALL",
+        "B-f1-DALL",
+        "B-f2-DALL",
+        "B-f3-DALL"
+      ],
+      "global": {
+        "mean": 0.7189698985429366,
+        "median": 0.7099240012260378,
+        "standard_deviation": 0.035758052789810514,
+        "std_ddof": 0,
+        "min": 0.6802306464581779,
+        "max": 0.7758009452614929,
+        "n_fits": 4
+      },
+      "per_acquisition": {
+        "bottom_up_anti_parallel": {
+          "mean": 0.7170036563014826,
+          "median": 0.6963584882233245,
+          "standard_deviation": 0.06741932765046764,
+          "std_ddof": 0,
+          "min": 0.6472742478494985,
+          "max": 0.828023400909783,
+          "n_fits": 4
+        },
+        "top_down_parallel": {
+          "mean": 0.7248686252672987,
+          "median": 0.7312505775977375,
+          "standard_deviation": 0.0782369739086019,
+          "std_ddof": 0,
+          "min": 0.6191335783166225,
+          "max": 0.8178397675570972,
+          "n_fits": 4
+        }
+      },
+      "secondary_statistics": {
+        "observation_balanced_accuracy": {
+          "mean": 0.7431229437943027,
+          "median": 0.74156837541004,
+          "standard_deviation": 0.034054743141752095,
+          "std_ddof": 0,
+          "min": 0.6967899685950488,
+          "max": 0.7925650557620818,
+          "n_fits": 4
+        },
+        "observation_accuracy": {
+          "mean": 0.7623910956667251,
+          "median": 0.7690929577020886,
+          "standard_deviation": 0.03423613092159011,
+          "std_ddof": 0,
+          "min": 0.7154263813478122,
+          "max": 0.7959520859149112,
+          "n_fits": 4
+        },
+        "observation_precision": {
+          "mean": 0.6549092068640616,
+          "median": 0.6356168753009148,
+          "standard_deviation": 0.07447892306763808,
+          "std_ddof": 0,
+          "min": 0.5733558178752108,
+          "max": 0.775047258979206,
+          "n_fits": 4
+        },
+        "observation_recall": {
+          "mean": 0.6897364651153126,
+          "median": 0.6965112697299938,
+          "standard_deviation": 0.06970426720597313,
+          "std_ddof": 0,
+          "min": 0.6038415366146459,
+          "max": 0.7620817843866171,
+          "n_fits": 4
+        },
+        "observation_f1": {
+          "mean": 0.6700779357535327,
+          "median": 0.6538129902634069,
+          "standard_deviation": 0.0635422860344044,
+          "std_ddof": 0,
+          "min": 0.6041759218125278,
+          "max": 0.7685098406747891,
+          "n_fits": 4
+        },
+        "positive_group_macro_recall": {
+          "mean": 0.5896144644769898,
+          "median": 0.595700581953249,
+          "standard_deviation": 0.09636097918141732,
+          "std_ddof": 0,
+          "min": 0.4528426758492758,
+          "max": 0.7142140181521854,
+          "n_fits": 4
+        },
+        "negative_group_macro_specificity": {
+          "mean": 0.8483253326088834,
+          "median": 0.8600937534235134,
+          "standard_deviation": 0.054047730977361215,
+          "std_ddof": 0,
+          "min": 0.7654952065214271,
+          "max": 0.90761861706708,
+          "n_fits": 4
+        }
+      }
+    },
+    "OBSERVATION_EQUAL": {
+      "fit_ids": [
+        "C-f0-OBSERVATION_EQUAL",
+        "C-f1-OBSERVATION_EQUAL",
+        "C-f2-OBSERVATION_EQUAL",
+        "C-f3-OBSERVATION_EQUAL"
+      ],
+      "global": {
+        "mean": 0.7335568007189566,
+        "median": 0.7365498706578624,
+        "standard_deviation": 0.04067682580079503,
+        "std_ddof": 0,
+        "min": 0.6842569833739632,
+        "max": 0.7768704781861382,
+        "n_fits": 4
+      },
+      "per_acquisition": {
+        "bottom_up_anti_parallel": {
+          "mean": 0.7329155432445047,
+          "median": 0.7286111974472682,
+          "standard_deviation": 0.06360082696163272,
+          "std_ddof": 0,
+          "min": 0.6494003218621509,
+          "max": 0.8250394562213312,
+          "n_fits": 4
+        },
+        "top_down_parallel": {
+          "mean": 0.7354805731423121,
+          "median": 0.7345534673382944,
+          "standard_deviation": 0.08298347400100857,
+          "std_ddof": 0,
+          "min": 0.6323635440805593,
+          "max": 0.8404518138121003,
+          "n_fits": 4
+        }
+      },
+      "secondary_statistics": {
+        "observation_balanced_accuracy": {
+          "mean": 0.7494916522445072,
+          "median": 0.7446333103491747,
+          "standard_deviation": 0.038051638396182655,
+          "std_ddof": 0,
+          "min": 0.7009862336328393,
+          "max": 0.8077137546468401,
+          "n_fits": 4
+        },
+        "observation_accuracy": {
+          "mean": 0.7656659589289522,
+          "median": 0.7679159911830926,
+          "standard_deviation": 0.03946804478139993,
+          "std_ddof": 0,
+          "min": 0.7176620887895241,
+          "max": 0.8091697645600991,
+          "n_fits": 4
+        },
+        "observation_precision": {
+          "mean": 0.65541958946141,
+          "median": 0.6331074985105115,
+          "standard_deviation": 0.07799293998309414,
+          "std_ddof": 0,
+          "min": 0.575353871773522,
+          "max": 0.7801094890510949,
+          "n_fits": 4
+        },
+        "observation_recall": {
+          "mean": 0.7093560802709804,
+          "median": 0.7146846387525758,
+          "standard_deviation": 0.07937012591412455,
+          "std_ddof": 0,
+          "min": 0.6134453781512605,
+          "max": 0.7946096654275093,
+          "n_fits": 4
+        },
+        "observation_f1": {
+          "mean": 0.6788951248480831,
+          "median": 0.6592012106710387,
+          "standard_deviation": 0.06783212318840105,
+          "std_ddof": 0,
+          "min": 0.6098852603706972,
+          "max": 0.787292817679558,
+          "n_fits": 4
+        },
+        "positive_group_macro_recall": {
+          "mean": 0.6213063759219668,
+          "median": 0.6508209163563798,
+          "standard_deviation": 0.09869197696135452,
+          "std_ddof": 0,
+          "min": 0.45890705436271917,
+          "max": 0.7246766166123886,
+          "n_fits": 4
+        },
+        "negative_group_macro_specificity": {
+          "mean": 0.8458072255159463,
+          "median": 0.8550768032723668,
+          "standard_deviation": 0.05562200928809825,
+          "std_ddof": 0,
+          "min": 0.7634683831338442,
+          "max": 0.9096069123852073,
+          "n_fits": 4
+        }
+      }
+    }
+  },
+  "contrast": {
+    "global": {
+      "mean": -0.014586902176019961,
+      "median": -0.0036413835100628233,
+      "standard_deviation": 0.020471807835583895,
+      "std_ddof": 0,
+      "min": -0.04999530875930891,
+      "max": -0.001069532924645289,
+      "n_fits": 4,
+      "mean_paired_delta": -0.014586902176019961,
+      "median_paired_delta": -0.0036413835100628233,
+      "positive_delta_count": 0,
+      "zero_delta_count": 0,
+      "negative_delta_count": 4,
+      "paired_deltas": [
+        {
+          "fold": 0,
+          "replicate": null,
+          "reference_fit_id": "B-f0-DALL",
+          "comparison_fit_id": "C-f0-OBSERVATION_EQUAL",
+          "delta": -0.003256430104340291
+        },
+        {
+          "fold": 1,
+          "replicate": null,
+          "reference_fit_id": "B-f1-DALL",
+          "comparison_fit_id": "C-f1-OBSERVATION_EQUAL",
+          "delta": -0.004026336915785356
+        },
+        {
+          "fold": 2,
+          "replicate": null,
+          "reference_fit_id": "B-f2-DALL",
+          "comparison_fit_id": "C-f2-OBSERVATION_EQUAL",
+          "delta": -0.001069532924645289
+        },
+        {
+          "fold": 3,
+          "replicate": null,
+          "reference_fit_id": "B-f3-DALL",
+          "comparison_fit_id": "C-f3-OBSERVATION_EQUAL",
+          "delta": -0.04999530875930891
+        }
+      ],
+      "n_pairs": 4
+    },
+    "per_acquisition": {
+      "bottom_up_anti_parallel": {
+        "mean": -0.01591188694302209,
+        "median": -0.0037542147665646786,
+        "standard_deviation": 0.025125573889606626,
+        "std_ddof": 0,
+        "min": -0.05912306292741076,
+        "max": 0.002983944688451756,
+        "n_fits": 4,
+        "mean_paired_delta": -0.01591188694302209,
+        "median_paired_delta": -0.0037542147665646786,
+        "positive_delta_count": 1,
+        "zero_delta_count": 0,
+        "negative_delta_count": 3,
+        "paired_deltas": [
+          {
+            "fold": 0,
+            "replicate": null,
+            "reference_fit_id": "B-f0-DALL",
+            "comparison_fit_id": "C-f0-OBSERVATION_EQUAL",
+            "delta": -0.005382355520476945
+          },
+          {
+            "fold": 1,
+            "replicate": null,
+            "reference_fit_id": "B-f1-DALL",
+            "comparison_fit_id": "C-f1-OBSERVATION_EQUAL",
+            "delta": -0.0021260740126524125
+          },
+          {
+            "fold": 2,
+            "replicate": null,
+            "reference_fit_id": "B-f2-DALL",
+            "comparison_fit_id": "C-f2-OBSERVATION_EQUAL",
+            "delta": 0.002983944688451756
+          },
+          {
+            "fold": 3,
+            "replicate": null,
+            "reference_fit_id": "B-f3-DALL",
+            "comparison_fit_id": "C-f3-OBSERVATION_EQUAL",
+            "delta": -0.05912306292741076
+          }
+        ],
+        "n_pairs": 4
+      },
+      "top_down_parallel": {
+        "mean": -0.010611947875013433,
+        "median": -0.011478545694560305,
+        "standard_deviation": 0.009222833808333263,
+        "std_ddof": 0,
+        "min": -0.022612046255003126,
+        "max": 0.003121346144070003,
+        "n_fits": 4,
+        "mean_paired_delta": -0.010611947875013433,
+        "median_paired_delta": -0.011478545694560305,
+        "positive_delta_count": 1,
+        "zero_delta_count": 0,
+        "negative_delta_count": 3,
+        "paired_deltas": [
+          {
+            "fold": 0,
+            "replicate": null,
+            "reference_fit_id": "B-f0-DALL",
+            "comparison_fit_id": "C-f0-OBSERVATION_EQUAL",
+            "delta": 0.003121346144070003
+          },
+          {
+            "fold": 1,
+            "replicate": null,
+            "reference_fit_id": "B-f1-DALL",
+            "comparison_fit_id": "C-f1-OBSERVATION_EQUAL",
+            "delta": -0.009727125625183852
+          },
+          {
+            "fold": 2,
+            "replicate": null,
+            "reference_fit_id": "B-f2-DALL",
+            "comparison_fit_id": "C-f2-OBSERVATION_EQUAL",
+            "delta": -0.013229965763936757
+          },
+          {
+            "fold": 3,
+            "replicate": null,
+            "reference_fit_id": "B-f3-DALL",
+            "comparison_fit_id": "C-f3-OBSERVATION_EQUAL",
+            "delta": -0.022612046255003126
+          }
+        ],
+        "n_pairs": 4
+      }
+    }
+  },
+  "new_distinct_fits": 4,
+  "reused_results": 4,
+  "descriptor": "NO_GROUP_EQUAL_BENEFIT",
+  "descriptor_contrast": "GROUP_EQUAL_MINUS_OBSERVATION_EQUAL"
+}

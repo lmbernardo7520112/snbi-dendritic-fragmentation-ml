@@ -1,0 +1,401 @@
+"""Independent post-terminal arithmetic audit. Standard library, JSON only.
+
+No project import, scorer invocation, inference, fit, planner or binary input.
+"""
+from collections import Counter, defaultdict
+from datetime import datetime, timezone
+import hashlib
+import json
+import math
+import os
+from pathlib import Path
+import statistics
+
+ROOT = Path(__file__).absolute().parents[2]
+E = ROOT / "artifacts/evidence/STUDY2_D_ATTRIBUTION"
+REPAIR = "8c6221da3d03a498158d812be5c08848c37c2247"
+ORIGINAL = "21400de67d21901aeb8e5abac528689fc39169fa"
+FOLD_SHA = "85edac3d7da06994d7b16c4fa50e2aeb806abd7743a1d471842f54fdcf049ef2"
+ACQ = ("bottom_up_anti_parallel", "top_down_parallel")
+ALLOWED = {
+    "terminal-state.json", "results.json", "EXECUTION_RECEIPT.json", "IO_AUDIT.json",
+    "METHOD_FREEZE.json", "STUDY2_D_ATTRIBUTION_DESIGN.json", "TRAIN_INPUT_MANIFEST.json",
+    "MODEL_CONTRACT.json", "FIT_RESULTS.json", "GROUP_DIVERSITY_RESULTS.json",
+    "TEMPORAL_DENSITY_RESULTS.json", "GROUP_WEIGHTING_RESULTS.json", "ATTRIBUTION_SUMMARY.json",
+    "RESULTS_TABLES.md",
+}
+RF = {"bootstrap": True, "ccp_alpha": 0.0, "class_weight": None, "criterion": "gini",
+      "max_depth": None, "max_features": "sqrt", "max_leaf_nodes": None,
+      "max_samples": None, "min_impurity_decrease": 0.0, "min_samples_leaf": 1,
+      "min_samples_split": 2, "min_weight_fraction_leaf": 0.0, "monotonic_cst": None,
+      "n_estimators": 100, "n_jobs": None, "oob_score": False, "random_state": 42,
+      "verbose": 0, "warm_start": False}
+READS, CHECKS, FIT_AUDITS = {}, [], []
+TOL = 1e-12
+
+
+def require(value, message):
+    if not value:
+        raise AssertionError(message)
+
+
+def sha(value):
+    return hashlib.sha256(value).hexdigest()
+
+
+def canonical_sha(value):
+    return sha(json.dumps(value, sort_keys=True, separators=(",", ":"),
+                          ensure_ascii=True, allow_nan=False).encode())
+
+
+def exact(a, b):
+    if type(a) is not type(b):
+        return False
+    if isinstance(a, dict):
+        return a.keys() == b.keys() and all(exact(a[k], b[k]) for k in a)
+    if isinstance(a, list):
+        return len(a) == len(b) and all(exact(x, y) for x, y in zip(a, b))
+    return a == b
+
+
+def compare(actual, expected, location):
+    if isinstance(expected, dict):
+        require(type(actual) is dict and set(expected) <= set(actual), location + ": missing keys")
+        for key, value in expected.items():
+            compare(actual[key], value, location + "/" + str(key))
+    elif isinstance(expected, list):
+        require(type(actual) is list and len(actual) == len(expected), location + ": length/type")
+        for i, (a, b) in enumerate(zip(actual, expected)):
+            compare(a, b, location + "/" + str(i))
+    elif type(expected) is float:
+        require(type(actual) in (int, float) and math.isfinite(actual)
+                and abs(actual - expected) <= TOL, location + ": numeric mismatch")
+    else:
+        require(exact(actual, expected), location + ": exact mismatch")
+
+
+def read(name, json_document=True):
+    require(name in ALLOWED, "outside fixed documentary allowlist")
+    path = E / name
+    require(not path.is_symlink(), "symlink input forbidden")
+    data = path.read_bytes()
+    text = data.decode("utf-8")
+    READS[name] = {"sha256": sha(data), "bytes": len(data)}
+    return json.loads(text) if json_document else text
+
+
+def checked(name):
+    CHECKS.append({"id": name, "status": "PASS"})
+
+
+def metrics(rows, predictions):
+    """Direct contingency arithmetic, group means and tie-to-zero majority."""
+    require(rows and len(rows) == len(predictions), "rows/predictions length")
+    cells = [[0, 0], [0, 0]]
+    grouped = defaultdict(list)
+    for row, pred in zip(rows, predictions):
+        require(type(row["label"]) is int and type(pred) is int
+                and row["label"] in (0, 1) and pred in (0, 1), "binary typed labels/predictions")
+        require(row["split"] == "TRAIN" and (row["label"], row["tier"]) in
+                {(0, "BACKGROUND"), (1, "GOLD")}, "forbidden evaluation row")
+        cells[row["label"]][pred] += 1
+        grouped[row["group_id"]].append((row, pred))
+    tn, fp = cells[0]
+    fn, tp = cells[1]
+    require(tn + fp and tp + fn, "both classes required")
+    observation = {
+        "balanced_accuracy": 0.5 * (tp / (tp + fn) + tn / (tn + fp)),
+        "accuracy": (tp + tn) / len(rows), "precision": tp / (tp + fp) if tp + fp else 0.0,
+        "recall": tp / (tp + fn), "specificity": tn / (tn + fp),
+        "f1": 2 * tp / (2 * tp + fp + fn) if 2 * tp + fp + fn else 0.0,
+        "confusion_matrix": cells, "tn": tn, "fp": fp, "fn": fn, "tp": tp,
+        "class_order": [0, 1],
+    }
+    rates, majorities, details = {0: [], 1: []}, {0: [], 1: []}, []
+    for gid in sorted(grouped):
+        pairs = grouped[gid]
+        signatures = {(r["label"], r["acquisition_id"], r["split"]) for r, _ in pairs}
+        require(len(signatures) == 1, "group crosses class/acquisition/split")
+        label, acquisition, split = signatures.pop()
+        n = len(pairs)
+        correct = sum(pred == label for _, pred in pairs)
+        positive = sum(pred for _, pred in pairs)
+        rate = correct / n
+        majority = int(2 * positive > n)
+        rates[label].append(rate)
+        majorities[label].append(int(majority == label))
+        details.append({"group_id": gid, "label": label, "acquisition_id": acquisition, "split": split,
+                        "observation_count": n, "correct_count": correct, "positive_predictions": positive,
+                        "correct_fraction": rate, "site_recall": rate if label else None,
+                        "track_specificity": rate if not label else None, "majority_vote_prediction": majority})
+    sensitivity = math.fsum(rates[1]) / len(rates[1])
+    specificity = math.fsum(rates[0]) / len(rates[0])
+    gmba = (sensitivity + specificity) / 2
+    return {"primary_gmba": gmba, "primary": gmba, "gmba": gmba,
+            "positive_group_macro_recall": sensitivity, "negative_group_macro_specificity": specificity,
+            "majority_vote_group_balanced_accuracy": 0.5 * (
+                math.fsum(majorities[1]) / len(majorities[1]) + math.fsum(majorities[0]) / len(majorities[0])),
+            "majority_vote_tie_rule": "PREDICT_CLASS_0", "observation": observation, "group_details": details,
+            "counts": {"observations": len(rows), "positive_groups": len(rates[1]),
+                       "background_groups": len(rates[0]), "positive_observations": tp + fn,
+                       "background_observations": tn + fp}}
+
+
+def complete_metrics(rows, predictions):
+    result = metrics(rows, predictions)
+    result["per_acquisition"] = {}
+    for acq in ACQ:
+        indices = [i for i, row in enumerate(rows) if row["acquisition_id"] == acq]
+        result["per_acquisition"][acq] = metrics([rows[i] for i in indices], [predictions[i] for i in indices])
+    result["metric_semantics"] = "GOLD_AND_BACKGROUND_EVALUATION"
+    return result
+
+
+def stats(values):
+    mean = math.fsum(values) / len(values)
+    return {"mean": mean, "median": statistics.median(values),
+            "standard_deviation": math.sqrt(math.fsum((v - mean) ** 2 for v in values) / len(values)),
+            "std_ddof": 0, "min": min(values), "max": max(values), "n_fits": len(values)}
+
+
+def audit(terminal):
+    require(terminal["STUDY2_D"] == "PASS" and terminal["STATE"] == "CLOSED_CONSUMED", "complete terminal required")
+    result, fit_file = read("results.json"), read("FIT_RESULTS.json")
+    design, manifest = read("STUDY2_D_ATTRIBUTION_DESIGN.json"), read("TRAIN_INPUT_MANIFEST.json")
+    contract, freeze = read("MODEL_CONTRACT.json"), read("METHOD_FREEZE.json")
+    receipt, io = read("EXECUTION_RECEIPT.json"), read("IO_AUDIT.json")
+    require(freeze["parent_method_freeze_sha"] == ORIGINAL and freeze["scientific_method_changed"] is False, "original freeze identity")
+    for name in ("STUDY2_D_ATTRIBUTION_DESIGN.json", "TRAIN_INPUT_MANIFEST.json", "MODEL_CONTRACT.json"):
+        key = "artifacts/evidence/STUDY2_D_ATTRIBUTION/" + name
+        require(READS[name]["sha256"] == freeze["files"][key], "frozen document changed: " + name)
+    require(design["design_sha256"] == canonical_sha({k: v for k, v in design.items() if k != "design_sha256"}), "design hash")
+    require(design["allowed_rows_sha256"] == canonical_sha(design["rows"]), "row hash")
+    require(canonical_sha(design["cv_fold_by_group"]) == FOLD_SHA, "historical fold hash")
+    require(exact(contract["rf_parameters"], RF) and len(RF) == 19, "RF contract")
+    require(result["method_freeze_sha"] == fit_file["method_freeze_sha"] == receipt["method_freeze_sha"] == REPAIR, "repair SHA")
+    require(fit_file["execution_receipt_sha256"] == READS["EXECUTION_RECEIPT.json"]["sha256"], "receipt binding")
+    require(receipt["attempt"] == 1 and receipt["DEV_AUTHORIZED"] is False and receipt["TEST_AUTHORIZED"] is False, "receipt limits")
+    require(receipt["design_sha256"] == READS["STUDY2_D_ATTRIBUTION_DESIGN.json"]["sha256"]
+            and receipt["input_manifest_sha256"] == READS["TRAIN_INPUT_MANIFEST.json"]["sha256"], "receipt hashes")
+    checked("FROZEN_DOCUMENTS_AND_RECEIPT_BINDINGS")
+
+    rows = design["rows"]
+    by_id = {r["sample_id"]: r for r in rows}
+    folds = design["cv_fold_by_group"]
+    require(len(rows) == len(by_id) == 10907 and len(folds) == 64, "TRAIN row/group budget")
+    require(Counter(r["tier"] for r in rows) == {"GOLD": 3858, "BACKGROUND": 7049}, "TRAIN tiers")
+    require({r["split"] for r in rows} == {"TRAIN"}, "nonTRAIN split")
+    require(exact([{k: v for k, v in r.items() if k != "storage"} for r in manifest["rows"]], rows), "storage manifest differs")
+    specs, records = design["fits"], fit_file["results_by_fit_id"]
+    require(Counter(s["part"] for s in specs) == {"A": 84, "B": 12, "C": 4}, "fit parts")
+    require(len(specs) == len(records) == 100 and list(records) == [s["fit_id"] for s in specs], "fit count/order")
+    require(fit_file["failure"] is None and fit_file["completed_metric_records"] == 100, "completion ledger")
+    expected_reuses = {(f"B-f{f}-D1", f"A-f{f}-K24-all") for f in range(4)}
+    expected_reuses |= {(f"C-f{f}-GROUP_EQUAL", f"B-f{f}-DALL") for f in range(4)}
+    require(len(design["reuse_refs"]) == 8 and {(r["reuse_id"], r["source_fit_id"]) for r in design["reuse_refs"]} == expected_reuses
+            and all(r["fit_required"] is False for r in design["reuse_refs"]), "eight reuse refs")
+    checked("EXACT_TRAIN_MEMBERSHIP_100_FITS_EIGHT_REUSES")
+    recalculated = {}
+    for spec in specs:
+        fid = spec["fit_id"]
+        record = records[fid]
+        require(record["fit_id"] == fid and exact(record["spec"], spec), fid + ": immutable spec")
+        train_ids, valid_ids = spec["train_sample_ids"], spec["validation_sample_ids"]
+        require(len(train_ids) == len(set(train_ids)) and set(train_ids) <= set(by_id), fid + ": train ID allowlist")
+        expected_valid = [r["sample_id"] for r in rows if folds[r["group_id"]] == spec["fold"]]
+        require(valid_ids == expected_valid == design["validation_sample_ids_by_fold"][str(spec["fold"])], fid + ": validation membership")
+        require(canonical_sha(train_ids) == spec["training_sample_ids_sha256"]
+                and canonical_sha(valid_ids) == spec["validation_sample_ids_sha256"], fid + ": membership hashes")
+        train = [by_id[i] for i in train_ids]
+        valid = [by_id[i] for i in valid_ids]
+        tg, vg = {r["group_id"] for r in train}, {r["group_id"] for r in valid}
+        require(not tg & vg and len(vg) == 16 and all(folds[g] != spec["fold"] for g in tg), fid + ": leakage")
+        require(sorted(tg) == spec["training_group_ids"], fid + ": training groups")
+        prediction = record["predictions"]
+        require(prediction["sample_ids"] == valid_ids and len(prediction["predictions"]) == len(valid_ids), fid + ": prediction IDs")
+        require(exact(prediction["classes"], [0, 1]) and prediction["decision_scores"] is None
+                and prediction["score_semantics"] == "LIBRARY_CLASS_PROBABILITIES", fid + ": probability semantics")
+        probs = prediction["probabilities"]
+        require(type(probs) is list and len(probs) == len(valid_ids), fid + ": probability length")
+        for pred, proba in zip(prediction["predictions"], probs):
+            require(type(pred) is int and pred in (0, 1), fid + ": binary prediction")
+            require(type(proba) is list and len(proba) == 2 and all(type(v) in (float, int)
+                    and math.isfinite(v) and 0 <= v <= 1 for v in proba) and abs(math.fsum(proba) - 1) <= TOL, fid + ": invalid probability")
+            require(pred == int(proba[1] > proba[0]), fid + ": probability argmax/tie")
+        metric = complete_metrics(valid, prediction["predictions"])
+        compare(record["metrics"], metric, fid + "/metrics")
+        recalculated[fid] = metric
+        gn = Counter(r["group_id"] for r in train)
+        require(spec["weighting"] in {"GROUP_EQUAL", "OBSERVATION_EQUAL"}, fid + ": weighting")
+        weights = [1.0 if spec["weighting"] == "OBSERVATION_EQUAL" else 1.0 / gn[r["group_id"]] for r in train]
+        compare(spec["effective_rows_per_group"], dict(gn), fid + "/effective rows")
+        group_labels = {r["group_id"]: r["label"] for r in train}
+        meta = record["fit"]
+        require(exact(meta["estimator_parameters"], RF), fid + ": exact19RFparams")
+        compare(meta, {"family": "RF_REFERENCE", "fit_calls": 1, "training_rows": len(train),
+            "training_group_count": len(gn), "training_groups": sorted(gn), "weighting": spec["weighting"],
+            "effective_rows_per_group": dict(gn),
+            "weight_sum_by_group": {g: math.fsum(w for r, w in zip(train, weights) if r["group_id"] == g) for g in gn},
+            "weight_sum_by_class": {str(c): math.fsum(w for r, w in zip(train, weights) if r["label"] == c) for c in (0, 1)},
+            "group_counts_by_class": {str(c): sum(y == c for y in group_labels.values()) for c in (0, 1)},
+            "sample_counts_by_class": {str(c): sum(r["label"] == c for r in train) for c in (0, 1)},
+            "training_tier_counts": dict(Counter(r["tier"] for r in train)), "training_splits": ["TRAIN"],
+            "input_feature_dimension": 20, "random_seed": 42, "hyperparameter_search": False, "convergence": "PASS"}, fid + "/fit")
+        require(type(meta["runtime_seconds"]) in (int, float) and math.isfinite(meta["runtime_seconds"])
+                and meta["runtime_seconds"] >= 0, fid + ": runtime")
+        FIT_AUDITS.append({"fit_id": fid, "training_rows": len(train), "validation_rows": len(valid),
+                           "primary_gmba": metric["primary_gmba"], "observation": metric["observation"],
+                           "status": "PASS"})
+    checked("ALL100_PREDICTIONS_CONFUSIONS_GROUP_AND_ACQUISITION_METRICS")
+    checked("ALL100_RF_PARAMETERS_AND_TRAINING_WEIGHT_METADATA")
+
+    pa, pb, pc = read("GROUP_DIVERSITY_RESULTS.json"), read("TEMPORAL_DENSITY_RESULTS.json"), read("GROUP_WEIGHTING_RESULTS.json")
+    summary = read("ATTRIBUTION_SUMMARY.json")
+    spec_by_id = {s["fit_id"]: s for s in specs}
+
+    def score(fid, acquisition=None):
+        m = recalculated[fid]
+        return m["primary_gmba"] if acquisition is None else m["per_acquisition"][acquisition]["primary_gmba"]
+
+    def level(observed, ids, label):
+        require(observed["fit_ids"] == ids, label + ": fit reuse IDs")
+        compare(observed["global"], stats([score(i) for i in ids]), label + "/global")
+        for acq in ACQ:
+            compare(observed["per_acquisition"][acq], stats([score(i, acq) for i in ids]), label + "/" + acq)
+        for metric in ("balanced_accuracy", "accuracy", "precision", "recall", "f1"):
+            compare(observed["secondary_statistics"]["observation_" + metric],
+                    stats([recalculated[i]["observation"][metric] for i in ids]), label + "/" + metric)
+        for metric in ("positive_group_macro_recall", "negative_group_macro_specificity"):
+            compare(observed["secondary_statistics"][metric], stats([recalculated[i][metric] for i in ids]), label + "/" + metric)
+
+    def contrast(observed, pairs, label):
+        global_values = None
+        for acq in (None, *ACQ):
+            values = [score(high, acq) - score(low, acq) for high, low in pairs]
+            expected = stats(values)
+            expected.update(mean_paired_delta=expected["mean"], median_paired_delta=expected["median"], n_pairs=len(values),
+                positive_delta_count=sum(v > 0 for v in values), zero_delta_count=sum(v == 0 for v in values),
+                negative_delta_count=sum(v < 0 for v in values),
+                paired_deltas=[{"fold": spec_by_id[low]["fold"], "replicate": spec_by_id[low]["replicate"],
+                                "reference_fit_id": high, "comparison_fit_id": low, "delta": delta}
+                               for (high, low), delta in zip(pairs, values)])
+            compare(observed["global"] if acq is None else observed["per_acquisition"][acq], expected, label + "/" + str(acq))
+            if acq is None:
+                global_values = values
+        return global_values
+
+    def descriptor(values, threshold, weighting=False):
+        if math.fsum(values) / len(values) <= 0:
+            return "NO_GROUP_EQUAL_BENEFIT" if weighting else "NON_POSITIVE"
+        if sum(v > 0 for v in values) >= threshold:
+            return "CONSISTENT_GROUP_EQUAL_BENEFIT" if weighting else "CONSISTENT_POSITIVE"
+        return "MIXED_GROUP_EQUAL_BENEFIT" if weighting else "MIXED_POSITIVE"
+
+    da = {}
+    for k in (4, 8, 12, 17, 24):
+        ids = [s["fit_id"] for s in specs if s["part"] == "A" and s["K"] == k]
+        level(pa["levels"][str(k)], ids, "A/K" + str(k))
+        if k < 24:
+            pairs = [(f"A-f{f}-K24-all", f"A-f{f}-K{k}-r{r}") for f in range(4) for r in range(1, 6)]
+            da[k] = contrast(pa["contrasts"][f"K24_MINUS_K{k}"], pairs, f"A/K24minus{k}")
+    di = {d: [f"A-f{f}-K24-all" if d == "D1" else f"B-f{f}-{d}" for f in range(4)] for d in ("D1", "D3", "D5", "DALL")}
+    db = {}
+    for d, ids in di.items():
+        level(pb["levels"][d], ids, "B/" + d)
+    for high, low in (("D3", "D1"), ("D5", "D1"), ("DALL", "D1"), ("DALL", "D5")):
+        key = high + "_MINUS_" + low
+        db[key] = contrast(pb["contrasts"][key], list(zip(di[high], di[low])), "B/" + key)
+    oi = [f"C-f{f}-OBSERVATION_EQUAL" for f in range(4)]
+    level(pc["levels"]["GROUP_EQUAL"], di["DALL"], "C/GROUP_EQUAL")
+    level(pc["levels"]["OBSERVATION_EQUAL"], oi, "C/OBSERVATION_EQUAL")
+    dc = contrast(pc["contrast"], list(zip(di["DALL"], oi)), "C/delta")
+    ad, bd, cd = descriptor(da[17], 15), descriptor(db["DALL_MINUS_D1"], 3), descriptor(dc, 3, True)
+    compare(pa, {"descriptor": ad, "descriptor_contrast": "K24_MINUS_K17", "distinct_fits": 84}, "PartA")
+    compare(pb, {"descriptor": bd, "descriptor_contrast": "DALL_MINUS_D1", "conceptual_fits": 16,
+                 "new_distinct_fits": 12, "reused_results": 4}, "PartB")
+    compare(pc, {"descriptor": cd, "descriptor_contrast": "GROUP_EQUAL_MINUS_OBSERVATION_EQUAL",
+                 "new_distinct_fits": 4, "reused_results": 4}, "PartC")
+    fields = {"GROUP_DIVERSITY_DESCRIPTOR": ad, "GROUP_DIVERSITY_DELTA_K24_K17": math.fsum(da[17]) / 20,
+              "GROUP_DIVERSITY_DELTA_K24_K4": math.fsum(da[4]) / 20, "TEMPORAL_DENSITY_DESCRIPTOR": bd,
+              "TEMPORAL_DENSITY_DELTA_ALL_1": math.fsum(db["DALL_MINUS_D1"]) / 4,
+              "GROUP_WEIGHTING_DESCRIPTOR": cd, "GROUP_WEIGHTING_DELTA": math.fsum(dc) / 4}
+    compare(summary, {**fields, "DISTINCT_RF_FITS": 100, "MODEL_SELECTION_REOPENED": False,
+            "analysis_kind": "POST_HOC_CONTROLLED_ATTRIBUTION_ANALYSIS", "effects_are_additive": False,
+            "p_values_computed": False}, "attribution")
+    compare(terminal, fields, "terminal descriptors")
+    checked("SUMMARY_POPULATION_STATS_ALL_PAIRED_CONTRASTS_SIGNS_AND_DESCRIPTORS")
+
+    counts = {"scientific_invocations": 1, "feature_extractions_started": 1, "feature_extractions_completed": 1,
+              "feature_rows": 10907, "fits_started": 100, "fits_completed": 100, "validation_evaluations": 100,
+              "part_a_fits": 84, "part_b_fits": 12, "part_c_fits": 4, "result_reuses": 8, "retries": 0}
+    require(exact(result["counts"], counts) and exact(result["terminal"], terminal), "execution counts")
+    require(result["failure"] is None and result["status"] == "PASS", "execution result")
+    for key in ("DEV_GROUPS_READ", "TEST_GROUPS_READ", "DEV_ROWS_READ", "TEST_ROWS_READ",
+                "TEST_CACHE_ROWS_READ", "TEST_FEATURES_COMPUTED", "EXPERIMENTAL_SOURCE_OPENS", "FFMPEG_RUNS"):
+        require(type(terminal[key]) is int and terminal[key] == 0 and type(io[key]) is int and io[key] == 0, "firewall " + key)
+    require(io["rows_read"] == io["rows_authenticated"] == 10907 and io["bytes_read"] == 10907 * 8450, "I/O accounting")
+    require(io["TRAIN_GOLD_ROWS_READ"] == 3858 and io["TRAIN_BG_ROWS_READ"] == 7049
+            and io["TRAIN_GROUPS_READ"] == 64 and io["all_descriptors_closed"] is True, "TRAIN totals")
+    require(io["receipt_sha256"] == READS["EXECUTION_RECEIPT.json"]["sha256"], "I/O receipt")
+    require(len(io["access_records"]) == len(rows), "I/O rows")
+    for row, item in zip(manifest["rows"], io["access_records"]):
+        require(item["sample_id"] == row["sample_id"] and item["group_id"] == row["group_id"] and item["bytes"] == 8450, "I/O identity")
+        for key in ("path", "offset", "pair_sha256", "structural_patch_sha256", "solutal_patch_sha256"):
+            require(exact(item[key], row["storage"][key]), "I/O binding " + key)
+    checked("RECORDED_EXECUTION_AND_TRAIN_ONLY_IO_ACCOUNTING")
+    table = read("RESULTS_TABLES.md", json_document=False)
+    expected_table = [(f"K{k}/D1/GROUP_EQUAL", pa["levels"][str(k)]["global"]["mean"]) for k in (4, 8, 12, 17, 24)]
+    expected_table += [(f"K24/{d}/GROUP_EQUAL", pb["levels"][d]["global"]["mean"]) for d in ("D3", "D5", "DALL")]
+    expected_table += [("K24/DALL/OBSERVATION_EQUAL", pc["levels"]["OBSERVATION_EQUAL"]["global"]["mean"])]
+    lines = [line for line in table.splitlines() if line.startswith("| K")]
+    require(len(lines) == 9, "nine bridge table rows")
+    for line, (condition, mean) in zip(lines, expected_table):
+        cells = [c.strip() for c in line.strip("|").split("|")]
+        require(cells[0] == condition, "bridge table order")
+        compare(float(cells[-1]), mean, "bridge mean " + condition)
+    checked("NINE_CONDITION_BRIDGE_TABLE")
+    return fields
+
+
+def exclusive_write(path, data):
+    fd = os.open(path, os.O_WRONLY | os.O_CREAT | os.O_EXCL | os.O_NOFOLLOW, 0o644)
+    with os.fdopen(fd, "wb") as stream:
+        stream.write(data)
+        stream.flush()
+        os.fsync(stream.fileno())
+
+
+def main():
+    require((E / "terminal-state.json").is_file(), "terminal absent: do not run before closure")
+    terminal = read("terminal-state.json")
+    require(terminal.get("STATE") == "CLOSED_CONSUMED", "terminal not consumed")
+    output, script_copy = E / "POST_RUN_METRIC_AUDIT.json", E / "postrun-metric-audit.py.txt"
+    require(not output.exists() and not script_copy.exists(), "audit already exists; no overwrite")
+    report = {"status": "RUNNING", "review_kind": "INDEPENDENT_STDLIB_POST_RUN_DOCUMENTARY_ARITHMETIC",
+              "created_at_utc": datetime.now(timezone.utc).isoformat(),
+              "scientific_method_freeze_original": ORIGINAL, "operational_repair_sha": REPAIR}
+    try:
+        report["terminal_fields_recomputed"] = audit(terminal)
+        report["status"] = "PASS"
+    except Exception as exc:
+        report["status"] = "FAIL"
+        report["failure"] = type(exc).__name__ + ": " + str(exc)
+    script = Path(__file__).read_bytes()
+    report.update(checks=CHECKS, per_fit_audit=FIT_AUDITS, documentary_inputs=READS,
+                  completed_fit_arithmetic_audits=len(FIT_AUDITS), numeric_absolute_tolerance=TOL,
+                  descriptor_sign_tolerance=0, script_sha256=sha(script), scientific_runs_in_this_audit=0,
+                  fits_in_this_audit=0, feature_extractions_in_this_audit=0,
+                  source_or_cache_opens_in_this_audit=0, imports_from_scientific_project=0,
+                  limits=["Prediction arithmetic is independently recomputed; model inference is not repeated.",
+                          "I/O checks authenticate documentary accounting, not universal syscall telemetry.",
+                          "Repeated CV comparisons are not independent experiments; no significance test or causal additive decomposition.",
+                          "No source/container/cache/index/features or historical DEV/TEST prediction is read."])
+    exclusive_write(script_copy, script)
+    exclusive_write(output, (json.dumps(report, ensure_ascii=False, indent=2, allow_nan=False) + "\n").encode())
+    print(json.dumps({"status": report["status"], "checks": len(CHECKS), "fit_audits": len(FIT_AUDITS),
+                      "output": str(output.relative_to(ROOT)), "failure": report.get("failure")}))
+    return 0 if report["status"] == "PASS" else 1
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

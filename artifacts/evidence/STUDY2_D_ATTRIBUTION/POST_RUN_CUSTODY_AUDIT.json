@@ -1,0 +1,111 @@
+{
+  "status": "PASS",
+  "scope": "POST_RUN_TEXT_AND_GIT_ONLY",
+  "scientific_command_exit_code": 0,
+  "head_sha": "8c6221da3d03a498158d812be5c08848c37c2247",
+  "receipt_at_utc": "2026-09-21T21:00:10.897031+00:00",
+  "last_required_ci_completed_at_utc": "2026-09-21T20:58:12Z",
+  "ci_jobs": 10,
+  "ci_steps": 110,
+  "original_frozen_blobs": 52,
+  "current_frozen_texts_and_blobs": 72,
+  "rows_authenticated_in_run": 10907,
+  "row_level_records_verified": 10907,
+  "by_path": {
+    "data/derived/study2b/multimodal_patches_uint8.bin": {
+      "rows": 3858,
+      "bytes": 32600100,
+      "min_offset": 12751050,
+      "max_offset": 139416550
+    },
+    "data/derived/study2c/cachetrain_dev.bin": {
+      "rows": 7049,
+      "bytes": 59564050,
+      "min_offset": 0,
+      "max_offset": 59555600
+    }
+  },
+  "scientific_IO": {
+    "state": "COMPLETED",
+    "container_opens": 2,
+    "row_attempts": 10907,
+    "rows_read": 10907,
+    "bytes_read": 92164150,
+    "rows_authenticated": 10907,
+    "TRAIN_GOLD_ROWS_READ": 3858,
+    "TRAIN_BG_ROWS_READ": 7049,
+    "DEV_GROUPS_READ": 0,
+    "TEST_GROUPS_READ": 0,
+    "DEV_ROWS_READ": 0,
+    "TEST_ROWS_READ": 0,
+    "TEST_CACHE_ROWS_READ": 0,
+    "TEST_FEATURES_COMPUTED": 0,
+    "EXPERIMENTAL_SOURCE_OPENS": 0,
+    "FFMPEG_RUNS": 0,
+    "ESM1_OPENS": 0,
+    "ESM2_OPENS": 0,
+    "ESM3_OPENS": 0,
+    "ESM4_OPENS": 0,
+    "ESM5_OPENS": 0,
+    "ESM6_OPENS": 0,
+    "pixels_written": 0,
+    "full_container_hashes": 0,
+    "scope": "Only exact authorized TRAIN row pread ranges; no whole-container authentication or memory mapping.",
+    "TRAIN_GROUPS_READ": 64,
+    "receipt_sha256": "f58427843a954243581c767a783ccf1db38baed73d2d1e51712924e92aa1ac3a",
+    "all_descriptors_closed": true
+  },
+  "integration_IO_separate": {
+    "container_opens": 2,
+    "pread_calls": 10907,
+    "bytes_read": 92164150,
+    "rows_authenticated": 10907
+  },
+  "audit_experimental_opens": 0,
+  "audit_experimental_bytes": 0,
+  "audit_fits": 0,
+  "audit_frames_decoded": 0,
+  "evidence_reads": {
+    "artifacts/evidence/STUDY2_D_ATTRIBUTION/TRAIN_INPUT_MANIFEST.json": {
+      "bytes": 23823085,
+      "sha256": "6ae3eee8e2fbe2c2e5de55eb84cb35b0ca7b561d37a8426b11125870003de531"
+    },
+    "artifacts/evidence/STUDY2_D_ATTRIBUTION/IO_AUDIT.json": {
+      "bytes": 6284589,
+      "sha256": "c592489249b94dadd917f2d15965a07c1cc01566d8490c3af3ce064bf41e6bc6"
+    },
+    "artifacts/evidence/STUDY2_D_ATTRIBUTION/EXECUTION_RECEIPT.json": {
+      "bytes": 1766,
+      "sha256": "f58427843a954243581c767a783ccf1db38baed73d2d1e51712924e92aa1ac3a"
+    },
+    "artifacts/evidence/STUDY2_D_ATTRIBUTION/ACTUAL_PREFLIGHT.json": {
+      "bytes": 991,
+      "sha256": "487449265860e2fcaaa74fbc9a734dc88eb7392bf68e85eca050a3d5f6ebde33"
+    },
+    "artifacts/evidence/STUDY2_D_ATTRIBUTION/results.json": {
+      "bytes": 2106,
+      "sha256": "3830980f3a9519e648b1c6260c71969bcb2361a46117f7bf0ec7d0cc30c5370c"
+    },
+    "artifacts/evidence/STUDY2_D_ATTRIBUTION/terminal-state.json": {
+      "bytes": 1349,
+      "sha256": "80f81bbf42f2993f509448468b2e4940bb39a8256dcbc10b9861e71a1732aab5"
+    },
+    "artifacts/evidence/STUDY2_D_ATTRIBUTION/CI_PROOF.json": {
+      "bytes": 29646,
+      "sha256": "3fb63d774b0afccf22bc4c4102bd1e5b268e7bdf49320d90253df2c5f67b357c"
+    },
+    "artifacts/evidence/STUDY2_D_ATTRIBUTION/INTEGRATION_TRAIN_CUSTODY.json": {
+      "bytes": 8350739,
+      "sha256": "c886b8815ad13df77750cf61e62ecf191c415af469597ba9849d82cca961d153"
+    },
+    "artifacts/evidence/STUDY2_D_ATTRIBUTION/METHOD_FREEZE_ORIGINAL.json": {
+      "bytes": 7126,
+      "sha256": "fed89b1a102f944cf944bc365618521f8a954fce8abd71ad6f6437fcc55bc554"
+    },
+    "artifacts/evidence/STUDY2_D_ATTRIBUTION/METHOD_FREEZE.json": {
+      "bytes": 10279,
+      "sha256": "2679b2256b62b655f083afaf230a7935f96d7d1df590ccea50b45e88a181d81b"
+    }
+  },
+  "limits": "Recorded exact application pread ranges and frozen control flow; no universal syscall or kernel readahead monitoring. Non-TRAIN split metadata was available from previously committed manifests. No DEV/TEST payload, TEST cache index or historical predictions opened in this audit."
+}

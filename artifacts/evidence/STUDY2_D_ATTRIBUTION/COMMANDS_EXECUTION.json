@@ -1,0 +1,170 @@
+{
+  "scope": "Bounded command and evidence inventory, not universal syscall monitoring",
+  "scientific_invocations": 1,
+  "scientific_fits": 100,
+  "synthetic_RF_fits_current_repair": 2,
+  "synthetic_RF_fits_local_cumulative_including_original_preparation": 8,
+  "earlier_integration_and_preparation": "INTEGRATION_AUDIT.json; SYNTHETIC_TESTS_ORIGINAL.json; original frozen logs",
+  "entries": [
+    {
+      "phase": "compatibility repair",
+      "command": "python3 -S -B -m unittest discover -s tests -v",
+      "count": 2,
+      "environment": "PYTHONPATH=src; controlled repository TMPDIR",
+      "exit_codes": [
+        0,
+        0
+      ],
+      "scope": "stdlib tests; no experimental data",
+      "evidence": [
+        "repair-stdlib-pre-review.log.txt",
+        "repair-stdlib.log.txt"
+      ],
+      "note": "Second pass after final literal BASE assertion; 1139tests/271skips both."
+    },
+    {
+      "phase": "compatibility repair",
+      "command": "PYTHONPATH=src .venv/bin/python -B .bootstrap-test-tmp/study2d-integration/run_repair_synthetic.py",
+      "count": 1,
+      "exit_code": 0,
+      "synthetic_RF_fits": 2,
+      "scientific_fits": 0,
+      "evidence": [
+        "repair-synthetic-script.py.txt",
+        "repair-dedicated.log.txt",
+        "SYNTHETIC_TESTS.json"
+      ]
+    },
+    {
+      "phase": "preparatory repair check",
+      "command": "PYTHONPATH=src .venv/bin/python -B .bootstrap-test-tmp/study2d-integration/repair_preparatory.py",
+      "count": 1,
+      "exit_code": 0,
+      "scientific_runs": 0,
+      "evidence": [
+        "CI_REPAIR_PREPARATORY_PREFLIGHT.json"
+      ],
+      "note": "Real text, future Git/CI explicitly mocked; no receipt."
+    },
+    {
+      "phase": "local guards",
+      "command": "python3 -B scripts/check_phase_scope.py; python3 -B scripts/check_ti2_checksums.py",
+      "command_text_is_two_separate_invocations": true,
+      "exit_codes": [
+        0,
+        0
+      ],
+      "evidence": "staging scope check:776entries,146Python;95historicalchecksums",
+      "experimental_bytes": 0
+    },
+    {
+      "phase": "bounded staged diff verification",
+      "command": "git diff --cached --check",
+      "exit_code": 2,
+      "failure_reason": "Preserved raw diff context whitespace and original GitHub log whitespace only",
+      "resolution": "All other24stagedpaths passed scoped check; exact raw evidence bytes retained; no scientific edits"
+    },
+    {
+      "phase": "network read",
+      "command": "git ls-remote origin refs/heads/feat/study2d-data-centric-bridge",
+      "sandbox_exit_code": 128,
+      "reason": "Could not resolve host: github.com",
+      "approved_same_command_exit_code": 0,
+      "remote_sha": "21400de67d21901aeb8e5abac528689fc39169fa"
+    },
+    {
+      "phase": "authorized Git",
+      "command": "git add --pathspec-from-file=.bootstrap-test-tmp/study2d-integration/repair-paths.nul --pathspec-file-nul",
+      "exit_code": 0,
+      "paths": 27,
+      "approval": "exact staging after default sandbox .git protection"
+    },
+    {
+      "phase": "authorized Git",
+      "command": "git commit -m \"test(study2d): repair stdlib CI compatibility\"",
+      "exit_code": 0,
+      "sha": "8c6221da3d03a498158d812be5c08848c37c2247",
+      "parent": "21400de67d21901aeb8e5abac528689fc39169fa"
+    },
+    {
+      "phase": "authorized Git",
+      "command": "git push origin HEAD:refs/heads/feat/study2d-data-centric-bridge",
+      "exit_code": 0,
+      "mode": "fast-forward",
+      "evidence": "CI_PROOF.json: exact repair SHA,10jobs110stepsSUCCESS"
+    },
+    {
+      "phase": "real preflight",
+      "command": "PYTHONPATH=src .venv/bin/python -B scripts/run_study2d.py preflight",
+      "count": 1,
+      "exit_code": 0,
+      "receipt_created": false,
+      "evidence": [
+        "ACTUAL_PREFLIGHT.json"
+      ]
+    },
+    {
+      "phase": "scientific execution",
+      "command": "PYTHONPATH=src TMPDIR=<repository>/.bootstrap-test-tmp .venv/bin/python -B scripts/run_study2d.py run",
+      "count": 1,
+      "exit_code": 0,
+      "scientific_fits": 100,
+      "new_feature_extractions": 1,
+      "feature_rows": 10907,
+      "retries": 0,
+      "evidence": [
+        "scientific-run.log.txt",
+        "EXECUTION_RECEIPT.json",
+        "results.json",
+        "terminal-state.json"
+      ],
+      "note": "CLI repeated real preflight internally before exclusive receipt."
+    },
+    {
+      "phase": "post-run custody",
+      "command": "python3 -B .bootstrap-test-tmp/study2d-integration/postrun_custody_audit.py",
+      "count": 1,
+      "exit_code": 0,
+      "experimental_opens": 0,
+      "fits": 0,
+      "evidence": [
+        "POST_RUN_CUSTODY_AUDIT.json",
+        "postrun-custody-audit.py.txt"
+      ]
+    },
+    {
+      "phase": "post-run arithmetic",
+      "command": "python3 -B .bootstrap-test-tmp/study2d-integration/postrun_metric_audit.py",
+      "count": 1,
+      "exit_code": 0,
+      "experimental_opens": 0,
+      "fits": 0,
+      "evidence": [
+        "POST_RUN_METRIC_AUDIT.json",
+        "postrun-metric-audit.py.txt"
+      ],
+      "preparation_incident": "One tool-call JavaScript syntax rejection before script creation; not an auditor invocation or scientific command."
+    },
+    {
+      "phase": "editorial report",
+      "command": "python3 -B .bootstrap-test-tmp/study2d-integration/write_execution_report.py",
+      "count": 1,
+      "exit_code": 0,
+      "experimental_opens": 0,
+      "fits": 0,
+      "evidence": [
+        "EXECUTION_REPORT.md"
+      ]
+    },
+    {
+      "phase": "documentary report table check",
+      "first_exit_code": 1,
+      "reason": "Ad hoc item counter also counted numeric K-table cells",
+      "correction": "Anchored exact numbered-item regex; verified ordered items1..38",
+      "final_exit_code": 0,
+      "scientific_outputs_changed": false
+    }
+  ],
+  "further_scientific_execution_authorized": false,
+  "final_documentary_commit_and_CI": "Effective SHA/remote conclusion reported only after those operations; no success anticipated here."
+}

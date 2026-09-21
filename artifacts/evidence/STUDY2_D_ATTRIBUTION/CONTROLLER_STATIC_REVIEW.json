@@ -1,0 +1,148 @@
+{
+  "status": "PASS",
+  "review_kind": "BOUNDED_STATIC_READ_ONLY_REVIEW_OF_CONTROLLER_AND_IO",
+  "created_at_utc": "2026-09-21T19:33:36.677488+00:00",
+  "reviewer": "separate AI collaborator; author of D design/models, not author of reviewed controller/I/O",
+  "reviewed_files": {
+    "src/snbi_fragmentation/study2d_execution.py": {
+      "sha256": "8a39dfc822e4d17cfb2bdc5973d2f96bc46a4d365dc87bec81ce5100f5b5e505",
+      "bytes": 26122
+    },
+    "src/snbi_fragmentation/study2d_io.py": {
+      "sha256": "ecefa6d4a5ddc6dcd584b4328bbe8fa134019865f11d854a9571794de162a9f2",
+      "bytes": 7922
+    },
+    "scripts/run_study2d.py": {
+      "sha256": "f4192f004112bd75b7d676707e963e2ee1140c121fb48777b28e41e44b33ef49",
+      "bytes": 730
+    },
+    "tests/test_study2d_execution.py": {
+      "sha256": "78ced74c885268918fe2329f1b5f6ed1081fbcd7312cfe5d93d1399be846de25",
+      "bytes": 23835
+    },
+    "tests/test_study2d_io.py": {
+      "sha256": "646643212450447b428d44f2649f710ddf040f7f1510e49b0124ff90214342bf",
+      "bytes": 7946
+    },
+    ".github/workflows/study2d-synthetic.yml": {
+      "sha256": "28be6de82bf92aa3b5a900db8cf2e541384e9f148da8ed9a7845cef26df374c6",
+      "bytes": 2309
+    },
+    "configs/authority/study2d.json": {
+      "sha256": "37a6a2a3aae0dd2c1282590a33fa2d405eed1aca8339483c8dba93c97564d13b",
+      "bytes": 871
+    },
+    "artifacts/evidence/STUDY2_D_ATTRIBUTION/STUDY2_D_PROTOCOL.md": {
+      "sha256": "fb6d659fb6a171e042ad482d42e00b808b105fd8a0ec655f593e609ef7709aa5",
+      "bytes": 6763
+    },
+    "artifacts/evidence/STUDY2_D_ATTRIBUTION/CACHE_CUSTODY_AUTHORIZATION.md": {
+      "sha256": "296d4bdca8f4781a3e6201629b91d64e0ae414e5f23c81c4d29f25bff1017520",
+      "bytes": 1485
+    }
+  },
+  "checks": [
+    {
+      "id": "AUTHORITY_AND_PRIOR_CLOSURE",
+      "status": "PASS",
+      "basis": "authority() enforces branch, exact typed authority, author attachment hash and C PASS/CLOSED_CONSUMED/TEST_CONSUMED; no historical authority is reactivated."
+    },
+    {
+      "id": "TEXT_ONLY_PREFLIGHT",
+      "status": "PASS",
+      "basis": "preflight reads allowed textual files and Git, verifies direct method-commit parent, historical preservation, installed pins, frozen bytes/hash/Git blobs and current model/budget/row contracts. It constructs no reader or receipt."
+    },
+    {
+      "id": "NO_HISTORICAL_DEV_TEST_PREDICTIONS",
+      "status": "PASS",
+      "basis": "read_text has a dedicated C filename allowlist excluding results and DEV/TEST prediction/metric bundles; data paths are denied. Split membership metadata is permitted solely for exclusion and custody."
+    },
+    {
+      "id": "EXACT_CI_ADMISSION",
+      "status": "PASS",
+      "basis": "verify_ci requires exact method SHA, ten unique named jobs, completed success for runs/jobs/all steps; skipped/pending/duplicate/missing evidence fails."
+    },
+    {
+      "id": "DURABLE_SINGLE_RECEIPT",
+      "status": "PASS",
+      "basis": "EXECUTION_RECEIPT is written with O_EXCL, O_NOFOLLOW and file/directory fsync before construction or load of the reader. Existing receipt/results/terminal prevent another attempt."
+    },
+    {
+      "id": "GRANT_BINDS_FULL_FROZEN_ROWS",
+      "status": "PASS",
+      "basis": "validate_inputs compares original rows by type/value/order; preflight also compares design rows to original C TRAIN GOLD/BACKGROUND rows. TrainAccessState grants once only for the exact complete storage-enriched manifest and receipt/head binding."
+    },
+    {
+      "id": "DIRECTED_TRAIN_IO",
+      "status": "PASS",
+      "basis": "validate_rows admits only exact TRAIN positive/GOLD or background/BACKGROUND identities and the two constant containers; checks offsets, row bounds, shape/dtype, three hashes, positive row provenance and no duplicate physical row before opening paths."
+    },
+    {
+      "id": "SOURCE_DEV_TEST_FIREWALL",
+      "status": "PASS",
+      "basis": "I/O uses exact 8450-byte os.pread ranges only; no MP4/ESM source, decoder, whole-file hash, mmap or TEST cache path is available. Shared TRAIN/DEV container opening authorizes only manifest TRAIN ranges."
+    },
+    {
+      "id": "PAYLOAD_AUTHENTICATION_AND_CLOSE",
+      "status": "PASS",
+      "basis": "Each complete row is authenticated against pair and two modality hashes before array assignment. Containers are opened once per path; fstat fingerprints checked at start/end; all descriptors close on normal completion or access exception."
+    },
+    {
+      "id": "ONE_FEATURE_EXTRACTION",
+      "status": "PASS",
+      "basis": "Controller materializes and authenticates all 10907 TRAIN rows, checks zero firewall counters, calls frozen extract_lbp20 once, retains TRAIN features in memory and then closes/discards input pairs; no feature cache or RF is persisted."
+    },
+    {
+      "id": "ACTUAL_FIT_EVENT_ACCOUNTING",
+      "status": "PASS",
+      "basis": "RF_FIT_START and RF_FIT_COMPLETE callbacks advance started/completed counters separately; prediction/scoring have later counters. A completed fit is retained in counts even if prediction fails; no retry path exists."
+    },
+    {
+      "id": "FROZEN_100_PLUS_EIGHT_REUSES",
+      "status": "PASS",
+      "basis": "Controller traverses only the frozen schedule, refuses duplicates/101st start, requires 84+12+4 completed fits and 100 validations, and obtains eight reference-only reuses from the frozen summaries without calling another learner."
+    },
+    {
+      "id": "SAME_VALIDATION_AND_PREREGISTERED_SUMMARY",
+      "status": "PASS",
+      "basis": "Model sees supplied training indices only; predictions accept no labels; held-out rows remain original TRAIN historical-CV groups. Original C metric_bundle is used. Summary must expose seven preregistered fields and nine-condition table; no DEV/TEST/model selection branch exists."
+    },
+    {
+      "id": "TERMINAL_FAILURE_COUNTERS",
+      "status": "PASS",
+      "basis": "Final controller now copies measured firewall counters from audit when present. The existing simulated violation test asserts terminal DEV_ROWS_READ=1 instead of falsely replacing it by zero."
+    }
+  ],
+  "findings": [
+    {
+      "id": "PREFREEZE_FAILURE_TERMINAL_COUNTER_OVERWRITE",
+      "initial_issue": "The initial terminal constructor reported fixed zero firewall counters even after an audit mismatch stopped execution; the synthetic firewall fixture supplied DEV_ROWS_READ=1.",
+      "status": "RESOLVED_BEFORE_FREEZE",
+      "resolution": "Root added terminal counter update from audit.get(key, 0), and extended the existing failure test to require DEV_ROWS_READ=1. Reviewed the resulting source and assertion statically; no test or fit was rerun by this reviewer.",
+      "science_changed": false
+    }
+  ],
+  "this_review": {
+    "source_or_container_payloads_opened": 0,
+    "cache_indexes_opened": 0,
+    "DEV_TEST_prediction_files_opened": 0,
+    "science_or_model_modules_imported": 0,
+    "planner_invocations": 0,
+    "feature_extractions": 0,
+    "model_fits": 0,
+    "tests_executed": 0,
+    "code_edits": 0,
+    "output": "artifacts/evidence/STUDY2_D_ATTRIBUTION/CONTROLLER_STATIC_REVIEW.json",
+    "auxiliary_occurrence": "One read-only request used nonexistent scripts/run_study2d_attribution.py; corrected to scripts/run_study2d.py without running either path."
+  },
+  "limits": [
+    "Static review establishes control-flow compatibility only; it is not proof of remote CI, a committed freeze or a successful scientific execution.",
+    "Actual frozen group/ranking/quantile plan verification is the separate parent stdlib audit; this review neither rebuilt nor reranked the real plan.",
+    "Canonical background row locators/hashes depend on the separately authenticated TRAIN_INPUT_MANIFEST and integration custody; this review did not read its original cache index or any payload.",
+    "Counters cover application-level opens and directed pread ranges, not universal syscall tracing or kernel page cache activity.",
+    "Historical split manifests contain documentary DEV/TEST membership; reading that text is distinct from materializing their group payloads or predictions.",
+    "Interrupted evidence writes can leave a consumed receipt with incomplete terminal output; the existing receipt still forbids a scientific retry.",
+    "The reviewed synthetic fixtures are mocked control-flow evidence. This reviewer did not independently rerun them during this static review."
+  ],
+  "material_blockers_remaining": []
+}

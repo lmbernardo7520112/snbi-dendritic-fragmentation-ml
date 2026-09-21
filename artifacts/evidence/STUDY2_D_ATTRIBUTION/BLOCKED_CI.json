@@ -1,0 +1,65 @@
+{
+  "status": "BLOCKED_CI",
+  "method_freeze_sha": "21400de67d21901aeb8e5abac528689fc39169fa",
+  "merge_C_sha": "ec97cb5041ef35d4f6c9a79b54d756d6fbee674f",
+  "local_remote_equal": true,
+  "ci_jobs": 10,
+  "job_conclusions": {
+    "success": 9,
+    "failure": 1
+  },
+  "ci_steps": 110,
+  "step_conclusions": {
+    "success": 108,
+    "failure": 1,
+    "skipped": 1
+  },
+  "failed_job": "deterministic-contracts",
+  "failed_run": 35649522192,
+  "failed_command": "PYTHONPATH=src python -S -B -m unittest discover -s tests -v",
+  "ci_test_summary": {
+    "tests": 1130,
+    "errors": 4,
+    "skipped_optional": 267,
+    "failures": 0,
+    "passed": 859
+  },
+  "errors": [
+    "test_exact_directed_reads_and_hashes",
+    "test_fingerprint_change_denied",
+    "test_hash_mismatch_closes",
+    "test_short_read_closes"
+  ],
+  "exception": "ModuleNotFoundError: No module named 'numpy'",
+  "cause": "Four new synthetic I/O tests invoke load requiring NumPy but lack an optional-dependency declaration under python -S. Dedicated pinned Study2-D profile passes all107 tests.",
+  "frozen_hashes_verified": 52,
+  "frozen_files_changed": false,
+  "SCIENTIFIC_STUDY2D_RUNS": 0,
+  "DISTINCT_RF_FITS": 0,
+  "FEATURE_EXTRACTIONS": 0,
+  "EXECUTION_RECEIPT_EXISTS": false,
+  "DEV_ROWS_READ": 0,
+  "TEST_ROWS_READ": 0,
+  "TEST_CACHE_ROWS_READ": 0,
+  "TEST_FEATURES_COMPUTED": 0,
+  "EXPERIMENTAL_SOURCE_OPENS": 0,
+  "FFMPEG_RUNS": 0,
+  "integration_custody": {
+    "TRAIN_directed_reads": 10907,
+    "TRAIN_bytes": 92164150,
+    "container_opens": 2,
+    "scientific_features": 0,
+    "scope": "Separate already-authorized material custody before C merge; not zeroed or repeated"
+  },
+  "TEST_STATE": "UNCHANGED_CONSUMED",
+  "blocked_by": "Author attachment section51: Se qualquer falha: STOP.",
+  "new_corrective_commit_authorized": false,
+  "ci_rerun_performed": false,
+  "git_tracked_and_index_clean": true,
+  "untracked_previous_academic_directory_preserved": true,
+  "CURRENT_AUTHORIZED_ACTIVITY": "NONE_AWAITING_AUTHOR_DECISION",
+  "proofs_sha256": {
+    "CI_BLOCKED_PROOF.json": "ed664b9d3a54597e8d18c14c01c09a8c2b57841249fa8ad9f852ccddd1f7f8d6",
+    "ci-blocked.log.txt": "f68f7fd1c54430dfea6685c1a1eb8bdc030443dab04f919bf06ad36fb5854d74"
+  }
+}

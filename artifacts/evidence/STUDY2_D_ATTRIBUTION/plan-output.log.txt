@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "rows": 10907,
+  "distinct_fits": 100,
+  "scientific_invocations": 0,
+  "experimental_opens": 0
+}

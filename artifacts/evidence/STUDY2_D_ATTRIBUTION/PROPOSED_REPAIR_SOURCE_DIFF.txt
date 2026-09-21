@@ -1,0 +1,51 @@
+--- a/tests/test_study2d_io.py
++++ b/tests/test_study2d_io.py
+@@ -1,6 +1,7 @@
+ """Synthetic directed-read/firewall contracts; never real experimental paths."""
+ from copy import deepcopy
+ import hashlib
++import importlib.util
+ import os
+ from pathlib import Path
+ import tempfile
+@@ -94,6 +95,8 @@
+         finally:
+             for c in reversed(contexts): c.stop()
+ 
++    @unittest.skipUnless(importlib.util.find_spec("numpy") is not None,
++                         "optional NumPy unavailable in stdlib profile")
+     def test_exact_directed_reads_and_hashes(self):
+         x,arr,calls,closed=self.execute_mocked()
+         self.assertEqual(arr.shape,(2,2,65,65)); self.assertEqual(str(arr.dtype),'uint8')
+@@ -105,12 +108,18 @@
+         self.assertTrue((arr[1]==17).all())
+         with self.assertRaises(io.TrainAccessError): x.load()
+ 
++    @unittest.skipUnless(importlib.util.find_spec("numpy") is not None,
++                         "optional NumPy unavailable in stdlib profile")
+     def test_short_read_closes(self):
+         with self.assertRaisesRegex(io.TrainAccessError,'short row'): self.execute_mocked(payloads=[b''])
+ 
++    @unittest.skipUnless(importlib.util.find_spec("numpy") is not None,
++                         "optional NumPy unavailable in stdlib profile")
+     def test_hash_mismatch_closes(self):
+         with self.assertRaisesRegex(io.TrainAccessError,'hash divergence'): self.execute_mocked(payloads=[bytes([1])*8450])
+ 
++    @unittest.skipUnless(importlib.util.find_spec("numpy") is not None,
++                         "optional NumPy unavailable in stdlib profile")
+     def test_fingerprint_change_denied(self):
+         with self.assertRaisesRegex(io.TrainAccessError,'changed during'): self.execute_mocked(fingerprint_change=True)
+ 
+--- a/src/snbi_fragmentation/study2d_execution.py
++++ b/src/snbi_fragmentation/study2d_execution.py
+@@ -262,7 +262,9 @@
+     authority(root)
+     require(shutil.disk_usage(root).free >= MIN_FREE + MAX_TEXT, "disk reserve insufficient")
+     head = git(root, "rev-parse", "HEAD")
+-    require(git(root, "rev-parse", "HEAD^") == BASE, "method freeze must directly follow C merge")
++    require(git(root, "rev-parse", "HEAD^") == "21400de67d21901aeb8e5abac528689fc39169fa"
++            and git(root, "rev-parse", "HEAD^^") == BASE,
++            "corrective freeze must directly follow the preserved original freeze and C merge")
+     preserved_baseline(root)
+     for line in read_text(root, "constraints-ti3c-cnn.txt").decode().splitlines():
+         name, version = line.split("==")

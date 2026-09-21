@@ -1,0 +1,63 @@
+name: study2d-synthetic-ci
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  study2d-synthetic-contracts:
+    runs-on: ubuntu-latest
+    env:
+      PYTHONPATH: src:tests:.
+      PYTHONDONTWRITEBYTECODE: "1"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - name: Enforce tracked-data guard
+        run: python3 -B scripts/check_repository_data.py
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: ""
+      - name: Install unchanged exact CPU dependency pins
+        run: >-
+          python -B -m pip --isolated install
+          --disable-pip-version-check --no-cache-dir
+          --only-binary=:all:
+          --extra-index-url https://download.pytorch.org/whl/cpu
+          -r requirements-ti3c-cnn.txt
+      - name: Enforce composed scope and unchanged historical custody
+        run: python -B scripts/check_phase_scope.py
+      - name: Require fixed RF and TRAIN-only attribution contracts
+        run: |
+          python -B - <<'PY'
+          import json
+          import unittest
+          from importlib.metadata import version
+          from pathlib import Path
+
+          for line in Path("constraints-ti3c-cnn.txt").read_text().splitlines():
+              name, expected = line.split("==")
+              if version(name) != expected:
+                  raise SystemExit("Dependency pin divergence: " + name)
+          proof = json.loads(Path("artifacts/evidence/STUDY2_D_ATTRIBUTION/SYNTHETIC_TESTS.json").read_text())
+          expected = proof["unique_test_count"]
+          if type(expected) is not int or expected <= 0:
+              raise SystemExit("Explicit frozen synthetic count required")
+          loader = unittest.TestLoader()
+          suite = loader.discover("tests", pattern="test_study2d*.py")
+          if loader.errors:
+              raise SystemExit("Synthetic discovery failed")
+          result = unittest.TextTestRunner(verbosity=2).run(suite)
+          passed = (
+              result.testsRun == expected and result.wasSuccessful()
+              and not result.skipped and not result.expectedFailures
+              and not result.unexpectedSuccesses
+          )
+          raise SystemExit(0 if passed else 1)
+          PY

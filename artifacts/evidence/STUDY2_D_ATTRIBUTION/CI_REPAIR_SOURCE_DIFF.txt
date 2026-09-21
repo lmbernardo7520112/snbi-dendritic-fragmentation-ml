@@ -1,0 +1,263 @@
+diff --git a/configs/governance/phase-scope-v1.json b/configs/governance/phase-scope-v1.json
+index 83622ab..26e0513 100644
+--- a/configs/governance/phase-scope-v1.json
++++ b/configs/governance/phase-scope-v1.json
+@@ -932,7 +932,7 @@
+       {
+         "path": "src/snbi_fragmentation/study2d_execution.py",
+         "git_mode": "100644",
+-        "blob_sha": "f6eb2d507ff6badbe1a5eb4121bc12af3c9cf71f",
++        "blob_sha": "1872a169d865adcc0b4a6fcf2b8ae6922e1f3eca",
+         "classification": "TI3_ACTIVE",
+         "origin_phase": "STUDY2_D",
+         "state": "TRACKED"
+@@ -964,7 +964,7 @@
+       {
+         "path": "tests/test_study2d_io.py",
+         "git_mode": "100644",
+-        "blob_sha": "6333c224da72b474b56feb09c17131e534538e52",
++        "blob_sha": "c0448e7864e9813262fe68f7d37d862230a97eed",
+         "classification": "TI3_ACTIVE",
+         "origin_phase": "STUDY2_D",
+         "state": "TRACKED"
+@@ -972,7 +972,7 @@
+       {
+         "path": "tests/test_study2d_execution.py",
+         "git_mode": "100644",
+-        "blob_sha": "bc76c9f814de54c6b94ad6ce0d59750c4b3a148b",
++        "blob_sha": "32a514e00134ff98f9ed806a0d565f8d2106e1a2",
+         "classification": "TI3_ACTIVE",
+         "origin_phase": "STUDY2_D",
+         "state": "TRACKED"
+diff --git a/src/snbi_fragmentation/study2d_execution.py b/src/snbi_fragmentation/study2d_execution.py
+index f6eb2d5..1872a16 100644
+--- a/src/snbi_fragmentation/study2d_execution.py
++++ b/src/snbi_fragmentation/study2d_execution.py
+@@ -20,6 +20,8 @@ E = "artifacts/evidence/STUDY2_D_ATTRIBUTION"
+ C = "artifacts/evidence/STUDY2_C_BENCHMARK"
+ AUTH = "configs/authority/study2d.json"
+ AUTH_SHA = "5b28d77ffdb964d4f421bec1378e2b0e35feb70afb79225ad6fe08273fe4ab93"
++METHOD_FREEZE_ORIGINAL = "21400de67d21901aeb8e5abac528689fc39169fa"
++REPAIR_AUTH_SHA = "1b2b0eea52ea81c6b411f2b624abf3b8519d0d0753750a41f4334536e36bc10c"
+ FOLD_SHA = "85edac3d7da06994d7b16c4fa50e2aeb806abd7743a1d471842f54fdcf049ef2"
+ MAX_TEXT = 268435456
+ MIN_FREE = 53687091200
+@@ -255,6 +257,53 @@ def validate_inputs(design, manifest):
+     return rows
+ 
+ 
++def verify_repair(root, head):
++    """Admit only the one authorized compatibility child; preserve original science."""
++    require(git(root, "rev-list", "--parents", "-n", "1", head).split()
++            == [head, METHOD_FREEZE_ORIGINAL]
++            and git(root, "rev-list", "--parents", "-n", "1", METHOD_FREEZE_ORIGINAL).split()
++            == [METHOD_FREEZE_ORIGINAL, BASE], "exact repair ancestry required; merges or further children forbidden")
++    require(git(root, "rev-parse", "HEAD^") == METHOD_FREEZE_ORIGINAL
++            and git(root, "rev-parse", "HEAD^^") == BASE, "repair parent/grandparent differ")
++    require(digest(read_text(root, E + "/CI_REPAIR_AUTHORIZATION.md")) == REPAIR_AUTH_SHA,
++            "repair authorization hash differs")
++    permitted_modifications = {"tests/test_study2d_io.py", "tests/test_study2d_execution.py",
++        "src/snbi_fragmentation/study2d_execution.py", "configs/governance/phase-scope-v1.json",
++        E + "/METHOD_FREEZE.json", E + "/SYNTHETIC_TESTS.json"}
++    proof = load(root, E + "/CI_REPAIR_DIFF.json")
++    declared = proof.get("allowed_changes", {})
++    require(proof.get("parent_method_freeze_sha") == METHOD_FREEZE_ORIGINAL
++            and proof.get("scientific_method_changed") is False, "repair diff declaration differs")
++    actual = {}
++    for line in git(root, "diff", "--name-status", "--no-renames", METHOD_FREEZE_ORIGINAL, head).splitlines():
++        status, name = line.split("\t")
++        require(name not in actual and (status == "M" and name in permitted_modifications
++                or status == "A" and name.startswith(E + "/") and PurePosixPath(name).suffix
++                in {".json", ".md", ".txt", ".sha256"}), "repair changed an unauthorized path")
++        actual[name] = status
++    require(exact(actual, declared) and {p for p, s in actual.items() if s == "M"}
++            == permitted_modifications, "repair diff differs from exact published allowlist")
++    for name in actual:
++        entry = git(root, "ls-tree", head, "--", name).split()
++        require(len(entry) == 4 and entry[0:2] == ["100644", "blob"], "repair mode/type changed")
++    original = json.loads(git_bytes(root, "show", METHOD_FREEZE_ORIGINAL + ":" + E + "/METHOD_FREEZE.json"))
++    for name, expected in original["files"].items():
++        require(digest(git_bytes(root, "show", METHOD_FREEZE_ORIGINAL + ":" + name)) == expected,
++                "original freeze blob differs")
++        if name not in permitted_modifications:
++            require(digest(read_text(root, name)) == expected
++                    and digest(git_bytes(root, "show", head + ":" + name)) == expected,
++                    "original scientific or historical contract changed: " + name)
++    operational = load(root, E + "/METHOD_FREEZE.json")
++    require(operational.get("parent_method_freeze_sha") == METHOD_FREEZE_ORIGINAL
++            and operational.get("scientific_method_changed") is False, "operational freeze provenance missing")
++    require({E + "/CI_REPAIR_AUTHORIZATION.md", E + "/CI_REPAIR_DIFF.json"}
++            <= set(operational["files"]), "repair proofs must be frozen")
++    return {"status": "PASS", "parent_method_freeze_sha": METHOD_FREEZE_ORIGINAL,
++            "grandparent_sha": BASE, "original_hashes_verified": len(original["files"]),
++            "repair_paths": len(actual), "scientific_method_changed": False}
++
++
+ def preflight(root):
+     """Textual checks only. Does not construct a corpus reader or create a receipt."""
+     for name in ("EXECUTION_RECEIPT.json", "FIT_RESULTS.json", "results.json", "terminal-state.json"):
+@@ -262,7 +311,7 @@ def preflight(root):
+     authority(root)
+     require(shutil.disk_usage(root).free >= MIN_FREE + MAX_TEXT, "disk reserve insufficient")
+     head = git(root, "rev-parse", "HEAD")
+-    require(git(root, "rev-parse", "HEAD^") == BASE, "method freeze must directly follow C merge")
++    repair = verify_repair(root, head)
+     preserved_baseline(root)
+     for line in read_text(root, "constraints-ti3c-cnn.txt").decode().splitlines():
+         name, version = line.split("==")
+@@ -298,7 +347,8 @@ def preflight(root):
+     jobs = verify_ci(load(root, E + "/CI_PROOF.json"), head)
+     return {"status": "PASS", "head_sha": head, "freeze_text_count": len(freeze["files"]),
+             "ci_jobs": jobs, "experimental_opens": 0, "receipt_created": False,
+-            "allowed_rows": len(expected_rows), "distinct_fits": 100}
++            "allowed_rows": len(expected_rows), "distinct_fits": 100, "repair": repair,
++            "method_freeze_original": METHOD_FREEZE_ORIGINAL, "ci_repair_sha": head}
+ 
+ 
+ class TrainAccessState:
+diff --git a/tests/test_study2d_execution.py b/tests/test_study2d_execution.py
+index bc76c9f..32a514e 100644
+--- a/tests/test_study2d_execution.py
++++ b/tests/test_study2d_execution.py
+@@ -392,6 +392,7 @@ class PreflightTests(TemporaryRoot):
+         stack=ExitStack();self.addCleanup(stack.close)
+         stack.enter_context(mock.patch.object(execution,'authority'))
+         stack.enter_context(mock.patch.object(execution,'preserved_baseline'))
++        stack.enter_context(mock.patch.object(execution,'verify_repair',return_value={'status':'PASS'}))
+         stack.enter_context(mock.patch.object(execution,'read_text',side_effect=lambda root,n:blobs[n]))
+         stack.enter_context(mock.patch.object(execution,'git',side_effect=git))
+         stack.enter_context(mock.patch.object(execution,'git_bytes',side_effect=git_bytes))
+@@ -427,5 +428,88 @@ class PreflightTests(TemporaryRoot):
+         authority.assert_not_called()
+ 
+ 
++class RepairAncestryTests(unittest.TestCase):
++    """Only the expressly authorized single compatibility child is admitted."""
++    def setUp(self):
++        self.original=execution.METHOD_FREEZE_ORIGINAL
++        self.parents=[HEAD,self.original]
++        self.original_parents=[self.original,execution.BASE]
++        self.parent,self.grandparent=self.original,execution.BASE
++        self.changes={p:'M' for p in ('tests/test_study2d_io.py','tests/test_study2d_execution.py',
++            'src/snbi_fragmentation/study2d_execution.py','configs/governance/phase-scope-v1.json',
++            execution.E+'/METHOD_FREEZE.json',execution.E+'/SYNTHETIC_TESTS.json')}
++        self.changes.update({execution.E+'/CI_REPAIR_AUTHORIZATION.md':'A',execution.E+'/CI_REPAIR_DIFF.json':'A'})
++        stable=execution.CODE[0]
++        original={'files':{stable:execution.digest(b'unchanged scientific method')}}
++        self.old={execution.E+'/METHOD_FREEZE.json':encoded(original),stable:b'unchanged scientific method'}
++        self.current={stable:self.old[stable],execution.E+'/CI_REPAIR_AUTHORIZATION.md':b'synthetic repair decision',
++            execution.E+'/METHOD_FREEZE.json':encoded({'parent_method_freeze_sha':self.original,
++                'scientific_method_changed':False,'files':{execution.E+'/CI_REPAIR_AUTHORIZATION.md':'x',
++                    execution.E+'/CI_REPAIR_DIFF.json':'y'}}),
++            execution.E+'/CI_REPAIR_DIFF.json':encoded({'parent_method_freeze_sha':self.original,
++                'scientific_method_changed':False,'allowed_changes':self.changes})}
++        self.stack=ExitStack();self.addCleanup(self.stack.close)
++        self.stack.enter_context(mock.patch.object(execution,'git',side_effect=self.git))
++        self.stack.enter_context(mock.patch.object(execution,'git_bytes',side_effect=self.git_bytes))
++        self.stack.enter_context(mock.patch.object(execution,'read_text',side_effect=lambda root,n:self.current[n]))
++        self.stack.enter_context(mock.patch.object(execution,'REPAIR_AUTH_SHA',execution.digest(b'synthetic repair decision')))
++
++    def git(self,root,*args):
++        if args[:4]==('rev-list','--parents','-n','1'):
++            return ' '.join(self.original_parents if args[4]==self.original else self.parents)
++        if args==('rev-parse','HEAD^'):return self.parent
++        if args==('rev-parse','HEAD^^'):return self.grandparent
++        if args[0]=='diff':return '\n'.join(s+'\t'+p for p,s in self.changes.items())
++        if args[0]=='ls-tree':return '100644 blob '+'a'*40+'\t'+args[-1]
++        raise AssertionError(args)
++
++    def git_bytes(self,root,*args):
++        revision,name=args[1].split(':',1)
++        return (self.old if revision==self.original else self.current)[name]
++
++    def verify(self):return execution.verify_repair(Path('/synthetic'),HEAD)
++
++    def test_exact_single_repair_chain_accepted(self):
++        result=self.verify();self.assertEqual(result['status'],'PASS')
++        self.assertEqual(result['parent_method_freeze_sha'],self.original)
++        self.assertFalse(result['scientific_method_changed'])
++
++    def test_wrong_parent_rejected(self):
++        self.parents=[HEAD,'b'*40]
++        with self.assertRaises(execution.Study2DError):self.verify()
++
++    def test_wrong_grandparent_rejected(self):
++        self.original_parents=[self.original,'b'*40]
++        with self.assertRaises(execution.Study2DError):self.verify()
++
++    def test_longer_ancestry_rejected(self):
++        self.parent='b'*40;self.parents=[HEAD,self.parent]
++        with self.assertRaises(execution.Study2DError):self.verify()
++
++    def test_unexpected_merge_rejected(self):
++        for target in ('parents','original_parents'):
++            old=getattr(self,target);setattr(self,target,old+['b'*40])
++            with self.subTest(target=target),self.assertRaises(execution.Study2DError):self.verify()
++            setattr(self,target,old)
++
++    def test_head_directly_on_base_rejected(self):
++        self.parents=[HEAD,execution.BASE];self.parent=execution.BASE
++        with self.assertRaises(execution.Study2DError):self.verify()
++        with self.assertRaises(execution.Study2DError):
++            execution.verify_repair(Path('/synthetic'),execution.BASE)
++
++    def test_second_repair_child_rejected(self):
++        self.parents=[HEAD,'c'*40];self.parent='c'*40;self.grandparent=self.original
++        with self.assertRaises(execution.Study2DError):self.verify()
++
++    def test_repair_diff_rejects_scientific_path(self):
++        self.changes[execution.CODE[0]]='M'
++        with self.assertRaises(execution.Study2DError):self.verify()
++
++    def test_original_scientific_hash_preserved(self):
++        self.current[execution.CODE[0]]=b'changed science'
++        with self.assertRaises(execution.Study2DError):self.verify()
++
++
+ if __name__=='__main__':
+     unittest.main()
+diff --git a/tests/test_study2d_io.py b/tests/test_study2d_io.py
+index 6333c22..c0448e7 100644
+--- a/tests/test_study2d_io.py
++++ b/tests/test_study2d_io.py
+@@ -1,6 +1,7 @@
+ """Synthetic directed-read/firewall contracts; never real experimental paths."""
+ from copy import deepcopy
+ import hashlib
++import importlib.util
+ import os
+ from pathlib import Path
+ import tempfile
+@@ -9,6 +10,8 @@ from unittest.mock import patch
+ 
+ from snbi_fragmentation import study2d_io as io
+ 
++NUMPY_AVAILABLE = importlib.util.find_spec("numpy") is not None
++
+ PAYLOADS=[bytes(8450),bytes([17])*8450]
+ def fixtures():
+     rows=[]
+@@ -94,6 +97,7 @@ class TrainIOTests(unittest.TestCase):
+         finally:
+             for c in reversed(contexts): c.stop()
+ 
++    @unittest.skipUnless(NUMPY_AVAILABLE, "optional NumPy unavailable; fully required by Study2-D scientific synthetic CI")
+     def test_exact_directed_reads_and_hashes(self):
+         x,arr,calls,closed=self.execute_mocked()
+         self.assertEqual(arr.shape,(2,2,65,65)); self.assertEqual(str(arr.dtype),'uint8')
+@@ -105,12 +109,15 @@ class TrainIOTests(unittest.TestCase):
+         self.assertTrue((arr[1]==17).all())
+         with self.assertRaises(io.TrainAccessError): x.load()
+ 
++    @unittest.skipUnless(NUMPY_AVAILABLE, "optional NumPy unavailable; fully required by Study2-D scientific synthetic CI")
+     def test_short_read_closes(self):
+         with self.assertRaisesRegex(io.TrainAccessError,'short row'): self.execute_mocked(payloads=[b''])
+ 
++    @unittest.skipUnless(NUMPY_AVAILABLE, "optional NumPy unavailable; fully required by Study2-D scientific synthetic CI")
+     def test_hash_mismatch_closes(self):
+         with self.assertRaisesRegex(io.TrainAccessError,'hash divergence'): self.execute_mocked(payloads=[bytes([1])*8450])
+ 
++    @unittest.skipUnless(NUMPY_AVAILABLE, "optional NumPy unavailable; fully required by Study2-D scientific synthetic CI")
+     def test_fingerprint_change_denied(self):
+         with self.assertRaisesRegex(io.TrainAccessError,'changed during'): self.execute_mocked(fingerprint_change=True)
+ 

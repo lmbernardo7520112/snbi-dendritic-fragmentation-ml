@@ -1,0 +1,50 @@
+{
+  "created_at_utc": "2026-09-21T21:00:10.897031+00:00",
+  "preflight": {
+    "status": "PASS",
+    "head_sha": "8c6221da3d03a498158d812be5c08848c37c2247",
+    "freeze_text_count": 72,
+    "ci_jobs": [
+      "study2b-synthetic-contracts",
+      "study2a-synthetic-contracts",
+      "ti3d-final-synthetic-contracts",
+      "study2d-synthetic-contracts",
+      "study2c-synthetic-contracts",
+      "ti3c-synthetic-contracts",
+      "ti3b-synthetic-contracts",
+      "scientific-synthetic-contracts",
+      "deterministic-contracts",
+      "ti3-synthetic-contracts"
+    ],
+    "experimental_opens": 0,
+    "receipt_created": false,
+    "allowed_rows": 10907,
+    "distinct_fits": 100,
+    "repair": {
+      "status": "PASS",
+      "parent_method_freeze_sha": "21400de67d21901aeb8e5abac528689fc39169fa",
+      "grandparent_sha": "ec97cb5041ef35d4f6c9a79b54d756d6fbee674f",
+      "original_hashes_verified": 52,
+      "repair_paths": 27,
+      "scientific_method_changed": false
+    },
+    "method_freeze_original": "21400de67d21901aeb8e5abac528689fc39169fa",
+    "ci_repair_sha": "8c6221da3d03a498158d812be5c08848c37c2247"
+  },
+  "method_freeze_sha": "8c6221da3d03a498158d812be5c08848c37c2247",
+  "attempt": 1,
+  "design_sha256": "6db95b662e1e5e429a5cddbbdd8fd67bb4e418d2bef679c9fb56fc74cce81deb",
+  "input_manifest_sha256": "6ae3eee8e2fbe2c2e5de55eb84cb35b0ca7b561d37a8426b11125870003de531",
+  "fit_budget": {
+    "part_a_distinct_fits": 84,
+    "part_b_additional_distinct_fits": 12,
+    "part_c_additional_distinct_fits": 4,
+    "total_distinct_rf_fits": 100,
+    "conceptual_fit_reuses": 8,
+    "scientific_invocations": 1,
+    "retries": 0,
+    "evaluation_split": "HISTORICAL_TRAIN_CV_VALIDATION_ONLY"
+  },
+  "DEV_AUTHORIZED": false,
+  "TEST_AUTHORIZED": false
+}

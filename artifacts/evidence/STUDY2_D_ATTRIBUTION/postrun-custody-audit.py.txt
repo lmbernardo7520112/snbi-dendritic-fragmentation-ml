@@ -1,0 +1,65 @@
+"""Post-run textual custody only: no cache/source reads, scientific imports or fits."""
+from pathlib import Path
+import json, hashlib, subprocess
+from collections import Counter
+
+E=Path('artifacts/evidence/STUDY2_D_ATTRIBUTION')
+reads={}
+def load(name):
+    p=E/name; b=p.read_bytes(); reads[str(p)]={'bytes':len(b),'sha256':hashlib.sha256(b).hexdigest()}; return json.loads(b)
+def digest(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
+manifest=load('TRAIN_INPUT_MANIFEST.json'); audit=load('IO_AUDIT.json')
+receipt=load('EXECUTION_RECEIPT.json'); actual=load('ACTUAL_PREFLIGHT.json')
+result=load('results.json'); terminal=load('terminal-state.json'); ci=load('CI_PROOF.json')
+integration=load('INTEGRATION_TRAIN_CUSTODY.json'); original=load('METHOD_FREEZE_ORIGINAL.json'); freeze=load('METHOD_FREEZE.json')
+rows=manifest['rows']; records=audit['access_records']
+assert len(rows)==len(records)==10907 and len({r['sample_id'] for r in records})==10907
+assert {r['split'] for r in rows}=={'TRAIN'} and Counter(r['tier'] for r in rows)=={'GOLD':3858,'BACKGROUND':7049}
+assert len({r['group_id'] for r in rows})==64
+for row,record in zip(rows,records):
+    s=row['storage']; assert record['sample_id']==row['sample_id'] and record['group_id']==row['group_id']
+    assert record['path']==s['path'] and record['offset']==s['offset']==s['row_index']*8450 and record['bytes']==8450
+    assert s['dtype']=='uint8' and s['shape']==[2,65,65]
+    for k in ['pair_sha256','structural_patch_sha256','solutal_patch_sha256']:assert record[k]==s[k]
+assert audit['state']=='COMPLETED' and audit['all_descriptors_closed'] is True
+assert audit['rows_read']==audit['rows_authenticated']==audit['row_attempts']==10907
+assert audit['bytes_read']==92164150 and audit['container_opens']==2
+assert audit['TRAIN_GOLD_ROWS_READ']==3858 and audit['TRAIN_BG_ROWS_READ']==7049
+zeros=['DEV_GROUPS_READ','TEST_GROUPS_READ','DEV_ROWS_READ','TEST_ROWS_READ','TEST_CACHE_ROWS_READ','TEST_FEATURES_COMPUTED','EXPERIMENTAL_SOURCE_OPENS','FFMPEG_RUNS']+['ESM'+str(i)+'_OPENS' for i in range(1,7)]
+for k in zeros:assert audit[k]==terminal[k]==0
+assert audit['full_container_hashes']==audit['pixels_written']==0
+assert result['counts']==dict(scientific_invocations=1,feature_extractions_started=1,feature_extractions_completed=1,feature_rows=10907,fits_started=100,fits_completed=100,validation_evaluations=100,part_a_fits=84,part_b_fits=12,part_c_fits=4,result_reuses=8,retries=0)
+assert result['terminal']==terminal and result['status']=='PASS' and result['failure'] is None
+assert terminal['STATE']=='CLOSED_CONSUMED' and terminal['TEST_STATE']=='UNCHANGED_CONSUMED'
+head=subprocess.check_output(['git','rev-parse','HEAD']).decode().strip()
+assert receipt['method_freeze_sha']==result['method_freeze_sha']==actual['head_sha']==ci['head_sha']==head
+assert actual==receipt['preflight'] and actual['status']=='PASS'
+assert audit['receipt_sha256']==digest(E/'EXECUTION_RECEIPT.json')
+assert receipt['design_sha256']==digest(E/'STUDY2_D_ATTRIBUTION_DESIGN.json')
+assert receipt['input_manifest_sha256']==digest(E/'TRAIN_INPUT_MANIFEST.json')
+jobs=[j for r in ci['runs'] for j in r['jobs']]
+assert len(jobs)==10 and sum(len(j['steps']) for j in jobs)==110
+assert all(r['headSha']==head and r['conclusion']=='success' for r in ci['runs'])
+assert all(j['conclusion']=='success' and all(s['conclusion']=='success' for s in j['steps']) for j in jobs)
+latest_ci=max(j['completedAt'] for j in jobs)
+from datetime import datetime
+assert datetime.fromisoformat(latest_ci.replace('Z','+00:00')) < datetime.fromisoformat(receipt['created_at_utc'])
+for p,h in freeze['files'].items():
+    assert digest(p)==h
+    assert hashlib.sha256(subprocess.check_output(['git','show',head+':'+p])).hexdigest()==h
+original_sha=freeze['parent_method_freeze_sha']
+for p,h in original['files'].items():assert hashlib.sha256(subprocess.check_output(['git','show',original_sha+':'+p])).hexdigest()==h
+oldpaths=set(subprocess.check_output(['git','ls-tree','-r','--name-only',freeze['base_sha']]).decode().splitlines())
+changed=set(subprocess.check_output(['git','diff','--name-only',freeze['base_sha'],head]).decode().splitlines())
+assert (changed&oldpaths)=={'configs/governance/phase-scope-v1.json'}
+assert not subprocess.check_output(['git','diff','--name-only']).strip()
+assert not subprocess.check_output(['git','diff','--cached','--name-only']).strip()
+for k in zeros:
+    if k in integration:assert integration[k]==0
+paths={r['path'] for r in records}
+assert paths=={'data/derived/study2b/multimodal_patches_uint8.bin','data/derived/study2c/cachetrain_dev.bin'}
+by_path={p:{'rows':sum(r['path']==p for r in records),'bytes':sum(r['bytes'] for r in records if r['path']==p),'min_offset':min(r['offset'] for r in records if r['path']==p),'max_offset':max(r['offset'] for r in records if r['path']==p)} for p in sorted(paths)}
+proof={'status':'PASS','scope':'POST_RUN_TEXT_AND_GIT_ONLY','scientific_command_exit_code':0,'head_sha':head,'receipt_at_utc':receipt['created_at_utc'],'last_required_ci_completed_at_utc':latest_ci,'ci_jobs':10,'ci_steps':110,'original_frozen_blobs':len(original['files']),'current_frozen_texts_and_blobs':len(freeze['files']),'rows_authenticated_in_run':10907,'row_level_records_verified':len(records),'by_path':by_path,'scientific_IO':{k:v for k,v in audit.items() if k!='access_records'},'integration_IO_separate':integration['counters'],'audit_experimental_opens':0,'audit_experimental_bytes':0,'audit_fits':0,'audit_frames_decoded':0,'evidence_reads':reads,'limits':'Recorded exact application pread ranges and frozen control flow; no universal syscall or kernel readahead monitoring. Non-TRAIN split metadata was available from previously committed manifests. No DEV/TEST payload, TEST cache index or historical predictions opened in this audit.'}
+with (E/'POST_RUN_CUSTODY_AUDIT.json').open('x') as f:json.dump(proof,f,indent=2);f.write('\n')
+(E/'postrun-custody-audit.py.txt').write_bytes(Path(__file__).read_bytes())
+print(json.dumps({k:proof[k] for k in ['status','rows_authenticated_in_run','current_frozen_texts_and_blobs','original_frozen_blobs','receipt_at_utc','last_required_ci_completed_at_utc']},indent=2))

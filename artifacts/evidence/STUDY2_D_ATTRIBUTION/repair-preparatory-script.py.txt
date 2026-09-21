@@ -1,0 +1,39 @@
+"""Real serialized text preflight with explicitly mocked future commit and CI only."""
+from pathlib import Path
+from unittest.mock import patch
+import json, hashlib
+from snbi_fragmentation import study2d_execution as ex
+
+root=Path.cwd(); E=root/ex.E; future='f'*40
+original_git=ex.git_bytes; original_load=ex.load
+declaration=original_load(root,ex.E+'/CI_REPAIR_DIFF.json')['allowed_changes']
+reads=[]
+def git_bytes(root,*args):
+    if args==('rev-parse','HEAD'): return (future+'\n').encode()
+    if args==('rev-parse','HEAD^'): return (ex.METHOD_FREEZE_ORIGINAL+'\n').encode()
+    if args==('rev-parse','HEAD^^'): return (ex.BASE+'\n').encode()
+    if args==('rev-list','--parents','-n','1',future):
+        return (future+' '+ex.METHOD_FREEZE_ORIGINAL+'\n').encode()
+    if args==('diff','--name-status','--no-renames',ex.METHOD_FREEZE_ORIGINAL,future):
+        return ''.join(s+'\t'+p+'\n' for p,s in declaration.items()).encode()
+    if args[:3]==('ls-tree',future,'--'):
+        p=args[3]; b=ex.read_text(root,p)
+        blob=hashlib.sha1(f'blob {len(b)}\0'.encode()+b).hexdigest()
+        return ('100644 blob '+blob+'\t'+p+'\n').encode()
+    if args and args[0]=='show' and args[1].startswith(future+':'):
+        p=args[1].split(':',1)[1]; b=ex.read_text(root,p)
+        reads.append({'path':p,'sha256':hashlib.sha256(b).hexdigest()}); return b
+    return original_git(root,*args)
+def load(root,name):
+    if name==ex.E+'/CI_PROOF.json':
+        return {'head_sha':future,'runs':[{'headSha':future,'status':'completed','conclusion':'success','jobs':[{'name':n,'status':'completed','conclusion':'success','steps':[{'name':'SIMULATED_PREPARATORY_ONLY','status':'completed','conclusion':'success'}]} for n in sorted(ex.REQUIRED_JOBS)]}]}
+    return original_load(root,name)
+
+assert not (E/'EXECUTION_RECEIPT.json').exists()
+with patch.object(ex,'git_bytes',side_effect=git_bytes),patch.object(ex,'load',side_effect=load):
+    result=ex.preflight(root)
+assert not (E/'EXECUTION_RECEIPT.json').exists()
+proof={'status':result['status'],'scope':'PREPARATORY_ONLY_REAL_TEXT_SIMULATED_FUTURE_GIT_CI','actual_remote_CI':False,'future_head_is_placeholder':True,'result':result,'serialized_files_checked':reads,'experimental_opens':0,'receipt_created':False,'scientific_runs':0,'note':'Output excluded from METHOD_FREEZE file hashes to avoid circular self-reference; exact output remains a committed repair evidence blob.'}
+with (E/'CI_REPAIR_PREPARATORY_PREFLIGHT.json').open('w') as f:
+    json.dump(proof,f,indent=2);f.write('\n')
+print(json.dumps(result,indent=2))
