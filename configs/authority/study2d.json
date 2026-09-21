@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "phase": "STUDY2_D",
+  "base_sha": "ec97cb5041ef35d4f6c9a79b54d756d6fbee674f",
+  "branch": "feat/study2d-data-centric-bridge",
+  "authority_sha256": "5b28d77ffdb964d4f421bec1378e2b0e35feb70afb79225ad6fe08273fe4ab93",
+  "scientific_invocations_limit": 1,
+  "distinct_rf_fits_limit": 100,
+  "part_a_fits": 84,
+  "part_b_new_fits": 12,
+  "part_c_new_fits": 4,
+  "model_family": "RF_REFERENCE",
+  "features": "LBP20_MULTIMODAL",
+  "train_positive_groups": 32,
+  "train_background_groups": 32,
+  "allowed_split": "TRAIN",
+  "allowed_tiers": [
+    "GOLD",
+    "BACKGROUND"
+  ],
+  "historical_cv_fold_sha256": "85edac3d7da06994d7b16c4fa50e2aeb806abd7743a1d471842f54fdcf049ef2",
+  "development_access": false,
+  "test_access": false,
+  "silver_access": false,
+  "source_access": false,
+  "model_selection": false,
+  "terminal_closes_authority": true
+}

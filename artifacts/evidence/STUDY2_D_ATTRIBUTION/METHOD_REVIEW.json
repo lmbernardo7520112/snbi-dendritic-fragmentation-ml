@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "review_scope": "primary-agent static review of design/model modules; independent stdlib metadata audit recorded separately",
+  "reviewed_files": {
+    "src/snbi_fragmentation/study2d_design.py": "ab7b480b62d4bd020892bcd64ebcd981b292a0b26ce941ff4b943f9b537ced2b",
+    "src/snbi_fragmentation/study2d_models.py": "4a742b9f8766ad30f6a284eca9dacbbdee740d476a4594f0eae17c175db06637"
+  },
+  "findings_resolved_before_freeze": [
+    "Explicit literal class strings POSITIVE/BACKGROUND in ranking protocol match implementation",
+    "Fit identifiers bind fold/K/replicate/density and exact deterministic A/B/C schedule",
+    "Seven required attribution terminal fields emitted top-level",
+    "Bridge output is a real nine-condition Markdown table"
+  ],
+  "checks": [
+    "No files/pixels/learners in metadata design",
+    "Exact historical TRAIN row and group/fold allowlists; SILVER excluded",
+    "D1 lower median and rational nearest-rank quantiles, lower ties",
+    "Acquisition quotas and nested ranking prefixes",
+    "84/12/4 distinct fits, eight references without repeated inference",
+    "19 exact RF parameters, fixed seed42, no model search or scaler",
+    "Shared unchanged C LBP20 and metric_bundle",
+    "Two explicit sample-weight regimes; class-weight and bootstrap limitations documented",
+    "No result can change later conditions; descriptive arithmetic only"
+  ],
+  "synthetic_validation": {
+    "design": 20,
+    "models": 20,
+    "io": 29,
+    "execution": 38,
+    "combined": 107,
+    "governance": 41,
+    "zero_skips": true,
+    "local_synthetic_RF_fits_total": 6,
+    "breakdown": "isolated models2 + initial combined2 + final combined2 after controller failure-counter correction",
+    "scientific_fits": 0
+  },
+  "review_limits": [
+    "Static review and synthetic fixtures are not a universal syscall monitor",
+    "Root review is not institution/human certification",
+    "Independent auxiliary controller/io review is recorded separately"
+  ]
+}

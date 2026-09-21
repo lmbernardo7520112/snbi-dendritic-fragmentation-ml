@@ -1,0 +1,25 @@
+"""Preparatory only: real serialized local texts, explicitly simulated future Git/CI."""
+from pathlib import Path
+from unittest.mock import patch
+import json, hashlib
+from snbi_fragmentation import study2d_execution as ex
+root=Path.cwd(); E=root/ex.E; future='f'*40
+original_git=ex.git_bytes; original_load=ex.load
+reads=[]
+def git_bytes(root,*args):
+ if args==('rev-parse','HEAD'): return (future+'\n').encode()
+ if args==('rev-parse','HEAD^'): return (ex.BASE+'\n').encode()
+ if args and args[0]=='show' and args[1].startswith(future+':'):
+  name=args[1].split(':',1)[1]; data=ex.read_text(root,name);reads.append({'path':name,'sha256':hashlib.sha256(data).hexdigest()});return data
+ return original_git(root,*args)
+def load(root,name):
+ if name==ex.E+'/CI_PROOF.json':
+  return {'head_sha':future,'runs':[{'headSha':future,'status':'completed','conclusion':'success','jobs':[{'name':n,'status':'completed','conclusion':'success','steps':[{'name':'SIMULATED_PREPARATORY_ONLY','status':'completed','conclusion':'success'}]} for n in sorted(ex.REQUIRED_JOBS)]}]}
+ return original_load(root,name)
+assert not (E/'EXECUTION_RECEIPT.json').exists()
+with patch.object(ex,'git_bytes',side_effect=git_bytes),patch.object(ex,'load',side_effect=load):
+ result=ex.preflight(root)
+assert not (E/'EXECUTION_RECEIPT.json').exists()
+output={'status':result['status'],'scope':'PREPARATORY_ONLY_REAL_TEXT_SIMULATED_FUTURE_GIT_CI','actual_remote_CI':False,'future_head_is_placeholder':True,'result':result,'serialized_files_checked':reads,'experimental_opens':0,'receipt_created':False,'scientific_runs':0}
+with (E/'PREPARATORY_PREFLIGHT.json').open('x') as fp:json.dump(output,fp,indent=2);fp.write('\n')
+print(json.dumps(result,indent=2))

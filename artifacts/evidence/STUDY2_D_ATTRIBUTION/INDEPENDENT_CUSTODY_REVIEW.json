@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "status": "PASS_RESTRICTIVE_INTEGRATION_CUSTODY",
+  "created_at_utc": "2026-09-21T19:15:02.616152+00:00",
+  "scope": "Independent text/Git inspection of Study2-C integration custody and the completed TRAIN-only byte-authentication record; no Study2-D scientific run or method approval.",
+  "checkpoint": {
+    "sha": "c715df53d5dc08815235f010c07616deef7bbb4a",
+    "parent_scientific_freeze_sha": "8c38384915807a15062782a4a189601f7c83c8c3",
+    "added_evidence_paths": 36,
+    "evidence_only": true,
+    "tracked_and_index_clean_at_preintegration_audit": true,
+    "only_untracked_visible_directory": "academic-deliverable-build/",
+    "remote_tracking_sha_at_audit": "c715df53d5dc08815235f010c07616deef7bbb4a",
+    "remote_tracking_limitation": "Local tracking ref inspected; fresh remote and CI verification belongs to integration operator."
+  },
+  "freeze_custody": {
+    "manifest_entries": 37,
+    "direct_sha256_and_freeze_checkpoint_git_blob_matches": 36,
+    "direct_content_read_exceptions": [
+      {
+        "path": "artifacts/evidence/TI3_B_SOLUTAL/results.json",
+        "reason": "Contains historical DEVELOPMENT predictions; excluded from direct opening under restrictive instructions.",
+        "expected_sha256": "7067350c7c6cafe384d1c3cfd55d78200d21b3179287fa55709335685fe5b962",
+        "previous_independent_audit_sha256": "7067350c7c6cafe384d1c3cfd55d78200d21b3179287fa55709335685fe5b962",
+        "unchanged_git_blob": "180fc62d2dfacc0f2af05ee4085d05ce3cd0e05a",
+        "freeze_and_checkpoint_git_blob_equal": true
+      }
+    ],
+    "divergences": [],
+    "post_run_hash_catalog_entries": 72,
+    "post_run_catalog_content_verification": "Catalogued only; prohibited DEV/TEST prediction files were not opened."
+  },
+  "new_branch": {
+    "branch": "feat/study2d-data-centric-bridge",
+    "head": "ec97cb5041ef35d4f6c9a79b54d756d6fbee674f",
+    "study2c_merge_sha": "ec97cb5041ef35d4f6c9a79b54d756d6fbee674f",
+    "merge_tree_equals_checkpoint_tree": true,
+    "post_merge_ci": "9 jobs / 100 steps PASS reported by integration operator; not independently queried by this reviewer"
+  },
+  "restriction_resolution": {
+    "annex_sections": [
+      2,
+      12,
+      13,
+      39,
+      40
+    ],
+    "author_decision_provenance": "Explicit restrictive alternative relayed by root: material authentication only of TRAIN rows; documentary custody for DEV/TEST; never open TEST cache or its index.",
+    "current_whole_container_hashing_performed": false,
+    "test_binary_or_cache_index_opened": false,
+    "shared_containers_access": "Exact pread offsets for frozen TRAIN GOLD/background rows only."
+  },
+  "material_train_custody": {
+    "status": "PASS",
+    "receipt_created_at_utc": "2026-09-21T19:05:17.537084+00:00",
+    "auditor_review_timing": "POST_EXECUTION_TEXT_ONLY",
+    "inputs": [
+      {
+        "path": ".bootstrap-test-tmp/study2d-integration/verify_train_custody.py",
+        "size_bytes": 5346,
+        "sha256": "b014fce474d9a779853b068ad6257643fc710fddfdc8e59f051d84ebb476d369"
+      },
+      {
+        "path": ".bootstrap-test-tmp/study2d-integration/TRAIN_CUSTODY_RECEIPT.json",
+        "size_bytes": 141,
+        "sha256": "6e4116d2dd098aebd5b0360908961ac8ef959f785f7c5dab6023352f77f9be82"
+      },
+      {
+        "path": ".bootstrap-test-tmp/study2d-integration/TRAIN_CUSTODY.json",
+        "size_bytes": 8350739,
+        "sha256": "c886b8815ad13df77750cf61e62ecf191c415af469597ba9849d82cca961d153"
+      }
+    ],
+    "train_gold_rows": 3858,
+    "train_background_rows": 7049,
+    "train_total_rows": 10907,
+    "positive_groups": 32,
+    "background_groups": 32,
+    "positive_bytes_authenticated": 32600100,
+    "background_bytes_authenticated": 59564050,
+    "total_bytes_authenticated": 92164150,
+    "container_opens_by_operator": 2,
+    "pread_calls_by_operator": 10907,
+    "rows_authenticated_by_operator": 10907,
+    "positive_row_index_extent": [
+      1509,
+      16499
+    ],
+    "positive_offsets_are_sparse": true,
+    "background_train_row_index_extent": [
+      0,
+      7048
+    ],
+    "row_bytes": 8450,
+    "shape": [
+      2,
+      65,
+      65
+    ],
+    "dtype": "uint8",
+    "each_row_has_three_hashes": true,
+    "all_recorded_ids_offsets_hashes_compared_to_committed_train_metadata": true,
+    "missing_row_hash_fallback_used": false,
+    "no_full_scan": true,
+    "features_or_arrays_materialized": false,
+    "DEV_ROWS_READ": 0,
+    "TEST_ROWS_READ": 0,
+    "TEST_CACHE_ROWS_READ": 0,
+    "TEST_FEATURES_COMPUTED": 0,
+    "EXPERIMENTAL_SOURCE_OPENS": 0,
+    "FFMPEG_RUNS": 0,
+    "ML_RUNS": 0
+  },
+  "documentary_dev_test_custody": {
+    "current_payload_authentication": false,
+    "recorded_train_dev_container_sha256": "6c64f8e07ba99d0c2ccd04080031b23fc79d9162db79b2e4560e0cc6c4a49b3d",
+    "recorded_test_container_sha256": "051f8cebd628710b00f3c53ebfb18c691acc0df05dfb5a0f89d5d073e74f4576",
+    "meaning": "Historical incremental writer commitments and existing text custody, not a fresh full-cache hash. Non-TRAIN committed manifest metadata can be inspected to enforce exclusion; no non-TRAIN payload is admitted."
+  },
+  "study2c_state_preserved": {
+    "STUDY2_C": "PASS",
+    "SELECTED_MODEL_FAMILY": "RF_REFERENCE",
+    "SELECTED_SUPERVISION_REGIME": "GOLD_PLUS_SILVER",
+    "TEST_STATE": "CONSUMED",
+    "STATE": "CLOSED_CONSUMED",
+    "scientific_test_evaluations": 1
+  },
+  "this_reviewer": {
+    "binary_content_opens": 0,
+    "experimental_source_opens": 0,
+    "DEV_TEST_prediction_file_opens": 0,
+    "data_cache_index_file_opens": 0,
+    "tests_executed": 0,
+    "scientific_imports": 0,
+    "scientific_runs": 0,
+    "git_mutations": 0,
+    "only_output_file": "artifacts/evidence/STUDY2_D_ATTRIBUTION/INDEPENDENT_CUSTODY_REVIEW.json"
+  },
+  "pending": "Study2-D design/I-O/controller implementation static review will occur separately after those files exist.",
+  "limits": [
+    "The operator performed the authorized TRAIN byte pass; this reviewer authenticated its textual record and mapped every access record to frozen metadata.",
+    "The review is posterior to that byte pass, not a delegated pre-execution approval.",
+    "Filesystem row-byte counters are application instrumentation, not a universal syscall monitor.",
+    "The inherited Study2-B pixels_materialized=false field is historical provenance; Study2-C materialization uses complete cache manifests, cache paths/indices and recorded row hashes.",
+    "No new model, metric, split, fold or scientific execution is authorized by this review."
+  ]
+}

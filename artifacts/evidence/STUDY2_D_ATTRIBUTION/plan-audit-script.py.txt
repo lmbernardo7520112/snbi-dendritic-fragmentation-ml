@@ -1,0 +1,80 @@
+"""Independent textual verification. Never imports the planner or scientific code."""
+from pathlib import Path
+from collections import Counter, defaultdict
+import hashlib, json
+E=Path('artifacts/evidence/STUDY2_D_ATTRIBUTION')
+C=Path('artifacts/evidence/STUDY2_C_BENCHMARK/SPLIT_MANIFEST.json')
+paths=[C,E/'STUDY2_D_ATTRIBUTION_DESIGN.json',E/'TRAIN_INPUT_MANIFEST.json']
+raw=[p.read_bytes() for p in paths]
+c,d,m=map(json.loads,raw)
+hashjson=lambda obj: hashlib.sha256(json.dumps(obj,sort_keys=True,separators=(',',':'),ensure_ascii=True,allow_nan=False).encode()).hexdigest()
+assert hashlib.sha256(raw[0]).hexdigest()=='74adb4eb7acad1e6aa67c4302d9db30d0c22f21fb51bc72aa89f701956d14ec7'
+rows=[r for r in c['samples'] if r['split']=='TRAIN' and r['tier'] in ('GOLD','BACKGROUND')]
+assert rows==d['rows']==[{k:v for k,v in r.items() if k!='storage'} for r in m['rows']]
+assert len(rows)==10907 and Counter(r['label'] for r in rows)=={0:7049,1:3858}
+folds=c['cv_fold_by_group']
+assert folds==d['cv_fold_by_group'] and hashjson(folds)=='85edac3d7da06994d7b16c4fa50e2aeb806abd7743a1d471842f54fdcf049ef2'
+assert hashjson({k:v for k,v in d.items() if k!='design_sha256'})==d['design_sha256']
+byid={r['sample_id']:r for r in rows}; groups=defaultdict(list)
+for r in rows: groups[r['group_id']].append(r)
+assert len(groups)==64
+acqs=('bottom_up_anti_parallel','top_down_parallel'); quotas={4:(3,1),8:(6,2),12:(9,3),17:(13,4),24:(18,6)}
+ident={g:(rr[0]['acquisition_id'],rr[0]['label']) for g,rr in groups.items()}
+assert Counter(v[1] for v in ident.values())=={0:32,1:32}
+selected={}
+for g,rr in groups.items():
+ rr=sorted(rr,key=lambda r:(r['frame_index'],r['sample_id'])); n=len(rr)
+ for dens,qs in [('D1',[]),('D3',[(1,4),(1,2),(3,4)]),('D5',[(0,1),(1,4),(1,2),(3,4),(1,1)]),('DALL',[])]:
+  if dens=='DALL' or dens=='D3' and n<3 or dens=='D5' and n<5: ii=range(n)
+  elif dens=='D1': ii=[(n-1)//2]
+  else:
+   ii=set()
+   for a,b in qs:
+    base,rem=divmod(a*(n-1),b); ii.add(base+(2*rem>b))
+   ii=sorted(ii)
+  selected[g,dens]=[rr[i]['sample_id'] for i in ii]
+  assert selected[g,dens]==d['temporal_samples'][g][dens]
+for f in range(4):
+ valid=[r['sample_id'] for r in rows if folds[r['group_id']]==f]
+ assert valid==d['validation_sample_ids_by_fold'][str(f)]
+ assert Counter(ident[g] for g in groups if folds[g]==f)=={(a,l):n for a,n in zip(acqs,(6,2)) for l in (0,1)}
+ for rep in range(1,6):
+  for a in acqs:
+   for l in (0,1):
+    pool=[g for g in groups if folds[g]!=f and ident[g]==(a,l)]
+    classname='POSITIVE' if l else 'BACKGROUND'
+    rank=lambda g:hashlib.sha256(f'STUDY2D_GROUP_R{rep}|{f}|{classname}|{a}|{g}'.encode()).hexdigest()
+    assert sorted(pool,key=lambda g:(rank(g),g))==d['group_rankings'][str(f)][str(rep)][a][str(l)]
+expected=[]
+for f in range(4):
+ for k in quotas:
+  for rep in (range(1,6) if k<24 else [None]): expected.append(('A',f,k,rep,'D1','GROUP_EQUAL'))
+for f in range(4):
+ for dens in ('D3','D5','DALL'): expected.append(('B',f,24,None,dens,'GROUP_EQUAL'))
+for f in range(4): expected.append(('C',f,24,None,'DALL','OBSERVATION_EQUAL'))
+assert len(expected)==len(d['fits'])==100
+for spec,signature in zip(d['fits'],expected):
+ assert tuple(spec[k] for k in ('part','fold','K','replicate','density','weighting'))==signature
+ part,f,k,rep,dens,weight=signature
+ if k==24: gg={g for g in groups if folds[g]!=f}
+ else: gg=set().union(*(set(d['group_rankings'][str(f)][str(rep)][a][str(l)][:n]) for a,n in zip(acqs,quotas[k]) for l in (0,1)))
+ assert spec['training_group_ids']==sorted(gg)
+ wanted=set().union(*(set(selected[g,dens]) for g in gg))
+ assert spec['train_sample_ids']==[r['sample_id'] for r in rows if r['sample_id'] in wanted]
+ assert spec['validation_sample_ids']==d['validation_sample_ids_by_fold'][str(f)]
+ assert not set(spec['train_sample_ids'])&set(spec['validation_sample_ids'])
+ assert spec['effective_rows_per_group']=={g:len(selected[g,dens]) for g in sorted(gg)}
+ assert hashjson(spec['train_sample_ids'])==spec['training_sample_ids_sha256']
+ assert hashjson(spec['validation_sample_ids'])==spec['validation_sample_ids_sha256']
+for f in range(4):
+ for rep in range(1,6):
+  last=set()
+  for k in (4,8,12,17):
+   fit=next(s for s in d['fits'] if s['part']=='A' and s['fold']==f and s['K']==k and s['replicate']==rep)
+   now=set(fit['training_group_ids']); assert last<=now; last=now
+assert {(r['reuse_id'],r['source_fit_id']) for r in d['reuse_refs']}=={(f'B-f{f}-D1',f'A-f{f}-K24-all') for f in range(4)}|{(f'C-f{f}-GROUP_EQUAL',f'B-f{f}-DALL') for f in range(4)}
+assert all(r['fit_required'] is False for r in d['reuse_refs'])
+counts={dens:Counter(len(selected[g,dens]) for g in groups) for dens in ('D1','D3','D5','DALL')}
+out={'status':'PASS','reviewer':'primary agent, independent stdlib arithmetic without planner import; auxiliary review unavailable after service usage limit','source_hashes':{str(p):hashlib.sha256(b).hexdigest() for p,b in zip(paths,raw)},'TRAIN_rows':10907,'positive_groups':32,'background_groups':32,'fold_sha256':hashjson(folds),'exact_fits':100,'part_counts':dict(Counter(s['part'] for s in d['fits'])),'reuse_refs':8,'ranking_strata_verified':80,'temporal_group_levels_verified':256,'nested_sequences_verified':20,'effective_rows_per_group_distribution':{k:dict(sorted(v.items())) for k,v in counts.items()},'validation_rows_by_fold':{str(f):len(d['validation_sample_ids_by_fold'][str(f)]) for f in range(4)},'checks':['C TRAIN exact identity/order/labels','no SILVER','fold hash and strata','all SHA256 rankings','all rational temporal quantiles/lower median','exact agenda and class/acquisition quotas','nested subsets','whole validation sides identical','effective rows and membership hashes','eight reuse-only references'],'planner_invocations':0,'scientific_invocations':0,'experimental_opens':0,'DEV_rows_materialized':0,'TEST_rows_materialized':0}
+with (E/'PLAN_TEXT_AUDIT.json').open('x') as fp: json.dump(out,fp,indent=2,ensure_ascii=False);fp.write('\n')
+print(json.dumps({k:out[k] for k in ('status','TRAIN_rows','exact_fits','part_counts','reuse_refs','validation_rows_by_fold')},indent=2))

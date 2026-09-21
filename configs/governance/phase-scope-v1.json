@@ -904,6 +904,78 @@
         "classification": "TI3_ACTIVE",
         "origin_phase": "STUDY2_C",
         "state": "TRACKED"
+      },
+      {
+        "path": "src/snbi_fragmentation/study2d_design.py",
+        "git_mode": "100644",
+        "blob_sha": "1577cf1b5f31df7f1f63eb7c13bb03eebef99021",
+        "classification": "TI3_ACTIVE",
+        "origin_phase": "STUDY2_D",
+        "state": "TRACKED"
+      },
+      {
+        "path": "src/snbi_fragmentation/study2d_models.py",
+        "git_mode": "100644",
+        "blob_sha": "22588c7faba4aab5b7db1ea6be3530e4437280ea",
+        "classification": "TI3_ACTIVE",
+        "origin_phase": "STUDY2_D",
+        "state": "TRACKED"
+      },
+      {
+        "path": "src/snbi_fragmentation/study2d_io.py",
+        "git_mode": "100644",
+        "blob_sha": "12d274f62096e3d8098b8c45cf69abc15a55f4bf",
+        "classification": "TI3_ACTIVE",
+        "origin_phase": "STUDY2_D",
+        "state": "TRACKED"
+      },
+      {
+        "path": "src/snbi_fragmentation/study2d_execution.py",
+        "git_mode": "100644",
+        "blob_sha": "f6eb2d507ff6badbe1a5eb4121bc12af3c9cf71f",
+        "classification": "TI3_ACTIVE",
+        "origin_phase": "STUDY2_D",
+        "state": "TRACKED"
+      },
+      {
+        "path": "scripts/run_study2d.py",
+        "git_mode": "100644",
+        "blob_sha": "4ad56c6c343e66a788f7be8b60f39d5e8e378806",
+        "classification": "TI3_ACTIVE",
+        "origin_phase": "STUDY2_D",
+        "state": "TRACKED"
+      },
+      {
+        "path": "tests/test_study2d_design.py",
+        "git_mode": "100644",
+        "blob_sha": "1a264082300077139b2d334c30ecfd324de7703d",
+        "classification": "TI3_ACTIVE",
+        "origin_phase": "STUDY2_D",
+        "state": "TRACKED"
+      },
+      {
+        "path": "tests/test_study2d_models.py",
+        "git_mode": "100644",
+        "blob_sha": "06340de3c72ae2e11b208b051d67d8336153d9c2",
+        "classification": "TI3_ACTIVE",
+        "origin_phase": "STUDY2_D",
+        "state": "TRACKED"
+      },
+      {
+        "path": "tests/test_study2d_io.py",
+        "git_mode": "100644",
+        "blob_sha": "6333c224da72b474b56feb09c17131e534538e52",
+        "classification": "TI3_ACTIVE",
+        "origin_phase": "STUDY2_D",
+        "state": "TRACKED"
+      },
+      {
+        "path": "tests/test_study2d_execution.py",
+        "git_mode": "100644",
+        "blob_sha": "bc76c9f814de54c6b94ad6ce0d59750c4b3a148b",
+        "classification": "TI3_ACTIVE",
+        "origin_phase": "STUDY2_D",
+        "state": "TRACKED"
       }
     ]
   },

@@ -1,0 +1,34 @@
+test_bad_offset_denied (test_study2d_io.TrainIOTests.test_bad_offset_denied) ... ok
+test_bad_shape_denied (test_study2d_io.TrainIOTests.test_bad_shape_denied) ... ok
+test_bool_index_denied (test_study2d_io.TrainIOTests.test_bool_index_denied) ... ok
+test_conflicting_group_denied (test_study2d_io.TrainIOTests.test_conflicting_group_denied) ... ok
+test_dev_denied (test_study2d_io.TrainIOTests.test_dev_denied) ... ok
+test_duplicate_id_denied (test_study2d_io.TrainIOTests.test_duplicate_id_denied) ... ok
+test_exact_directed_reads_and_hashes (test_study2d_io.TrainIOTests.test_exact_directed_reads_and_hashes) ... ok
+test_false_grant_before_path (test_study2d_io.TrainIOTests.test_false_grant_before_path) ... ok
+test_fingerprint_change_denied (test_study2d_io.TrainIOTests.test_fingerprint_change_denied) ... ok
+test_hash_mismatch_closes (test_study2d_io.TrainIOTests.test_hash_mismatch_closes) ... ok
+test_inert_constructor (test_study2d_io.TrainIOTests.test_inert_constructor) ... ok
+test_input_copy_immutable (test_study2d_io.TrainIOTests.test_input_copy_immutable) ... ok
+test_invalid_receipt_before_path (test_study2d_io.TrainIOTests.test_invalid_receipt_before_path) ... ok
+test_missing_grant_before_path (test_study2d_io.TrainIOTests.test_missing_grant_before_path) ... ok
+test_missing_hash_denied (test_study2d_io.TrainIOTests.test_missing_hash_denied) ... ok
+test_mp4_denied (test_study2d_io.TrainIOTests.test_mp4_denied) ... ok
+test_no_decoder_or_bulk_reader_in_module (test_study2d_io.TrainIOTests.test_no_decoder_or_bulk_reader_in_module) ... ok
+test_positive_locator_denied (test_study2d_io.TrainIOTests.test_positive_locator_denied) ... ok
+test_row_out_of_extent_denied (test_study2d_io.TrainIOTests.test_row_out_of_extent_denied) ... ok
+test_short_read_closes (test_study2d_io.TrainIOTests.test_short_read_closes) ... ok
+test_silver_denied (test_study2d_io.TrainIOTests.test_silver_denied) ... ok
+test_symlink_directory_denied (test_study2d_io.TrainIOTests.test_symlink_directory_denied) ... ok
+test_symlink_file_denied (test_study2d_io.TrainIOTests.test_symlink_file_denied) ... ok
+test_test_cache_denied (test_study2d_io.TrainIOTests.test_test_cache_denied) ... ok
+test_test_denied (test_study2d_io.TrainIOTests.test_test_denied) ... ok
+test_truthy_nonboolean_grant_denied (test_study2d_io.TrainIOTests.test_truthy_nonboolean_grant_denied) ... ok
+test_unknown_acquisition_denied (test_study2d_io.TrainIOTests.test_unknown_acquisition_denied) ... ok
+test_unlabeled_denied (test_study2d_io.TrainIOTests.test_unlabeled_denied) ... ok
+test_wrong_kind_denied (test_study2d_io.TrainIOTests.test_wrong_kind_denied) ... ok
+
+----------------------------------------------------------------------
+Ran 29 tests in 0.098s
+
+OK

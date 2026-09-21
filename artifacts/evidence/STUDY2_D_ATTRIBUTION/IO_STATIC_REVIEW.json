@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "status": "PASS_MODULE_AND_TRAIN_MANIFEST_STATIC_REVIEW",
+  "created_at_utc": "2026-09-21T19:19:57.943661+00:00",
+  "scope": "Pure textual/AST review of Study2-D I/O source, synthetic-test source and committed-provenance TRAIN manifest. Controller admission remains a separate required review.",
+  "inputs": [
+    {
+      "path": "src/snbi_fragmentation/study2d_io.py",
+      "bytes": 7922,
+      "sha256": "ecefa6d4a5ddc6dcd584b4328bbe8fa134019865f11d854a9571794de162a9f2"
+    },
+    {
+      "path": "tests/test_study2d_io.py",
+      "bytes": 7946,
+      "sha256": "646643212450447b428d44f2649f710ddf040f7f1510e49b0124ff90214342bf"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/TRAIN_INPUT_MANIFEST.json",
+      "bytes": 23823085,
+      "sha256": "6ae3eee8e2fbe2c2e5de55eb84cb35b0ca7b561d37a8426b11125870003de531"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/INTEGRATION_TRAIN_CUSTODY.json",
+      "bytes": 8350739,
+      "sha256": "c886b8815ad13df77750cf61e62ecf191c415af469597ba9849d82cca961d153"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_C_BENCHMARK/SPLIT_MANIFEST.json",
+      "bytes": 33725407,
+      "sha256": "74adb4eb7acad1e6aa67c4302d9db30d0c22f21fb51bc72aa89f701956d14ec7"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/io-synthetic.log.txt",
+      "bytes": 2733,
+      "sha256": "b664857db6cdfb6a117c75d80c787ced5a10acdc7c2ffc123f7fb49b18a1d339"
+    }
+  ],
+  "train_manifest": {
+    "rows": 10907,
+    "gold": 3858,
+    "background": 7049,
+    "positive_groups": 32,
+    "background_groups": 32,
+    "sample_order_equals_historical_train_projection": true,
+    "all_original_fields_preserved": true,
+    "all_storage_locators_equal_preintegration_authenticated_train_records": true,
+    "unique_physical_rows": 10907,
+    "historical_train_fold_groups": 64,
+    "row_bytes": 8450,
+    "dtype": "uint8",
+    "shape": [
+      2,
+      65,
+      65
+    ],
+    "three_hashes_per_row": true,
+    "expected_total_selected_payload_bytes": 92164150
+  },
+  "admission_checks": {
+    "constructor_has_no_io": true,
+    "single_use_set_before_authorization_attempt": true,
+    "missing_invalid_or_noncanonical_grant_denied_before_paths": true,
+    "grant_receipt_sha256_and_freeze_sha_required": true,
+    "train_only_and_gold_background_only_before_paths": true,
+    "exact_paths_positive_and_shared_train_dev_only": true,
+    "row_index_offset_shape_dtype_size_hash_validation_before_paths": true,
+    "copy_of_rows_isolated_from_caller": true,
+    "grant_receives_independent_copy": true,
+    "duplicate_ids_and_physical_rows_rejected": true
+  },
+  "access_checks": {
+    "exact_pread_length_bytes": 8450,
+    "no_whole_container_read_or_hash": true,
+    "no_memory_mapping": true,
+    "no_source_video_or_decoder": true,
+    "no_test_cache_path_admission": true,
+    "hashes": "SHA256 pair and both4225bytechannels before tensor population",
+    "failure_closes_instance_no_retry": true,
+    "fd_size_and_final_identity_fingerprint_checked": true,
+    "source_parent_directories_and_file_opened_with_nofollow": true,
+    "filesystem_root_assumption": "Caller supplies the trusted fixed repository root; this module is not an arbitrary-root API."
+  },
+  "synthetic_evidence": {
+    "tests_defined": 29,
+    "existing_operator_log": "io-synthetic.log.txt",
+    "existing_log_reports": "29 tests PASS",
+    "tests_executed_by_this_reviewer": 0,
+    "coverage": [
+      "test_inert_constructor",
+      "test_missing_grant_before_path",
+      "test_false_grant_before_path",
+      "test_truthy_nonboolean_grant_denied",
+      "test_invalid_receipt_before_path",
+      "test_dev_denied",
+      "test_test_denied",
+      "test_silver_denied",
+      "test_unlabeled_denied",
+      "test_wrong_kind_denied",
+      "test_duplicate_id_denied",
+      "test_conflicting_group_denied",
+      "test_mp4_denied",
+      "test_test_cache_denied",
+      "test_bad_offset_denied",
+      "test_bool_index_denied",
+      "test_bad_shape_denied",
+      "test_missing_hash_denied",
+      "test_row_out_of_extent_denied",
+      "test_positive_locator_denied",
+      "test_unknown_acquisition_denied",
+      "test_exact_directed_reads_and_hashes",
+      "test_short_read_closes",
+      "test_hash_mismatch_closes",
+      "test_fingerprint_change_denied",
+      "test_input_copy_immutable",
+      "test_symlink_file_denied",
+      "test_symlink_directory_denied",
+      "test_no_decoder_or_bulk_reader_in_module"
+    ]
+  },
+  "controller_dependency": {
+    "status": "PENDING_STATIC_REVIEW",
+    "required": "Before granting LOAD_TRAIN_ROWS, compare complete list, order and typed row dictionaries including storage against the frozen TRAIN_INPUT_MANIFEST. The I/O module validates structure and isolated copies, not independent canonical identity membership. Grant must bind exact current receipt and method-freeze SHA.",
+    "not_claimed": "No approval of a not-yet-reviewed controller, full scientific method, freeze, CI or execution."
+  },
+  "terminology_notes": [
+    "The row copy is isolated from the caller, but self.rows is not a Python immutable data structure. Exact frozen-manifest membership belongs to controller admission.",
+    "A shared physical TRAIN/DEV container can be opened only to pread the approved TRAIN offsets. No DEV payload is covered by its open permission.",
+    "The inherited pixels_materialized=false is historical B provenance; storage locators and authenticated row hashes govern D material access."
+  ],
+  "this_audit": {
+    "files_written": [
+      "artifacts/evidence/STUDY2_D_ATTRIBUTION/IO_STATIC_REVIEW.json"
+    ],
+    "binary_or_data_files_opened": 0,
+    "DEV_TEST_prediction_files_opened": 0,
+    "cache_index_files_opened": 0,
+    "source_opens": 0,
+    "tests_executed": 0,
+    "planner_invocations": 0,
+    "science_imports": 0,
+    "model_fits": 0
+  },
+  "findings": []
+}
