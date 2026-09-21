@@ -1,0 +1,42 @@
+{
+  "phase": "PREPARATION_BEFORE_LEGACY_GATE",
+  "experimental_source_opens": 0,
+  "scientific_study2b_runs": 0,
+  "ml_runs": 0,
+  "integration": "INTEGRATION_AUDIT.json",
+  "synthetic_evidence": "SYNTHETIC_TESTS.json",
+  "boundaries": [
+    "Only old text, new code/config/contracts, Git and explicitly authorized GitHub operations",
+    "No source hash/decode yet; no receipt created",
+    "No local installation; existing numpy1.26.4/scipy1.11.4"
+  ],
+  "operational_occurrences": [
+    {
+      "event": "documentation lookup used two nonexistent root paths before reading actual repository docs",
+      "effect": "text-only navigation, no scientific attempt"
+    },
+    {
+      "event": "gh pr view baseRefOid unsupported; corrected query plus API parent verification",
+      "effect": "read-only query correction"
+    },
+    {
+      "event": "agent thread limit reached; existing agents reused",
+      "effect": "no scientific attempt"
+    },
+    {
+      "event": "auxiliary text-schema lookups corrected",
+      "effect": "no source content"
+    },
+    {
+      "event": "combined synthetic profile ran99PASS; wrapper expected97 and exited1",
+      "evidence": "SYNTHETIC_TESTS_initial-count-mismatch.json and synthetic-tests.log.txt",
+      "resolution": "exact99 unique log IDs matched AST; original preserved; no rerun to replace output"
+    },
+    {
+      "event": "static preflight review found required pilot JSON outside text prefix allowlist",
+      "resolution": "admitted only exact artifacts/metadata/ti2-pilot-manifest.json before historical gate; focused synthetic regression",
+      "effect": "zero source opens/receipts"
+    }
+  ],
+  "limitations": "Bounded command journal and tool receipts, not universal syscall monitoring; earlier delegated stdout reported by agents."
+}

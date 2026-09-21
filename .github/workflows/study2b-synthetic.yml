@@ -1,0 +1,72 @@
+name: study2b-synthetic-ci
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  study2b-synthetic-contracts:
+    runs-on: ubuntu-latest
+    env:
+      PYTHONPATH: src:tests:.
+      PYTHONDONTWRITEBYTECODE: "1"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - name: Enforce tracked-data guard
+        run: python3 -B scripts/check_repository_data.py
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: ""
+      - name: Install exact annotation synthetic dependencies
+        run: >-
+          python -B -m pip --isolated install
+          --disable-pip-version-check --no-cache-dir --no-deps
+          --only-binary=:all: numpy==1.26.4 scipy==1.11.4
+      - name: Verify exact dependency versions
+        run: |
+          python -B - <<'PY'
+          import sys
+          from importlib.metadata import version
+          import numpy
+          import scipy
+
+          if sys.version_info[:2] != (3, 12):
+              raise SystemExit("Python 3.12 required")
+          for name, module, expected in (
+              ("numpy", numpy, "1.26.4"),
+              ("scipy", scipy, "1.11.4"),
+          ):
+              if version(name) != expected or module.__version__ != expected:
+                  raise SystemExit("Dependency pin divergence: " + name)
+          PY
+      - name: Enforce composed scope and unchanged historical custody
+        run: python -B scripts/check_phase_scope.py
+      - name: Require Study2B corpus and storage synthetic contracts without sources
+        run: |
+          python -B - <<'PY'
+          import unittest
+
+          loader = unittest.TestLoader()
+          study2b = loader.discover("tests", pattern="test_study2b*.py")
+          if study2b.countTestCases() == 0:
+              raise SystemExit("Study2B synthetic contracts required")
+          suite = unittest.TestSuite([study2b])
+          expected = suite.countTestCases()
+          result = unittest.TextTestRunner(verbosity=2).run(suite)
+          passed = (
+              not loader.errors
+              and result.testsRun == expected
+              and result.wasSuccessful()
+              and not result.skipped
+              and not result.expectedFailures
+              and not result.unexpectedSuccesses
+          )
+          raise SystemExit(0 if passed else 1)
+          PY

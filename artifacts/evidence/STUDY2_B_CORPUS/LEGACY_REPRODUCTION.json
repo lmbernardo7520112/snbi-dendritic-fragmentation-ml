@@ -1,0 +1,464 @@
+{
+  "status": "PASS",
+  "legacy_fixture_pairs_expected": 50,
+  "legacy_fixture_pair_hash_matches": 50,
+  "LEGACY_PATCH_PAIRS_EXPECTED": 25,
+  "LEGACY_PATCH_PAIRS_MATCHED": 25,
+  "LEGACY_PATCH_PAIR_HASH_MATCHES": 25,
+  "scope": "50 unchanged compatibility fixtures; overlap counters only exact canonical site/frame/center matches; no background pixels persisted",
+  "checks": [
+    {
+      "sample_id": "background|ESM1|73|102|676",
+      "status": "PASS",
+      "structural_patch_sha256": "34f10987698118f17456cfc0e458862c1cfb9d4daae31fdccb496f84c39ffe4e",
+      "solutal_patch_sha256": "76be8f483ffbf2c42cc4da1987163d78d3219b85de3dcfd6aee200daad527f37",
+      "pair_sha256": "46f588abb9b91d881bf8c182379e49e472c2dde3d13300a806042ea1c4f16199",
+      "canonical_corpus_overlap": false
+    },
+    {
+      "sample_id": "background|ESM1|73|167|286",
+      "status": "PASS",
+      "structural_patch_sha256": "217dad857a6594ee89ca1920f35de7447cfa4b520afa2158f3aea8be53ebf955",
+      "solutal_patch_sha256": "605c664342d40cdeb3abf892bb7aa631c7d5783b21d6f0dd5168d0d9492131eb",
+      "pair_sha256": "2cc8978782501dc2f987f06b7585b2ae8ee70090728a4bcd1a50fc5cbd55f87e",
+      "canonical_corpus_overlap": false
+    },
+    {
+      "sample_id": "positive|ESM3:annotation-site:4b88c441ae9c6696",
+      "status": "PASS",
+      "structural_patch_sha256": "c2bab13217a12e46dea5a4ce4af55e304bdc597ac0d852ef53807ec5de05f579",
+      "solutal_patch_sha256": "827b0a0d00e7a8aa1d874c6f9bba08f12753504745d7dde77a5e4a4d669c96c0",
+      "pair_sha256": "1e47afd3a2467ef8cdf1332fbb6a5ac1029da79273877023986782795646453e",
+      "canonical_corpus_overlap": true
+    },
+    {
+      "sample_id": "positive|ESM3:annotation-site:4c41286cef74d212",
+      "status": "PASS",
+      "structural_patch_sha256": "9133e8efd5083169a6b839cd8d131b6d08f4a77c4137801bc13538a2f373f47f",
+      "solutal_patch_sha256": "ad5feb21e2bcd6b9c68647956411344e51ccdcc412b1dcc7a0447bea521c18ad",
+      "pair_sha256": "74331184593b21c33613a6007ea26988f63086ddcf9d018159c70b948369d316",
+      "canonical_corpus_overlap": true
+    },
+    {
+      "sample_id": "positive|ESM3:annotation-site:4e3f86cfe00b170b",
+      "status": "PASS",
+      "structural_patch_sha256": "d60493a34751cd7d2e0355b1e0ea4c150511d37744781ab27f14d08a2624e399",
+      "solutal_patch_sha256": "5fb72f4b8de04eb3bba61ed26bb87a86d37cec5fd7c770b5193a4879e855d9e2",
+      "pair_sha256": "683958eb83bd5810e8d62224068b3ece2b71ad6bdeda6242733002d70b93303a",
+      "canonical_corpus_overlap": true
+    },
+    {
+      "sample_id": "positive|ESM3:annotation-site:921edb3b46971a2c",
+      "status": "PASS",
+      "structural_patch_sha256": "3d405cf403e8e35ca3d5ea1b5cd9ab921a63a8c470b7e49a300c7baccb565b6f",
+      "solutal_patch_sha256": "69a5407e045badd216870647f314f4a7a1d94358849b8ab0b19b24cb71bb060f",
+      "pair_sha256": "b959d0984b5ee8b6716092cc056f93e248d34c94ade221d366a0b92a4dd4980c",
+      "canonical_corpus_overlap": true
+    },
+    {
+      "sample_id": "positive|ESM3:annotation-site:95a85828fc0c1117",
+      "status": "PASS",
+      "structural_patch_sha256": "e34f53710a3f2d6f89bd4d52d483a70a84702ca8882a14eef546dde23dcf4695",
+      "solutal_patch_sha256": "e361940cbabb42b2ead17c267abb0930df429b7c768f6f6e159b137a66dc1d23",
+      "pair_sha256": "264adb6853ed3fe146312956aba0e405b191240ce7d489290b7b8be99a5c61b8",
+      "canonical_corpus_overlap": true
+    },
+    {
+      "sample_id": "positive|ESM3:annotation-site:b6b216ac7f401b9a",
+      "status": "PASS",
+      "structural_patch_sha256": "ab5fabbdbdc27c6ee4fb32b34ceadf93f6594e2dbb7bdf5e6fc788e71b7d2d1a",
+      "solutal_patch_sha256": "bff2acdf62062c30667c008dcb0f25aba999790f7097584cfd6f797c34b28889",
+      "pair_sha256": "8bc0d1d6a6f08f837c937493b36d9d7bbb6be9b57348b94ee2555a5d2033eb21",
+      "canonical_corpus_overlap": true
+    },
+    {
+      "sample_id": "positive|ESM3:annotation-site:c0913343ab666a5f",
+      "status": "PASS",
+      "structural_patch_sha256": "876afe8f366fa0c9626e963dc1c9bf0a269179b5084a56cff9aecea5ed1f4016",
+      "solutal_patch_sha256": "39d133b00224563a33e3292863a05d45af8e1d2510b7c26a0b0b642cb0cf75d2",
+      "pair_sha256": "3080711886a948d30d858b0bf331b1e6c366d619e77424207338e8929afc5956",
+      "canonical_corpus_overlap": true
+    },
+    {
+      "sample_id": "positive|ESM3:annotation-site:e8c88192a10fa74d",
+      "status": "PASS",
+      "structural_patch_sha256": "76544faa9068b1212e2224df2253b2824e2a3b9bec669b4e06fe73a2c53a4103",
+      "solutal_patch_sha256": "554b458cbd6237571734958b1ee3949bf284f41ab9b79229db251bb2be1b2077",
+      "pair_sha256": "3153fc8493a6a334b6da669fe69daf34950e5b70f83f2a3bb78501e81eaa6182",
+      "canonical_corpus_overlap": true
+    },
+    {
+      "sample_id": "positive|ESM3:annotation-site:edefb8faa424fa0f",
+      "status": "PASS",
+      "structural_patch_sha256": "2bef2a1851ca35cd36766f2e3d1c942f1996beed30e0fb89e08d3e3ad51f3cec",
+      "solutal_patch_sha256": "9fbf4306a0736eb8179327561102ce5a977289d356707d62b397625885ca4816",
+      "pair_sha256": "be1b401b6323a906da37bfaf52b32d394dd94cd0a8c2573c18a3e35eb6869ace",
+      "canonical_corpus_overlap": true
+    },
+    {
+      "sample_id": "background|ESM1|146|167|611",
+      "status": "PASS",
+      "structural_patch_sha256": "6a0ede69cf9883ad09cc9d358ce05294f80b11b68f80e65f7012189a8afc8cc1",
+      "solutal_patch_sha256": "51034f90981c880d626027464e3af9bafd97d5023cd4fdecb8368082e4cda2cb",
+      "pair_sha256": "bfadf1ad04e9438fac849fa54f664d9b72a6f22f908cd5a6497205cf87412197",
+      "canonical_corpus_overlap": false
+    },
+    {
+      "sample_id": "background|ESM1|146|37|546",
+      "status": "PASS",
+      "structural_patch_sha256": "e54188eae09e21562e93b0db7895716203f5b7994d1c7808f9f80da4d342b46b",
+      "solutal_patch_sha256": "55e264af395adc34ab2591e1041141629b536ab9bbb331fcb9b539df0b849446",
+      "pair_sha256": "1e4dee877cd4f6377bc3e9f1076d746565e3de84a837b13845785cee9c3b2272",
+      "canonical_corpus_overlap": false
+    },
+    {
+      "sample_id": "background|ESM1|146|817|481",
+      "status": "PASS",
+      "structural_patch_sha256": "1b233662cd82470e78aa9f2db8ee1f6f7e27869bc080bc81661cc5bd0a40995a",
+      "solutal_patch_sha256": "fb050fea68db267c768ea7ec8b83a55a501421ab5c492cc0e591fc55024493e9",
+      "pair_sha256": "a67a18e6df55a055684fe1b07f566f5f49012dc4570202af412689b3746c7369",
+      "canonical_corpus_overlap": false
+    },
+    {
+      "sample_id": "background|ESM1|146|947|676",
+      "status": "PASS",
+      "structural_patch_sha256": "8d3a4a03b724d00f3b189668dbfd009043bbe9aa0203ed0c07297f17477a6338",
+      "solutal_patch_sha256": "355163b15f5b7ab8c4cfed20ecdef7ecc304cd3d1ec1c63e92bd0a1de7d5ac5a",
+      "pair_sha256": "03881ccfed37c8f38ead829284f7a53fad1387179bd23fee6e0e8e0d5a227555",
+      "canonical_corpus_overlap": false
+    },
+    {
+      "sample_id": "positive|ESM3:annotation-site:5e9a4c2b4df0a4dd",
+      "status": "PASS",
+      "structural_patch_sha256": "5af4462ab2abb61a6ea87ab5835180a4f2e92d5ec79b9c73d042dace5dfb74ae",
+      "solutal_patch_sha256": "79fe830a06fb789d1bea6477fafb5330d4e9c39b80aa37d3f9810ea13db55e8d",
+      "pair_sha256": "cf57d8d5ad7c07a708379fad77ce8851f59eb476dd4a5c23a0e1c3c1d38549d1",
+      "canonical_corpus_overlap": true
+    },
+    {
+      "sample_id": "positive|ESM3:annotation-site:73e02d077c181e27",
+      "status": "PASS",
+      "structural_patch_sha256": "a94237ffe9cb8b9f035244e75e2756bf10c47c3ad21a0add084dd3517589bdf6",
+      "solutal_patch_sha256": "870d35d3dc7a8ef854b6878b436d61eeebaee9a97c66a1b7eba232e5fe96c9e9",
+      "pair_sha256": "5500565837c6f7e569f6fd22469bfd748056fff7b6143e97f19c4c8ca6b11ad5",
+      "canonical_corpus_overlap": true
+    },
+    {
+      "sample_id": "positive|ESM3:annotation-site:7bb50a0b75f78145",
+      "status": "PASS",
+      "structural_patch_sha256": "8409f10f4ab31cbc5722481d846f053c4a615e931f7160711b6ec9a42b931e3b",
+      "solutal_patch_sha256": "51d145ed7002903d92aac5becc8e162276097ac55164599d53bcf51d0bee5268",
+      "pair_sha256": "8ede0f0628ee3e0ae2aec600fde13a84443255f7e439e852cc42a4222e3bd21d",
+      "canonical_corpus_overlap": true
+    },
+    {
+      "sample_id": "positive|ESM3:annotation-site:ab91a579d35b7a8c",
+      "status": "PASS",
+      "structural_patch_sha256": "bf6330e123b26d97ad9947849e42c210873a62cf055caeede3135102b9621e3e",
+      "solutal_patch_sha256": "64511ee6358b398efc376de66f8c1e3ac60b0d5ebb9c2e7d4f0b33553b448c58",
+      "pair_sha256": "9bc2ce190157f5af44b51bbfaa34bc5293ea3de1df95c49b54b11f7779b2cfb2",
+      "canonical_corpus_overlap": true
+    },
+    {
+      "sample_id": "positive|ESM3:annotation-site:aea18fa3b37ada51",
+      "status": "PASS",
+      "structural_patch_sha256": "dd110f72e67e69f98d9647ba3349a165903f8731c684d2e8f1afaf65342610d7",
+      "solutal_patch_sha256": "b069a6233e9cfc183200ee803290a58c3b822e68f81887ae97568f98920889c2",
+      "pair_sha256": "065c5123fe86cb845e0dccf0949eebecc1a8a2a175253d0e841055e1bfd15b06",
+      "canonical_corpus_overlap": true
+    },
+    {
+      "sample_id": "positive|ESM3:annotation-site:dc8e4cc74e0dc7a3",
+      "status": "PASS",
+      "structural_patch_sha256": "600b5d901d78c7ec931587d4b49e5ccf182da0c4206d629d7a8c586db74a9fd9",
+      "solutal_patch_sha256": "ad2e30fb22e66eabf4070d0a38f6839fd148cfe582bfc78f57eea22f5fbde507",
+      "pair_sha256": "b89aebbd64df01da9dc7e10c1087203b5b95b0d52a2f9d752a99573ffbb91217",
+      "canonical_corpus_overlap": true
+    },
+    {
+      "sample_id": "positive|ESM3:annotation-site:e83161571f674407",
+      "status": "PASS",
+      "structural_patch_sha256": "9ef6732ebed6e6786ed6dea7656e790f4ec10a05def419371fa66af5636a6644",
+      "solutal_patch_sha256": "7dc7de33c3dbedae5822cb96e9e6a5d5dc9c6ff57d83844038c47abee104dc05",
+      "pair_sha256": "74fcc1b61b11aa2ffe389f1c530be60b26cfc774aa53bcab1e80fb888b7d9660",
+      "canonical_corpus_overlap": true
+    },
+    {
+      "sample_id": "background|ESM1|219|102|221",
+      "status": "PASS",
+      "structural_patch_sha256": "7efa42ec3bf12131c1e66bd2af71d752cebb4a5242c837fc410400bea1dc0de6",
+      "solutal_patch_sha256": "d7300f6b406a62384c2a3810950e2948079bd568a8f05fbb59f7a522dd1279d3",
+      "pair_sha256": "9550b902f597125ba3f617e6a05205110abaf6a946f75fac0204aa4e1d35d6c1",
+      "canonical_corpus_overlap": false
+    },
+    {
+      "sample_id": "background|ESM1|219|752|221",
+      "status": "PASS",
+      "structural_patch_sha256": "11b4a51bc4a316c9831e4053ba076839291b036b4391b281d7152064dc70925b",
+      "solutal_patch_sha256": "0169373598339ac11037a900a9896f783ca301119d599a9fc91ccca5f76c83bd",
+      "pair_sha256": "babad31efedfcb81e6ced65b01f04207854623575321a21b689b7ddeeee1bb25",
+      "canonical_corpus_overlap": false
+    },
+    {
+      "sample_id": "positive|ESM3:annotation-site:3eeab8e9efcb0d21",
+      "status": "PASS",
+      "structural_patch_sha256": "4c3607476d12084145ee459d3457c520a5650c55810c85350458d31b1ac469af",
+      "solutal_patch_sha256": "38923b772b13624ec0208a35296501793e15357017cdf445f274ca52e3a2f1a5",
+      "pair_sha256": "53570dd1c153ed62ef506b6c44e37bd687f72cd8e37d91a47c29161f7ef433ee",
+      "canonical_corpus_overlap": true
+    },
+    {
+      "sample_id": "positive|ESM3:annotation-site:8e517d7ffab44a8d",
+      "status": "PASS",
+      "structural_patch_sha256": "9ebb616a5c16c64cfef6fde5957647296f6f22e7aaeb0cd4481d90bc6c28d3aa",
+      "solutal_patch_sha256": "d3768f94819c918e16b8586382b5ea3f4d90c481a8b5471a347600db190d1c1f",
+      "pair_sha256": "c7eb874e3d37da4447f43dce6eb587c909184adbc7a6266f8d5dae1489f34752",
+      "canonical_corpus_overlap": true
+    },
+    {
+      "sample_id": "positive|ESM3:annotation-site:c726fa8942e518df",
+      "status": "PASS",
+      "structural_patch_sha256": "173a0418933aaba262688b5db5443ba6302a1479d4ea825df41a4da2ac215d53",
+      "solutal_patch_sha256": "1583b140e1bf977003f01e60c3d1c1044a515483f6d90edde106ff37a894bcc7",
+      "pair_sha256": "0a883b564ba1f99676efc5fa6c356ffdff16137426584ff7c2b157170a49648f",
+      "canonical_corpus_overlap": true
+    },
+    {
+      "sample_id": "background|ESM4|98|1012|675",
+      "status": "PASS",
+      "structural_patch_sha256": "04692e7c2ab36385c635c05ad38f388ce7ba5d6ba6d24d56d0a117ed5b337da7",
+      "solutal_patch_sha256": "6d5229f7fe10c1681f0dde1722dc014d49a12bf0480dc19ead8ae721b39e5778",
+      "pair_sha256": "f03089e48b6e0c6daf060cbbf78eaf5416e87aa915ef6f564a069c479abe6178",
+      "canonical_corpus_overlap": false
+    },
+    {
+      "sample_id": "background|ESM4|98|1142|610",
+      "status": "PASS",
+      "structural_patch_sha256": "856002ac46efc2f97bd89c896b5b22aae6251088bd29db20eaedf31ee2eeaca1",
+      "solutal_patch_sha256": "7890ff87f536f8b34179cf8cb37dd27128292034cd184a6b33e315f5ea681544",
+      "pair_sha256": "8c1ad3eb8a8ac84d852bb0a9543a12e1d86a6f619c3880194831c3915a1254c6",
+      "canonical_corpus_overlap": false
+    },
+    {
+      "sample_id": "background|ESM4|98|297|610",
+      "status": "PASS",
+      "structural_patch_sha256": "d4e76c0ac2414b7b512988d087456adae6a3dfe62e738dc6cecdc39fde6756d5",
+      "solutal_patch_sha256": "1133e4f49fa36f4a84cbd320dd06eb6c02fe88f45fca4b63414091fa069a8735",
+      "pair_sha256": "29bd14b9a7a8eb0a7fee7eff9b9a8dcd5a8a153cce81a90c9598690ff32661eb",
+      "canonical_corpus_overlap": false
+    },
+    {
+      "sample_id": "background|ESM4|98|37|285",
+      "status": "PASS",
+      "structural_patch_sha256": "c47a6961c210d5ce419269cc0c72316dfa02d6d4e194ff19524afc15be122d66",
+      "solutal_patch_sha256": "8560cf5873d13bf270bdfe97e615a7b9ab5cdb9d60897bb7f842786d888e2f17",
+      "pair_sha256": "a9037d20ebcd613b3bdbc694e9ffc497a9855b2e3cf7a75467ebe836bcc25541",
+      "canonical_corpus_overlap": false
+    },
+    {
+      "sample_id": "background|ESM4|98|492|480",
+      "status": "PASS",
+      "structural_patch_sha256": "2c74dc3dbfdd9069ea79f205646e2957e5503bbfe7fdee6c89e451593857a5a9",
+      "solutal_patch_sha256": "1d3f96200a519db1b9fb721d4aa362747bce49c9d54e5c19eb61b55495011420",
+      "pair_sha256": "ac7ba7951ec192df17ad11cfff9ea7223e0629e88d5d7c65b9a63b752b63e65f",
+      "canonical_corpus_overlap": false
+    },
+    {
+      "sample_id": "background|ESM4|98|622|610",
+      "status": "PASS",
+      "structural_patch_sha256": "c0b94bade1ac5156cdb78e7346d38b2aebb6fb46a399f3a59105ec1d0652ce9b",
+      "solutal_patch_sha256": "a939beaf5aae7b84bf3d604f1181e13e3df5c650a8964a857616f39373e45e46",
+      "pair_sha256": "26ff3ffc66e62cade57d4d2095cfd574a3a04743d49740ec2cacaa9e9df1af44",
+      "canonical_corpus_overlap": false
+    },
+    {
+      "sample_id": "background|ESM4|98|687|155",
+      "status": "PASS",
+      "structural_patch_sha256": "ec10b23f799507ba04bdf0a5ce5b2be1a040a9d872f5a5a21f430b0912a2c3b8",
+      "solutal_patch_sha256": "ca754f4315d9b87015a58fc03131f9d8380ee1e37b6a54b6d870c8011561878e",
+      "pair_sha256": "202b4d077fdce1f1739a70b71ea79375c0406d1ad62a0bcdeaa79de0d0326e81",
+      "canonical_corpus_overlap": false
+    },
+    {
+      "sample_id": "background|ESM4|98|752|675",
+      "status": "PASS",
+      "structural_patch_sha256": "a8040dffd1ac7f5bccf710a5e94179279498b17114c71275387c010c83dc5e51",
+      "solutal_patch_sha256": "2954a19d9e0f58b7e4f9590d4915be13664dad491b893c0d66ca39cb8b39c205",
+      "pair_sha256": "7b5ed0e0a32f8f9f5925465cc143982f927de1615f8cb1bea8818621cf6337ae",
+      "canonical_corpus_overlap": false
+    },
+    {
+      "sample_id": "background|ESM4|98|882|415",
+      "status": "PASS",
+      "structural_patch_sha256": "3110d0708d313b72d88553fa19b56f369319da0601752b0500d84c3e2fc4e3da",
+      "solutal_patch_sha256": "cd585ac8fed4262209e52d6b5230f42ce1de28d4fe6cd03714e6ee1c344f355a",
+      "pair_sha256": "84d88b6da01e9ba1b9e637c2dcd387fa5087fc488b34becfa3add9a028521523",
+      "canonical_corpus_overlap": false
+    },
+    {
+      "sample_id": "background|ESM4|98|882|610",
+      "status": "PASS",
+      "structural_patch_sha256": "ea5f905258dfc8d53a60aa41a4c9f637d0d2122fd9c72c068c5c00bd23407c87",
+      "solutal_patch_sha256": "93b19d301960d39a421cf1e1e00b2a12f9e63a5700c59d1d992868a408ac1430",
+      "pair_sha256": "aa97a0e40a10a72b8c4e74d8cbe75e7f123f1d05c069d2966a73ec83c415aeff",
+      "canonical_corpus_overlap": false
+    },
+    {
+      "sample_id": "background|ESM4|98|882|805",
+      "status": "PASS",
+      "structural_patch_sha256": "25495361fca9df0e28ed2c31ad94058b42d6ea49fb256c85d086564673e84ba4",
+      "solutal_patch_sha256": "e7be61e86c9f371dd3cea0ca99100c011685bf91820c22233a237e2971c34380",
+      "pair_sha256": "76e88de28424695b9c580474ca71df2012a6c384639982b7bbf53cae10b34c7a",
+      "canonical_corpus_overlap": false
+    },
+    {
+      "sample_id": "positive|ESM6:annotation-site:63498902ef491c68",
+      "status": "PASS",
+      "structural_patch_sha256": "eb31f451af77100caedad5241d37576ac76aa05af912922b758c97cb0d311f5e",
+      "solutal_patch_sha256": "04fe2e05ddceea811118e01005d8955e0c44fe71d5eb8962e37cf8f2593869ff",
+      "pair_sha256": "ede499c51e1e6cbfd5689b7b01c03a1f057db6279ad804ec4919394f1741ef54",
+      "canonical_corpus_overlap": true
+    },
+    {
+      "sample_id": "background|ESM4|197|1077|805",
+      "status": "PASS",
+      "structural_patch_sha256": "52b85ad4024607925830f549e1d87447f858918f10a870fd8a41a9820b40dd40",
+      "solutal_patch_sha256": "2559e09eaebe2ccaecb3affc751917eaee7396d790e0c88c9ee8a835d7b7c03d",
+      "pair_sha256": "dd492d5c37daf271a74501e3c40f7fd5a30e052117b703e3fef84938d63f6725",
+      "canonical_corpus_overlap": false
+    },
+    {
+      "sample_id": "background|ESM4|197|362|155",
+      "status": "PASS",
+      "structural_patch_sha256": "866844444326271464d5a3f8bd648250421aeeb18dde2b99b0de84cdc50342bc",
+      "solutal_patch_sha256": "91de97392e78391f11cb1876b85cd328c9b0b75c74b260d0dd192e58526627c5",
+      "pair_sha256": "a73fcb5aae4519262723381fb647d87503708780c708dc6b8c67e836c73f0a54",
+      "canonical_corpus_overlap": false
+    },
+    {
+      "sample_id": "background|ESM4|197|427|350",
+      "status": "PASS",
+      "structural_patch_sha256": "212c5b311f569a9479a7416d7ff3da17e6a2c78bd23414d525391b759c612667",
+      "solutal_patch_sha256": "635498221b453e76afc27bdff3216e2c1410f487507933ceae7e9fe9bb9543bf",
+      "pair_sha256": "9c293f3c9fd6fa8cd0553d71a15ea5d4640337005c43d917ba1ff61eea543925",
+      "canonical_corpus_overlap": false
+    },
+    {
+      "sample_id": "background|ESM4|197|492|415",
+      "status": "PASS",
+      "structural_patch_sha256": "c6e3dee5ce3f7660ae60a5870fbefbe100bdba05ad6ef66f8228da0f71459880",
+      "solutal_patch_sha256": "aa9f63ac49c31d734a1612860fd48f92732e5b1e143c4397a6f1f3c3cf4e1dc0",
+      "pair_sha256": "77eb5a006cf45afdb7ed558f0d80a6a5ae587407a77f85156f67d5e83d7fc140",
+      "canonical_corpus_overlap": false
+    },
+    {
+      "sample_id": "background|ESM4|197|492|805",
+      "status": "PASS",
+      "structural_patch_sha256": "7b0579e1361b5e5d2010b36f4062dbea52f34333ac15bbfaa2cc4602b841d29c",
+      "solutal_patch_sha256": "3c26fa864d7c0e02f91ffb134246d3ba784200bd4969fad52131dcf6f1134a4e",
+      "pair_sha256": "325e6060b992b1f27eac549ab22068e357bb8d82a4ec8699c73fb6a258eec6f9",
+      "canonical_corpus_overlap": false
+    },
+    {
+      "sample_id": "background|ESM4|197|752|545",
+      "status": "PASS",
+      "structural_patch_sha256": "2dc98f806537c68c281e83d9364e6a8f6e1a246bcf7a48f88ea3144740175fb6",
+      "solutal_patch_sha256": "12542809101f329f42f3be941cc0f8547fded8088cde1f23ddb64ca2c3f51977",
+      "pair_sha256": "4d5cd859e53605efb1a9466dc821a5b34407945d6b69650ec799cab3e132bd68",
+      "canonical_corpus_overlap": false
+    },
+    {
+      "sample_id": "positive|ESM6:annotation-site:33c1dc5c4466a022",
+      "status": "PASS",
+      "structural_patch_sha256": "197d2751826c434f712f23f8c597b17e0d03b8399784c882bc9e7c11aaf99237",
+      "solutal_patch_sha256": "397b7eb74b7d0ef9029ff3a41cc71e687cfcde4caa32eeadae42f2a679b05d0a",
+      "pair_sha256": "4a068c713050e0d17e615ba3c62b130c3eeed0296c17f2efb07274804594a4b3",
+      "canonical_corpus_overlap": true
+    },
+    {
+      "sample_id": "positive|ESM6:annotation-site:610a877237d31a5d",
+      "status": "PASS",
+      "structural_patch_sha256": "a3f0646c3bd6f548adbc4945eae1a99195f8210e2ac109221ad72e94562ae3a0",
+      "solutal_patch_sha256": "272f588dced8336a6df491cb416b387bfb301124ae8199715a74b51eab143418",
+      "pair_sha256": "9cfe1a84b7e3e2be22ca1ca41a7730bbf3a3ed609a4f81b6a50e82a329ff4fad",
+      "canonical_corpus_overlap": true
+    },
+    {
+      "sample_id": "positive|ESM6:annotation-site:7c58fc05ae40787e",
+      "status": "PASS",
+      "structural_patch_sha256": "198cfe665d7e59dee9113b524afa1627e1ec1b047bfb82eebe24704edb1572d8",
+      "solutal_patch_sha256": "d6bcc4c1b4af49109defa246a985b236a84d6cc86ad8d07ee098084f8e43b883",
+      "pair_sha256": "177575af8b164de54a1e454ee74022d85c7a0f25cc48564f99d7e09114f652ad",
+      "canonical_corpus_overlap": true
+    },
+    {
+      "sample_id": "positive|ESM6:annotation-site:8a86a50873360dcf",
+      "status": "PASS",
+      "structural_patch_sha256": "ed5b2524bbc258fd97760cda767cd8a2f91b3e91ecbe24a697a45e85666866f8",
+      "solutal_patch_sha256": "389712fc09ed664dadce37e2b67c748485323d798902af51ad29157b1fd2fd2b",
+      "pair_sha256": "6cb64ce6dfa89542024a502bf895217ce4c4ab4f3e8c2db2d55bcb5685bb39eb",
+      "canonical_corpus_overlap": true
+    },
+    {
+      "sample_id": "positive|ESM6:annotation-site:8acca343f57b1314",
+      "status": "PASS",
+      "structural_patch_sha256": "4dffee94c4d316e70cb226ddb1e48defabe1859b2e16748fe3a8fdb68f954a4c",
+      "solutal_patch_sha256": "3eaeda58b5e6b3c9338d2d7c75de3a47615478f640881923b98cb0b3b31684e9",
+      "pair_sha256": "ae8cb1705f741f38b8044fb957089a7f2d64bf991171b63c194a724334af5328",
+      "canonical_corpus_overlap": true
+    }
+  ],
+  "frames": [
+    {
+      "structural_source": "ESM1",
+      "solute_source": "ESM2",
+      "frame_index": 73,
+      "structural_sha256": "0209aef0e36c73b017063cbea4661f76ac0d24bd51631e11e1f41b9dae0cc2a5",
+      "solute_sha256": "c5518bf031ae0e18541ce2c72206a8d1e5a53e060ee990dccaeb0cbb5024874f"
+    },
+    {
+      "structural_source": "ESM1",
+      "solute_source": "ESM2",
+      "frame_index": 146,
+      "structural_sha256": "eccb91c1d66f500d892dfe1c204c494cfc0d1d3542174d5ae1efd921bff034e0",
+      "solute_sha256": "e581aee31e1084567151d42539cb1995d2ec789db30efd44af9200374f020908"
+    },
+    {
+      "structural_source": "ESM1",
+      "solute_source": "ESM2",
+      "frame_index": 219,
+      "structural_sha256": "eb22ec185b465b11abbd6ecbf38d558a9dd5ef8d19f256e42429d70b566f10bd",
+      "solute_sha256": "b50f56a6332e33bfb3e32a8c94694a39e6cce936370f4b5232d257d8e7d0d228"
+    },
+    {
+      "structural_source": "ESM4",
+      "solute_source": "ESM5",
+      "frame_index": 98,
+      "structural_sha256": "8e9ab504657f44d5f7252ff8a681a4c0007a4f0643f11cc26b171e989be75cc9",
+      "solute_sha256": "e4d51cf146c418faa9c5c97867a8cde76237e6a5086525b3db56ed0c68fa3c07"
+    },
+    {
+      "structural_source": "ESM4",
+      "solute_source": "ESM5",
+      "frame_index": 197,
+      "structural_sha256": "0446ff48d035f3f548d93253fbd9eac14536de0aeb477485b87b17dd647e8a57",
+      "solute_sha256": "d1a57d8f41dbe5b7de62ec7b8a4356cab1c0a67087aad9cbcfeded8a1c8b643f"
+    }
+  ],
+  "failure": null,
+  "implementation_hashes": {
+    "src/snbi_fragmentation/study2b_corpus.py": "f14b4246f96dfd59c5df9e5923ed9bafd0a9d60102c8c073844815cbcce69dbe",
+    "src/snbi_fragmentation/study2b_streaming.py": "4e2ae662362f6d4da3f82e67e4762b08b2846fda094e420ed928e213dccc8ec8",
+    "src/snbi_fragmentation/study2b_execution.py": "2cf2b045981e44514a0d3a46654a08fd9d6132a06f775230c58322d2ca744185",
+    "scripts/run_study2b.py": "bd728b69c7dd8fa3c0a1b5a81ba305191e2657b2eb56986f2d291faac69bd899",
+    "configs/authority/study2b.json": "684d78ca519c99c390bed3b9ac1de86738333fb592f30423b4410fafa926e3af",
+    "artifacts/evidence/STUDY2_B_CORPUS/STUDY2_B_PROTOCOL.md": "1997f682cd3d19e7010f05caf8d9f3432dd148dfb56c62c3de66a058f7832564",
+    "artifacts/evidence/STUDY2_B_CORPUS/STUDY2_B_CORPUS_SCHEMA.json": "c3f56e2c332800569fc4b3abd47897a28bf73dc7c3963e8055f3f6a6bb736a0d",
+    "artifacts/evidence/STUDY2_B_CORPUS/STUDY2_B_BACKGROUND_CONTRACT.md": "8108cdee172d159e92ae7f59ac6d6c2dfce7293e915b6414b700c2f43e5ae34b",
+    "artifacts/evidence/STUDY2_B_CORPUS/STUDY2_B_STORAGE_CONTRACT.md": "42894649434cd9a9ef5554c6f02e9f266c7ce7448ee20ba1ca6bf1cd0e2a5df9",
+    "artifacts/evidence/STUDY2_B_CORPUS/STUDY2_B_CLAIM_SCOPE.md": "850fa00cc1951cc9f84fdfd68a1b665984c38548c38e7f83cd9adb93d1fba1a6"
+  },
+  "scientific_study2b_runs": 0,
+  "ml_runs": 0,
+  "completed_at_utc": "2026-09-21T16:12:02.653204+00:00"
+}

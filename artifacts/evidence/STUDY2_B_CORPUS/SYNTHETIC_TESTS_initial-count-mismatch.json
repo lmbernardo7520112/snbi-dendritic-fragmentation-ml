@@ -1,0 +1,30 @@
+{
+  "status": "FAIL",
+  "tests": 99,
+  "expected": 97,
+  "passes": 99,
+  "skips": 0,
+  "failures": 0,
+  "errors": 0,
+  "suites": {
+    "corpus": 35,
+    "streaming": 25,
+    "execution": 37
+  },
+  "experimental_source_opens": 0,
+  "ml_runs": 0,
+  "local_prior_invocations": {
+    "corpus": [
+      35,
+      35
+    ],
+    "streaming": [
+      24,
+      25
+    ],
+    "execution": [
+      37
+    ]
+  },
+  "profile": "All Study2-B synthetic contracts; no historical scientific run"
+}

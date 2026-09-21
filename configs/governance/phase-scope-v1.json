@@ -767,6 +767,55 @@
         "git_mode": "100644",
         "path": "tests/test_study2a_tracking.py",
         "state": "TRACKED"
+      },
+      {
+        "blob_sha": "ab6d2959751af83db4a471131e107bb42e2fdb6b",
+        "classification": "TI3_ACTIVE",
+        "git_mode": "100644",
+        "path": "scripts/run_study2b.py",
+        "state": "TRACKED"
+      },
+      {
+        "blob_sha": "1ab8a2f6c002622591d8f9aaa91a660d7d0de728",
+        "classification": "TI3_ACTIVE",
+        "git_mode": "100644",
+        "path": "src/snbi_fragmentation/study2b_corpus.py",
+        "state": "TRACKED"
+      },
+      {
+        "blob_sha": "deda399628ee22dbdf29c1623b547d38ed7e78c3",
+        "classification": "TI3_ACTIVE",
+        "git_mode": "100644",
+        "path": "src/snbi_fragmentation/study2b_execution.py",
+        "state": "TRACKED"
+      },
+      {
+        "blob_sha": "7cef44fbe07c8d601aaf6c7a58eb09ae58ed2272",
+        "classification": "TI3_ACTIVE",
+        "git_mode": "100644",
+        "path": "src/snbi_fragmentation/study2b_streaming.py",
+        "state": "TRACKED"
+      },
+      {
+        "blob_sha": "7894cec1f26433e21f197895250c4f8933d5014a",
+        "classification": "TI3_ACTIVE",
+        "git_mode": "100644",
+        "path": "tests/test_study2b_corpus.py",
+        "state": "TRACKED"
+      },
+      {
+        "blob_sha": "2b50472d680f3fde089d5b86eac8fc4cece13c57",
+        "classification": "TI3_ACTIVE",
+        "git_mode": "100644",
+        "path": "tests/test_study2b_execution.py",
+        "state": "TRACKED"
+      },
+      {
+        "blob_sha": "3052162a7632e6b19312430b8a309d74ac1af5a2",
+        "classification": "TI3_ACTIVE",
+        "git_mode": "100644",
+        "path": "tests/test_study2b_streaming.py",
+        "state": "TRACKED"
       }
     ]
   },

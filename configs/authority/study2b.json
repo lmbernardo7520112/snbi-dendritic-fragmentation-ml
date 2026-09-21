@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "phase": "STUDY2_B",
+  "base_sha": "d4ef00bf1e1d84d49d4e3f2dce0d18f683598a4c",
+  "branch": "feat/study2b-dense-multimodal-corpus",
+  "sources": [
+    "ESM1",
+    "ESM2",
+    "ESM4",
+    "ESM5"
+  ],
+  "ml": false,
+  "human_review": false,
+  "scientific_runs_limit": 1,
+  "patch_side": 65,
+  "patch_radius": 32,
+  "channels": [
+    "STRUCTURAL_Y",
+    "RELATIVE_SOLUTE_FIELD_Y"
+  ],
+  "dtype": "uint8",
+  "max_patch_cache_bytes": 2147483648,
+  "max_temp_bytes": 268435456,
+  "min_free_disk_reserve_bytes": 53687091200,
+  "metadata_output_budget_bytes": 268435456,
+  "legacy_fixture_count": 50,
+  "expected_input_records": 27396,
+  "terminal_closes_authority": true,
+  "authority_sha256": "51795aef0a7494ee076f04174eea55b54170a77e358d427682b49570de974cfe",
+  "decoder_gate_authority_sha256": "b4aaa7af87d19b816a177d85e75fc5dd7b4ffa166617c1fac5b7b1358c3d52c6"
+}

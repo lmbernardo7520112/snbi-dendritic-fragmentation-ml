@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "review_scope": "Textual API, controller, streaming, schema, background/storage, import and preflight compatibility",
+  "independent_agents": [
+    "study2b_core",
+    "study2b_integration_audit"
+  ],
+  "before_historical_gate": [
+    "Support numerical equivalence and50fixtures inventory",
+    "Exact pilottextallowlist regression40PASS afteradmission",
+    "NoML imports and eightCIjobs contract"
+  ],
+  "scope_extension": "Seven newPython rows only; prior119rows byte-identical",
+  "synthetic_unique_final_cases": 100,
+  "historical_checksum_matches": 95,
+  "legacy_gate": {
+    "command": "PYTHONPATH=src .venv/bin/python -B scripts/run_study2b.py legacy",
+    "exit_code": 0,
+    "one_invocation": true,
+    "fixture50_matches": 50,
+    "overlap25_matches": 25,
+    "frames_delivered": 10,
+    "native_bytes": 19469052,
+    "source_auth_compressed_bytes": 108466048,
+    "no_intermediates_delivered": true,
+    "full_scientific_runs": 0
+  },
+  "partial_failure_limit": "If a write fails between payload and index, partial artifacts may have orphan payload; complete=false/BLOCKED and never advertised as valid."
+}

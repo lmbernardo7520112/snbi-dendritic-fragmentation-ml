@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "title": "Study2-B dense multimodal corpus contract",
+  "input_records": 27396,
+  "site_count": 87,
+  "container": {
+    "format": "HEADERLESS_C_CONTIGUOUS_UINT8",
+    "dtype": "uint8",
+    "shape": [
+      "VALID_PAIR_COUNT",
+      2,
+      65,
+      65
+    ],
+    "row_bytes": 8450,
+    "offset": 0,
+    "channel_order": [
+      "STRUCTURAL_Y",
+      "RELATIVE_SOLUTE_FIELD_Y"
+    ],
+    "array_order": [
+      "acquisition_id",
+      "frame_index",
+      "site_id",
+      "supervision_tier"
+    ]
+  },
+  "index": {
+    "records": "Exactly one per immutable input site_id/frame_index",
+    "required": [
+      "pair_id",
+      "site_id",
+      "acquisition_id",
+      "group_id",
+      "frame_index",
+      "experimental_time_s",
+      "canonical_center_xy_px",
+      "center_x",
+      "center_y",
+      "patch_xyxy",
+      "mapping_offset_xy",
+      "observation_state",
+      "supervision_tier",
+      "row_index",
+      "pair_status",
+      "structural_source_id",
+      "solutal_source_id",
+      "structural_patch_sha256",
+      "solutal_patch_sha256",
+      "pair_sha256",
+      "annotation_provenance",
+      "site_observation_count",
+      "site_supervised_observation_count",
+      "candidate_equal_site_weight"
+    ],
+    "valid_required": [
+      "structural_source_sha256",
+      "solutal_source_sha256",
+      "structural_frame_sha256",
+      "solutal_frame_sha256",
+      "method_freeze_sha",
+      "study2a_checkpoint"
+    ],
+    "row_index": "zero-based contiguous integer for VALID_PAIR; null otherwise",
+    "hashes": "SHA256 of C bytes patch0,patch1,and channel0+channel1; null for rejected support",
+    "pair_status": [
+      "VALID_PAIR",
+      "INVALID_STRUCTURAL_SUPPORT",
+      "INVALID_SOLUTAL_SUPPORT",
+      "INVALID_BOTH",
+      "DECODE_ERROR"
+    ],
+    "group_id": "acquisition_id|site_id",
+    "tiers": {
+      "DIRECT_VALID": "GOLD",
+      "TEMPORAL_SUPPORTED_AMBIGUOUS": "SILVER",
+      "PRE_FIRST_CONFIDENT_ANNOTATION": "UNLABELED_PRE",
+      "PERSISTENCE_EXPECTED_UNRESOLVED": "UNLABELED_PERSISTENCE"
+    },
+    "weight_denominator": "historical DIRECT_VALID+TEMPORAL_SUPPORTED_AMBIGUOUS for site before support admission; prospective only"
+  },
+  "background": {
+    "pixels_materialized": false,
+    "required": [
+      "acquisition_id",
+      "structural_source_id",
+      "solutal_source_id",
+      "frame_index",
+      "center_x",
+      "center_y",
+      "patch_xyxy",
+      "safety_xyxy",
+      "background_track_id",
+      "hash_rank",
+      "exclusion_status",
+      "minimum_exclusion_envelope_distance_px"
+    ],
+    "background_track_id": "acquisition_id|center_x|center_y",
+    "rank": "sha256(UTF8 STUDY2B_BACKGROUND_V1|track_id|frame_index)",
+    "no_quota": true,
+    "no_physical_absence_claim": true
+  },
+  "views": [
+    "GOLD_VIEW",
+    "GOLD_PLUS_SILVER_VIEW",
+    "UNLABELED_VIEW",
+    "FULL_LONGITUDINAL_VIEW"
+  ],
+  "ml_runs": 0
+}

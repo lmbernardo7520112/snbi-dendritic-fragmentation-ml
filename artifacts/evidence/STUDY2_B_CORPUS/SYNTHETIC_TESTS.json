@@ -1,0 +1,58 @@
+{
+  "status": "PASS",
+  "tests": 100,
+  "expected": 100,
+  "passes": 100,
+  "skips": 0,
+  "failures": 0,
+  "errors": 0,
+  "suites": {
+    "corpus": 35,
+    "streaming": 25,
+    "execution": 40
+  },
+  "experimental_source_opens": 0,
+  "ml_runs": 0,
+  "local_prior_invocations": {
+    "corpus": [
+      35,
+      35
+    ],
+    "streaming": [
+      24,
+      25
+    ],
+    "execution": [
+      37,
+      39,
+      40
+    ]
+  },
+  "profile": "100 unique final cases; corpus35/streaming25 prior combined profile preserved, affected execution40 rerun after exact text-path admission",
+  "reporting_reconciliation": {
+    "original_command_exit": 1,
+    "cause": "two controller tests were added before joint discovery; obsolete wrapper expected97 but actual unique99 all passed",
+    "actual_unittest_status": "OK",
+    "assertions_removed": false,
+    "science_or_source_access": false,
+    "test_rerun": false,
+    "evidence": "Original wrapper report and full actual99PASS log preserved; AST test IDs equal all99executed names"
+  },
+  "source_hashes": {
+    "scripts/run_study2b.py": "bd728b69c7dd8fa3c0a1b5a81ba305191e2657b2eb56986f2d291faac69bd899",
+    "src/snbi_fragmentation/study2b_corpus.py": "f14b4246f96dfd59c5df9e5923ed9bafd0a9d60102c8c073844815cbcce69dbe",
+    "src/snbi_fragmentation/study2b_execution.py": "2cf2b045981e44514a0d3a46654a08fd9d6132a06f775230c58322d2ca744185",
+    "src/snbi_fragmentation/study2b_streaming.py": "4e2ae662362f6d4da3f82e67e4762b08b2846fda094e420ed928e213dccc8ec8",
+    "tests/test_study2b_corpus.py": "b199cac445ea78c07f121ff4b65c5e177fab66bc41667cc9b01e32bb315284c4",
+    "tests/test_study2b_execution.py": "486673f788f10591bbe749e7662be45f8ba091231acad2533c59216b5621f7d4",
+    "tests/test_study2b_streaming.py": "8d53494283b34bb3b329f2788941447c6094f6324b321053f73f2fb758da85ce"
+  },
+  "focused_regression": {
+    "test": "test_text_reader_admits_only_exact_historical_pilot_metadata_path",
+    "execution_suite_tests": 40,
+    "exit_code": 0,
+    "log": "synthetic-execution-40.log.txt",
+    "log_sha256": "47213ef6e688d807300e874b00e56cc2c65c4929ed5d28fa87d6d91ca0211588",
+    "no_synthetic_execution_claim_for_combined100": "Unique cases aggregated across unchanged suites and focused rerun; not one100-test local invocation"
+  }
+}
