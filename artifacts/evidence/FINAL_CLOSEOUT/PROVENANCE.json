@@ -1,0 +1,3756 @@
+{
+  "schema": "SCIENTIFIC_PROGRAM_CLOSEOUT_PROVENANCE_V1",
+  "authority": {
+    "title": "STUDY2-D INTEGRATION + SCIENTIFIC PROGRAM FINAL CLOSEOUT",
+    "sha256": "68d483c54db23f687cac4a98fa77e6ce52930c6771860d32d7b0fcfa952e807a",
+    "text": "# STUDY2-D INTEGRATION + SCIENTIFIC PROGRAM FINAL CLOSEOUT\n#\n# NÃO executar nova ciência.\n# NÃO executar novo fit.\n# NÃO abrir pixels/caches experimentais.\n# NÃO reabrir DEV ou TEST.\n#\n# Objetivo:\n# integrar Study2-D após CI final verde e produzir o fechamento\n# documental canônico de todo o programa científico\n# Experiment 1 + Study2-A/B/C/D.\n#\n# CONVERGÊNCIA FINAL.\n\nREPOSITÓRIO:\nsnbi-dendritic-fragmentation-ml\n\nBRANCH ATUAL:\nfeat/study2d-data-centric-bridge\n\nCHECKPOINT D:\n5e6f2191cfb84b3b72892130782e2f406d5477fa\n\nREPAIR FREEZE:\n8c6221da3d03a498158d812be5c08848c37c2247\n\nORIGINAL METHOD FREEZE:\n21400de67d21901aeb8e5abac528689fc39169fa\n\n============================================================\n1. ESTADO CANÔNICO\n============================================================\n\nExigir:\n\nSTUDY2_D=PASS\nSCIENTIFIC_STUDY2D_RUNS=1\nDISTINCT_RF_FITS=100\nNEW_MODEL_SEARCH=false\nMODEL_SELECTION_REOPENED=false\n\nDEV_ROWS_READ=0\nTEST_ROWS_READ=0\nTEST_FEATURES_COMPUTED=0\n\nEXPERIMENTAL_SOURCE_OPENS=0\nFFMPEG_RUNS=0\n\nSTUDY2_ATTRIBUTION_ANALYSIS_COMPLETE=true\nSCIENTIFIC_PROGRAM_READY_FOR_FINAL_CLOSEOUT=true\n\nCI FINAL D:\n\n10/10 jobs\n110/110 steps\nSUCCESS\n\nCheckpoint:\n\n5e6f2191cfb84b3b72892130782e2f406d5477fa\n\nlocal = remote\n\nindex/tracked clean.\n\nPreservar integralmente:\n\nacademic-deliverable-build/\n\nNão adicionar automaticamente esse diretório ao Git.\n\n============================================================\n2. AUDITORIA PRÉ-INTEGRAÇÃO\n============================================================\n\nConfirmar:\n\n- checkpoint D evidence-only após ciência;\n- parent correto;\n- freeze operacional intacto;\n- freeze original preservado;\n- execução científica única;\n- 100/100 fits;\n- zero retry;\n- CI final verde;\n- nenhum fit posterior;\n- nenhum feature extraction posterior;\n- nenhuma leitura posterior de DEV/TEST;\n- nenhuma alteração científica depois do freeze.\n\nSe qualquer divergência:\n\nSTOP.\n\n============================================================\n3. PR STUDY2-D\n============================================================\n\nCriar Draft PR:\n\nfeat/study2d-data-centric-bridge\n→\nmain\n\nRegistrar claramente:\n\n- natureza pós-hoc Study2-D;\n- RF_REFERENCE/LBP20 fixos;\n- 10.907 TRAIN rows;\n- quatro folds;\n- 100 fits;\n- zero DEV/TEST;\n- resultados:\n\nGROUP DIVERSITY:\nK24−K17 =\n+0.0039043309111838507\ndescriptor =\nMIXED_POSITIVE\n\nTEMPORAL DENSITY:\nDALL−D1 =\n-0.059699310144642304\ndescriptor =\nNON_POSITIVE\n\nGROUP WEIGHTING:\nGROUP_EQUAL−OBSERVATION_EQUAL =\n-0.014586902176019961\ndescriptor =\nNO_GROUP_EQUAL_BENEFIT\n\nExplicitar:\n\nStudy2-D não alterou o pipeline final Study2-C.\n\n============================================================\n4. CI DO PR\n============================================================\n\nExigir todos os workflows/jobs previstos SUCCESS.\n\nNenhuma exceção.\n\nSe falhar:\n\nSTOP.\n\n============================================================\n5. MERGE STUDY2-D\n============================================================\n\nSe CI completamente verde:\n\nReady\n+\nmerge commit.\n\nNÃO squash.\nNÃO rebase.\n\nPreservar branch.\n\nRegistrar:\n\nSTUDY2_D_MERGE_SHA.\n\n============================================================\n6. POST-MERGE CI\n============================================================\n\nExigir novamente todos os jobs SUCCESS.\n\nSomente depois:\n\nFINAL_CLOSEOUT_READY=true.\n\n============================================================\n7. NOVA BRANCH DOCUMENTAL\n============================================================\n\nCriar:\n\ndocs/study2-final-closeout\n\nexatamente a partir do merge D.\n\nNenhuma ciência é autorizada nesta branch.\n\n============================================================\n8. FONTES AUTORIZADAS\n============================================================\n\nUsar somente evidências textuais/Git já existentes.\n\nNÃO abrir:\n\n- ESM1..6;\n- MP4;\n- caches binários;\n- patches;\n- tensors;\n- features persistidas;\n- modelos.\n\nNÃO executar:\n\n- planner;\n- scorer;\n- feature extractor;\n- RF;\n- CNN;\n- sklearn fit;\n- PyTorch training.\n\n============================================================\n9. DOCUMENTOS DE FECHAMENTO\n============================================================\n\nCriar:\n\ndocs/final-closeout/\n  SCIENTIFIC_PROGRAM_CLOSEOUT.md\n  CANONICAL_RESULTS.md\n  SCIENTIFIC_LIMITATIONS.md\n  FUTURE_RESEARCH_ROADMAP.md\n  COURSE_ALIGNMENT_FINAL.md\n  EVIDENCE_INDEX.md\n\ne:\n\nartifacts/evidence/FINAL_CLOSEOUT/\n  FINAL_STATE.json\n  CANONICAL_METRICS.json\n  PROVENANCE.json\n  verification.json\n\nTodos estritamente derivados das evidências existentes.\n\n============================================================\n10. SCIENTIFIC_PROGRAM_CLOSEOUT.md\n============================================================\n\nNarrar cronologicamente:\n\nA. Experimental domain\nB. Registration/geometry\nC. Weak-label resolution\nD. Experiment 1\nE. Study2-A dense annotation/tracking\nF. Study2-B dense multimodal corpus\nG. Study2-C group-aware benchmark\nH. Study2-D controlled attribution\nI. Final conclusions\nJ. Limitations\nK. Future work\n\nNão reescrever a história como se o caminho tivesse sido\nconhecido desde o início.\n\nPreservar resultados negativos e bloqueios relevantes.\n\n============================================================\n11. CONCLUSÃO CANÔNICA STUDY2-D\n============================================================\n\nRegistrar explicitamente:\n\n1. GROUP DIVERSITY\n\nK24 vs K17:\n\n+0.0039043309111838507 GMBA\n\n11/20 positive deltas.\n\nInterpretação:\n\nsmall mixed descriptive benefit.\n\nNão:\n\n\"more groups improve performance.\"\n\n2. TEMPORAL DENSITY\n\nD1 =\n0.7786692086875789\n\nDALL =\n0.7189698985429366\n\ndelta =\n-0.059699310144642304\n\nquatro folds negativos.\n\nInterpretação:\n\nunder the frozen LBP/RF protocol,\ndense temporal replication did not improve\ngroup-aware CV and reduced mean GMBA.\n\nNão:\n\n\"more frames are physically harmful.\"\n\n3. GROUP WEIGHTING\n\nGROUP_EQUAL =\n0.7189698985429366\n\nOBSERVATION_EQUAL =\n0.7335568007189566\n\ndelta =\n-0.014586902176019961\n\nquatro folds negativos.\n\nInterpretação:\n\ngroup-equal weighting provided no benefit\nunder the fixed dense setting.\n\nNão alterar retrospectivamente Study2-C.\n\n============================================================\n12. PRINCIPAL LIÇÃO DATA-CENTRIC\n============================================================\n\nRegistrar como conclusão metodológica:\n\nNUMBER_OF_ROWS\nis not equivalent to\nNUMBER_OF_INDEPENDENT_EXPERIMENTAL_UNITS.\n\nThousands of temporally correlated rows\ndid not outperform one representative observation\nper group under the fixed protocol.\n\nIsso é resultado do presente desenho,\nnão lei universal.\n\n============================================================\n13. EXPERIMENT 1 → STUDY2\n============================================================\n\nNão afirmar uma causa única para a melhoria.\n\nNão escrever decomposição percentual.\n\nRegistrar:\n\nStudy2-D failed to identify one single\npositive factor sufficient to explain the historical\nExperiment1 → Study2-C improvement.\n\nA melhoria deve ser tratada como compatível com\numa combinação/interação de mudanças data-centric\ne metodológicas.\n\n============================================================\n14. RESULTADO FINAL STUDY2-C\n============================================================\n\nPreservar como resultado final do pipeline selecionado:\n\nMODEL=\nRF_REFERENCE\n\nSUPERVISION=\nGOLD_PLUS_SILVER\n\nINPUT=\nSTRUCTURAL_Y +\nRELATIVE_SOLUTE_FIELD_Y\n\nTEST_GMBA=\n0.8449139278495638\n\nTEST_OBSERVATION_BA=\n0.8525933757278337\n\nTEST_STATE=\nCONSUMED\n\nNão reexecutar.\n\nNão reinterpretar Study2-D como nova seleção.\n\n============================================================\n15. LIMITAÇÕES OBRIGATÓRIAS\n============================================================\n\nPreservar explicitamente:\n\n- somente duas aquisições experimentais;\n- ausência de validação externa;\n- grupos temporalmente correlacionados;\n- weak labels gráficos publicados;\n- BACKGROUND_CANDIDATE não prova ausência física;\n- campos solutais relativos, não Bi absoluto;\n- sem causalidade física;\n- sem onset exato;\n- sem forecasting;\n- sem recall físico exaustivo;\n- sem significância universal;\n- Study2-D é pós-hoc;\n- folds e replicates não são experimentos independentes.\n\n============================================================\n16. FUTURE_RESEARCH_ROADMAP\n============================================================\n\nSeparar claramente:\n\nA. POSSÍVEL COM OS DADOS ATUAIS\n\n- representação temporal por site;\n- temporal aggregation;\n- sequence embeddings;\n- self-supervised representation learning;\n- human-assisted annotation verification;\n- positive-unlabeled formulations;\n- augmentation fisicamente restrita.\n\nB. NECESSÁRIO PARA GENERALIZAÇÃO EXTERNA\n\n- novas aquisições independentes;\n- novas replicatas experimentais;\n- novas composições/condições;\n- ground truth independente;\n- holdout experimental externo.\n\nNenhum item futuro deve ser executado agora.\n\n============================================================\n17. COURSE ALIGNMENT\n============================================================\n\nExplicar didaticamente a utilização pertinente de:\n\n- threshold/components;\n- Sobel/NGF;\n- LBP;\n- Random Forest;\n- CNN;\n- group-aware validation;\n- confusion matrix;\n- multimodal features.\n\nTambém registrar técnicas deliberadamente não usadas\nquando inadequadas:\n\n- Hough tuning;\n- Canny como input científico;\n- augmentation arbitrária;\n- architecture search.\n\n============================================================\n18. QUALIDADE ACADÊMICA\n============================================================\n\nNão criar nota ou ranking arbitrário.\n\nCaracterizar factual e metodologicamente:\n\n- real experimental data;\n- reproducible pipeline;\n- weak-supervision provenance;\n- multimodal comparison;\n- classical vs learned representation;\n- group-aware validation;\n- held-out TEST;\n- post-hoc attribution;\n- negative results preserved;\n- explicit claim boundaries.\n\n============================================================\n19. EVIDENCE INDEX\n============================================================\n\nMapear cada conclusão importante para:\n\n- fase;\n- commit/freeze;\n- arquivo de evidência;\n- métrica canônica;\n- status.\n\nNão recalcular resultados.\n\n============================================================\n20. FINAL STATE\n============================================================\n\nEmitir:\n\nEXPERIMENT_1=COMPLETE\nSTUDY2_A=PASS\nSTUDY2_B=PASS\nSTUDY2_C=PASS\nSTUDY2_D=PASS\n\nSELECTED_MODEL_FAMILY=RF_REFERENCE\nSELECTED_SUPERVISION_REGIME=GOLD_PLUS_SILVER\n\nSTUDY2_C_TEST_GMBA=\n0.8449139278495638\n\nSTUDY2_C_TEST_STATE=CONSUMED\n\nSTUDY2_ATTRIBUTION_ANALYSIS_COMPLETE=true\n\nSCIENTIFIC_PROGRAM_COMPLETE=true\n\nNEW_MODEL_SEARCH=false\nMODEL_SELECTION_REOPENED=false\nNEW_SCIENTIFIC_EXECUTION=false\n\nACADEMIC_DELIVERABLE_READY_FOR_BUILD=true\n\nCURRENT_AUTHORIZED_ACTIVITY=\nNONE_AWAITING_AUTHOR_DECISION\n\n============================================================\n21. COMMIT\n============================================================\n\nCriar um único checkpoint documental:\n\ndocs(study2): close scientific program\n\nNão incluir:\n\nacademic-deliverable-build/\n\nNão modificar ciência anterior.\n\nPush fast-forward.\n\nExecutar CI.\n\n============================================================\n22. REPORT FINAL\n============================================================\n\nRetornar:\n\n1. PR D;\n2. D merge SHA;\n3. post-merge CI;\n4. closeout branch;\n5. documentos criados;\n6. canonical Experiment1 result;\n7. Study2-C final result;\n8. Study2-D three contrasts;\n9. principal conclusão data-centric;\n10. limitações;\n11. roadmap futuro;\n12. evidence index;\n13. closeout SHA;\n14. CI final;\n15. Git state;\n16. terminal final.\n\nSTOP.\n\nNÃO CONSTRUIR O NOTEBOOK AINDA.\nNÃO EXECUTAR NOVA CIÊNCIA."
+  },
+  "base_commit": "5a158443fe00ace9b20f403f61f4a1aad21b285a",
+  "branch": "docs/study2-final-closeout",
+  "integration": {
+    "pr": {
+      "baseRefName": "main",
+      "headRefName": "feat/study2d-data-centric-bridge",
+      "headRefOid": "5e6f2191cfb84b3b72892130782e2f406d5477fa",
+      "isDraft": false,
+      "mergeCommit": {
+        "oid": "5a158443fe00ace9b20f403f61f4a1aad21b285a"
+      },
+      "mergedAt": "2026-09-21T21:56:55Z",
+      "number": 19,
+      "state": "MERGED",
+      "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/pull/19"
+    },
+    "sha": "5a158443fe00ace9b20f403f61f4a1aad21b285a",
+    "tree": "c7f1981df690787df9d55fcff0215dfbdbc5525c",
+    "parents": [
+      "ec97cb5041ef35d4f6c9a79b54d756d6fbee674f",
+      "5e6f2191cfb84b3b72892130782e2f406d5477fa"
+    ],
+    "method": "merge_commit",
+    "head_tree_identical": true,
+    "branch_deletion_requested": false
+  },
+  "preintegration_audit": {
+    "status": "PASS",
+    "checkpoint": "5e6f2191cfb84b3b72892130782e2f406d5477fa",
+    "parent": "8c6221da3d03a498158d812be5c08848c37c2247",
+    "original_freeze": "21400de67d21901aeb8e5abac528689fc39169fa",
+    "checkpoint_text_additions": 24,
+    "operational_hashes_verified": 72,
+    "original_blobs_verified": 52,
+    "post_run_hashes_verified": 97,
+    "scientific_runs_historical": 1,
+    "distinct_fits_historical": 100,
+    "reuses_historical": 8,
+    "retries_historical": 0,
+    "independent_review": "closeout_preintegration_audit; separate AI agent; not human certification",
+    "remote_ci": "PREINTEGRATION_CI.json",
+    "authorization_sha256": "68d483c54db23f687cac4a98fa77e6ce52930c6771860d32d7b0fcfa952e807a",
+    "scope": "existing texts and Git only; no metric recomputation; no experimental content; bounded audit, not universal syscall monitoring"
+  },
+  "preintegration_ci": {
+    "head_sha": "5e6f2191cfb84b3b72892130782e2f406d5477fa",
+    "runs": [
+      {
+        "conclusion": "success",
+        "createdAt": "2026-09-21T21:14:02Z",
+        "databaseId": 35655943283,
+        "event": "push",
+        "headSha": "5e6f2191cfb84b3b72892130782e2f406d5477fa",
+        "jobs": [
+          {
+            "completedAt": "2026-09-21T21:14:30Z",
+            "conclusion": "success",
+            "databaseId": 106519543792,
+            "name": "ti3-synthetic-contracts",
+            "startedAt": "2026-09-21T21:14:05Z",
+            "status": "completed",
+            "steps": [
+              {
+                "conclusion": "success",
+                "name": "Set up job",
+                "number": 1,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run actions/checkout@v4",
+                "number": 2,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Enforce tracked-data guard",
+                "number": 3,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run actions/setup-python@v5",
+                "number": 4,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Install pinned TI3 dependencies on CI",
+                "number": 5,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Verify all four exact dependency versions",
+                "number": 6,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Enforce composed phase scope and immutable historical custody",
+                "number": 7,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Require the declared C0 or C1 synthetic suite with zero skips",
+                "number": 8,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Post Run actions/setup-python@v5",
+                "number": 15,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@v4",
+                "number": 16,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Complete job",
+                "number": 17,
+                "status": "completed"
+              }
+            ],
+            "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35655943283/job/106519543792"
+          }
+        ],
+        "name": "ti3-synthetic-ci",
+        "startedAt": "2026-09-21T21:14:02Z",
+        "status": "completed",
+        "updatedAt": "2026-09-21T21:14:31Z",
+        "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35655943283"
+      },
+      {
+        "conclusion": "success",
+        "createdAt": "2026-09-21T21:14:02Z",
+        "databaseId": 35655943342,
+        "event": "push",
+        "headSha": "5e6f2191cfb84b3b72892130782e2f406d5477fa",
+        "jobs": [
+          {
+            "completedAt": "2026-09-21T21:14:24Z",
+            "conclusion": "success",
+            "databaseId": 106519543201,
+            "name": "study2a-synthetic-contracts",
+            "startedAt": "2026-09-21T21:14:05Z",
+            "status": "completed",
+            "steps": [
+              {
+                "conclusion": "success",
+                "name": "Set up job",
+                "number": 1,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run actions/checkout@v4",
+                "number": 2,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Enforce tracked-data guard",
+                "number": 3,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run actions/setup-python@v5",
+                "number": 4,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Install exact annotation synthetic dependencies",
+                "number": 5,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Verify exact dependency versions",
+                "number": 6,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Enforce composed scope and unchanged historical custody",
+                "number": 7,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Require Study2A and frozen A0 synthetic contracts without sources",
+                "number": 8,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Post Run actions/setup-python@v5",
+                "number": 15,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@v4",
+                "number": 16,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Complete job",
+                "number": 17,
+                "status": "completed"
+              }
+            ],
+            "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35655943342/job/106519543201"
+          }
+        ],
+        "name": "study2a-synthetic-ci",
+        "startedAt": "2026-09-21T21:14:02Z",
+        "status": "completed",
+        "updatedAt": "2026-09-21T21:14:25Z",
+        "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35655943342"
+      },
+      {
+        "conclusion": "success",
+        "createdAt": "2026-09-21T21:14:02Z",
+        "databaseId": 35655943452,
+        "event": "push",
+        "headSha": "5e6f2191cfb84b3b72892130782e2f406d5477fa",
+        "jobs": [
+          {
+            "completedAt": "2026-09-21T21:14:20Z",
+            "conclusion": "success",
+            "databaseId": 106519543538,
+            "name": "study2b-synthetic-contracts",
+            "startedAt": "2026-09-21T21:14:05Z",
+            "status": "completed",
+            "steps": [
+              {
+                "conclusion": "success",
+                "name": "Set up job",
+                "number": 1,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run actions/checkout@v4",
+                "number": 2,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Enforce tracked-data guard",
+                "number": 3,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run actions/setup-python@v5",
+                "number": 4,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Install exact annotation synthetic dependencies",
+                "number": 5,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Verify exact dependency versions",
+                "number": 6,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Enforce composed scope and unchanged historical custody",
+                "number": 7,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Require Study2B corpus and storage synthetic contracts without sources",
+                "number": 8,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Post Run actions/setup-python@v5",
+                "number": 15,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@v4",
+                "number": 16,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Complete job",
+                "number": 17,
+                "status": "completed"
+              }
+            ],
+            "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35655943452/job/106519543538"
+          }
+        ],
+        "name": "study2b-synthetic-ci",
+        "startedAt": "2026-09-21T21:14:02Z",
+        "status": "completed",
+        "updatedAt": "2026-09-21T21:14:21Z",
+        "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35655943452"
+      },
+      {
+        "conclusion": "success",
+        "createdAt": "2026-09-21T21:14:02Z",
+        "databaseId": 35655943335,
+        "event": "push",
+        "headSha": "5e6f2191cfb84b3b72892130782e2f406d5477fa",
+        "jobs": [
+          {
+            "completedAt": "2026-09-21T21:14:26Z",
+            "conclusion": "success",
+            "databaseId": 106519543142,
+            "name": "ti3b-synthetic-contracts",
+            "startedAt": "2026-09-21T21:14:05Z",
+            "status": "completed",
+            "steps": [
+              {
+                "conclusion": "success",
+                "name": "Set up job",
+                "number": 1,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run actions/checkout@v4",
+                "number": 2,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Enforce tracked-data guard",
+                "number": 3,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run actions/setup-python@v5",
+                "number": 4,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Install the four unchanged TI3 dependency pins",
+                "number": 5,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Enforce composed scope and frozen historical custody",
+                "number": 6,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Require multimodal synthetic contracts with zero skips",
+                "number": 7,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Post Run actions/setup-python@v5",
+                "number": 13,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@v4",
+                "number": 14,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Complete job",
+                "number": 15,
+                "status": "completed"
+              }
+            ],
+            "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35655943335/job/106519543142"
+          }
+        ],
+        "name": "ti3b-synthetic-ci",
+        "startedAt": "2026-09-21T21:14:02Z",
+        "status": "completed",
+        "updatedAt": "2026-09-21T21:14:27Z",
+        "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35655943335"
+      },
+      {
+        "conclusion": "success",
+        "createdAt": "2026-09-21T21:14:02Z",
+        "databaseId": 35655943376,
+        "event": "push",
+        "headSha": "5e6f2191cfb84b3b72892130782e2f406d5477fa",
+        "jobs": [
+          {
+            "completedAt": "2026-09-21T21:14:28Z",
+            "conclusion": "success",
+            "databaseId": 106519543039,
+            "name": "ti3d-final-synthetic-contracts",
+            "startedAt": "2026-09-21T21:14:05Z",
+            "status": "completed",
+            "steps": [
+              {
+                "conclusion": "success",
+                "name": "Set up job",
+                "number": 1,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run actions/checkout@v4",
+                "number": 2,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Enforce tracked-data guard",
+                "number": 3,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run actions/setup-python@v5",
+                "number": 4,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Install unchanged LBP RF pins with existing transitive constraints",
+                "number": 5,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Enforce composed scope and preserved historical custody",
+                "number": 6,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Require final evaluation synthetic contracts with zero skips",
+                "number": 7,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Post Run actions/setup-python@v5",
+                "number": 13,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@v4",
+                "number": 14,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Complete job",
+                "number": 15,
+                "status": "completed"
+              }
+            ],
+            "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35655943376/job/106519543039"
+          }
+        ],
+        "name": "ti3d-final-synthetic-ci",
+        "startedAt": "2026-09-21T21:14:02Z",
+        "status": "completed",
+        "updatedAt": "2026-09-21T21:14:28Z",
+        "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35655943376"
+      },
+      {
+        "conclusion": "success",
+        "createdAt": "2026-09-21T21:14:02Z",
+        "databaseId": 35655943359,
+        "event": "push",
+        "headSha": "5e6f2191cfb84b3b72892130782e2f406d5477fa",
+        "jobs": [
+          {
+            "completedAt": "2026-09-21T21:14:45Z",
+            "conclusion": "success",
+            "databaseId": 106519543070,
+            "name": "ti3c-synthetic-contracts",
+            "startedAt": "2026-09-21T21:14:05Z",
+            "status": "completed",
+            "steps": [
+              {
+                "conclusion": "success",
+                "name": "Set up job",
+                "number": 1,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run actions/checkout@v4",
+                "number": 2,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Enforce tracked-data guard",
+                "number": 3,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run actions/setup-python@v5",
+                "number": 4,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Install exact TI3-C CPU dependency pins",
+                "number": 5,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Enforce composed scope and unchanged historical custody",
+                "number": 6,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Require frozen CPU runtime and CNN synthetic contracts",
+                "number": 7,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Post Run actions/setup-python@v5",
+                "number": 13,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@v4",
+                "number": 14,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Complete job",
+                "number": 15,
+                "status": "completed"
+              }
+            ],
+            "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35655943359/job/106519543070"
+          }
+        ],
+        "name": "ti3c-synthetic-ci",
+        "startedAt": "2026-09-21T21:14:02Z",
+        "status": "completed",
+        "updatedAt": "2026-09-21T21:14:46Z",
+        "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35655943359"
+      },
+      {
+        "conclusion": "success",
+        "createdAt": "2026-09-21T21:14:02Z",
+        "databaseId": 35655943382,
+        "event": "push",
+        "headSha": "5e6f2191cfb84b3b72892130782e2f406d5477fa",
+        "jobs": [
+          {
+            "completedAt": "2026-09-21T21:14:45Z",
+            "conclusion": "success",
+            "databaseId": 106519543283,
+            "name": "study2c-synthetic-contracts",
+            "startedAt": "2026-09-21T21:14:05Z",
+            "status": "completed",
+            "steps": [
+              {
+                "conclusion": "success",
+                "name": "Set up job",
+                "number": 1,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run actions/checkout@v4",
+                "number": 2,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Enforce tracked-data guard",
+                "number": 3,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run actions/setup-python@v5",
+                "number": 4,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Install unchanged exact CPU dependency pins",
+                "number": 5,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Enforce composed scope and unchanged historical custody",
+                "number": 6,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Require frozen CPU runtime and CNN synthetic contracts",
+                "number": 7,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Post Run actions/setup-python@v5",
+                "number": 13,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@v4",
+                "number": 14,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Complete job",
+                "number": 15,
+                "status": "completed"
+              }
+            ],
+            "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35655943382/job/106519543283"
+          }
+        ],
+        "name": "study2c-synthetic-ci",
+        "startedAt": "2026-09-21T21:14:02Z",
+        "status": "completed",
+        "updatedAt": "2026-09-21T21:14:46Z",
+        "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35655943382"
+      },
+      {
+        "conclusion": "success",
+        "createdAt": "2026-09-21T21:14:02Z",
+        "databaseId": 35655943337,
+        "event": "push",
+        "headSha": "5e6f2191cfb84b3b72892130782e2f406d5477fa",
+        "jobs": [
+          {
+            "completedAt": "2026-09-21T21:14:55Z",
+            "conclusion": "success",
+            "databaseId": 106519542745,
+            "name": "study2d-synthetic-contracts",
+            "startedAt": "2026-09-21T21:14:05Z",
+            "status": "completed",
+            "steps": [
+              {
+                "conclusion": "success",
+                "name": "Set up job",
+                "number": 1,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run actions/checkout@v4",
+                "number": 2,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Enforce tracked-data guard",
+                "number": 3,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run actions/setup-python@v5",
+                "number": 4,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Install unchanged exact CPU dependency pins",
+                "number": 5,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Enforce composed scope and unchanged historical custody",
+                "number": 6,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Require fixed RF and TRAIN-only attribution contracts",
+                "number": 7,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Post Run actions/setup-python@v5",
+                "number": 13,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@v4",
+                "number": 14,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Complete job",
+                "number": 15,
+                "status": "completed"
+              }
+            ],
+            "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35655943337/job/106519542745"
+          }
+        ],
+        "name": "study2d-synthetic-ci",
+        "startedAt": "2026-09-21T21:14:02Z",
+        "status": "completed",
+        "updatedAt": "2026-09-21T21:14:55Z",
+        "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35655943337"
+      },
+      {
+        "conclusion": "success",
+        "createdAt": "2026-09-21T21:14:02Z",
+        "databaseId": 35655943527,
+        "event": "push",
+        "headSha": "5e6f2191cfb84b3b72892130782e2f406d5477fa",
+        "jobs": [
+          {
+            "completedAt": "2026-09-21T21:15:23Z",
+            "conclusion": "success",
+            "databaseId": 106519543530,
+            "name": "scientific-synthetic-contracts",
+            "startedAt": "2026-09-21T21:14:05Z",
+            "status": "completed",
+            "steps": [
+              {
+                "conclusion": "success",
+                "name": "Set up job",
+                "number": 1,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run actions/checkout@v4",
+                "number": 2,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Enforce tracked-data guard",
+                "number": 3,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run actions/setup-python@v5",
+                "number": 4,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Install exact synthetic-only dependencies on CI",
+                "number": 5,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Require five passing scientific synthetic tests and zero skips",
+                "number": 6,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Require TI2R-FRAG synthetic contracts and zero skips",
+                "number": 7,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Require DIRECT synthetic contracts and zero skips",
+                "number": 8,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Require SOLUTE DIRECT multimodal synthetic contracts and zero skips",
+                "number": 9,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Require SOLUTE V2 development calibration synthetic contracts and zero skips",
+                "number": 10,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Post Run actions/setup-python@v5",
+                "number": 19,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@v4",
+                "number": 20,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Complete job",
+                "number": 21,
+                "status": "completed"
+              }
+            ],
+            "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35655943527/job/106519543530"
+          },
+          {
+            "completedAt": "2026-09-21T21:14:28Z",
+            "conclusion": "success",
+            "databaseId": 106519543825,
+            "name": "deterministic-contracts",
+            "startedAt": "2026-09-21T21:14:05Z",
+            "status": "completed",
+            "steps": [
+              {
+                "conclusion": "success",
+                "name": "Set up job",
+                "number": 1,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run actions/checkout@v4",
+                "number": 2,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Enforce tracked-data guard",
+                "number": 3,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run actions/setup-python@v5",
+                "number": 4,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Compile source",
+                "number": 5,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Validate governed local bootstrap",
+                "number": 6,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Validate canonical manifest",
+                "number": 7,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Validate physical-time rule",
+                "number": 8,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Enforce TI-2 scope without experimental data",
+                "number": 9,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Verify tracked textual TI-2 checksums",
+                "number": 10,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run deterministic tests",
+                "number": 11,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Post Run actions/setup-python@v5",
+                "number": 21,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@v4",
+                "number": 22,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Complete job",
+                "number": 23,
+                "status": "completed"
+              }
+            ],
+            "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35655943527/job/106519543825"
+          }
+        ],
+        "name": "deterministic-ci",
+        "startedAt": "2026-09-21T21:14:02Z",
+        "status": "completed",
+        "updatedAt": "2026-09-21T21:15:24Z",
+        "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35655943527"
+      }
+    ]
+  },
+  "pull_request_ci": {
+    "status": "PASS",
+    "runs": [
+      {
+        "conclusion": "success",
+        "databaseId": 35659782181,
+        "event": "pull_request",
+        "headSha": "5e6f2191cfb84b3b72892130782e2f406d5477fa",
+        "jobs": [
+          {
+            "completedAt": "2026-09-21T21:54:27Z",
+            "conclusion": "success",
+            "databaseId": 106532026698,
+            "name": "ti3-synthetic-contracts",
+            "startedAt": "2026-09-21T21:54:02Z",
+            "status": "completed",
+            "steps": [
+              {
+                "conclusion": "success",
+                "name": "Set up job",
+                "number": 1,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run actions/checkout@v4",
+                "number": 2,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Enforce tracked-data guard",
+                "number": 3,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run actions/setup-python@v5",
+                "number": 4,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Install pinned TI3 dependencies on CI",
+                "number": 5,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Verify all four exact dependency versions",
+                "number": 6,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Enforce composed phase scope and immutable historical custody",
+                "number": 7,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Require the declared C0 or C1 synthetic suite with zero skips",
+                "number": 8,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Post Run actions/setup-python@v5",
+                "number": 15,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@v4",
+                "number": 16,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Complete job",
+                "number": 17,
+                "status": "completed"
+              }
+            ],
+            "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35659782181/job/106532026698"
+          }
+        ],
+        "status": "completed",
+        "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35659782181",
+        "workflowName": "ti3-synthetic-ci"
+      },
+      {
+        "conclusion": "success",
+        "databaseId": 35659782168,
+        "event": "pull_request",
+        "headSha": "5e6f2191cfb84b3b72892130782e2f406d5477fa",
+        "jobs": [
+          {
+            "completedAt": "2026-09-21T21:54:27Z",
+            "conclusion": "success",
+            "databaseId": 106532027044,
+            "name": "ti3d-final-synthetic-contracts",
+            "startedAt": "2026-09-21T21:54:02Z",
+            "status": "completed",
+            "steps": [
+              {
+                "conclusion": "success",
+                "name": "Set up job",
+                "number": 1,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run actions/checkout@v4",
+                "number": 2,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Enforce tracked-data guard",
+                "number": 3,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run actions/setup-python@v5",
+                "number": 4,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Install unchanged LBP RF pins with existing transitive constraints",
+                "number": 5,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Enforce composed scope and preserved historical custody",
+                "number": 6,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Require final evaluation synthetic contracts with zero skips",
+                "number": 7,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Post Run actions/setup-python@v5",
+                "number": 13,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@v4",
+                "number": 14,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Complete job",
+                "number": 15,
+                "status": "completed"
+              }
+            ],
+            "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35659782168/job/106532027044"
+          }
+        ],
+        "status": "completed",
+        "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35659782168",
+        "workflowName": "ti3d-final-synthetic-ci"
+      },
+      {
+        "conclusion": "success",
+        "databaseId": 35659782227,
+        "event": "pull_request",
+        "headSha": "5e6f2191cfb84b3b72892130782e2f406d5477fa",
+        "jobs": [
+          {
+            "completedAt": "2026-09-21T21:54:45Z",
+            "conclusion": "success",
+            "databaseId": 106532026876,
+            "name": "ti3c-synthetic-contracts",
+            "startedAt": "2026-09-21T21:54:02Z",
+            "status": "completed",
+            "steps": [
+              {
+                "conclusion": "success",
+                "name": "Set up job",
+                "number": 1,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run actions/checkout@v4",
+                "number": 2,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Enforce tracked-data guard",
+                "number": 3,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run actions/setup-python@v5",
+                "number": 4,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Install exact TI3-C CPU dependency pins",
+                "number": 5,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Enforce composed scope and unchanged historical custody",
+                "number": 6,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Require frozen CPU runtime and CNN synthetic contracts",
+                "number": 7,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Post Run actions/setup-python@v5",
+                "number": 13,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@v4",
+                "number": 14,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Complete job",
+                "number": 15,
+                "status": "completed"
+              }
+            ],
+            "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35659782227/job/106532026876"
+          }
+        ],
+        "status": "completed",
+        "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35659782227",
+        "workflowName": "ti3c-synthetic-ci"
+      },
+      {
+        "conclusion": "success",
+        "databaseId": 35659782164,
+        "event": "pull_request",
+        "headSha": "5e6f2191cfb84b3b72892130782e2f406d5477fa",
+        "jobs": [
+          {
+            "completedAt": "2026-09-21T21:54:52Z",
+            "conclusion": "success",
+            "databaseId": 106532027179,
+            "name": "study2d-synthetic-contracts",
+            "startedAt": "2026-09-21T21:54:03Z",
+            "status": "completed",
+            "steps": [
+              {
+                "conclusion": "success",
+                "name": "Set up job",
+                "number": 1,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run actions/checkout@v4",
+                "number": 2,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Enforce tracked-data guard",
+                "number": 3,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run actions/setup-python@v5",
+                "number": 4,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Install unchanged exact CPU dependency pins",
+                "number": 5,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Enforce composed scope and unchanged historical custody",
+                "number": 6,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Require fixed RF and TRAIN-only attribution contracts",
+                "number": 7,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Post Run actions/setup-python@v5",
+                "number": 13,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@v4",
+                "number": 14,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Complete job",
+                "number": 15,
+                "status": "completed"
+              }
+            ],
+            "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35659782164/job/106532027179"
+          }
+        ],
+        "status": "completed",
+        "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35659782164",
+        "workflowName": "study2d-synthetic-ci"
+      },
+      {
+        "conclusion": "success",
+        "databaseId": 35659782178,
+        "event": "pull_request",
+        "headSha": "5e6f2191cfb84b3b72892130782e2f406d5477fa",
+        "jobs": [
+          {
+            "completedAt": "2026-09-21T21:54:47Z",
+            "conclusion": "success",
+            "databaseId": 106532027966,
+            "name": "study2c-synthetic-contracts",
+            "startedAt": "2026-09-21T21:54:04Z",
+            "status": "completed",
+            "steps": [
+              {
+                "conclusion": "success",
+                "name": "Set up job",
+                "number": 1,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run actions/checkout@v4",
+                "number": 2,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Enforce tracked-data guard",
+                "number": 3,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run actions/setup-python@v5",
+                "number": 4,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Install unchanged exact CPU dependency pins",
+                "number": 5,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Enforce composed scope and unchanged historical custody",
+                "number": 6,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Require frozen CPU runtime and CNN synthetic contracts",
+                "number": 7,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Post Run actions/setup-python@v5",
+                "number": 13,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@v4",
+                "number": 14,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Complete job",
+                "number": 15,
+                "status": "completed"
+              }
+            ],
+            "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35659782178/job/106532027966"
+          }
+        ],
+        "status": "completed",
+        "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35659782178",
+        "workflowName": "study2c-synthetic-ci"
+      },
+      {
+        "conclusion": "success",
+        "databaseId": 35659782184,
+        "event": "pull_request",
+        "headSha": "5e6f2191cfb84b3b72892130782e2f406d5477fa",
+        "jobs": [
+          {
+            "completedAt": "2026-09-21T21:54:24Z",
+            "conclusion": "success",
+            "databaseId": 106532027019,
+            "name": "deterministic-contracts",
+            "startedAt": "2026-09-21T21:54:03Z",
+            "status": "completed",
+            "steps": [
+              {
+                "conclusion": "success",
+                "name": "Set up job",
+                "number": 1,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run actions/checkout@v4",
+                "number": 2,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Enforce tracked-data guard",
+                "number": 3,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run actions/setup-python@v5",
+                "number": 4,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Compile source",
+                "number": 5,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Validate governed local bootstrap",
+                "number": 6,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Validate canonical manifest",
+                "number": 7,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Validate physical-time rule",
+                "number": 8,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Enforce TI-2 scope without experimental data",
+                "number": 9,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Verify tracked textual TI-2 checksums",
+                "number": 10,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run deterministic tests",
+                "number": 11,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Post Run actions/setup-python@v5",
+                "number": 21,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@v4",
+                "number": 22,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Complete job",
+                "number": 23,
+                "status": "completed"
+              }
+            ],
+            "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35659782184/job/106532027019"
+          },
+          {
+            "completedAt": "2026-09-21T21:55:09Z",
+            "conclusion": "success",
+            "databaseId": 106532027412,
+            "name": "scientific-synthetic-contracts",
+            "startedAt": "2026-09-21T21:54:04Z",
+            "status": "completed",
+            "steps": [
+              {
+                "conclusion": "success",
+                "name": "Set up job",
+                "number": 1,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run actions/checkout@v4",
+                "number": 2,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Enforce tracked-data guard",
+                "number": 3,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run actions/setup-python@v5",
+                "number": 4,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Install exact synthetic-only dependencies on CI",
+                "number": 5,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Require five passing scientific synthetic tests and zero skips",
+                "number": 6,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Require TI2R-FRAG synthetic contracts and zero skips",
+                "number": 7,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Require DIRECT synthetic contracts and zero skips",
+                "number": 8,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Require SOLUTE DIRECT multimodal synthetic contracts and zero skips",
+                "number": 9,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Require SOLUTE V2 development calibration synthetic contracts and zero skips",
+                "number": 10,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Post Run actions/setup-python@v5",
+                "number": 19,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@v4",
+                "number": 20,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Complete job",
+                "number": 21,
+                "status": "completed"
+              }
+            ],
+            "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35659782184/job/106532027412"
+          }
+        ],
+        "status": "completed",
+        "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35659782184",
+        "workflowName": "deterministic-ci"
+      },
+      {
+        "conclusion": "success",
+        "databaseId": 35659782204,
+        "event": "pull_request",
+        "headSha": "5e6f2191cfb84b3b72892130782e2f406d5477fa",
+        "jobs": [
+          {
+            "completedAt": "2026-09-21T21:54:31Z",
+            "conclusion": "success",
+            "databaseId": 106532027171,
+            "name": "ti3b-synthetic-contracts",
+            "startedAt": "2026-09-21T21:54:03Z",
+            "status": "completed",
+            "steps": [
+              {
+                "conclusion": "success",
+                "name": "Set up job",
+                "number": 1,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run actions/checkout@v4",
+                "number": 2,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Enforce tracked-data guard",
+                "number": 3,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run actions/setup-python@v5",
+                "number": 4,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Install the four unchanged TI3 dependency pins",
+                "number": 5,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Enforce composed scope and frozen historical custody",
+                "number": 6,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Require multimodal synthetic contracts with zero skips",
+                "number": 7,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Post Run actions/setup-python@v5",
+                "number": 13,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@v4",
+                "number": 14,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Complete job",
+                "number": 15,
+                "status": "completed"
+              }
+            ],
+            "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35659782204/job/106532027171"
+          }
+        ],
+        "status": "completed",
+        "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35659782204",
+        "workflowName": "ti3b-synthetic-ci"
+      },
+      {
+        "conclusion": "success",
+        "databaseId": 35659782161,
+        "event": "pull_request",
+        "headSha": "5e6f2191cfb84b3b72892130782e2f406d5477fa",
+        "jobs": [
+          {
+            "completedAt": "2026-09-21T21:54:23Z",
+            "conclusion": "success",
+            "databaseId": 106532027054,
+            "name": "study2a-synthetic-contracts",
+            "startedAt": "2026-09-21T21:54:04Z",
+            "status": "completed",
+            "steps": [
+              {
+                "conclusion": "success",
+                "name": "Set up job",
+                "number": 1,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run actions/checkout@v4",
+                "number": 2,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Enforce tracked-data guard",
+                "number": 3,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run actions/setup-python@v5",
+                "number": 4,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Install exact annotation synthetic dependencies",
+                "number": 5,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Verify exact dependency versions",
+                "number": 6,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Enforce composed scope and unchanged historical custody",
+                "number": 7,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Require Study2A and frozen A0 synthetic contracts without sources",
+                "number": 8,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Post Run actions/setup-python@v5",
+                "number": 15,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@v4",
+                "number": 16,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Complete job",
+                "number": 17,
+                "status": "completed"
+              }
+            ],
+            "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35659782161/job/106532027054"
+          }
+        ],
+        "status": "completed",
+        "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35659782161",
+        "workflowName": "study2a-synthetic-ci"
+      },
+      {
+        "conclusion": "success",
+        "databaseId": 35659782211,
+        "event": "pull_request",
+        "headSha": "5e6f2191cfb84b3b72892130782e2f406d5477fa",
+        "jobs": [
+          {
+            "completedAt": "2026-09-21T21:54:24Z",
+            "conclusion": "success",
+            "databaseId": 106532027260,
+            "name": "study2b-synthetic-contracts",
+            "startedAt": "2026-09-21T21:54:02Z",
+            "status": "completed",
+            "steps": [
+              {
+                "conclusion": "success",
+                "name": "Set up job",
+                "number": 1,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run actions/checkout@v4",
+                "number": 2,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Enforce tracked-data guard",
+                "number": 3,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run actions/setup-python@v5",
+                "number": 4,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Install exact annotation synthetic dependencies",
+                "number": 5,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Verify exact dependency versions",
+                "number": 6,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Enforce composed scope and unchanged historical custody",
+                "number": 7,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Require Study2B corpus and storage synthetic contracts without sources",
+                "number": 8,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Post Run actions/setup-python@v5",
+                "number": 15,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@v4",
+                "number": 16,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Complete job",
+                "number": 17,
+                "status": "completed"
+              }
+            ],
+            "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35659782211/job/106532027260"
+          }
+        ],
+        "status": "completed",
+        "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35659782211",
+        "workflowName": "study2b-synthetic-ci"
+      }
+    ],
+    "workflow_count": 9,
+    "job_count": 10,
+    "step_count": 110
+  },
+  "post_merge_ci": {
+    "status": "PASS",
+    "runs": [
+      {
+        "conclusion": "success",
+        "databaseId": 35660051724,
+        "event": "push",
+        "headSha": "5a158443fe00ace9b20f403f61f4a1aad21b285a",
+        "jobs": [
+          {
+            "completedAt": "2026-09-21T21:57:58Z",
+            "conclusion": "success",
+            "databaseId": 106532886131,
+            "name": "study2a-synthetic-contracts",
+            "startedAt": "2026-09-21T21:57:41Z",
+            "status": "completed",
+            "steps": [
+              {
+                "conclusion": "success",
+                "name": "Set up job",
+                "number": 1,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run actions/checkout@v4",
+                "number": 2,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Enforce tracked-data guard",
+                "number": 3,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run actions/setup-python@v5",
+                "number": 4,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Install exact annotation synthetic dependencies",
+                "number": 5,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Verify exact dependency versions",
+                "number": 6,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Enforce composed scope and unchanged historical custody",
+                "number": 7,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Require Study2A and frozen A0 synthetic contracts without sources",
+                "number": 8,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Post Run actions/setup-python@v5",
+                "number": 15,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@v4",
+                "number": 16,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Complete job",
+                "number": 17,
+                "status": "completed"
+              }
+            ],
+            "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35660051724/job/106532886131"
+          }
+        ],
+        "status": "completed",
+        "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35660051724",
+        "workflowName": "study2a-synthetic-ci"
+      },
+      {
+        "conclusion": "success",
+        "databaseId": 35660051736,
+        "event": "push",
+        "headSha": "5a158443fe00ace9b20f403f61f4a1aad21b285a",
+        "jobs": [
+          {
+            "completedAt": "2026-09-21T21:57:21Z",
+            "conclusion": "success",
+            "databaseId": 106532884634,
+            "name": "study2b-synthetic-contracts",
+            "startedAt": "2026-09-21T21:57:03Z",
+            "status": "completed",
+            "steps": [
+              {
+                "conclusion": "success",
+                "name": "Set up job",
+                "number": 1,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run actions/checkout@v4",
+                "number": 2,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Enforce tracked-data guard",
+                "number": 3,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run actions/setup-python@v5",
+                "number": 4,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Install exact annotation synthetic dependencies",
+                "number": 5,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Verify exact dependency versions",
+                "number": 6,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Enforce composed scope and unchanged historical custody",
+                "number": 7,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Require Study2B corpus and storage synthetic contracts without sources",
+                "number": 8,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Post Run actions/setup-python@v5",
+                "number": 15,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@v4",
+                "number": 16,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Complete job",
+                "number": 17,
+                "status": "completed"
+              }
+            ],
+            "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35660051736/job/106532884634"
+          }
+        ],
+        "status": "completed",
+        "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35660051736",
+        "workflowName": "study2b-synthetic-ci"
+      },
+      {
+        "conclusion": "success",
+        "databaseId": 35660051720,
+        "event": "push",
+        "headSha": "5a158443fe00ace9b20f403f61f4a1aad21b285a",
+        "jobs": [
+          {
+            "completedAt": "2026-09-21T21:57:31Z",
+            "conclusion": "success",
+            "databaseId": 106532883857,
+            "name": "ti3b-synthetic-contracts",
+            "startedAt": "2026-09-21T21:57:05Z",
+            "status": "completed",
+            "steps": [
+              {
+                "conclusion": "success",
+                "name": "Set up job",
+                "number": 1,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run actions/checkout@v4",
+                "number": 2,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Enforce tracked-data guard",
+                "number": 3,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run actions/setup-python@v5",
+                "number": 4,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Install the four unchanged TI3 dependency pins",
+                "number": 5,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Enforce composed scope and frozen historical custody",
+                "number": 6,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Require multimodal synthetic contracts with zero skips",
+                "number": 7,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Post Run actions/setup-python@v5",
+                "number": 13,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@v4",
+                "number": 14,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Complete job",
+                "number": 15,
+                "status": "completed"
+              }
+            ],
+            "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35660051720/job/106532883857"
+          }
+        ],
+        "status": "completed",
+        "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35660051720",
+        "workflowName": "ti3b-synthetic-ci"
+      },
+      {
+        "conclusion": "success",
+        "databaseId": 35660051743,
+        "event": "push",
+        "headSha": "5a158443fe00ace9b20f403f61f4a1aad21b285a",
+        "jobs": [
+          {
+            "completedAt": "2026-09-21T21:57:29Z",
+            "conclusion": "success",
+            "databaseId": 106532886348,
+            "name": "deterministic-contracts",
+            "startedAt": "2026-09-21T21:57:05Z",
+            "status": "completed",
+            "steps": [
+              {
+                "conclusion": "success",
+                "name": "Set up job",
+                "number": 1,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run actions/checkout@v4",
+                "number": 2,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Enforce tracked-data guard",
+                "number": 3,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run actions/setup-python@v5",
+                "number": 4,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Compile source",
+                "number": 5,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Validate governed local bootstrap",
+                "number": 6,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Validate canonical manifest",
+                "number": 7,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Validate physical-time rule",
+                "number": 8,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Enforce TI-2 scope without experimental data",
+                "number": 9,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Verify tracked textual TI-2 checksums",
+                "number": 10,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run deterministic tests",
+                "number": 11,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Post Run actions/setup-python@v5",
+                "number": 21,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@v4",
+                "number": 22,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Complete job",
+                "number": 23,
+                "status": "completed"
+              }
+            ],
+            "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35660051743/job/106532886348"
+          },
+          {
+            "completedAt": "2026-09-21T21:58:34Z",
+            "conclusion": "success",
+            "databaseId": 106532886693,
+            "name": "scientific-synthetic-contracts",
+            "startedAt": "2026-09-21T21:57:05Z",
+            "status": "completed",
+            "steps": [
+              {
+                "conclusion": "success",
+                "name": "Set up job",
+                "number": 1,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run actions/checkout@v4",
+                "number": 2,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Enforce tracked-data guard",
+                "number": 3,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run actions/setup-python@v5",
+                "number": 4,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Install exact synthetic-only dependencies on CI",
+                "number": 5,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Require five passing scientific synthetic tests and zero skips",
+                "number": 6,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Require TI2R-FRAG synthetic contracts and zero skips",
+                "number": 7,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Require DIRECT synthetic contracts and zero skips",
+                "number": 8,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Require SOLUTE DIRECT multimodal synthetic contracts and zero skips",
+                "number": 9,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Require SOLUTE V2 development calibration synthetic contracts and zero skips",
+                "number": 10,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Post Run actions/setup-python@v5",
+                "number": 19,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@v4",
+                "number": 20,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Complete job",
+                "number": 21,
+                "status": "completed"
+              }
+            ],
+            "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35660051743/job/106532886693"
+          }
+        ],
+        "status": "completed",
+        "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35660051743",
+        "workflowName": "deterministic-ci"
+      },
+      {
+        "conclusion": "success",
+        "databaseId": 35660051937,
+        "event": "push",
+        "headSha": "5a158443fe00ace9b20f403f61f4a1aad21b285a",
+        "jobs": [
+          {
+            "completedAt": "2026-09-21T21:57:42Z",
+            "conclusion": "success",
+            "databaseId": 106532886114,
+            "name": "ti3c-synthetic-contracts",
+            "startedAt": "2026-09-21T21:57:05Z",
+            "status": "completed",
+            "steps": [
+              {
+                "conclusion": "success",
+                "name": "Set up job",
+                "number": 1,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run actions/checkout@v4",
+                "number": 2,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Enforce tracked-data guard",
+                "number": 3,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run actions/setup-python@v5",
+                "number": 4,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Install exact TI3-C CPU dependency pins",
+                "number": 5,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Enforce composed scope and unchanged historical custody",
+                "number": 6,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Require frozen CPU runtime and CNN synthetic contracts",
+                "number": 7,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Post Run actions/setup-python@v5",
+                "number": 13,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@v4",
+                "number": 14,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Complete job",
+                "number": 15,
+                "status": "completed"
+              }
+            ],
+            "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35660051937/job/106532886114"
+          }
+        ],
+        "status": "completed",
+        "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35660051937",
+        "workflowName": "ti3c-synthetic-ci"
+      },
+      {
+        "conclusion": "success",
+        "databaseId": 35660051775,
+        "event": "push",
+        "headSha": "5a158443fe00ace9b20f403f61f4a1aad21b285a",
+        "jobs": [
+          {
+            "completedAt": "2026-09-21T21:57:52Z",
+            "conclusion": "success",
+            "databaseId": 106532885586,
+            "name": "study2c-synthetic-contracts",
+            "startedAt": "2026-09-21T21:57:03Z",
+            "status": "completed",
+            "steps": [
+              {
+                "conclusion": "success",
+                "name": "Set up job",
+                "number": 1,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run actions/checkout@v4",
+                "number": 2,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Enforce tracked-data guard",
+                "number": 3,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run actions/setup-python@v5",
+                "number": 4,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Install unchanged exact CPU dependency pins",
+                "number": 5,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Enforce composed scope and unchanged historical custody",
+                "number": 6,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Require frozen CPU runtime and CNN synthetic contracts",
+                "number": 7,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Post Run actions/setup-python@v5",
+                "number": 13,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@v4",
+                "number": 14,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Complete job",
+                "number": 15,
+                "status": "completed"
+              }
+            ],
+            "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35660051775/job/106532885586"
+          }
+        ],
+        "status": "completed",
+        "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35660051775",
+        "workflowName": "study2c-synthetic-ci"
+      },
+      {
+        "conclusion": "success",
+        "databaseId": 35660051887,
+        "event": "push",
+        "headSha": "5a158443fe00ace9b20f403f61f4a1aad21b285a",
+        "jobs": [
+          {
+            "completedAt": "2026-09-21T21:57:58Z",
+            "conclusion": "success",
+            "databaseId": 106532887025,
+            "name": "study2d-synthetic-contracts",
+            "startedAt": "2026-09-21T21:57:06Z",
+            "status": "completed",
+            "steps": [
+              {
+                "conclusion": "success",
+                "name": "Set up job",
+                "number": 1,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run actions/checkout@v4",
+                "number": 2,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Enforce tracked-data guard",
+                "number": 3,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run actions/setup-python@v5",
+                "number": 4,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Install unchanged exact CPU dependency pins",
+                "number": 5,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Enforce composed scope and unchanged historical custody",
+                "number": 6,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Require fixed RF and TRAIN-only attribution contracts",
+                "number": 7,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Post Run actions/setup-python@v5",
+                "number": 13,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@v4",
+                "number": 14,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Complete job",
+                "number": 15,
+                "status": "completed"
+              }
+            ],
+            "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35660051887/job/106532887025"
+          }
+        ],
+        "status": "completed",
+        "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35660051887",
+        "workflowName": "study2d-synthetic-ci"
+      },
+      {
+        "conclusion": "success",
+        "databaseId": 35660051877,
+        "event": "push",
+        "headSha": "5a158443fe00ace9b20f403f61f4a1aad21b285a",
+        "jobs": [
+          {
+            "completedAt": "2026-09-21T21:57:35Z",
+            "conclusion": "success",
+            "databaseId": 106532887381,
+            "name": "ti3-synthetic-contracts",
+            "startedAt": "2026-09-21T21:57:07Z",
+            "status": "completed",
+            "steps": [
+              {
+                "conclusion": "success",
+                "name": "Set up job",
+                "number": 1,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run actions/checkout@v4",
+                "number": 2,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Enforce tracked-data guard",
+                "number": 3,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run actions/setup-python@v5",
+                "number": 4,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Install pinned TI3 dependencies on CI",
+                "number": 5,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Verify all four exact dependency versions",
+                "number": 6,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Enforce composed phase scope and immutable historical custody",
+                "number": 7,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Require the declared C0 or C1 synthetic suite with zero skips",
+                "number": 8,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Post Run actions/setup-python@v5",
+                "number": 15,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@v4",
+                "number": 16,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Complete job",
+                "number": 17,
+                "status": "completed"
+              }
+            ],
+            "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35660051877/job/106532887381"
+          }
+        ],
+        "status": "completed",
+        "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35660051877",
+        "workflowName": "ti3-synthetic-ci"
+      },
+      {
+        "conclusion": "success",
+        "databaseId": 35660051870,
+        "event": "push",
+        "headSha": "5a158443fe00ace9b20f403f61f4a1aad21b285a",
+        "jobs": [
+          {
+            "completedAt": "2026-09-21T21:57:35Z",
+            "conclusion": "success",
+            "databaseId": 106532888177,
+            "name": "ti3d-final-synthetic-contracts",
+            "startedAt": "2026-09-21T21:57:08Z",
+            "status": "completed",
+            "steps": [
+              {
+                "conclusion": "success",
+                "name": "Set up job",
+                "number": 1,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run actions/checkout@v4",
+                "number": 2,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Enforce tracked-data guard",
+                "number": 3,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Run actions/setup-python@v5",
+                "number": 4,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Install unchanged LBP RF pins with existing transitive constraints",
+                "number": 5,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Enforce composed scope and preserved historical custody",
+                "number": 6,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Require final evaluation synthetic contracts with zero skips",
+                "number": 7,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Post Run actions/setup-python@v5",
+                "number": 13,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@v4",
+                "number": 14,
+                "status": "completed"
+              },
+              {
+                "conclusion": "success",
+                "name": "Complete job",
+                "number": 15,
+                "status": "completed"
+              }
+            ],
+            "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35660051870/job/106532888177"
+          }
+        ],
+        "status": "completed",
+        "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35660051870",
+        "workflowName": "ti3d-final-synthetic-ci"
+      }
+    ],
+    "workflow_count": 9,
+    "job_count": 10,
+    "step_count": 110
+  },
+  "metric_projections": [
+    {
+      "target_pointer": "/experiment1/structural_rf_dev/balanced_accuracy",
+      "source_path": "artifacts/evidence/TI3_A_RESUME/c0r1-resume/results.json",
+      "source_pointer": "/baseline/evaluations/DEVELOPMENT/balanced_accuracy",
+      "source_sha256": "df314b2460481c4cab147da57b2948b37efc35f66d41fe5975764f01383864b0"
+    },
+    {
+      "target_pointer": "/experiment1/structural_rf_dev/confusion_matrix",
+      "source_path": "artifacts/evidence/TI3_A_RESUME/c0r1-resume/results.json",
+      "source_pointer": "/baseline/evaluations/DEVELOPMENT/confusion_matrix",
+      "source_sha256": "df314b2460481c4cab147da57b2948b37efc35f66d41fe5975764f01383864b0"
+    },
+    {
+      "target_pointer": "/experiment1/multimodal_rf_dev/balanced_accuracy",
+      "source_path": "artifacts/evidence/TI3_B_SOLUTAL/results.json",
+      "source_pointer": "/ablation/evaluations/DEVELOPMENT/balanced_accuracy",
+      "source_sha256": "7067350c7c6cafe384d1c3cfd55d78200d21b3179287fa55709335685fe5b962"
+    },
+    {
+      "target_pointer": "/experiment1/multimodal_rf_dev/confusion_matrix",
+      "source_path": "artifacts/evidence/TI3_B_SOLUTAL/results.json",
+      "source_pointer": "/ablation/evaluations/DEVELOPMENT/confusion_matrix",
+      "source_sha256": "7067350c7c6cafe384d1c3cfd55d78200d21b3179287fa55709335685fe5b962"
+    },
+    {
+      "target_pointer": "/experiment1/cnn_dev/balanced_accuracy",
+      "source_path": "artifacts/evidence/TI3_C_CNN/results.json",
+      "source_pointer": "/evaluations/DEVELOPMENT/balanced_accuracy",
+      "source_sha256": "f0407c84308d30e9b0c42373b14fc2594d05c675c8c10e33214c813db347582d"
+    },
+    {
+      "target_pointer": "/experiment1/cnn_dev/confusion_matrix",
+      "source_path": "artifacts/evidence/TI3_C_CNN/results.json",
+      "source_pointer": "/evaluations/DEVELOPMENT/confusion_matrix",
+      "source_sha256": "f0407c84308d30e9b0c42373b14fc2594d05c675c8c10e33214c813db347582d"
+    },
+    {
+      "target_pointer": "/experiment1/final/balanced_accuracy",
+      "source_path": "artifacts/evidence/TI3_D_FINAL/results.json",
+      "source_pointer": "/final_evaluation/balanced_accuracy",
+      "source_sha256": "777c131b2631264f58467f03b458c523fd6dd301e90182e21d18636b6ca1ab8f"
+    },
+    {
+      "target_pointer": "/experiment1/final/accuracy",
+      "source_path": "artifacts/evidence/TI3_D_FINAL/results.json",
+      "source_pointer": "/final_evaluation/accuracy",
+      "source_sha256": "777c131b2631264f58467f03b458c523fd6dd301e90182e21d18636b6ca1ab8f"
+    },
+    {
+      "target_pointer": "/experiment1/final/precision",
+      "source_path": "artifacts/evidence/TI3_D_FINAL/results.json",
+      "source_pointer": "/final_evaluation/precision",
+      "source_sha256": "777c131b2631264f58467f03b458c523fd6dd301e90182e21d18636b6ca1ab8f"
+    },
+    {
+      "target_pointer": "/experiment1/final/recall",
+      "source_path": "artifacts/evidence/TI3_D_FINAL/results.json",
+      "source_pointer": "/final_evaluation/recall",
+      "source_sha256": "777c131b2631264f58467f03b458c523fd6dd301e90182e21d18636b6ca1ab8f"
+    },
+    {
+      "target_pointer": "/experiment1/final/f1",
+      "source_path": "artifacts/evidence/TI3_D_FINAL/results.json",
+      "source_pointer": "/final_evaluation/f1",
+      "source_sha256": "777c131b2631264f58467f03b458c523fd6dd301e90182e21d18636b6ca1ab8f"
+    },
+    {
+      "target_pointer": "/experiment1/final/confusion_matrix",
+      "source_path": "artifacts/evidence/TI3_D_FINAL/results.json",
+      "source_pointer": "/final_evaluation/confusion_matrix",
+      "source_sha256": "777c131b2631264f58467f03b458c523fd6dd301e90182e21d18636b6ca1ab8f"
+    },
+    {
+      "target_pointer": "/experiment1/final/sample_count",
+      "source_path": "artifacts/evidence/TI3_D_FINAL/results.json",
+      "source_pointer": "/final_evaluation/sample_count",
+      "source_sha256": "777c131b2631264f58467f03b458c523fd6dd301e90182e21d18636b6ca1ab8f"
+    },
+    {
+      "target_pointer": "/experiment1/final/result_scope",
+      "source_path": "artifacts/evidence/TI3_D_FINAL/results.json",
+      "source_pointer": "/final_evaluation/result_scope",
+      "source_sha256": "777c131b2631264f58467f03b458c523fd6dd301e90182e21d18636b6ca1ab8f"
+    },
+    {
+      "target_pointer": "/experiment1/final_training_samples",
+      "source_path": "artifacts/evidence/TI3_D_FINAL/results.json",
+      "source_pointer": "/FINAL_TRAINING_SAMPLES",
+      "source_sha256": "777c131b2631264f58467f03b458c523fd6dd301e90182e21d18636b6ca1ab8f"
+    },
+    {
+      "target_pointer": "/experiment1/final_state",
+      "source_path": "artifacts/evidence/TI3_D_FINAL/results.json",
+      "source_pointer": "/ML_FINAL_TEST",
+      "source_sha256": "777c131b2631264f58467f03b458c523fd6dd301e90182e21d18636b6ca1ab8f"
+    },
+    {
+      "target_pointer": "/study2_a/STUDY2_A",
+      "source_path": "artifacts/evidence/STUDY2_A_ANNOTATION_MINING/terminal-state.json",
+      "source_pointer": "/STUDY2_A",
+      "source_sha256": "27cafb74533ba3443951cea3c03affbe7ab4917c2add8b122d73e18aaca6424a"
+    },
+    {
+      "target_pointer": "/study2_a/ANNOTATION_FRAMES_PROCESSED",
+      "source_path": "artifacts/evidence/STUDY2_A_ANNOTATION_MINING/terminal-state.json",
+      "source_pointer": "/ANNOTATION_FRAMES_PROCESSED",
+      "source_sha256": "27cafb74533ba3443951cea3c03affbe7ab4917c2add8b122d73e18aaca6424a"
+    },
+    {
+      "target_pointer": "/study2_a/UNIQUE_AUTO_GOLD_SITES",
+      "source_path": "artifacts/evidence/STUDY2_A_ANNOTATION_MINING/terminal-state.json",
+      "source_pointer": "/UNIQUE_AUTO_GOLD_SITES",
+      "source_sha256": "27cafb74533ba3443951cea3c03affbe7ab4917c2add8b122d73e18aaca6424a"
+    },
+    {
+      "target_pointer": "/study2_a/DIRECT_VALID_OBSERVATIONS",
+      "source_path": "artifacts/evidence/STUDY2_A_ANNOTATION_MINING/terminal-state.json",
+      "source_pointer": "/DIRECT_VALID_OBSERVATIONS",
+      "source_sha256": "27cafb74533ba3443951cea3c03affbe7ab4917c2add8b122d73e18aaca6424a"
+    },
+    {
+      "target_pointer": "/study2_a/AUTO_SILVER_OBSERVATIONS",
+      "source_path": "artifacts/evidence/STUDY2_A_ANNOTATION_MINING/terminal-state.json",
+      "source_pointer": "/AUTO_SILVER_OBSERVATIONS",
+      "source_sha256": "27cafb74533ba3443951cea3c03affbe7ab4917c2add8b122d73e18aaca6424a"
+    },
+    {
+      "target_pointer": "/study2_a/LEGACY_SITES_MAPPED",
+      "source_path": "artifacts/evidence/STUDY2_A_ANNOTATION_MINING/terminal-state.json",
+      "source_pointer": "/LEGACY_SITES_MAPPED",
+      "source_sha256": "27cafb74533ba3443951cea3c03affbe7ab4917c2add8b122d73e18aaca6424a"
+    },
+    {
+      "target_pointer": "/study2_a/CONFLICT_RECORDS",
+      "source_path": "artifacts/evidence/STUDY2_A_ANNOTATION_MINING/terminal-state.json",
+      "source_pointer": "/CONFLICT_RECORDS",
+      "source_sha256": "27cafb74533ba3443951cea3c03affbe7ab4917c2add8b122d73e18aaca6424a"
+    },
+    {
+      "target_pointer": "/study2_a/HUMAN_REVIEW_USED",
+      "source_path": "artifacts/evidence/STUDY2_A_ANNOTATION_MINING/terminal-state.json",
+      "source_pointer": "/HUMAN_REVIEW_USED",
+      "source_sha256": "27cafb74533ba3443951cea3c03affbe7ab4917c2add8b122d73e18aaca6424a"
+    },
+    {
+      "target_pointer": "/study2_a/HOUGH_EXECUTED",
+      "source_path": "artifacts/evidence/STUDY2_A_ANNOTATION_MINING/terminal-state.json",
+      "source_pointer": "/HOUGH_EXECUTED",
+      "source_sha256": "27cafb74533ba3443951cea3c03affbe7ab4917c2add8b122d73e18aaca6424a"
+    },
+    {
+      "target_pointer": "/study2_a/canonical_components",
+      "source_path": "artifacts/evidence/STUDY2_A_ANNOTATION_MINING/METRIC_SEMANTICS_RECONCILIATION.json",
+      "source_pointer": "/canonical_metrics",
+      "source_sha256": "245b713dc60f88b7450c479179dae520c2a9a19e5894b9b183fd3a489db713e8"
+    },
+    {
+      "target_pointer": "/study2_b/STUDY2_B",
+      "source_path": "artifacts/evidence/STUDY2_B_CORPUS/terminal-state.json",
+      "source_pointer": "/STUDY2_B",
+      "source_sha256": "92d366d257bbd8b3f2dcc1dc81c3e0db12dc8f54e237aa3da826bef8897bbe26"
+    },
+    {
+      "target_pointer": "/study2_b/SITE_FRAME_INPUT_RECORDS",
+      "source_path": "artifacts/evidence/STUDY2_B_CORPUS/terminal-state.json",
+      "source_pointer": "/SITE_FRAME_INPUT_RECORDS",
+      "source_sha256": "92d366d257bbd8b3f2dcc1dc81c3e0db12dc8f54e237aa3da826bef8897bbe26"
+    },
+    {
+      "target_pointer": "/study2_b/SITE_FRAME_ACCOUNTED_RECORDS",
+      "source_path": "artifacts/evidence/STUDY2_B_CORPUS/terminal-state.json",
+      "source_pointer": "/SITE_FRAME_ACCOUNTED_RECORDS",
+      "source_sha256": "92d366d257bbd8b3f2dcc1dc81c3e0db12dc8f54e237aa3da826bef8897bbe26"
+    },
+    {
+      "target_pointer": "/study2_b/VALID_MULTIMODAL_PAIRS",
+      "source_path": "artifacts/evidence/STUDY2_B_CORPUS/terminal-state.json",
+      "source_pointer": "/VALID_MULTIMODAL_PAIRS",
+      "source_sha256": "92d366d257bbd8b3f2dcc1dc81c3e0db12dc8f54e237aa3da826bef8897bbe26"
+    },
+    {
+      "target_pointer": "/study2_b/GOLD_VALID_PAIRS",
+      "source_path": "artifacts/evidence/STUDY2_B_CORPUS/terminal-state.json",
+      "source_pointer": "/GOLD_VALID_PAIRS",
+      "source_sha256": "92d366d257bbd8b3f2dcc1dc81c3e0db12dc8f54e237aa3da826bef8897bbe26"
+    },
+    {
+      "target_pointer": "/study2_b/SILVER_VALID_PAIRS",
+      "source_path": "artifacts/evidence/STUDY2_B_CORPUS/terminal-state.json",
+      "source_pointer": "/SILVER_VALID_PAIRS",
+      "source_sha256": "92d366d257bbd8b3f2dcc1dc81c3e0db12dc8f54e237aa3da826bef8897bbe26"
+    },
+    {
+      "target_pointer": "/study2_b/UNLABELED_VALID_PAIRS",
+      "source_path": "artifacts/evidence/STUDY2_B_CORPUS/terminal-state.json",
+      "source_pointer": "/UNLABELED_VALID_PAIRS",
+      "source_sha256": "92d366d257bbd8b3f2dcc1dc81c3e0db12dc8f54e237aa3da826bef8897bbe26"
+    },
+    {
+      "target_pointer": "/study2_b/INVALID_MULTIMODAL_PAIRS",
+      "source_path": "artifacts/evidence/STUDY2_B_CORPUS/terminal-state.json",
+      "source_pointer": "/INVALID_MULTIMODAL_PAIRS",
+      "source_sha256": "92d366d257bbd8b3f2dcc1dc81c3e0db12dc8f54e237aa3da826bef8897bbe26"
+    },
+    {
+      "target_pointer": "/study2_b/UNIQUE_SITES_WITH_VALID_PAIRS",
+      "source_path": "artifacts/evidence/STUDY2_B_CORPUS/terminal-state.json",
+      "source_pointer": "/UNIQUE_SITES_WITH_VALID_PAIRS",
+      "source_sha256": "92d366d257bbd8b3f2dcc1dc81c3e0db12dc8f54e237aa3da826bef8897bbe26"
+    },
+    {
+      "target_pointer": "/study2_b/BACKGROUND_CANDIDATES",
+      "source_path": "artifacts/evidence/STUDY2_B_CORPUS/terminal-state.json",
+      "source_pointer": "/BACKGROUND_CANDIDATES",
+      "source_sha256": "92d366d257bbd8b3f2dcc1dc81c3e0db12dc8f54e237aa3da826bef8897bbe26"
+    },
+    {
+      "target_pointer": "/study2_b/BACKGROUND_TRACKS",
+      "source_path": "artifacts/evidence/STUDY2_B_CORPUS/terminal-state.json",
+      "source_pointer": "/BACKGROUND_TRACKS",
+      "source_sha256": "92d366d257bbd8b3f2dcc1dc81c3e0db12dc8f54e237aa3da826bef8897bbe26"
+    },
+    {
+      "target_pointer": "/study2_b/ML_RUNS",
+      "source_path": "artifacts/evidence/STUDY2_B_CORPUS/terminal-state.json",
+      "source_pointer": "/ML_RUNS",
+      "source_sha256": "92d366d257bbd8b3f2dcc1dc81c3e0db12dc8f54e237aa3da826bef8897bbe26"
+    },
+    {
+      "target_pointer": "/study2_b/valid_tier_counts",
+      "source_path": "artifacts/evidence/STUDY2_B_CORPUS/results.json",
+      "source_pointer": "/valid_tier_counts",
+      "source_sha256": "d26235da166b604d19f5ae8319f547657d0f167144d79fd47f89485d7c2ff750"
+    },
+    {
+      "target_pointer": "/study2_b/pair_status_counts",
+      "source_path": "artifacts/evidence/STUDY2_B_CORPUS/results.json",
+      "source_pointer": "/pair_status_counts",
+      "source_sha256": "d26235da166b604d19f5ae8319f547657d0f167144d79fd47f89485d7c2ff750"
+    },
+    {
+      "target_pointer": "/study2_b/pair_coverage",
+      "source_path": "artifacts/evidence/STUDY2_B_CORPUS/results.json",
+      "source_pointer": "/metrics/PAIR_COVERAGE",
+      "source_sha256": "d26235da166b604d19f5ae8319f547657d0f167144d79fd47f89485d7c2ff750"
+    },
+    {
+      "target_pointer": "/study2_c/STUDY2_C",
+      "source_path": "artifacts/evidence/STUDY2_C_BENCHMARK/terminal-state.json",
+      "source_pointer": "/STUDY2_C",
+      "source_sha256": "87f549d79154c3d8d8ec5a64f3936fd9a849541f243c0df9ef22db8530e75025"
+    },
+    {
+      "target_pointer": "/study2_c/SELECTED_MODEL_FAMILY",
+      "source_path": "artifacts/evidence/STUDY2_C_BENCHMARK/terminal-state.json",
+      "source_pointer": "/SELECTED_MODEL_FAMILY",
+      "source_sha256": "87f549d79154c3d8d8ec5a64f3936fd9a849541f243c0df9ef22db8530e75025"
+    },
+    {
+      "target_pointer": "/study2_c/SELECTED_SUPERVISION_REGIME",
+      "source_path": "artifacts/evidence/STUDY2_C_BENCHMARK/terminal-state.json",
+      "source_pointer": "/SELECTED_SUPERVISION_REGIME",
+      "source_sha256": "87f549d79154c3d8d8ec5a64f3936fd9a849541f243c0df9ef22db8530e75025"
+    },
+    {
+      "target_pointer": "/study2_c/TEST_STATE",
+      "source_path": "artifacts/evidence/STUDY2_C_BENCHMARK/terminal-state.json",
+      "source_pointer": "/TEST_STATE",
+      "source_sha256": "87f549d79154c3d8d8ec5a64f3936fd9a849541f243c0df9ef22db8530e75025"
+    },
+    {
+      "target_pointer": "/study2_c/VALID_SUPPORT_SITES",
+      "source_path": "artifacts/evidence/STUDY2_C_BENCHMARK/terminal-state.json",
+      "source_pointer": "/VALID_SUPPORT_SITES",
+      "source_sha256": "87f549d79154c3d8d8ec5a64f3936fd9a849541f243c0df9ef22db8530e75025"
+    },
+    {
+      "target_pointer": "/study2_c/SELECTED_BACKGROUND_TRACKS",
+      "source_path": "artifacts/evidence/STUDY2_C_BENCHMARK/terminal-state.json",
+      "source_pointer": "/SELECTED_BACKGROUND_TRACKS",
+      "source_sha256": "87f549d79154c3d8d8ec5a64f3936fd9a849541f243c0df9ef22db8530e75025"
+    },
+    {
+      "target_pointer": "/study2_c/SCIENTIFIC_TEST_EVALUATIONS",
+      "source_path": "artifacts/evidence/STUDY2_C_BENCHMARK/terminal-state.json",
+      "source_pointer": "/SCIENTIFIC_TEST_EVALUATIONS",
+      "source_sha256": "87f549d79154c3d8d8ec5a64f3936fd9a849541f243c0df9ef22db8530e75025"
+    },
+    {
+      "target_pointer": "/study2_c/counts",
+      "source_path": "artifacts/evidence/STUDY2_C_BENCHMARK/RESULTS_SUMMARY.json",
+      "source_pointer": "/counts",
+      "source_sha256": "dde6ff49ac30dd9fb20a0e682090952ff304862a7ad80e8e5db9bc9810a242de"
+    },
+    {
+      "target_pointer": "/study2_c/development_family_scores",
+      "source_path": "artifacts/evidence/STUDY2_C_BENCHMARK/RESULTS_SUMMARY.json",
+      "source_pointer": "/selection/development_scores",
+      "source_sha256": "dde6ff49ac30dd9fb20a0e682090952ff304862a7ad80e8e5db9bc9810a242de"
+    },
+    {
+      "target_pointer": "/study2_c/test/primary_gmba",
+      "source_path": "artifacts/evidence/STUDY2_C_BENCHMARK/RESULTS_SUMMARY.json",
+      "source_pointer": "/test/primary_gmba",
+      "source_sha256": "dde6ff49ac30dd9fb20a0e682090952ff304862a7ad80e8e5db9bc9810a242de"
+    },
+    {
+      "target_pointer": "/study2_c/test/positive_group_macro_recall",
+      "source_path": "artifacts/evidence/STUDY2_C_BENCHMARK/RESULTS_SUMMARY.json",
+      "source_pointer": "/test/positive_group_macro_recall",
+      "source_sha256": "dde6ff49ac30dd9fb20a0e682090952ff304862a7ad80e8e5db9bc9810a242de"
+    },
+    {
+      "target_pointer": "/study2_c/test/negative_group_macro_specificity",
+      "source_path": "artifacts/evidence/STUDY2_C_BENCHMARK/RESULTS_SUMMARY.json",
+      "source_pointer": "/test/negative_group_macro_specificity",
+      "source_sha256": "dde6ff49ac30dd9fb20a0e682090952ff304862a7ad80e8e5db9bc9810a242de"
+    },
+    {
+      "target_pointer": "/study2_c/test/majority_vote_group_balanced_accuracy",
+      "source_path": "artifacts/evidence/STUDY2_C_BENCHMARK/RESULTS_SUMMARY.json",
+      "source_pointer": "/test/majority_vote_group_balanced_accuracy",
+      "source_sha256": "dde6ff49ac30dd9fb20a0e682090952ff304862a7ad80e8e5db9bc9810a242de"
+    },
+    {
+      "target_pointer": "/study2_c/test/observation",
+      "source_path": "artifacts/evidence/STUDY2_C_BENCHMARK/RESULTS_SUMMARY.json",
+      "source_pointer": "/test/observation",
+      "source_sha256": "dde6ff49ac30dd9fb20a0e682090952ff304862a7ad80e8e5db9bc9810a242de"
+    },
+    {
+      "target_pointer": "/study2_c/test/counts",
+      "source_path": "artifacts/evidence/STUDY2_C_BENCHMARK/RESULTS_SUMMARY.json",
+      "source_pointer": "/test/counts",
+      "source_sha256": "dde6ff49ac30dd9fb20a0e682090952ff304862a7ad80e8e5db9bc9810a242de"
+    },
+    {
+      "target_pointer": "/study2_c/test/per_acquisition",
+      "source_path": "artifacts/evidence/STUDY2_C_BENCHMARK/RESULTS_SUMMARY.json",
+      "source_pointer": "/test/per_acquisition",
+      "source_sha256": "dde6ff49ac30dd9fb20a0e682090952ff304862a7ad80e8e5db9bc9810a242de"
+    },
+    {
+      "target_pointer": "/study2_c/test/metric_semantics",
+      "source_path": "artifacts/evidence/STUDY2_C_BENCHMARK/RESULTS_SUMMARY.json",
+      "source_pointer": "/test/metric_semantics",
+      "source_sha256": "dde6ff49ac30dd9fb20a0e682090952ff304862a7ad80e8e5db9bc9810a242de"
+    },
+    {
+      "target_pointer": "/study2_c/silver/gold_development_reference",
+      "source_path": "artifacts/evidence/STUDY2_C_BENCHMARK/RESULTS_SUMMARY.json",
+      "source_pointer": "/silver/gold_development_reference",
+      "source_sha256": "dde6ff49ac30dd9fb20a0e682090952ff304862a7ad80e8e5db9bc9810a242de"
+    },
+    {
+      "target_pointer": "/study2_c/silver/gold_plus_silver_development",
+      "source_path": "artifacts/evidence/STUDY2_C_BENCHMARK/RESULTS_SUMMARY.json",
+      "source_pointer": "/silver/gold_plus_silver_development",
+      "source_sha256": "dde6ff49ac30dd9fb20a0e682090952ff304862a7ad80e8e5db9bc9810a242de"
+    },
+    {
+      "target_pointer": "/study2_c/silver/selected_supervision_regime",
+      "source_path": "artifacts/evidence/STUDY2_C_BENCHMARK/RESULTS_SUMMARY.json",
+      "source_pointer": "/silver/selected_supervision_regime",
+      "source_sha256": "dde6ff49ac30dd9fb20a0e682090952ff304862a7ad80e8e5db9bc9810a242de"
+    },
+    {
+      "target_pointer": "/study2_d/summary",
+      "source_path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/ATTRIBUTION_SUMMARY.json",
+      "source_pointer": "",
+      "source_sha256": "68785e0491008067823401a693f2758bff1690f8d29d1ddffc7d23b5b755067a"
+    },
+    {
+      "target_pointer": "/study2_d/group_diversity/levels/4/global",
+      "source_path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/GROUP_DIVERSITY_RESULTS.json",
+      "source_pointer": "/levels/4/global",
+      "source_sha256": "5491289f910a51039ac6fd17cea610b1b7297eb099a8a78fbd074733d3a73d3d"
+    },
+    {
+      "target_pointer": "/study2_d/group_diversity/levels/4/per_acquisition",
+      "source_path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/GROUP_DIVERSITY_RESULTS.json",
+      "source_pointer": "/levels/4/per_acquisition",
+      "source_sha256": "5491289f910a51039ac6fd17cea610b1b7297eb099a8a78fbd074733d3a73d3d"
+    },
+    {
+      "target_pointer": "/study2_d/group_diversity/levels/8/global",
+      "source_path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/GROUP_DIVERSITY_RESULTS.json",
+      "source_pointer": "/levels/8/global",
+      "source_sha256": "5491289f910a51039ac6fd17cea610b1b7297eb099a8a78fbd074733d3a73d3d"
+    },
+    {
+      "target_pointer": "/study2_d/group_diversity/levels/8/per_acquisition",
+      "source_path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/GROUP_DIVERSITY_RESULTS.json",
+      "source_pointer": "/levels/8/per_acquisition",
+      "source_sha256": "5491289f910a51039ac6fd17cea610b1b7297eb099a8a78fbd074733d3a73d3d"
+    },
+    {
+      "target_pointer": "/study2_d/group_diversity/levels/12/global",
+      "source_path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/GROUP_DIVERSITY_RESULTS.json",
+      "source_pointer": "/levels/12/global",
+      "source_sha256": "5491289f910a51039ac6fd17cea610b1b7297eb099a8a78fbd074733d3a73d3d"
+    },
+    {
+      "target_pointer": "/study2_d/group_diversity/levels/12/per_acquisition",
+      "source_path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/GROUP_DIVERSITY_RESULTS.json",
+      "source_pointer": "/levels/12/per_acquisition",
+      "source_sha256": "5491289f910a51039ac6fd17cea610b1b7297eb099a8a78fbd074733d3a73d3d"
+    },
+    {
+      "target_pointer": "/study2_d/group_diversity/levels/17/global",
+      "source_path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/GROUP_DIVERSITY_RESULTS.json",
+      "source_pointer": "/levels/17/global",
+      "source_sha256": "5491289f910a51039ac6fd17cea610b1b7297eb099a8a78fbd074733d3a73d3d"
+    },
+    {
+      "target_pointer": "/study2_d/group_diversity/levels/17/per_acquisition",
+      "source_path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/GROUP_DIVERSITY_RESULTS.json",
+      "source_pointer": "/levels/17/per_acquisition",
+      "source_sha256": "5491289f910a51039ac6fd17cea610b1b7297eb099a8a78fbd074733d3a73d3d"
+    },
+    {
+      "target_pointer": "/study2_d/group_diversity/levels/24/global",
+      "source_path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/GROUP_DIVERSITY_RESULTS.json",
+      "source_pointer": "/levels/24/global",
+      "source_sha256": "5491289f910a51039ac6fd17cea610b1b7297eb099a8a78fbd074733d3a73d3d"
+    },
+    {
+      "target_pointer": "/study2_d/group_diversity/levels/24/per_acquisition",
+      "source_path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/GROUP_DIVERSITY_RESULTS.json",
+      "source_pointer": "/levels/24/per_acquisition",
+      "source_sha256": "5491289f910a51039ac6fd17cea610b1b7297eb099a8a78fbd074733d3a73d3d"
+    },
+    {
+      "target_pointer": "/study2_d/group_diversity/contrasts",
+      "source_path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/GROUP_DIVERSITY_RESULTS.json",
+      "source_pointer": "/contrasts",
+      "source_sha256": "5491289f910a51039ac6fd17cea610b1b7297eb099a8a78fbd074733d3a73d3d"
+    },
+    {
+      "target_pointer": "/study2_d/group_diversity/descriptor",
+      "source_path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/GROUP_DIVERSITY_RESULTS.json",
+      "source_pointer": "/descriptor",
+      "source_sha256": "5491289f910a51039ac6fd17cea610b1b7297eb099a8a78fbd074733d3a73d3d"
+    },
+    {
+      "target_pointer": "/study2_d/group_diversity/descriptor_contrast",
+      "source_path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/GROUP_DIVERSITY_RESULTS.json",
+      "source_pointer": "/descriptor_contrast",
+      "source_sha256": "5491289f910a51039ac6fd17cea610b1b7297eb099a8a78fbd074733d3a73d3d"
+    },
+    {
+      "target_pointer": "/study2_d/group_diversity/distinct_fits",
+      "source_path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/GROUP_DIVERSITY_RESULTS.json",
+      "source_pointer": "/distinct_fits",
+      "source_sha256": "5491289f910a51039ac6fd17cea610b1b7297eb099a8a78fbd074733d3a73d3d"
+    },
+    {
+      "target_pointer": "/study2_d/temporal_density/levels/D1/global",
+      "source_path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/TEMPORAL_DENSITY_RESULTS.json",
+      "source_pointer": "/levels/D1/global",
+      "source_sha256": "00617321936cb46f73e12d92d2cce2d76d72eb7074ac9ece6e3e255c694a8e96"
+    },
+    {
+      "target_pointer": "/study2_d/temporal_density/levels/D1/per_acquisition",
+      "source_path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/TEMPORAL_DENSITY_RESULTS.json",
+      "source_pointer": "/levels/D1/per_acquisition",
+      "source_sha256": "00617321936cb46f73e12d92d2cce2d76d72eb7074ac9ece6e3e255c694a8e96"
+    },
+    {
+      "target_pointer": "/study2_d/temporal_density/levels/D3/global",
+      "source_path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/TEMPORAL_DENSITY_RESULTS.json",
+      "source_pointer": "/levels/D3/global",
+      "source_sha256": "00617321936cb46f73e12d92d2cce2d76d72eb7074ac9ece6e3e255c694a8e96"
+    },
+    {
+      "target_pointer": "/study2_d/temporal_density/levels/D3/per_acquisition",
+      "source_path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/TEMPORAL_DENSITY_RESULTS.json",
+      "source_pointer": "/levels/D3/per_acquisition",
+      "source_sha256": "00617321936cb46f73e12d92d2cce2d76d72eb7074ac9ece6e3e255c694a8e96"
+    },
+    {
+      "target_pointer": "/study2_d/temporal_density/levels/D5/global",
+      "source_path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/TEMPORAL_DENSITY_RESULTS.json",
+      "source_pointer": "/levels/D5/global",
+      "source_sha256": "00617321936cb46f73e12d92d2cce2d76d72eb7074ac9ece6e3e255c694a8e96"
+    },
+    {
+      "target_pointer": "/study2_d/temporal_density/levels/D5/per_acquisition",
+      "source_path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/TEMPORAL_DENSITY_RESULTS.json",
+      "source_pointer": "/levels/D5/per_acquisition",
+      "source_sha256": "00617321936cb46f73e12d92d2cce2d76d72eb7074ac9ece6e3e255c694a8e96"
+    },
+    {
+      "target_pointer": "/study2_d/temporal_density/levels/DALL/global",
+      "source_path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/TEMPORAL_DENSITY_RESULTS.json",
+      "source_pointer": "/levels/DALL/global",
+      "source_sha256": "00617321936cb46f73e12d92d2cce2d76d72eb7074ac9ece6e3e255c694a8e96"
+    },
+    {
+      "target_pointer": "/study2_d/temporal_density/levels/DALL/per_acquisition",
+      "source_path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/TEMPORAL_DENSITY_RESULTS.json",
+      "source_pointer": "/levels/DALL/per_acquisition",
+      "source_sha256": "00617321936cb46f73e12d92d2cce2d76d72eb7074ac9ece6e3e255c694a8e96"
+    },
+    {
+      "target_pointer": "/study2_d/temporal_density/contrasts",
+      "source_path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/TEMPORAL_DENSITY_RESULTS.json",
+      "source_pointer": "/contrasts",
+      "source_sha256": "00617321936cb46f73e12d92d2cce2d76d72eb7074ac9ece6e3e255c694a8e96"
+    },
+    {
+      "target_pointer": "/study2_d/temporal_density/descriptor",
+      "source_path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/TEMPORAL_DENSITY_RESULTS.json",
+      "source_pointer": "/descriptor",
+      "source_sha256": "00617321936cb46f73e12d92d2cce2d76d72eb7074ac9ece6e3e255c694a8e96"
+    },
+    {
+      "target_pointer": "/study2_d/temporal_density/descriptor_contrast",
+      "source_path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/TEMPORAL_DENSITY_RESULTS.json",
+      "source_pointer": "/descriptor_contrast",
+      "source_sha256": "00617321936cb46f73e12d92d2cce2d76d72eb7074ac9ece6e3e255c694a8e96"
+    },
+    {
+      "target_pointer": "/study2_d/temporal_density/new_distinct_fits",
+      "source_path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/TEMPORAL_DENSITY_RESULTS.json",
+      "source_pointer": "/new_distinct_fits",
+      "source_sha256": "00617321936cb46f73e12d92d2cce2d76d72eb7074ac9ece6e3e255c694a8e96"
+    },
+    {
+      "target_pointer": "/study2_d/temporal_density/conceptual_fits",
+      "source_path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/TEMPORAL_DENSITY_RESULTS.json",
+      "source_pointer": "/conceptual_fits",
+      "source_sha256": "00617321936cb46f73e12d92d2cce2d76d72eb7074ac9ece6e3e255c694a8e96"
+    },
+    {
+      "target_pointer": "/study2_d/temporal_density/reused_results",
+      "source_path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/TEMPORAL_DENSITY_RESULTS.json",
+      "source_pointer": "/reused_results",
+      "source_sha256": "00617321936cb46f73e12d92d2cce2d76d72eb7074ac9ece6e3e255c694a8e96"
+    },
+    {
+      "target_pointer": "/study2_d/group_weighting/levels/GROUP_EQUAL/global",
+      "source_path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/GROUP_WEIGHTING_RESULTS.json",
+      "source_pointer": "/levels/GROUP_EQUAL/global",
+      "source_sha256": "3f905d8d971d419bace9022c571d20c25a94f00550d4069da475ef0dfcf35e93"
+    },
+    {
+      "target_pointer": "/study2_d/group_weighting/levels/GROUP_EQUAL/per_acquisition",
+      "source_path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/GROUP_WEIGHTING_RESULTS.json",
+      "source_pointer": "/levels/GROUP_EQUAL/per_acquisition",
+      "source_sha256": "3f905d8d971d419bace9022c571d20c25a94f00550d4069da475ef0dfcf35e93"
+    },
+    {
+      "target_pointer": "/study2_d/group_weighting/levels/OBSERVATION_EQUAL/global",
+      "source_path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/GROUP_WEIGHTING_RESULTS.json",
+      "source_pointer": "/levels/OBSERVATION_EQUAL/global",
+      "source_sha256": "3f905d8d971d419bace9022c571d20c25a94f00550d4069da475ef0dfcf35e93"
+    },
+    {
+      "target_pointer": "/study2_d/group_weighting/levels/OBSERVATION_EQUAL/per_acquisition",
+      "source_path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/GROUP_WEIGHTING_RESULTS.json",
+      "source_pointer": "/levels/OBSERVATION_EQUAL/per_acquisition",
+      "source_sha256": "3f905d8d971d419bace9022c571d20c25a94f00550d4069da475ef0dfcf35e93"
+    },
+    {
+      "target_pointer": "/study2_d/group_weighting/contrast",
+      "source_path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/GROUP_WEIGHTING_RESULTS.json",
+      "source_pointer": "/contrast",
+      "source_sha256": "3f905d8d971d419bace9022c571d20c25a94f00550d4069da475ef0dfcf35e93"
+    },
+    {
+      "target_pointer": "/study2_d/group_weighting/descriptor",
+      "source_path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/GROUP_WEIGHTING_RESULTS.json",
+      "source_pointer": "/descriptor",
+      "source_sha256": "3f905d8d971d419bace9022c571d20c25a94f00550d4069da475ef0dfcf35e93"
+    },
+    {
+      "target_pointer": "/study2_d/group_weighting/descriptor_contrast",
+      "source_path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/GROUP_WEIGHTING_RESULTS.json",
+      "source_pointer": "/descriptor_contrast",
+      "source_sha256": "3f905d8d971d419bace9022c571d20c25a94f00550d4069da475ef0dfcf35e93"
+    },
+    {
+      "target_pointer": "/study2_d/group_weighting/new_distinct_fits",
+      "source_path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/GROUP_WEIGHTING_RESULTS.json",
+      "source_pointer": "/new_distinct_fits",
+      "source_sha256": "3f905d8d971d419bace9022c571d20c25a94f00550d4069da475ef0dfcf35e93"
+    },
+    {
+      "target_pointer": "/study2_d/group_weighting/reused_results",
+      "source_path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/GROUP_WEIGHTING_RESULTS.json",
+      "source_pointer": "/reused_results",
+      "source_sha256": "3f905d8d971d419bace9022c571d20c25a94f00550d4069da475ef0dfcf35e93"
+    },
+    {
+      "target_pointer": "/study2_d/terminal_counts/SCIENTIFIC_STUDY2D_RUNS",
+      "source_path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/terminal-state.json",
+      "source_pointer": "/SCIENTIFIC_STUDY2D_RUNS",
+      "source_sha256": "80f81bbf42f2993f509448468b2e4940bb39a8256dcbc10b9861e71a1732aab5"
+    },
+    {
+      "target_pointer": "/study2_d/terminal_counts/DISTINCT_RF_FITS",
+      "source_path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/terminal-state.json",
+      "source_pointer": "/DISTINCT_RF_FITS",
+      "source_sha256": "80f81bbf42f2993f509448468b2e4940bb39a8256dcbc10b9861e71a1732aab5"
+    },
+    {
+      "target_pointer": "/study2_d/terminal_counts/DEV_ROWS_READ",
+      "source_path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/terminal-state.json",
+      "source_pointer": "/DEV_ROWS_READ",
+      "source_sha256": "80f81bbf42f2993f509448468b2e4940bb39a8256dcbc10b9861e71a1732aab5"
+    },
+    {
+      "target_pointer": "/study2_d/terminal_counts/TEST_ROWS_READ",
+      "source_path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/terminal-state.json",
+      "source_pointer": "/TEST_ROWS_READ",
+      "source_sha256": "80f81bbf42f2993f509448468b2e4940bb39a8256dcbc10b9861e71a1732aab5"
+    },
+    {
+      "target_pointer": "/study2_d/terminal_counts/TEST_CACHE_ROWS_READ",
+      "source_path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/terminal-state.json",
+      "source_pointer": "/TEST_CACHE_ROWS_READ",
+      "source_sha256": "80f81bbf42f2993f509448468b2e4940bb39a8256dcbc10b9861e71a1732aab5"
+    },
+    {
+      "target_pointer": "/study2_d/terminal_counts/TEST_FEATURES_COMPUTED",
+      "source_path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/terminal-state.json",
+      "source_pointer": "/TEST_FEATURES_COMPUTED",
+      "source_sha256": "80f81bbf42f2993f509448468b2e4940bb39a8256dcbc10b9861e71a1732aab5"
+    },
+    {
+      "target_pointer": "/study2_d/terminal_counts/EXPERIMENTAL_SOURCE_OPENS",
+      "source_path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/terminal-state.json",
+      "source_pointer": "/EXPERIMENTAL_SOURCE_OPENS",
+      "source_sha256": "80f81bbf42f2993f509448468b2e4940bb39a8256dcbc10b9861e71a1732aab5"
+    },
+    {
+      "target_pointer": "/study2_d/terminal_counts/FFMPEG_RUNS",
+      "source_path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/terminal-state.json",
+      "source_pointer": "/FFMPEG_RUNS",
+      "source_sha256": "80f81bbf42f2993f509448468b2e4940bb39a8256dcbc10b9861e71a1732aab5"
+    },
+    {
+      "target_pointer": "/study2_d/terminal_counts/STATE",
+      "source_path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/terminal-state.json",
+      "source_pointer": "/STATE",
+      "source_sha256": "80f81bbf42f2993f509448468b2e4940bb39a8256dcbc10b9861e71a1732aab5"
+    }
+  ],
+  "projection_method": "Values copied from exact JSON pointers; no scorer, arithmetic recomputation, prediction replay, scientific imports or experimental data access.",
+  "review_method": "Separate AI agents and principal agent; no claim of human or institutional certification.",
+  "historical_sources": [
+    {
+      "path": "README.md",
+      "bytes": 13528,
+      "sha256": "6474b51cec8d95eaf4ff791e6db1bf5ded09339357644a2415299d1a86359404",
+      "git_blob": "b1e6a8e5e06ecf67aea47e2cbd04e2c845a53d27",
+      "authenticated_at_commit": "5a158443fe00ace9b20f403f61f4a1aad21b285a"
+    },
+    {
+      "path": "artifacts/evidence/G1/modalities-report.json",
+      "bytes": 1003,
+      "sha256": "55f07b068dc2acc3d0b4424eabc3e9037c0c4d96fb5d7d992cf9c94a7fe1d86f",
+      "git_blob": "4377df66559ab7fb3becfb9c935a4b4416ccb5bc",
+      "authenticated_at_commit": "5a158443fe00ace9b20f403f61f4a1aad21b285a"
+    },
+    {
+      "path": "artifacts/evidence/G2_TEMP/temporal-correspondence-report.json",
+      "bytes": 3551,
+      "sha256": "c1ae60c51f9970c67730704d82e475f6eabfe20c7f69602c0e598581e5d7ca24",
+      "git_blob": "20029579373b4b704bbdcfe9f12157630681be0f",
+      "authenticated_at_commit": "5a158443fe00ace9b20f403f61f4a1aad21b285a"
+    },
+    {
+      "path": "artifacts/evidence/G3/calibration-report.json",
+      "bytes": 6473,
+      "sha256": "4a2acb836ddc391072d96e5d00946189da3cc3e515df9d136ddb36dfbdef6864",
+      "git_blob": "ec8e2d6332823f2f732791e2c37f43e6df584d84",
+      "authenticated_at_commit": "5a158443fe00ace9b20f403f61f4a1aad21b285a"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_A_ANNOTATION_MINING/METRIC_SEMANTICS_RECONCILIATION.json",
+      "bytes": 22137,
+      "sha256": "245b713dc60f88b7450c479179dae520c2a9a19e5894b9b183fd3a489db713e8",
+      "git_blob": "15aec0065e1115a33252bf00bbc2dcada46f3425",
+      "authenticated_at_commit": "5a158443fe00ace9b20f403f61f4a1aad21b285a"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_A_ANNOTATION_MINING/METRIC_SEMANTICS_RECONCILIATION.md",
+      "bytes": 8299,
+      "sha256": "6cd9331d5381bc9374e595b967dd741b09e48844b0f01f0ebc9c2ff879380249",
+      "git_blob": "76f50e6b75750ad0cfc03e51733a03125c7ff8ea",
+      "authenticated_at_commit": "5a158443fe00ace9b20f403f61f4a1aad21b285a"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_A_ANNOTATION_MINING/execution-report.md",
+      "bytes": 12524,
+      "sha256": "0ded6310093c3732c44cb17dfbbf5c49ece9cc39fdd54637c8fe5ebe596392f3",
+      "git_blob": "47b18e7cf5416825badc2603e939417305e3f669",
+      "authenticated_at_commit": "5a158443fe00ace9b20f403f61f4a1aad21b285a"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_A_ANNOTATION_MINING/terminal-state.json",
+      "bytes": 798,
+      "sha256": "27cafb74533ba3443951cea3c03affbe7ab4917c2add8b122d73e18aaca6424a",
+      "git_blob": "d22e4f7d640f5718f2849b08e5554b6c6428399c",
+      "authenticated_at_commit": "5a158443fe00ace9b20f403f61f4a1aad21b285a"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_B_CORPUS/INTEGRATION_AUDIT.json",
+      "bytes": 61303,
+      "sha256": "007da6ad73cb35bf35bec2738490a8f31f3bd75410cb6451a3abb0cacea13580",
+      "git_blob": "4248af02ec6acc1b01ade55324afe5963e06a3c1",
+      "authenticated_at_commit": "5a158443fe00ace9b20f403f61f4a1aad21b285a"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_B_CORPUS/QUALITY_REPORT.md",
+      "bytes": 4302,
+      "sha256": "013095fdc418dd0aea9ee5fb275ea524ed0d6c08bff34dacef2138b8a01a9122",
+      "git_blob": "27819a4afd385ced5a65f14e47d0070be409627d",
+      "authenticated_at_commit": "5a158443fe00ace9b20f403f61f4a1aad21b285a"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_B_CORPUS/execution-report.md",
+      "bytes": 16083,
+      "sha256": "3b138c0db7dbd0d66648159d04e740450673c60248bc4b7c8d45151f5b1a6d4d",
+      "git_blob": "b1114b9073f2cec8dd6d7283d92bfa5a0e23b8fb",
+      "authenticated_at_commit": "5a158443fe00ace9b20f403f61f4a1aad21b285a"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_B_CORPUS/results.json",
+      "bytes": 2163,
+      "sha256": "d26235da166b604d19f5ae8319f547657d0f167144d79fd47f89485d7c2ff750",
+      "git_blob": "1e9d093f46248b484c0334d7fd05a6bd8d47f79e",
+      "authenticated_at_commit": "5a158443fe00ace9b20f403f61f4a1aad21b285a"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_B_CORPUS/terminal-state.json",
+      "bytes": 709,
+      "sha256": "92d366d257bbd8b3f2dcc1dc81c3e0db12dc8f54e237aa3da826bef8897bbe26",
+      "git_blob": "0c27cf9d0724b63169123d354dc2f62c25cc1460",
+      "authenticated_at_commit": "5a158443fe00ace9b20f403f61f4a1aad21b285a"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_C_BENCHMARK/INTEGRATION_AUDIT.json",
+      "bytes": 75801,
+      "sha256": "ba3c392deb92f4e18b2a56a0a33c37b75fe86f0235ad74fa237e144780a065fc",
+      "git_blob": "30d72b44ab6f83da6a41ab6f78f89fbcba7ea2b0",
+      "authenticated_at_commit": "5a158443fe00ace9b20f403f61f4a1aad21b285a"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_C_BENCHMARK/RESULTS_SUMMARY.json",
+      "bytes": 604681,
+      "sha256": "dde6ff49ac30dd9fb20a0e682090952ff304862a7ad80e8e5db9bc9810a242de",
+      "git_blob": "0ba2e5eaf34c1608c197a5c4ff8ae604846ba268",
+      "authenticated_at_commit": "5a158443fe00ace9b20f403f61f4a1aad21b285a"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_C_BENCHMARK/TEST_METRICS.json",
+      "bytes": 271846,
+      "sha256": "cbb4f519bf1a3fb7955fa4546fbbd7ab315e9c1e30aabc4bc28f540da2b2ac38",
+      "git_blob": "90eb0f55119aca798f7b42042597bccbb99b254b",
+      "authenticated_at_commit": "5a158443fe00ace9b20f403f61f4a1aad21b285a"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_C_BENCHMARK/execution-report.md",
+      "bytes": 23278,
+      "sha256": "fc693175ea9c3e98e64df409b0a2690195eb5c7f3058d20647d4061336f417f7",
+      "git_blob": "2c640f43e2c4d20f3f7c1c32f0545d647ba6e409",
+      "authenticated_at_commit": "5a158443fe00ace9b20f403f61f4a1aad21b285a"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_C_BENCHMARK/terminal-state.json",
+      "bytes": 914,
+      "sha256": "87f549d79154c3d8d8ec5a64f3936fd9a849541f243c0df9ef22db8530e75025",
+      "git_blob": "a9372a564dab5c175f795900c2e42072464a4516",
+      "authenticated_at_commit": "5a158443fe00ace9b20f403f61f4a1aad21b285a"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/ATTRIBUTION_SUMMARY.json",
+      "bytes": 693,
+      "sha256": "68785e0491008067823401a693f2758bff1690f8d29d1ddffc7d23b5b755067a",
+      "git_blob": "39bfc7a4b91d55cc64813773d75fdcb5d0302d64",
+      "authenticated_at_commit": "5a158443fe00ace9b20f403f61f4a1aad21b285a"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/CI_BLOCKED_REPORT.md",
+      "bytes": 5916,
+      "sha256": "55de0de5d459f3742fac973d9c4212ef2427636e8508a3259f5f168e4fa2ec20",
+      "git_blob": "6a133be2380587e904a692c502d3c57f55d7712c",
+      "authenticated_at_commit": "5a158443fe00ace9b20f403f61f4a1aad21b285a"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/CI_REPAIR_REPORT.md",
+      "bytes": 5800,
+      "sha256": "4dc831f5e538905226528f471a86460a9feaf0e292b1d669adb5924c45bcd75b",
+      "git_blob": "6f2668c80cd95384ddb9083aad5cf779db518166",
+      "authenticated_at_commit": "5a158443fe00ace9b20f403f61f4a1aad21b285a"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/CI_REPAIR_VERIFICATION.json",
+      "bytes": 9858,
+      "sha256": "3c36d28ec462210266b051c1a186aa6a3c27076d4be6ebd2af96095682fd9942",
+      "git_blob": "0d124e09e6bc749e440af17bc4e26ee5c29dd073",
+      "authenticated_at_commit": "5a158443fe00ace9b20f403f61f4a1aad21b285a"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/EXECUTION_REPORT.md",
+      "bytes": 29945,
+      "sha256": "fe40af2c3221fbd8d49a8cf6e16b576fdab24e4cde8ca153b93eba8a0ffcb143",
+      "git_blob": "064dfe7bbbdc4d28b0feb5a98f48138d19124f40",
+      "authenticated_at_commit": "5a158443fe00ace9b20f403f61f4a1aad21b285a"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/GROUP_DIVERSITY_RESULTS.json",
+      "bytes": 78214,
+      "sha256": "5491289f910a51039ac6fd17cea610b1b7297eb099a8a78fbd074733d3a73d3d",
+      "git_blob": "674c42b61992f56fa8118dff12c2993579c69807",
+      "authenticated_at_commit": "5a158443fe00ace9b20f403f61f4a1aad21b285a"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/GROUP_WEIGHTING_RESULTS.json",
+      "bytes": 10898,
+      "sha256": "3f905d8d971d419bace9022c571d20c25a94f00550d4069da475ef0dfcf35e93",
+      "git_blob": "a8ac235f0702abd96d6f13eaa82346272abaf6a3",
+      "authenticated_at_commit": "5a158443fe00ace9b20f403f61f4a1aad21b285a"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/INTEGRATION_AUDIT.json",
+      "bytes": 76704,
+      "sha256": "2ecbb79dc482119cf185197735479e5c4bc54a5b04972989ae9128295807067f",
+      "git_blob": "c79bca115a808e0c6241d5e663e99c5c2e61cad1",
+      "authenticated_at_commit": "5a158443fe00ace9b20f403f61f4a1aad21b285a"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/RESULTS_TABLES.md",
+      "bytes": 1217,
+      "sha256": "267f7ab08ddaf8f8493a532d8fba44670fb40c9bdcdbf2522cdb4d46235bef6c",
+      "git_blob": "9eaa87bc2e87d48ebc2919538e4a0a595e90e7c6",
+      "authenticated_at_commit": "5a158443fe00ace9b20f403f61f4a1aad21b285a"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/STUDY2_D_FIT_BUDGET.json",
+      "bytes": 285,
+      "sha256": "22f7ccf825e305802177a7c54db21e9fba0f8c3c86d8f7626dac7ba5a6be232e",
+      "git_blob": "aa42f25a5c151a3bf475c09e45ec0f5f9719de45",
+      "authenticated_at_commit": "5a158443fe00ace9b20f403f61f4a1aad21b285a"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/STUDY2_D_PROTOCOL.md",
+      "bytes": 6763,
+      "sha256": "fb6d659fb6a171e042ad482d42e00b808b105fd8a0ec655f593e609ef7709aa5",
+      "git_blob": "246e933407aed7f1053fa662595acf26370b94e7",
+      "authenticated_at_commit": "5a158443fe00ace9b20f403f61f4a1aad21b285a"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/TEMPORAL_DENSITY_RESULTS.json",
+      "bytes": 30603,
+      "sha256": "00617321936cb46f73e12d92d2cce2d76d72eb7074ac9ece6e3e255c694a8e96",
+      "git_blob": "dbc3da14342f994126af07b15112ffd0244c5c53",
+      "authenticated_at_commit": "5a158443fe00ace9b20f403f61f4a1aad21b285a"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/VERIFICATION_TERMINAL.json",
+      "bytes": 2128,
+      "sha256": "b8130bbaf2ee47e5a5fd870bc5508fd7e1ef741df3ef2e577245dfc2d07461a8",
+      "git_blob": "470aa0a06bab6520f449fc3cc54ae91c8258843e",
+      "authenticated_at_commit": "5a158443fe00ace9b20f403f61f4a1aad21b285a"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/terminal-state.json",
+      "bytes": 1349,
+      "sha256": "80f81bbf42f2993f509448468b2e4940bb39a8256dcbc10b9861e71a1732aab5",
+      "git_blob": "9aa64e81d5e8c121a9b5e3e3160a43547832402b",
+      "authenticated_at_commit": "5a158443fe00ace9b20f403f61f4a1aad21b285a"
+    },
+    {
+      "path": "artifacts/evidence/TI2/execution-report.md",
+      "bytes": 20664,
+      "sha256": "7d2173393036f39a0d6209a1b489156242ef934fb7b9f550e303b04e7d3a6074",
+      "git_blob": "8ccf32cc69eb0634cfa99b2dfe9421070a409038",
+      "authenticated_at_commit": "5a158443fe00ace9b20f403f61f4a1aad21b285a"
+    },
+    {
+      "path": "artifacts/evidence/TI2R_FRAG/execution-report.md",
+      "bytes": 6449,
+      "sha256": "48aca7bc1e5092aa8d1161a86af8f54b20e705beb0660efac885a57621bb1b27",
+      "git_blob": "2fe13208dd5df904c57919d4a92de296dc326a77",
+      "authenticated_at_commit": "5a158443fe00ace9b20f403f61f4a1aad21b285a"
+    },
+    {
+      "path": "artifacts/evidence/TI2R_FRAG_DIRECT/execution-report.md",
+      "bytes": 6584,
+      "sha256": "cc487b90babe72c1420cf951b22372d651633526154883f1c1b603bf4f46bc51",
+      "git_blob": "5e6cc76ad1c5cb768e22b8f2eae0d40b5a5aae6e",
+      "authenticated_at_commit": "5a158443fe00ace9b20f403f61f4a1aad21b285a"
+    },
+    {
+      "path": "artifacts/evidence/TI2R_SOLUTE_DIRECT/execution-report.md",
+      "bytes": 8792,
+      "sha256": "14ecb8fdd3eb2c8255cbac9a19718d06986ccf5b6b7e910230b586907cc9d90f",
+      "git_blob": "ce7fecdf85f26d02178bbd1a1751e97d6d674c1f",
+      "authenticated_at_commit": "5a158443fe00ace9b20f403f61f4a1aad21b285a"
+    },
+    {
+      "path": "artifacts/evidence/TI2R_SOLUTE_HOLDOUT/execution-report.md",
+      "bytes": 8099,
+      "sha256": "3c2ab58a08a98de0a18ac970fc28d5ece7979bdba9b8df65c43b8b897460b590",
+      "git_blob": "e6e7fb8c1da8ab1a48c682ec7acc5a8b5cc8ea57",
+      "authenticated_at_commit": "5a158443fe00ace9b20f403f61f4a1aad21b285a"
+    },
+    {
+      "path": "artifacts/evidence/TI2R_SOLUTE_HOLDOUT/repair-1/execution-report.md",
+      "bytes": 11511,
+      "sha256": "28d0ca5bbaa335329ca618af105306e80ea27b363254c55a615ca785fa23119e",
+      "git_blob": "79f15d8ac5c3d79450a787241dccd88388624ddb",
+      "authenticated_at_commit": "5a158443fe00ace9b20f403f61f4a1aad21b285a"
+    },
+    {
+      "path": "artifacts/evidence/TI2R_SOLUTE_V2/execution-report.md",
+      "bytes": 21322,
+      "sha256": "94e99397f73a726e7f32eaa1c6f3e397789dedbee4b0bc30afa0f790f1d34b96",
+      "git_blob": "2c0c88cf460cd1000235297e28d308c1e0c03938",
+      "authenticated_at_commit": "5a158443fe00ace9b20f403f61f4a1aad21b285a"
+    },
+    {
+      "path": "artifacts/evidence/TI3_A0/COURSE_ALIGNMENT_LABEL_EXTRACTION.md",
+      "bytes": 3232,
+      "sha256": "0e7c349981671af8c7d2e494db6d9302ee9d3536f30270d75d2dffcc363ac9f5",
+      "git_blob": "0a2f72bbafca31e89eaeb0d7c6ff604c4886f8d0",
+      "authenticated_at_commit": "5a158443fe00ace9b20f403f61f4a1aad21b285a"
+    },
+    {
+      "path": "artifacts/evidence/TI3_A0/execution-report.md",
+      "bytes": 8281,
+      "sha256": "e43d4695cb6557227046402af168d983c09cf7d56b42f2bf61dfdccdc946d52b",
+      "git_blob": "1e8083ba4005bba3493bf7a417e9f0c1d2d2a767",
+      "authenticated_at_commit": "5a158443fe00ace9b20f403f61f4a1aad21b285a"
+    },
+    {
+      "path": "artifacts/evidence/TI3_A_RESUME/c0r1-resume/execution-report.md",
+      "bytes": 9804,
+      "sha256": "1220b557169bcb0883b397a49b7ca042d9ed9a00d005b2d746c681ba5d47080e",
+      "git_blob": "ce8d98072212c4be47ec5aa50771c9f63366694b",
+      "authenticated_at_commit": "5a158443fe00ace9b20f403f61f4a1aad21b285a"
+    },
+    {
+      "path": "artifacts/evidence/TI3_A_RESUME/c0r1-resume/results.json",
+      "bytes": 9809,
+      "sha256": "df314b2460481c4cab147da57b2948b37efc35f66d41fe5975764f01383864b0",
+      "git_blob": "71dc2b651245968b46f8cdadc9ff76e1a1cc3b74",
+      "authenticated_at_commit": "5a158443fe00ace9b20f403f61f4a1aad21b285a"
+    },
+    {
+      "path": "artifacts/evidence/TI3_B_SOLUTAL/execution-report.md",
+      "bytes": 11154,
+      "sha256": "894022e67d7f71e3905669518ae9d192a6743b03de77d8b13f733480b428b88e",
+      "git_blob": "4ce1b11d43f92b3ba439d7874ca1ccd875b0e70a",
+      "authenticated_at_commit": "5a158443fe00ace9b20f403f61f4a1aad21b285a"
+    },
+    {
+      "path": "artifacts/evidence/TI3_B_SOLUTAL/results.json",
+      "bytes": 10065,
+      "sha256": "7067350c7c6cafe384d1c3cfd55d78200d21b3179287fa55709335685fe5b962",
+      "git_blob": "180fc62d2dfacc0f2af05ee4085d05ce3cd0e05a",
+      "authenticated_at_commit": "5a158443fe00ace9b20f403f61f4a1aad21b285a"
+    },
+    {
+      "path": "artifacts/evidence/TI3_C_CNN/execution-report.md",
+      "bytes": 11712,
+      "sha256": "0846dc095aa72be3d184293500447fb65c5b63328d86faabc78059d50d108db9",
+      "git_blob": "a6f7cabab4c5c2ecff1320743d8b10056f917085",
+      "authenticated_at_commit": "5a158443fe00ace9b20f403f61f4a1aad21b285a"
+    },
+    {
+      "path": "artifacts/evidence/TI3_C_CNN/results.json",
+      "bytes": 22623,
+      "sha256": "f0407c84308d30e9b0c42373b14fc2594d05c675c8c10e33214c813db347582d",
+      "git_blob": "4d4397aa5e12cbec6f15a02ce20367253809c160",
+      "authenticated_at_commit": "5a158443fe00ace9b20f403f61f4a1aad21b285a"
+    },
+    {
+      "path": "artifacts/evidence/TI3_C_CNN/terminal-state.json",
+      "bytes": 1436,
+      "sha256": "bee385e666caf5fa52626290104e5a2ee34495852eeed4516266e5ec49ac8b84",
+      "git_blob": "a47a638909d129e9e66f8d955941c21abd2e9ee3",
+      "authenticated_at_commit": "5a158443fe00ace9b20f403f61f4a1aad21b285a"
+    },
+    {
+      "path": "artifacts/evidence/TI3_D_FINAL/execution-report.md",
+      "bytes": 13149,
+      "sha256": "e3fe2dc30fe3d3b1ca84dfdb21a61d0e111a18b29d158c8da59813ea80bcd776",
+      "git_blob": "d3a3a3261790c1a2e033494325d959a64022db79",
+      "authenticated_at_commit": "5a158443fe00ace9b20f403f61f4a1aad21b285a"
+    },
+    {
+      "path": "artifacts/evidence/TI3_D_FINAL/results.json",
+      "bytes": 13717,
+      "sha256": "777c131b2631264f58467f03b458c523fd6dd301e90182e21d18636b6ca1ab8f",
+      "git_blob": "ed721659e7d458b37ffda381a54aa3bffb1b0f88",
+      "authenticated_at_commit": "5a158443fe00ace9b20f403f61f4a1aad21b285a"
+    },
+    {
+      "path": "artifacts/evidence/TI3_D_FINAL/terminal-state.json",
+      "bytes": 1933,
+      "sha256": "f2ebe6f94691694a50dd0114e93736f370aab74a208c60db8dcd34fbfc0179ef",
+      "git_blob": "8de37d0c0237aefe7c4563f5b292411072f9181c",
+      "authenticated_at_commit": "5a158443fe00ace9b20f403f61f4a1aad21b285a"
+    },
+    {
+      "path": "artifacts/evidence/TI3_FINAL_CLOSEOUT/COURSE_ALIGNMENT.md",
+      "bytes": 2975,
+      "sha256": "9e72592922fd429369564f59496fb66997675f326ec73d77166152266e96c6d8",
+      "git_blob": "abaf3a08e4ee69da6fbd4619b324c4f0c8eb86fa",
+      "authenticated_at_commit": "5a158443fe00ace9b20f403f61f4a1aad21b285a"
+    },
+    {
+      "path": "artifacts/evidence/TI3_FINAL_CLOSEOUT/SCIENTIFIC_SUMMARY.md",
+      "bytes": 5015,
+      "sha256": "83ccd7b497228f9141e7acd9324c9ac0c0b2ebcefb612cfa7d7c261cb4360d19",
+      "git_blob": "6cf69abcaa3d58cb31924b56a40b65f98e1fac92",
+      "authenticated_at_commit": "5a158443fe00ace9b20f403f61f4a1aad21b285a"
+    },
+    {
+      "path": "artifacts/evidence/TI3_TARGET_RESOLUTION/COURSE_ALIGNMENT.md",
+      "bytes": 1230,
+      "sha256": "1a6d40a761f6c522318d385c3b0f85f940f29ebf4674debb93f9c4ec5f886e07",
+      "git_blob": "2d785ae35230c008f35750bda80fee19d5cbb7ad",
+      "authenticated_at_commit": "5a158443fe00ace9b20f403f61f4a1aad21b285a"
+    },
+    {
+      "path": "artifacts/evidence/TI3_TARGET_RESOLUTION/execution-report.md",
+      "bytes": 8141,
+      "sha256": "1641e8f078bb27f286b3527646a877a96928b571add81c9d73d433a7a68efd52",
+      "git_blob": "c70a0dc29476074348bb4b7472f4c6f3d8181e52",
+      "authenticated_at_commit": "5a158443fe00ace9b20f403f61f4a1aad21b285a"
+    },
+    {
+      "path": "docs/protocols/TI2R_SOLUTE_DIRECT_PROTOCOL.md",
+      "bytes": 11261,
+      "sha256": "9570996942640a8e9a3e261f568016e641bab3fbf85faacd7d31e707791acb38",
+      "git_blob": "f6d44cffbd489ca45ec285505dde30853b4db570",
+      "authenticated_at_commit": "5a158443fe00ace9b20f403f61f4a1aad21b285a"
+    }
+  ],
+  "publication_boundary": "Integration and its CI completed before this closeout. The new documentary checkpoint SHA and its later CI cannot self-authenticate here; effective operator report records them after publication.",
+  "historical_source_count": 56,
+  "scope": "Existing UTF-8 documents and Git; no binary cache, experimental index, pixels, models or scientific execution."
+}
