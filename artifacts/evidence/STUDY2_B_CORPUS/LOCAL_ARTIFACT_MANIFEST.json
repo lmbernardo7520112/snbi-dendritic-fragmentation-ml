@@ -1,0 +1,50 @@
+{
+  "artifacts": [
+    {
+      "path": "data/derived/study2b/multimodal_patches_uint8.bin",
+      "size_bytes": 139425000,
+      "record_count": 16500,
+      "sha256": "3957ba2480805fa108c216e500238f1b0fcf39520cfddd0d7d722d65f773b914",
+      "complete": true,
+      "git_status": "LOCAL_IGNORED"
+    },
+    {
+      "path": "data/derived/study2b/corpus-index.jsonl",
+      "size_bytes": 69620377,
+      "record_count": 27396,
+      "sha256": "ae322dca1b81c93628d012898d152ca0bfe79f84d0f0284cf82ff22d09977edc",
+      "complete": true,
+      "git_status": "LOCAL_IGNORED"
+    },
+    {
+      "path": "data/derived/study2b/background-pool.jsonl",
+      "size_bytes": 49990703,
+      "record_count": 70844,
+      "sha256": "7b92837a152415d10769a79a5224dee02ffb68331bfff8ced60463f8d1b52dd3",
+      "complete": true,
+      "git_status": "LOCAL_IGNORED"
+    }
+  ],
+  "container": {
+    "format": "HEADERLESS_C_CONTIGUOUS_UINT8",
+    "shape": [
+      16500,
+      2,
+      65,
+      65
+    ],
+    "dtype": "uint8",
+    "channels": [
+      "STRUCTURAL_Y",
+      "RELATIVE_SOLUTE_FIELD_Y"
+    ],
+    "row_bytes": 8450,
+    "mmap_offset": 0,
+    "order": [
+      "acquisition_id",
+      "frame_index",
+      "site_id",
+      "supervision_tier"
+    ]
+  }
+}

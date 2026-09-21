@@ -1,0 +1,721 @@
+{
+  "head_sha": "06ea5467d495a6a531a48a622a92b31e050e037a",
+  "verified_before_receipt": true,
+  "run_count": 7,
+  "job_count": 8,
+  "step_count": 90,
+  "runs": [
+    {
+      "conclusion": "success",
+      "createdAt": "2026-09-21T16:15:27Z",
+      "databaseId": 35624436298,
+      "headSha": "06ea5467d495a6a531a48a622a92b31e050e037a",
+      "jobs": [
+        {
+          "completedAt": "2026-09-21T16:15:46Z",
+          "conclusion": "success",
+          "databaseId": 106415184292,
+          "name": "study2b-synthetic-contracts",
+          "startedAt": "2026-09-21T16:15:30Z",
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/checkout@v4",
+              "number": 2,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Enforce tracked-data guard",
+              "number": 3,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/setup-python@v5",
+              "number": 4,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Install exact annotation synthetic dependencies",
+              "number": 5,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Verify exact dependency versions",
+              "number": 6,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Enforce composed scope and unchanged historical custody",
+              "number": 7,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Require Study2B corpus and storage synthetic contracts without sources",
+              "number": 8,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/setup-python@v5",
+              "number": 15,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v4",
+              "number": 16,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 17,
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35624436298/job/106415184292"
+        }
+      ],
+      "name": "study2b-synthetic-ci",
+      "status": "completed",
+      "updatedAt": "2026-09-21T16:15:47Z",
+      "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35624436298"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-09-21T16:15:27Z",
+      "databaseId": 35624435940,
+      "headSha": "06ea5467d495a6a531a48a622a92b31e050e037a",
+      "jobs": [
+        {
+          "completedAt": "2026-09-21T16:15:52Z",
+          "conclusion": "success",
+          "databaseId": 106415183388,
+          "name": "ti3d-final-synthetic-contracts",
+          "startedAt": "2026-09-21T16:15:30Z",
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/checkout@v4",
+              "number": 2,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Enforce tracked-data guard",
+              "number": 3,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/setup-python@v5",
+              "number": 4,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Install unchanged LBP RF pins with existing transitive constraints",
+              "number": 5,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Enforce composed scope and preserved historical custody",
+              "number": 6,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Require final evaluation synthetic contracts with zero skips",
+              "number": 7,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/setup-python@v5",
+              "number": 13,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v4",
+              "number": 14,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 15,
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35624435940/job/106415183388"
+        }
+      ],
+      "name": "ti3d-final-synthetic-ci",
+      "status": "completed",
+      "updatedAt": "2026-09-21T16:15:52Z",
+      "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35624435940"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-09-21T16:15:27Z",
+      "databaseId": 35624435889,
+      "headSha": "06ea5467d495a6a531a48a622a92b31e050e037a",
+      "jobs": [
+        {
+          "completedAt": "2026-09-21T16:15:49Z",
+          "conclusion": "success",
+          "databaseId": 106415183273,
+          "name": "study2a-synthetic-contracts",
+          "startedAt": "2026-09-21T16:15:31Z",
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/checkout@v4",
+              "number": 2,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Enforce tracked-data guard",
+              "number": 3,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/setup-python@v5",
+              "number": 4,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Install exact annotation synthetic dependencies",
+              "number": 5,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Verify exact dependency versions",
+              "number": 6,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Enforce composed scope and unchanged historical custody",
+              "number": 7,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Require Study2A and frozen A0 synthetic contracts without sources",
+              "number": 8,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/setup-python@v5",
+              "number": 15,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v4",
+              "number": 16,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 17,
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35624435889/job/106415183273"
+        }
+      ],
+      "name": "study2a-synthetic-ci",
+      "status": "completed",
+      "updatedAt": "2026-09-21T16:15:50Z",
+      "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35624435889"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-09-21T16:15:27Z",
+      "databaseId": 35624436166,
+      "headSha": "06ea5467d495a6a531a48a622a92b31e050e037a",
+      "jobs": [
+        {
+          "completedAt": "2026-09-21T16:16:06Z",
+          "conclusion": "success",
+          "databaseId": 106415184151,
+          "name": "ti3c-synthetic-contracts",
+          "startedAt": "2026-09-21T16:15:30Z",
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/checkout@v4",
+              "number": 2,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Enforce tracked-data guard",
+              "number": 3,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/setup-python@v5",
+              "number": 4,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Install exact TI3-C CPU dependency pins",
+              "number": 5,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Enforce composed scope and unchanged historical custody",
+              "number": 6,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Require frozen CPU runtime and CNN synthetic contracts",
+              "number": 7,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/setup-python@v5",
+              "number": 13,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v4",
+              "number": 14,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 15,
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35624436166/job/106415184151"
+        }
+      ],
+      "name": "ti3c-synthetic-ci",
+      "status": "completed",
+      "updatedAt": "2026-09-21T16:16:06Z",
+      "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35624436166"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-09-21T16:15:27Z",
+      "databaseId": 35624436303,
+      "headSha": "06ea5467d495a6a531a48a622a92b31e050e037a",
+      "jobs": [
+        {
+          "completedAt": "2026-09-21T16:15:55Z",
+          "conclusion": "success",
+          "databaseId": 106415184535,
+          "name": "ti3-synthetic-contracts",
+          "startedAt": "2026-09-21T16:15:31Z",
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/checkout@v4",
+              "number": 2,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Enforce tracked-data guard",
+              "number": 3,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/setup-python@v5",
+              "number": 4,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Install pinned TI3 dependencies on CI",
+              "number": 5,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Verify all four exact dependency versions",
+              "number": 6,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Enforce composed phase scope and immutable historical custody",
+              "number": 7,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Require the declared C0 or C1 synthetic suite with zero skips",
+              "number": 8,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/setup-python@v5",
+              "number": 15,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v4",
+              "number": 16,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 17,
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35624436303/job/106415184535"
+        }
+      ],
+      "name": "ti3-synthetic-ci",
+      "status": "completed",
+      "updatedAt": "2026-09-21T16:15:56Z",
+      "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35624436303"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-09-21T16:15:27Z",
+      "databaseId": 35624436252,
+      "headSha": "06ea5467d495a6a531a48a622a92b31e050e037a",
+      "jobs": [
+        {
+          "completedAt": "2026-09-21T16:15:55Z",
+          "conclusion": "success",
+          "databaseId": 106415184317,
+          "name": "ti3b-synthetic-contracts",
+          "startedAt": "2026-09-21T16:15:31Z",
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/checkout@v4",
+              "number": 2,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Enforce tracked-data guard",
+              "number": 3,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/setup-python@v5",
+              "number": 4,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Install the four unchanged TI3 dependency pins",
+              "number": 5,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Enforce composed scope and frozen historical custody",
+              "number": 6,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Require multimodal synthetic contracts with zero skips",
+              "number": 7,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/setup-python@v5",
+              "number": 13,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v4",
+              "number": 14,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 15,
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35624436252/job/106415184317"
+        }
+      ],
+      "name": "ti3b-synthetic-ci",
+      "status": "completed",
+      "updatedAt": "2026-09-21T16:15:55Z",
+      "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35624436252"
+    },
+    {
+      "conclusion": "success",
+      "createdAt": "2026-09-21T16:15:27Z",
+      "databaseId": 35624436060,
+      "headSha": "06ea5467d495a6a531a48a622a92b31e050e037a",
+      "jobs": [
+        {
+          "completedAt": "2026-09-21T16:15:45Z",
+          "conclusion": "success",
+          "databaseId": 106415184193,
+          "name": "deterministic-contracts",
+          "startedAt": "2026-09-21T16:15:31Z",
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/checkout@v4",
+              "number": 2,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Enforce tracked-data guard",
+              "number": 3,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/setup-python@v5",
+              "number": 4,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Compile source",
+              "number": 5,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Validate governed local bootstrap",
+              "number": 6,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Validate canonical manifest",
+              "number": 7,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Validate physical-time rule",
+              "number": 8,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Enforce TI-2 scope without experimental data",
+              "number": 9,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Verify tracked textual TI-2 checksums",
+              "number": 10,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run deterministic tests",
+              "number": 11,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/setup-python@v5",
+              "number": 21,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v4",
+              "number": 22,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 23,
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35624436060/job/106415184193"
+        },
+        {
+          "completedAt": "2026-09-21T16:16:58Z",
+          "conclusion": "success",
+          "databaseId": 106415184366,
+          "name": "scientific-synthetic-contracts",
+          "startedAt": "2026-09-21T16:15:31Z",
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/checkout@v4",
+              "number": 2,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Enforce tracked-data guard",
+              "number": 3,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/setup-python@v5",
+              "number": 4,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Install exact synthetic-only dependencies on CI",
+              "number": 5,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Require five passing scientific synthetic tests and zero skips",
+              "number": 6,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Require TI2R-FRAG synthetic contracts and zero skips",
+              "number": 7,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Require DIRECT synthetic contracts and zero skips",
+              "number": 8,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Require SOLUTE DIRECT multimodal synthetic contracts and zero skips",
+              "number": 9,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Require SOLUTE V2 development calibration synthetic contracts and zero skips",
+              "number": 10,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/setup-python@v5",
+              "number": 19,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v4",
+              "number": 20,
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 21,
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35624436060/job/106415184366"
+        }
+      ],
+      "name": "deterministic-ci",
+      "status": "completed",
+      "updatedAt": "2026-09-21T16:16:59Z",
+      "url": "https://github.com/lmbernardo7520112/snbi-dendritic-fragmentation-ml/actions/runs/35624436060"
+    }
+  ]
+}

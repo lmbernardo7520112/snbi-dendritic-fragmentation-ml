@@ -1,0 +1,34 @@
+{
+  "phase": "STUDY2_B",
+  "mode": "full",
+  "created_at_utc": "2026-09-21T16:18:04.248111+00:00",
+  "attempt": 1,
+  "head_sha": "06ea5467d495a6a531a48a622a92b31e050e037a",
+  "authority_sha256": "684d78ca519c99c390bed3b9ac1de86738333fb592f30423b4410fafa926e3af",
+  "preflight": {
+    "status": "PASS",
+    "mode": "full",
+    "head_sha": "06ea5467d495a6a531a48a622a92b31e050e037a",
+    "historical_tracked_paths_preserved": 588,
+    "experimental_source_opens": 0,
+    "receipt_created": false,
+    "free_disk_bytes": 666523189248,
+    "ci_jobs": [
+      "deterministic-contracts",
+      "scientific-synthetic-contracts",
+      "study2a-synthetic-contracts",
+      "study2b-synthetic-contracts",
+      "ti3-synthetic-contracts",
+      "ti3b-synthetic-contracts",
+      "ti3c-synthetic-contracts",
+      "ti3d-final-synthetic-contracts"
+    ],
+    "frozen_text_count": 41
+  },
+  "sources": [
+    "ESM1",
+    "ESM2",
+    "ESM4",
+    "ESM5"
+  ]
+}

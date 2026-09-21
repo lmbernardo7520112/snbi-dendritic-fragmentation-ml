@@ -1,0 +1,17 @@
+{
+  "preflight_command": "PYTHONPATH=src .venv/bin/python -B scripts/run_study2b.py full --preflight-only",
+  "exit_code": 0,
+  "status": "PASS",
+  "head_sha": "06ea5467d495a6a531a48a622a92b31e050e037a",
+  "frozen_text_count": 41,
+  "source_opens_during_preflight": 0,
+  "receipt_created_by_preflight": false,
+  "free_disk_before": 666523242496,
+  "actual_remote_jobs": 8,
+  "actual_remote_steps": 90,
+  "proof": "CI_PROOF.json",
+  "execution_command": "PYTHONPATH=src .venv/bin/python -B scripts/run_study2b.py full",
+  "scientific_invocations_started": 1,
+  "completion": "Not anticipated; see execution receipt and terminal output",
+  "no_parameters_changed_after_freeze": true
+}
