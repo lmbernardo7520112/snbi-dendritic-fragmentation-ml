@@ -1,0 +1,9 @@
+{
+  "recorded_at": "2026-09-21T14:24:30.206273+00:00",
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "ffmpeg_version_line": "ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers",
+  "scientific_python": "{\"python\": \"3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]\", \"numpy\": \"1.26.4\", \"scipy\": \"1.11.4\"}",
+  "installations": 0,
+  "ffprobe_invocations": 0,
+  "source_access_in_environment_inspection": false
+}

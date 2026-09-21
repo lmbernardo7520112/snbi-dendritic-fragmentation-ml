@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "phase": "STUDY2_A_ANNOTATION_MINING",
+  "branch": "feat/study2a-dense-annotation-ledger",
+  "base_sha": "f36e43407f0e630d84f5e2d9306699b796b5ad2a",
+  "authority_sha256": "e0c92998a38b4aff2a91aa5cf91cb7e463856d5c47e846a42d6368c693613fa3",
+  "decoder_gate_authority_sha256": "1ed809e67b17e51591b6d9024d53e396d980a0569b6968cbd1f71df103998901",
+  "sources": [
+    "ESM3",
+    "ESM6"
+  ],
+  "expected_frames": {
+    "ESM3": 294,
+    "ESM6": 395
+  },
+  "detector": {
+    "chroma_distance": 20,
+    "minimum_component_pixels": 32,
+    "minimum_radius": 8.0,
+    "maximum_radius": 16.0,
+    "maximum_axis_ratio": 1.2,
+    "maximum_radial_p95": 4.0,
+    "minimum_angular_coverage": 0.9
+  },
+  "persistence_tolerance_px": 2.0,
+  "legacy_center_absolute_tolerance_px": 1e-09,
+  "scientific_runs_limit": 1,
+  "human_review": false,
+  "hough": false,
+  "patches": false,
+  "ml": false,
+  "max_temp_bytes": 268435456,
+  "max_patch_cache_bytes": 2147483648,
+  "min_free_disk_reserve_bytes": 53687091200,
+  "metadata_output_budget_bytes": 268435456,
+  "new_frames_require_frozen_commit_and_green_ci": true,
+  "terminal_closes_authority": true
+}
