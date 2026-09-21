@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "tests": 99,
+  "expected": 99,
+  "passes": 99,
+  "skips": 0,
+  "failures": 0,
+  "errors": 0,
+  "suites": {
+    "corpus": 35,
+    "streaming": 25,
+    "execution": 39
+  },
+  "experimental_source_opens": 0,
+  "ml_runs": 0,
+  "local_prior_invocations": {
+    "corpus": [
+      35,
+      35
+    ],
+    "streaming": [
+      24,
+      25
+    ],
+    "execution": [
+      37,
+      39
+    ]
+  },
+  "profile": "All Study2-B synthetic contracts; no historical scientific run",
+  "reporting_reconciliation": {
+    "original_command_exit": 1,
+    "cause": "two controller tests were added before joint discovery; obsolete wrapper expected97 but actual unique99 all passed",
+    "actual_unittest_status": "OK",
+    "assertions_removed": false,
+    "science_or_source_access": false,
+    "test_rerun": false,
+    "evidence": "Original wrapper report and full actual99PASS log preserved; AST test IDs equal all99executed names"
+  },
+  "source_hashes": {
+    "scripts/run_study2b.py": "bd728b69c7dd8fa3c0a1b5a81ba305191e2657b2eb56986f2d291faac69bd899",
+    "src/snbi_fragmentation/study2b_corpus.py": "f14b4246f96dfd59c5df9e5923ed9bafd0a9d60102c8c073844815cbcce69dbe",
+    "src/snbi_fragmentation/study2b_execution.py": "7e8cf168ec2d2f635c5e2465441a8a7ed2b5b8babbe5db03882293ccdc6c2e4c",
+    "src/snbi_fragmentation/study2b_streaming.py": "4e2ae662362f6d4da3f82e67e4762b08b2846fda094e420ed928e213dccc8ec8",
+    "tests/test_study2b_corpus.py": "b199cac445ea78c07f121ff4b65c5e177fab66bc41667cc9b01e32bb315284c4",
+    "tests/test_study2b_execution.py": "7a8ee3a91e6cdf9e1ac0da66e8714a98f730abdec238fd2cec6d24caf6717d80",
+    "tests/test_study2b_streaming.py": "8d53494283b34bb3b329f2788941447c6094f6324b321053f73f2fb758da85ce"
+  }
+}

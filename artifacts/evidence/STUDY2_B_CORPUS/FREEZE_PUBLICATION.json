@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "method_freeze_sha": "06ea5467d495a6a531a48a622a92b31e050e037a",
+  "parent_sha": "d4ef00bf1e1d84d49d4e3f2dce0d18f683598a4c",
+  "freeze_texts_verified": 41,
+  "staged_paths": 32,
+  "tracked_paths_after_commit": 619,
+  "phase_scope": {
+    "legacy": 75,
+    "frozen_a0": 4,
+    "active": 47,
+    "total_python": 126,
+    "unclassified": 0
+  },
+  "historical_checksums": 95,
+  "legacy_gate_fixture_pairs": 50,
+  "legacy_canonical_overlap": 25,
+  "real_staged_guard_exit": 0,
+  "staged_diff_check_exit": 0,
+  "index_worktree_bytes_identical": true,
+  "source_code_changed_after_legacy": false,
+  "scientific_full_runs": 0,
+  "ci_state_at_this_record": "PENDING; nofullreceipt permitted until exactCIproof",
+  "publication": "PUSHED_NEW_BRANCH_NO_FORCE",
+  "local_untracked_preexisting": "academic-deliverable-build/"
+}

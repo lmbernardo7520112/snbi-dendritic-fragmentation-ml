@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "freeze_sha": "06ea5467d495a6a531a48a622a92b31e050e037a",
+  "freeze_hashes_verified": 41,
+  "legacy_implementation_hashes_verified": 10,
+  "historical_checksums_verified": 95,
+  "all_33_report_items": true,
+  "post_run_independent_audit": "POST_RUN_INDEPENDENT_AUDIT.json",
+  "io_boundary_reconciliation": "IO_ACCOUNTING.json",
+  "container_after_run": "stat sizeonly; streamed hash retained; no contentreopen",
+  "text_ledgers": "Both hashes recomputed independently; metadata-only",
+  "science_changes_after_freeze": false,
+  "new_scientific_invocations_after_terminal": 0,
+  "ml_runs": 0,
+  "binary_data_staged": false,
+  "large_local_outputs": [
+    {
+      "path": "data/derived/study2b/multimodal_patches_uint8.bin",
+      "size_bytes": 139425000,
+      "record_count": 16500,
+      "sha256": "3957ba2480805fa108c216e500238f1b0fcf39520cfddd0d7d722d65f773b914",
+      "complete": true,
+      "git_status": "LOCAL_IGNORED"
+    },
+    {
+      "path": "data/derived/study2b/corpus-index.jsonl",
+      "size_bytes": 69620377,
+      "record_count": 27396,
+      "sha256": "ae322dca1b81c93628d012898d152ca0bfe79f84d0f0284cf82ff22d09977edc",
+      "complete": true,
+      "git_status": "LOCAL_IGNORED"
+    },
+    {
+      "path": "data/derived/study2b/background-pool.jsonl",
+      "size_bytes": 49990703,
+      "record_count": 70844,
+      "sha256": "7b92837a152415d10769a79a5224dee02ffb68331bfff8ced60463f8d1b52dd3",
+      "complete": true,
+      "git_status": "LOCAL_IGNORED"
+    }
+  ],
+  "git_tracked_diff_before_checkpoint": [],
+  "git_index_before_checkpoint": [],
+  "preexisting_untracked_preserved": "academic-deliverable-build/",
+  "study1_and_academic_changes": false,
+  "human_review_used": false,
+  "limitations": "Application/command evidence only; no universal syscall monitor. Hash provenance of binary rests on one writer run, not independent post-run pixelread. CI finalandcheckpointSHA tobe reportedafteractualpublication."
+}

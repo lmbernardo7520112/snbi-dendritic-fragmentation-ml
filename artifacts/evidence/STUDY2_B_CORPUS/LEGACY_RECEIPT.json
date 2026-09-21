@@ -1,0 +1,35 @@
+{
+  "phase": "STUDY2_B",
+  "mode": "legacy",
+  "created_at_utc": "2026-09-21T16:11:49.209728+00:00",
+  "attempt": 1,
+  "head_sha": "d4ef00bf1e1d84d49d4e3f2dce0d18f683598a4c",
+  "authority_sha256": "684d78ca519c99c390bed3b9ac1de86738333fb592f30423b4410fafa926e3af",
+  "preflight": {
+    "status": "PASS",
+    "mode": "legacy",
+    "head_sha": "d4ef00bf1e1d84d49d4e3f2dce0d18f683598a4c",
+    "historical_tracked_paths_preserved": 588,
+    "experimental_source_opens": 0,
+    "receipt_created": false,
+    "free_disk_bytes": 666524651520,
+    "implementation_hashes": {
+      "src/snbi_fragmentation/study2b_corpus.py": "f14b4246f96dfd59c5df9e5923ed9bafd0a9d60102c8c073844815cbcce69dbe",
+      "src/snbi_fragmentation/study2b_streaming.py": "4e2ae662362f6d4da3f82e67e4762b08b2846fda094e420ed928e213dccc8ec8",
+      "src/snbi_fragmentation/study2b_execution.py": "2cf2b045981e44514a0d3a46654a08fd9d6132a06f775230c58322d2ca744185",
+      "scripts/run_study2b.py": "bd728b69c7dd8fa3c0a1b5a81ba305191e2657b2eb56986f2d291faac69bd899",
+      "configs/authority/study2b.json": "684d78ca519c99c390bed3b9ac1de86738333fb592f30423b4410fafa926e3af",
+      "artifacts/evidence/STUDY2_B_CORPUS/STUDY2_B_PROTOCOL.md": "1997f682cd3d19e7010f05caf8d9f3432dd148dfb56c62c3de66a058f7832564",
+      "artifacts/evidence/STUDY2_B_CORPUS/STUDY2_B_CORPUS_SCHEMA.json": "c3f56e2c332800569fc4b3abd47897a28bf73dc7c3963e8055f3f6a6bb736a0d",
+      "artifacts/evidence/STUDY2_B_CORPUS/STUDY2_B_BACKGROUND_CONTRACT.md": "8108cdee172d159e92ae7f59ac6d6c2dfce7293e915b6414b700c2f43e5ae34b",
+      "artifacts/evidence/STUDY2_B_CORPUS/STUDY2_B_STORAGE_CONTRACT.md": "42894649434cd9a9ef5554c6f02e9f266c7ce7448ee20ba1ca6bf1cd0e2a5df9",
+      "artifacts/evidence/STUDY2_B_CORPUS/STUDY2_B_CLAIM_SCOPE.md": "850fa00cc1951cc9f84fdfd68a1b665984c38548c38e7f83cd9adb93d1fba1a6"
+    }
+  },
+  "sources": [
+    "ESM1",
+    "ESM2",
+    "ESM4",
+    "ESM5"
+  ]
+}

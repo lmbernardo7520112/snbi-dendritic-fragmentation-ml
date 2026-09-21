@@ -1,0 +1,407 @@
+{
+  "schema_version": 1,
+  "study": "STUDY2_B",
+  "status": "PASS_TEXTUAL_IO_ACCOUNTING",
+  "reviewed_at_utc": "2026-09-21T16:22:52.785109+00:00",
+  "review_scope": {
+    "method": "Independent reconciliation of existing JSON counters, timestamps, hashes as text, and recorded artifact dimensions; stdlib arithmetic only.",
+    "input_paths": [
+      "artifacts/evidence/STUDY2_B_CORPUS/LEGACY_IO_AUDIT.json",
+      "artifacts/evidence/STUDY2_B_CORPUS/IO_AUDIT.json",
+      "artifacts/evidence/STUDY2_B_CORPUS/LEGACY_RECEIPT.json",
+      "artifacts/evidence/STUDY2_B_CORPUS/EXECUTION_RECEIPT.json",
+      "artifacts/evidence/STUDY2_B_CORPUS/LOCAL_ARTIFACT_MANIFEST.json",
+      "artifacts/evidence/STUDY2_B_CORPUS/CI_PROOF.json",
+      "artifacts/evidence/STUDY2_B_CORPUS/results.json"
+    ],
+    "source_videos_opened_during_review": 0,
+    "native_buffers_opened_during_review": 0,
+    "corpus_containers_opened_during_review": 0,
+    "jsonl_ledgers_opened_during_review": 0,
+    "scientific_or_project_code_executed": false,
+    "tests_or_decoders_run": false,
+    "network_calls": 0,
+    "prior_records_edited": false,
+    "additional_read_scope": "results.json read only for recorded storage, temporary-disk, and peak-RSS accounting fields after explicit delegation extension."
+  },
+  "input_text_integrity": [
+    {
+      "path": "artifacts/evidence/STUDY2_B_CORPUS/LEGACY_IO_AUDIT.json",
+      "size_bytes": 8095,
+      "sha256": "c56fe0b22eee808ecd1f8e6e87cede0a6ce3171f18885b00e745c5a00724220f"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_B_CORPUS/IO_AUDIT.json",
+      "size_bytes": 196306,
+      "sha256": "3dcaf31cbfdc120d4f1bfa96268a39d9d941a2ce8ba16ae9a19f3f8b27a1a1d0"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_B_CORPUS/LEGACY_RECEIPT.json",
+      "size_bytes": 1907,
+      "sha256": "1823b54fbd6c3906f99f454f16900d8f019fbd3f08126d99ba37028bf1e240ce"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_B_CORPUS/EXECUTION_RECEIPT.json",
+      "size_bytes": 944,
+      "sha256": "29fc664c9bb08fc42d7d97a5aa59f67a1c5fdd49da8eb85d9f9242a5bcb3203a"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_B_CORPUS/LOCAL_ARTIFACT_MANIFEST.json",
+      "size_bytes": 1243,
+      "sha256": "e9a3ed30771740d7f6a5ee4ff98bb448a46ea842cea1dd903ed1ab4d6b2bbe93"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_B_CORPUS/CI_PROOF.json",
+      "size_bytes": 23660,
+      "sha256": "3e575066804a41076bc439b36ebb9160645db0ae11aa30f8209689c37bad2a79"
+    },
+    {
+      "path": "artifacts/evidence/STUDY2_B_CORPUS/results.json",
+      "size_bytes": 2163,
+      "sha256": "d26235da166b604d19f5ae8319f547657d0f167144d79fd47f89485d7c2ff750"
+    }
+  ],
+  "counter_definitions": {
+    "compressed_auth_bytes": "Bytes delivered to the Python source-authentication hash reader, once per source in each authorized mode. source_auth_bytes_read and source_auth_compressed_bytes_read are aliases; do not add them.",
+    "source_auth_opens": "Successful application source-FD authentications; four distinct sources opened once in legacy and once in full, for eight events over four unique files.",
+    "decoder_input_open_requests": "One retained authenticated FD is passed to each decoder and requested through procfs. This is separate from Python source authentication, not a global count of file opens or syscalls.",
+    "native_bytes_received": "Raw yuv420p bytes received from decoder stdout by the application; this value is streamed volume, not resident memory or bytes persisted.",
+    "native_bytes_emitted": "Complete native frame payloads delivered to the controller. All received payloads completed in these two runs; received and emitted fields are aliases for this successful observation, not additive read volume.",
+    "native_frames_emitted": "Source-modality frame deliveries, not multimodal pair count or independent samples.",
+    "reader_patches_written": "Zero in the streaming reader only. The separate corpus writer persisted valid paired patches; this field must not be presented as zero patches written by Study2-B."
+  },
+  "per_mode": {
+    "legacy": {
+      "status": "PASS_TEXTUAL_RECONCILIATION",
+      "receipt_path": "artifacts/evidence/STUDY2_B_CORPUS/LEGACY_RECEIPT.json",
+      "receipt_utc": "2026-09-21T16:11:49.209728+00:00",
+      "head_sha": "d4ef00bf1e1d84d49d4e3f2dce0d18f683598a4c",
+      "receipt_attempt": 1,
+      "source_auth_opens": 4,
+      "compressed_auth_bytes": 108466048,
+      "decoder_input_open_requests": 4,
+      "decoder_launches": 4,
+      "native_frames_emitted": 10,
+      "native_bytes_received": 19469052,
+      "native_bytes_emitted": 19469052,
+      "source_path_reopens_by_python": 0,
+      "reader_frames_written": 0,
+      "reader_patches_written": 0,
+      "reader_temporary_bytes_written": 0,
+      "source_fds_closed": true,
+      "per_source": [
+        {
+          "source_id": "ESM1",
+          "source_auth_opens": 1,
+          "compressed_auth_bytes": 3233526,
+          "expected_sha256": "4d07ee422e97661b1ee0ae681b7617fd7971476015603f3039c20ddf8b0c5c6d",
+          "recorded_sha256_matches": true,
+          "decoder_input_open_requests": 1,
+          "decoder_exit_code": 0,
+          "frame_count": 3,
+          "frame_index_selection": [
+            73,
+            146,
+            219
+          ],
+          "native_frame_bytes": 1951506,
+          "native_bytes_received": 5854518,
+          "native_bytes_emitted": 5854518,
+          "frame_hash_record_count": 3,
+          "metadata_unchanged_after_decode": true
+        },
+        {
+          "source_id": "ESM2",
+          "source_auth_opens": 1,
+          "compressed_auth_bytes": 41487560,
+          "expected_sha256": "4eb1762dc4ee65c3e8b1411d80812a75257b1324d539db4c3dcf6c97c1ed9a0a",
+          "recorded_sha256_matches": true,
+          "decoder_input_open_requests": 1,
+          "decoder_exit_code": 0,
+          "frame_count": 3,
+          "frame_index_selection": [
+            73,
+            146,
+            219
+          ],
+          "native_frame_bytes": 1951506,
+          "native_bytes_received": 5854518,
+          "native_bytes_emitted": 5854518,
+          "frame_hash_record_count": 3,
+          "metadata_unchanged_after_decode": true
+        },
+        {
+          "source_id": "ESM4",
+          "source_auth_opens": 1,
+          "compressed_auth_bytes": 4509283,
+          "expected_sha256": "9e6be3e78699d3bdd16fa71d56917479d7e16f7418b857ab3925e1115df91ebe",
+          "recorded_sha256_matches": true,
+          "decoder_input_open_requests": 1,
+          "decoder_exit_code": 0,
+          "frame_count": 2,
+          "frame_index_selection": [
+            98,
+            197
+          ],
+          "native_frame_bytes": 1940004,
+          "native_bytes_received": 3880008,
+          "native_bytes_emitted": 3880008,
+          "frame_hash_record_count": 2,
+          "metadata_unchanged_after_decode": true
+        },
+        {
+          "source_id": "ESM5",
+          "source_auth_opens": 1,
+          "compressed_auth_bytes": 59235679,
+          "expected_sha256": "c9054d18f330e018e82cc6bd4db2ccfbda7ac76e01326a831857a835d1feade6",
+          "recorded_sha256_matches": true,
+          "decoder_input_open_requests": 1,
+          "decoder_exit_code": 0,
+          "frame_count": 2,
+          "frame_index_selection": [
+            98,
+            197
+          ],
+          "native_frame_bytes": 1940004,
+          "native_bytes_received": 3880008,
+          "native_bytes_emitted": 3880008,
+          "frame_hash_record_count": 2,
+          "metadata_unchanged_after_decode": true
+        }
+      ]
+    },
+    "full": {
+      "status": "PASS_TEXTUAL_RECONCILIATION",
+      "receipt_path": "artifacts/evidence/STUDY2_B_CORPUS/EXECUTION_RECEIPT.json",
+      "receipt_utc": "2026-09-21T16:18:04.248111+00:00",
+      "head_sha": "06ea5467d495a6a531a48a622a92b31e050e037a",
+      "receipt_attempt": 1,
+      "source_auth_opens": 4,
+      "compressed_auth_bytes": 108466048,
+      "decoder_input_open_requests": 4,
+      "decoder_launches": 4,
+      "native_frames_emitted": 1378,
+      "native_bytes_received": 2680088688,
+      "native_bytes_emitted": 2680088688,
+      "source_path_reopens_by_python": 0,
+      "reader_frames_written": 0,
+      "reader_patches_written": 0,
+      "reader_temporary_bytes_written": 0,
+      "source_fds_closed": true,
+      "per_source": [
+        {
+          "source_id": "ESM1",
+          "source_auth_opens": 1,
+          "compressed_auth_bytes": 3233526,
+          "expected_sha256": "4d07ee422e97661b1ee0ae681b7617fd7971476015603f3039c20ddf8b0c5c6d",
+          "recorded_sha256_matches": true,
+          "decoder_input_open_requests": 1,
+          "decoder_exit_code": 0,
+          "frame_count": 294,
+          "frame_index_selection": {
+            "first": 0,
+            "last": 293,
+            "contiguous": true
+          },
+          "native_frame_bytes": 1951506,
+          "native_bytes_received": 573742764,
+          "native_bytes_emitted": 573742764,
+          "frame_hash_record_count": 294,
+          "metadata_unchanged_after_decode": true
+        },
+        {
+          "source_id": "ESM2",
+          "source_auth_opens": 1,
+          "compressed_auth_bytes": 41487560,
+          "expected_sha256": "4eb1762dc4ee65c3e8b1411d80812a75257b1324d539db4c3dcf6c97c1ed9a0a",
+          "recorded_sha256_matches": true,
+          "decoder_input_open_requests": 1,
+          "decoder_exit_code": 0,
+          "frame_count": 294,
+          "frame_index_selection": {
+            "first": 0,
+            "last": 293,
+            "contiguous": true
+          },
+          "native_frame_bytes": 1951506,
+          "native_bytes_received": 573742764,
+          "native_bytes_emitted": 573742764,
+          "frame_hash_record_count": 294,
+          "metadata_unchanged_after_decode": true
+        },
+        {
+          "source_id": "ESM4",
+          "source_auth_opens": 1,
+          "compressed_auth_bytes": 4509283,
+          "expected_sha256": "9e6be3e78699d3bdd16fa71d56917479d7e16f7418b857ab3925e1115df91ebe",
+          "recorded_sha256_matches": true,
+          "decoder_input_open_requests": 1,
+          "decoder_exit_code": 0,
+          "frame_count": 395,
+          "frame_index_selection": {
+            "first": 0,
+            "last": 394,
+            "contiguous": true
+          },
+          "native_frame_bytes": 1940004,
+          "native_bytes_received": 766301580,
+          "native_bytes_emitted": 766301580,
+          "frame_hash_record_count": 395,
+          "metadata_unchanged_after_decode": true
+        },
+        {
+          "source_id": "ESM5",
+          "source_auth_opens": 1,
+          "compressed_auth_bytes": 59235679,
+          "expected_sha256": "c9054d18f330e018e82cc6bd4db2ccfbda7ac76e01326a831857a835d1feade6",
+          "recorded_sha256_matches": true,
+          "decoder_input_open_requests": 1,
+          "decoder_exit_code": 0,
+          "frame_count": 395,
+          "frame_index_selection": {
+            "first": 0,
+            "last": 394,
+            "contiguous": true
+          },
+          "native_frame_bytes": 1940004,
+          "native_bytes_received": 766301580,
+          "native_bytes_emitted": 766301580,
+          "frame_hash_record_count": 395,
+          "metadata_unchanged_after_decode": true
+        }
+      ]
+    }
+  },
+  "combined_two_modes": {
+    "unique_source_files": 4,
+    "source_auth_opens": 8,
+    "compressed_auth_bytes": 216932096,
+    "decoder_input_open_requests": 8,
+    "decoder_launches": 8,
+    "native_frame_deliveries": 1388,
+    "native_bytes_received": 2699557740,
+    "native_bytes_emitted": 2699557740,
+    "unique_source_frame_identities_in_full": 1378,
+    "previous_legacy_frame_deliveries_repeated_in_full": 10,
+    "legacy_to_full_recorded_frame_hash_matches": 10,
+    "legacy_compatibility_passages": 1,
+    "full_scientific_runs": 1,
+    "ml_runs": 0,
+    "scope_note": "Legacy and full are distinct authorized phases. Their summed frame deliveries include ten repeated historical deliveries; the total is not a count of unique frames. Compressed authentication and decoded native bytes describe different representations and are not a physical-device I/O total."
+  },
+  "unmeasured_decoder_internals": {
+    "decoder_compressed_bytes_read": "NOT_INSTRUMENTED",
+    "internal_intermediate_decode_count": "NOT_INSTRUMENTED",
+    "legacy_intermediate_native_frames_delivered_to_python": 0,
+    "scope_note": "Null original counters do not mean zero. Legacy FFmpeg selection may decode intervening frames internally under the explicit gate authorization, but only the recorded historical indices reached Python."
+  },
+  "ci_and_receipt_order": {
+    "status": "PASS_TEXTUAL_CHRONOLOGY",
+    "freeze_head_sha": "06ea5467d495a6a531a48a622a92b31e050e037a",
+    "legacy_receipt_utc": "2026-09-21T16:11:49.209728+00:00",
+    "legacy_precedes_freeze_ci": true,
+    "legacy_scope_note": "The separately authorized historical compatibility gate precedes method freeze and full-execution CI; pre-CI legacy access is reported explicitly, not concealed as zero experimental access.",
+    "ci_run_count": 7,
+    "ci_job_count": 8,
+    "ci_step_count": 90,
+    "all_runs_jobs_steps_success": true,
+    "latest_job_completion_utc": "2026-09-21T16:16:58+00:00",
+    "latest_run_update_utc": "2026-09-21T16:16:59+00:00",
+    "full_receipt_utc": "2026-09-21T16:18:04.248111+00:00",
+    "all_ci_jobs_complete_before_full_receipt": true,
+    "full_receipt_preflight_source_opens": 0,
+    "full_authority_receipt_attempt": 1,
+    "run_ids": [
+      35624436298,
+      35624435940,
+      35624435889,
+      35624436166,
+      35624436303,
+      35624436252,
+      35624436060
+    ],
+    "receipt_scope_note": "Receipt/preflight and the reader audit record the admitted order. This review confirms text consistency and CI timestamps; it does not reconstruct universal syscall timing."
+  },
+  "writer_persistence_reconciliation": {
+    "source": "LOCAL_ARTIFACT_MANIFEST.json and aggregate storage fields in IO_AUDIT.json",
+    "reader_patches_written_original": 0,
+    "corpus_writer_multimodal_pairs_persisted": 16500,
+    "corpus_writer_channel_patches_persisted": 33000,
+    "patch_side_pixels": 65,
+    "channels_per_pair": 2,
+    "dtype": "uint8",
+    "bytes_per_channel_patch": 4225,
+    "bytes_per_pair": 8450,
+    "container_bytes": 139425000,
+    "container_shape": [
+      16500,
+      2,
+      65,
+      65
+    ],
+    "container_header_bytes": 0,
+    "manifest_artifacts": [
+      {
+        "path": "data/derived/study2b/multimodal_patches_uint8.bin",
+        "size_bytes": 139425000,
+        "record_count": 16500,
+        "sha256": "3957ba2480805fa108c216e500238f1b0fcf39520cfddd0d7d722d65f773b914",
+        "complete": true,
+        "git_status": "LOCAL_IGNORED"
+      },
+      {
+        "path": "data/derived/study2b/corpus-index.jsonl",
+        "size_bytes": 69620377,
+        "record_count": 27396,
+        "sha256": "ae322dca1b81c93628d012898d152ca0bfe79f84d0f0284cf82ff22d09977edc",
+        "complete": true,
+        "git_status": "LOCAL_IGNORED"
+      },
+      {
+        "path": "data/derived/study2b/background-pool.jsonl",
+        "size_bytes": 49990703,
+        "record_count": 70844,
+        "sha256": "7b92837a152415d10769a79a5224dee02ffb68331bfff8ced60463f8d1b52dd3",
+        "complete": true,
+        "git_status": "LOCAL_IGNORED"
+      }
+    ],
+    "total_three_artifact_bytes": 259036080,
+    "full_frames_exported_by_reader": 0,
+    "interpretation": "The container byte count equals 16500 x 2 x 65 x 65. Corpus-index records all 27396 input rows, whereas the container stores only 16500 valid pairs; the index row count is not the container row count. Background remains a metadata ledger and is not counted as persisted patch pixels. Artifact hashes were read from the manifest, not re-hashed from local corpus files."
+  },
+  "storage_and_memory_boundaries": {
+    "authorized_caps_bytes": {
+      "MAX_PATCH_CACHE_BYTES": 2147483648,
+      "MAX_TEMP_BYTES": 268435456,
+      "MIN_FREE_DISK_RESERVE_BYTES": 53687091200
+    },
+    "observed_container_bytes": 139425000,
+    "observed_temporary_disk_peak_bytes": 0,
+    "recorded_reader_temporary_bytes_written": 0,
+    "container_cap_pass": true,
+    "temporary_disk_cap_pass": true,
+    "full_preflight_free_disk_bytes": 666523189248,
+    "recorded_free_disk_after_bytes": 666263302144,
+    "before_after_reserve_checks_pass": true,
+    "max_concurrent_decoders_recorded": 2,
+    "resident_native_assembly_frames_max_recorded": 2,
+    "resident_application_frame_window_recorded": 6,
+    "memory_window_note": "Conservative six native payloads across two paired streams: two mutable assemblies, two immutable copies and two prior consumer frames; controller and FFmpeg internal memory excluded.",
+    "peak_rss_bytes": 420225024,
+    "peak_rss_status": "RECORDED_PYTHON_PARENT_ONLY",
+    "temp_cap_is_rss_cap": false,
+    "distinction": "MAX_TEMP_BYTES is a temporary-disk budget, not an RSS cap. Recorded Python-parent peak RSS is 410376 KiB (420225024 bytes); child-decoder peaks and combined process memory are not instrumented. Zero temporary disk use does not imply low or zero RAM use. The six-payload reader window is a bounded reader design record, not the whole-process peak. Free-disk entries are recorded preflight/post-run snapshots, not proof of continuous global filesystem monitoring.",
+    "peak_rss_kib": 410376,
+    "peak_rss_scope": "Python parent only; child decoder peak not instrumented",
+    "child_decoder_peak_rss": "NOT_INSTRUMENTED",
+    "combined_parent_and_decoder_peak_rss": "NOT_INSTRUMENTED"
+  },
+  "limitations": [
+    "Application instrumentation is not universal syscall, filesystem, or physical-device monitoring.",
+    "Four decoder input requests plus four Python authentication opens per mode must remain distinct counters; neither alone states all internal decoder reads.",
+    "The source-authentication gate is recorded as complete before decoder admission; this review reads those records and does not reopen sources or rerun implementation.",
+    "Hash equivalence was compared between existing textual frame-hash records only; corpus, source and JSONL hashes were not independently recomputed from experimental bytes.",
+    "Storage totals cover the three declared local artifacts; no assertion that free-disk change equals their exact byte sum is made."
+  ]
+}

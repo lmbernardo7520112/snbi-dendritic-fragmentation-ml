@@ -1,0 +1,94 @@
+{
+  "status": "TEXTUAL_CUSTODY_CONFIRMED_BEFORE_SOURCE_ACCESS",
+  "sources": [
+    {
+      "source_id": "ESM1",
+      "path": "/home/leonardomaximinobernardo/Downloads/trabalho_Final_IfGoiano/videos_trabalho_Final_IfGoiano/11837_2015_1646_MOESM1_ESM.mp4",
+      "sha256": "4d07ee422e97661b1ee0ae681b7617fd7971476015603f3039c20ddf8b0c5c6d",
+      "size_bytes": 3233526,
+      "width": 1278,
+      "height": 1018,
+      "frame_count": 294,
+      "pixel_format": "yuv420p",
+      "bit_depth": 8,
+      "historical_indices": [
+        73,
+        146,
+        219
+      ]
+    },
+    {
+      "source_id": "ESM2",
+      "path": "/home/leonardomaximinobernardo/Downloads/trabalho_Final_IfGoiano/videos_trabalho_Final_IfGoiano/11837_2015_1646_MOESM2_ESM.mp4",
+      "sha256": "4eb1762dc4ee65c3e8b1411d80812a75257b1324d539db4c3dcf6c97c1ed9a0a",
+      "size_bytes": 41487560,
+      "width": 1278,
+      "height": 1018,
+      "frame_count": 294,
+      "pixel_format": "yuv420p",
+      "bit_depth": 8,
+      "historical_indices": [
+        73,
+        146,
+        219
+      ]
+    },
+    {
+      "source_id": "ESM4",
+      "path": "/home/leonardomaximinobernardo/Downloads/trabalho_Final_IfGoiano/videos_trabalho_Final_IfGoiano/11837_2015_1646_MOESM4_ESM.mp4",
+      "sha256": "9e6be3e78699d3bdd16fa71d56917479d7e16f7418b857ab3925e1115df91ebe",
+      "size_bytes": 4509283,
+      "width": 1278,
+      "height": 1012,
+      "frame_count": 395,
+      "pixel_format": "yuv420p",
+      "bit_depth": 8,
+      "historical_indices": [
+        98,
+        197
+      ]
+    },
+    {
+      "source_id": "ESM5",
+      "path": "/home/leonardomaximinobernardo/Downloads/trabalho_Final_IfGoiano/videos_trabalho_Final_IfGoiano/11837_2015_1646_MOESM5_ESM.mp4",
+      "sha256": "c9054d18f330e018e82cc6bd4db2ccfbda7ac76e01326a831857a835d1feade6",
+      "size_bytes": 59235679,
+      "width": 1278,
+      "height": 1012,
+      "frame_count": 395,
+      "pixel_format": "yuv420p",
+      "bit_depth": 8,
+      "historical_indices": [
+        98,
+        197
+      ]
+    }
+  ],
+  "source_sha_gate": "Required at every authorized pass before any decoder",
+  "source_opens_at_record_creation": 0,
+  "g2_frag_offset_xy": [
+    0,
+    0
+  ],
+  "g2_solute_frozen_identity_offset": [
+    0,
+    0
+  ],
+  "no_new_matrix_estimated": true,
+  "legacy_fixtures": 50,
+  "legacy_positive_overlap_expected": 25,
+  "legacy_background_fixtures": 25,
+  "overlap_state": "DIRECT_VALID",
+  "inputs": {
+    "artifacts/evidence/STUDY2_A_ANNOTATION_MINING/SITE_LEDGER.json": "47a7d13672bf4f1dfd48355b57a6578021d11d5ed125a934bffe79cab740cc95",
+    "artifacts/evidence/STUDY2_A_ANNOTATION_MINING/METRIC_SEMANTICS_RECONCILIATION.json": "245b713dc60f88b7450c479179dae520c2a9a19e5894b9b183fd3a489db713e8",
+    "artifacts/evidence/STUDY2_A_ANNOTATION_MINING/LEGACY_SITE_MAPPING.json": "568dba67f6d71727ffa85cc0eea594099b8dd0ca13b09bfe5a2c7e6756e659a3",
+    "artifacts/evidence/STUDY2_A_ANNOTATION_MINING/LOCAL_ARTIFACT_MANIFEST.json": "7b52b3f30dde16038fa180e00c702078caff86e3af4abb8a4ad0620470c3adb3",
+    "artifacts/evidence/TI3_B_SOLUTAL/materialization-manifest.json": "1e4052510bbd1532587fbec3b2cd186abb1e408712a0acd98feb081a838612f2",
+    "artifacts/evidence/TI3_B_SOLUTAL/io-audit.json": "c55fecf449036344d24931054e013b81399255d69528186ad6731831a13a5e09",
+    "artifacts/metadata/ti2-pilot-manifest.json": "4f84a50e65e7541729d9a6c58e2649a872d6a92e55b305a66a0ce4e9f63a09a9",
+    "artifacts/evidence/TI2R_FRAG_DIRECT/ESM3-to-ESM1-freeze.json": "4a5fb4919b47fbe71d979aa25492c3a18dc4a5145f0ee52e71eb39f4a579e167",
+    "artifacts/evidence/TI2R_FRAG_DIRECT/ESM6-to-ESM4-freeze.json": "c6ca3a601355631280c74fda69f86e5754efda2f17211d166444247cf77b7922",
+    "artifacts/evidence/TI2R_SOLUTE_HOLDOUT/repair-1/results.json": "f5104b22489b6b284dc6abbf5fbaee8bfccd7980f6c2a313f3eda4f88203b99e"
+  }
+}

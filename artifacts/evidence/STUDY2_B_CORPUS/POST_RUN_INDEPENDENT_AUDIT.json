@@ -1,0 +1,1233 @@
+{
+  "audit": "STUDY2_B_POST_RUN_INDEPENDENT_TEXTUAL_AUDIT",
+  "status": "PASS",
+  "recorded_at_utc": "2026-09-21T16:23:25.376250+00:00",
+  "method_freeze_sha": "06ea5467d495a6a531a48a622a92b31e050e037a",
+  "errors": [],
+  "frozen_text_hashes_verified": 41,
+  "frozen_text_git_blobs_verified": 41,
+  "legacy_implementation_hashes_verified": 10,
+  "new_experimental_source_opens": 0,
+  "container_content_opens": 0,
+  "container_hash_recomputed": false,
+  "container_validation": "stat size and declared shape arithmetic only; hash remains single-write-run provenance",
+  "container_stat_bytes": 139425000,
+  "container_declared_sha256": "3957ba2480805fa108c216e500238f1b0fcf39520cfddd0d7d722d65f773b914",
+  "source_or_raw_access": false,
+  "science_imports_or_runs": 0,
+  "tests_executed": 0,
+  "index": {
+    "records": 27396,
+    "unique_site_frame_pairs": 27396,
+    "unique_pair_ids": 27396,
+    "sites": 87,
+    "pair_status_counts": {
+      "VALID_PAIR": 16500,
+      "INVALID_BOTH": 10896
+    },
+    "input_tier_counts": {
+      "UNLABELED_PRE": 8911,
+      "GOLD": 7941,
+      "UNLABELED_PERSISTENCE": 4807,
+      "SILVER": 5737
+    },
+    "valid_tier_counts": {
+      "UNLABELED_PRE": 5181,
+      "GOLD": 5218,
+      "SILVER": 3687,
+      "UNLABELED_PERSISTENCE": 2414
+    },
+    "contiguous_valid_array_rows": 16500,
+    "order_verified": true,
+    "views_verified": {
+      "GOLD_VIEW": 5218,
+      "GOLD_PLUS_SILVER_VIEW": 8905,
+      "UNLABELED_VIEW": 7595,
+      "FULL_LONGITUDINAL_VIEW": 16500
+    },
+    "canonical_centers_and_patch_geometry_verified": true,
+    "embedded_annotation_provenance_verified": true,
+    "prospective_site_weights_verified": true,
+    "frame_pair_hash_bindings_verified": 689
+  },
+  "acquisition_tier_pair_status_counts": [
+    {
+      "acquisition_id": "bottom_up_anti_parallel",
+      "supervision_tier": "GOLD",
+      "pair_status": "INVALID_BOTH",
+      "count": 1890
+    },
+    {
+      "acquisition_id": "bottom_up_anti_parallel",
+      "supervision_tier": "GOLD",
+      "pair_status": "VALID_PAIR",
+      "count": 3145
+    },
+    {
+      "acquisition_id": "bottom_up_anti_parallel",
+      "supervision_tier": "SILVER",
+      "pair_status": "INVALID_BOTH",
+      "count": 1628
+    },
+    {
+      "acquisition_id": "bottom_up_anti_parallel",
+      "supervision_tier": "SILVER",
+      "pair_status": "VALID_PAIR",
+      "count": 3032
+    },
+    {
+      "acquisition_id": "bottom_up_anti_parallel",
+      "supervision_tier": "UNLABELED_PERSISTENCE",
+      "pair_status": "INVALID_BOTH",
+      "count": 2307
+    },
+    {
+      "acquisition_id": "bottom_up_anti_parallel",
+      "supervision_tier": "UNLABELED_PERSISTENCE",
+      "pair_status": "VALID_PAIR",
+      "count": 2194
+    },
+    {
+      "acquisition_id": "bottom_up_anti_parallel",
+      "supervision_tier": "UNLABELED_PRE",
+      "pair_status": "INVALID_BOTH",
+      "count": 2701
+    },
+    {
+      "acquisition_id": "bottom_up_anti_parallel",
+      "supervision_tier": "UNLABELED_PRE",
+      "pair_status": "VALID_PAIR",
+      "count": 3389
+    },
+    {
+      "acquisition_id": "top_down_parallel",
+      "supervision_tier": "GOLD",
+      "pair_status": "INVALID_BOTH",
+      "count": 833
+    },
+    {
+      "acquisition_id": "top_down_parallel",
+      "supervision_tier": "GOLD",
+      "pair_status": "VALID_PAIR",
+      "count": 2073
+    },
+    {
+      "acquisition_id": "top_down_parallel",
+      "supervision_tier": "SILVER",
+      "pair_status": "INVALID_BOTH",
+      "count": 422
+    },
+    {
+      "acquisition_id": "top_down_parallel",
+      "supervision_tier": "SILVER",
+      "pair_status": "VALID_PAIR",
+      "count": 655
+    },
+    {
+      "acquisition_id": "top_down_parallel",
+      "supervision_tier": "UNLABELED_PERSISTENCE",
+      "pair_status": "INVALID_BOTH",
+      "count": 86
+    },
+    {
+      "acquisition_id": "top_down_parallel",
+      "supervision_tier": "UNLABELED_PERSISTENCE",
+      "pair_status": "VALID_PAIR",
+      "count": 220
+    },
+    {
+      "acquisition_id": "top_down_parallel",
+      "supervision_tier": "UNLABELED_PRE",
+      "pair_status": "INVALID_BOTH",
+      "count": 1029
+    },
+    {
+      "acquisition_id": "top_down_parallel",
+      "supervision_tier": "UNLABELED_PRE",
+      "pair_status": "VALID_PAIR",
+      "count": 1792
+    }
+  ],
+  "sites_by_acquisition": {
+    "bottom_up_anti_parallel": {
+      "input_sites": 69,
+      "valid_sites": 40,
+      "invalid_only_sites": 29,
+      "complete_trajectories": 40,
+      "partial_trajectories": 0
+    },
+    "top_down_parallel": {
+      "input_sites": 18,
+      "valid_sites": 12,
+      "invalid_only_sites": 6,
+      "complete_trajectories": 12,
+      "partial_trajectories": 0
+    }
+  },
+  "valid_sites_vs_legacy_mapping": {
+    "legacy_mapped_site_count": 52,
+    "valid_site_count": 52,
+    "valid_and_legacy": 33,
+    "valid_not_legacy": 19,
+    "legacy_invalid_only": 19,
+    "invalid_only_not_legacy": 16,
+    "same_set": false,
+    "interpretation": "Equal cardinality of 52 does not imply reused membership; intersections computed from immutable site IDs."
+  },
+  "support_exclusions": {
+    "invalid_only_sites": 35,
+    "all_invalid_rows_have_geometric_explanation": true,
+    "violated_edge_site_counts": {
+      "TOP": 10,
+      "BOTTOM": 22,
+      "LEFT": 2,
+      "RIGHT": 1
+    },
+    "edge_counts_may_overlap": true,
+    "text_support_statuses": [
+      {
+        "structural_support": "INVALID",
+        "solutal_support": "INVALID",
+        "disposition": "GOLD_INVALID_SUPPORT",
+        "count": 2723
+      },
+      {
+        "structural_support": "INVALID",
+        "solutal_support": "INVALID",
+        "disposition": "SILVER_INVALID_SUPPORT",
+        "count": 2050
+      },
+      {
+        "structural_support": "INVALID",
+        "solutal_support": "INVALID",
+        "disposition": "UNLABELED_PERSISTENCE_INVALID_SUPPORT",
+        "count": 2393
+      },
+      {
+        "structural_support": "INVALID",
+        "solutal_support": "INVALID",
+        "disposition": "UNLABELED_PRE_INVALID_SUPPORT",
+        "count": 3730
+      }
+    ],
+    "site_geometry": {
+      "ESM3:study2a-site:157c4f7e7b900443469466763c03a73ec429507a1e4a58c2d78cc75acac1fc5b": {
+        "acquisition_id": "bottom_up_anti_parallel",
+        "canonical_integer_center": [
+          82,
+          67
+        ],
+        "patch_xyxy": [
+          50,
+          35,
+          115,
+          100
+        ],
+        "historical_geometric_support_xyxy": [
+          5,
+          124,
+          1273,
+          864
+        ],
+        "violated_edges": [
+          "TOP"
+        ]
+      },
+      "ESM3:study2a-site:21e250c9b77bda9c46a9402d2bc91b23e1e873f958a410707c94aa40859ddcf3": {
+        "acquisition_id": "bottom_up_anti_parallel",
+        "canonical_integer_center": [
+          1190,
+          32
+        ],
+        "patch_xyxy": [
+          1158,
+          0,
+          1223,
+          65
+        ],
+        "historical_geometric_support_xyxy": [
+          5,
+          124,
+          1273,
+          864
+        ],
+        "violated_edges": [
+          "TOP"
+        ]
+      },
+      "ESM3:study2a-site:2306d78f6bb7a2e727b8cd3d69388f81665d621ee284ab27267e2a1cacfafd6a": {
+        "acquisition_id": "bottom_up_anti_parallel",
+        "canonical_integer_center": [
+          756,
+          865
+        ],
+        "patch_xyxy": [
+          724,
+          833,
+          789,
+          898
+        ],
+        "historical_geometric_support_xyxy": [
+          5,
+          124,
+          1273,
+          864
+        ],
+        "violated_edges": [
+          "BOTTOM"
+        ]
+      },
+      "ESM3:study2a-site:23d146d45343c286e4178895ce766d3319da87525f8d1e5592a493a5cda8a191": {
+        "acquisition_id": "bottom_up_anti_parallel",
+        "canonical_integer_center": [
+          232,
+          908
+        ],
+        "patch_xyxy": [
+          200,
+          876,
+          265,
+          941
+        ],
+        "historical_geometric_support_xyxy": [
+          5,
+          124,
+          1273,
+          864
+        ],
+        "violated_edges": [
+          "BOTTOM"
+        ]
+      },
+      "ESM3:study2a-site:241f1a1ecdaa629df4ce49f226a13b825566ea39f60a3653770210ef9c41f03f": {
+        "acquisition_id": "bottom_up_anti_parallel",
+        "canonical_integer_center": [
+          802,
+          913
+        ],
+        "patch_xyxy": [
+          770,
+          881,
+          835,
+          946
+        ],
+        "historical_geometric_support_xyxy": [
+          5,
+          124,
+          1273,
+          864
+        ],
+        "violated_edges": [
+          "BOTTOM"
+        ]
+      },
+      "ESM3:study2a-site:29b5b73883ff542a71482da681844e719de28e51aa3ec914ab9775b9aef22c0f": {
+        "acquisition_id": "bottom_up_anti_parallel",
+        "canonical_integer_center": [
+          503,
+          147
+        ],
+        "patch_xyxy": [
+          471,
+          115,
+          536,
+          180
+        ],
+        "historical_geometric_support_xyxy": [
+          5,
+          124,
+          1273,
+          864
+        ],
+        "violated_edges": [
+          "TOP"
+        ]
+      },
+      "ESM3:study2a-site:3193a5f2105b5a10ab45283d690f14fef170823c3ab21c7f402f1f7572d49025": {
+        "acquisition_id": "bottom_up_anti_parallel",
+        "canonical_integer_center": [
+          364,
+          22
+        ],
+        "patch_xyxy": [
+          332,
+          -10,
+          397,
+          55
+        ],
+        "historical_geometric_support_xyxy": [
+          5,
+          124,
+          1273,
+          864
+        ],
+        "violated_edges": [
+          "TOP"
+        ]
+      },
+      "ESM3:study2a-site:336da5e30a2dea7ca2d3252a3d7bcd945283ae3aba0c18921da1f445cb5707d8": {
+        "acquisition_id": "bottom_up_anti_parallel",
+        "canonical_integer_center": [
+          19,
+          826
+        ],
+        "patch_xyxy": [
+          -13,
+          794,
+          52,
+          859
+        ],
+        "historical_geometric_support_xyxy": [
+          5,
+          124,
+          1273,
+          864
+        ],
+        "violated_edges": [
+          "LEFT"
+        ]
+      },
+      "ESM3:study2a-site:469a6d208e7803a05afb7a700be3648df9b68b3ac201591ace79a751145103e0": {
+        "acquisition_id": "bottom_up_anti_parallel",
+        "canonical_integer_center": [
+          979,
+          978
+        ],
+        "patch_xyxy": [
+          947,
+          946,
+          1012,
+          1011
+        ],
+        "historical_geometric_support_xyxy": [
+          5,
+          124,
+          1273,
+          864
+        ],
+        "violated_edges": [
+          "BOTTOM"
+        ]
+      },
+      "ESM3:study2a-site:4a23ed202db89f3dea5e6cfc96f67e966f8c4a38aa51b041749406f3d860f562": {
+        "acquisition_id": "bottom_up_anti_parallel",
+        "canonical_integer_center": [
+          470,
+          837
+        ],
+        "patch_xyxy": [
+          438,
+          805,
+          503,
+          870
+        ],
+        "historical_geometric_support_xyxy": [
+          5,
+          124,
+          1273,
+          864
+        ],
+        "violated_edges": [
+          "BOTTOM"
+        ]
+      },
+      "ESM3:study2a-site:56b40e2fc7783e735879afba6c48a8a657092cb2d7142345032f3a1bedffd138": {
+        "acquisition_id": "bottom_up_anti_parallel",
+        "canonical_integer_center": [
+          536,
+          925
+        ],
+        "patch_xyxy": [
+          504,
+          893,
+          569,
+          958
+        ],
+        "historical_geometric_support_xyxy": [
+          5,
+          124,
+          1273,
+          864
+        ],
+        "violated_edges": [
+          "BOTTOM"
+        ]
+      },
+      "ESM3:study2a-site:6186fccbeea871d7e2ac246f89f6deca8a70b641e4d93bbbe8ccd4cfe41b5bf9": {
+        "acquisition_id": "bottom_up_anti_parallel",
+        "canonical_integer_center": [
+          291,
+          976
+        ],
+        "patch_xyxy": [
+          259,
+          944,
+          324,
+          1009
+        ],
+        "historical_geometric_support_xyxy": [
+          5,
+          124,
+          1273,
+          864
+        ],
+        "violated_edges": [
+          "BOTTOM"
+        ]
+      },
+      "ESM3:study2a-site:69b9ab3233eca0dc2bce12088c5ea8f41cb2bf3b8191dbf0a7b354b660e1e974": {
+        "acquisition_id": "bottom_up_anti_parallel",
+        "canonical_integer_center": [
+          145,
+          837
+        ],
+        "patch_xyxy": [
+          113,
+          805,
+          178,
+          870
+        ],
+        "historical_geometric_support_xyxy": [
+          5,
+          124,
+          1273,
+          864
+        ],
+        "violated_edges": [
+          "BOTTOM"
+        ]
+      },
+      "ESM3:study2a-site:6fdc5852732615a4d9562895218a29c8afc8d95d0b90e0aaee91a0dab65fb68e": {
+        "acquisition_id": "bottom_up_anti_parallel",
+        "canonical_integer_center": [
+          164,
+          957
+        ],
+        "patch_xyxy": [
+          132,
+          925,
+          197,
+          990
+        ],
+        "historical_geometric_support_xyxy": [
+          5,
+          124,
+          1273,
+          864
+        ],
+        "violated_edges": [
+          "BOTTOM"
+        ]
+      },
+      "ESM3:study2a-site:70366181894fa48525b36d4ee7e6a98e833a560541103c0fe5113b210e2b3743": {
+        "acquisition_id": "bottom_up_anti_parallel",
+        "canonical_integer_center": [
+          77,
+          909
+        ],
+        "patch_xyxy": [
+          45,
+          877,
+          110,
+          942
+        ],
+        "historical_geometric_support_xyxy": [
+          5,
+          124,
+          1273,
+          864
+        ],
+        "violated_edges": [
+          "BOTTOM"
+        ]
+      },
+      "ESM3:study2a-site:7718fb0f16c9a207b9416317cc9df46bbb4d18bc821929b0574cc0a98b2b3565": {
+        "acquisition_id": "bottom_up_anti_parallel",
+        "canonical_integer_center": [
+          1201,
+          976
+        ],
+        "patch_xyxy": [
+          1169,
+          944,
+          1234,
+          1009
+        ],
+        "historical_geometric_support_xyxy": [
+          5,
+          124,
+          1273,
+          864
+        ],
+        "violated_edges": [
+          "BOTTOM"
+        ]
+      },
+      "ESM3:study2a-site:8123fc618b1c136bb34ddb85e9e9b0b2e67846f8a8d41f9cbb4d298cf6534789": {
+        "acquisition_id": "bottom_up_anti_parallel",
+        "canonical_integer_center": [
+          112,
+          46
+        ],
+        "patch_xyxy": [
+          80,
+          14,
+          145,
+          79
+        ],
+        "historical_geometric_support_xyxy": [
+          5,
+          124,
+          1273,
+          864
+        ],
+        "violated_edges": [
+          "TOP"
+        ]
+      },
+      "ESM3:study2a-site:8365bfc76acae3634ec53707ca3be2137e2134ba756fe2546ca6c50815cf70fc": {
+        "acquisition_id": "bottom_up_anti_parallel",
+        "canonical_integer_center": [
+          382,
+          977
+        ],
+        "patch_xyxy": [
+          350,
+          945,
+          415,
+          1010
+        ],
+        "historical_geometric_support_xyxy": [
+          5,
+          124,
+          1273,
+          864
+        ],
+        "violated_edges": [
+          "BOTTOM"
+        ]
+      },
+      "ESM3:study2a-site:95f5913ca25dbad958d8db6c5cdda74ae9aa09c8f59af6142b34dae8b5009732": {
+        "acquisition_id": "bottom_up_anti_parallel",
+        "canonical_integer_center": [
+          736,
+          985
+        ],
+        "patch_xyxy": [
+          704,
+          953,
+          769,
+          1018
+        ],
+        "historical_geometric_support_xyxy": [
+          5,
+          124,
+          1273,
+          864
+        ],
+        "violated_edges": [
+          "BOTTOM"
+        ]
+      },
+      "ESM3:study2a-site:98744372b895f30803654a11d11e79117b99448ebfe03786bc625c0dde5ab82a": {
+        "acquisition_id": "bottom_up_anti_parallel",
+        "canonical_integer_center": [
+          385,
+          102
+        ],
+        "patch_xyxy": [
+          353,
+          70,
+          418,
+          135
+        ],
+        "historical_geometric_support_xyxy": [
+          5,
+          124,
+          1273,
+          864
+        ],
+        "violated_edges": [
+          "TOP"
+        ]
+      },
+      "ESM3:study2a-site:9e8b469c2d4d764095930623475fcb4b7cd0563c948ea712008f89d2607ba5b5": {
+        "acquisition_id": "bottom_up_anti_parallel",
+        "canonical_integer_center": [
+          461,
+          101
+        ],
+        "patch_xyxy": [
+          429,
+          69,
+          494,
+          134
+        ],
+        "historical_geometric_support_xyxy": [
+          5,
+          124,
+          1273,
+          864
+        ],
+        "violated_edges": [
+          "TOP"
+        ]
+      },
+      "ESM3:study2a-site:a43ecc1d2e0b632255c8ce06d2a3b79715b07632063f540211cf18f116306595": {
+        "acquisition_id": "bottom_up_anti_parallel",
+        "canonical_integer_center": [
+          415,
+          131
+        ],
+        "patch_xyxy": [
+          383,
+          99,
+          448,
+          164
+        ],
+        "historical_geometric_support_xyxy": [
+          5,
+          124,
+          1273,
+          864
+        ],
+        "violated_edges": [
+          "TOP"
+        ]
+      },
+      "ESM3:study2a-site:aef9e7c4ec7c826b137f321f816cdfdb86b6a6f22a6733bd06be18513e8d238c": {
+        "acquisition_id": "bottom_up_anti_parallel",
+        "canonical_integer_center": [
+          1259,
+          738
+        ],
+        "patch_xyxy": [
+          1227,
+          706,
+          1292,
+          771
+        ],
+        "historical_geometric_support_xyxy": [
+          5,
+          124,
+          1273,
+          864
+        ],
+        "violated_edges": [
+          "RIGHT"
+        ]
+      },
+      "ESM3:study2a-site:b2792c24aea925e5d50342bf1d961981e6bf3ffc5ebdde516e4cf7c40d9e465b": {
+        "acquisition_id": "bottom_up_anti_parallel",
+        "canonical_integer_center": [
+          286,
+          867
+        ],
+        "patch_xyxy": [
+          254,
+          835,
+          319,
+          900
+        ],
+        "historical_geometric_support_xyxy": [
+          5,
+          124,
+          1273,
+          864
+        ],
+        "violated_edges": [
+          "BOTTOM"
+        ]
+      },
+      "ESM3:study2a-site:e5fefdfa2fbfb539ff0ec3849579cf8b1951990d0e31db326a4782438daa7ab3": {
+        "acquisition_id": "bottom_up_anti_parallel",
+        "canonical_integer_center": [
+          674,
+          898
+        ],
+        "patch_xyxy": [
+          642,
+          866,
+          707,
+          931
+        ],
+        "historical_geometric_support_xyxy": [
+          5,
+          124,
+          1273,
+          864
+        ],
+        "violated_edges": [
+          "BOTTOM"
+        ]
+      },
+      "ESM3:study2a-site:ed4a0f74841100fd9aba6c3d74a2acfeb45ddb818213f356a652a347efdaa9ef": {
+        "acquisition_id": "bottom_up_anti_parallel",
+        "canonical_integer_center": [
+          326,
+          947
+        ],
+        "patch_xyxy": [
+          294,
+          915,
+          359,
+          980
+        ],
+        "historical_geometric_support_xyxy": [
+          5,
+          124,
+          1273,
+          864
+        ],
+        "violated_edges": [
+          "BOTTOM"
+        ]
+      },
+      "ESM3:study2a-site:f1884ed3a0d0f499c63daae43ef36ef276ae7e7c21ed5bdd403c99f4b0d176d5": {
+        "acquisition_id": "bottom_up_anti_parallel",
+        "canonical_integer_center": [
+          909,
+          886
+        ],
+        "patch_xyxy": [
+          877,
+          854,
+          942,
+          919
+        ],
+        "historical_geometric_support_xyxy": [
+          5,
+          124,
+          1273,
+          864
+        ],
+        "violated_edges": [
+          "BOTTOM"
+        ]
+      },
+      "ESM3:study2a-site:f78f0ec1a298bd2b533bb0309e1ccbe9e14ce587894582d0c66ee44b315f7b6a": {
+        "acquisition_id": "bottom_up_anti_parallel",
+        "canonical_integer_center": [
+          874,
+          837
+        ],
+        "patch_xyxy": [
+          842,
+          805,
+          907,
+          870
+        ],
+        "historical_geometric_support_xyxy": [
+          5,
+          124,
+          1273,
+          864
+        ],
+        "violated_edges": [
+          "BOTTOM"
+        ]
+      },
+      "ESM3:study2a-site:f8f862ad41de99b2376f334095c4c9a73b7bc40377feaa88075555cc59045554": {
+        "acquisition_id": "bottom_up_anti_parallel",
+        "canonical_integer_center": [
+          250,
+          1002
+        ],
+        "patch_xyxy": [
+          218,
+          970,
+          283,
+          1035
+        ],
+        "historical_geometric_support_xyxy": [
+          5,
+          124,
+          1273,
+          864
+        ],
+        "violated_edges": [
+          "BOTTOM"
+        ]
+      },
+      "ESM6:study2a-site:2b4173c40f15e4aeffa6a5ae524bde5c4864472d1d342bed8f1711dab4024888": {
+        "acquisition_id": "top_down_parallel",
+        "canonical_integer_center": [
+          320,
+          50
+        ],
+        "patch_xyxy": [
+          288,
+          18,
+          353,
+          83
+        ],
+        "historical_geometric_support_xyxy": [
+          5,
+          123,
+          1273,
+          859
+        ],
+        "violated_edges": [
+          "TOP"
+        ]
+      },
+      "ESM6:study2a-site:7fa792a06101f3dd14780c208f08d55186a0e8a1c6dfbac48c801360d79d5b60": {
+        "acquisition_id": "top_down_parallel",
+        "canonical_integer_center": [
+          1105,
+          901
+        ],
+        "patch_xyxy": [
+          1073,
+          869,
+          1138,
+          934
+        ],
+        "historical_geometric_support_xyxy": [
+          5,
+          123,
+          1273,
+          859
+        ],
+        "violated_edges": [
+          "BOTTOM"
+        ]
+      },
+      "ESM6:study2a-site:860d0e33b2ca31caf59e46956543b38e906f9d5a0c2d51f7f8792ab8acc70fd1": {
+        "acquisition_id": "top_down_parallel",
+        "canonical_integer_center": [
+          1140,
+          827
+        ],
+        "patch_xyxy": [
+          1108,
+          795,
+          1173,
+          860
+        ],
+        "historical_geometric_support_xyxy": [
+          5,
+          123,
+          1273,
+          859
+        ],
+        "violated_edges": [
+          "BOTTOM"
+        ]
+      },
+      "ESM6:study2a-site:96bf0b8309365c3cc48cefea8295a08f42d7bd9db1874f3a1ecc3c21cedd11e5": {
+        "acquisition_id": "top_down_parallel",
+        "canonical_integer_center": [
+          681,
+          926
+        ],
+        "patch_xyxy": [
+          649,
+          894,
+          714,
+          959
+        ],
+        "historical_geometric_support_xyxy": [
+          5,
+          123,
+          1273,
+          859
+        ],
+        "violated_edges": [
+          "BOTTOM"
+        ]
+      },
+      "ESM6:study2a-site:ee19dc1ac1974dcd5795cf7888ad1e79105213a8078778f151cc13e731859dac": {
+        "acquisition_id": "top_down_parallel",
+        "canonical_integer_center": [
+          968,
+          125
+        ],
+        "patch_xyxy": [
+          936,
+          93,
+          1001,
+          158
+        ],
+        "historical_geometric_support_xyxy": [
+          5,
+          123,
+          1273,
+          859
+        ],
+        "violated_edges": [
+          "TOP"
+        ]
+      },
+      "ESM6:study2a-site:f0ef71a50ef65d3a0b5027f6c4f291f9dab04fe036eea87b7d0fa58eb7c80d06": {
+        "acquisition_id": "top_down_parallel",
+        "canonical_integer_center": [
+          29,
+          746
+        ],
+        "patch_xyxy": [
+          -3,
+          714,
+          62,
+          779
+        ],
+        "historical_geometric_support_xyxy": [
+          5,
+          123,
+          1273,
+          859
+        ],
+        "violated_edges": [
+          "LEFT"
+        ]
+      }
+    },
+    "interpretation": "Bounds are outside historical geometric support in both matched-dimension modalities. No chroma or pixel cause was inferred or inspected."
+  },
+  "background": {
+    "records": 70844,
+    "unique_track_frame_keys": 70844,
+    "tracks": 223,
+    "records_by_acquisition": {
+      "bottom_up_anti_parallel": 12384,
+      "top_down_parallel": 58460
+    },
+    "tracks_by_acquisition": {
+      "bottom_up_anti_parallel": 75,
+      "top_down_parallel": 148
+    },
+    "rank_hash_formula_verified": true,
+    "grid_and_track_constancy_verified": true,
+    "metadata_only_flags_verified": true,
+    "future_positive_global_exclusion_rectangle_checks": 1906776,
+    "future_positive_global_exclusion_verified": true,
+    "current_frame_ambiguity_and_chroma_not_recomputed": true
+  },
+  "io_scope_notes": [
+    "IO_AUDIT patches_written=0 belongs to the streaming reader only; CorpusWriter persisted 16,500 paired rows, 33,000 modality patches and 139,425,000 bytes.",
+    "frames_written=0 means no full-frame export, not absence of in-memory native-frame delivery.",
+    "Native byte counts measure YUV420p streams, not MP4 compressed bytes; decoder_compressed_bytes_read and internal_intermediate_decode_count remain null because they were not instrumented.",
+    "source_auth_opens=4 counts Python authentication descriptors; decoder_input_open_requests=4 is a separate decoder descriptor-operation counter.",
+    "PEAK_RSS_KIB describes the Python parent only; FFmpeg internal peak was not instrumented.",
+    "TEMP_PEAK_BYTES=0 covers application temporary outputs, not process memory."
+  ],
+  "text_custody": {
+    "artifacts/evidence/STUDY2_B_CORPUS/METHOD_FREEZE.json": {
+      "size_bytes": 5802,
+      "sha256": "6fc5737383a35356e17e5fc72b7768eea53ec0bfa897a6e1d6bacaa7e64fbc05"
+    },
+    ".github/workflows/study2b-synthetic.yml": {
+      "size_bytes": 2417,
+      "sha256": "3709328dcf27894d5df8b6a3287e525a23f820670797494c8633b9ed6e9d1848"
+    },
+    "artifacts/evidence/STUDY2_A_ANNOTATION_MINING/LEGACY_SITE_MAPPING.json": {
+      "size_bytes": 15483,
+      "sha256": "568dba67f6d71727ffa85cc0eea594099b8dd0ca13b09bfe5a2c7e6756e659a3"
+    },
+    "artifacts/evidence/STUDY2_A_ANNOTATION_MINING/LOCAL_ARTIFACT_MANIFEST.json": {
+      "size_bytes": 582,
+      "sha256": "7b52b3f30dde16038fa180e00c702078caff86e3af4abb8a4ad0620470c3adb3"
+    },
+    "artifacts/evidence/STUDY2_A_ANNOTATION_MINING/METRIC_SEMANTICS_RECONCILIATION.json": {
+      "size_bytes": 22137,
+      "sha256": "245b713dc60f88b7450c479179dae520c2a9a19e5894b9b183fd3a489db713e8"
+    },
+    "artifacts/evidence/STUDY2_A_ANNOTATION_MINING/SITE_LEDGER.json": {
+      "size_bytes": 2568686,
+      "sha256": "47a7d13672bf4f1dfd48355b57a6578021d11d5ed125a934bffe79cab740cc95"
+    },
+    "artifacts/evidence/STUDY2_B_CORPUS/AUTHORIZATION.md": {
+      "size_bytes": 21896,
+      "sha256": "51795aef0a7494ee076f04174eea55b54170a77e358d427682b49570de974cfe"
+    },
+    "artifacts/evidence/STUDY2_B_CORPUS/DECODER_GATE_AUTHORIZATION.md": {
+      "size_bytes": 954,
+      "sha256": "b4aaa7af87d19b816a177d85e75fc5dd7b4ffa166617c1fac5b7b1358c3d52c6"
+    },
+    "artifacts/evidence/STUDY2_B_CORPUS/ENVIRONMENT.json": {
+      "size_bytes": 237,
+      "sha256": "c9c5417cac9cc98cc5a0846a502c2c7f002a57d53243bda55bb5a8bbee9276a3"
+    },
+    "artifacts/evidence/STUDY2_B_CORPUS/INTEGRATION_AUDIT.json": {
+      "size_bytes": 61303,
+      "sha256": "007da6ad73cb35bf35bec2738490a8f31f3bd75410cb6451a3abb0cacea13580"
+    },
+    "artifacts/evidence/STUDY2_B_CORPUS/LEGACY_IO_AUDIT.json": {
+      "size_bytes": 8095,
+      "sha256": "c56fe0b22eee808ecd1f8e6e87cede0a6ce3171f18885b00e745c5a00724220f"
+    },
+    "artifacts/evidence/STUDY2_B_CORPUS/LEGACY_RECEIPT.json": {
+      "size_bytes": 1907,
+      "sha256": "1823b54fbd6c3906f99f454f16900d8f019fbd3f08126d99ba37028bf1e240ce"
+    },
+    "artifacts/evidence/STUDY2_B_CORPUS/LEGACY_REPRODUCTION.json": {
+      "size_bytes": 24436,
+      "sha256": "082ac7250c935c30220f1ea0af187d1c13fd3acd3db9769d348f4e93fa1423f9"
+    },
+    "artifacts/evidence/STUDY2_B_CORPUS/PREPARATION_COMMANDS.json": {
+      "size_bytes": 1795,
+      "sha256": "0c58fd25e69bbd18dea7d3ed42f660535c089ad96dd398a0e1df5e7c60710e1b"
+    },
+    "artifacts/evidence/STUDY2_B_CORPUS/PRE_FREEZE_REVIEW.json": {
+      "size_bytes": 1144,
+      "sha256": "bdc017267b5a820afc22e7c8cb3a37d015cdbcae4e9e20c21466eb0576d3bad7"
+    },
+    "artifacts/evidence/STUDY2_B_CORPUS/PROSPECTIVE_SCOPE_AUDIT.json": {
+      "size_bytes": 3617,
+      "sha256": "6e06d0104a40eddf156dd73bea604f752eef6b76300f6b4705aefa547fc9ce6a"
+    },
+    "artifacts/evidence/STUDY2_B_CORPUS/SOURCE_CUSTODY.json": {
+      "size_bytes": 3831,
+      "sha256": "5c723003a4cf706f7a183b328269fa5d797d962db98f0420f921c25ad748449c"
+    },
+    "artifacts/evidence/STUDY2_B_CORPUS/STUDY2_B_BACKGROUND_CONTRACT.md": {
+      "size_bytes": 1945,
+      "sha256": "8108cdee172d159e92ae7f59ac6d6c2dfce7293e915b6414b700c2f43e5ae34b"
+    },
+    "artifacts/evidence/STUDY2_B_CORPUS/STUDY2_B_CLAIM_SCOPE.md": {
+      "size_bytes": 1370,
+      "sha256": "850fa00cc1951cc9f84fdfd68a1b665984c38548c38e7f83cd9adb93d1fba1a6"
+    },
+    "artifacts/evidence/STUDY2_B_CORPUS/STUDY2_B_CORPUS_SCHEMA.json": {
+      "size_bytes": 2919,
+      "sha256": "c3f56e2c332800569fc4b3abd47897a28bf73dc7c3963e8055f3f6a6bb736a0d"
+    },
+    "artifacts/evidence/STUDY2_B_CORPUS/STUDY2_B_PROTOCOL.md": {
+      "size_bytes": 6796,
+      "sha256": "1997f682cd3d19e7010f05caf8d9f3432dd148dfb56c62c3de66a058f7832564"
+    },
+    "artifacts/evidence/STUDY2_B_CORPUS/STUDY2_B_STORAGE_CONTRACT.md": {
+      "size_bytes": 2286,
+      "sha256": "42894649434cd9a9ef5554c6f02e9f266c7ce7448ee20ba1ca6bf1cd0e2a5df9"
+    },
+    "artifacts/evidence/STUDY2_B_CORPUS/SYNTHETIC_TESTS.json": {
+      "size_bytes": 2276,
+      "sha256": "c20bdcb0114900528a510b8a935c77c1a23febb11c1f784b7dddc78d61c3d921"
+    },
+    "artifacts/evidence/STUDY2_B_CORPUS/SYNTHETIC_TESTS_initial-count-mismatch.json": {
+      "size_bytes": 482,
+      "sha256": "ca897f597519a36dedfd3fd54caeb5baac2563c8bdac6e9eefee70c2209b47e0"
+    },
+    "artifacts/evidence/STUDY2_B_CORPUS/SYNTHETIC_TESTS_profile99_preserved.json": {
+      "size_bytes": 1738,
+      "sha256": "e18b44640d9fd00d4b1486ce972b8667a207089ef2690703346643beb4d5836e"
+    },
+    "artifacts/evidence/STUDY2_B_CORPUS/synthetic-execution-40.log.txt": {
+      "size_bytes": 6314,
+      "sha256": "47213ef6e688d807300e874b00e56cc2c65c4929ed5d28fa87d6d91ca0211588"
+    },
+    "artifacts/evidence/STUDY2_B_CORPUS/synthetic-tests.log.txt": {
+      "size_bytes": 15388,
+      "sha256": "0ab727943debcd2bbff091b4e4c8d63d05a3f9a11eeeb347dd8753b62e255e09"
+    },
+    "artifacts/evidence/TI2R_FRAG_DIRECT/ESM3-to-ESM1-freeze.json": {
+      "size_bytes": 297156,
+      "sha256": "4a5fb4919b47fbe71d979aa25492c3a18dc4a5145f0ee52e71eb39f4a579e167"
+    },
+    "artifacts/evidence/TI2R_FRAG_DIRECT/ESM6-to-ESM4-freeze.json": {
+      "size_bytes": 124475,
+      "sha256": "c6ca3a601355631280c74fda69f86e5754efda2f17211d166444247cf77b7922"
+    },
+    "artifacts/evidence/TI2R_SOLUTE_HOLDOUT/repair-1/results.json": {
+      "size_bytes": 14117219,
+      "sha256": "f5104b22489b6b284dc6abbf5fbaee8bfccd7980f6c2a313f3eda4f88203b99e"
+    },
+    "artifacts/evidence/TI3_B_SOLUTAL/io-audit.json": {
+      "size_bytes": 6530,
+      "sha256": "c55fecf449036344d24931054e013b81399255d69528186ad6731831a13a5e09"
+    },
+    "artifacts/evidence/TI3_B_SOLUTAL/materialization-manifest.json": {
+      "size_bytes": 112039,
+      "sha256": "1e4052510bbd1532587fbec3b2cd186abb1e408712a0acd98feb081a838612f2"
+    },
+    "artifacts/metadata/ti2-pilot-manifest.json": {
+      "size_bytes": 75285,
+      "sha256": "4f84a50e65e7541729d9a6c58e2649a872d6a92e55b305a66a0ce4e9f63a09a9"
+    },
+    "configs/authority/study2b.json": {
+      "size_bytes": 885,
+      "sha256": "684d78ca519c99c390bed3b9ac1de86738333fb592f30423b4410fafa926e3af"
+    },
+    "configs/governance/phase-scope-v1.json": {
+      "size_bytes": 27441,
+      "sha256": "0bca75b6c1f896cb4972f5cc90eafe4de659e488a4c4eac3a3d1426858e5e730"
+    },
+    "scripts/run_study2b.py": {
+      "size_bytes": 734,
+      "sha256": "bd728b69c7dd8fa3c0a1b5a81ba305191e2657b2eb56986f2d291faac69bd899"
+    },
+    "src/snbi_fragmentation/study2b_corpus.py": {
+      "size_bytes": 26671,
+      "sha256": "f14b4246f96dfd59c5df9e5923ed9bafd0a9d60102c8c073844815cbcce69dbe"
+    },
+    "src/snbi_fragmentation/study2b_execution.py": {
+      "size_bytes": 36006,
+      "sha256": "2cf2b045981e44514a0d3a46654a08fd9d6132a06f775230c58322d2ca744185"
+    },
+    "src/snbi_fragmentation/study2b_streaming.py": {
+      "size_bytes": 19273,
+      "sha256": "4e2ae662362f6d4da3f82e67e4762b08b2846fda094e420ed928e213dccc8ec8"
+    },
+    "tests/test_study2b_corpus.py": {
+      "size_bytes": 19553,
+      "sha256": "b199cac445ea78c07f121ff4b65c5e177fab66bc41667cc9b01e32bb315284c4"
+    },
+    "tests/test_study2b_execution.py": {
+      "size_bytes": 27712,
+      "sha256": "486673f788f10591bbe749e7662be45f8ba091231acad2533c59216b5621f7d4"
+    },
+    "tests/test_study2b_streaming.py": {
+      "size_bytes": 22507,
+      "sha256": "8d53494283b34bb3b329f2788941447c6094f6324b321053f73f2fb758da85ce"
+    },
+    "artifacts/evidence/STUDY2_B_CORPUS/results.json": {
+      "size_bytes": 2163,
+      "sha256": "d26235da166b604d19f5ae8319f547657d0f167144d79fd47f89485d7c2ff750"
+    },
+    "artifacts/evidence/STUDY2_B_CORPUS/terminal-state.json": {
+      "size_bytes": 709,
+      "sha256": "92d366d257bbd8b3f2dcc1dc81c3e0db12dc8f54e237aa3da826bef8897bbe26"
+    },
+    "artifacts/evidence/STUDY2_B_CORPUS/IO_AUDIT.json": {
+      "size_bytes": 196306,
+      "sha256": "3dcaf31cbfdc120d4f1bfa96268a39d9d941a2ce8ba16ae9a19f3f8b27a1a1d0"
+    },
+    "artifacts/evidence/STUDY2_B_CORPUS/LOCAL_ARTIFACT_MANIFEST.json": {
+      "size_bytes": 1243,
+      "sha256": "e9a3ed30771740d7f6a5ee4ff98bb448a46ea842cea1dd903ed1ab4d6b2bbe93"
+    },
+    "artifacts/evidence/STUDY2_B_CORPUS/CORPUS_VIEWS.json": {
+      "size_bytes": 395759,
+      "sha256": "cc38f5a64e73567eff56280322aa2f60c05f105c61b8f88636936c74e40a6928"
+    },
+    "artifacts/evidence/STUDY2_B_CORPUS/FRAME_HASHES.json": {
+      "size_bytes": 198215,
+      "sha256": "643645280e38269bcf17854d7e4b9b4cfb63d5fb86ec10f5bdfa7641bac876c1"
+    },
+    "data/derived/study2b/corpus-index.jsonl": {
+      "size_bytes": 69620377,
+      "sha256": "ae322dca1b81c93628d012898d152ca0bfe79f84d0f0284cf82ff22d09977edc"
+    },
+    "data/derived/study2b/background-pool.jsonl": {
+      "size_bytes": 49990703,
+      "sha256": "7b92837a152415d10769a79a5224dee02ffb68331bfff8ced60463f8d1b52dd3"
+    }
+  },
+  "limitations": [
+    "Text-only independent verification; no rehash or reopen of the binary container and no source or raw-frame access.",
+    "Patch hash strings were format/provenance-checked,not independently recomputed from pixels.",
+    "Background global site rectangles were checked independently; chroma masks and current-frame component exclusions were not rerun.",
+    "This bounded inventory is not universal syscall monitoring."
+  ],
+  "storage_budget_checks": {
+    "container_bytes": 139425000,
+    "max_patch_cache_bytes": 2147483648,
+    "container_below_cap": true,
+    "index_and_background_text_bytes": 119611080,
+    "max_metadata_bytes": 268435456,
+    "metadata_below_cap": true,
+    "reported_temp_peak_bytes": 0,
+    "reported_free_disk_after": 666263302144,
+    "min_free_disk_reserve_bytes": 53687091200
+  }
+}

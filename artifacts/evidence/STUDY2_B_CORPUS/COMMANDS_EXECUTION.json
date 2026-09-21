@@ -1,0 +1,81 @@
+{
+  "phase": "STUDY2_B",
+  "commands": [
+    {
+      "command": "scripts/run_study2b.py legacy --preflight-only (via frozen .venv, PYTHONPATH=src)",
+      "exit_code": 0,
+      "scope": "text/Git; receiptfalse;sourceopens0"
+    },
+    {
+      "command": "PYTHONPATH=src .venv/bin/python -B scripts/run_study2b.py legacy",
+      "exit_code": 0,
+      "invocations": 1,
+      "fixture_pairs": 50,
+      "gate": "PASS"
+    },
+    {
+      "command": "git add --32explicitpaths; realphaseguard; git diff --cached --check; index/hashcomparison",
+      "exit_codes": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "scope": "exact authorized methodfreeze staging"
+    },
+    {
+      "command": "git commit -m feat(study2b): freeze dense multimodal corpus protocol",
+      "exit_code": 0,
+      "sha": "06ea5467d495a6a531a48a622a92b31e050e037a"
+    },
+    {
+      "command": "git push --set-upstream origin feat/study2b-dense-multimodal-corpus",
+      "exit_code": 0,
+      "force": false
+    },
+    {
+      "command": "gh run list/view exactfreezeSHA",
+      "exit_code": 0,
+      "proof": "CI_PROOF.json",
+      "jobs": 8,
+      "steps": 90,
+      "rerun": false
+    },
+    {
+      "command": "PYTHONPATH=src .venv/bin/python -B scripts/run_study2b.py full --preflight-only",
+      "exit_code": 0,
+      "sourceopens": 0,
+      "receiptfalse": true
+    },
+    {
+      "command": "PYTHONPATH=src .venv/bin/python -B scripts/run_study2b.py full",
+      "exit_code": 0,
+      "invocations": 1,
+      "retry": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "stat threeexplicitaggregates and diskusage during construction",
+      "exit_code": 0,
+      "content_reads": 0
+    },
+    {
+      "command": "post-run readonly Git/text/checksum checks; check-ignore threeaggregates",
+      "exit_code": 0,
+      "container_content_reopens": 0,
+      "freezehashes": 41,
+      "historicalchecksums": 95
+    }
+  ],
+  "synthetic_history": "SYNTHETIC_TESTS*.json and two actual logs; 100unique final tests across unchanged corpus/streaming suites and affected execution40; no local combined100claim",
+  "git_approval_attempts_since_B_preparation": {
+    "freeze_staging": 1,
+    "freeze_commit": 1,
+    "freeze_push": 1
+  },
+  "supplemental_authorization": "DECODER_GATE_AUTHORIZATION.md; internal historicaldecodeonly",
+  "local_installations": 0,
+  "ml_runs": 0,
+  "human_visual_review": false,
+  "limits": "Application counters plus bounded commands; not universal syscall monitoring. CI log GitHubresponses preserved; delegated teststdout captured, not fabricated. Pending documentary checkpoint/CI belongs to effective Git/operator return."
+}
