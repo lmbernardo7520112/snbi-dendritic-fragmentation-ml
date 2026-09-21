@@ -1,0 +1,466 @@
+{
+  "schema_version": 1,
+  "task": "STUDY2_A_POST_RUN_METRIC_SEMANTICS_RECONCILIATION",
+  "authority": {
+    "title": "STUDY2-A POST-RUN METRIC SEMANTICS RECONCILIATION",
+    "attachment_sha256": "d51b0be1fcd806e3ab1e36c13ff854ca860d1ab3b944870d57a4158d4a9d0e8b",
+    "scope": "EVIDENCE_ONLY; exactly two additive documents; one documentary commit; fast-forward push; all existing CI jobs required"
+  },
+  "baseline": {
+    "branch": "feat/study2a-dense-annotation-ledger",
+    "checkpoint_sha": "b8f6b4dba80af79812b93a5db391392b5eb1e69c",
+    "scientific_method_freeze_sha": "7d89329bf005f6a85ddc67d51d88b9e362878478"
+  },
+  "recorded_at_utc": "2026-09-21 15:01:54 UTC",
+  "STUDY2_A_METRIC_RECONCILIATION": "PASS",
+  "SCIENTIFIC_RESULT_IMPACT": "NONE",
+  "unit": "GRAPHICAL_COMPONENT_OCCURRENCE_PER_SOURCE_FRAME",
+  "component_identity_fields": [
+    "source_id",
+    "frame_index",
+    "component_id"
+  ],
+  "canonical_metrics": {
+    "AMBIGUOUS_COMPONENTS_TOTAL": 24246,
+    "AMBIGUOUS_UNSUPPORTED_BY_KNOWN_SITE": 18670,
+    "AMBIGUOUS_EXPLAINED_BY_ONE_KNOWN_SITE": 5415,
+    "AMBIGUOUS_EXPLAINED_BY_MULTIPLE_KNOWN_SITES": 161,
+    "SMALL_COMPONENTS_TOTAL": 292,
+    "UNRESOLVED_SITE_HYPOTHESIS_COMPONENTS": 18962,
+    "NON_VALID_COMPONENTS_TOTAL": 24538
+  },
+  "canonical_definitions": {
+    "AMBIGUOUS_COMPONENTS_TOTAL": "All A0 AMBIGUOUS_OR_NONCIRCULAR component records, across source/frame identities.",
+    "AMBIGUOUS_UNSUPPORTED_BY_KNOWN_SITE": "AMBIGUOUS records whose temporal_classification is POTENTIAL_NEW_SITE_UNRESOLVED; no complete anchor-footprint support under the frozen rule.",
+    "AMBIGUOUS_EXPLAINED_BY_ONE_KNOWN_SITE": "AMBIGUOUS records classified EXPLAINED_BY_KNOWN_SITE.",
+    "AMBIGUOUS_EXPLAINED_BY_MULTIPLE_KNOWN_SITES": "AMBIGUOUS records classified EXPLAINED_BY_MULTIPLE_KNOWN_SITES.",
+    "SMALL_COMPONENTS_TOTAL": "All A0 SMALL_COMPONENT records, irrespective of physical interpretation.",
+    "UNRESOLVED_SITE_HYPOTHESIS_COMPONENTS": "AMBIGUOUS_UNSUPPORTED_BY_KNOWN_SITE + SMALL_COMPONENTS_TOTAL. In this immutable corpus, exactly the non-valid records classified POTENTIAL_NEW_SITE_UNRESOLVED.",
+    "NON_VALID_COMPONENTS_TOTAL": "AMBIGUOUS_COMPONENTS_TOTAL + SMALL_COMPONENTS_TOTAL. Includes both unsupported records and records with known-site graphical support."
+  },
+  "arithmetic_identities": [
+    {
+      "expression": "18670 + 5415 + 161 = 24246",
+      "lhs": 24246,
+      "rhs": 24246,
+      "verified": true
+    },
+    {
+      "expression": "18670 + 292 = 18962",
+      "lhs": 18962,
+      "rhs": 18962,
+      "verified": true
+    },
+    {
+      "expression": "24246 + 292 = 24538",
+      "lhs": 24538,
+      "rhs": 24538,
+      "verified": true
+    }
+  ],
+  "original_field_reconciliation": {
+    "original_name": "potential_new_site_unresolved_components",
+    "original_value": 24538,
+    "original_artifacts": [
+      "results.json",
+      "CORPUS_SUMMARY.json"
+    ],
+    "original_json_pointers": [
+      "/potential_new_site_unresolved_components",
+      "/by_source/0/potential_new_site_unresolved_components",
+      "/by_source/1/potential_new_site_unresolved_components"
+    ],
+    "real_semantics": "NON_VALID_COMPONENTS_TOTAL",
+    "future_canonical_name": "NON_VALID_COMPONENTS_TOTAL",
+    "not_equivalent_to": "UNRESOLVED_SITE_HYPOTHESIS_COMPONENTS",
+    "classification_count_distinct": 18962,
+    "all_boolean_flag_true_records": 24538,
+    "flag_name": "potential_additional_site_unresolved",
+    "flag_true_exactly_all_non_valid_records": true,
+    "historical_field_deprecated_for_future_consumer_semantics": true,
+    "original_bytes_modified": false,
+    "source_trace": [
+      {
+        "path": "src/snbi_fragmentation/study2a_tracking.py",
+        "lines": [
+          384,
+          385,
+          386,
+          409
+        ],
+        "finding": "VALID components are skipped; boolean is true for every remaining AMBIGUOUS or SMALL, including explained components."
+      },
+      {
+        "path": "src/snbi_fragmentation/study2a_tracking.py",
+        "lines": [
+          410,
+          411,
+          412,
+          413,
+          414,
+          415,
+          490
+        ],
+        "finding": "Temporal classification is computed separately; misleading aggregate sums the boolean, not the POTENTIAL_NEW_SITE_UNRESOLVED classification."
+      },
+      {
+        "path": "src/snbi_fragmentation/study2a_execution.py",
+        "lines": [
+          496,
+          502,
+          503,
+          537,
+          540,
+          561
+        ],
+        "finding": "Adds source totals and writes the result in reporting artifacts."
+      }
+    ],
+    "by_source": [
+      {
+        "source_id": "ESM3",
+        "ambiguous_components_total": 21834,
+        "small_components_total": 289,
+        "ambiguous_unsupported_by_known_site": 17335,
+        "ambiguous_explained_by_one_known_site": 4338,
+        "ambiguous_explained_by_multiple_known_sites": 161,
+        "unresolved_site_hypothesis_components": 17624,
+        "non_valid_components_total": 22123
+      },
+      {
+        "source_id": "ESM6",
+        "ambiguous_components_total": 2412,
+        "small_components_total": 3,
+        "ambiguous_unsupported_by_known_site": 1335,
+        "ambiguous_explained_by_one_known_site": 1077,
+        "ambiguous_explained_by_multiple_known_sites": 0,
+        "unresolved_site_hypothesis_components": 1338,
+        "non_valid_components_total": 2415
+      }
+    ]
+  },
+  "population_explanation": [
+    {
+      "artifact": "QUALITY_DETAILS.json",
+      "json_pointer": "/ambiguous_component_temporal_classification/POTENTIAL_NEW_SITE_UNRESOLVED",
+      "original_value": 18670,
+      "canonical_metric": "AMBIGUOUS_UNSUPPORTED_BY_KNOWN_SITE",
+      "filter": "AMBIGUOUS_OR_NONCIRCULAR only"
+    },
+    {
+      "artifact": "execution-report.md",
+      "line": 33,
+      "original_value": 18962,
+      "canonical_metric": "UNRESOLVED_SITE_HYPOTHESIS_COMPONENTS",
+      "filter": "Unexplained AMBIGUOUS + SMALL, all have temporal_classification POTENTIAL_NEW_SITE_UNRESOLVED in this corpus"
+    },
+    {
+      "artifacts": [
+        "results.json",
+        "CORPUS_SUMMARY.json"
+      ],
+      "original_value": 24538,
+      "canonical_metric": "NON_VALID_COMPONENTS_TOTAL",
+      "filter": "All AMBIGUOUS + SMALL, including explained components"
+    }
+  ],
+  "impact_proof": {
+    "sites_created_and_associated_before_reporting_aggregate": true,
+    "observation_states_determined_without_reporting_aggregate": true,
+    "auto_gold_eligibility_determined_without_reporting_aggregate": true,
+    "scientific_gates_do_not_consume_reporting_aggregate": true,
+    "static_consumer_search_scope": [
+      "src/",
+      "scripts/",
+      "tests/"
+    ],
+    "additional_reference": "tests/test_study2a_tracking.py:104 asserts the boolean in an existing synthetic test; test was not executed locally during this task",
+    "gate_source_lines": {
+      "src/snbi_fragmentation/study2a_execution.py": [
+        519,
+        520,
+        521,
+        522,
+        523,
+        524,
+        525,
+        557,
+        558,
+        559
+      ]
+    },
+    "scientific_results_changed": false,
+    "site_ledger_changed": false,
+    "observation_ledger_changed": false,
+    "candidate_records_changed": false,
+    "tracking_changed": false,
+    "code_changed": false,
+    "parameters_changed": false,
+    "unchanged_values": {
+      "STUDY2_A": "PASS",
+      "SCIENTIFIC_STUDY2A_RUNS": 1,
+      "ANNOTATION_FRAMES_PROCESSED": 689,
+      "UNIQUE_AUTO_GOLD_SITES": 87,
+      "DIRECT_VALID_OBSERVATIONS": 7941,
+      "AUTO_SILVER_OBSERVATIONS": 5737,
+      "AMBIGUOUS_OBSERVATIONS": 24246,
+      "SMALL_COMPONENTS": 292,
+      "LEGACY_SITES_MAPPED": 52,
+      "CONFLICT_RECORDS": 0,
+      "HUMAN_REVIEW_USED": false,
+      "HOUGH_EXECUTED": false,
+      "STATE": "CLOSED_CONSUMED"
+    }
+  },
+  "future_consumer_contract": {
+    "canonical_source": "METRIC_SEMANTICS_RECONCILIATION.json#/canonical_metrics",
+    "required_names": [
+      "AMBIGUOUS_COMPONENTS_TOTAL",
+      "AMBIGUOUS_UNSUPPORTED_BY_KNOWN_SITE",
+      "AMBIGUOUS_EXPLAINED_BY_ONE_KNOWN_SITE",
+      "AMBIGUOUS_EXPLAINED_BY_MULTIPLE_KNOWN_SITES",
+      "SMALL_COMPONENTS_TOTAL",
+      "UNRESOLVED_SITE_HYPOTHESIS_COMPONENTS",
+      "NON_VALID_COMPONENTS_TOTAL"
+    ],
+    "original_aggregates_preserved_as_historical_evidence": true,
+    "legacy_field_use": "Audit provenance only. For this frozen corpus only, its verified value corresponds to NON_VALID_COMPONENTS_TOTAL; it is not an input named or interpreted as a site count.",
+    "do_not_interpret_18670_as_new_physical_events": true,
+    "do_not_interpret_18962_as_new_sites": true,
+    "do_not_interpret_24538_as_potential_new_site_count": true,
+    "known_site_support_does_not_prove_absence_of_additional_unknown_ink": true,
+    "future_dataset_requires_own_explicit_authority": true,
+    "STUDY2_B_AUTHORIZED": false
+  },
+  "verification": {
+    "status": "PASS",
+    "expected_head": "b8f6b4dba80af79812b93a5db391392b5eb1e69c",
+    "canonical_metrics": {
+      "AMBIGUOUS_COMPONENTS_TOTAL": 24246,
+      "AMBIGUOUS_UNSUPPORTED_BY_KNOWN_SITE": 18670,
+      "AMBIGUOUS_EXPLAINED_BY_ONE_KNOWN_SITE": 5415,
+      "AMBIGUOUS_EXPLAINED_BY_MULTIPLE_KNOWN_SITES": 161,
+      "SMALL_COMPONENTS_TOTAL": 292,
+      "UNRESOLVED_SITE_HYPOTHESIS_COMPONENTS": 18962,
+      "NON_VALID_COMPONENTS_TOTAL": 24538
+    },
+    "candidate_classification_counts": [
+      {
+        "classification": "AMBIGUOUS_OR_NONCIRCULAR",
+        "temporal_classification": "EXPLAINED_BY_KNOWN_SITE",
+        "count": 5415
+      },
+      {
+        "classification": "AMBIGUOUS_OR_NONCIRCULAR",
+        "temporal_classification": "EXPLAINED_BY_MULTIPLE_KNOWN_SITES",
+        "count": 161
+      },
+      {
+        "classification": "AMBIGUOUS_OR_NONCIRCULAR",
+        "temporal_classification": "POTENTIAL_NEW_SITE_UNRESOLVED",
+        "count": 18670
+      },
+      {
+        "classification": "SMALL_COMPONENT",
+        "temporal_classification": "POTENTIAL_NEW_SITE_UNRESOLVED",
+        "count": 292
+      },
+      {
+        "classification": "VALID_GRAPHICAL_CIRCLE",
+        "temporal_classification": "FIRST_DIRECT_VALID_NEW_SITE",
+        "count": 87
+      },
+      {
+        "classification": "VALID_GRAPHICAL_CIRCLE",
+        "temporal_classification": "RECIPROCAL_SINGLETON_CANONICAL_MATCH",
+        "count": 7854
+      }
+    ],
+    "flag_true_count": 24538,
+    "flag_true_exactly_all_non_valid_records": true,
+    "all_small_records_have_unresolved_temporal_classification": true,
+    "observation_status_counts": {
+      "PRE_FIRST_CONFIDENT_ANNOTATION": 8911,
+      "DIRECT_VALID": 7941,
+      "PERSISTENCE_EXPECTED_UNRESOLVED": 4807,
+      "TEMPORAL_SUPPORTED_AMBIGUOUS": 5737
+    },
+    "by_source": {
+      "ESM3": [
+        {
+          "classification": "AMBIGUOUS_OR_NONCIRCULAR",
+          "temporal_classification": "EXPLAINED_BY_KNOWN_SITE",
+          "count": 4338
+        },
+        {
+          "classification": "AMBIGUOUS_OR_NONCIRCULAR",
+          "temporal_classification": "EXPLAINED_BY_MULTIPLE_KNOWN_SITES",
+          "count": 161
+        },
+        {
+          "classification": "AMBIGUOUS_OR_NONCIRCULAR",
+          "temporal_classification": "POTENTIAL_NEW_SITE_UNRESOLVED",
+          "count": 17335
+        },
+        {
+          "classification": "SMALL_COMPONENT",
+          "temporal_classification": "POTENTIAL_NEW_SITE_UNRESOLVED",
+          "count": 289
+        },
+        {
+          "classification": "VALID_GRAPHICAL_CIRCLE",
+          "temporal_classification": "FIRST_DIRECT_VALID_NEW_SITE",
+          "count": 69
+        },
+        {
+          "classification": "VALID_GRAPHICAL_CIRCLE",
+          "temporal_classification": "RECIPROCAL_SINGLETON_CANONICAL_MATCH",
+          "count": 4966
+        }
+      ],
+      "ESM6": [
+        {
+          "classification": "AMBIGUOUS_OR_NONCIRCULAR",
+          "temporal_classification": "EXPLAINED_BY_KNOWN_SITE",
+          "count": 1077
+        },
+        {
+          "classification": "AMBIGUOUS_OR_NONCIRCULAR",
+          "temporal_classification": "POTENTIAL_NEW_SITE_UNRESOLVED",
+          "count": 1335
+        },
+        {
+          "classification": "SMALL_COMPONENT",
+          "temporal_classification": "POTENTIAL_NEW_SITE_UNRESOLVED",
+          "count": 3
+        },
+        {
+          "classification": "VALID_GRAPHICAL_CIRCLE",
+          "temporal_classification": "FIRST_DIRECT_VALID_NEW_SITE",
+          "count": 18
+        },
+        {
+          "classification": "VALID_GRAPHICAL_CIRCLE",
+          "temporal_classification": "RECIPROCAL_SINGLETON_CANONICAL_MATCH",
+          "count": 2888
+        }
+      ]
+    },
+    "text_custody": {
+      "method_freeze_hashes_verified": 35,
+      "post_run_hashes_verified": 34,
+      "all_paths_match_checkpoint": true,
+      "verified_sha256": {
+        ".github/workflows/study2a-synthetic.yml": "c105d7bb695af3077ce23432dc2011b3cf14e6ece16fd883fccda7c6e5adddca",
+        "artifacts/evidence/STUDY2_A_ANNOTATION_MINING/AUTHORIZATION.md": "e0c92998a38b4aff2a91aa5cf91cb7e463856d5c47e846a42d6368c693613fa3",
+        "artifacts/evidence/STUDY2_A_ANNOTATION_MINING/COMMANDS_PREPARATION.json": "8995900122438786f1287c065c313abd9a1679df9666a7a240f378e0295d601f",
+        "artifacts/evidence/STUDY2_A_ANNOTATION_MINING/DECODER_GATE_AUTHORIZATION.md": "1ed809e67b17e51591b6d9024d53e396d980a0569b6968cbd1f71df103998901",
+        "artifacts/evidence/STUDY2_A_ANNOTATION_MINING/ENVIRONMENT.json": "72b22aea8ca196d91d6145060614126697a2e9bb01dd4ee4e86f5fadf4e0417d",
+        "artifacts/evidence/STUDY2_A_ANNOTATION_MINING/LEGACY_IO_AUDIT.json": "3fd0ce8a078ff5637e52bbfd73de7cacba0619091156c2e8ccd73c03a24e4ac4",
+        "artifacts/evidence/STUDY2_A_ANNOTATION_MINING/LEGACY_RECEIPT.json": "5369721d43a0be99ac426dc0819db920ec0e5841539c4d12a1c4fc329df35d2a",
+        "artifacts/evidence/STUDY2_A_ANNOTATION_MINING/LEGACY_REPRODUCTION.json": "4ea6eeae85cab4454db95d331d52ccfe1a6b23d4a93f33881a11cd9b46def83b",
+        "artifacts/evidence/STUDY2_A_ANNOTATION_MINING/PRE_FREEZE_REVIEW.json": "7335b806a22d70aa54f947d3bb3557501a992dd133b8f3d84b41f39a2de5d91a",
+        "artifacts/evidence/STUDY2_A_ANNOTATION_MINING/PROTOCOL.md": "c97518ff810bf0ff322aec1fef32aa83a7b782d92eb9874c8910da47d4aa9f70",
+        "artifacts/evidence/STUDY2_A_ANNOTATION_MINING/SCOPE_PREFLIGHT.json": "6fade69a60f86aaf7b786d8fce4b8b055e51d67689392d137f5ea52a5722d3bc",
+        "artifacts/evidence/STUDY2_A_ANNOTATION_MINING/SOURCE_CUSTODY.json": "e18370451a65969247d1dd831c7d48e4b36d6803cf749ed581644554f13aae60",
+        "artifacts/evidence/STUDY2_A_ANNOTATION_MINING/STDLIB_REGRESSION.json": "881bbb7a3d96fe3ac173a8071e7785e42ed88712664c56bcdee9156d6d6bf9ea",
+        "artifacts/evidence/STUDY2_A_ANNOTATION_MINING/SYNTHETIC_TESTS.json": "edbdcc1466b101c592f17a03c81b07e28939939724e475089d181a0a3a01c6ec",
+        "artifacts/evidence/STUDY2_A_ANNOTATION_MINING/stdlib-regression.log.txt": "dcc6acac07054e54cc456a7b4050e4439b10aa81d56f100317539dedd4e654df",
+        "artifacts/evidence/STUDY2_A_ANNOTATION_MINING/synthetic-initial-94.json": "cf71ef8cd0a3b7c2ae22ae77421a23ed9716c784df5a0629fc3911f41e366b79",
+        "artifacts/evidence/STUDY2_A_ANNOTATION_MINING/synthetic-initial-94.log.txt": "169dacfd9891562baf22be33029a85472c7e26abef5cf1f95f8ddcd692e20ef2",
+        "artifacts/evidence/STUDY2_A_ANNOTATION_MINING/synthetic-tests.log.txt": "609f9b23f8806eca73a4a687032b03a059d2507e4603ccb8c38bdf99f5a2e383",
+        "artifacts/evidence/TI3_A0/development-manifest.json": "dc2ea4f22e7ea78dc8e381aca5170659d549f0f5357270e85f1cdc60c8372b6d",
+        "artifacts/evidence/TI3_A0/extraction-method.json": "d15d263ac51455551bfed6f6eb1918e90adcc678300a370562cc870ad3e151e0",
+        "artifacts/evidence/TI3_A0/extraction-results.json": "9060042a6bfcd15398e460be3d9cef18a32c610dd12873ba086bac32049dc02d",
+        "artifacts/evidence/TI3_TARGET_RESOLUTION/SITE_DEDUPLICATION.json": "6e85dc2446b5f672a21ef86e0095a297bf4452e2160970f22c09a2f32c5f39ad",
+        "configs/authority/study2a.json": "eca6b3993a03d58d81d046ac490dc99b9f26e1f82f7d50bf4f0488cbaf3d87c4",
+        "configs/governance/phase-scope-v1.json": "e219ec6308ecd97a538b440bd22bbf921b726bad21cf8feef9b0ad309292ac9d",
+        "scripts/extract_ti3_a0_annotations.py": "5b27067eb30078c23aed9fb5cfe1f682811001d322e55782d70f717d3cb7801a",
+        "scripts/inspect_ti3_a0_annotations.py": "b1f48082f95b0ce9394553145bd697cc870a34a44b8537e1a6864263c2b392dd",
+        "scripts/run_study2a.py": "30e0676c66978644762f0cca17e5c9e1b2c3753d9c8a3d1224bc165a58b653e6",
+        "src/snbi_fragmentation/study2a_execution.py": "264be64319197cf0dbafe6a6f2d3e431415b623a551985372d3ea5ed546d3f37",
+        "src/snbi_fragmentation/study2a_streaming.py": "aacc83dfe338db90c80826c209f92d4b17ae7daaebd041c1f4efdc98a9ab9a90",
+        "src/snbi_fragmentation/study2a_tracking.py": "f816ba2015b1f7d93565842638e9e771ecc0b46d24baa4cf55d291fb895a5666",
+        "src/snbi_fragmentation/ti3_a0_annotations.py": "89e4dd58cab51bcd4ed2c607e2abc14d11a2f44f5c5e827fa4e58917539619e7",
+        "tests/test_study2a_execution.py": "57835b8b33c4bbafd0586402d2b9e233d06dbbd616167df4a313c89973fe61aa",
+        "tests/test_study2a_streaming.py": "ec09b6490c5026a0f3673c238dd23e78c96024b6f89d7ff3aabe73c8bea632ff",
+        "tests/test_study2a_tracking.py": "acdfec8d7e5e6a6dcafea678fe3c01309973e2d1fd0c466d6ae1af10ec2680b4",
+        "tests/test_ti3_a0_annotations.py": "6be96a83350d090057bbb2b7f374ef683b4f952b97a40ed954e94e6c43135eea",
+        "artifacts/evidence/STUDY2_A_ANNOTATION_MINING/ACTUAL_PREFLIGHT.json": "e7134571fdb1435a4443551e7b55ad036dcb7e59d6e8745ccec1c8f5b3b72f5d",
+        "artifacts/evidence/STUDY2_A_ANNOTATION_MINING/CI_PROOF.json": "024e2abd16fce31c4cc8c26284117291520c611c40048612e8258b178eaf3132",
+        "artifacts/evidence/STUDY2_A_ANNOTATION_MINING/COMMANDS_EXECUTION.json": "7ed8384658196468b9184fb1b8318e8389bf9dfb070ac9473ecc0229d0c594c3",
+        "artifacts/evidence/STUDY2_A_ANNOTATION_MINING/CORPUS_SUMMARY.json": "a13d1ce3f39f87e17ca4bed6cf790ee2f44247473dbee931e6c327d8feab7c16",
+        "artifacts/evidence/STUDY2_A_ANNOTATION_MINING/EXECUTION_RECEIPT.json": "a40284adf51d538504c803c6c6ee5eb06b646c75a11f191cfd57c891d463ef56",
+        "artifacts/evidence/STUDY2_A_ANNOTATION_MINING/FRAME_SUMMARY.json": "43db42ed26cb333b5c3dd58dbb9988192494b582ab65d9740b953204b76630c7",
+        "artifacts/evidence/STUDY2_A_ANNOTATION_MINING/IO_AUDIT.json": "9411bce1b53358fbf1220eee3feabaae6a9724d16e4c0baaf7d0db5f19672736",
+        "artifacts/evidence/STUDY2_A_ANNOTATION_MINING/LEGACY_SITE_MAPPING.json": "568dba67f6d71727ffa85cc0eea594099b8dd0ca13b09bfe5a2c7e6756e659a3",
+        "artifacts/evidence/STUDY2_A_ANNOTATION_MINING/LOCAL_ARTIFACT_MANIFEST.json": "7b52b3f30dde16038fa180e00c702078caff86e3af4abb8a4ad0620470c3adb3",
+        "artifacts/evidence/STUDY2_A_ANNOTATION_MINING/METHOD_FREEZE.json": "7eaf4a06fa9a4dbbfbed9f1ecccca19f2845747e097391c060abbc5cb600a65b",
+        "artifacts/evidence/STUDY2_A_ANNOTATION_MINING/QUALITY_DETAILS.json": "b769e7638549a087a6232df7c716d74100f1f3639386d1e3c541d3b0108b474a",
+        "artifacts/evidence/STUDY2_A_ANNOTATION_MINING/QUALITY_REPORT.md": "eed234bb14568113183af9f31b5eb93d69c21e1af233b6f1a070d5f539132139",
+        "artifacts/evidence/STUDY2_A_ANNOTATION_MINING/SITE_LEDGER.json": "47a7d13672bf4f1dfd48355b57a6578021d11d5ed125a934bffe79cab740cc95",
+        "artifacts/evidence/STUDY2_A_ANNOTATION_MINING/VERIFICATION_TERMINAL.json": "d3c4b2167d787bdf7be84c4528157e557ddea21ad9559b0af109d6e2636f0e04",
+        "artifacts/evidence/STUDY2_A_ANNOTATION_MINING/execution-report.md": "0ded6310093c3732c44cb17dfbbf5c49ece9cc39fdd54637c8fe5ebe596392f3",
+        "artifacts/evidence/STUDY2_A_ANNOTATION_MINING/results.json": "a13d1ce3f39f87e17ca4bed6cf790ee2f44247473dbee931e6c327d8feab7c16",
+        "artifacts/evidence/STUDY2_A_ANNOTATION_MINING/terminal-state.json": "27cafb74533ba3443951cea3c03affbe7ab4917c2add8b122d73e18aaca6424a"
+      }
+    },
+    "derived_artifact_checks": [
+      {
+        "path": "data/derived/study2/OBSERVATION_LEDGER.jsonl",
+        "size_bytes": 17786087,
+        "sha256": "3cb444271839b1fca18c3228f91e961e9566173e3036696db3dadf537234bfcc",
+        "record_count": 27396,
+        "git_status": "LOCAL_IGNORED",
+        "complete": true,
+        "verified": true
+      },
+      {
+        "path": "data/derived/study2/candidate-components.jsonl",
+        "size_bytes": 49636870,
+        "sha256": "b9e4ce16c967e4ffc6f6f2b1e86e21727971a444c20a38667cc1b53ae9ceb19c",
+        "record_count": 32479,
+        "git_status": "LOCAL_IGNORED",
+        "complete": true,
+        "verified": true
+      }
+    ],
+    "unchanged_scientific_values": {
+      "frames": 689,
+      "auto_gold_sites": 87,
+      "direct": 7941,
+      "silver": 5737,
+      "legacy_mapped": 52,
+      "conflicts": 0
+    },
+    "experimental_source_opens": 0,
+    "frames_decoded": 0,
+    "scientific_runs": 0,
+    "ml_runs": 0,
+    "independent_static_review": {
+      "status": "PASS",
+      "scientific_result_impact": "NONE",
+      "reviewer_type": "Separate AI agent; read-only source/JSON/Markdown review; no human marker review or scientific execution"
+    },
+    "local_validation": "Standard-library JSON/JSONL parsing, textual hashes and Git, arithmetic, static code reading; no scientific imports/tests/runners."
+  },
+  "counters": {
+    "EXPERIMENTAL_SOURCE_OPENS": 0,
+    "FRAMES_DECODED": 0,
+    "SCIENTIFIC_RUNS": 0,
+    "ML_RUNS": 0
+  },
+  "publication": {
+    "authorized_commit_count": 1,
+    "commit_message": "docs(study2a): reconcile post-run metric semantics",
+    "authorized_paths": [
+      "artifacts/evidence/STUDY2_A_ANNOTATION_MINING/METRIC_SEMANTICS_RECONCILIATION.md",
+      "artifacts/evidence/STUDY2_A_ANNOTATION_MINING/METRIC_SEMANTICS_RECONCILIATION.json"
+    ],
+    "push": "FAST_FORWARD_SAME_BRANCH",
+    "ci_at_document_creation": "PENDING_NEW_COMMIT",
+    "effective_integration_readiness": "Reported to operator only after all seven jobs and their steps pass on the exact new commit",
+    "MERGE_AUTHORIZED": false
+  },
+  "CURRENT_AUTHORIZED_ACTIVITY": "NONE_AWAITING_AUTHOR_DECISION"
+}
