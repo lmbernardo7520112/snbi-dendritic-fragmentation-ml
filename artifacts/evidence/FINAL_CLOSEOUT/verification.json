@@ -1,0 +1,735 @@
+{
+  "status": "PASS",
+  "base_commit": "5a158443fe00ace9b20f403f61f4a1aad21b285a",
+  "expected_new_paths": [
+    "artifacts/evidence/FINAL_CLOSEOUT/CANONICAL_METRICS.json",
+    "artifacts/evidence/FINAL_CLOSEOUT/FINAL_STATE.json",
+    "artifacts/evidence/FINAL_CLOSEOUT/PROVENANCE.json",
+    "artifacts/evidence/FINAL_CLOSEOUT/verification.json",
+    "docs/final-closeout/CANONICAL_RESULTS.md",
+    "docs/final-closeout/COURSE_ALIGNMENT_FINAL.md",
+    "docs/final-closeout/EVIDENCE_INDEX.md",
+    "docs/final-closeout/FUTURE_RESEARCH_ROADMAP.md",
+    "docs/final-closeout/SCIENTIFIC_LIMITATIONS.md",
+    "docs/final-closeout/SCIENTIFIC_PROGRAM_CLOSEOUT.md"
+  ],
+  "expected_new_path_count": 10,
+  "metric_value_projection_checks": 108,
+  "metric_projection_result": "EXACT_VALUE_AND_JSON_TYPE_MATCH; no metric arithmetic or prediction replay",
+  "historical_text_sources_authenticated": 56,
+  "local_links_checked": 145,
+  "links": [
+    {
+      "document": "docs/final-closeout/SCIENTIFIC_PROGRAM_CLOSEOUT.md",
+      "target": "docs/final-closeout/CANONICAL_RESULTS.md"
+    },
+    {
+      "document": "docs/final-closeout/SCIENTIFIC_PROGRAM_CLOSEOUT.md",
+      "target": "docs/final-closeout/EVIDENCE_INDEX.md"
+    },
+    {
+      "document": "docs/final-closeout/SCIENTIFIC_PROGRAM_CLOSEOUT.md",
+      "target": "artifacts/evidence/G1/modalities-report.json"
+    },
+    {
+      "document": "docs/final-closeout/SCIENTIFIC_PROGRAM_CLOSEOUT.md",
+      "target": "artifacts/evidence/G2_TEMP/temporal-correspondence-report.json"
+    },
+    {
+      "document": "docs/final-closeout/SCIENTIFIC_PROGRAM_CLOSEOUT.md",
+      "target": "README.md"
+    },
+    {
+      "document": "docs/final-closeout/SCIENTIFIC_PROGRAM_CLOSEOUT.md",
+      "target": "artifacts/evidence/G3/calibration-report.json"
+    },
+    {
+      "document": "docs/final-closeout/SCIENTIFIC_PROGRAM_CLOSEOUT.md",
+      "target": "artifacts/evidence/TI2/execution-report.md"
+    },
+    {
+      "document": "docs/final-closeout/SCIENTIFIC_PROGRAM_CLOSEOUT.md",
+      "target": "artifacts/evidence/TI2R_FRAG/execution-report.md"
+    },
+    {
+      "document": "docs/final-closeout/SCIENTIFIC_PROGRAM_CLOSEOUT.md",
+      "target": "artifacts/evidence/TI2R_FRAG_DIRECT/execution-report.md"
+    },
+    {
+      "document": "docs/final-closeout/SCIENTIFIC_PROGRAM_CLOSEOUT.md",
+      "target": "artifacts/evidence/TI2R_SOLUTE_DIRECT/execution-report.md"
+    },
+    {
+      "document": "docs/final-closeout/SCIENTIFIC_PROGRAM_CLOSEOUT.md",
+      "target": "artifacts/evidence/TI2R_SOLUTE_V2/execution-report.md"
+    },
+    {
+      "document": "docs/final-closeout/SCIENTIFIC_PROGRAM_CLOSEOUT.md",
+      "target": "artifacts/evidence/TI2R_SOLUTE_HOLDOUT/execution-report.md"
+    },
+    {
+      "document": "docs/final-closeout/SCIENTIFIC_PROGRAM_CLOSEOUT.md",
+      "target": "artifacts/evidence/TI2R_SOLUTE_HOLDOUT/repair-1/execution-report.md"
+    },
+    {
+      "document": "docs/final-closeout/SCIENTIFIC_PROGRAM_CLOSEOUT.md",
+      "target": "artifacts/evidence/TI3_A0/execution-report.md"
+    },
+    {
+      "document": "docs/final-closeout/SCIENTIFIC_PROGRAM_CLOSEOUT.md",
+      "target": "artifacts/evidence/TI3_TARGET_RESOLUTION/execution-report.md"
+    },
+    {
+      "document": "docs/final-closeout/SCIENTIFIC_PROGRAM_CLOSEOUT.md",
+      "target": "artifacts/evidence/TI3_A_RESUME/c0r1-resume/execution-report.md"
+    },
+    {
+      "document": "docs/final-closeout/SCIENTIFIC_PROGRAM_CLOSEOUT.md",
+      "target": "artifacts/evidence/TI3_B_SOLUTAL/execution-report.md"
+    },
+    {
+      "document": "docs/final-closeout/SCIENTIFIC_PROGRAM_CLOSEOUT.md",
+      "target": "artifacts/evidence/TI3_C_CNN/execution-report.md"
+    },
+    {
+      "document": "docs/final-closeout/SCIENTIFIC_PROGRAM_CLOSEOUT.md",
+      "target": "artifacts/evidence/TI3_D_FINAL/execution-report.md"
+    },
+    {
+      "document": "docs/final-closeout/SCIENTIFIC_PROGRAM_CLOSEOUT.md",
+      "target": "artifacts/evidence/TI3_FINAL_CLOSEOUT/SCIENTIFIC_SUMMARY.md"
+    },
+    {
+      "document": "docs/final-closeout/SCIENTIFIC_PROGRAM_CLOSEOUT.md",
+      "target": "artifacts/evidence/STUDY2_A_ANNOTATION_MINING/execution-report.md"
+    },
+    {
+      "document": "docs/final-closeout/SCIENTIFIC_PROGRAM_CLOSEOUT.md",
+      "target": "artifacts/evidence/STUDY2_A_ANNOTATION_MINING/METRIC_SEMANTICS_RECONCILIATION.md"
+    },
+    {
+      "document": "docs/final-closeout/SCIENTIFIC_PROGRAM_CLOSEOUT.md",
+      "target": "artifacts/evidence/STUDY2_B_CORPUS/execution-report.md"
+    },
+    {
+      "document": "docs/final-closeout/SCIENTIFIC_PROGRAM_CLOSEOUT.md",
+      "target": "artifacts/evidence/STUDY2_C_BENCHMARK/execution-report.md"
+    },
+    {
+      "document": "docs/final-closeout/SCIENTIFIC_PROGRAM_CLOSEOUT.md",
+      "target": "artifacts/evidence/STUDY2_D_ATTRIBUTION/EXECUTION_REPORT.md"
+    },
+    {
+      "document": "docs/final-closeout/SCIENTIFIC_PROGRAM_CLOSEOUT.md",
+      "target": "artifacts/evidence/FINAL_CLOSEOUT/PROVENANCE.json"
+    },
+    {
+      "document": "docs/final-closeout/SCIENTIFIC_PROGRAM_CLOSEOUT.md",
+      "target": "docs/final-closeout/SCIENTIFIC_LIMITATIONS.md"
+    },
+    {
+      "document": "docs/final-closeout/SCIENTIFIC_PROGRAM_CLOSEOUT.md",
+      "target": "docs/final-closeout/FUTURE_RESEARCH_ROADMAP.md"
+    },
+    {
+      "document": "docs/final-closeout/SCIENTIFIC_PROGRAM_CLOSEOUT.md",
+      "target": "artifacts/evidence/FINAL_CLOSEOUT/FINAL_STATE.json"
+    },
+    {
+      "document": "docs/final-closeout/CANONICAL_RESULTS.md",
+      "target": "artifacts/evidence/TI3_A_RESUME/c0r1-resume/execution-report.md"
+    },
+    {
+      "document": "docs/final-closeout/CANONICAL_RESULTS.md",
+      "target": "artifacts/evidence/TI3_B_SOLUTAL/execution-report.md"
+    },
+    {
+      "document": "docs/final-closeout/CANONICAL_RESULTS.md",
+      "target": "artifacts/evidence/TI3_C_CNN/execution-report.md"
+    },
+    {
+      "document": "docs/final-closeout/CANONICAL_RESULTS.md",
+      "target": "artifacts/evidence/TI3_D_FINAL/execution-report.md"
+    },
+    {
+      "document": "docs/final-closeout/CANONICAL_RESULTS.md",
+      "target": "artifacts/evidence/TI3_D_FINAL/terminal-state.json"
+    },
+    {
+      "document": "docs/final-closeout/CANONICAL_RESULTS.md",
+      "target": "artifacts/evidence/STUDY2_A_ANNOTATION_MINING/terminal-state.json"
+    },
+    {
+      "document": "docs/final-closeout/CANONICAL_RESULTS.md",
+      "target": "artifacts/evidence/STUDY2_A_ANNOTATION_MINING/METRIC_SEMANTICS_RECONCILIATION.json"
+    },
+    {
+      "document": "docs/final-closeout/CANONICAL_RESULTS.md",
+      "target": "artifacts/evidence/STUDY2_B_CORPUS/terminal-state.json"
+    },
+    {
+      "document": "docs/final-closeout/CANONICAL_RESULTS.md",
+      "target": "artifacts/evidence/STUDY2_B_CORPUS/results.json"
+    },
+    {
+      "document": "docs/final-closeout/CANONICAL_RESULTS.md",
+      "target": "artifacts/evidence/STUDY2_C_BENCHMARK/RESULTS_SUMMARY.json"
+    },
+    {
+      "document": "docs/final-closeout/CANONICAL_RESULTS.md",
+      "target": "artifacts/evidence/STUDY2_C_BENCHMARK/execution-report.md"
+    },
+    {
+      "document": "docs/final-closeout/CANONICAL_RESULTS.md",
+      "target": "artifacts/evidence/STUDY2_C_BENCHMARK/terminal-state.json"
+    },
+    {
+      "document": "docs/final-closeout/CANONICAL_RESULTS.md",
+      "target": "artifacts/evidence/STUDY2_D_ATTRIBUTION/EXECUTION_REPORT.md"
+    },
+    {
+      "document": "docs/final-closeout/CANONICAL_RESULTS.md",
+      "target": "artifacts/evidence/STUDY2_D_ATTRIBUTION/RESULTS_TABLES.md"
+    },
+    {
+      "document": "docs/final-closeout/CANONICAL_RESULTS.md",
+      "target": "artifacts/evidence/STUDY2_D_ATTRIBUTION/ATTRIBUTION_SUMMARY.json"
+    },
+    {
+      "document": "docs/final-closeout/CANONICAL_RESULTS.md",
+      "target": "artifacts/evidence/STUDY2_D_ATTRIBUTION/GROUP_DIVERSITY_RESULTS.json"
+    },
+    {
+      "document": "docs/final-closeout/CANONICAL_RESULTS.md",
+      "target": "artifacts/evidence/STUDY2_D_ATTRIBUTION/TEMPORAL_DENSITY_RESULTS.json"
+    },
+    {
+      "document": "docs/final-closeout/CANONICAL_RESULTS.md",
+      "target": "artifacts/evidence/STUDY2_D_ATTRIBUTION/GROUP_WEIGHTING_RESULTS.json"
+    },
+    {
+      "document": "docs/final-closeout/CANONICAL_RESULTS.md",
+      "target": "docs/final-closeout/SCIENTIFIC_LIMITATIONS.md"
+    },
+    {
+      "document": "docs/final-closeout/CANONICAL_RESULTS.md",
+      "target": "docs/final-closeout/EVIDENCE_INDEX.md"
+    },
+    {
+      "document": "docs/final-closeout/SCIENTIFIC_LIMITATIONS.md",
+      "target": "artifacts/evidence/TI3_D_FINAL/execution-report.md"
+    },
+    {
+      "document": "docs/final-closeout/SCIENTIFIC_LIMITATIONS.md",
+      "target": "artifacts/evidence/STUDY2_C_BENCHMARK/execution-report.md"
+    },
+    {
+      "document": "docs/final-closeout/SCIENTIFIC_LIMITATIONS.md",
+      "target": "artifacts/evidence/STUDY2_D_ATTRIBUTION/EXECUTION_REPORT.md"
+    },
+    {
+      "document": "docs/final-closeout/SCIENTIFIC_LIMITATIONS.md",
+      "target": "artifacts/evidence/STUDY2_B_CORPUS/QUALITY_REPORT.md"
+    },
+    {
+      "document": "docs/final-closeout/SCIENTIFIC_LIMITATIONS.md",
+      "target": "artifacts/evidence/STUDY2_C_BENCHMARK/TEST_METRICS.json"
+    },
+    {
+      "document": "docs/final-closeout/SCIENTIFIC_LIMITATIONS.md",
+      "target": "artifacts/evidence/TI3_TARGET_RESOLUTION/execution-report.md"
+    },
+    {
+      "document": "docs/final-closeout/SCIENTIFIC_LIMITATIONS.md",
+      "target": "artifacts/evidence/STUDY2_A_ANNOTATION_MINING/METRIC_SEMANTICS_RECONCILIATION.md"
+    },
+    {
+      "document": "docs/final-closeout/SCIENTIFIC_LIMITATIONS.md",
+      "target": "artifacts/evidence/STUDY2_C_BENCHMARK/execution-report.md"
+    },
+    {
+      "document": "docs/final-closeout/SCIENTIFIC_LIMITATIONS.md",
+      "target": "artifacts/evidence/STUDY2_D_ATTRIBUTION/EXECUTION_REPORT.md"
+    },
+    {
+      "document": "docs/final-closeout/SCIENTIFIC_LIMITATIONS.md",
+      "target": "artifacts/evidence/FINAL_CLOSEOUT/FINAL_STATE.json"
+    },
+    {
+      "document": "docs/final-closeout/SCIENTIFIC_LIMITATIONS.md",
+      "target": "docs/final-closeout/FUTURE_RESEARCH_ROADMAP.md"
+    },
+    {
+      "document": "docs/final-closeout/FUTURE_RESEARCH_ROADMAP.md",
+      "target": "docs/final-closeout/SCIENTIFIC_LIMITATIONS.md"
+    },
+    {
+      "document": "docs/final-closeout/FUTURE_RESEARCH_ROADMAP.md",
+      "target": "artifacts/evidence/STUDY2_D_ATTRIBUTION/EXECUTION_REPORT.md"
+    },
+    {
+      "document": "docs/final-closeout/COURSE_ALIGNMENT_FINAL.md",
+      "target": "artifacts/evidence/TI3_A0/COURSE_ALIGNMENT_LABEL_EXTRACTION.md"
+    },
+    {
+      "document": "docs/final-closeout/COURSE_ALIGNMENT_FINAL.md",
+      "target": "artifacts/evidence/TI3_TARGET_RESOLUTION/COURSE_ALIGNMENT.md"
+    },
+    {
+      "document": "docs/final-closeout/COURSE_ALIGNMENT_FINAL.md",
+      "target": "docs/protocols/TI2R_SOLUTE_DIRECT_PROTOCOL.md"
+    },
+    {
+      "document": "docs/final-closeout/COURSE_ALIGNMENT_FINAL.md",
+      "target": "artifacts/evidence/STUDY2_A_ANNOTATION_MINING/execution-report.md"
+    },
+    {
+      "document": "docs/final-closeout/COURSE_ALIGNMENT_FINAL.md",
+      "target": "artifacts/evidence/TI3_C_CNN/execution-report.md"
+    },
+    {
+      "document": "docs/final-closeout/COURSE_ALIGNMENT_FINAL.md",
+      "target": "artifacts/evidence/STUDY2_C_BENCHMARK/execution-report.md"
+    },
+    {
+      "document": "docs/final-closeout/COURSE_ALIGNMENT_FINAL.md",
+      "target": "artifacts/evidence/TI3_C_CNN/execution-report.md"
+    },
+    {
+      "document": "docs/final-closeout/COURSE_ALIGNMENT_FINAL.md",
+      "target": "artifacts/evidence/TI3_D_FINAL/execution-report.md"
+    },
+    {
+      "document": "docs/final-closeout/COURSE_ALIGNMENT_FINAL.md",
+      "target": "artifacts/evidence/STUDY2_C_BENCHMARK/execution-report.md"
+    },
+    {
+      "document": "docs/final-closeout/COURSE_ALIGNMENT_FINAL.md",
+      "target": "artifacts/evidence/STUDY2_D_ATTRIBUTION/EXECUTION_REPORT.md"
+    },
+    {
+      "document": "docs/final-closeout/COURSE_ALIGNMENT_FINAL.md",
+      "target": "artifacts/evidence/TI3_FINAL_CLOSEOUT/COURSE_ALIGNMENT.md"
+    },
+    {
+      "document": "docs/final-closeout/COURSE_ALIGNMENT_FINAL.md",
+      "target": "artifacts/evidence/STUDY2_D_ATTRIBUTION/EXECUTION_REPORT.md"
+    },
+    {
+      "document": "docs/final-closeout/COURSE_ALIGNMENT_FINAL.md",
+      "target": "docs/final-closeout/SCIENTIFIC_LIMITATIONS.md"
+    },
+    {
+      "document": "docs/final-closeout/COURSE_ALIGNMENT_FINAL.md",
+      "target": "docs/final-closeout/FUTURE_RESEARCH_ROADMAP.md"
+    },
+    {
+      "document": "docs/final-closeout/EVIDENCE_INDEX.md",
+      "target": "artifacts/evidence/FINAL_CLOSEOUT/PROVENANCE.json"
+    },
+    {
+      "document": "docs/final-closeout/EVIDENCE_INDEX.md",
+      "target": "artifacts/evidence/G1/modalities-report.json"
+    },
+    {
+      "document": "docs/final-closeout/EVIDENCE_INDEX.md",
+      "target": "README.md"
+    },
+    {
+      "document": "docs/final-closeout/EVIDENCE_INDEX.md",
+      "target": "artifacts/evidence/G2_TEMP/temporal-correspondence-report.json"
+    },
+    {
+      "document": "docs/final-closeout/EVIDENCE_INDEX.md",
+      "target": "artifacts/evidence/TI2/execution-report.md"
+    },
+    {
+      "document": "docs/final-closeout/EVIDENCE_INDEX.md",
+      "target": "artifacts/evidence/TI2R_FRAG/execution-report.md"
+    },
+    {
+      "document": "docs/final-closeout/EVIDENCE_INDEX.md",
+      "target": "artifacts/evidence/TI2R_FRAG_DIRECT/execution-report.md"
+    },
+    {
+      "document": "docs/final-closeout/EVIDENCE_INDEX.md",
+      "target": "artifacts/evidence/TI2R_SOLUTE_DIRECT/execution-report.md"
+    },
+    {
+      "document": "docs/final-closeout/EVIDENCE_INDEX.md",
+      "target": "artifacts/evidence/TI2R_SOLUTE_V2/execution-report.md"
+    },
+    {
+      "document": "docs/final-closeout/EVIDENCE_INDEX.md",
+      "target": "artifacts/evidence/TI2R_SOLUTE_HOLDOUT/execution-report.md"
+    },
+    {
+      "document": "docs/final-closeout/EVIDENCE_INDEX.md",
+      "target": "artifacts/evidence/TI2R_SOLUTE_HOLDOUT/repair-1/execution-report.md"
+    },
+    {
+      "document": "docs/final-closeout/EVIDENCE_INDEX.md",
+      "target": "artifacts/evidence/TI3_A0/execution-report.md"
+    },
+    {
+      "document": "docs/final-closeout/EVIDENCE_INDEX.md",
+      "target": "artifacts/evidence/TI3_TARGET_RESOLUTION/execution-report.md"
+    },
+    {
+      "document": "docs/final-closeout/EVIDENCE_INDEX.md",
+      "target": "docs/protocols/TI2R_SOLUTE_DIRECT_PROTOCOL.md"
+    },
+    {
+      "document": "docs/final-closeout/EVIDENCE_INDEX.md",
+      "target": "artifacts/evidence/TI3_A0/COURSE_ALIGNMENT_LABEL_EXTRACTION.md"
+    },
+    {
+      "document": "docs/final-closeout/EVIDENCE_INDEX.md",
+      "target": "artifacts/evidence/TI3_TARGET_RESOLUTION/COURSE_ALIGNMENT.md"
+    },
+    {
+      "document": "docs/final-closeout/EVIDENCE_INDEX.md",
+      "target": "artifacts/evidence/TI3_FINAL_CLOSEOUT/COURSE_ALIGNMENT.md"
+    },
+    {
+      "document": "docs/final-closeout/EVIDENCE_INDEX.md",
+      "target": "docs/final-closeout/COURSE_ALIGNMENT_FINAL.md"
+    },
+    {
+      "document": "docs/final-closeout/EVIDENCE_INDEX.md",
+      "target": "artifacts/evidence/TI3_A_RESUME/c0r1-resume/execution-report.md"
+    },
+    {
+      "document": "docs/final-closeout/EVIDENCE_INDEX.md",
+      "target": "artifacts/evidence/TI3_A_RESUME/c0r1-resume/results.json"
+    },
+    {
+      "document": "docs/final-closeout/EVIDENCE_INDEX.md",
+      "target": "artifacts/evidence/TI3_B_SOLUTAL/execution-report.md"
+    },
+    {
+      "document": "docs/final-closeout/EVIDENCE_INDEX.md",
+      "target": "artifacts/evidence/TI3_B_SOLUTAL/results.json"
+    },
+    {
+      "document": "docs/final-closeout/EVIDENCE_INDEX.md",
+      "target": "artifacts/evidence/TI3_C_CNN/execution-report.md"
+    },
+    {
+      "document": "docs/final-closeout/EVIDENCE_INDEX.md",
+      "target": "artifacts/evidence/TI3_C_CNN/terminal-state.json"
+    },
+    {
+      "document": "docs/final-closeout/EVIDENCE_INDEX.md",
+      "target": "artifacts/evidence/TI3_D_FINAL/execution-report.md"
+    },
+    {
+      "document": "docs/final-closeout/EVIDENCE_INDEX.md",
+      "target": "artifacts/evidence/TI3_D_FINAL/terminal-state.json"
+    },
+    {
+      "document": "docs/final-closeout/EVIDENCE_INDEX.md",
+      "target": "artifacts/evidence/TI3_D_FINAL/execution-report.md"
+    },
+    {
+      "document": "docs/final-closeout/EVIDENCE_INDEX.md",
+      "target": "artifacts/evidence/TI3_D_FINAL/terminal-state.json"
+    },
+    {
+      "document": "docs/final-closeout/EVIDENCE_INDEX.md",
+      "target": "artifacts/evidence/STUDY2_A_ANNOTATION_MINING/terminal-state.json"
+    },
+    {
+      "document": "docs/final-closeout/EVIDENCE_INDEX.md",
+      "target": "artifacts/evidence/STUDY2_A_ANNOTATION_MINING/execution-report.md"
+    },
+    {
+      "document": "docs/final-closeout/EVIDENCE_INDEX.md",
+      "target": "artifacts/evidence/STUDY2_A_ANNOTATION_MINING/terminal-state.json"
+    },
+    {
+      "document": "docs/final-closeout/EVIDENCE_INDEX.md",
+      "target": "artifacts/evidence/STUDY2_A_ANNOTATION_MINING/METRIC_SEMANTICS_RECONCILIATION.json"
+    },
+    {
+      "document": "docs/final-closeout/EVIDENCE_INDEX.md",
+      "target": "artifacts/evidence/STUDY2_A_ANNOTATION_MINING/METRIC_SEMANTICS_RECONCILIATION.md"
+    },
+    {
+      "document": "docs/final-closeout/EVIDENCE_INDEX.md",
+      "target": "artifacts/evidence/STUDY2_A_ANNOTATION_MINING/METRIC_SEMANTICS_RECONCILIATION.json"
+    },
+    {
+      "document": "docs/final-closeout/EVIDENCE_INDEX.md",
+      "target": "artifacts/evidence/STUDY2_B_CORPUS/terminal-state.json"
+    },
+    {
+      "document": "docs/final-closeout/EVIDENCE_INDEX.md",
+      "target": "artifacts/evidence/STUDY2_B_CORPUS/results.json"
+    },
+    {
+      "document": "docs/final-closeout/EVIDENCE_INDEX.md",
+      "target": "artifacts/evidence/STUDY2_B_CORPUS/results.json"
+    },
+    {
+      "document": "docs/final-closeout/EVIDENCE_INDEX.md",
+      "target": "artifacts/evidence/STUDY2_B_CORPUS/execution-report.md"
+    },
+    {
+      "document": "docs/final-closeout/EVIDENCE_INDEX.md",
+      "target": "artifacts/evidence/STUDY2_B_CORPUS/terminal-state.json"
+    },
+    {
+      "document": "docs/final-closeout/EVIDENCE_INDEX.md",
+      "target": "artifacts/evidence/STUDY2_B_CORPUS/execution-report.md"
+    },
+    {
+      "document": "docs/final-closeout/EVIDENCE_INDEX.md",
+      "target": "artifacts/evidence/STUDY2_B_CORPUS/results.json"
+    },
+    {
+      "document": "docs/final-closeout/EVIDENCE_INDEX.md",
+      "target": "artifacts/evidence/STUDY2_C_BENCHMARK/execution-report.md"
+    },
+    {
+      "document": "docs/final-closeout/EVIDENCE_INDEX.md",
+      "target": "artifacts/evidence/STUDY2_C_BENCHMARK/RESULTS_SUMMARY.json"
+    },
+    {
+      "document": "docs/final-closeout/EVIDENCE_INDEX.md",
+      "target": "artifacts/evidence/STUDY2_C_BENCHMARK/terminal-state.json"
+    },
+    {
+      "document": "docs/final-closeout/EVIDENCE_INDEX.md",
+      "target": "artifacts/evidence/STUDY2_C_BENCHMARK/RESULTS_SUMMARY.json"
+    },
+    {
+      "document": "docs/final-closeout/EVIDENCE_INDEX.md",
+      "target": "artifacts/evidence/STUDY2_C_BENCHMARK/RESULTS_SUMMARY.json"
+    },
+    {
+      "document": "docs/final-closeout/EVIDENCE_INDEX.md",
+      "target": "artifacts/evidence/STUDY2_C_BENCHMARK/terminal-state.json"
+    },
+    {
+      "document": "docs/final-closeout/EVIDENCE_INDEX.md",
+      "target": "artifacts/evidence/STUDY2_C_BENCHMARK/execution-report.md"
+    },
+    {
+      "document": "docs/final-closeout/EVIDENCE_INDEX.md",
+      "target": "artifacts/evidence/STUDY2_D_ATTRIBUTION/STUDY2_D_PROTOCOL.md"
+    },
+    {
+      "document": "docs/final-closeout/EVIDENCE_INDEX.md",
+      "target": "artifacts/evidence/STUDY2_D_ATTRIBUTION/STUDY2_D_FIT_BUDGET.json"
+    },
+    {
+      "document": "docs/final-closeout/EVIDENCE_INDEX.md",
+      "target": "artifacts/evidence/STUDY2_D_ATTRIBUTION/EXECUTION_REPORT.md"
+    },
+    {
+      "document": "docs/final-closeout/EVIDENCE_INDEX.md",
+      "target": "artifacts/evidence/STUDY2_D_ATTRIBUTION/CI_BLOCKED_REPORT.md"
+    },
+    {
+      "document": "docs/final-closeout/EVIDENCE_INDEX.md",
+      "target": "artifacts/evidence/STUDY2_D_ATTRIBUTION/CI_REPAIR_REPORT.md"
+    },
+    {
+      "document": "docs/final-closeout/EVIDENCE_INDEX.md",
+      "target": "artifacts/evidence/STUDY2_D_ATTRIBUTION/CI_REPAIR_VERIFICATION.json"
+    },
+    {
+      "document": "docs/final-closeout/EVIDENCE_INDEX.md",
+      "target": "artifacts/evidence/STUDY2_D_ATTRIBUTION/GROUP_DIVERSITY_RESULTS.json"
+    },
+    {
+      "document": "docs/final-closeout/EVIDENCE_INDEX.md",
+      "target": "artifacts/evidence/STUDY2_D_ATTRIBUTION/ATTRIBUTION_SUMMARY.json"
+    },
+    {
+      "document": "docs/final-closeout/EVIDENCE_INDEX.md",
+      "target": "artifacts/evidence/STUDY2_D_ATTRIBUTION/TEMPORAL_DENSITY_RESULTS.json"
+    },
+    {
+      "document": "docs/final-closeout/EVIDENCE_INDEX.md",
+      "target": "artifacts/evidence/STUDY2_D_ATTRIBUTION/GROUP_WEIGHTING_RESULTS.json"
+    },
+    {
+      "document": "docs/final-closeout/EVIDENCE_INDEX.md",
+      "target": "artifacts/evidence/STUDY2_D_ATTRIBUTION/terminal-state.json"
+    },
+    {
+      "document": "docs/final-closeout/EVIDENCE_INDEX.md",
+      "target": "artifacts/evidence/STUDY2_D_ATTRIBUTION/VERIFICATION_TERMINAL.json"
+    },
+    {
+      "document": "docs/final-closeout/EVIDENCE_INDEX.md",
+      "target": "artifacts/evidence/STUDY2_D_ATTRIBUTION/EXECUTION_REPORT.md"
+    },
+    {
+      "document": "docs/final-closeout/EVIDENCE_INDEX.md",
+      "target": "artifacts/evidence/STUDY2_D_ATTRIBUTION/ATTRIBUTION_SUMMARY.json"
+    },
+    {
+      "document": "docs/final-closeout/EVIDENCE_INDEX.md",
+      "target": "artifacts/evidence/STUDY2_B_CORPUS/INTEGRATION_AUDIT.json"
+    },
+    {
+      "document": "docs/final-closeout/EVIDENCE_INDEX.md",
+      "target": "artifacts/evidence/STUDY2_C_BENCHMARK/INTEGRATION_AUDIT.json"
+    },
+    {
+      "document": "docs/final-closeout/EVIDENCE_INDEX.md",
+      "target": "artifacts/evidence/STUDY2_D_ATTRIBUTION/INTEGRATION_AUDIT.json"
+    },
+    {
+      "document": "docs/final-closeout/EVIDENCE_INDEX.md",
+      "target": "artifacts/evidence/FINAL_CLOSEOUT/PROVENANCE.json"
+    },
+    {
+      "document": "docs/final-closeout/EVIDENCE_INDEX.md",
+      "target": "artifacts/evidence/FINAL_CLOSEOUT/FINAL_STATE.json"
+    },
+    {
+      "document": "docs/final-closeout/EVIDENCE_INDEX.md",
+      "target": "artifacts/evidence/FINAL_CLOSEOUT/CANONICAL_METRICS.json"
+    },
+    {
+      "document": "docs/final-closeout/EVIDENCE_INDEX.md",
+      "target": "artifacts/evidence/FINAL_CLOSEOUT/verification.json"
+    }
+  ],
+  "git_commit_references_checked": 36,
+  "chronology_A_through_K": "PASS",
+  "previous_tracked_content": "UNCHANGED",
+  "checks": {
+    "data_guard": {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/check_repository_data.py"
+      ],
+      "exit_code": 0,
+      "report": {
+        "audit": "tracked_repository_data_guard",
+        "content_bytes_read": 0,
+        "examined_entry_count": 810,
+        "status": "PASS",
+        "violations": []
+      }
+    },
+    "historical_text_checksums": {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/check_ti2_checksums.py"
+      ],
+      "exit_code": 0,
+      "report": {
+        "audit": "ti2_textual_checksums",
+        "historical_checksum_count": 70,
+        "listed_count": 95,
+        "manifest": "artifacts/evidence/TI2/checksums.sha256",
+        "status": "PASS",
+        "unique_count": 95,
+        "verified_count": 95,
+        "violations": []
+      }
+    }
+  },
+  "independent_content_review": {
+    "status": "PASS",
+    "reviewer": "closeout_preintegration_audit, independent AI agent; principal-agent confirmation",
+    "material_corrections_required": [],
+    "checks": [
+      "six Markdown content and chronology A-K",
+      "preserved historical failures and negative results",
+      "108 exact value/type projections against15 original JSON sources",
+      "56 source byte/SHA256/Git blob checks",
+      "145 valid local links",
+      "36 referenced Git commits exist",
+      "nine document hashes and ten authorized paths",
+      "immutable Study2-C pipeline and consumed TEST",
+      "D post-hoc scope, correct signs, no causal decomposition",
+      "readiness is not academic build authorization",
+      "prospective roadmap with no execution",
+      "historical/current/publication counter boundaries"
+    ],
+    "reviewed_verification_sha256_before_status_update": "1eb3a11994a1a159f7e0e65604d39944502759e6ae5d7af36a7afa5ee1f0db97",
+    "reviewed_provenance_sha256": "9e12517f94967e93b6d4be5dc76be18448bb5605a0205457d02dd09439b2bb4f",
+    "scientific_execution": false,
+    "metric_recomputation": false,
+    "experimental_access": false,
+    "human_or_institutional_certification": false,
+    "subsequent_format_only_correction": "Principal agent removed one extra EOF blank line from CANONICAL_RESULTS.md and EVIDENCE_INDEX.md; all narrative and scientific values unchanged."
+  },
+  "document_hashes_excluding_this_verification": [
+    {
+      "path": "artifacts/evidence/FINAL_CLOSEOUT/CANONICAL_METRICS.json",
+      "sha256": "00ae3fe20053f439d943538489efddb0a79fc375e7d1344d6ac166451078350a",
+      "bytes": 176481
+    },
+    {
+      "path": "artifacts/evidence/FINAL_CLOSEOUT/FINAL_STATE.json",
+      "sha256": "cd601398db7ba26ee2889b0fafb481a8bd855a05ff0368e18c201bca47ee4858",
+      "bytes": 1400
+    },
+    {
+      "path": "artifacts/evidence/FINAL_CLOSEOUT/PROVENANCE.json",
+      "sha256": "9e12517f94967e93b6d4be5dc76be18448bb5605a0205457d02dd09439b2bb4f",
+      "bytes": 158688
+    },
+    {
+      "path": "docs/final-closeout/CANONICAL_RESULTS.md",
+      "sha256": "e3ca6d6b794f16a67076f661b5e59ec85a74dd6a227f1e0f60494e5f95a86803",
+      "bytes": 11613
+    },
+    {
+      "path": "docs/final-closeout/COURSE_ALIGNMENT_FINAL.md",
+      "sha256": "f74b3f8447a005d9835dd8b891a61de5413fc79c83fb327daf36a38b3e5f54b2",
+      "bytes": 8387
+    },
+    {
+      "path": "docs/final-closeout/EVIDENCE_INDEX.md",
+      "sha256": "4074eb3d90cce91c8f539198c304bc7a7b545e5736ab69293a0f9428a6b1f2b2",
+      "bytes": 16707
+    },
+    {
+      "path": "docs/final-closeout/FUTURE_RESEARCH_ROADMAP.md",
+      "sha256": "1498f0d1f1c67f954290021273e3e375be4d36f2c2b80231160d7b33e02afeb3",
+      "bytes": 4020
+    },
+    {
+      "path": "docs/final-closeout/SCIENTIFIC_LIMITATIONS.md",
+      "sha256": "82248f80b04162a621877b60933d1975c7719bb1257dfec42f21151f1ef26463",
+      "bytes": 6693
+    },
+    {
+      "path": "docs/final-closeout/SCIENTIFIC_PROGRAM_CLOSEOUT.md",
+      "sha256": "089531fdaec16ce3da2b01a6421b4000eedb7fd907b8d872487f1cee9fafefc3",
+      "bytes": 17263
+    }
+  ],
+  "self_reference_policy": "This verification has no self-hash. Final commit and remote CI belong to the subsequent effective operator report.",
+  "current_closeout_counters": {
+    "SCIENTIFIC_RUNS": 0,
+    "FIT_CALLS": 0,
+    "FEATURE_EXTRACTIONS": 0,
+    "SCIENTIFIC_EVALUATIONS": 0,
+    "METRIC_RECOMPUTATIONS": 0,
+    "EXPERIMENTAL_SOURCE_OPENS": 0,
+    "BINARY_CACHE_OPENS": 0,
+    "DEV_ROWS_READ": 0,
+    "TEST_ROWS_READ": 0,
+    "TEST_CACHE_ROWS_READ": 0,
+    "TEST_FEATURES_COMPUTED": 0,
+    "FFMPEG_RUNS": 0,
+    "NOTEBOOK_BUILDS": 0
+  },
+  "counter_scope": "Actions of this documentary closeout; historical scientific counters remain in their original phases. No universal syscall monitoring claimed.",
+  "academic_deliverable_preservation": "No access/write/staging below academic-deliverable-build/; the pre-existing untracked directory is preserved.",
+  "local_testing": "Only textual custody, link, transcription, JSON and Git checks. No local scientific/synthetic ML suite invocation.",
+  "remote_testing": "Existing synthetic CI workflows only, with full jobs/steps verified for D checkpoint, PR and merge.",
+  "publication_status_at_document_time": "NOT_YET_COMMITTED; actual checkpoint and later CI reported after publication, not anticipated."
+}

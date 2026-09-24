@@ -1,0 +1,5 @@
+{
+  "entrypoint": "scripts/run_study3_recovery_1.py",
+  "invocations": 1,
+  "receipt_precedes_binary_read": true
+}

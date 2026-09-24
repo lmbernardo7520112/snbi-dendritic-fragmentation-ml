@@ -1,0 +1,3398 @@
+{
+  "selections": [
+    {
+      "group_id": "bottom_up_anti_parallel|1137|617",
+      "selected_sample_ids": [
+        "background|bottom_up_anti_parallel|1137|617|0",
+        "background|bottom_up_anti_parallel|1137|617|42",
+        "background|bottom_up_anti_parallel|1137|617|84",
+        "background|bottom_up_anti_parallel|1137|617|126",
+        "background|bottom_up_anti_parallel|1137|617|167",
+        "background|bottom_up_anti_parallel|1137|617|209",
+        "background|bottom_up_anti_parallel|1137|617|251",
+        "background|bottom_up_anti_parallel|1137|617|293"
+      ],
+      "selected_frame_indices": [
+        0,
+        42,
+        84,
+        126,
+        167,
+        209,
+        251,
+        293
+      ],
+      "rank_targets": [
+        0.0,
+        41.857142857142854,
+        83.71428571428571,
+        125.57142857142857,
+        167.42857142857142,
+        209.28571428571428,
+        251.14285714285714,
+        293.0
+      ],
+      "selected_ranks": [
+        0,
+        42,
+        84,
+        126,
+        167,
+        209,
+        251,
+        293
+      ],
+      "duplicate_flags": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "group_id": "bottom_up_anti_parallel|1137|682",
+      "selected_sample_ids": [
+        "background|bottom_up_anti_parallel|1137|682|0",
+        "background|bottom_up_anti_parallel|1137|682|42",
+        "background|bottom_up_anti_parallel|1137|682|84",
+        "background|bottom_up_anti_parallel|1137|682|126",
+        "background|bottom_up_anti_parallel|1137|682|167",
+        "background|bottom_up_anti_parallel|1137|682|209",
+        "background|bottom_up_anti_parallel|1137|682|251",
+        "background|bottom_up_anti_parallel|1137|682|293"
+      ],
+      "selected_frame_indices": [
+        0,
+        42,
+        84,
+        126,
+        167,
+        209,
+        251,
+        293
+      ],
+      "rank_targets": [
+        0.0,
+        41.857142857142854,
+        83.71428571428571,
+        125.57142857142857,
+        167.42857142857142,
+        209.28571428571428,
+        251.14285714285714,
+        293.0
+      ],
+      "selected_ranks": [
+        0,
+        42,
+        84,
+        126,
+        167,
+        209,
+        251,
+        293
+      ],
+      "duplicate_flags": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "group_id": "bottom_up_anti_parallel|227|552",
+      "selected_sample_ids": [
+        "background|bottom_up_anti_parallel|227|552|0",
+        "background|bottom_up_anti_parallel|227|552|8",
+        "background|bottom_up_anti_parallel|227|552|15",
+        "background|bottom_up_anti_parallel|227|552|23",
+        "background|bottom_up_anti_parallel|227|552|30",
+        "background|bottom_up_anti_parallel|227|552|38",
+        "background|bottom_up_anti_parallel|227|552|45",
+        "background|bottom_up_anti_parallel|227|552|53"
+      ],
+      "selected_frame_indices": [
+        0,
+        8,
+        15,
+        23,
+        30,
+        38,
+        45,
+        53
+      ],
+      "rank_targets": [
+        0.0,
+        7.571428571428571,
+        15.142857142857142,
+        22.714285714285715,
+        30.285714285714285,
+        37.857142857142854,
+        45.42857142857143,
+        53.0
+      ],
+      "selected_ranks": [
+        0,
+        8,
+        15,
+        23,
+        30,
+        38,
+        45,
+        53
+      ],
+      "duplicate_flags": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "group_id": "bottom_up_anti_parallel|292|292",
+      "selected_sample_ids": [
+        "background|bottom_up_anti_parallel|292|292|0",
+        "background|bottom_up_anti_parallel|292|292|42",
+        "background|bottom_up_anti_parallel|292|292|84",
+        "background|bottom_up_anti_parallel|292|292|126",
+        "background|bottom_up_anti_parallel|292|292|167",
+        "background|bottom_up_anti_parallel|292|292|209",
+        "background|bottom_up_anti_parallel|292|292|251",
+        "background|bottom_up_anti_parallel|292|292|293"
+      ],
+      "selected_frame_indices": [
+        0,
+        42,
+        84,
+        126,
+        167,
+        209,
+        251,
+        293
+      ],
+      "rank_targets": [
+        0.0,
+        41.857142857142854,
+        83.71428571428571,
+        125.57142857142857,
+        167.42857142857142,
+        209.28571428571428,
+        251.14285714285714,
+        293.0
+      ],
+      "selected_ranks": [
+        0,
+        42,
+        84,
+        126,
+        167,
+        209,
+        251,
+        293
+      ],
+      "duplicate_flags": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "group_id": "bottom_up_anti_parallel|292|357",
+      "selected_sample_ids": [
+        "background|bottom_up_anti_parallel|292|357|0",
+        "background|bottom_up_anti_parallel|292|357|42",
+        "background|bottom_up_anti_parallel|292|357|84",
+        "background|bottom_up_anti_parallel|292|357|126",
+        "background|bottom_up_anti_parallel|292|357|167",
+        "background|bottom_up_anti_parallel|292|357|209",
+        "background|bottom_up_anti_parallel|292|357|251",
+        "background|bottom_up_anti_parallel|292|357|293"
+      ],
+      "selected_frame_indices": [
+        0,
+        42,
+        84,
+        126,
+        167,
+        209,
+        251,
+        293
+      ],
+      "rank_targets": [
+        0.0,
+        41.857142857142854,
+        83.71428571428571,
+        125.57142857142857,
+        167.42857142857142,
+        209.28571428571428,
+        251.14285714285714,
+        293.0
+      ],
+      "selected_ranks": [
+        0,
+        42,
+        84,
+        126,
+        167,
+        209,
+        251,
+        293
+      ],
+      "duplicate_flags": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "group_id": "bottom_up_anti_parallel|292|422",
+      "selected_sample_ids": [
+        "background|bottom_up_anti_parallel|292|422|0",
+        "background|bottom_up_anti_parallel|292|422|42",
+        "background|bottom_up_anti_parallel|292|422|84",
+        "background|bottom_up_anti_parallel|292|422|126",
+        "background|bottom_up_anti_parallel|292|422|167",
+        "background|bottom_up_anti_parallel|292|422|209",
+        "background|bottom_up_anti_parallel|292|422|251",
+        "background|bottom_up_anti_parallel|292|422|293"
+      ],
+      "selected_frame_indices": [
+        0,
+        42,
+        84,
+        126,
+        167,
+        209,
+        251,
+        293
+      ],
+      "rank_targets": [
+        0.0,
+        41.857142857142854,
+        83.71428571428571,
+        125.57142857142857,
+        167.42857142857142,
+        209.28571428571428,
+        251.14285714285714,
+        293.0
+      ],
+      "selected_ranks": [
+        0,
+        42,
+        84,
+        126,
+        167,
+        209,
+        251,
+        293
+      ],
+      "duplicate_flags": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "group_id": "bottom_up_anti_parallel|357|357",
+      "selected_sample_ids": [
+        "background|bottom_up_anti_parallel|357|357|0",
+        "background|bottom_up_anti_parallel|357|357|42",
+        "background|bottom_up_anti_parallel|357|357|84",
+        "background|bottom_up_anti_parallel|357|357|126",
+        "background|bottom_up_anti_parallel|357|357|167",
+        "background|bottom_up_anti_parallel|357|357|209",
+        "background|bottom_up_anti_parallel|357|357|251",
+        "background|bottom_up_anti_parallel|357|357|293"
+      ],
+      "selected_frame_indices": [
+        0,
+        42,
+        84,
+        126,
+        167,
+        209,
+        251,
+        293
+      ],
+      "rank_targets": [
+        0.0,
+        41.857142857142854,
+        83.71428571428571,
+        125.57142857142857,
+        167.42857142857142,
+        209.28571428571428,
+        251.14285714285714,
+        293.0
+      ],
+      "selected_ranks": [
+        0,
+        42,
+        84,
+        126,
+        167,
+        209,
+        251,
+        293
+      ],
+      "duplicate_flags": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "group_id": "bottom_up_anti_parallel|487|747",
+      "selected_sample_ids": [
+        "background|bottom_up_anti_parallel|487|747|0",
+        "background|bottom_up_anti_parallel|487|747|5",
+        "background|bottom_up_anti_parallel|487|747|9",
+        "background|bottom_up_anti_parallel|487|747|14",
+        "background|bottom_up_anti_parallel|487|747|18",
+        "background|bottom_up_anti_parallel|487|747|23",
+        "background|bottom_up_anti_parallel|487|747|27",
+        "background|bottom_up_anti_parallel|487|747|32"
+      ],
+      "selected_frame_indices": [
+        0,
+        5,
+        9,
+        14,
+        18,
+        23,
+        27,
+        32
+      ],
+      "rank_targets": [
+        0.0,
+        4.571428571428571,
+        9.142857142857142,
+        13.714285714285714,
+        18.285714285714285,
+        22.857142857142858,
+        27.428571428571427,
+        32.0
+      ],
+      "selected_ranks": [
+        0,
+        5,
+        9,
+        14,
+        18,
+        23,
+        27,
+        32
+      ],
+      "duplicate_flags": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "group_id": "bottom_up_anti_parallel|552|747",
+      "selected_sample_ids": [
+        "background|bottom_up_anti_parallel|552|747|0",
+        "background|bottom_up_anti_parallel|552|747|5",
+        "background|bottom_up_anti_parallel|552|747|9",
+        "background|bottom_up_anti_parallel|552|747|14",
+        "background|bottom_up_anti_parallel|552|747|18",
+        "background|bottom_up_anti_parallel|552|747|23",
+        "background|bottom_up_anti_parallel|552|747|27",
+        "background|bottom_up_anti_parallel|552|747|32"
+      ],
+      "selected_frame_indices": [
+        0,
+        5,
+        9,
+        14,
+        18,
+        23,
+        27,
+        32
+      ],
+      "rank_targets": [
+        0.0,
+        4.571428571428571,
+        9.142857142857142,
+        13.714285714285714,
+        18.285714285714285,
+        22.857142857142858,
+        27.428571428571427,
+        32.0
+      ],
+      "selected_ranks": [
+        0,
+        5,
+        9,
+        14,
+        18,
+        23,
+        27,
+        32
+      ],
+      "duplicate_flags": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "group_id": "bottom_up_anti_parallel|682|162",
+      "selected_sample_ids": [
+        "background|bottom_up_anti_parallel|682|162|0",
+        "background|bottom_up_anti_parallel|682|162|42",
+        "background|bottom_up_anti_parallel|682|162|84",
+        "background|bottom_up_anti_parallel|682|162|126",
+        "background|bottom_up_anti_parallel|682|162|167",
+        "background|bottom_up_anti_parallel|682|162|209",
+        "background|bottom_up_anti_parallel|682|162|251",
+        "background|bottom_up_anti_parallel|682|162|293"
+      ],
+      "selected_frame_indices": [
+        0,
+        42,
+        84,
+        126,
+        167,
+        209,
+        251,
+        293
+      ],
+      "rank_targets": [
+        0.0,
+        41.857142857142854,
+        83.71428571428571,
+        125.57142857142857,
+        167.42857142857142,
+        209.28571428571428,
+        251.14285714285714,
+        293.0
+      ],
+      "selected_ranks": [
+        0,
+        42,
+        84,
+        126,
+        167,
+        209,
+        251,
+        293
+      ],
+      "duplicate_flags": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "group_id": "bottom_up_anti_parallel|682|227",
+      "selected_sample_ids": [
+        "background|bottom_up_anti_parallel|682|227|0",
+        "background|bottom_up_anti_parallel|682|227|10",
+        "background|bottom_up_anti_parallel|682|227|19",
+        "background|bottom_up_anti_parallel|682|227|29",
+        "background|bottom_up_anti_parallel|682|227|39",
+        "background|bottom_up_anti_parallel|682|227|49",
+        "background|bottom_up_anti_parallel|682|227|58",
+        "background|bottom_up_anti_parallel|682|227|68"
+      ],
+      "selected_frame_indices": [
+        0,
+        10,
+        19,
+        29,
+        39,
+        49,
+        58,
+        68
+      ],
+      "rank_targets": [
+        0.0,
+        9.714285714285714,
+        19.428571428571427,
+        29.142857142857142,
+        38.857142857142854,
+        48.57142857142857,
+        58.285714285714285,
+        68.0
+      ],
+      "selected_ranks": [
+        0,
+        10,
+        19,
+        29,
+        39,
+        49,
+        58,
+        68
+      ],
+      "duplicate_flags": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "group_id": "bottom_up_anti_parallel|682|357",
+      "selected_sample_ids": [
+        "background|bottom_up_anti_parallel|682|357|0",
+        "background|bottom_up_anti_parallel|682|357|7",
+        "background|bottom_up_anti_parallel|682|357|13",
+        "background|bottom_up_anti_parallel|682|357|20",
+        "background|bottom_up_anti_parallel|682|357|27",
+        "background|bottom_up_anti_parallel|682|357|34",
+        "background|bottom_up_anti_parallel|682|357|40",
+        "background|bottom_up_anti_parallel|682|357|47"
+      ],
+      "selected_frame_indices": [
+        0,
+        7,
+        13,
+        20,
+        27,
+        34,
+        40,
+        47
+      ],
+      "rank_targets": [
+        0.0,
+        6.714285714285714,
+        13.428571428571429,
+        20.142857142857142,
+        26.857142857142858,
+        33.57142857142857,
+        40.285714285714285,
+        47.0
+      ],
+      "selected_ranks": [
+        0,
+        7,
+        13,
+        20,
+        27,
+        34,
+        40,
+        47
+      ],
+      "duplicate_flags": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "group_id": "bottom_up_anti_parallel|682|422",
+      "selected_sample_ids": [
+        "background|bottom_up_anti_parallel|682|422|0",
+        "background|bottom_up_anti_parallel|682|422|7",
+        "background|bottom_up_anti_parallel|682|422|13",
+        "background|bottom_up_anti_parallel|682|422|20",
+        "background|bottom_up_anti_parallel|682|422|27",
+        "background|bottom_up_anti_parallel|682|422|34",
+        "background|bottom_up_anti_parallel|682|422|40",
+        "background|bottom_up_anti_parallel|682|422|47"
+      ],
+      "selected_frame_indices": [
+        0,
+        7,
+        13,
+        20,
+        27,
+        34,
+        40,
+        47
+      ],
+      "rank_targets": [
+        0.0,
+        6.714285714285714,
+        13.428571428571429,
+        20.142857142857142,
+        26.857142857142858,
+        33.57142857142857,
+        40.285714285714285,
+        47.0
+      ],
+      "selected_ranks": [
+        0,
+        7,
+        13,
+        20,
+        27,
+        34,
+        40,
+        47
+      ],
+      "duplicate_flags": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "group_id": "bottom_up_anti_parallel|682|487",
+      "selected_sample_ids": [
+        "background|bottom_up_anti_parallel|682|487|0",
+        "background|bottom_up_anti_parallel|682|487|6",
+        "background|bottom_up_anti_parallel|682|487|13",
+        "background|bottom_up_anti_parallel|682|487|19",
+        "background|bottom_up_anti_parallel|682|487|26",
+        "background|bottom_up_anti_parallel|682|487|32",
+        "background|bottom_up_anti_parallel|682|487|39",
+        "background|bottom_up_anti_parallel|682|487|45"
+      ],
+      "selected_frame_indices": [
+        0,
+        6,
+        13,
+        19,
+        26,
+        32,
+        39,
+        45
+      ],
+      "rank_targets": [
+        0.0,
+        6.428571428571429,
+        12.857142857142858,
+        19.285714285714285,
+        25.714285714285715,
+        32.142857142857146,
+        38.57142857142857,
+        45.0
+      ],
+      "selected_ranks": [
+        0,
+        6,
+        13,
+        19,
+        26,
+        32,
+        39,
+        45
+      ],
+      "duplicate_flags": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "group_id": "bottom_up_anti_parallel|682|617",
+      "selected_sample_ids": [
+        "background|bottom_up_anti_parallel|682|617|0",
+        "background|bottom_up_anti_parallel|682|617|6",
+        "background|bottom_up_anti_parallel|682|617|12",
+        "background|bottom_up_anti_parallel|682|617|18",
+        "background|bottom_up_anti_parallel|682|617|23",
+        "background|bottom_up_anti_parallel|682|617|29",
+        "background|bottom_up_anti_parallel|682|617|35",
+        "background|bottom_up_anti_parallel|682|617|41"
+      ],
+      "selected_frame_indices": [
+        0,
+        6,
+        12,
+        18,
+        23,
+        29,
+        35,
+        41
+      ],
+      "rank_targets": [
+        0.0,
+        5.857142857142857,
+        11.714285714285714,
+        17.571428571428573,
+        23.428571428571427,
+        29.285714285714285,
+        35.142857142857146,
+        41.0
+      ],
+      "selected_ranks": [
+        0,
+        6,
+        12,
+        18,
+        23,
+        29,
+        35,
+        41
+      ],
+      "duplicate_flags": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "group_id": "bottom_up_anti_parallel|747|552",
+      "selected_sample_ids": [
+        "background|bottom_up_anti_parallel|747|552|0",
+        "background|bottom_up_anti_parallel|747|552|10",
+        "background|bottom_up_anti_parallel|747|552|19",
+        "background|bottom_up_anti_parallel|747|552|29",
+        "background|bottom_up_anti_parallel|747|552|38",
+        "background|bottom_up_anti_parallel|747|552|48",
+        "background|bottom_up_anti_parallel|747|552|57",
+        "background|bottom_up_anti_parallel|747|552|67"
+      ],
+      "selected_frame_indices": [
+        0,
+        10,
+        19,
+        29,
+        38,
+        48,
+        57,
+        67
+      ],
+      "rank_targets": [
+        0.0,
+        9.571428571428571,
+        19.142857142857142,
+        28.714285714285715,
+        38.285714285714285,
+        47.857142857142854,
+        57.42857142857143,
+        67.0
+      ],
+      "selected_ranks": [
+        0,
+        10,
+        19,
+        29,
+        38,
+        48,
+        57,
+        67
+      ],
+      "duplicate_flags": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "group_id": "bottom_up_anti_parallel|747|682",
+      "selected_sample_ids": [
+        "background|bottom_up_anti_parallel|747|682|0",
+        "background|bottom_up_anti_parallel|747|682|5",
+        "background|bottom_up_anti_parallel|747|682|11",
+        "background|bottom_up_anti_parallel|747|682|16",
+        "background|bottom_up_anti_parallel|747|682|21",
+        "background|bottom_up_anti_parallel|747|682|26",
+        "background|bottom_up_anti_parallel|747|682|32",
+        "background|bottom_up_anti_parallel|747|682|37"
+      ],
+      "selected_frame_indices": [
+        0,
+        5,
+        11,
+        16,
+        21,
+        26,
+        32,
+        37
+      ],
+      "rank_targets": [
+        0.0,
+        5.285714285714286,
+        10.571428571428571,
+        15.857142857142858,
+        21.142857142857142,
+        26.428571428571427,
+        31.714285714285715,
+        37.0
+      ],
+      "selected_ranks": [
+        0,
+        5,
+        11,
+        16,
+        21,
+        26,
+        32,
+        37
+      ],
+      "duplicate_flags": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "group_id": "bottom_up_anti_parallel|812|487",
+      "selected_sample_ids": [
+        "background|bottom_up_anti_parallel|812|487|0",
+        "background|bottom_up_anti_parallel|812|487|42",
+        "background|bottom_up_anti_parallel|812|487|84",
+        "background|bottom_up_anti_parallel|812|487|126",
+        "background|bottom_up_anti_parallel|812|487|167",
+        "background|bottom_up_anti_parallel|812|487|209",
+        "background|bottom_up_anti_parallel|812|487|251",
+        "background|bottom_up_anti_parallel|812|487|293"
+      ],
+      "selected_frame_indices": [
+        0,
+        42,
+        84,
+        126,
+        167,
+        209,
+        251,
+        293
+      ],
+      "rank_targets": [
+        0.0,
+        41.857142857142854,
+        83.71428571428571,
+        125.57142857142857,
+        167.42857142857142,
+        209.28571428571428,
+        251.14285714285714,
+        293.0
+      ],
+      "selected_ranks": [
+        0,
+        42,
+        84,
+        126,
+        167,
+        209,
+        251,
+        293
+      ],
+      "duplicate_flags": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "group_id": "bottom_up_anti_parallel|877|227",
+      "selected_sample_ids": [
+        "background|bottom_up_anti_parallel|877|227|0",
+        "background|bottom_up_anti_parallel|877|227|8",
+        "background|bottom_up_anti_parallel|877|227|16",
+        "background|bottom_up_anti_parallel|877|227|24",
+        "background|bottom_up_anti_parallel|877|227|33",
+        "background|bottom_up_anti_parallel|877|227|41",
+        "background|bottom_up_anti_parallel|877|227|49",
+        "background|bottom_up_anti_parallel|877|227|57"
+      ],
+      "selected_frame_indices": [
+        0,
+        8,
+        16,
+        24,
+        33,
+        41,
+        49,
+        57
+      ],
+      "rank_targets": [
+        0.0,
+        8.142857142857142,
+        16.285714285714285,
+        24.428571428571427,
+        32.57142857142857,
+        40.714285714285715,
+        48.857142857142854,
+        57.0
+      ],
+      "selected_ranks": [
+        0,
+        8,
+        16,
+        24,
+        33,
+        41,
+        49,
+        57
+      ],
+      "duplicate_flags": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "group_id": "bottom_up_anti_parallel|877|357",
+      "selected_sample_ids": [
+        "background|bottom_up_anti_parallel|877|357|0",
+        "background|bottom_up_anti_parallel|877|357|8",
+        "background|bottom_up_anti_parallel|877|357|17",
+        "background|bottom_up_anti_parallel|877|357|25",
+        "background|bottom_up_anti_parallel|877|357|33",
+        "background|bottom_up_anti_parallel|877|357|41",
+        "background|bottom_up_anti_parallel|877|357|50",
+        "background|bottom_up_anti_parallel|877|357|58"
+      ],
+      "selected_frame_indices": [
+        0,
+        8,
+        17,
+        25,
+        33,
+        41,
+        50,
+        58
+      ],
+      "rank_targets": [
+        0.0,
+        8.285714285714286,
+        16.571428571428573,
+        24.857142857142858,
+        33.142857142857146,
+        41.42857142857143,
+        49.714285714285715,
+        58.0
+      ],
+      "selected_ranks": [
+        0,
+        8,
+        17,
+        25,
+        33,
+        41,
+        50,
+        58
+      ],
+      "duplicate_flags": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "group_id": "bottom_up_anti_parallel|877|422",
+      "selected_sample_ids": [
+        "background|bottom_up_anti_parallel|877|422|0",
+        "background|bottom_up_anti_parallel|877|422|42",
+        "background|bottom_up_anti_parallel|877|422|84",
+        "background|bottom_up_anti_parallel|877|422|126",
+        "background|bottom_up_anti_parallel|877|422|167",
+        "background|bottom_up_anti_parallel|877|422|209",
+        "background|bottom_up_anti_parallel|877|422|251",
+        "background|bottom_up_anti_parallel|877|422|293"
+      ],
+      "selected_frame_indices": [
+        0,
+        42,
+        84,
+        126,
+        167,
+        209,
+        251,
+        293
+      ],
+      "rank_targets": [
+        0.0,
+        41.857142857142854,
+        83.71428571428571,
+        125.57142857142857,
+        167.42857142857142,
+        209.28571428571428,
+        251.14285714285714,
+        293.0
+      ],
+      "selected_ranks": [
+        0,
+        42,
+        84,
+        126,
+        167,
+        209,
+        251,
+        293
+      ],
+      "duplicate_flags": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "group_id": "bottom_up_anti_parallel|877|487",
+      "selected_sample_ids": [
+        "background|bottom_up_anti_parallel|877|487|0",
+        "background|bottom_up_anti_parallel|877|487|42",
+        "background|bottom_up_anti_parallel|877|487|84",
+        "background|bottom_up_anti_parallel|877|487|126",
+        "background|bottom_up_anti_parallel|877|487|167",
+        "background|bottom_up_anti_parallel|877|487|209",
+        "background|bottom_up_anti_parallel|877|487|251",
+        "background|bottom_up_anti_parallel|877|487|293"
+      ],
+      "selected_frame_indices": [
+        0,
+        42,
+        84,
+        126,
+        167,
+        209,
+        251,
+        293
+      ],
+      "rank_targets": [
+        0.0,
+        41.857142857142854,
+        83.71428571428571,
+        125.57142857142857,
+        167.42857142857142,
+        209.28571428571428,
+        251.14285714285714,
+        293.0
+      ],
+      "selected_ranks": [
+        0,
+        42,
+        84,
+        126,
+        167,
+        209,
+        251,
+        293
+      ],
+      "duplicate_flags": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "group_id": "bottom_up_anti_parallel|97|552",
+      "selected_sample_ids": [
+        "background|bottom_up_anti_parallel|97|552|0",
+        "background|bottom_up_anti_parallel|97|552|8",
+        "background|bottom_up_anti_parallel|97|552|17",
+        "background|bottom_up_anti_parallel|97|552|25",
+        "background|bottom_up_anti_parallel|97|552|33",
+        "background|bottom_up_anti_parallel|97|552|41",
+        "background|bottom_up_anti_parallel|97|552|50",
+        "background|bottom_up_anti_parallel|97|552|58"
+      ],
+      "selected_frame_indices": [
+        0,
+        8,
+        17,
+        25,
+        33,
+        41,
+        50,
+        58
+      ],
+      "rank_targets": [
+        0.0,
+        8.285714285714286,
+        16.571428571428573,
+        24.857142857142858,
+        33.142857142857146,
+        41.42857142857143,
+        49.714285714285715,
+        58.0
+      ],
+      "selected_ranks": [
+        0,
+        8,
+        17,
+        25,
+        33,
+        41,
+        50,
+        58
+      ],
+      "duplicate_flags": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "group_id": "bottom_up_anti_parallel|97|682",
+      "selected_sample_ids": [
+        "background|bottom_up_anti_parallel|97|682|0",
+        "background|bottom_up_anti_parallel|97|682|42",
+        "background|bottom_up_anti_parallel|97|682|84",
+        "background|bottom_up_anti_parallel|97|682|126",
+        "background|bottom_up_anti_parallel|97|682|167",
+        "background|bottom_up_anti_parallel|97|682|209",
+        "background|bottom_up_anti_parallel|97|682|251",
+        "background|bottom_up_anti_parallel|97|682|293"
+      ],
+      "selected_frame_indices": [
+        0,
+        42,
+        84,
+        126,
+        167,
+        209,
+        251,
+        293
+      ],
+      "rank_targets": [
+        0.0,
+        41.857142857142854,
+        83.71428571428571,
+        125.57142857142857,
+        167.42857142857142,
+        209.28571428571428,
+        251.14285714285714,
+        293.0
+      ],
+      "selected_ranks": [
+        0,
+        42,
+        84,
+        126,
+        167,
+        209,
+        251,
+        293
+      ],
+      "duplicate_flags": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "group_id": "bottom_up_anti_parallel|ESM3:study2a-site:04b5862b00c799065bedf45138f8179233fe2c0849b943d30c24fc93d32ad1d2",
+      "selected_sample_ids": [
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:04b5862b00c799065bedf45138f8179233fe2c0849b943d30c24fc93d32ad1d2|47",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:04b5862b00c799065bedf45138f8179233fe2c0849b943d30c24fc93d32ad1d2|47",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:04b5862b00c799065bedf45138f8179233fe2c0849b943d30c24fc93d32ad1d2|48",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:04b5862b00c799065bedf45138f8179233fe2c0849b943d30c24fc93d32ad1d2|48",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:04b5862b00c799065bedf45138f8179233fe2c0849b943d30c24fc93d32ad1d2|48",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:04b5862b00c799065bedf45138f8179233fe2c0849b943d30c24fc93d32ad1d2|48",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:04b5862b00c799065bedf45138f8179233fe2c0849b943d30c24fc93d32ad1d2|49",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:04b5862b00c799065bedf45138f8179233fe2c0849b943d30c24fc93d32ad1d2|49"
+      ],
+      "selected_frame_indices": [
+        47,
+        47,
+        48,
+        48,
+        48,
+        48,
+        49,
+        49
+      ],
+      "rank_targets": [
+        0.0,
+        0.2857142857142857,
+        0.5714285714285714,
+        0.8571428571428571,
+        1.1428571428571428,
+        1.4285714285714286,
+        1.7142857142857142,
+        2.0
+      ],
+      "selected_ranks": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2
+      ],
+      "duplicate_flags": [
+        false,
+        true,
+        false,
+        true,
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    {
+      "group_id": "bottom_up_anti_parallel|ESM3:study2a-site:1747a6f70b856c3baa10fba341f17f098d1a19b47ab42b4ad88fe58044ca9c7b",
+      "selected_sample_ids": [
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:1747a6f70b856c3baa10fba341f17f098d1a19b47ab42b4ad88fe58044ca9c7b|53",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:1747a6f70b856c3baa10fba341f17f098d1a19b47ab42b4ad88fe58044ca9c7b|87",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:1747a6f70b856c3baa10fba341f17f098d1a19b47ab42b4ad88fe58044ca9c7b|122",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:1747a6f70b856c3baa10fba341f17f098d1a19b47ab42b4ad88fe58044ca9c7b|156",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:1747a6f70b856c3baa10fba341f17f098d1a19b47ab42b4ad88fe58044ca9c7b|190",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:1747a6f70b856c3baa10fba341f17f098d1a19b47ab42b4ad88fe58044ca9c7b|224",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:1747a6f70b856c3baa10fba341f17f098d1a19b47ab42b4ad88fe58044ca9c7b|259",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:1747a6f70b856c3baa10fba341f17f098d1a19b47ab42b4ad88fe58044ca9c7b|293"
+      ],
+      "selected_frame_indices": [
+        53,
+        87,
+        122,
+        156,
+        190,
+        224,
+        259,
+        293
+      ],
+      "rank_targets": [
+        0.0,
+        34.285714285714285,
+        68.57142857142857,
+        102.85714285714286,
+        137.14285714285714,
+        171.42857142857142,
+        205.71428571428572,
+        240.0
+      ],
+      "selected_ranks": [
+        0,
+        34,
+        69,
+        103,
+        137,
+        171,
+        206,
+        240
+      ],
+      "duplicate_flags": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "group_id": "bottom_up_anti_parallel|ESM3:study2a-site:17a5a7eb8ad3c6cb4e5736a60680df6e0600eda6a02e6632a46e53067199df72",
+      "selected_sample_ids": [
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:17a5a7eb8ad3c6cb4e5736a60680df6e0600eda6a02e6632a46e53067199df72|43",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:17a5a7eb8ad3c6cb4e5736a60680df6e0600eda6a02e6632a46e53067199df72|69",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:17a5a7eb8ad3c6cb4e5736a60680df6e0600eda6a02e6632a46e53067199df72|94",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:17a5a7eb8ad3c6cb4e5736a60680df6e0600eda6a02e6632a46e53067199df72|120",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:17a5a7eb8ad3c6cb4e5736a60680df6e0600eda6a02e6632a46e53067199df72|196",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:17a5a7eb8ad3c6cb4e5736a60680df6e0600eda6a02e6632a46e53067199df72|222",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:17a5a7eb8ad3c6cb4e5736a60680df6e0600eda6a02e6632a46e53067199df72|247",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:17a5a7eb8ad3c6cb4e5736a60680df6e0600eda6a02e6632a46e53067199df72|273"
+      ],
+      "selected_frame_indices": [
+        43,
+        69,
+        94,
+        120,
+        196,
+        222,
+        247,
+        273
+      ],
+      "rank_targets": [
+        0.0,
+        25.714285714285715,
+        51.42857142857143,
+        77.14285714285714,
+        102.85714285714286,
+        128.57142857142858,
+        154.28571428571428,
+        180.0
+      ],
+      "selected_ranks": [
+        0,
+        26,
+        51,
+        77,
+        103,
+        129,
+        154,
+        180
+      ],
+      "duplicate_flags": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "group_id": "bottom_up_anti_parallel|ESM3:study2a-site:2c7483396b20a6dbd6835c6fe6a0594828a7908f6cc3be7c319b6873109b4caf",
+      "selected_sample_ids": [
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:2c7483396b20a6dbd6835c6fe6a0594828a7908f6cc3be7c319b6873109b4caf|205",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:2c7483396b20a6dbd6835c6fe6a0594828a7908f6cc3be7c319b6873109b4caf|217",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:2c7483396b20a6dbd6835c6fe6a0594828a7908f6cc3be7c319b6873109b4caf|232",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:2c7483396b20a6dbd6835c6fe6a0594828a7908f6cc3be7c319b6873109b4caf|244",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:2c7483396b20a6dbd6835c6fe6a0594828a7908f6cc3be7c319b6873109b4caf|257",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:2c7483396b20a6dbd6835c6fe6a0594828a7908f6cc3be7c319b6873109b4caf|269",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:2c7483396b20a6dbd6835c6fe6a0594828a7908f6cc3be7c319b6873109b4caf|281",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:2c7483396b20a6dbd6835c6fe6a0594828a7908f6cc3be7c319b6873109b4caf|293"
+      ],
+      "selected_frame_indices": [
+        205,
+        217,
+        232,
+        244,
+        257,
+        269,
+        281,
+        293
+      ],
+      "rank_targets": [
+        0.0,
+        12.142857142857142,
+        24.285714285714285,
+        36.42857142857143,
+        48.57142857142857,
+        60.714285714285715,
+        72.85714285714286,
+        85.0
+      ],
+      "selected_ranks": [
+        0,
+        12,
+        24,
+        36,
+        49,
+        61,
+        73,
+        85
+      ],
+      "duplicate_flags": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "group_id": "bottom_up_anti_parallel|ESM3:study2a-site:31724465fb8fba6e781323a9bc6a02893ed0c54f073b6dc575cbebe18975bbc1",
+      "selected_sample_ids": [
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:31724465fb8fba6e781323a9bc6a02893ed0c54f073b6dc575cbebe18975bbc1|274",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:31724465fb8fba6e781323a9bc6a02893ed0c54f073b6dc575cbebe18975bbc1|274",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:31724465fb8fba6e781323a9bc6a02893ed0c54f073b6dc575cbebe18975bbc1|275",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:31724465fb8fba6e781323a9bc6a02893ed0c54f073b6dc575cbebe18975bbc1|275",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:31724465fb8fba6e781323a9bc6a02893ed0c54f073b6dc575cbebe18975bbc1|276",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:31724465fb8fba6e781323a9bc6a02893ed0c54f073b6dc575cbebe18975bbc1|276",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:31724465fb8fba6e781323a9bc6a02893ed0c54f073b6dc575cbebe18975bbc1|277",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:31724465fb8fba6e781323a9bc6a02893ed0c54f073b6dc575cbebe18975bbc1|277"
+      ],
+      "selected_frame_indices": [
+        274,
+        274,
+        275,
+        275,
+        276,
+        276,
+        277,
+        277
+      ],
+      "rank_targets": [
+        0.0,
+        0.42857142857142855,
+        0.8571428571428571,
+        1.2857142857142858,
+        1.7142857142857142,
+        2.142857142857143,
+        2.5714285714285716,
+        3.0
+      ],
+      "selected_ranks": [
+        0,
+        0,
+        1,
+        1,
+        2,
+        2,
+        3,
+        3
+      ],
+      "duplicate_flags": [
+        false,
+        true,
+        false,
+        true,
+        false,
+        true,
+        false,
+        true
+      ]
+    },
+    {
+      "group_id": "bottom_up_anti_parallel|ESM3:study2a-site:354d35c60f68a6b3b5b39c7f6f51334a0175d17ec55ff3f07fd0e5d77445a4da",
+      "selected_sample_ids": [
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:354d35c60f68a6b3b5b39c7f6f51334a0175d17ec55ff3f07fd0e5d77445a4da|55",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:354d35c60f68a6b3b5b39c7f6f51334a0175d17ec55ff3f07fd0e5d77445a4da|76",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:354d35c60f68a6b3b5b39c7f6f51334a0175d17ec55ff3f07fd0e5d77445a4da|98",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:354d35c60f68a6b3b5b39c7f6f51334a0175d17ec55ff3f07fd0e5d77445a4da|119",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:354d35c60f68a6b3b5b39c7f6f51334a0175d17ec55ff3f07fd0e5d77445a4da|141",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:354d35c60f68a6b3b5b39c7f6f51334a0175d17ec55ff3f07fd0e5d77445a4da|162",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:354d35c60f68a6b3b5b39c7f6f51334a0175d17ec55ff3f07fd0e5d77445a4da|184",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:354d35c60f68a6b3b5b39c7f6f51334a0175d17ec55ff3f07fd0e5d77445a4da|207"
+      ],
+      "selected_frame_indices": [
+        55,
+        76,
+        98,
+        119,
+        141,
+        162,
+        184,
+        207
+      ],
+      "rank_targets": [
+        0.0,
+        21.428571428571427,
+        42.857142857142854,
+        64.28571428571429,
+        85.71428571428571,
+        107.14285714285714,
+        128.57142857142858,
+        150.0
+      ],
+      "selected_ranks": [
+        0,
+        21,
+        43,
+        64,
+        86,
+        107,
+        129,
+        150
+      ],
+      "duplicate_flags": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "group_id": "bottom_up_anti_parallel|ESM3:study2a-site:37e812df561c66791dd4f236a3bd75d12285245cc86086d70a2b3b0163c278cd",
+      "selected_sample_ids": [
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:37e812df561c66791dd4f236a3bd75d12285245cc86086d70a2b3b0163c278cd|124",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:37e812df561c66791dd4f236a3bd75d12285245cc86086d70a2b3b0163c278cd|130",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:37e812df561c66791dd4f236a3bd75d12285245cc86086d70a2b3b0163c278cd|135",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:37e812df561c66791dd4f236a3bd75d12285245cc86086d70a2b3b0163c278cd|144",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:37e812df561c66791dd4f236a3bd75d12285245cc86086d70a2b3b0163c278cd|150",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:37e812df561c66791dd4f236a3bd75d12285245cc86086d70a2b3b0163c278cd|156",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:37e812df561c66791dd4f236a3bd75d12285245cc86086d70a2b3b0163c278cd|164",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:37e812df561c66791dd4f236a3bd75d12285245cc86086d70a2b3b0163c278cd|225"
+      ],
+      "selected_frame_indices": [
+        124,
+        130,
+        135,
+        144,
+        150,
+        156,
+        164,
+        225
+      ],
+      "rank_targets": [
+        0.0,
+        5.714285714285714,
+        11.428571428571429,
+        17.142857142857142,
+        22.857142857142858,
+        28.571428571428573,
+        34.285714285714285,
+        40.0
+      ],
+      "selected_ranks": [
+        0,
+        6,
+        11,
+        17,
+        23,
+        29,
+        34,
+        40
+      ],
+      "duplicate_flags": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "group_id": "bottom_up_anti_parallel|ESM3:study2a-site:394195442a7907467d4a1012b6d2e3cff06ee808f136150906fcdcd80461cda0",
+      "selected_sample_ids": [
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:394195442a7907467d4a1012b6d2e3cff06ee808f136150906fcdcd80461cda0|97",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:394195442a7907467d4a1012b6d2e3cff06ee808f136150906fcdcd80461cda0|100",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:394195442a7907467d4a1012b6d2e3cff06ee808f136150906fcdcd80461cda0|102",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:394195442a7907467d4a1012b6d2e3cff06ee808f136150906fcdcd80461cda0|105",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:394195442a7907467d4a1012b6d2e3cff06ee808f136150906fcdcd80461cda0|114",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:394195442a7907467d4a1012b6d2e3cff06ee808f136150906fcdcd80461cda0|118",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:394195442a7907467d4a1012b6d2e3cff06ee808f136150906fcdcd80461cda0|126",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:394195442a7907467d4a1012b6d2e3cff06ee808f136150906fcdcd80461cda0|131"
+      ],
+      "selected_frame_indices": [
+        97,
+        100,
+        102,
+        105,
+        114,
+        118,
+        126,
+        131
+      ],
+      "rank_targets": [
+        0.0,
+        2.7142857142857144,
+        5.428571428571429,
+        8.142857142857142,
+        10.857142857142858,
+        13.571428571428571,
+        16.285714285714285,
+        19.0
+      ],
+      "selected_ranks": [
+        0,
+        3,
+        5,
+        8,
+        11,
+        14,
+        16,
+        19
+      ],
+      "duplicate_flags": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "group_id": "bottom_up_anti_parallel|ESM3:study2a-site:4f00d0b214477f013c4a2b1bea37939ed1cf82ffd890ce9cc4bedaa505a392fb",
+      "selected_sample_ids": [
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:4f00d0b214477f013c4a2b1bea37939ed1cf82ffd890ce9cc4bedaa505a392fb|43",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:4f00d0b214477f013c4a2b1bea37939ed1cf82ffd890ce9cc4bedaa505a392fb|106",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:4f00d0b214477f013c4a2b1bea37939ed1cf82ffd890ce9cc4bedaa505a392fb|118",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:4f00d0b214477f013c4a2b1bea37939ed1cf82ffd890ce9cc4bedaa505a392fb|130",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:4f00d0b214477f013c4a2b1bea37939ed1cf82ffd890ce9cc4bedaa505a392fb|141",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:4f00d0b214477f013c4a2b1bea37939ed1cf82ffd890ce9cc4bedaa505a392fb|154",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:4f00d0b214477f013c4a2b1bea37939ed1cf82ffd890ce9cc4bedaa505a392fb|166",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:4f00d0b214477f013c4a2b1bea37939ed1cf82ffd890ce9cc4bedaa505a392fb|260"
+      ],
+      "selected_frame_indices": [
+        43,
+        106,
+        118,
+        130,
+        141,
+        154,
+        166,
+        260
+      ],
+      "rank_targets": [
+        0.0,
+        11.857142857142858,
+        23.714285714285715,
+        35.57142857142857,
+        47.42857142857143,
+        59.285714285714285,
+        71.14285714285714,
+        83.0
+      ],
+      "selected_ranks": [
+        0,
+        12,
+        24,
+        36,
+        47,
+        59,
+        71,
+        83
+      ],
+      "duplicate_flags": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "group_id": "bottom_up_anti_parallel|ESM3:study2a-site:532335ea13c0de2318c44b20271527d4cdc6b9e353f17954d6c5394066ca2e1b",
+      "selected_sample_ids": [
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:532335ea13c0de2318c44b20271527d4cdc6b9e353f17954d6c5394066ca2e1b|74",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:532335ea13c0de2318c44b20271527d4cdc6b9e353f17954d6c5394066ca2e1b|74",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:532335ea13c0de2318c44b20271527d4cdc6b9e353f17954d6c5394066ca2e1b|74",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:532335ea13c0de2318c44b20271527d4cdc6b9e353f17954d6c5394066ca2e1b|74",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:532335ea13c0de2318c44b20271527d4cdc6b9e353f17954d6c5394066ca2e1b|74",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:532335ea13c0de2318c44b20271527d4cdc6b9e353f17954d6c5394066ca2e1b|74",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:532335ea13c0de2318c44b20271527d4cdc6b9e353f17954d6c5394066ca2e1b|74",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:532335ea13c0de2318c44b20271527d4cdc6b9e353f17954d6c5394066ca2e1b|74"
+      ],
+      "selected_frame_indices": [
+        74,
+        74,
+        74,
+        74,
+        74,
+        74,
+        74,
+        74
+      ],
+      "rank_targets": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "selected_ranks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "duplicate_flags": [
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "group_id": "bottom_up_anti_parallel|ESM3:study2a-site:8c9b5dc911275b69cadb019ecebb0a58038877c190861c82e1be73d8580869d9",
+      "selected_sample_ids": [
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:8c9b5dc911275b69cadb019ecebb0a58038877c190861c82e1be73d8580869d9|56",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:8c9b5dc911275b69cadb019ecebb0a58038877c190861c82e1be73d8580869d9|56",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:8c9b5dc911275b69cadb019ecebb0a58038877c190861c82e1be73d8580869d9|56",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:8c9b5dc911275b69cadb019ecebb0a58038877c190861c82e1be73d8580869d9|56",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:8c9b5dc911275b69cadb019ecebb0a58038877c190861c82e1be73d8580869d9|57",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:8c9b5dc911275b69cadb019ecebb0a58038877c190861c82e1be73d8580869d9|57",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:8c9b5dc911275b69cadb019ecebb0a58038877c190861c82e1be73d8580869d9|57",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:8c9b5dc911275b69cadb019ecebb0a58038877c190861c82e1be73d8580869d9|57"
+      ],
+      "selected_frame_indices": [
+        56,
+        56,
+        56,
+        56,
+        57,
+        57,
+        57,
+        57
+      ],
+      "rank_targets": [
+        0.0,
+        0.14285714285714285,
+        0.2857142857142857,
+        0.42857142857142855,
+        0.5714285714285714,
+        0.7142857142857143,
+        0.8571428571428571,
+        1.0
+      ],
+      "selected_ranks": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "duplicate_flags": [
+        false,
+        true,
+        true,
+        true,
+        false,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "group_id": "bottom_up_anti_parallel|ESM3:study2a-site:98ae552ae84fd0ade919a87427b1450965604b42653e9f1089a7153e46cd3f86",
+      "selected_sample_ids": [
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:98ae552ae84fd0ade919a87427b1450965604b42653e9f1089a7153e46cd3f86|124",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:98ae552ae84fd0ade919a87427b1450965604b42653e9f1089a7153e46cd3f86|143",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:98ae552ae84fd0ade919a87427b1450965604b42653e9f1089a7153e46cd3f86|156",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:98ae552ae84fd0ade919a87427b1450965604b42653e9f1089a7153e46cd3f86|170",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:98ae552ae84fd0ade919a87427b1450965604b42653e9f1089a7153e46cd3f86|185",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:98ae552ae84fd0ade919a87427b1450965604b42653e9f1089a7153e46cd3f86|201",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:98ae552ae84fd0ade919a87427b1450965604b42653e9f1089a7153e46cd3f86|279",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:98ae552ae84fd0ade919a87427b1450965604b42653e9f1089a7153e46cd3f86|293"
+      ],
+      "selected_frame_indices": [
+        124,
+        143,
+        156,
+        170,
+        185,
+        201,
+        279,
+        293
+      ],
+      "rank_targets": [
+        0.0,
+        13.571428571428571,
+        27.142857142857142,
+        40.714285714285715,
+        54.285714285714285,
+        67.85714285714286,
+        81.42857142857143,
+        95.0
+      ],
+      "selected_ranks": [
+        0,
+        14,
+        27,
+        41,
+        54,
+        68,
+        81,
+        95
+      ],
+      "duplicate_flags": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "group_id": "bottom_up_anti_parallel|ESM3:study2a-site:a7d76f8387ce232777fd1f0838aa3984b6fcae31ac965ecb04c93cea15c84093",
+      "selected_sample_ids": [
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:a7d76f8387ce232777fd1f0838aa3984b6fcae31ac965ecb04c93cea15c84093|38",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:a7d76f8387ce232777fd1f0838aa3984b6fcae31ac965ecb04c93cea15c84093|74",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:a7d76f8387ce232777fd1f0838aa3984b6fcae31ac965ecb04c93cea15c84093|110",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:a7d76f8387ce232777fd1f0838aa3984b6fcae31ac965ecb04c93cea15c84093|146",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:a7d76f8387ce232777fd1f0838aa3984b6fcae31ac965ecb04c93cea15c84093|182",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:a7d76f8387ce232777fd1f0838aa3984b6fcae31ac965ecb04c93cea15c84093|218",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:a7d76f8387ce232777fd1f0838aa3984b6fcae31ac965ecb04c93cea15c84093|254",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:a7d76f8387ce232777fd1f0838aa3984b6fcae31ac965ecb04c93cea15c84093|290"
+      ],
+      "selected_frame_indices": [
+        38,
+        74,
+        110,
+        146,
+        182,
+        218,
+        254,
+        290
+      ],
+      "rank_targets": [
+        0.0,
+        36.0,
+        72.0,
+        108.0,
+        144.0,
+        180.0,
+        216.0,
+        252.0
+      ],
+      "selected_ranks": [
+        0,
+        36,
+        72,
+        108,
+        144,
+        180,
+        216,
+        252
+      ],
+      "duplicate_flags": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "group_id": "bottom_up_anti_parallel|ESM3:study2a-site:b47cd3409638d28212c8be1f5ddaff880ce1674bbc41831eff33bbd4ae60d1a3",
+      "selected_sample_ids": [
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:b47cd3409638d28212c8be1f5ddaff880ce1674bbc41831eff33bbd4ae60d1a3|88",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:b47cd3409638d28212c8be1f5ddaff880ce1674bbc41831eff33bbd4ae60d1a3|105",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:b47cd3409638d28212c8be1f5ddaff880ce1674bbc41831eff33bbd4ae60d1a3|135",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:b47cd3409638d28212c8be1f5ddaff880ce1674bbc41831eff33bbd4ae60d1a3|152",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:b47cd3409638d28212c8be1f5ddaff880ce1674bbc41831eff33bbd4ae60d1a3|169",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:b47cd3409638d28212c8be1f5ddaff880ce1674bbc41831eff33bbd4ae60d1a3|235",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:b47cd3409638d28212c8be1f5ddaff880ce1674bbc41831eff33bbd4ae60d1a3|256",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:b47cd3409638d28212c8be1f5ddaff880ce1674bbc41831eff33bbd4ae60d1a3|273"
+      ],
+      "selected_frame_indices": [
+        88,
+        105,
+        135,
+        152,
+        169,
+        235,
+        256,
+        273
+      ],
+      "rank_targets": [
+        0.0,
+        17.285714285714285,
+        34.57142857142857,
+        51.857142857142854,
+        69.14285714285714,
+        86.42857142857143,
+        103.71428571428571,
+        121.0
+      ],
+      "selected_ranks": [
+        0,
+        17,
+        35,
+        52,
+        69,
+        86,
+        104,
+        121
+      ],
+      "duplicate_flags": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "group_id": "bottom_up_anti_parallel|ESM3:study2a-site:b7feff5ad1c2049d55cbd7a3b4adc0ef3e66844c887c2d2df8605828539de34b",
+      "selected_sample_ids": [
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:b7feff5ad1c2049d55cbd7a3b4adc0ef3e66844c887c2d2df8605828539de34b|61",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:b7feff5ad1c2049d55cbd7a3b4adc0ef3e66844c887c2d2df8605828539de34b|62",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:b7feff5ad1c2049d55cbd7a3b4adc0ef3e66844c887c2d2df8605828539de34b|63",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:b7feff5ad1c2049d55cbd7a3b4adc0ef3e66844c887c2d2df8605828539de34b|64",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:b7feff5ad1c2049d55cbd7a3b4adc0ef3e66844c887c2d2df8605828539de34b|65",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:b7feff5ad1c2049d55cbd7a3b4adc0ef3e66844c887c2d2df8605828539de34b|66",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:b7feff5ad1c2049d55cbd7a3b4adc0ef3e66844c887c2d2df8605828539de34b|67",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:b7feff5ad1c2049d55cbd7a3b4adc0ef3e66844c887c2d2df8605828539de34b|68"
+      ],
+      "selected_frame_indices": [
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68
+      ],
+      "rank_targets": [
+        0.0,
+        1.0,
+        2.0,
+        3.0,
+        4.0,
+        5.0,
+        6.0,
+        7.0
+      ],
+      "selected_ranks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "duplicate_flags": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "group_id": "bottom_up_anti_parallel|ESM3:study2a-site:bf1271b334f56de6d55a39e09663f876d2858a9af98f26fa7dfab3e2afe6fb24",
+      "selected_sample_ids": [
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:bf1271b334f56de6d55a39e09663f876d2858a9af98f26fa7dfab3e2afe6fb24|37",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:bf1271b334f56de6d55a39e09663f876d2858a9af98f26fa7dfab3e2afe6fb24|49",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:bf1271b334f56de6d55a39e09663f876d2858a9af98f26fa7dfab3e2afe6fb24|62",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:bf1271b334f56de6d55a39e09663f876d2858a9af98f26fa7dfab3e2afe6fb24|74",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:bf1271b334f56de6d55a39e09663f876d2858a9af98f26fa7dfab3e2afe6fb24|86",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:bf1271b334f56de6d55a39e09663f876d2858a9af98f26fa7dfab3e2afe6fb24|98",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:bf1271b334f56de6d55a39e09663f876d2858a9af98f26fa7dfab3e2afe6fb24|111",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:bf1271b334f56de6d55a39e09663f876d2858a9af98f26fa7dfab3e2afe6fb24|123"
+      ],
+      "selected_frame_indices": [
+        37,
+        49,
+        62,
+        74,
+        86,
+        98,
+        111,
+        123
+      ],
+      "rank_targets": [
+        0.0,
+        12.285714285714286,
+        24.571428571428573,
+        36.857142857142854,
+        49.142857142857146,
+        61.42857142857143,
+        73.71428571428571,
+        86.0
+      ],
+      "selected_ranks": [
+        0,
+        12,
+        25,
+        37,
+        49,
+        61,
+        74,
+        86
+      ],
+      "duplicate_flags": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "group_id": "bottom_up_anti_parallel|ESM3:study2a-site:d0a80a34df6f38866fb229711f0282fc88298d14c69a37a6676d0fe523ce2e26",
+      "selected_sample_ids": [
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:d0a80a34df6f38866fb229711f0282fc88298d14c69a37a6676d0fe523ce2e26|38",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:d0a80a34df6f38866fb229711f0282fc88298d14c69a37a6676d0fe523ce2e26|39",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:d0a80a34df6f38866fb229711f0282fc88298d14c69a37a6676d0fe523ce2e26|39",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:d0a80a34df6f38866fb229711f0282fc88298d14c69a37a6676d0fe523ce2e26|40",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:d0a80a34df6f38866fb229711f0282fc88298d14c69a37a6676d0fe523ce2e26|40",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:d0a80a34df6f38866fb229711f0282fc88298d14c69a37a6676d0fe523ce2e26|41",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:d0a80a34df6f38866fb229711f0282fc88298d14c69a37a6676d0fe523ce2e26|41",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:d0a80a34df6f38866fb229711f0282fc88298d14c69a37a6676d0fe523ce2e26|42"
+      ],
+      "selected_frame_indices": [
+        38,
+        39,
+        39,
+        40,
+        40,
+        41,
+        41,
+        42
+      ],
+      "rank_targets": [
+        0.0,
+        0.5714285714285714,
+        1.1428571428571428,
+        1.7142857142857142,
+        2.2857142857142856,
+        2.857142857142857,
+        3.4285714285714284,
+        4.0
+      ],
+      "selected_ranks": [
+        0,
+        1,
+        1,
+        2,
+        2,
+        3,
+        3,
+        4
+      ],
+      "duplicate_flags": [
+        false,
+        false,
+        true,
+        false,
+        true,
+        false,
+        true,
+        false
+      ]
+    },
+    {
+      "group_id": "bottom_up_anti_parallel|ESM3:study2a-site:df021de6aacd70f77c02cb29488aaafd66d0e93043bb0564ba96bc79979482c7",
+      "selected_sample_ids": [
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:df021de6aacd70f77c02cb29488aaafd66d0e93043bb0564ba96bc79979482c7|59",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:df021de6aacd70f77c02cb29488aaafd66d0e93043bb0564ba96bc79979482c7|131",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:df021de6aacd70f77c02cb29488aaafd66d0e93043bb0564ba96bc79979482c7|154",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:df021de6aacd70f77c02cb29488aaafd66d0e93043bb0564ba96bc79979482c7|178",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:df021de6aacd70f77c02cb29488aaafd66d0e93043bb0564ba96bc79979482c7|202",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:df021de6aacd70f77c02cb29488aaafd66d0e93043bb0564ba96bc79979482c7|226",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:df021de6aacd70f77c02cb29488aaafd66d0e93043bb0564ba96bc79979482c7|249",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:df021de6aacd70f77c02cb29488aaafd66d0e93043bb0564ba96bc79979482c7|273"
+      ],
+      "selected_frame_indices": [
+        59,
+        131,
+        154,
+        178,
+        202,
+        226,
+        249,
+        273
+      ],
+      "rank_targets": [
+        0.0,
+        23.714285714285715,
+        47.42857142857143,
+        71.14285714285714,
+        94.85714285714286,
+        118.57142857142857,
+        142.28571428571428,
+        166.0
+      ],
+      "selected_ranks": [
+        0,
+        24,
+        47,
+        71,
+        95,
+        119,
+        142,
+        166
+      ],
+      "duplicate_flags": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "group_id": "bottom_up_anti_parallel|ESM3:study2a-site:e7a3aeff64ed8498574df2599c3c077cf5401dc8a7489b16a6aea6f112f70c5c",
+      "selected_sample_ids": [
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:e7a3aeff64ed8498574df2599c3c077cf5401dc8a7489b16a6aea6f112f70c5c|47",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:e7a3aeff64ed8498574df2599c3c077cf5401dc8a7489b16a6aea6f112f70c5c|88",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:e7a3aeff64ed8498574df2599c3c077cf5401dc8a7489b16a6aea6f112f70c5c|113",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:e7a3aeff64ed8498574df2599c3c077cf5401dc8a7489b16a6aea6f112f70c5c|190",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:e7a3aeff64ed8498574df2599c3c077cf5401dc8a7489b16a6aea6f112f70c5c|215",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:e7a3aeff64ed8498574df2599c3c077cf5401dc8a7489b16a6aea6f112f70c5c|244",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:e7a3aeff64ed8498574df2599c3c077cf5401dc8a7489b16a6aea6f112f70c5c|269",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:e7a3aeff64ed8498574df2599c3c077cf5401dc8a7489b16a6aea6f112f70c5c|293"
+      ],
+      "selected_frame_indices": [
+        47,
+        88,
+        113,
+        190,
+        215,
+        244,
+        269,
+        293
+      ],
+      "rank_targets": [
+        0.0,
+        23.714285714285715,
+        47.42857142857143,
+        71.14285714285714,
+        94.85714285714286,
+        118.57142857142857,
+        142.28571428571428,
+        166.0
+      ],
+      "selected_ranks": [
+        0,
+        24,
+        47,
+        71,
+        95,
+        119,
+        142,
+        166
+      ],
+      "duplicate_flags": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "group_id": "bottom_up_anti_parallel|ESM3:study2a-site:eb162365192b2b4684d767a71e235e6d5ac198d8c9fb438971a4e31615c2f3e4",
+      "selected_sample_ids": [
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:eb162365192b2b4684d767a71e235e6d5ac198d8c9fb438971a4e31615c2f3e4|196",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:eb162365192b2b4684d767a71e235e6d5ac198d8c9fb438971a4e31615c2f3e4|199",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:eb162365192b2b4684d767a71e235e6d5ac198d8c9fb438971a4e31615c2f3e4|202",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:eb162365192b2b4684d767a71e235e6d5ac198d8c9fb438971a4e31615c2f3e4|205",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:eb162365192b2b4684d767a71e235e6d5ac198d8c9fb438971a4e31615c2f3e4|209",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:eb162365192b2b4684d767a71e235e6d5ac198d8c9fb438971a4e31615c2f3e4|212",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:eb162365192b2b4684d767a71e235e6d5ac198d8c9fb438971a4e31615c2f3e4|220",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:eb162365192b2b4684d767a71e235e6d5ac198d8c9fb438971a4e31615c2f3e4|223"
+      ],
+      "selected_frame_indices": [
+        196,
+        199,
+        202,
+        205,
+        209,
+        212,
+        220,
+        223
+      ],
+      "rank_targets": [
+        0.0,
+        3.142857142857143,
+        6.285714285714286,
+        9.428571428571429,
+        12.571428571428571,
+        15.714285714285714,
+        18.857142857142858,
+        22.0
+      ],
+      "selected_ranks": [
+        0,
+        3,
+        6,
+        9,
+        13,
+        16,
+        19,
+        22
+      ],
+      "duplicate_flags": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "group_id": "bottom_up_anti_parallel|ESM3:study2a-site:ed29dc0e072a9e1a69573a695b2f3b2eaea3f3be5b04f0bdff6a4a021710f82f",
+      "selected_sample_ids": [
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:ed29dc0e072a9e1a69573a695b2f3b2eaea3f3be5b04f0bdff6a4a021710f82f|37",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:ed29dc0e072a9e1a69573a695b2f3b2eaea3f3be5b04f0bdff6a4a021710f82f|38",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:ed29dc0e072a9e1a69573a695b2f3b2eaea3f3be5b04f0bdff6a4a021710f82f|38",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:ed29dc0e072a9e1a69573a695b2f3b2eaea3f3be5b04f0bdff6a4a021710f82f|39",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:ed29dc0e072a9e1a69573a695b2f3b2eaea3f3be5b04f0bdff6a4a021710f82f|39",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:ed29dc0e072a9e1a69573a695b2f3b2eaea3f3be5b04f0bdff6a4a021710f82f|40",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:ed29dc0e072a9e1a69573a695b2f3b2eaea3f3be5b04f0bdff6a4a021710f82f|40",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:ed29dc0e072a9e1a69573a695b2f3b2eaea3f3be5b04f0bdff6a4a021710f82f|41"
+      ],
+      "selected_frame_indices": [
+        37,
+        38,
+        38,
+        39,
+        39,
+        40,
+        40,
+        41
+      ],
+      "rank_targets": [
+        0.0,
+        0.5714285714285714,
+        1.1428571428571428,
+        1.7142857142857142,
+        2.2857142857142856,
+        2.857142857142857,
+        3.4285714285714284,
+        4.0
+      ],
+      "selected_ranks": [
+        0,
+        1,
+        1,
+        2,
+        2,
+        3,
+        3,
+        4
+      ],
+      "duplicate_flags": [
+        false,
+        false,
+        true,
+        false,
+        true,
+        false,
+        true,
+        false
+      ]
+    },
+    {
+      "group_id": "bottom_up_anti_parallel|ESM3:study2a-site:ef5bb625150b3f451cecfa104bb1feb3dc197b2b0e2ab9a21f886a023031f111",
+      "selected_sample_ids": [
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:ef5bb625150b3f451cecfa104bb1feb3dc197b2b0e2ab9a21f886a023031f111|40",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:ef5bb625150b3f451cecfa104bb1feb3dc197b2b0e2ab9a21f886a023031f111|41",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:ef5bb625150b3f451cecfa104bb1feb3dc197b2b0e2ab9a21f886a023031f111|41",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:ef5bb625150b3f451cecfa104bb1feb3dc197b2b0e2ab9a21f886a023031f111|42",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:ef5bb625150b3f451cecfa104bb1feb3dc197b2b0e2ab9a21f886a023031f111|42",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:ef5bb625150b3f451cecfa104bb1feb3dc197b2b0e2ab9a21f886a023031f111|43",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:ef5bb625150b3f451cecfa104bb1feb3dc197b2b0e2ab9a21f886a023031f111|43",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:ef5bb625150b3f451cecfa104bb1feb3dc197b2b0e2ab9a21f886a023031f111|44"
+      ],
+      "selected_frame_indices": [
+        40,
+        41,
+        41,
+        42,
+        42,
+        43,
+        43,
+        44
+      ],
+      "rank_targets": [
+        0.0,
+        0.5714285714285714,
+        1.1428571428571428,
+        1.7142857142857142,
+        2.2857142857142856,
+        2.857142857142857,
+        3.4285714285714284,
+        4.0
+      ],
+      "selected_ranks": [
+        0,
+        1,
+        1,
+        2,
+        2,
+        3,
+        3,
+        4
+      ],
+      "duplicate_flags": [
+        false,
+        false,
+        true,
+        false,
+        true,
+        false,
+        true,
+        false
+      ]
+    },
+    {
+      "group_id": "bottom_up_anti_parallel|ESM3:study2a-site:ef8625a65792f9f8c81f9c03cead573ae044f085e4b1317a8d8cafe114456bb3",
+      "selected_sample_ids": [
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:ef8625a65792f9f8c81f9c03cead573ae044f085e4b1317a8d8cafe114456bb3|75",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:ef8625a65792f9f8c81f9c03cead573ae044f085e4b1317a8d8cafe114456bb3|104",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:ef8625a65792f9f8c81f9c03cead573ae044f085e4b1317a8d8cafe114456bb3|133",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:ef8625a65792f9f8c81f9c03cead573ae044f085e4b1317a8d8cafe114456bb3|166",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:ef8625a65792f9f8c81f9c03cead573ae044f085e4b1317a8d8cafe114456bb3|195",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:ef8625a65792f9f8c81f9c03cead573ae044f085e4b1317a8d8cafe114456bb3|224",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:ef8625a65792f9f8c81f9c03cead573ae044f085e4b1317a8d8cafe114456bb3|260",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:ef8625a65792f9f8c81f9c03cead573ae044f085e4b1317a8d8cafe114456bb3|293"
+      ],
+      "selected_frame_indices": [
+        75,
+        104,
+        133,
+        166,
+        195,
+        224,
+        260,
+        293
+      ],
+      "rank_targets": [
+        0.0,
+        29.0,
+        58.0,
+        87.0,
+        116.0,
+        145.0,
+        174.0,
+        203.0
+      ],
+      "selected_ranks": [
+        0,
+        29,
+        58,
+        87,
+        116,
+        145,
+        174,
+        203
+      ],
+      "duplicate_flags": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "group_id": "bottom_up_anti_parallel|ESM3:study2a-site:feb89535dd4702b674bfe70a2f4b3f56ecee6362241e5914d178b2d691e5f180",
+      "selected_sample_ids": [
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:feb89535dd4702b674bfe70a2f4b3f56ecee6362241e5914d178b2d691e5f180|51",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:feb89535dd4702b674bfe70a2f4b3f56ecee6362241e5914d178b2d691e5f180|52",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:feb89535dd4702b674bfe70a2f4b3f56ecee6362241e5914d178b2d691e5f180|53",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:feb89535dd4702b674bfe70a2f4b3f56ecee6362241e5914d178b2d691e5f180|54",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:feb89535dd4702b674bfe70a2f4b3f56ecee6362241e5914d178b2d691e5f180|55",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:feb89535dd4702b674bfe70a2f4b3f56ecee6362241e5914d178b2d691e5f180|56",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:feb89535dd4702b674bfe70a2f4b3f56ecee6362241e5914d178b2d691e5f180|57",
+        "positive|bottom_up_anti_parallel|ESM3:study2a-site:feb89535dd4702b674bfe70a2f4b3f56ecee6362241e5914d178b2d691e5f180|58"
+      ],
+      "selected_frame_indices": [
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58
+      ],
+      "rank_targets": [
+        0.0,
+        1.0,
+        2.0,
+        3.0,
+        4.0,
+        5.0,
+        6.0,
+        7.0
+      ],
+      "selected_ranks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "duplicate_flags": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "group_id": "top_down_parallel|1072|227",
+      "selected_sample_ids": [
+        "background|top_down_parallel|1072|227|0",
+        "background|top_down_parallel|1072|227|56",
+        "background|top_down_parallel|1072|227|113",
+        "background|top_down_parallel|1072|227|169",
+        "background|top_down_parallel|1072|227|225",
+        "background|top_down_parallel|1072|227|281",
+        "background|top_down_parallel|1072|227|338",
+        "background|top_down_parallel|1072|227|394"
+      ],
+      "selected_frame_indices": [
+        0,
+        56,
+        113,
+        169,
+        225,
+        281,
+        338,
+        394
+      ],
+      "rank_targets": [
+        0.0,
+        56.285714285714285,
+        112.57142857142857,
+        168.85714285714286,
+        225.14285714285714,
+        281.42857142857144,
+        337.7142857142857,
+        394.0
+      ],
+      "selected_ranks": [
+        0,
+        56,
+        113,
+        169,
+        225,
+        281,
+        338,
+        394
+      ],
+      "duplicate_flags": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "group_id": "top_down_parallel|292|227",
+      "selected_sample_ids": [
+        "background|top_down_parallel|292|227|0",
+        "background|top_down_parallel|292|227|56",
+        "background|top_down_parallel|292|227|113",
+        "background|top_down_parallel|292|227|169",
+        "background|top_down_parallel|292|227|225",
+        "background|top_down_parallel|292|227|281",
+        "background|top_down_parallel|292|227|338",
+        "background|top_down_parallel|292|227|394"
+      ],
+      "selected_frame_indices": [
+        0,
+        56,
+        113,
+        169,
+        225,
+        281,
+        338,
+        394
+      ],
+      "rank_targets": [
+        0.0,
+        56.285714285714285,
+        112.57142857142857,
+        168.85714285714286,
+        225.14285714285714,
+        281.42857142857144,
+        337.7142857142857,
+        394.0
+      ],
+      "selected_ranks": [
+        0,
+        56,
+        113,
+        169,
+        225,
+        281,
+        338,
+        394
+      ],
+      "duplicate_flags": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "group_id": "top_down_parallel|292|487",
+      "selected_sample_ids": [
+        "background|top_down_parallel|292|487|0",
+        "background|top_down_parallel|292|487|56",
+        "background|top_down_parallel|292|487|113",
+        "background|top_down_parallel|292|487|169",
+        "background|top_down_parallel|292|487|225",
+        "background|top_down_parallel|292|487|281",
+        "background|top_down_parallel|292|487|338",
+        "background|top_down_parallel|292|487|394"
+      ],
+      "selected_frame_indices": [
+        0,
+        56,
+        113,
+        169,
+        225,
+        281,
+        338,
+        394
+      ],
+      "rank_targets": [
+        0.0,
+        56.285714285714285,
+        112.57142857142857,
+        168.85714285714286,
+        225.14285714285714,
+        281.42857142857144,
+        337.7142857142857,
+        394.0
+      ],
+      "selected_ranks": [
+        0,
+        56,
+        113,
+        169,
+        225,
+        281,
+        338,
+        394
+      ],
+      "duplicate_flags": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "group_id": "top_down_parallel|487|487",
+      "selected_sample_ids": [
+        "background|top_down_parallel|487|487|0",
+        "background|top_down_parallel|487|487|56",
+        "background|top_down_parallel|487|487|113",
+        "background|top_down_parallel|487|487|169",
+        "background|top_down_parallel|487|487|225",
+        "background|top_down_parallel|487|487|281",
+        "background|top_down_parallel|487|487|338",
+        "background|top_down_parallel|487|487|394"
+      ],
+      "selected_frame_indices": [
+        0,
+        56,
+        113,
+        169,
+        225,
+        281,
+        338,
+        394
+      ],
+      "rank_targets": [
+        0.0,
+        56.285714285714285,
+        112.57142857142857,
+        168.85714285714286,
+        225.14285714285714,
+        281.42857142857144,
+        337.7142857142857,
+        394.0
+      ],
+      "selected_ranks": [
+        0,
+        56,
+        113,
+        169,
+        225,
+        281,
+        338,
+        394
+      ],
+      "duplicate_flags": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "group_id": "top_down_parallel|617|552",
+      "selected_sample_ids": [
+        "background|top_down_parallel|617|552|0",
+        "background|top_down_parallel|617|552|56",
+        "background|top_down_parallel|617|552|113",
+        "background|top_down_parallel|617|552|169",
+        "background|top_down_parallel|617|552|225",
+        "background|top_down_parallel|617|552|281",
+        "background|top_down_parallel|617|552|338",
+        "background|top_down_parallel|617|552|394"
+      ],
+      "selected_frame_indices": [
+        0,
+        56,
+        113,
+        169,
+        225,
+        281,
+        338,
+        394
+      ],
+      "rank_targets": [
+        0.0,
+        56.285714285714285,
+        112.57142857142857,
+        168.85714285714286,
+        225.14285714285714,
+        281.42857142857144,
+        337.7142857142857,
+        394.0
+      ],
+      "selected_ranks": [
+        0,
+        56,
+        113,
+        169,
+        225,
+        281,
+        338,
+        394
+      ],
+      "duplicate_flags": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "group_id": "top_down_parallel|747|357",
+      "selected_sample_ids": [
+        "background|top_down_parallel|747|357|0",
+        "background|top_down_parallel|747|357|56",
+        "background|top_down_parallel|747|357|113",
+        "background|top_down_parallel|747|357|169",
+        "background|top_down_parallel|747|357|225",
+        "background|top_down_parallel|747|357|281",
+        "background|top_down_parallel|747|357|338",
+        "background|top_down_parallel|747|357|394"
+      ],
+      "selected_frame_indices": [
+        0,
+        56,
+        113,
+        169,
+        225,
+        281,
+        338,
+        394
+      ],
+      "rank_targets": [
+        0.0,
+        56.285714285714285,
+        112.57142857142857,
+        168.85714285714286,
+        225.14285714285714,
+        281.42857142857144,
+        337.7142857142857,
+        394.0
+      ],
+      "selected_ranks": [
+        0,
+        56,
+        113,
+        169,
+        225,
+        281,
+        338,
+        394
+      ],
+      "duplicate_flags": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "group_id": "top_down_parallel|747|617",
+      "selected_sample_ids": [
+        "background|top_down_parallel|747|617|0",
+        "background|top_down_parallel|747|617|56",
+        "background|top_down_parallel|747|617|113",
+        "background|top_down_parallel|747|617|169",
+        "background|top_down_parallel|747|617|225",
+        "background|top_down_parallel|747|617|281",
+        "background|top_down_parallel|747|617|338",
+        "background|top_down_parallel|747|617|394"
+      ],
+      "selected_frame_indices": [
+        0,
+        56,
+        113,
+        169,
+        225,
+        281,
+        338,
+        394
+      ],
+      "rank_targets": [
+        0.0,
+        56.285714285714285,
+        112.57142857142857,
+        168.85714285714286,
+        225.14285714285714,
+        281.42857142857144,
+        337.7142857142857,
+        394.0
+      ],
+      "selected_ranks": [
+        0,
+        56,
+        113,
+        169,
+        225,
+        281,
+        338,
+        394
+      ],
+      "duplicate_flags": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "group_id": "top_down_parallel|97|357",
+      "selected_sample_ids": [
+        "background|top_down_parallel|97|357|0",
+        "background|top_down_parallel|97|357|56",
+        "background|top_down_parallel|97|357|113",
+        "background|top_down_parallel|97|357|169",
+        "background|top_down_parallel|97|357|225",
+        "background|top_down_parallel|97|357|281",
+        "background|top_down_parallel|97|357|338",
+        "background|top_down_parallel|97|357|394"
+      ],
+      "selected_frame_indices": [
+        0,
+        56,
+        113,
+        169,
+        225,
+        281,
+        338,
+        394
+      ],
+      "rank_targets": [
+        0.0,
+        56.285714285714285,
+        112.57142857142857,
+        168.85714285714286,
+        225.14285714285714,
+        281.42857142857144,
+        337.7142857142857,
+        394.0
+      ],
+      "selected_ranks": [
+        0,
+        56,
+        113,
+        169,
+        225,
+        281,
+        338,
+        394
+      ],
+      "duplicate_flags": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "group_id": "top_down_parallel|ESM6:study2a-site:31cd5a46630df791bb0e7508953813c0e1fa2489e9412cb2c4bac70e267606cd",
+      "selected_sample_ids": [
+        "positive|top_down_parallel|ESM6:study2a-site:31cd5a46630df791bb0e7508953813c0e1fa2489e9412cb2c4bac70e267606cd|174",
+        "positive|top_down_parallel|ESM6:study2a-site:31cd5a46630df791bb0e7508953813c0e1fa2489e9412cb2c4bac70e267606cd|195",
+        "positive|top_down_parallel|ESM6:study2a-site:31cd5a46630df791bb0e7508953813c0e1fa2489e9412cb2c4bac70e267606cd|216",
+        "positive|top_down_parallel|ESM6:study2a-site:31cd5a46630df791bb0e7508953813c0e1fa2489e9412cb2c4bac70e267606cd|287",
+        "positive|top_down_parallel|ESM6:study2a-site:31cd5a46630df791bb0e7508953813c0e1fa2489e9412cb2c4bac70e267606cd|309",
+        "positive|top_down_parallel|ESM6:study2a-site:31cd5a46630df791bb0e7508953813c0e1fa2489e9412cb2c4bac70e267606cd|330",
+        "positive|top_down_parallel|ESM6:study2a-site:31cd5a46630df791bb0e7508953813c0e1fa2489e9412cb2c4bac70e267606cd|351",
+        "positive|top_down_parallel|ESM6:study2a-site:31cd5a46630df791bb0e7508953813c0e1fa2489e9412cb2c4bac70e267606cd|372"
+      ],
+      "selected_frame_indices": [
+        174,
+        195,
+        216,
+        287,
+        309,
+        330,
+        351,
+        372
+      ],
+      "rank_targets": [
+        0.0,
+        21.142857142857142,
+        42.285714285714285,
+        63.42857142857143,
+        84.57142857142857,
+        105.71428571428571,
+        126.85714285714286,
+        148.0
+      ],
+      "selected_ranks": [
+        0,
+        21,
+        42,
+        63,
+        85,
+        106,
+        127,
+        148
+      ],
+      "duplicate_flags": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "group_id": "top_down_parallel|ESM6:study2a-site:39d193a5f8351d7db9a1bf6c8e1f8ea88cb9018f5be304fed0182d10caccf5b6",
+      "selected_sample_ids": [
+        "positive|top_down_parallel|ESM6:study2a-site:39d193a5f8351d7db9a1bf6c8e1f8ea88cb9018f5be304fed0182d10caccf5b6|124",
+        "positive|top_down_parallel|ESM6:study2a-site:39d193a5f8351d7db9a1bf6c8e1f8ea88cb9018f5be304fed0182d10caccf5b6|159",
+        "positive|top_down_parallel|ESM6:study2a-site:39d193a5f8351d7db9a1bf6c8e1f8ea88cb9018f5be304fed0182d10caccf5b6|195",
+        "positive|top_down_parallel|ESM6:study2a-site:39d193a5f8351d7db9a1bf6c8e1f8ea88cb9018f5be304fed0182d10caccf5b6|230",
+        "positive|top_down_parallel|ESM6:study2a-site:39d193a5f8351d7db9a1bf6c8e1f8ea88cb9018f5be304fed0182d10caccf5b6|288",
+        "positive|top_down_parallel|ESM6:study2a-site:39d193a5f8351d7db9a1bf6c8e1f8ea88cb9018f5be304fed0182d10caccf5b6|323",
+        "positive|top_down_parallel|ESM6:study2a-site:39d193a5f8351d7db9a1bf6c8e1f8ea88cb9018f5be304fed0182d10caccf5b6|359",
+        "positive|top_down_parallel|ESM6:study2a-site:39d193a5f8351d7db9a1bf6c8e1f8ea88cb9018f5be304fed0182d10caccf5b6|394"
+      ],
+      "selected_frame_indices": [
+        124,
+        159,
+        195,
+        230,
+        288,
+        323,
+        359,
+        394
+      ],
+      "rank_targets": [
+        0.0,
+        35.42857142857143,
+        70.85714285714286,
+        106.28571428571429,
+        141.71428571428572,
+        177.14285714285714,
+        212.57142857142858,
+        248.0
+      ],
+      "selected_ranks": [
+        0,
+        35,
+        71,
+        106,
+        142,
+        177,
+        213,
+        248
+      ],
+      "duplicate_flags": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "group_id": "top_down_parallel|ESM6:study2a-site:4cfa94bd555d2848f22902e5491735d8b034dabbe8a851ccba57b1732d92bec8",
+      "selected_sample_ids": [
+        "positive|top_down_parallel|ESM6:study2a-site:4cfa94bd555d2848f22902e5491735d8b034dabbe8a851ccba57b1732d92bec8|71",
+        "positive|top_down_parallel|ESM6:study2a-site:4cfa94bd555d2848f22902e5491735d8b034dabbe8a851ccba57b1732d92bec8|120",
+        "positive|top_down_parallel|ESM6:study2a-site:4cfa94bd555d2848f22902e5491735d8b034dabbe8a851ccba57b1732d92bec8|164",
+        "positive|top_down_parallel|ESM6:study2a-site:4cfa94bd555d2848f22902e5491735d8b034dabbe8a851ccba57b1732d92bec8|208",
+        "positive|top_down_parallel|ESM6:study2a-site:4cfa94bd555d2848f22902e5491735d8b034dabbe8a851ccba57b1732d92bec8|252",
+        "positive|top_down_parallel|ESM6:study2a-site:4cfa94bd555d2848f22902e5491735d8b034dabbe8a851ccba57b1732d92bec8|296",
+        "positive|top_down_parallel|ESM6:study2a-site:4cfa94bd555d2848f22902e5491735d8b034dabbe8a851ccba57b1732d92bec8|349",
+        "positive|top_down_parallel|ESM6:study2a-site:4cfa94bd555d2848f22902e5491735d8b034dabbe8a851ccba57b1732d92bec8|394"
+      ],
+      "selected_frame_indices": [
+        71,
+        120,
+        164,
+        208,
+        252,
+        296,
+        349,
+        394
+      ],
+      "rank_targets": [
+        0.0,
+        44.0,
+        88.0,
+        132.0,
+        176.0,
+        220.0,
+        264.0,
+        308.0
+      ],
+      "selected_ranks": [
+        0,
+        44,
+        88,
+        132,
+        176,
+        220,
+        264,
+        308
+      ],
+      "duplicate_flags": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "group_id": "top_down_parallel|ESM6:study2a-site:850d8247e5723296ee96cb3ea7c9cb69780e7c4e7ee73e08b095b41690fddab1",
+      "selected_sample_ids": [
+        "positive|top_down_parallel|ESM6:study2a-site:850d8247e5723296ee96cb3ea7c9cb69780e7c4e7ee73e08b095b41690fddab1|124",
+        "positive|top_down_parallel|ESM6:study2a-site:850d8247e5723296ee96cb3ea7c9cb69780e7c4e7ee73e08b095b41690fddab1|162",
+        "positive|top_down_parallel|ESM6:study2a-site:850d8247e5723296ee96cb3ea7c9cb69780e7c4e7ee73e08b095b41690fddab1|201",
+        "positive|top_down_parallel|ESM6:study2a-site:850d8247e5723296ee96cb3ea7c9cb69780e7c4e7ee73e08b095b41690fddab1|239",
+        "positive|top_down_parallel|ESM6:study2a-site:850d8247e5723296ee96cb3ea7c9cb69780e7c4e7ee73e08b095b41690fddab1|278",
+        "positive|top_down_parallel|ESM6:study2a-site:850d8247e5723296ee96cb3ea7c9cb69780e7c4e7ee73e08b095b41690fddab1|316",
+        "positive|top_down_parallel|ESM6:study2a-site:850d8247e5723296ee96cb3ea7c9cb69780e7c4e7ee73e08b095b41690fddab1|355",
+        "positive|top_down_parallel|ESM6:study2a-site:850d8247e5723296ee96cb3ea7c9cb69780e7c4e7ee73e08b095b41690fddab1|394"
+      ],
+      "selected_frame_indices": [
+        124,
+        162,
+        201,
+        239,
+        278,
+        316,
+        355,
+        394
+      ],
+      "rank_targets": [
+        0.0,
+        38.42857142857143,
+        76.85714285714286,
+        115.28571428571429,
+        153.71428571428572,
+        192.14285714285714,
+        230.57142857142858,
+        269.0
+      ],
+      "selected_ranks": [
+        0,
+        38,
+        77,
+        115,
+        154,
+        192,
+        231,
+        269
+      ],
+      "duplicate_flags": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "group_id": "top_down_parallel|ESM6:study2a-site:855942f6a9c9e1843e376ef448cb3ffd37532d74a12840a8de3f1a88b7f5e6fd",
+      "selected_sample_ids": [
+        "positive|top_down_parallel|ESM6:study2a-site:855942f6a9c9e1843e376ef448cb3ffd37532d74a12840a8de3f1a88b7f5e6fd|110",
+        "positive|top_down_parallel|ESM6:study2a-site:855942f6a9c9e1843e376ef448cb3ffd37532d74a12840a8de3f1a88b7f5e6fd|150",
+        "positive|top_down_parallel|ESM6:study2a-site:855942f6a9c9e1843e376ef448cb3ffd37532d74a12840a8de3f1a88b7f5e6fd|193",
+        "positive|top_down_parallel|ESM6:study2a-site:855942f6a9c9e1843e376ef448cb3ffd37532d74a12840a8de3f1a88b7f5e6fd|234",
+        "positive|top_down_parallel|ESM6:study2a-site:855942f6a9c9e1843e376ef448cb3ffd37532d74a12840a8de3f1a88b7f5e6fd|274",
+        "positive|top_down_parallel|ESM6:study2a-site:855942f6a9c9e1843e376ef448cb3ffd37532d74a12840a8de3f1a88b7f5e6fd|314",
+        "positive|top_down_parallel|ESM6:study2a-site:855942f6a9c9e1843e376ef448cb3ffd37532d74a12840a8de3f1a88b7f5e6fd|354",
+        "positive|top_down_parallel|ESM6:study2a-site:855942f6a9c9e1843e376ef448cb3ffd37532d74a12840a8de3f1a88b7f5e6fd|394"
+      ],
+      "selected_frame_indices": [
+        110,
+        150,
+        193,
+        234,
+        274,
+        314,
+        354,
+        394
+      ],
+      "rank_targets": [
+        0.0,
+        40.0,
+        80.0,
+        120.0,
+        160.0,
+        200.0,
+        240.0,
+        280.0
+      ],
+      "selected_ranks": [
+        0,
+        40,
+        80,
+        120,
+        160,
+        200,
+        240,
+        280
+      ],
+      "duplicate_flags": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "group_id": "top_down_parallel|ESM6:study2a-site:91dd5583b62d93cd08785ce38be0aed9b69642bd1e58a51c35e049bdab1f4b60",
+      "selected_sample_ids": [
+        "positive|top_down_parallel|ESM6:study2a-site:91dd5583b62d93cd08785ce38be0aed9b69642bd1e58a51c35e049bdab1f4b60|121",
+        "positive|top_down_parallel|ESM6:study2a-site:91dd5583b62d93cd08785ce38be0aed9b69642bd1e58a51c35e049bdab1f4b60|160",
+        "positive|top_down_parallel|ESM6:study2a-site:91dd5583b62d93cd08785ce38be0aed9b69642bd1e58a51c35e049bdab1f4b60|199",
+        "positive|top_down_parallel|ESM6:study2a-site:91dd5583b62d93cd08785ce38be0aed9b69642bd1e58a51c35e049bdab1f4b60|238",
+        "positive|top_down_parallel|ESM6:study2a-site:91dd5583b62d93cd08785ce38be0aed9b69642bd1e58a51c35e049bdab1f4b60|277",
+        "positive|top_down_parallel|ESM6:study2a-site:91dd5583b62d93cd08785ce38be0aed9b69642bd1e58a51c35e049bdab1f4b60|316",
+        "positive|top_down_parallel|ESM6:study2a-site:91dd5583b62d93cd08785ce38be0aed9b69642bd1e58a51c35e049bdab1f4b60|355",
+        "positive|top_down_parallel|ESM6:study2a-site:91dd5583b62d93cd08785ce38be0aed9b69642bd1e58a51c35e049bdab1f4b60|394"
+      ],
+      "selected_frame_indices": [
+        121,
+        160,
+        199,
+        238,
+        277,
+        316,
+        355,
+        394
+      ],
+      "rank_targets": [
+        0.0,
+        39.0,
+        78.0,
+        117.0,
+        156.0,
+        195.0,
+        234.0,
+        273.0
+      ],
+      "selected_ranks": [
+        0,
+        39,
+        78,
+        117,
+        156,
+        195,
+        234,
+        273
+      ],
+      "duplicate_flags": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "group_id": "top_down_parallel|ESM6:study2a-site:a563e4340a8fe6f25eb8973471d03f10bf402c502baabd17c234c4fa17c1a4a8",
+      "selected_sample_ids": [
+        "positive|top_down_parallel|ESM6:study2a-site:a563e4340a8fe6f25eb8973471d03f10bf402c502baabd17c234c4fa17c1a4a8|74",
+        "positive|top_down_parallel|ESM6:study2a-site:a563e4340a8fe6f25eb8973471d03f10bf402c502baabd17c234c4fa17c1a4a8|114",
+        "positive|top_down_parallel|ESM6:study2a-site:a563e4340a8fe6f25eb8973471d03f10bf402c502baabd17c234c4fa17c1a4a8|153",
+        "positive|top_down_parallel|ESM6:study2a-site:a563e4340a8fe6f25eb8973471d03f10bf402c502baabd17c234c4fa17c1a4a8|192",
+        "positive|top_down_parallel|ESM6:study2a-site:a563e4340a8fe6f25eb8973471d03f10bf402c502baabd17c234c4fa17c1a4a8|277",
+        "positive|top_down_parallel|ESM6:study2a-site:a563e4340a8fe6f25eb8973471d03f10bf402c502baabd17c234c4fa17c1a4a8|316",
+        "positive|top_down_parallel|ESM6:study2a-site:a563e4340a8fe6f25eb8973471d03f10bf402c502baabd17c234c4fa17c1a4a8|355",
+        "positive|top_down_parallel|ESM6:study2a-site:a563e4340a8fe6f25eb8973471d03f10bf402c502baabd17c234c4fa17c1a4a8|394"
+      ],
+      "selected_frame_indices": [
+        74,
+        114,
+        153,
+        192,
+        277,
+        316,
+        355,
+        394
+      ],
+      "rank_targets": [
+        0.0,
+        39.0,
+        78.0,
+        117.0,
+        156.0,
+        195.0,
+        234.0,
+        273.0
+      ],
+      "selected_ranks": [
+        0,
+        39,
+        78,
+        117,
+        156,
+        195,
+        234,
+        273
+      ],
+      "duplicate_flags": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "group_id": "top_down_parallel|ESM6:study2a-site:f08ea9b2d6fcc3183b71767dba15b89483066e1bf350de319457cee000d68e6e",
+      "selected_sample_ids": [
+        "positive|top_down_parallel|ESM6:study2a-site:f08ea9b2d6fcc3183b71767dba15b89483066e1bf350de319457cee000d68e6e|174",
+        "positive|top_down_parallel|ESM6:study2a-site:f08ea9b2d6fcc3183b71767dba15b89483066e1bf350de319457cee000d68e6e|186",
+        "positive|top_down_parallel|ESM6:study2a-site:f08ea9b2d6fcc3183b71767dba15b89483066e1bf350de319457cee000d68e6e|199",
+        "positive|top_down_parallel|ESM6:study2a-site:f08ea9b2d6fcc3183b71767dba15b89483066e1bf350de319457cee000d68e6e|211",
+        "positive|top_down_parallel|ESM6:study2a-site:f08ea9b2d6fcc3183b71767dba15b89483066e1bf350de319457cee000d68e6e|257",
+        "positive|top_down_parallel|ESM6:study2a-site:f08ea9b2d6fcc3183b71767dba15b89483066e1bf350de319457cee000d68e6e|269",
+        "positive|top_down_parallel|ESM6:study2a-site:f08ea9b2d6fcc3183b71767dba15b89483066e1bf350de319457cee000d68e6e|382",
+        "positive|top_down_parallel|ESM6:study2a-site:f08ea9b2d6fcc3183b71767dba15b89483066e1bf350de319457cee000d68e6e|394"
+      ],
+      "selected_frame_indices": [
+        174,
+        186,
+        199,
+        211,
+        257,
+        269,
+        382,
+        394
+      ],
+      "rank_targets": [
+        0.0,
+        12.428571428571429,
+        24.857142857142858,
+        37.285714285714285,
+        49.714285714285715,
+        62.142857142857146,
+        74.57142857142857,
+        87.0
+      ],
+      "selected_ranks": [
+        0,
+        12,
+        25,
+        37,
+        50,
+        62,
+        75,
+        87
+      ],
+      "duplicate_flags": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    }
+  ],
+  "sha256": "84116657d0e266510ca1b9ce5e1c5aab0ce992541a565dff0618cf41e533b031",
+  "method_freeze_sha": "a3f45b645e9fb3e813a43220351c951698293963"
+}

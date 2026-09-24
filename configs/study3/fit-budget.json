@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "RF_FITS": 16,
+  "CNN1D_FITS": 4,
+  "SPATIOTEMPORAL_CNN_FITS": 4,
+  "METADATA_LOGREG_FITS": 4,
+  "ACQUISITION_ONLY_FITS": 0,
+  "TOTAL_DISTINCT_FITS": 28,
+  "FIT_29_ALLOWED": false,
+  "scientific_invocations_if_authorized": 1,
+  "retries": 0,
+  "order": ["D1_LBP20", "TRAJECTORY_MEAN_LBP20", "TRAJECTORY_MEDIAN_LBP20", "TRAJECTORY_Q2575_LBP60", "TEMPORAL_CNN1D_LBP20", "SPATIOTEMPORAL_CNN_SMALL", "COVERAGE_METADATA_LOGREG"],
+  "fold_order": [0, 1, 2, 3],
+  "budget_currently_authorizes_execution": false
+}
