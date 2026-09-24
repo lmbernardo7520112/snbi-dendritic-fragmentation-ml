@@ -1,0 +1,40 @@
+{
+  "status": "BLOCKED_PARTIAL_EXECUTION",
+  "io_audit": {
+    "state": "FAILED_CONSUMED",
+    "container_opens": 0,
+    "row_attempts": 0,
+    "rows_read": 0,
+    "bytes_read": 0,
+    "rows_authenticated": 0,
+    "TRAIN_GOLD_ROWS_READ": 0,
+    "TRAIN_BG_ROWS_READ": 0,
+    "DEV_GROUPS_READ": 0,
+    "TEST_GROUPS_READ": 0,
+    "DEV_ROWS_READ": 0,
+    "TEST_ROWS_READ": 0,
+    "TEST_CACHE_ROWS_READ": 0,
+    "TEST_FEATURES_COMPUTED": 0,
+    "EXPERIMENTAL_SOURCE_OPENS": 0,
+    "FFMPEG_RUNS": 0,
+    "ESM1_OPENS": 0,
+    "ESM2_OPENS": 0,
+    "ESM3_OPENS": 0,
+    "ESM4_OPENS": 0,
+    "ESM5_OPENS": 0,
+    "ESM6_OPENS": 0,
+    "pixels_written": 0,
+    "full_container_hashes": 0,
+    "access_records": [],
+    "scope": "Only exact authorized TRAIN row pread ranges; no whole-container authentication or memory mapping.",
+    "all_descriptors_closed": true
+  },
+  "fit_ledger": {
+    "fit_budget": 28,
+    "started": [],
+    "completed": [],
+    "distinct_fits_started": 0,
+    "distinct_fits_completed": 0
+  },
+  "failure": "FileNotFoundError: [Errno 2] No such file or directory: 'derived'"
+}

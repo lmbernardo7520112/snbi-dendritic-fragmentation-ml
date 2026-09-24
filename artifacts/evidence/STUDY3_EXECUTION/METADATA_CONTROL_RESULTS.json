@@ -1,0 +1,5 @@
+{
+  "logreg": {},
+  "acquisition_only": [],
+  "interpretation": "Descriptive confound diagnostics; never justify group/fold/model changes."
+}
