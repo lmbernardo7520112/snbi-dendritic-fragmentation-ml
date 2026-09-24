@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "rf_family": "RF_REFERENCE",
+  "rf_parameters": {
+    "bootstrap": true, "ccp_alpha": 0.0, "class_weight": null, "criterion": "gini",
+    "max_depth": null, "max_features": "sqrt", "max_leaf_nodes": null,
+    "max_samples": null, "min_impurity_decrease": 0.0, "min_samples_leaf": 1,
+    "min_samples_split": 2, "min_weight_fraction_leaf": 0.0, "monotonic_cst": null,
+    "n_estimators": 100, "n_jobs": null, "oob_score": false,
+    "random_state": 42, "verbose": 0, "warm_start": false
+  },
+  "one_vector_per_group": true,
+  "rf_training_weights": "equal group contributions",
+  "COVERAGE_METADATA_LOGREG": {
+    "features": ["log1p(n_rows)", "first_frame_normalized", "last_frame_normalized", "temporal_span_normalized"],
+    "frame_denominators": {"bottom_up_anti_parallel": 293, "top_down_parallel": 394},
+    "scaler": "StandardScaler fit on fold TRAIN groups only",
+    "parameters": {"C": 1.0, "penalty": "l2", "solver": "lbfgs", "max_iter": 10000, "random_state": 42},
+    "forbidden_features": ["acquisition_one_hot", "coordinates", "site_id", "track_id", "pixels", "LBP"]
+  },
+  "ACQUISITION_ONLY": {"fits": 0, "rule": "majority class per acquisition in fold TRAIN", "tie_class": 0, "diagnostic_only": true},
+  "post_result_model_search": false
+}

@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "seed": 42,
+  "device": "cpu",
+  "torch_threads": 1,
+  "epochs": 30,
+  "optimizer": "Adam",
+  "learning_rate": 0.001,
+  "weight_decay": 0,
+  "loss": "CrossEntropyLoss",
+  "shuffle": "TRAIN_ONLY",
+  "TEMPORAL_CNN1D_LBP20": {
+    "input_shape": [20, 8],
+    "architecture": ["Conv1d(20,32,3,padding=1)", "ReLU", "Conv1d(32,32,3,padding=1)", "ReLU", "AdaptiveAvgPool1d(1)", "Flatten", "Linear(32,2)"],
+    "parameters": 5122,
+    "batch_size": 8,
+    "normalization": "TRAIN-fold mean/std per feature over groups*timepoints; ddof=0; zero std->1",
+    "persist_scaler": ["mean", "std", "sha256"]
+  },
+  "SPATIOTEMPORAL_CNN_SMALL": {
+    "input_shape": [8, 2, 65, 65],
+    "shared_spatial_encoder": ["Conv2d(2,8,3,padding=1)", "ReLU", "MaxPool2d(2)", "Conv2d(8,16,3,padding=1)", "ReLU", "AdaptiveAvgPool2d((1,1))", "Flatten"],
+    "sequence": "B,8,16 -> B,16,8",
+    "temporal_head": ["Conv1d(16,16,3,padding=1)", "ReLU", "AdaptiveAvgPool1d(1)", "Flatten", "Linear(16,2)"],
+    "parameters": 2138,
+    "batch_size": 4,
+    "scaling": "uint8->float32/255.0"
+  },
+  "prohibited": ["BatchNorm", "Dropout", "scheduler", "early_stopping", "augmentation", "additional_seed", "architecture_search", "Conv3d", "GRU", "LSTM", "Transformer", "attention"]
+}

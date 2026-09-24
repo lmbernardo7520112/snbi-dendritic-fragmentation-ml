@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "primary_unit": "GROUP_TRAJECTORY",
+  "row_order": ["frame_index", "sample_id"],
+  "representations": {
+    "D1_LBP20": {"dimension": 20, "rule": "lower temporal median rank (n-1)//2"},
+    "TRAJECTORY_MEAN_LBP20": {"dimension": 20, "rule": "per-feature mean over all group rows"},
+    "TRAJECTORY_MEDIAN_LBP20": {"dimension": 20, "rule": "per-feature median over all group rows"},
+    "TRAJECTORY_Q2575_LBP60": {"dimension": 60, "quantiles": [0.25, 0.5, 0.75], "method": "linear", "order": "q25[20],q50[20],q75[20]"}
+  },
+  "primary_classical": "TRAJECTORY_MEDIAN_LBP20",
+  "timepoints": 8,
+  "temporal_quantiles": [[0, 7], [1, 7], [2, 7], [3, 7], [4, 7], [5, 7], [6, 7], [7, 7]],
+  "selection": "nearest actual row rank q*(n-1); exact ties lower",
+  "short_trajectory": "deterministic repetitions",
+  "pixel_interpolation": false,
+  "synthetic_frames": false,
+  "lbp": {"points": 8, "radius": 1, "method": "uniform", "histogram_bins": 10, "histogram_range": [0, 10], "histogram_density": true, "channels": 2, "dimension": 20}
+}

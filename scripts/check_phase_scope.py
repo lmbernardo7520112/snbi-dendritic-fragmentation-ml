@@ -82,8 +82,90 @@ def read_regular(root: Path, relative: str) -> tuple[bytes, str]:
         os.close(parent_fd)
 
 
+def _checkout_directory(path: Path) -> Path:
+    """Validate one explicit Git identity directory without following symlinks.
+
+    Component opens also protect relative gitdir paths containing ``..``.
+    This checks directory identity only; it never lists or reads its contents.
+    """
+    absolute = path if path.is_absolute() else Path.cwd() / path
+    directory_fd = os.open(absolute.anchor, os.O_RDONLY | os.O_DIRECTORY | os.O_NOFOLLOW)
+    try:
+        for component in absolute.parts[1:]:
+            next_fd = os.open(component, os.O_RDONLY | os.O_DIRECTORY | os.O_NOFOLLOW,
+                              dir_fd=directory_fd)
+            os.close(directory_fd)
+            directory_fd = next_fd
+    finally:
+        os.close(directory_fd)
+    # No component was a symlink; lexical normalization now equals resolution.
+    return Path(os.path.abspath(absolute))
+
+
+def _checkout_git_identity(root: Path, option: str) -> Path:
+    """Run a raw identity query, avoiding recursion through guarded ``_git``."""
+    completed = subprocess.run(
+        ["git", "--no-optional-locks", "rev-parse", option], cwd=root,
+        env=SAFE_GIT_ENV, check=True, capture_output=True, text=True, timeout=5,
+    )
+    value = completed.stdout.removesuffix("\n")
+    if not value or any(character in value for character in ("\n", "\r", "\0")):
+        raise ValueError("malformed Git directory identity")
+    path = Path(value)
+    return _checkout_directory(path if path.is_absolute() else root / path)
+
+
+def require_supported_checkout(root: Path = ROOT) -> str:
+    """Accept standalone or authenticated standard linked-worktree identity.
+
+    This operational identity check grants no scientific or data-path authority.
+    The immutable standalone data checker retains its original contract.
+    """
+    root = Path(root)
+    git_entry = root / ".git"
+    metadata = git_entry.lstat()
+    if stat.S_ISLNK(metadata.st_mode):
+        raise ValueError(".git symlink is prohibited")
+    if stat.S_ISDIR(metadata.st_mode):
+        require_standalone_checkout(root)
+        return "STANDALONE"
+    if not stat.S_ISREG(metadata.st_mode) or not 0 < metadata.st_size <= 4096:
+        raise ValueError("bounded regular linked-worktree gitfile required")
+    root = _checkout_directory(root)
+    descriptor = os.open(root / ".git", os.O_RDONLY | os.O_NOFOLLOW | os.O_NONBLOCK)
+    try:
+        opened = os.fstat(descriptor)
+        if (not stat.S_ISREG(opened.st_mode) or not 0 < opened.st_size <= 4096
+                or (opened.st_dev, opened.st_ino) != (metadata.st_dev, metadata.st_ino)):
+            raise ValueError("linked-worktree gitfile identity changed")
+        with os.fdopen(descriptor, "rb", closefd=False) as stream:
+            content = stream.read(4097)
+        if len(content) != opened.st_size or len(content) > 4096:
+            raise ValueError("linked-worktree gitfile extent changed")
+    finally:
+        os.close(descriptor)
+    match = re.fullmatch(r"gitdir: ([^\x00\r\n]+)\n?", content.decode("utf-8", errors="strict"))
+    if match is None or match[1] != match[1].strip():
+        raise ValueError("malformed linked-worktree gitfile")
+    target = Path(match[1])
+    git_directory = _checkout_directory(target if target.is_absolute() else root / target)
+    if git_directory.parent.name != "worktrees":
+        raise ValueError("linked gitdir must have common/worktrees/name layout")
+    expected_common = _checkout_directory(git_directory.parent.parent)
+    top_level = _checkout_git_identity(root, "--show-toplevel")
+    reported_git = _checkout_git_identity(root, "--git-dir")
+    common_directory = _checkout_git_identity(root, "--git-common-dir")
+    if top_level != root:
+        raise ValueError("linked-worktree top-level identity mismatch")
+    if reported_git != git_directory or not reported_git.samefile(git_directory):
+        raise ValueError("linked-worktree git-dir differs from gitfile")
+    if common_directory != expected_common or not common_directory.samefile(expected_common):
+        raise ValueError("linked-worktree common-dir layout mismatch")
+    return "LINKED_WORKTREE"
+
+
 def _git(root: Path, arguments: list[str]) -> bytes:
-    require_standalone_checkout(root)
+    require_supported_checkout(root)
     return subprocess.run(
         ["git", "--no-optional-locks", *arguments], cwd=root,
         env=SAFE_GIT_ENV, check=True, capture_output=True, timeout=15,

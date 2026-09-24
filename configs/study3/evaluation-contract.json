@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "primary_metric": "GROUP_MACRO_BALANCED_ACCURACY",
+  "prediction_unit": "GROUP_TRAJECTORY",
+  "predictions_per_group_per_condition": 1,
+  "secondary_metrics": ["accuracy", "precision", "recall", "specificity", "F1", "confusion_matrix"],
+  "diagnostics": ["per_acquisition", "ACQUISITION_ONLY", "COVERAGE_METADATA_LOGREG"],
+  "primary_contrasts": ["MEDIAN_MINUS_D1", "CNN1D_MINUS_D1", "SPATIOTEMPORAL_MINUS_D1", "SPATIOTEMPORAL_MINUS_MEDIAN", "SPATIOTEMPORAL_MINUS_CNN1D"],
+  "secondary_contrasts": ["MEAN_MINUS_D1", "Q2575_MINUS_D1"],
+  "paired_delta_summary": ["deltas", "mean", "median", "std", "min", "max", "positive_count", "zero_count", "negative_count"],
+  "std_ddof": 0,
+  "zero_comparison": "exact",
+  "descriptors": {
+    "CONSISTENT_POSITIVE_INTERNAL": "mean_delta>0 and positive_count>=3",
+    "MIXED_POSITIVE_INTERNAL": "mean_delta>0 and positive_count<3",
+    "NON_POSITIVE_INTERNAL": "mean_delta<=0"
+  },
+  "p_values": false,
+  "external_generalization": false,
+  "confirmatory_external_claim": false,
+  "confound_assessment": "descriptive only; no numeric significance threshold or retraining",
+  "pass_requires_positive_performance": false,
+  "pass_requires": ["28 completed distinct fits", "zero retry", "zero adaptive search", "zero DEV/TEST/video", "contracts preserved", "results persisted", "claim scope respected"]
+}

@@ -1,0 +1,62 @@
+name: study3-synthetic-ci
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  study3-synthetic-contracts:
+    runs-on: ubuntu-latest
+    env:
+      PYTHONPATH: src:tests:.
+      PYTHONDONTWRITEBYTECODE: "1"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - name: Enforce tracked-data guard
+        run: python3 -B scripts/check_repository_data.py
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: ""
+      - name: Install unchanged historical CPU dependency pins
+        run: >-
+          python3 -B -m pip --isolated install
+          --disable-pip-version-check --no-cache-dir
+          --only-binary=:all:
+          --extra-index-url https://download.pytorch.org/whl/cpu
+          -r requirements-ti3c-cnn.txt
+      - name: Enforce phase scope and historical custody
+        run: python -B scripts/check_phase_scope.py
+      - name: Enforce Study3 governance composition
+        run: python -B scripts/check_study3_governance.py
+      - name: Require all Study3 synthetic contracts with zero skips
+        run: |
+          python3 -B - <<'PY'
+          import unittest
+          from importlib.metadata import version
+          from pathlib import Path
+
+          for line in Path("constraints-ti3c-cnn.txt").read_text().splitlines():
+              name, expected = line.split("==")
+              if version(name) != expected:
+                  raise SystemExit("Dependency pin divergence: " + name)
+          loader = unittest.TestLoader()
+          suite = loader.discover("tests", pattern="test_study3*.py")
+          expected = suite.countTestCases()
+          if loader.errors or expected <= 0:
+              raise SystemExit("Study3 synthetic discovery failed")
+          result = unittest.TextTestRunner(verbosity=2).run(suite)
+          print({"tests": result.testsRun,
+                 "passed": result.testsRun - len(result.failures) - len(result.errors) - len(result.skipped),
+                 "skips": len(result.skipped), "failures": len(result.failures), "errors": len(result.errors)})
+          passed = (result.testsRun == expected and result.wasSuccessful()
+                    and not result.skipped and not result.expectedFailures
+                    and not result.unexpectedSuccesses)
+          raise SystemExit(0 if passed else 1)
+          PY
