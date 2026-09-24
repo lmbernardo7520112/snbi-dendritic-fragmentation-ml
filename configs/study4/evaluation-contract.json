@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "study": "STUDY4",
+  "scope": "FUTURE_CONCEPT_NOT_EXECUTION_AUTHORITY",
+  "authority": "configs/study4/authority.json",
+  "primary_unit": "MATCHED_POSITIVE_BACKGROUND_PAIR",
+  "prediction_unit": "ONE_PREDICTION_PER_MEMBER_GROUP",
+  "primary_metric": "GROUP_MACRO_BALANCED_ACCURACY",
+  "required_folds": 4,
+  "primary_control": "COVERAGE_METADATA_LOGREG",
+  "primary_visual_contrast": "CNN1D_MINUS_D1",
+  "conditions": [
+    "D1_LBP20",
+    "TRAJECTORY_MEAN_LBP20",
+    "TEMPORAL_CNN1D_LBP20",
+    "SPATIOTEMPORAL_CNN_SMALL",
+    "COVERAGE_METADATA_LOGREG",
+    "ACQUISITION_ONLY"
+  ],
+  "rf_conditions": [
+    "D1_LBP20",
+    "TRAJECTORY_MEAN_LBP20"
+  ],
+  "rf_family": "RF_REFERENCE",
+  "future_fit_budget": {
+    "D1_RF": 4,
+    "MEAN_RF": 4,
+    "CNN1D": 4,
+    "SPATIOTEMPORAL_CNN": 4,
+    "METADATA_LOGREG": 4,
+    "ACQUISITION_ONLY": 0,
+    "MAX_DISTINCT_FITS": 20,
+    "FIT_21_PROHIBITED": true,
+    "SCIENTIFIC_INVOCATIONS": 1,
+    "RETRIES": 0,
+    "currently_authorizes_fits": false,
+    "metadata_fits_included_not_additional": true
+  },
+  "execution_order": "COVERAGE_CONTROL_GATE_BEFORE_ANY_VISUAL_RF_OR_CNN",
+  "coverage_gate": {
+    "conceptual_target": "COMPATIBLE_WITH_CHANCE_NO_RELEVANT_REMAINING_DISCRIMINATION",
+    "operational_threshold": null,
+    "operational_statistic": null,
+    "decision_rule_status": "PENDING_AUTHOR_DELIBERATION_AND_PRE_SCIENTIFIC_EXECUTION_FREEZE",
+    "must_be_frozen_before_any_future_scientific_execution": true,
+    "failure_outcome": "COVERAGE_NEUTRALIZATION_FAIL",
+    "failure_allows_visual_models": false,
+    "passing_does_not_automatically_authorize_visual_gate": true
+  },
+  "contrasts": [
+    "CNN1D_MINUS_D1",
+    "SPATIOTEMPORAL_MINUS_D1",
+    "MEAN_MINUS_D1",
+    "CNN1D_MINUS_MEAN",
+    "SPATIOTEMPORAL_MINUS_CNN1D"
+  ],
+  "descriptors": {
+    "CONSISTENT_POSITIVE_INTERNAL": "mean_delta > 0 and at least 3 of 4 fold deltas > 0",
+    "MIXED_POSITIVE_INTERNAL": "mean_delta > 0 and fewer than 3 of 4 fold deltas > 0",
+    "NON_POSITIVE_INTERNAL": "mean_delta <= 0"
+  },
+  "p_values": false,
+  "post_hoc_threshold_choice": false,
+  "new_model_search": false,
+  "additional_seeds": false,
+  "future_reuse": {
+    "source_base_sha": "7ba1786948f39ca164c20d991d7525c18f7138e0",
+    "cnn_contract": "configs/study3/cnn-contract.json",
+    "model_contract": "configs/study3/model-contract.json",
+    "representation_contract": "configs/study3/representation-contract.json",
+    "design_source": "src/snbi_fragmentation/study3_design.py",
+    "cnn_source": "src/snbi_fragmentation/study3_cnn.py",
+    "models_source": "src/snbi_fragmentation/study3_models.py",
+    "metrics_source": "src/snbi_fragmentation/study3_metrics.py",
+    "retune": [],
+    "preserve": [
+      "seed",
+      "optimizer",
+      "learning_rate",
+      "epochs",
+      "batch_size",
+      "cnn_architecture",
+      "rf_parameters",
+      "lbp_definition"
+    ],
+    "scientific_code_changes_require_later_specific_authorization": true
+  },
+  "claim_scope": "docs/study4/STUDY4_CLAIM_SCOPE.md",
+  "gate_plan": "docs/study4/STUDY4_GATE_PLAN.md",
+  "claims_if_future_gates_pass": [
+    "INTERNAL",
+    "DESCRIPTIVE",
+    "GROUP_AWARE",
+    "COVERAGE_CONTROLLED",
+    "WEAK_LABEL_BASED"
+  ]
+}

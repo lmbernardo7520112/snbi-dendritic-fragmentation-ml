@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "study": "STUDY4",
+  "study_kind": "COVERAGE_CONTROLLED_TEMPORAL_REPRESENTATION",
+  "phase": "S4_0_PROTOCOL_BOOTSTRAP",
+  "decision_owner": "Leonardo Maximino Bernardo",
+  "author_decision": "STUDY4-S4-0-PROTOCOL-BOOTSTRAP",
+  "base_sha": "7ba1786948f39ca164c20d991d7525c18f7138e0",
+  "branch": "feat/study4-coverage-controlled-temporal-representation",
+  "scientific_execution_authorized": false,
+  "experimental_binary_reads_authorized": false,
+  "payload_row_reads_authorized": false,
+  "experimental_metadata_analysis_authorized": false,
+  "feature_extraction_authorized": false,
+  "matching_execution_authorized": false,
+  "model_fit_authorized": false,
+  "receipt_creation_authorized": false,
+  "future_scientific_execution_requires_explicit_author_decision": true,
+  "study3_state": "CLOSED_CONSUMED",
+  "study3_reopened": false,
+  "study3_results_immutable": true,
+  "study3_test_reopened": false,
+  "development_access": false,
+  "test_access": false,
+  "silver_access": false,
+  "video_access": false,
+  "new_model_search": false,
+  "new_label_mining": false,
+  "new_background_mining": false,
+  "retries": 0,
+  "one_gate_per_future_prompt": true,
+  "automatic_continuation": false,
+  "source_of_truth": "REPOSITORY",
+  "prompt_redefines_scientific_implementation": false,
+  "unexpected_state": [
+    "STOP_AND_REPORT",
+    "DO_NOT_REPAIR_AUTOMATICALLY",
+    "DO_NOT_RETRY"
+  ],
+  "allowed_current_actions": [
+    "PROTOCOL_DOCUMENTATION",
+    "LOCAL_TEXT_VALIDATION",
+    "EXACT_TEN_PATH_COMMIT",
+    "NORMAL_PUSH_NEW_BRANCH"
+  ],
+  "next_authorized_activity_after_push": "NONE_AWAITING_S4_A_AUTHOR_DECISION",
+  "protocol": "docs/study4/STUDY4_MASTER_PROTOCOL.md",
+  "contracts": [
+    "configs/study4/feasibility-contract.json",
+    "configs/study4/matching-contract.json",
+    "configs/study4/evaluation-contract.json"
+  ]
+}

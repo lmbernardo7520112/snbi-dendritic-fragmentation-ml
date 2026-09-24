@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "study": "STUDY4",
+  "scope": "FUTURE_CONCEPT_NO_MATCHING_IMPLEMENTATION",
+  "authority": "configs/study4/authority.json",
+  "feasibility_contract": "configs/study4/feasibility-contract.json",
+  "principle": "SAME_ACQUISITION_AND_IDENTICAL_SELECTED_FRAME_INDICES",
+  "matching_type": "ONE_TO_ONE_WITHOUT_GROUP_REUSE",
+  "independent_of_pixels": true,
+  "independent_of_features": true,
+  "independent_of_model_performance": true,
+  "allowed_label_use": "POSITIVE_BACKGROUND_ROLE_ONLY",
+  "deterministic": true,
+  "lexicographic_objectives": [
+    "MAXIMIZE_MATCHED_PAIR_COUNT",
+    "MAXIMIZE_SUM_OF_COMMON_FRAME_SUPPORT",
+    "DETERMINISTIC_IDENTITY_TIE_BREAK"
+  ],
+  "identity_tie_break_operational_encoding": "FREEZE_BEFORE_MATCHING_EXECUTION",
+  "frame_selection": {
+    "shared_frames": "intersection(positive_valid_frames, background_valid_frames)",
+    "sorted_distinct": true,
+    "min_shared_frames": 8,
+    "timepoints": 8,
+    "relative_positions": [
+      [
+        0,
+        7
+      ],
+      [
+        1,
+        7
+      ],
+      [
+        2,
+        7
+      ],
+      [
+        3,
+        7
+      ],
+      [
+        4,
+        7
+      ],
+      [
+        5,
+        7
+      ],
+      [
+        6,
+        7
+      ],
+      [
+        7,
+        7
+      ]
+    ],
+    "rank_rule": "nearest_integer(k*(n-1)/7), k=0..7, n=len(shared_frames)",
+    "exact_half_tie": "LOWER_RANK",
+    "same_indices_for_both_pair_members": true,
+    "interpolation": false,
+    "synthetic_frames": false,
+    "short_support_repetition": false
+  },
+  "representation_support": "EXACT_SAME_EIGHT_SELECTED_FRAMES",
+  "d1_rule": "STUDY3_LOWER_TEMPORAL_MEDIAN_ON_SELECTED_SUPPORT",
+  "mean_rule": "PER_FEATURE_MEAN_ON_SELECTED_SUPPORT_ONLY",
+  "coverage_features_support": "SELECTED_MATCHED_SUPPORT_ONLY",
+  "original_unmatched_coverage_as_feature": false,
+  "folds": {
+    "count": 4,
+    "pair_is_indivisible": true,
+    "group_train_validation_overlap": false,
+    "assignment": "PENDING_PRE_EXECUTION_OPERATIONAL_FREEZE",
+    "automatic_historical_fold_reuse": false
+  },
+  "scientific_implementation_modified": false,
+  "design_specification": "docs/study4/STUDY4_DESIGN_SPECIFICATION.md"
+}

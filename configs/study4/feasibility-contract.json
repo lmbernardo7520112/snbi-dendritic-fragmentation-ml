@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "study": "STUDY4",
+  "scope": "FUTURE_CONTRACT_ONLY_NOT_EXECUTION_AUTHORITY",
+  "authority": "configs/study4/authority.json",
+  "primary_unit": "MATCHED_POSITIVE_BACKGROUND_PAIR",
+  "timepoints": 8,
+  "min_matched_pairs": 16,
+  "required_folds": 4,
+  "both_acquisitions_represented": true,
+  "candidate_population": "HISTORICAL_TRAIN_EXISTING_POSITIVE_BACKGROUND_ONLY",
+  "operational_metadata_allowlist": "PENDING_EXPLICIT_S4_A_DECISION",
+  "valid_frame_definition": "PENDING_OPERATIONAL_CONTRACT_BEFORE_CORPUS_ACCESS",
+  "admissible_edge": {
+    "same_acquisition": true,
+    "min_distinct_common_valid_frame_indices": 8
+  },
+  "group_reuse_allowed": false,
+  "pair_split_across_folds_allowed": false,
+  "common_support_computed": false,
+  "matching_executed": false,
+  "sufficient_support_outcome": "SUFFICIENT_COMMON_SUPPORT",
+  "insufficient_support_outcome": "INSUFFICIENT_COVERAGE_OVERLAP",
+  "insufficient_support_model_execution_authorized": false,
+  "visual_benchmark_requires": [
+    "SUFFICIENT_COMMON_SUPPORT",
+    "COVERAGE_NEUTRALIZATION_GATE_PASS",
+    "EXPLICIT_VISUAL_GATE_AUTHOR_DECISION"
+  ],
+  "matching_contract": "configs/study4/matching-contract.json",
+  "gate_plan": "docs/study4/STUDY4_GATE_PLAN.md"
+}
