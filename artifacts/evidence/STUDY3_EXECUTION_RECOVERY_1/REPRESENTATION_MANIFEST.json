@@ -1,0 +1,11 @@
+{
+  "classical": [
+    "D1_LBP20",
+    "TRAJECTORY_MEAN_LBP20",
+    "TRAJECTORY_MEDIAN_LBP20",
+    "TRAJECTORY_Q2575_LBP60"
+  ],
+  "timepoints": 8,
+  "selection_sha256": "84116657d0e266510ca1b9ce5e1c5aab0ce992541a565dff0618cf41e533b031",
+  "real_feature_rows": 10907
+}
