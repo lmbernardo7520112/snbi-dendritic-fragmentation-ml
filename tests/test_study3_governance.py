@@ -2,8 +2,8 @@
 
 No real guard entrypoint, science preflight, payload, feature extraction or
 model fit is invoked. Synthetic filesystem fixtures remain below the ignored
-repository-local temporary root. Git history reads are limited to two exact
-authorized textual blobs used to certify historical custody.
+repository-local temporary root. Git history reads are limited to exact
+authorized textual blobs used to certify historical and recovery custody.
 """
 
 import ast
@@ -31,6 +31,8 @@ NEW_STUDY3_PYTHON = frozenset(
     + ["tests/test_study3_" + name + ".py" for name in MODULES]
     + ["scripts/run_study3.py", "scripts/check_study3_governance.py", "tests/test_study3_governance.py"])
 MODIFIED_GUARDS = {"scripts/check_phase_scope.py", "scripts/check_ti3_scope.py"}
+RECOVERY_1_PYTHON = frozenset({"scripts/run_study3_recovery_1.py",
+                             "tests/test_study3_execution_recovery_1.py"})
 HISTORICAL_TORCH_PATHS = frozenset({"src/snbi_fragmentation/ti3c_cnn.py", "tests/test_ti3c_cnn.py",
                                   "src/snbi_fragmentation/study2c_cnn.py", "tests/test_study2c_cnn.py"})
 STUDY3_TORCH_PATHS = frozenset({"src/snbi_fragmentation/study3_cnn.py", "tests/test_study3_cnn.py"})
@@ -319,17 +321,19 @@ class HistoricalRepairCustodyTests(unittest.TestCase):
                 with self.subTest(path=old["path"], domain=domain):
                     self.assertEqual(current, old)
 
-    def test_manifest_adds_exact_nineteen_study3_tracked_code_paths_with_current_blobs(self):
+    def test_manifest_preserves_nineteen_study3_and_adds_only_two_recovery_code_paths(self):
         old_paths = {row["path"] for rows in self.old_manifest["domains"].values() for row in rows}
         additions = [row for rows in self.new_manifest["domains"].values() for row in rows
                      if row["path"] not in old_paths]
-        self.assertEqual(len(additions), 19)
-        self.assertEqual({row["path"] for row in additions}, NEW_STUDY3_PYTHON)
+        self.assertEqual(len(additions), 21)
+        self.assertEqual(len(NEW_STUDY3_PYTHON), 19)
+        self.assertEqual({row["path"] for row in additions}, NEW_STUDY3_PYTHON | RECOVERY_1_PYTHON)
         for row in additions:
             with self.subTest(path=row["path"]):
                 self.assertEqual(row["classification"], "TI3_ACTIVE")
                 self.assertEqual(row["state"], "TRACKED")
-                self.assertEqual(row["origin_phase"], "STUDY3")
+                self.assertEqual(row["origin_phase"], "STUDY3_EXECUTION_RECOVERY_1"
+                                 if row["path"] in RECOVERY_1_PYTHON else "STUDY3")
                 content, mode = phase.read_regular(ROOT, row["path"])
                 self.assertEqual(row["git_mode"], mode)
                 self.assertEqual(row["blob_sha"], phase.git_blob_sha(content))
@@ -346,6 +350,23 @@ class HistoricalRepairCustodyTests(unittest.TestCase):
             return ast.dump(tree, include_attributes=False)
         self.assertEqual(without_torch_paths(current.decode("utf-8")), without_torch_paths(self.old_ti3_source))
         self.assertEqual(len(ti3.CNN_CONSTRAINTS), 22)
+
+    def test_recovery_manifest_preserves_frozen_rows_except_two_authorized_blobs(self):
+        frozen = json.loads(subprocess.run(
+            ["git", "--no-optional-locks", "show",
+             "a3f45b645e9fb3e813a43220351c951698293963:" + phase.MANIFEST_PATH],
+            cwd=ROOT, env=data.SAFE_GIT_ENV, check=True, capture_output=True, timeout=15).stdout)
+        current = deepcopy(self.new_manifest)
+        mutable_blobs = {"src/snbi_fragmentation/study3_execution.py",
+                         "tests/test_study3_governance.py"}
+        current["domains"]["TI3_ACTIVE"] = [row for row in current["domains"]["TI3_ACTIVE"]
+                                               if row["path"] not in RECOVERY_1_PYTHON]
+        frozen_rows = {row["path"]: row for rows in frozen["domains"].values() for row in rows}
+        for rows in current["domains"].values():
+            for row in rows:
+                if row["path"] in mutable_blobs:
+                    row["blob_sha"] = frozen_rows[row["path"]]["blob_sha"]
+        self.assertEqual(current, frozen)
 
 
 class ExactFreezeInventoryTests(unittest.TestCase):
