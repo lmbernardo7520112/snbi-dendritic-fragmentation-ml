@@ -11,6 +11,7 @@ from copy import deepcopy
 import io
 import json
 from pathlib import Path
+import re
 import subprocess
 import tempfile
 import unittest
@@ -33,9 +34,44 @@ NEW_STUDY3_PYTHON = frozenset(
 MODIFIED_GUARDS = {"scripts/check_phase_scope.py", "scripts/check_ti3_scope.py"}
 RECOVERY_1_PYTHON = frozenset({"scripts/run_study3_recovery_1.py",
                              "tests/test_study3_execution_recovery_1.py"})
+HISTORICAL_STUDY3_PATHS = NEW_STUDY3_PYTHON | RECOVERY_1_PYTHON
 HISTORICAL_TORCH_PATHS = frozenset({"src/snbi_fragmentation/ti3c_cnn.py", "tests/test_ti3c_cnn.py",
                                   "src/snbi_fragmentation/study2c_cnn.py", "tests/test_study2c_cnn.py"})
 STUDY3_TORCH_PATHS = frozenset({"src/snbi_fragmentation/study3_cnn.py", "tests/test_study3_cnn.py"})
+
+
+class ScopeCompatibilityAssertions:
+    """Partition explicitly declared additions before any snapshot exclusion."""
+
+    def assert_study3_and_study4_additions(self, manifest, old_paths):
+        self.assertEqual(set(manifest["domains"]), phase.DOMAIN_NAMES)
+        self.assertEqual(len(NEW_STUDY3_PYTHON), 19)
+        self.assertEqual(len(RECOVERY_1_PYTHON), 2)
+        self.assertEqual(len(HISTORICAL_STUDY3_PATHS), 21)
+        self.assertFalse(HISTORICAL_STUDY3_PATHS & old_paths)
+        rows = [(domain, row) for domain, entries in manifest["domains"].items() for row in entries]
+        paths = [row["path"] for _, row in rows]
+        self.assertEqual(len(paths), len(set(paths)), "duplicate explicit classification")
+        additions = {row["path"]: (domain, row) for domain, row in rows if row["path"] not in old_paths}
+        self.assertTrue(HISTORICAL_STUDY3_PATHS <= additions.keys(), "missing historical Study3/Recovery path")
+        historical, study4 = {}, {}
+        for path, (domain, row) in additions.items():
+            self.assertEqual(domain, "TI3_ACTIVE", path)
+            self.assertEqual(row["classification"], "TI3_ACTIVE", path)
+            self.assertEqual(row["state"], "TRACKED", path)
+            if path in HISTORICAL_STUDY3_PATHS:
+                expected_origin = "STUDY3_EXECUTION_RECOVERY_1" if path in RECOVERY_1_PYTHON else "STUDY3"
+                self.assertEqual(row["origin_phase"], expected_origin, path)
+                historical[path] = row
+            else:
+                self.assertIsInstance(row["origin_phase"], str, path)
+                self.assertTrue(row["origin_phase"].startswith("STUDY4_"), path)
+                self.assertIsNotNone(re.fullmatch(
+                    r"(?:src/snbi_fragmentation/study4_|tests/test_study4_|scripts/(?:run|check)_study4_)"
+                    r"[^/\\*?\[\]]*\.py", path), path)
+                study4[path] = row
+        self.assertEqual(set(historical), HISTORICAL_STUDY3_PATHS)
+        return historical, study4
 
 
 class CheckoutIdentityTests(unittest.TestCase):
@@ -267,6 +303,153 @@ class Study3PartitionTests(unittest.TestCase):
         self.assertEqual(phase.audit_partition(self.manifest, self.inventory, self.baseline)["status"], "BLOCKED")
 
 
+class Study4ScopeCompatibilityTests(ScopeCompatibilityAssertions, unittest.TestCase):
+    def setUp(self):
+        self.manifest, self.inventory, self.baseline = partition_fixture()
+        self.old_paths = {row["path"] for row in self.inventory}
+        for path in sorted(HISTORICAL_STUDY3_PATHS):
+            origin = "STUDY3_EXECUTION_RECOVERY_1" if path in RECOVERY_1_PYTHON else "STUDY3"
+            self.append_tracked(path, origin)
+
+    def append_tracked(self, path, origin="STUDY4_SYNTHETIC"):
+        row = {"path": path, "git_mode": "100644", "blob_sha": "a" * 40,
+               "classification": "TI3_ACTIVE", "state": "TRACKED", "origin_phase": origin}
+        self.manifest["domains"]["TI3_ACTIVE"].append(row)
+        self.inventory.append({**{key: row[key] for key in ("path", "git_mode", "blob_sha")}, "stage": "0"})
+        return row
+
+    def assert_compatible(self, manifest=None):
+        return self.assert_study3_and_study4_additions(
+            self.manifest if manifest is None else manifest, self.old_paths)
+
+    def test_all_twenty_one_historical_paths_are_required_and_counted_separately(self):
+        historical, study4 = self.assert_compatible()
+        self.assertEqual(len(historical), 21)
+        self.assertEqual(len(set(historical) & NEW_STUDY3_PYTHON), 19)
+        self.assertEqual(len(set(historical) & RECOVERY_1_PYTHON), 2)
+        self.assertEqual(study4, {})
+        self.assertEqual(phase.audit_partition(self.manifest, self.inventory, self.baseline)["status"], "PASS")
+
+    def assert_removal_blocked(self, paths):
+        for path in sorted(paths):
+            manifest = deepcopy(self.manifest)
+            manifest["domains"]["TI3_ACTIVE"] = [row for row in manifest["domains"]["TI3_ACTIVE"]
+                                                   if row["path"] != path]
+            inventory = [row for row in self.inventory if row["path"] != path]
+            with self.subTest(path=path):
+                # Even removing both declarations and index entries cannot erase history.
+                self.assertEqual(phase.audit_partition(manifest, inventory, self.baseline)["status"], "PASS")
+                with self.assertRaises(AssertionError):
+                    self.assert_compatible(manifest)
+
+    def test_removing_any_historical_study3_path_blocks(self):
+        self.assert_removal_blocked(NEW_STUDY3_PYTHON)
+
+    def test_removing_either_recovery_path_blocks(self):
+        self.assert_removal_blocked(RECOVERY_1_PYTHON)
+
+    def test_changed_historical_origin_blocks(self):
+        for row in self.manifest["domains"]["TI3_ACTIVE"]:
+            saved = row["origin_phase"]
+            row["origin_phase"] = "STUDY2"
+            with self.subTest(path=row["path"]), self.assertRaises(AssertionError):
+                self.assert_compatible()
+            row["origin_phase"] = saved
+
+    def test_changed_historical_classification_blocks(self):
+        for row in self.manifest["domains"]["TI3_ACTIVE"]:
+            row["classification"] = "TI3_A0_FROZEN"
+            with self.subTest(path=row["path"]):
+                with self.assertRaises(AssertionError):
+                    self.assert_compatible()
+                self.assertEqual(phase.audit_partition(self.manifest, self.inventory, self.baseline)["status"], "BLOCKED")
+            row["classification"] = "TI3_ACTIVE"
+
+    def test_each_explicit_study4_namespace_coexists_outside_historical_twenty_one(self):
+        for path in ("src/snbi_fragmentation/study4_synthetic.py", "tests/test_study4_synthetic.py",
+                     "scripts/run_study4_synthetic.py", "scripts/check_study4_synthetic.py"):
+            self.append_tracked(path)
+        historical, study4 = self.assert_compatible()
+        self.assertEqual(len(historical), 21)
+        self.assertEqual(len(study4), 4)
+        self.assertFalse(set(historical) & set(study4))
+        self.assertEqual(phase.audit_partition(self.manifest, self.inventory, self.baseline)["status"], "PASS")
+
+    def test_unenumerated_tracked_study4_path_is_blocked(self):
+        row = self.append_tracked("src/snbi_fragmentation/study4_synthetic.py")
+        self.manifest["domains"]["TI3_ACTIVE"].remove(row)
+        report = phase.audit_partition(self.manifest, self.inventory, self.baseline)
+        self.assertEqual(report["status"], "BLOCKED")
+        self.assertEqual(report["unclassified_paths"], [row["path"]])
+
+    def test_study4_outside_exact_namespaces_is_blocked(self):
+        row = self.append_tracked("src/snbi_fragmentation/study4_synthetic.py")
+        for path in ("src/snbi_fragmentation/study5_synthetic.py", "scripts/arbitrary.py",
+                     "src/other/study4_synthetic.py", "tests/study4_synthetic.py",
+                     "scripts/study4_synthetic.py", "src/snbi_fragmentation/study4_sub/file.py",
+                     "src/snbi_fragmentation/study4_sub/../escape.py",
+                     "src/snbi_fragmentation/study4_*.py", "scripts/run_study4_?.py",
+                     "tests/test_study4_[ab].py", "tests/test_study4_sub\\escape.py"):
+            row["path"] = path
+            with self.subTest(path=path), self.assertRaises(AssertionError):
+                self.assert_compatible()
+
+    def test_study4_origin_requires_exact_uppercase_prefix_and_underscore(self):
+        row = self.append_tracked("tests/test_study4_synthetic.py")
+        for origin in ("STUDY3", "STUDY5_A0", "STUDY4", "STUDY40_A0", "study4_A0",
+                       "X_STUDY4_A0", " STUDY4_A0", "", None, True):
+            row["origin_phase"] = origin
+            with self.subTest(origin=origin), self.assertRaises(AssertionError):
+                self.assert_compatible()
+
+    def test_no_historical_study3_or_recovery_path_can_be_relabeled_study4(self):
+        for row in self.manifest["domains"]["TI3_ACTIVE"]:
+            saved = row["origin_phase"]
+            row["origin_phase"] = "STUDY4_SYNTHETIC"
+            with self.subTest(path=row["path"]), self.assertRaises(AssertionError):
+                self.assert_compatible()
+            row["origin_phase"] = saved
+
+    def test_fourth_domain_remains_blocked(self):
+        self.manifest["domains"]["STUDY4_ACTIVE"] = []
+        with self.assertRaises(AssertionError):
+            self.assert_compatible()
+        self.assertEqual(phase.audit_partition(self.manifest, self.inventory, self.baseline)["status"], "BLOCKED")
+
+    def test_planned_cannot_mask_tracked_historical_or_study4_paths(self):
+        self.append_tracked("scripts/check_study4_synthetic.py")
+        for row in self.manifest["domains"]["TI3_ACTIVE"]:
+            row["state"] = "PLANNED"
+            with self.subTest(path=row["path"]):
+                with self.assertRaises(AssertionError):
+                    self.assert_compatible()
+                self.assertEqual(phase.audit_partition(self.manifest, self.inventory, self.baseline)["status"], "BLOCKED")
+            row["state"] = "TRACKED"
+
+    def test_mode_or_blob_divergence_stays_blocked_for_history_and_extensions(self):
+        self.append_tracked("scripts/run_study4_synthetic.py")
+        for row in self.manifest["domains"]["TI3_ACTIVE"]:
+            for key, bad in (("git_mode", "100755"), ("blob_sha", "b" * 40)):
+                saved = row[key]
+                row[key] = bad
+                with self.subTest(path=row["path"], field=key):
+                    self.assertEqual(phase.audit_partition(self.manifest, self.inventory, self.baseline)["status"], "BLOCKED")
+                row[key] = saved
+
+    def test_legacy_rewrite_cannot_be_an_extension(self):
+        row = self.manifest["domains"]["LEGACY_TI2"].pop()
+        row.update(classification="TI3_ACTIVE", state="TRACKED", origin_phase="STUDY4_SYNTHETIC")
+        self.manifest["domains"]["TI3_ACTIVE"].append(row)
+        self.assertEqual(phase.audit_partition(self.manifest, self.inventory, self.baseline)["status"], "BLOCKED")
+
+    def test_duplicate_explicit_extension_cannot_disappear_in_partition(self):
+        row = self.append_tracked("tests/test_study4_synthetic.py")
+        self.manifest["domains"]["TI3_ACTIVE"].append(deepcopy(row))
+        with self.assertRaises(AssertionError):
+            self.assert_compatible()
+        self.assertEqual(phase.audit_partition(self.manifest, self.inventory, self.baseline)["status"], "BLOCKED")
+
+
 class ExactTorchScopeTests(unittest.TestCase):
     def test_study3_cnn_module_torch_is_admitted(self):
         self.assertEqual(ti3.source_violations("import torch\n", "src/snbi_fragmentation/study3_cnn.py"), [])
@@ -298,7 +481,7 @@ class ExactTorchScopeTests(unittest.TestCase):
                     self.assertTrue(ti3.source_violations("import " + name + "\n", path))
 
 
-class HistoricalRepairCustodyTests(unittest.TestCase):
+class HistoricalRepairCustodyTests(ScopeCompatibilityAssertions, unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         def base_text(path):
@@ -321,19 +504,11 @@ class HistoricalRepairCustodyTests(unittest.TestCase):
                 with self.subTest(path=old["path"], domain=domain):
                     self.assertEqual(current, old)
 
-    def test_manifest_preserves_nineteen_study3_and_adds_only_two_recovery_code_paths(self):
+    def test_manifest_preserves_twenty_one_historical_paths_and_separate_study4_extensions(self):
         old_paths = {row["path"] for rows in self.old_manifest["domains"].values() for row in rows}
-        additions = [row for rows in self.new_manifest["domains"].values() for row in rows
-                     if row["path"] not in old_paths]
-        self.assertEqual(len(additions), 21)
-        self.assertEqual(len(NEW_STUDY3_PYTHON), 19)
-        self.assertEqual({row["path"] for row in additions}, NEW_STUDY3_PYTHON | RECOVERY_1_PYTHON)
-        for row in additions:
+        historical, study4 = self.assert_study3_and_study4_additions(self.new_manifest, old_paths)
+        for row in [*historical.values(), *study4.values()]:
             with self.subTest(path=row["path"]):
-                self.assertEqual(row["classification"], "TI3_ACTIVE")
-                self.assertEqual(row["state"], "TRACKED")
-                self.assertEqual(row["origin_phase"], "STUDY3_EXECUTION_RECOVERY_1"
-                                 if row["path"] in RECOVERY_1_PYTHON else "STUDY3")
                 content, mode = phase.read_regular(ROOT, row["path"])
                 self.assertEqual(row["git_mode"], mode)
                 self.assertEqual(row["blob_sha"], phase.git_blob_sha(content))
@@ -359,8 +534,11 @@ class HistoricalRepairCustodyTests(unittest.TestCase):
         current = deepcopy(self.new_manifest)
         mutable_blobs = {"src/snbi_fragmentation/study3_execution.py",
                          "tests/test_study3_governance.py"}
+        old_paths = {row["path"] for rows in self.old_manifest["domains"].values() for row in rows}
+        _, study4 = self.assert_study3_and_study4_additions(current, old_paths)
+        excluded_additions = RECOVERY_1_PYTHON | set(study4)
         current["domains"]["TI3_ACTIVE"] = [row for row in current["domains"]["TI3_ACTIVE"]
-                                               if row["path"] not in RECOVERY_1_PYTHON]
+                                               if row["path"] not in excluded_additions]
         frozen_rows = {row["path"]: row for rows in frozen["domains"].values() for row in rows}
         for rows in current["domains"].values():
             for row in rows:

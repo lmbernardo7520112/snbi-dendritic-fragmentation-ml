@@ -1092,7 +1092,7 @@
       {
         "path": "tests/test_study3_governance.py",
         "git_mode": "100644",
-        "blob_sha": "4443493d1fe12528437f5ad2c71f0f351428a528",
+        "blob_sha": "fa4997c4a9bc8e5a5abcd552e33614eb7448e564",
         "classification": "TI3_ACTIVE",
         "origin_phase": "STUDY3",
         "state": "TRACKED"
