@@ -14,9 +14,9 @@
   "lexicographic_objectives": [
     "MAXIMIZE_MATCHED_PAIR_COUNT",
     "MAXIMIZE_SUM_OF_COMMON_FRAME_SUPPORT",
-    "DETERMINISTIC_IDENTITY_TIE_BREAK"
+    "LEXICOGRAPHICALLY_MINIMUM_SORTED_EDGE_KEY_LIST"
   ],
-  "identity_tie_break_operational_encoding": "FREEZE_BEFORE_MATCHING_EXECUTION",
+  "identity_tie_break_operational_encoding": "SORTED_(POSITIVE_GROUP_ID,BACKGROUND_GROUP_ID)_TUPLES_NORMAL_STRING_LEXICOGRAPHIC_ORDER",
   "frame_selection": {
     "shared_frames": "intersection(positive_valid_frames, background_valid_frames)",
     "sorted_distinct": true,
@@ -61,7 +61,9 @@
     "same_indices_for_both_pair_members": true,
     "interpolation": false,
     "synthetic_frames": false,
-    "short_support_repetition": false
+    "short_support_repetition": false,
+    "rank_arithmetic": "INTEGER_QUOTIENT_REMAINDER_NO_FLOAT",
+    "padding": false
   },
   "representation_support": "EXACT_SAME_EIGHT_SELECTED_FRAMES",
   "d1_rule": "STUDY3_LOWER_TEMPORAL_MEDIAN_ON_SELECTED_SUPPORT",
@@ -72,13 +74,60 @@
     "count": 4,
     "pair_is_indivisible": true,
     "group_train_validation_overlap": false,
-    "assignment": "PENDING_PRE_EXECUTION_OPERATIONAL_FREEZE",
-    "automatic_historical_fold_reuse": false
+    "assignment": "SHA256_PAIR_ID_ORDER_ROUND_ROBIN_SEPARATELY_PER_ACQUISITION",
+    "automatic_historical_fold_reuse": false,
+    "historical_fold_reuse": false,
+    "fold_key": "SHA256(b\"STUDY4_FOLD_V1\\0\" + pair_id.encode(\"utf-8\")).hexdigest()",
+    "ordering": [
+      "fold_key",
+      "pair_id"
+    ],
+    "index_starts_at_zero_for_each_acquisition": true,
+    "fold_rule": "i % 4",
+    "expected_pair_counts_by_acquisition": {
+      "bottom_up_anti_parallel": [
+        5,
+        4,
+        4,
+        4
+      ],
+      "top_down_parallel": [
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    "expected_total_pair_counts": [
+      7,
+      6,
+      6,
+      6
+    ]
   },
   "scientific_implementation_modified": false,
   "design_specification": "docs/study4/STUDY4_DESIGN_SPECIFICATION.md",
   "s4_a_scope": "S4_A_FEASIBILITY_CARDINALITY_ONLY",
   "final_pair_identities_not_selected": true,
   "final_pair_matching_gate": "S4_B",
-  "s4_a_final_objectives_executed": false
+  "s4_a_final_objectives_executed": false,
+  "optimization": "EXACT_MIN_COST_MAXIMUM_FLOW_WITH_INTEGER_SUPPORT_AND_LEXICOGRAPHIC_WEIGHTS",
+  "separate_optimization_per_acquisition": true,
+  "expected_pair_counts_by_acquisition": {
+    "bottom_up_anti_parallel": 17,
+    "top_down_parallel": 8
+  },
+  "expected_total_pairs": 25,
+  "unexpected_cardinality_outcome": "BLOCK_AND_STOP",
+  "pair_id": {
+    "algorithm": "SHA256",
+    "prefix": "S4P_",
+    "digest_hex_length": 64,
+    "canonical_bytes": "b\"STUDY4_PAIR_V1\\0\" + acquisition_id.encode(\"utf-8\") + b\"\\0\" + positive_group_id.encode(\"utf-8\") + b\"\\0\" + background_group_id.encode(\"utf-8\")",
+    "embedded_nul_allowed": false,
+    "collision_outcome": "BLOCKED"
+  },
+  "operational_freeze": "S4_B0A_FINAL_MATCHING_FOLD_FREEZE",
+  "real_matching_executed": false,
+  "pure_final_matching_implementation": "src/snbi_fragmentation/study4_matching.py"
 }

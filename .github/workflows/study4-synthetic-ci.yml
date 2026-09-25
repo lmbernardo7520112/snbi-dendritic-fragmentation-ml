@@ -28,14 +28,14 @@ jobs:
         run: python3 -B -S scripts/check_phase_scope.py
       - name: Enforce existing Study3 governance composition
         run: python3 -B -S scripts/check_study3_governance.py
-      - name: Require Study4 feasibility synthetic contracts without site packages
+      - name: Require all Study4 synthetic contracts without site packages
         run: |
           python3 -B -S - <<'PYTEST'
           import json
           import unittest
 
           loader = unittest.TestLoader()
-          suite = loader.discover("tests", pattern="test_study4_feasibility.py")
+          suite = loader.discover("tests", pattern="test_study4*.py")
           expected = suite.countTestCases()
           if loader.errors or expected <= 0:
               raise SystemExit("Study4 synthetic discovery failed")
