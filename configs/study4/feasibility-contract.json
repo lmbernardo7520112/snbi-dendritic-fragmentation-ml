@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "study": "STUDY4",
-  "scope": "FUTURE_CONTRACT_ONLY_NOT_EXECUTION_AUTHORITY",
+  "scope": "S4_A0_FROZEN_FUTURE_S4_A1_METADATA_ONLY_NO_CURRENT_EXECUTION_AUTHORITY",
   "authority": "configs/study4/authority.json",
   "primary_unit": "MATCHED_POSITIVE_BACKGROUND_PAIR",
   "timepoints": 8,
@@ -9,8 +9,26 @@
   "required_folds": 4,
   "both_acquisitions_represented": true,
   "candidate_population": "HISTORICAL_TRAIN_EXISTING_POSITIVE_BACKGROUND_ONLY",
-  "operational_metadata_allowlist": "PENDING_EXPLICIT_S4_A_DECISION",
-  "valid_frame_definition": "PENDING_OPERATIONAL_CONTRACT_BEFORE_CORPUS_ACCESS",
+  "operational_metadata_allowlist": [
+    "sample_id",
+    "group_id",
+    "acquisition_id",
+    "frame_index",
+    "label",
+    "tier",
+    "kind",
+    "split",
+    "cv_fold"
+  ],
+  "valid_frame_definition": {
+    "type": "INTEGER_NOT_BOOL",
+    "minimum": 0,
+    "maximum_inclusive_by_acquisition": {
+      "bottom_up_anti_parallel": 293,
+      "top_down_parallel": 394
+    },
+    "source": "src/snbi_fragmentation/study3_domain.py:FRAME_MAX"
+  },
   "admissible_edge": {
     "same_acquisition": true,
     "min_distinct_common_valid_frame_indices": 8
@@ -28,5 +46,141 @@
     "EXPLICIT_VISUAL_GATE_AUTHOR_DECISION"
   ],
   "matching_contract": "configs/study4/matching-contract.json",
-  "gate_plan": "docs/study4/STUDY4_GATE_PLAN.md"
+  "gate_plan": "docs/study4/STUDY4_GATE_PLAN.md",
+  "source_of_truth": {
+    "path": "artifacts/evidence/STUDY2_D_ATTRIBUTION/TRAIN_INPUT_MANIFEST.json",
+    "sha256_contract": "configs/study3/data-contract.json",
+    "sha256_field": "train_manifest_sha256"
+  },
+  "valid_row_definition": {
+    "split": "TRAIN",
+    "exclusive_roles": [
+      {
+        "label": 1,
+        "tier": "GOLD",
+        "kind": "positive"
+      },
+      {
+        "label": 0,
+        "tier": "BACKGROUND",
+        "kind": "background"
+      }
+    ],
+    "acquisitions": [
+      "bottom_up_anti_parallel",
+      "top_down_parallel"
+    ],
+    "identity_fields": "NONEMPTY_CANONICAL_STRINGS",
+    "label_type": "INTEGER_NOT_BOOL",
+    "cv_fold": "INTEGER_NOT_BOOL_0_TO_3",
+    "duplicate_sample_id": "BLOCK"
+  },
+  "valid_frame_set": "SORTED_DISTINCT_FRAME_INDICES_OF_VALID_ROWS_PER_GROUP",
+  "group_identity_consistency": [
+    "group_id",
+    "acquisition_id",
+    "label"
+  ],
+  "duplicate_group_frame_failure": "BLOCKED_AMBIGUOUS_GROUP_FRAME_IDENTITY",
+  "ignored_non_scientific_fields": [
+    "storage",
+    "provenance",
+    "storage.path",
+    "row_index",
+    "offset",
+    "file hashes",
+    "payload bytes",
+    "pixel values"
+  ],
+  "ignored_fields_influence": {
+    "valid_frame_set": false,
+    "candidate_edge": false,
+    "matching_capacity": false,
+    "feasibility_decision": false
+  },
+  "metadata_projection_precedes_grouping": true,
+  "invalid_row_policy": "BLOCK_WITHOUT_SILENT_FILTERING",
+  "feasibility_matching": {
+    "purpose": "FEASIBILITY_CARDINALITY_MATCHING",
+    "separate_by_acquisition": true,
+    "algorithm": "DETERMINISTIC_AUGMENTING_PATH_MAXIMUM_CARDINALITY_BIPARTITE_MATCHING",
+    "canonical_order": "SORTED_GROUP_IDENTITIES_AND_SORTED_ADJACENCY",
+    "one_to_one": true,
+    "group_reuse": false,
+    "candidate_edges_only": true,
+    "disclose_cardinality_only": true,
+    "maximize_sum_of_common_frame_support": false,
+    "deterministic_final_pair_identity_tie_break": false,
+    "final_pair_matching": false,
+    "final_pair_identities_selected": false
+  },
+  "decision_rule": {
+    "total_max_matched_pairs_min": 16,
+    "maximum_matching_capacity_min_by_acquisition": {
+      "bottom_up_anti_parallel": 1,
+      "top_down_parallel": 1
+    },
+    "all_conditions_required": true,
+    "pass": "SUFFICIENT_COMMON_SUPPORT",
+    "otherwise": "INSUFFICIENT_COVERAGE_OVERLAP"
+  },
+  "result_disclosure": {
+    "exact_top_level_fields": [
+      "authenticated_row_count",
+      "positive_row_count",
+      "background_row_count",
+      "positive_group_count",
+      "background_group_count",
+      "by_acquisition",
+      "candidate_edge_count",
+      "isolated_positive_group_count",
+      "isolated_background_group_count",
+      "total_maximum_matching_capacity",
+      "feasibility_decision",
+      "documentary_manifest_sha256",
+      "payload_binary_reads",
+      "feature_extractions",
+      "fits"
+    ],
+    "exact_acquisition_fields": [
+      "positive_group_count",
+      "background_group_count",
+      "candidate_edge_count",
+      "isolated_positive_group_count",
+      "isolated_background_group_count",
+      "maximum_matching_capacity"
+    ],
+    "forbidden": [
+      "matched_pair_identities",
+      "complete_edge_list",
+      "candidate_group_ids",
+      "selected_frames",
+      "image_derived_information"
+    ],
+    "payload_binary_reads": 0,
+    "feature_extractions": 0,
+    "fits": 0
+  },
+  "future_local_controls": {
+    "authorization": "docs/study4/STUDY4_S4A_FEASIBILITY_AUTHORIZATION.json",
+    "ci_proof": ".bootstrap-test-tmp/study4/s4a-ci-proof.json",
+    "create_in_s4a0": false
+  },
+  "future_execution": {
+    "phase": "S4_A1",
+    "explicit_author_decision_required": true,
+    "exact_freeze_sha_required": true,
+    "exact_sha_successful_ci_required": true,
+    "documentary_manifest_authentication_before_receipt": true,
+    "receipt_before_json_metadata_projection_or_analysis": true,
+    "receipt_creation": "O_EXCL",
+    "metadata_invocations": 1,
+    "retries": 0,
+    "after_receipt_failure": "PRESERVE_EVIDENCE_AND_STOP_NO_RETRY",
+    "final_pair_matching_gate": "S4_B",
+    "evidence_namespace": "artifacts/evidence/STUDY4_S4A_FEASIBILITY",
+    "receipt": "s4a-feasibility-receipt.json",
+    "result": "feasibility-result.json",
+    "no_current_execution": true
+  }
 }

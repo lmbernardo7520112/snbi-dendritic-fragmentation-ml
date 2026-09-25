@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "study": "STUDY4",
-  "scope": "FUTURE_CONCEPT_NO_MATCHING_IMPLEMENTATION",
+  "scope": "FINAL_PAIR_MATCHING_FUTURE_S4_B_ONLY",
   "authority": "configs/study4/authority.json",
   "feasibility_contract": "configs/study4/feasibility-contract.json",
   "principle": "SAME_ACQUISITION_AND_IDENTICAL_SELECTED_FRAME_INDICES",
@@ -76,5 +76,9 @@
     "automatic_historical_fold_reuse": false
   },
   "scientific_implementation_modified": false,
-  "design_specification": "docs/study4/STUDY4_DESIGN_SPECIFICATION.md"
+  "design_specification": "docs/study4/STUDY4_DESIGN_SPECIFICATION.md",
+  "s4_a_scope": "S4_A_FEASIBILITY_CARDINALITY_ONLY",
+  "final_pair_identities_not_selected": true,
+  "final_pair_matching_gate": "S4_B",
+  "s4_a_final_objectives_executed": false
 }

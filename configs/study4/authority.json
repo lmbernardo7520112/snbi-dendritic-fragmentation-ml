@@ -2,9 +2,9 @@
   "schema_version": 1,
   "study": "STUDY4",
   "study_kind": "COVERAGE_CONTROLLED_TEMPORAL_REPRESENTATION",
-  "phase": "S4_0_PROTOCOL_BOOTSTRAP",
+  "phase": "S4_A0_FEASIBILITY_AUDITOR_FREEZE",
   "decision_owner": "Leonardo Maximino Bernardo",
-  "author_decision": "STUDY4-S4-0-PROTOCOL-BOOTSTRAP",
+  "author_decision": "STUDY4-S4-A0-FEASIBILITY-AUDITOR-FREEZE",
   "base_sha": "7ba1786948f39ca164c20d991d7525c18f7138e0",
   "branch": "feat/study4-coverage-controlled-temporal-representation",
   "scientific_execution_authorized": false,
@@ -38,16 +38,19 @@
     "DO_NOT_RETRY"
   ],
   "allowed_current_actions": [
-    "PROTOCOL_DOCUMENTATION",
-    "LOCAL_TEXT_VALIDATION",
-    "EXACT_TEN_PATH_COMMIT",
-    "NORMAL_PUSH_NEW_BRANCH"
+    "PURE_FEASIBILITY_IMPLEMENTATION",
+    "SYNTHETIC_VERIFICATION",
+    "EXACT_EIGHT_PATH_FREEZE_COMMIT",
+    "FAST_FORWARD_PUSH",
+    "EXACT_SHA_SYNTHETIC_CI"
   ],
-  "next_authorized_activity_after_push": "NONE_AWAITING_S4_A_AUTHOR_DECISION",
+  "next_authorized_activity_after_push": "NONE_AWAITING_S4_A1_AUTHOR_DECISION",
   "protocol": "docs/study4/STUDY4_MASTER_PROTOCOL.md",
   "contracts": [
     "configs/study4/feasibility-contract.json",
     "configs/study4/matching-contract.json",
     "configs/study4/evaluation-contract.json"
-  ]
+  ],
+  "s4a0_parent_sha": "817c099222fb9b19d0614112b47c17dde3da4110",
+  "future_s4a_metadata_analysis_requires_explicit_author_decision": true
 }

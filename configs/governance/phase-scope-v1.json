@@ -1144,6 +1144,30 @@
         "classification": "TI3_ACTIVE",
         "origin_phase": "STUDY3_EXECUTION_RECOVERY_1",
         "state": "TRACKED"
+      },
+      {
+        "path": "src/snbi_fragmentation/study4_feasibility.py",
+        "git_mode": "100644",
+        "blob_sha": "856c449bac5cc79591c12c9d6c2d2cc84c7595b6",
+        "classification": "TI3_ACTIVE",
+        "origin_phase": "STUDY4_S4_A0",
+        "state": "TRACKED"
+      },
+      {
+        "path": "tests/test_study4_feasibility.py",
+        "git_mode": "100644",
+        "blob_sha": "db238dbcae4c5dceca5b54e8de3f29210174d115",
+        "classification": "TI3_ACTIVE",
+        "origin_phase": "STUDY4_S4_A0",
+        "state": "TRACKED"
+      },
+      {
+        "path": "scripts/run_study4_s4a_feasibility.py",
+        "git_mode": "100644",
+        "blob_sha": "8efbb250ccabc834ef3e7341766a1aa7aa003375",
+        "classification": "TI3_ACTIVE",
+        "origin_phase": "STUDY4_S4_A0",
+        "state": "TRACKED"
       }
     ]
   },
